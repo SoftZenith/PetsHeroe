@@ -1,0 +1,12 @@
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\bin\Debug\netstandard2.0\PetsHeroe.deps.json
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\bin\Debug\netstandard2.0\PetsHeroe.dll
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\bin\Debug\netstandard2.0\PetsHeroe.pdb
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.csprojAssemblyReference.cache
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.csproj.CoreCompileInputs.cache
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.AssemblyInfoInputs.cache
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.AssemblyInfo.cs
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.dll
+C:\Users\BHN_R\source\repos\PetsHeroe\PetsHeroe\PetsHeroe\obj\Debug\netstandard2.0\PetsHeroe.pdb
