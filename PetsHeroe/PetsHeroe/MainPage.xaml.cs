@@ -16,6 +16,8 @@ namespace PetsHeroe
         public MainPage()
         {
             InitializeComponent();
+            DependencyService.Get<IAndroid>().getCAM_busca();
+            _ = DependencyService.Get<IAndroid>().CAM_Busca;
         }
     }
 }

@@ -8,7 +8,6 @@ using Android.Widget;
 using Android.OS;
 using PetsHeroe.Droid.mx.com.petshero;
 using System.Data;
-
 namespace PetsHeroe.Droid
 {
     [Activity(Label = "PetsHeroe", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -24,9 +23,12 @@ namespace PetsHeroe.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
 
+        public void getTipoAsociado() {
             wsPetsApp wsPets = new wsPetsApp();
-            AuthHeader auth = new AuthHeader() {
+            AuthHeader auth = new AuthHeader()
+            {
                 Usuario = "appcelmypets2019",
                 Password = "RRW7G0ZiF4D1bUasqazmTg",
                 IDUsuario = 0,
@@ -38,8 +40,8 @@ namespace PetsHeroe.Droid
         }
 
         public void tipoAsociadoBuscaComplete(object sender, TipoAsociado_BuscaCompletedEventArgs e) {
-            Console.WriteLine("Columnas: "+ e.Result.Columns.Count);
-            Console.WriteLine("Filas: "+ e.Result.Rows.Count);
+            //Console.WriteLine("Columnas: "+ e.Result.Columns.Count);
+            //Console.WriteLine("Filas: "+ e.Result.Rows.Count);
             DataTable datos = new DataTable();
             datos = e.Result.Copy();
             foreach (DataRow dr in datos.Rows) {
