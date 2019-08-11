@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.petshero.com.mx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.petshero.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.petshero.com.mx">
+      <s:element name="ValidaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaUsuarioResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="Pais_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="Pais_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pais_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Estado_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPais" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Estado_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Estado_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ciudad_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ciudad_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAM_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCiudad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAM_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAM_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoAsociado_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="TipoAsociado_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoAsociado_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoProducto_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="TipoProducto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProducto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarcaProducto_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MarcaProducto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaProducto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMarca" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UPC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Producto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Servicio_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaTipo_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MascotaTipo_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaTipo_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaRaza_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaRaza_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaRaza_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaColor_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaColor_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaColor_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MascotaEstatus_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MascotaEstatus_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaEstatus_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Codigo_Valida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Codigo_ValidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codigo_ValidaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCodigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstatusCodigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascotaCodigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ValidaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaUsuarioAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Pais_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Pais_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Pais_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Pais_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Pais_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Estado_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Estado_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Estado_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Estado_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Estado_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Ciudad_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Ciudad_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Ciudad_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Ciudad_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ciudad_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:CAM_Busca" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:CAM_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoAsociado_Busca" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoAsociado_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoProducto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoProducto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MarcaProducto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MarcaProducto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Producto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Producto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Servicio_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Servicio_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MascotaTipo_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MascotaTipo_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MascotaTipo_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MascotaTipo_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MascotaTipo_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MascotaRaza_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MascotaRaza_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MascotaRaza_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MascotaRaza_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MascotaRaza_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MascotaColor_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MascotaColor_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MascotaColor_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MascotaColor_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MascotaColor_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MascotaEstatus_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MascotaEstatus_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MascotaEstatus_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MascotaEstatus_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MascotaEstatus_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Codigo_ValidaSoapIn">
+    <wsdl:part name="parameters" element="tns:Codigo_Valida" />
+  </wsdl:message>
+  <wsdl:message name="Codigo_ValidaSoapOut">
+    <wsdl:part name="parameters" element="tns:Codigo_ValidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Codigo_ValidaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="wsPetsAppSoap">
+    <wsdl:operation name="ValidaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida el Usuario y su contraseña</wsdl:documentation>
+      <wsdl:input message="tns:ValidaUsuarioSoapIn" />
+      <wsdl:output message="tns:ValidaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pais_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Paises</wsdl:documentation>
+      <wsdl:input message="tns:Pais_BuscaSoapIn" />
+      <wsdl:output message="tns:Pais_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Estados de un Pais</wsdl:documentation>
+      <wsdl:input message="tns:Estado_BuscaSoapIn" />
+      <wsdl:output message="tns:Estado_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Ciudades de un Estado</wsdl:documentation>
+      <wsdl:input message="tns:Ciudad_BuscaSoapIn" />
+      <wsdl:output message="tns:Ciudad_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Ciudad y Asociado</wsdl:documentation>
+      <wsdl:input message="tns:CAM_BuscaSoapIn" />
+      <wsdl:output message="tns:CAM_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Asociado</wsdl:documentation>
+      <wsdl:input message="tns:TipoAsociado_BuscaSoapIn" />
+      <wsdl:output message="tns:TipoAsociado_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Producto</wsdl:documentation>
+      <wsdl:input message="tns:TipoProducto_BuscaSoapIn" />
+      <wsdl:output message="tns:TipoProducto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Marcas de Producto</wsdl:documentation>
+      <wsdl:input message="tns:MarcaProducto_BuscaSoapIn" />
+      <wsdl:output message="tns:MarcaProducto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Productos con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Producto_BuscaSoapIn" />
+      <wsdl:output message="tns:Producto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Servicios de un Asociado con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Servicio_BuscaSoapIn" />
+      <wsdl:output message="tns:Servicio_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MascotaTipo_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Mascota</wsdl:documentation>
+      <wsdl:input message="tns:MascotaTipo_BuscaSoapIn" />
+      <wsdl:output message="tns:MascotaTipo_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MascotaRaza_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Razas de Mascota por Tipo</wsdl:documentation>
+      <wsdl:input message="tns:MascotaRaza_BuscaSoapIn" />
+      <wsdl:output message="tns:MascotaRaza_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MascotaColor_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Colores de Mascota por Tipo</wsdl:documentation>
+      <wsdl:input message="tns:MascotaColor_BuscaSoapIn" />
+      <wsdl:output message="tns:MascotaColor_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MascotaEstatus_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Estatus de Mascota</wsdl:documentation>
+      <wsdl:input message="tns:MascotaEstatus_BuscaSoapIn" />
+      <wsdl:output message="tns:MascotaEstatus_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Valida">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
+      <wsdl:input message="tns:Codigo_ValidaSoapIn" />
+      <wsdl:output message="tns:Codigo_ValidaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPetsAppSoap" type="tns:wsPetsAppSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaUsuario">
+      <soap:operation soapAction="http://www.petshero.com.mx/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidaUsuarioAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pais_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Pais_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Pais_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Estado_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Estado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Ciudad_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Ciudad_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaTipo_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MascotaTipo_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaRaza_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MascotaRaza_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MascotaRaza_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaColor_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MascotaColor_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MascotaColor_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaEstatus_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MascotaEstatus_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MascotaEstatus_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Valida">
+      <soap:operation soapAction="http://www.petshero.com.mx/Codigo_Valida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Codigo_ValidaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPetsAppSoap12" type="tns:wsPetsAppSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaUsuario">
+      <soap12:operation soapAction="http://www.petshero.com.mx/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidaUsuarioAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pais_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Pais_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Pais_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Estado_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Estado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Ciudad_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Ciudad_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaTipo_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MascotaTipo_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaRaza_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MascotaRaza_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MascotaRaza_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaColor_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MascotaColor_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MascotaColor_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MascotaEstatus_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MascotaEstatus_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MascotaEstatus_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Valida">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Codigo_Valida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Codigo_ValidaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPetsApp">
+    <wsdl:port name="wsPetsAppSoap" binding="tns:wsPetsAppSoap">
+      <soap:address location="http://petshero.com.mx/webservices/wsPetsApp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPetsAppSoap12" binding="tns:wsPetsAppSoap12">
+      <soap12:address location="http://petshero.com.mx/webservices/wsPetsApp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
