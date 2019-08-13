@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj": {}
+    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj": {
+    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj",
         "projectName": "PetsHeroe.UWP",
-        "projectPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj",
+        "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\PetsHeroe.UWP.csproj",
         "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\obj\\",
+        "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -33,8 +33,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
-                "projectPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj"
+              "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
+                "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
+    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
+        "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
         "projectName": "PetsHeroe",
-        "projectPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
+        "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
         "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\obj\\",
+        "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -134,11 +134,15 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[1.2.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.555618, )"
+              "version": "[4.1.0.673156, )"
+            },
+            "Xamarin.Forms.InputKit": {
+              "target": "Package",
+              "version": "[3.0.12, )"
             }
           },
           "imports": [

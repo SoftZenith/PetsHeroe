@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"PetsHeroe.Android.dll",
 		"FormsViewGroup.dll",
 		"PetsHeroe.dll",
+		"Plugin.InputKit.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

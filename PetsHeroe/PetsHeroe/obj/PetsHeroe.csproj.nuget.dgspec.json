@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {}
+    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {}
   },
   "projects": {
-    "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {
+    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
+        "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
         "projectName": "PetsHeroe",
-        "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
-        "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
-        "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/",
+        "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
+        "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
+          "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +46,7 @@
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.2, )",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             },
             "Xamarin.Essentials": {
@@ -52,7 +59,7 @@
             },
             "Xamarin.Forms.InputKit": {
               "target": "Package",
-              "version": "[3.0.10, )"
+              "version": "[3.0.12, )"
             }
           },
           "imports": [

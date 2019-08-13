@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "12b7e849a3a148f5113276f852f6ba1c4d7b86c3"
+    "signature": "1b23288ee569346cb80dc82b98a7a8070f625617"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,16 +9,17 @@
     ".NETStandard,Version=v2.0/": {
       "PetsHeroe/1.0.0": {
         "dependencies": {
-          "NETStandard.Library": "2.0.2",
+          "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.1.0.673156"
+          "Xamarin.Forms": "4.1.0.673156",
+          "Xamarin.Forms.InputKit": "3.0.12"
         },
         "runtime": {
           "PetsHeroe.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "NETStandard.Library/2.0.2": {
+      "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
@@ -57,6 +58,17 @@
             "fileVersion": "4.1.0.308"
           }
         }
+      },
+      "Xamarin.Forms.InputKit/3.0.12": {
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.InputKit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -73,12 +85,12 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
-    "NETStandard.Library/2.0.2": {
+    "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5hB7QTrTeMzV5xnTH4+zNBOGCD5/DcSVb3iPGgyta4Xje5AI2gJoeLnArlQCzxTbRVpx8YrjnjAmUhkxjbd2ZA==",
-      "path": "netstandard.library/2.0.2",
-      "hashPath": "netstandard.library.2.0.2.nupkg.sha512"
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -100,6 +112,13 @@
       "sha512": "sha512-9NrnfD7kzGq/qjMOrdkTMxtZBOakwo5kEcay8Z6Iwv88bx11J/CDtDVJ0a5IPzfRwRq9XCcrMj3nu9DLQy6ZdA==",
       "path": "xamarin.forms/4.1.0.673156",
       "hashPath": "xamarin.forms.4.1.0.673156.nupkg.sha512"
+    },
+    "Xamarin.Forms.InputKit/3.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fcfRUEUn+C6cEWA5iBYIZFn7G13WaYY5GgIEMNBk2H/pw9i94ouDtzvjFZ2JpXeZ/QjAHKLUVEz5ZOnFndlExQ==",
+      "path": "xamarin.forms.inputkit/3.0.12",
+      "hashPath": "xamarin.forms.inputkit.3.0.12.nupkg.sha512"
     }
   }
 }

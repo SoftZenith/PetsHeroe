@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.Loc_Mascota">
+    x:Class="PetsHeroe.Loc_Mascota"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -36,20 +37,11 @@
             Text="Escanear">
         </Button>
 
-        <Picker Title="¿Como deseas entregar la mascota?"
-                Grid.Row="5"
-                Grid.RowSpan="2"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Margin="8,0,8,0"
-                VerticalOptions="FillAndExpand"
-                x:Name="pkrTipoMascota">
-            <Picker.Items>
-                <x:String>Llévame a un centro de atención PetsHeroe</x:String>
-                <x:String>Manda un mensaje a mi dueño para que se comunique contigo</x:String>
-                <x:String>Toma nota del lugar donde me encuentro Pet's Heroe se encargara</x:String>
-            </Picker.Items>
-        </Picker>
+        <input:RadioButtonGroupView Grid.Row="5">
+            <input:RadioButton Text="Option 1" />
+            <input:RadioButton Text="Option 2" />
+            <input:RadioButton Text="Option 3" />
+        </input:RadioButtonGroupView>
 
     </Grid>
 </ContentPage>
