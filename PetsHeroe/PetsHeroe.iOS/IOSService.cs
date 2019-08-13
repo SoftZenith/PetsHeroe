@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using PetsHeroe.iOS;
-using Foundation;
-using UIKit;
 using System.Data;
+using PetsHeroe.iOS.mx.com.petshero;
 
 [assembly: Xamarin.Forms.Dependency(typeof(IOSService))]
 namespace PetsHeroe.iOS
@@ -17,15 +13,33 @@ namespace PetsHeroe.iOS
         public DataTable Codigo_Valida { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable Estado_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable MarcaProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable MascotaColor_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable MascotaColor_Busca { get; set; }
         public DataTable MascotaEstatus_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable MascotaTipo_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable MascotaTipo_Busca { get; set; }
         public DataTable Pais_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable Producto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable Servicio_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable TipoAsociado_Busca { get; set; }
         public DataTable TipoProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable ValidaUsuario { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable MascotaRaza_Busca { get; set; }
+
+        //Variables out
+        public int IDUsuario { get; set; }
+        public int IDMiembro { get; set; }
+        public int IDAsociado { get; set; }
+        public string nombre { get; set; }
+        //
+
+        wsPetsApp wsPets = new wsPetsApp();
+        AuthHeader auth = new AuthHeader()
+        {
+            Usuario = "appcelmypets2019",
+            Password = "RRW7G0ZiF4D1bUasqazmTg",
+            IDUsuario = 0,
+            IPAddress = "0"
+        };
+
 
         public void getCAM_busca()
         {
@@ -52,9 +66,10 @@ namespace PetsHeroe.iOS
             throw new NotImplementedException();
         }
 
-        public void getMascotaColor_Busca()
+        public void getMascotaColor_Busca(int IDTipo)
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            MascotaColor_Busca = wsPets.MascotaColor_Busca(IDTipo);
         }
 
         public void getMascotaEstatus_Busca()
@@ -64,7 +79,8 @@ namespace PetsHeroe.iOS
 
         public void getMascotaTipo_Busca()
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            MascotaTipo_Busca = wsPets.MascotaTipo_Busca();
         }
 
         public void getPais_Busca()
@@ -84,8 +100,8 @@ namespace PetsHeroe.iOS
 
         public void getTipoAsociado_Busca()
         {
-
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            TipoAsociado_Busca = wsPets.TipoAsociado_Busca().Copy();
         }
 
         public void getTipoProducto_Busca()
@@ -93,9 +109,27 @@ namespace PetsHeroe.iOS
             throw new NotImplementedException();
         }
 
-        public void getValidaUsuario()
+        public bool getValidaUsuario(string user, string pass)
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                bool result = wsPets.ValidaUsuario(user, pass, out int IDUsuario, out int IDMiembro, out int IDAsociado, out string nombre);
+                this.IDUsuario = IDUsuario;
+                this.IDMiembro = IDMiembro;
+                this.IDAsociado = IDAsociado;
+                this.nombre = nombre;
+                return result;
+            }
+            catch (Exception ex) {
+                return false;
+            }
+        }
+
+        public void getMascotaRaza_Busca(int IDTipo)
+        {
+            wsPets.AuthHeaderValue = auth;
+            MascotaRaza_Busca = wsPets.MascotaRaza_Busca(IDTipo);
         }
     }
 }

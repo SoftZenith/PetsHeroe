@@ -792,7 +792,7 @@
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
       },
-      "Xamarin.Essentials/1.1.0": {
+      "Xamarin.Essentials/1.2.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0",
@@ -812,7 +812,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.1.0.673156": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.1",
@@ -844,8 +844,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Forms": "4.1.0.673156"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -1689,10 +1689,10 @@
         "xamarin.android.support.viewpager.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.1.0": {
-      "sha512": "W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
+    "Xamarin.Essentials/1.2.0": {
+      "sha512": "o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
       "type": "package",
-      "path": "xamarin.essentials/1.1.0",
+      "path": "xamarin.essentials/1.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1712,7 +1712,6 @@
         "lib/monoandroid81/Xamarin.Essentials.pdb",
         "lib/monoandroid81/Xamarin.Essentials.xml",
         "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.dll.mdb",
         "lib/monoandroid90/Xamarin.Essentials.pdb",
         "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
@@ -1729,14 +1728,14 @@
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.1.0.nupkg.sha512",
+        "xamarin.essentials.1.2.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.1.0.555618": {
-      "sha512": "eZHy/yCrKhu3WUI1oszz8Hvq8iC+wQyokEVkzlSmNJD6xa2pGLq5UjOgpXEWu7zKPaoZ5c70SrTv1BBZE+Je1A==",
+    "Xamarin.Forms/4.1.0.673156": {
+      "sha512": "9NrnfD7kzGq/qjMOrdkTMxtZBOakwo5kEcay8Z6Iwv88bx11J/CDtDVJ0a5IPzfRwRq9XCcrMj3nu9DLQy6ZdA==",
       "type": "package",
-      "path": "xamarin.forms/4.1.0.555618",
+      "path": "xamarin.forms/4.1.0.673156",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1975,7 +1974,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.1.0.555618.nupkg.sha512",
+        "xamarin.forms.4.1.0.673156.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -1995,44 +1994,37 @@
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.1",
       "Xamarin.Android.Support.v7.CardView >= 28.0.0.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.1",
-      "Xamarin.Essentials >= 1.1.0",
-      "Xamarin.Forms >= 4.1.0.555618"
+      "Xamarin.Essentials >= 1.2.0",
+      "Xamarin.Forms >= 4.1.0.673156"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BHN_R\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/bryangutierrez/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.Android\\PetsHeroe.Android.csproj",
+      "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.Android/PetsHeroe.Android.csproj",
       "projectName": "PetsHeroe.Android",
-      "projectPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.Android\\PetsHeroe.Android.csproj",
-      "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.Android\\obj\\",
+      "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.Android/PetsHeroe.Android.csproj",
+      "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
+      "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
-              "projectPath": "C:\\Users\\BHN_R\\source\\repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj"
+            "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {
+              "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj"
             }
           }
         }
@@ -2071,11 +2063,11 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[1.2.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.1.0.555618, )"
+            "version": "[4.1.0.673156, )"
           }
         }
       }

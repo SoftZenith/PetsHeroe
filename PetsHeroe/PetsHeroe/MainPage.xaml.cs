@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -16,8 +13,31 @@ namespace PetsHeroe
         public MainPage()
         {
             InitializeComponent();
-            DependencyService.Get<IAndroid>().getCAM_busca();
-            _ = DependencyService.Get<IAndroid>().CAM_Busca;
+        }//Constructor
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
         }
+
+        async void onIniciar(object sender, EventArgs args)
+        {
+            _ = Navigation.PushModalAsync(new IniciarSesion());
+        }
+
+        async void onRegDueno(object sender, EventArgs args)
+        {
+            _ = Navigation.PushModalAsync(new Registro_dueno_mascota());
+        }
+
+        async void onRegVet(object sender, EventArgs args)
+        {
+            //_ = Navigation.PushModalAsync(new Registro_veterinario());
+        }
+
+        async void onMascEnc(object sender, EventArgs args) {
+            _ = Navigation.PushModalAsync(new Loc_Mascota());
+        }
+
     }
 }

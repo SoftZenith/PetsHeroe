@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.IniciarSesion">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Margin="0,0,0,0"
+            Source="http://www.petshero.com.mx/images/Logos/Logo-simple.png">
+        </Image>
+        <Entry
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Margin="50,0,50,15"
+            Placeholder="Usuario"
+            x:Name="txtUsuario">
+        </Entry>
+        <Entry
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            IsPassword="True"
+            Margin="50,0,50,15"
+            Placeholder="Contraseña"
+            x:Name="txtPassword">
+        </Entry>
+        <Button
+            Clicked="onEntrar"
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Text="Entrar"
+            x:Name="btnEntrar">
+        </Button>
+        <Button
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            StyleClass="Link"
+            Text="Olvide mi contraseña"
+            x:Name="btnOlvide">
+        </Button>
+    </Grid>
+
+</ContentPage>

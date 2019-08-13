@@ -6,11 +6,64 @@
              mc:Ignorable="d"
              x:Class="PetsHeroe.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button
+            BackgroundColor = "#1adeaa"
+            Clicked = "onIniciar"
+            Grid.Row = "0"
+            Grid.Column = "0"
+            Margin = "5,5,5,0"
+            Text = "Iniciar sesión"
+            TextColor = "black">
+        </Button>
+        <Button
+            BackgroundColor = "green"
+            Clicked = "onRegDueno"
+            Grid.Row = "1"
+            Grid.Column = "0"
+            Margin = "5,3,5,0"
+            Text = "Registrarse como dueño"
+            TextColor = "black">
+        </Button>
+        <Button
+            BackgroundColor = "blue"
+            Clicked = "onRegVet"
+            Grid.Row = "2"
+            Grid.Column = "0"
+            Margin = "5,3,5,0"
+            Text = "Registrarse como veterinario"
+            TextColor = "black">
+        </Button>
+        <Button
+            BackgroundColor = "blue"
+            Grid.Row = "3"
+            Grid.Column = "0"
+            Margin = "5,3,5,0"
+            Text = "Lista de CAMS"
+            TextColor = "black">
+        </Button>
+
+        <Button
+            BackgroundColor = "red"
+            Clicked = "onMascEnc"
+            Grid.Row = "4"
+            Grid.Column = "0"
+            Margin = "5,3,5,5"
+            Text = "¿Encontraste una mascota?"
+            TextColor = "black">
+        </Button>
+
+    </Grid>
 
 </ContentPage>

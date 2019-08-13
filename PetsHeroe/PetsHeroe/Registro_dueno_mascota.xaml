@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Registro_dueno_mascota">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Picker Title="Tipo de mascota" Grid.Row="1" Grid.Column="0" Margin="8,0,8,0" x:Name="pkrTipoMascota">
+            <Picker.Items>
+            </Picker.Items>
+        </Picker>
+
+        <Picker Title="Raza" Grid.Row="2" Grid.Column="0" Margin="8,0,8,0" x:Name="pkrRazaMascota">
+        </Picker>
+
+        <Picker Title="Color" Grid.Row="3" Grid.Column="0" Margin="8,0,8,0" x:Name="pkrColorMascota">
+            <Picker.Items>
+            </Picker.Items>
+        </Picker>
+
+        <Entry Placeholder="Nombre (Mascota)" Grid.Row="4" Margin="8,0,8,0"></Entry>
+
+        <Picker Title="Sexo" Grid.Row="5" Grid.Column="0" Margin="8,0,8,0">
+            <Picker.Items>
+                <x:String>Macho</x:String>
+                <x:String>Hembra</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!--Datos del dueño-->
+        <Entry Placeholder="Nombre del dueño" Grid.Row="6" Margin="8,0,8,0"></Entry>
+
+        <Entry Placeholder="Apellido paterno del dueño" Grid.Row="7" Margin="8,0,8,0"></Entry>
+
+        <Entry Placeholder="Apellido materno del dueño" Grid.Row="8" Margin="8,0,8,0"></Entry>
+
+        <Picker Title="Sexo" Grid.Row="9" Grid.Column="0" Margin="8,0,8,0">
+            <Picker.Items>
+                <x:String>Masculino</x:String>
+                <x:String>Femenino</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry Placeholder="Correo" Grid.Row="10" Margin="8,0,8,0" Keyboard="Email"></Entry>
+
+        <Entry Placeholder="Contraseña" IsPassword="True" Grid.Row="11" Margin="8,0,8,0"></Entry>
+
+        <Button Text="Registrar" Grid.Row="12" Margin="8,0,8,0"></Button>
+
+        
+
+    </Grid>
+</ContentPage>

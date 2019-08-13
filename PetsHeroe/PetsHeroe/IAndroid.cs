@@ -21,20 +21,27 @@ namespace PetsHeroe
         DataTable TipoAsociado_Busca { get; set; }
         DataTable TipoProducto_Busca { get; set; }
         DataTable ValidaUsuario { get; set; }
+        DataTable MascotaRaza_Busca { get; set; }
+
+        int IDUsuario { get; set; }
+        int IDMiembro { get; set; }
+        int IDAsociado { get; set; }
+        string nombre { get; set; }
 
         void getCAM_busca();
         void getCiudad_Buscs();
         void getCodigo_Valida();
         void getEstado_Busca();
         void getMarcaProducto_Busca();
-        void getMascotaColor_Busca();
+        void getMascotaColor_Busca(int IDTipo);
         void getMascotaEstatus_Busca();
         void getMascotaTipo_Busca();
+        void getMascotaRaza_Busca(int IDTipo);
         void getPais_Busca();
         void getProducto_Busca();
         void getServicio_Busca();
         void getTipoAsociado_Busca();
         void getTipoProducto_Busca();
-        void getValidaUsuario();
+        bool getValidaUsuario(String user, String pass);
     }
 }
