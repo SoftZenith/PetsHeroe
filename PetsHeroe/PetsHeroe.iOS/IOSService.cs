@@ -9,9 +9,9 @@ namespace PetsHeroe.iOS
     class IOSService : IIOS
     {
         public DataTable CAM_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable Ciudad_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable Ciudad_Busca { get; set; }
         public DataTable Codigo_Valida { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable Estado_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable Estado_Busca { get; set; }
         public DataTable MarcaProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable MascotaColor_Busca { get; set; }
         public DataTable MascotaEstatus_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -46,9 +46,10 @@ namespace PetsHeroe.iOS
             throw new NotImplementedException();
         }
 
-        public void getCiudad_Buscs()
+        public void getCiudad_Busca(int IDEstado)
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            Ciudad_Busca = wsPets.Ciudad_Busca(IDEstado);
         }
 
         public void getCodigo_Valida()
@@ -58,7 +59,8 @@ namespace PetsHeroe.iOS
 
         public void getEstado_Busca()
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            Estado_Busca = wsPets.Estado_Busca(1);
         }
 
         public void getMarcaProducto_Busca()
@@ -122,6 +124,7 @@ namespace PetsHeroe.iOS
                 return result;
             }
             catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
                 return false;
             }
         }

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage NavigationPage.HasBackButton="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Tomar_Nota">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Editor
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Margin="16,16,16,0"
+            Placeholder="Estoy en...">
+        </Editor>
+
+        <Picker
+            Title="Estado"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="16,0,16,0"
+            x:Name="pkrEstado">
+            <Picker.Items>
+            </Picker.Items>
+        </Picker>
+
+        <Picker
+            Title="Municipio"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="16,0,16,0"
+            x:Name="pkrMunicipio">
+            <Picker.Items>
+            </Picker.Items>
+        </Picker>
+
+        <Label
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="4"
+            Margin="19,0,19,0"
+            Text="Opcionalmente deja tus datos para que mi dueño te agradezca y para que seas elegible para una promoción de Pet's Heroe">
+        </Label>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="5"
+            Margin="16,0,16,0"
+            Placeholder="Nombre">
+        </Entry>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="6"
+            Margin="16,0,16,0"
+            Placeholder="Correo electronico">
+        </Entry>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="7"
+            Margin="16,0,16,0"
+            Placeholder="Telefono">
+        </Entry>
+
+        <Button
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="9"
+            Margin="16,0,16,0"
+            Text="Enviar aviso al dueño">
+
+        </Button>
+
+    </Grid>
+</ContentPage>

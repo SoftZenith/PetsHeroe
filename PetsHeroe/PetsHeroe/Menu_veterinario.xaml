@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Menu_veterinario">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button
+                BackgroundColor="#6a00ff"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="0"
+                Margin="8,8,8,0"
+                Text="Lista de mascotas"
+                TextColor="Black"/>
+            <Button
+                BackgroundColor="#ff6a00"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Margin="8,8,8,0"
+                Text="Caja y asignaciónde beneficios"
+                TextColor="Black"/>
+            <Button
+                BackgroundColor="#6a00ff"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Margin="8,8,8,0"
+                Text="¿Encontraste una mascota?"
+                TextColor="Black"/>
+             <Button
+                BackgroundColor="#ff6a00"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                Margin="8,8,8,8"
+                Text="Lista de CAMS"
+                TextColor="Black"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

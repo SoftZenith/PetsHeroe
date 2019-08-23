@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Mensaje_Dueno">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Entry
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="16,0,16,0"
+            Placeholder="Nombre">
+        </Entry>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="2"
+            Keyboard="Email"
+            Margin="16,0,16,0"
+            Placeholder="Correo electronico">
+        </Entry>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="3"
+            Keyboard="Telephone"
+            Margin="16,0,16,0"
+            Placeholder="Teléfono">
+        </Entry>
+
+        <Editor
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="4"
+            Grid.RowSpan="2"
+            Margin="16,0,16,0"
+            Placeholder="Comentarios"
+            StyleClass="">
+        </Editor>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="1"
+            CornerRadius="30"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="7"
+            Margin="32,0,32,0"
+            Text="Enviar mensaje"
+            FontSize="Medium">
+        </Button>
+
+    </Grid>
+</ContentPage>

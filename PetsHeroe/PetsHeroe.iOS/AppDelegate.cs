@@ -25,6 +25,7 @@ namespace PetsHeroe.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
             Plugin.InputKit.Platforms.iOS.Config.Init();
+            Xamarin.FormsMaps.Init();
             return base.FinishedLaunching(app, options);
         }
     }

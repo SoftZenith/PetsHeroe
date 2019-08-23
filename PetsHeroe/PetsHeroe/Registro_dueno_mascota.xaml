@@ -18,7 +18,6 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -41,32 +40,48 @@
 
         <Picker Title="Sexo" Grid.Row="5" Grid.Column="0" Margin="8,0,8,0">
             <Picker.Items>
-                <x:String>Macho</x:String>
-                <x:String>Hembra</x:String>
+                <x:String>"Macho"</x:String>
+                <x:String>"Hembra"</x:String>
             </Picker.Items>
         </Picker>
 
         <!--Datos del dueño-->
         <Entry Placeholder="Nombre del dueño" Grid.Row="6" Margin="8,0,8,0"></Entry>
 
-        <Entry Placeholder="Apellido paterno del dueño" Grid.Row="7" Margin="8,0,8,0"></Entry>
+        <StackLayout
+            Grid.Row="7"
+            Margin="8,0,8,0"
+            Orientation="Horizontal">
 
-        <Entry Placeholder="Apellido materno del dueño" Grid.Row="8" Margin="8,0,8,0"></Entry>
+            <Entry
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Apellido paterno"></Entry>
 
-        <Picker Title="Sexo" Grid.Row="9" Grid.Column="0" Margin="8,0,8,0">
+            <Entry
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Apellido materno"></Entry>
+
+        </StackLayout>
+
+        <Picker Title="Sexo" Grid.Row="8" Grid.Column="0" Margin="8,0,8,0">
             <Picker.Items>
-                <x:String>Masculino</x:String>
-                <x:String>Femenino</x:String>
+                <x:String>"Masculino"</x:String>
+                <x:String>"Femenino"</x:String>
             </Picker.Items>
         </Picker>
 
-        <Entry Placeholder="Correo" Grid.Row="10" Margin="8,0,8,0" Keyboard="Email"></Entry>
+        <Entry Placeholder="Correo" Grid.Row="9" Margin="8,0,8,0" Keyboard="Email"></Entry>
 
-        <Entry Placeholder="Contraseña" IsPassword="True" Grid.Row="11" Margin="8,0,8,0"></Entry>
+        <Entry Placeholder="Contraseña" IsPassword="True" Grid.Row="10" Margin="8,0,8,0"></Entry>
 
-        <Button Text="Registrar" Grid.Row="12" Margin="8,0,8,0"></Button>
-
-        
+        <Button
+            BackgroundColor="#006561"
+            CornerRadius="16"
+            FontSize="Large"
+            Grid.Row="11"
+            Margin="24,0,24,0"
+            Text="Registrar"
+            TextColor="White"></Button>
 
     </Grid>
 </ContentPage>

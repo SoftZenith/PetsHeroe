@@ -37,11 +37,24 @@
             Text="Escanear">
         </Button>
 
-        <input:RadioButtonGroupView Grid.Row="5">
-            <input:RadioButton Text="Option 1" />
-            <input:RadioButton Text="Option 2" />
-            <input:RadioButton Text="Option 3" />
+        <input:RadioButtonGroupView 
+            Grid.Row="5"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="3"
+            Margin="8"
+            x:Name="rdOpcion">
+            <input:RadioButton IsChecked="True" Margin="0,0,0,0" Text="Llevame a un centro de atención Pet's Heroe"/>
+            <input:RadioButton Margin="0,0,0,0" Text="Manda un mensaje a mi dueño para que se comunique contigo"/>
+            <input:RadioButton Margin="0,0,0,0" Text="Toma nota del lugar donde me encuentro y Pet's Heroe se encargará"/>
         </input:RadioButtonGroupView>
 
+        <Button
+            Clicked="onSiguiente"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            Grid.Row="8"
+            Text="Siguiente">
+
+        </Button>
     </Grid>
 </ContentPage>

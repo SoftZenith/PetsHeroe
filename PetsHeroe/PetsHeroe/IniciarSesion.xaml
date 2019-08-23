@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.IniciarSesion">
-
+    <ContentPage.Content>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -48,21 +48,30 @@
             x:Name="txtPassword">
         </Entry>
         <Button
+            BackgroundColor="#006561"
+            BorderWidth="1"
+            BorderColor="#FF7100"
             Clicked="onEntrar"
+            CornerRadius="16"
             Grid.Row="5"
             Grid.Column="1"
             Grid.ColumnSpan="2"
+            FontSize="Title"
+            TextColor="White"
             Text="Entrar"
             x:Name="btnEntrar">
         </Button>
-        <Button
+        <Label
             Grid.Row="6"
             Grid.Column="1"
             Grid.ColumnSpan="2"
+            HorizontalOptions="CenterAndExpand"
             StyleClass="Link"
+            Margin="0,16,0,0"
             Text="Olvide mi contraseña"
-            x:Name="btnOlvide">
-        </Button>
+            TextColor="#FF7100"
+            x:Name="lblOlvide">
+        </Label>
     </Grid>
-
+    </ContentPage.Content>
 </ContentPage>

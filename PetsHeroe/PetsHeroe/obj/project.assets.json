@@ -11,7 +11,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.3": {
+      "NETStandard.Library/2.0.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -33,6 +33,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Essentials/1.2.0": {
@@ -75,6 +84,18 @@
         "runtime": {
           "lib/netstandard2.0/Plugin.InputKit.dll": {}
         }
+      },
+      "Xamarin.Forms.Maps/4.1.0.673156": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
+        }
       }
     }
   },
@@ -94,12 +115,13 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+    "NETStandard.Library/2.0.2": {
+      "sha512": "5hB7QTrTeMzV5xnTH4+zNBOGCD5/DcSVb3iPGgyta4Xje5AI2gJoeLnArlQCzxTbRVpx8YrjnjAmUhkxjbd2ZA==",
       "type": "package",
-      "path": "netstandard.library/2.0.3",
+      "path": "netstandard.library/2.0.2",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -218,7 +240,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.3.nupkg.sha512",
+        "netstandard.library.2.0.2.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -267,6 +289,33 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
       ]
     },
     "Xamarin.Essentials/1.2.0": {
@@ -579,44 +628,70 @@
         "xamarin.forms.inputkit.3.0.12.nupkg.sha512",
         "xamarin.forms.inputkit.nuspec"
       ]
+    },
+    "Xamarin.Forms.Maps/4.1.0.673156": {
+      "sha512": "vvMBdAgAb3xEYZI/TSANOUuInj6gHs0AqUENv0sseWqvc4nX8ttDvbm8yuU8y0u5LPXVxHqWRSjTbjTY2uytRw==",
+      "type": "package",
+      "path": "xamarin.forms.maps/4.1.0.673156",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.4.1.0.673156.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3",
+      "NETStandard.Library >= 2.0.2",
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Essentials >= 1.2.0",
       "Xamarin.Forms >= 4.1.0.673156",
-      "Xamarin.Forms.InputKit >= 3.0.12"
+      "Xamarin.Forms.InputKit >= 3.0.12",
+      "Xamarin.Forms.Maps >= 4.1.0.673156"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BHN_R\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/bryangutierrez/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
+      "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
       "projectName": "PetsHeroe",
-      "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
-      "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\obj\\",
+      "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
+      "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
+      "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -636,8 +711,12 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.3, )",
+            "version": "[2.0.2, )",
             "autoReferenced": true
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "[4.5.0.6, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -650,6 +729,10 @@
           "Xamarin.Forms.InputKit": {
             "target": "Package",
             "version": "[3.0.12, )"
+          },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "[4.1.0.673156, )"
           }
         },
         "imports": [

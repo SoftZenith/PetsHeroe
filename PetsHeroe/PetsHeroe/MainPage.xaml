@@ -17,10 +17,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <Button
-            BackgroundColor = "#1adeaa"
+            BackgroundColor = "#6a00ff"
             Clicked = "onIniciar"
+            FontSize="Large"
             Grid.Row = "0"
             Grid.Column = "0"
             Margin = "5,5,5,0"
@@ -28,8 +28,9 @@
             TextColor = "black">
         </Button>
         <Button
-            BackgroundColor = "green"
+            BackgroundColor = "#ff6a00"
             Clicked = "onRegDueno"
+            FontSize="Large"
             Grid.Row = "1"
             Grid.Column = "0"
             Margin = "5,3,5,0"
@@ -37,8 +38,9 @@
             TextColor = "black">
         </Button>
         <Button
-            BackgroundColor = "blue"
+            BackgroundColor = "#6a00ff"
             Clicked = "onRegVet"
+            FontSize="Large"
             Grid.Row = "2"
             Grid.Column = "0"
             Margin = "5,3,5,0"
@@ -46,24 +48,25 @@
             TextColor = "black">
         </Button>
         <Button
-            BackgroundColor = "blue"
+            BackgroundColor = "#ff6a00"
+            Clicked = "onListaCAM"
+            FontSize="Large"
             Grid.Row = "3"
             Grid.Column = "0"
             Margin = "5,3,5,0"
             Text = "Lista de CAMS"
             TextColor = "black">
         </Button>
-
         <Button
-            BackgroundColor = "red"
+            BackgroundColor = "#6a00ff"
             Clicked = "onMascEnc"
+            FontSize="Large"
             Grid.Row = "4"
             Grid.Column = "0"
             Margin = "5,3,5,5"
             Text = "¿Encontraste una mascota?"
             TextColor = "black">
         </Button>
-
     </Grid>
 
 </ContentPage>

@@ -9,12 +9,12 @@ namespace PetsHeroe.Droid
     public class AndroidService : IAndroid
     {
         public DataTable CAM_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable Ciudad_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable Ciudad_Busca { get; set; }
         public DataTable Codigo_Valida { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable Estado_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable Estado_Busca { get; set; }
         public DataTable MarcaProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable MascotaColor_Busca { get; set; }
-        public DataTable MascotaEstatus_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable MascotaEstatus_Busca { get; set; }
         public DataTable MascotaTipo_Busca { get; set; }
         public DataTable Pais_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable Producto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -28,8 +28,6 @@ namespace PetsHeroe.Droid
         public int IDMiembro { get; set; }
         public int IDAsociado { get; set; }
         public string nombre { get; set; }
-
-
         //
 
         wsPetsApp wsPets = new wsPetsApp();
@@ -46,9 +44,10 @@ namespace PetsHeroe.Droid
             throw new NotImplementedException();
         }
 
-        public void getCiudad_Buscs()
+        public void getCiudad_Busca(int IDEstado)
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            Ciudad_Busca = wsPets.Ciudad_Busca(IDEstado);
         }
 
         public void getCodigo_Valida()
@@ -58,7 +57,8 @@ namespace PetsHeroe.Droid
 
         public void getEstado_Busca()
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            Estado_Busca = wsPets.Estado_Busca(1);
         }
 
         public void getMarcaProducto_Busca()

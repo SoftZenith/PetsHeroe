@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    x:Class="PetsHeroe.Consulta_CAMS">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <maps:Map
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="0"
+                Grid.RowSpan="4"
+                x:Name="mapCAMS">
+            </maps:Map>
+
+            <ListView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="7" HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvCAMS">     
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="8,0,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding sucursal, StringFormat='Sucursal: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding codigopostal, StringFormat='C.P.: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding telefono, StringFormat='Telefonos: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding ciudad, StringFormat='{0}'}" />
+                                    <BoxView
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       HeightRequest="1"  
+                                       Color="#000000"></BoxView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -77,11 +77,24 @@ namespace PetsHeroe
         }
 
         public void razaMascotaSeleccionado(object sender, EventArgs args) {
-            idRazaMascota = razaMascotaDic[pkrRazaMascota.SelectedItem.ToString()];
+            try
+            {
+                idRazaMascota = razaMascotaDic[pkrRazaMascota.SelectedItem.ToString()];
+            }
+            catch (Exception) {
+                
+            }
         }
 
         public void colorMascotaSeleccionado(object sender, EventArgs args) {
-            idColorMascota = colorMascotaDic[pkrColorMascota.SelectedItem.ToString()];
+            try
+            {
+                idColorMascota = colorMascotaDic[pkrColorMascota.SelectedItem.ToString()];
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }

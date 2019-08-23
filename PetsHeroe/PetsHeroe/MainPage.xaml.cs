@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Data;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -22,21 +21,31 @@ namespace PetsHeroe
 
         async void onIniciar(object sender, EventArgs args)
         {
-            _ = Navigation.PushModalAsync(new IniciarSesion());
+            await Navigation.PushAsync(new IniciarSesion());
+            //_ = Navigation.PushModalAsync(new IniciarSesion());
         }
 
         async void onRegDueno(object sender, EventArgs args)
         {
-            _ = Navigation.PushModalAsync(new Registro_dueno_mascota());
+
+            await Navigation.PushAsync(new Registro_dueno_mascota());
         }
 
         async void onRegVet(object sender, EventArgs args)
         {
-            //_ = Navigation.PushModalAsync(new Registro_veterinario());
+            await Navigation.PushAsync(new Registro_vet());
+            //_ = Navigation.PushModalAsync(new Registro_vet());
         }
 
         async void onMascEnc(object sender, EventArgs args) {
-            _ = Navigation.PushModalAsync(new Loc_Mascota());
+            await Navigation.PushAsync(new Loc_Mascota());
+        }
+
+        async void onListaCAM(object sender, EventArgs args) {
+            //NavigationPage npMasc_existen = new NavigationPage(new Masc_existentes());
+            //await Navigation.PushAsync(new Masc_existentes());
+            //await Navigation.PushAsync(new Reg_Masc_Perdida());
+            await Navigation.PushAsync(new Consulta_CAMS());
         }
 
     }

@@ -29,7 +29,7 @@ namespace PetsHeroe
         string nombre { get; set; }
 
         void getCAM_busca();
-        void getCiudad_Buscs();
+        void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida();
         void getEstado_Busca();
         void getMarcaProducto_Busca();

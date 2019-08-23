@@ -1,39 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj": {}
+    "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj": {
+    "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj",
+        "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj",
         "projectName": "PetsHeroe.iOS",
-        "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj",
-        "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\obj\\",
+        "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj",
+        "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
+        "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
-                "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj"
+              "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {
+                "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj"
               }
             }
           }
@@ -47,6 +41,10 @@
               "version": "[1.2.0, )"
             },
             "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.1.0.673156, )"
+            },
+            "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.1.0.673156, )"
             }
@@ -65,29 +63,22 @@
         }
       }
     },
-    "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
+    "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
+        "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
         "projectName": "PetsHeroe",
-        "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj",
-        "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\obj\\",
+        "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj",
+        "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
+        "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,8 +98,12 @@
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
+              "version": "[2.0.2, )",
               "autoReferenced": true
+            },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -121,6 +116,10 @@
             "Xamarin.Forms.InputKit": {
               "target": "Package",
               "version": "[3.0.12, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[4.1.0.673156, )"
             }
           },
           "imports": [

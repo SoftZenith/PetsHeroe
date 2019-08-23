@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -9,6 +18,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Essentials/1.2.0": {
@@ -161,13 +182,29 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
+      "Xamarin.Forms.Maps/4.1.0.673156": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "PetsHeroe/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.1.0.673156",
-          "Xamarin.Forms.InputKit": "3.0.12"
+          "Xamarin.Forms.InputKit": "3.0.12",
+          "Xamarin.Forms.Maps": "4.1.0.673156"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -178,6 +215,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -185,6 +231,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Essentials/1.2.0": {
@@ -337,13 +395,29 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
+      "Xamarin.Forms.Maps/4.1.0.673156": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "PetsHeroe/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.1.0.673156",
-          "Xamarin.Forms.InputKit": "3.0.12"
+          "Xamarin.Forms.InputKit": "3.0.12",
+          "Xamarin.Forms.Maps": "4.1.0.673156"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -354,6 +428,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -361,6 +444,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Essentials/1.2.0": {
@@ -513,13 +608,29 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
+      "Xamarin.Forms.Maps/4.1.0.673156": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "PetsHeroe/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.1.0.673156",
-          "Xamarin.Forms.InputKit": "3.0.12"
+          "Xamarin.Forms.InputKit": "3.0.12",
+          "Xamarin.Forms.Maps": "4.1.0.673156"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -530,6 +641,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -537,6 +657,18 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Geolocator.dll": {}
         }
       },
       "Xamarin.Essentials/1.2.0": {
@@ -689,13 +821,29 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
+      "Xamarin.Forms.Maps/4.1.0.673156": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.673156"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "PetsHeroe/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.1.0.673156",
-          "Xamarin.Forms.InputKit": "3.0.12"
+          "Xamarin.Forms.InputKit": "3.0.12",
+          "Xamarin.Forms.Maps": "4.1.0.673156"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -707,6 +855,29 @@
     }
   },
   "libraries": {
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -752,6 +923,33 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
       ]
     },
     "Xamarin.Essentials/1.2.0": {
@@ -1065,6 +1263,39 @@
         "xamarin.forms.inputkit.nuspec"
       ]
     },
+    "Xamarin.Forms.Maps/4.1.0.673156": {
+      "sha512": "vvMBdAgAb3xEYZI/TSANOUuInj6gHs0AqUENv0sseWqvc4nX8ttDvbm8yuU8y0u5LPXVxHqWRSjTbjTY2uytRw==",
+      "type": "package",
+      "path": "xamarin.forms.maps/4.1.0.673156",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.4.1.0.673156.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "PetsHeroe/1.0.0": {
       "type": "project",
       "path": "../PetsHeroe/PetsHeroe.csproj",
@@ -1075,43 +1306,37 @@
     "Xamarin.iOS,Version=v1.0": [
       "PetsHeroe >= 1.0.0",
       "Xamarin.Essentials >= 1.2.0",
-      "Xamarin.Forms >= 4.1.0.673156"
+      "Xamarin.Forms >= 4.1.0.673156",
+      "Xamarin.Forms.Maps >= 4.1.0.673156"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BHN_R\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/bryangutierrez/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj",
+      "projectUniqueName": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj",
       "projectName": "PetsHeroe.iOS",
-      "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\PetsHeroe.iOS.csproj",
-      "packagesPath": "C:\\Users\\BHN_R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe.iOS\\obj\\",
+      "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/PetsHeroe.iOS.csproj",
+      "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
+      "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BHN_R\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj": {
-              "projectPath": "C:\\Users\\BHN_R\\Source\\Repos\\PetsHeroe\\PetsHeroe\\PetsHeroe\\PetsHeroe.csproj"
+            "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj": {
+              "projectPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/PetsHeroe.csproj"
             }
           }
         }
@@ -1125,6 +1350,10 @@
             "version": "[1.2.0, )"
           },
           "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[4.1.0.673156, )"
+          },
+          "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[4.1.0.673156, )"
           }

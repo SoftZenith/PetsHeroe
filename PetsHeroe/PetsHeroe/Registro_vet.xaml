@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Registro_vet">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Margin="16,0,16,0"
+                Placeholder="Nombre comercial">
+            </Entry>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Margin="16,0,16,0"
+                Placeholder="Nombre">
+            </Entry>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                Margin="16,0,16,0"
+                Placeholder="Apellido paterno">
+            </Entry>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                Margin="16,0,16,0"
+                Placeholder="Apellido materno">
+            </Entry>
+
+            <Picker Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Grid.Row="5"
+                    Margin="16,0,16,0"
+                    Title="Sexo">
+                <Picker.Items>
+                    <x:String>Masculino</x:String>
+                    <x:String>Femenino</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="6"
+                Margin="16,0,16,0"
+                StyleClass="Email"
+                Placeholder="Correo electronico">
+            </Entry>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="7"
+                Margin="16,0,16,0"
+                IsPassword="True"
+                Placeholder="Contraseña">
+            </Entry>
+
+            <Entry
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="8"
+                Margin="16,0,16,0"
+                IsPassword="True"
+                Placeholder="Confirme contraseña">
+            </Entry>
+
+            <StackLayout
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="9"
+                Margin="24,0,16,0"
+                Orientation="Horizontal">
+                <CheckBox
+                    x:Name="chkTermino"
+                    Color="#FF7100">
+                </CheckBox>
+                <Label
+                    FontSize="Medium"
+                    Margin="0,2,0,0"
+                    Text="He leído y estoy de acuerdo con los terminos y condiciones">
+                </Label>
+            </StackLayout>
+
+            <Button
+                BackgroundColor="#006561"
+                CornerRadius="16"
+                Grid.Column="1"
+                Grid.Row="10"
+                Margin="0,8,0,0"
+                Text="Registrar"
+                TextColor="White">
+            </Button>
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
