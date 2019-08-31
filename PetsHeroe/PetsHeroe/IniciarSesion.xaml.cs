@@ -17,19 +17,48 @@ namespace PetsHeroe
             var forgetPassword_tap = new TapGestureRecognizer();
             forgetPassword_tap.Tapped += (s, e) =>
             {
-                DisplayAlert("¿Olvidaste tu contraseña?", "Te enviamos un correo", "OK");
+                var correo = "";
+                try{
+                    correo = txtUsuario.Text;
+                    if (correo == "")
+                    {
+                        DisplayAlert("Error", "Ingresa tu correo", "OK");
+                        return;
+                    }
+                }
+                catch (Exception) {
+                    correo = "";
+                }
+
+                if (Device.RuntimePlatform == Device.Android) {
+                    DependencyService.Get<IAndroid>().getEnviaContrasena(correo);
+                    if (DependencyService.Get<IAndroid>().EnviaContrasena)
+                    {
+                        DisplayAlert("Correcto", "Te enviamos un correo con tu contraseña", "OK");
+                    } else {
+                        DisplayAlert("Error", "Verifica que sea la dirección de correo con la que te registraste", "OK");
+                    }
+                } else if (Device.RuntimePlatform == Device.iOS) {
+                    DependencyService.Get<IIOS>().getEnviaContrasena(correo);
+                    if (DependencyService.Get<IIOS>().EnviaContrasena)
+                    {
+                        DisplayAlert("Correcto", "Te enviamos un correo con tu contraseña", "OK");
+                    }
+                    else
+                    {
+                        DisplayAlert("Error", "Verifica que sea la dirección de correo con la que te registraste", "OK");
+                    }
+                }
             };
             lblOlvide.GestureRecognizers.Add(forgetPassword_tap);
         }
 
         async void onEntrar(object sender, EventArgs args)
         {
-            try
-            {
+            try{
                 user = txtUsuario.Text.ToString();
                 pass = txtPassword.Text.ToString();
-            }
-            catch (Exception ex) {
+            }catch (Exception ex) {
                 await DisplayAlert("Campos faltantes","Llena todos los campos","OK");
                 return;
             }
@@ -42,19 +71,37 @@ namespace PetsHeroe
             {
                 if (DependencyService.Get<IIOS>().getValidaUsuario(user, pass))
                 {
-                    await DisplayAlert("Alert", "Usuario " + DependencyService.Get<IIOS>().nombre, "OK");
+                    var asociado = DependencyService.Get<IIOS>().ValidaUsuario;
+                    if (asociado.idMiembro > 0){
+                        await DisplayAlert("Bienvenido", "Dueño "+asociado.nombre, "OK");
+                        await Navigation.PushAsync(new Menu_dueno());
+                    }
+                    else if(asociado.idAsociado > 0){
+                        await DisplayAlert("Bienvenido", "Asociado "+asociado.nombre, "OK");
+                        await Navigation.PushAsync(new Menu_veterinario());
+                    }
                     //Navigation.PushModalAsync(new menu_general());
                 }
                 else {
-                    await DisplayAlert("Alert", "Usuario incorrecto", "OK");
+                    await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
                 }
             }else if (Device.RuntimePlatform == Device.Android) {
                 if (DependencyService.Get<IAndroid>().getValidaUsuario(user, pass))
                 {
-                    await DisplayAlert("Alert", "Usuario "+DependencyService.Get<IAndroid>().nombre, "OK");
+                    var asociado = DependencyService.Get<IAndroid>().ValidaUsuario;
+                    if (asociado.idMiembro > 0)
+                    {
+                        await DisplayAlert("Bienvenido", "Dueño " + asociado.nombre, "OK");
+                        await Navigation.PushAsync(new Menu_dueno());
+                    }
+                    else if (asociado.idAsociado > 0)
+                    {
+                        await DisplayAlert("Bienvenido", "Asociado " + asociado.nombre, "OK");
+                        await Navigation.PushAsync(new Menu_veterinario());
+                    }
                 }
                 else {
-                    await DisplayAlert("Alert", "Usuario incorrecto", "OK");
+                    await DisplayAlert("Error", "Usuario y/o contraseña incorrectos", "OK");
                 }
             }
         }

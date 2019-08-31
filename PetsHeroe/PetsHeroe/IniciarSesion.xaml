@@ -63,12 +63,12 @@
         </Button>
         <Label
             Grid.Row="6"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            HorizontalOptions="CenterAndExpand"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            HorizontalOptions="StartAndExpand"
             StyleClass="Link"
-            Margin="0,16,0,0"
-            Text="Olvide mi contraseña"
+            Margin="20,16,0,0"
+            Text="Si olvidaste tu contraseña, presiona aquí para recuperarla"
             TextColor="#FF7100"
             x:Name="lblOlvide">
         </Label>

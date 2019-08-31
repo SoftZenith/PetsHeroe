@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace PetsHeroe
 {
     public partial class Registro_dueno_mascota : ContentPage
     {
-        int idTipoMascota = 0;
-        int idRazaMascota = 0;
-        int idColorMascota = 0;
+        int idTipoMascota = -1;
+        int idRazaMascota = -1;
+        int idColorMascota = -1;
+        char sexoDuenoC;
+        char sexoMascotaC;
         //Diccionarios para guardar nombre - id
         Dictionary<string, int> tipoMascotaDic = new Dictionary<string, int>(); 
         Dictionary<string, int> razaMascotaDic = new Dictionary<string, int>();
@@ -38,6 +41,27 @@ namespace PetsHeroe
             }
 
             pkrTipoMascota.SelectedIndexChanged += tipoMascotaSeleccionado;
+
+            pkrSexoMascota.SelectedIndexChanged += (object sender, EventArgs eventArgs) =>
+            {
+                int sexoSelected = pkrSexoMascota.SelectedIndex;
+                if (sexoSelected == 0)
+                {
+                    sexoMascotaC = (char)77;
+                } else if (sexoSelected == 1) {
+                    sexoMascotaC = (char)72;
+                }
+            };
+
+            pkrSexoDueno.SelectedIndexChanged += (object sender, EventArgs eventArgs) =>
+            {
+                int sexoSelected = pkrSexoDueno.SelectedIndex;
+                if (sexoSelected == 0) {
+                    sexoDuenoC = (char)77;
+                } else if (sexoSelected == 1) {
+                    sexoDuenoC = (char)70;
+                }
+            };
 
         }//Constructor
 
@@ -94,6 +118,91 @@ namespace PetsHeroe
             catch (Exception)
             {
                 
+            }
+        }
+
+        async void onReg_dueno(object sender, EventArgs args) {
+            string codigoMascota = "", nombreMascota = "", nombreDueno = "", apellidoP = "", apellidoM = "", correo = "", contrasena = "";
+            int tipoMascota = -1, razaMascota = -1, colorMascota = -1, sexoMascota = -1, sexoDueno = -1, edadMascotaE = -1;
+
+            try{
+                codigoMascota = txtCodigoMascota.Text;
+                tipoMascota = idTipoMascota;
+                razaMascota = idRazaMascota;
+                colorMascota = idColorMascota;
+                //poner pickers
+                sexoMascota = sexoMascotaC;
+                sexoDueno = sexoDuenoC;
+                //
+                nombreMascota = txtnombreMascota.Text;
+                edadMascotaE = Convert.ToInt32(txtedadMascota.Text);
+                nombreDueno = txtnombreDueno.Text;
+                apellidoP = txtApellidoPaterno.Text;
+                apellidoM = txtApellidoMaterno.Text;
+                correo = txtCorreo.Text;
+                contrasena = txtContrasena.Text;
+
+                string[] textos = { codigoMascota, nombreMascota, nombreDueno, apellidoP, apellidoM, correo, contrasena };
+                int[] enteros = { tipoMascota, razaMascota, colorMascota, sexoMascota, sexoDueno, edadMascotaE };
+                if (textos.Any(item => item.Length <= 0))
+                {
+                    await DisplayAlert("Error", "Faltan campos por llenar textos", "OK");
+                    return;
+                }
+                else if (enteros.Any(item => item == -1)) {
+                    await DisplayAlert("Error", "Faltan campos por llenar enteros", "OK");
+                    return;
+                }
+
+                bool estatus = false;
+
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    DependencyService.Get<IAndroid>().getMascota_Registro(new Model.Dueno() {
+                        idDueno = codigoMascota,
+                        nombre = nombreDueno,
+                        apellidoP = apellidoP,
+                        apellidoM = apellidoM,
+                        sexo = sexoDueno,
+                        correo = correo,
+                        contrasena = contrasena,
+                        mascostaCodigo = codigoMascota,
+                        sexoMascota = sexoMascota,
+                        idTipoMascota = idTipoMascota,
+                        idRazaMascota = idRazaMascota,
+                        idColorMascota = idColorMascota,
+                        edadMascota = edadMascotaE
+                    });
+                    estatus = DependencyService.Get<IAndroid>().Mascota_Registro;
+                } else if (Device.RuntimePlatform == Device.iOS) {
+                    DependencyService.Get<IIOS>().getMascota_Registro(new Model.Dueno() {
+                        idDueno = codigoMascota,
+                        nombre = nombreDueno,
+                        apellidoP = apellidoP,
+                        apellidoM = apellidoM,
+                        sexo = sexoDueno,
+                        correo = correo,
+                        contrasena = contrasena,
+                        mascostaCodigo = codigoMascota,
+                        sexoMascota = sexoMascota,
+                        idTipoMascota = idTipoMascota,
+                        idRazaMascota = idRazaMascota,
+                        idColorMascota = idColorMascota,
+                        edadMascota = edadMascotaE
+                    });
+                    estatus = DependencyService.Get<IIOS>().Mascota_Registro;
+                }
+                if (estatus)
+                {
+                    await DisplayAlert("OK", "Se guardo registro", "OK");
+                }
+                else {
+                    await DisplayAlert("Error", "Error al guardar registro", "OK");
+                }
+
+            }catch (Exception){
+                await DisplayAlert("Error", "Faltan campos por llenar", "OK");
+                return;
             }
         }
     }

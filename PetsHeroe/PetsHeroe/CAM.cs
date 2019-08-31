@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using Xamarin.Forms;
 
 namespace PetsHeroe
 {
@@ -20,24 +22,32 @@ namespace PetsHeroe
         public List<CAM> getCAMS() {
 
             List<CAM> listaCAMs = new List<CAM>();
-            listaCAMs.Add(
-                new CAM() {
-                    nombre = "Acutus Medicina Veterinaria",
-                    sucursal = "Rodrigo Reinoso Av.Gobernadores 404 - 4 Av.Gobernadores 404 - 4",
-                    codigopostal = "64380",
-                    telefono = "(81)83150001, (81)83150001",
-                    ciudad = "Monterrey, Nuevo León. México"
-                });
-            listaCAMs.Add(
-                new CAM()
-                {
-                    nombre = "AG Veterinaria",
-                    sucursal = "Dirección principal",
-                    codigopostal = "64385",
-                    telefono = "(81)82140024, (81)8213045",
-                    ciudad = "Monterrey, Nuevo León. México"
-                });
+            DataTable lista_CAM = new DataTable();
 
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                DependencyService.Get<IAndroid>().getCAM_busca(25.708742, -100.344950, 100.0);
+                lista_CAM = DependencyService.Get<IAndroid>().CAM_Busca;
+            }
+            else if (Device.RuntimePlatform == Device.iOS)
+            {
+                DependencyService.Get<IIOS>().getCAM_busca(25.708742, -100.344950, 100.0);
+                lista_CAM = DependencyService.Get<IIOS>().CAM_Busca;
+            }
+
+            foreach (DataRow dr in lista_CAM.Rows)
+            {
+
+                listaCAMs.Add(
+                    new CAM()
+                    {
+                        nombre = dr["BusinessName"].ToString(),
+                        sucursal = dr["Address1"].ToString(),
+                        codigopostal = dr["ZipCode"].ToString(),
+                        telefono = dr["Phone1"] + ", " + dr["Phone2"],
+                        ciudad = dr["City"] + ", " + dr["State"] + ", " + dr["Country"]
+                    });
+            }
 
             return listaCAMs;
 

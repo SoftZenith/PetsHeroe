@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage NavigationPage.HasBackButton="False"
+<ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.Tomar_Nota">
@@ -22,41 +22,57 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Editor
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="0"
             Grid.RowSpan="2"
             Margin="16,16,16,0"
-            Placeholder="Estoy en...">
-        </Editor>
-
-        <Picker
-            Title="Estado"
-            Grid.Row="2"
+            Padding="4">
+            <Editor
+                Placeholder="localizacion..."
+                x:Name="txtLocalizacion">
+            </Editor>
+        </Frame>
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
+            Grid.Row="2"
+            Grid.RowSpan="1"
             Margin="16,0,16,0"
-            x:Name="pkrEstado">
-            <Picker.Items>
-            </Picker.Items>
-        </Picker>
-
+            Padding="2">
+            <Entry
+                VerticalOptions="FillAndExpand"
+                Placeholder="Notas..."
+                x:Name="txtNotas">
+            </Entry>
+        </Frame>
         <Picker
-            Title="Municipio"
+            Title="Estado"
             Grid.Row="3"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="16,0,16,0"
+            x:Name="pkrEstado">
+        </Picker>
+
+        <Picker
+            Title="Municipio"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="16,0,16,0"
             x:Name="pkrMunicipio">
-            <Picker.Items>
-            </Picker.Items>
         </Picker>
 
         <Label
             Grid.Column="0"
             Grid.ColumnSpan="3"
-            Grid.Row="4"
+            Grid.Row="5"
             Margin="19,0,19,0"
             Text="Opcionalmente deja tus datos para que mi dueño te agradezca y para que seas elegible para una promoción de Pet's Heroe">
         </Label>
@@ -64,17 +80,10 @@
         <Entry
             Grid.Column="0"
             Grid.ColumnSpan="3"
-            Grid.Row="5"
-            Margin="16,0,16,0"
-            Placeholder="Nombre">
-        </Entry>
-
-        <Entry
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
             Grid.Row="6"
             Margin="16,0,16,0"
-            Placeholder="Correo electronico">
+            Placeholder="Nombre"
+            x:Name="txtNombre">
         </Entry>
 
         <Entry
@@ -82,16 +91,31 @@
             Grid.ColumnSpan="3"
             Grid.Row="7"
             Margin="16,0,16,0"
-            Placeholder="Telefono">
+            Placeholder="Correo electronico"
+            x:Name="txtCorreo">
+        </Entry>
+
+        <Entry
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="8"
+            Margin="16,0,16,0"
+            Placeholder="Telefono"
+            x:Name="txtTelefono">
         </Entry>
 
         <Button
+            BackgroundColor="#006561"
+            BorderWidth="1"
+            BorderColor="#FF7100"
+            Clicked="onAviso"
+            CornerRadius="16"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="9"
-            Margin="16,0,16,0"
-            Text="Enviar aviso al dueño">
-
+            Margin="16,0,16,4"
+            Text="Enviar aviso al dueño"
+            TextColor="White">
         </Button>
 
     </Grid>

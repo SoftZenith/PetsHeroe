@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.petshero.com.mx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.petshero.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.petshero.com.mx" targetNamespace="http://www.petshero.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.petshero.com.mx">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
       <s:element name="ValidaUsuario">
         <s:complexType>
           <s:sequence>
@@ -31,6 +32,16 @@
         </s:sequence>
         <s:anyAttribute />
       </s:complexType>
+      <s:element name="EnviaContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaContrasenaResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="Pais_Busca">
         <s:complexType />
       </s:element>
@@ -93,8 +104,13 @@
       <s:element name="CAM_Busca">
         <s:complexType>
           <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPais" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstado" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDCiudad" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="DistanciaKm" type="s:double" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -215,6 +231,28 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Veterinario_Registro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreComercial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioMaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioSexo" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoAsociado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Veterinario_RegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Veterinario_RegistroResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="MascotaTipo_Busca">
         <s:complexType />
       </s:element>
@@ -291,6 +329,37 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Mascota_Registro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DuenoCodigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DuenoNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DuenoPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DuenoMaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DuenoSexo" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaCodigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MascotaNombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MascotaSexo" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRazaMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDColorMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EdadMascota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_RegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Mascota_RegistroResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCodigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascotaCodigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstatusCodigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Codigo_Valida">
         <s:complexType>
           <s:sequence>
@@ -305,10 +374,78 @@
             <s:element minOccurs="1" maxOccurs="1" name="IDCodigo" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDEstatusCodigo" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDMascotaCodigo" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Codigo_Leido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Codigo_LeidoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Entrega_CAM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Entrega_CAMResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Entrega_Localizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCiudad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Localizacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Entrega_LocalizacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Entrega_SoloMensaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Entrega_SoloMensajeResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="ValidaUsuarioSoapIn">
@@ -318,6 +455,15 @@
     <wsdl:part name="parameters" element="tns:ValidaUsuarioResponse" />
   </wsdl:message>
   <wsdl:message name="ValidaUsuarioAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="EnviaContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaContrasena" />
+  </wsdl:message>
+  <wsdl:message name="EnviaContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviaContrasenaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
   <wsdl:message name="Pais_BuscaSoapIn">
@@ -401,6 +547,15 @@
   <wsdl:message name="Servicio_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:Veterinario_Registro" />
+  </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:Veterinario_RegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="MascotaTipo_BuscaSoapIn">
     <wsdl:part name="parameters" element="tns:MascotaTipo_Busca" />
   </wsdl:message>
@@ -437,6 +592,15 @@
   <wsdl:message name="MascotaEstatus_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Mascota_RegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_Registro" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_RegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_RegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_RegistroAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="Codigo_ValidaSoapIn">
     <wsdl:part name="parameters" element="tns:Codigo_Valida" />
   </wsdl:message>
@@ -446,11 +610,40 @@
   <wsdl:message name="Codigo_ValidaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Codigo_LeidoSoapIn">
+    <wsdl:part name="parameters" element="tns:Codigo_Leido" />
+  </wsdl:message>
+  <wsdl:message name="Codigo_LeidoSoapOut">
+    <wsdl:part name="parameters" element="tns:Codigo_LeidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_CAMSoapIn">
+    <wsdl:part name="parameters" element="tns:Entrega_CAM" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_CAMSoapOut">
+    <wsdl:part name="parameters" element="tns:Entrega_CAMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_LocalizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Entrega_Localizacion" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_LocalizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:Entrega_LocalizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_SoloMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:Entrega_SoloMensaje" />
+  </wsdl:message>
+  <wsdl:message name="Entrega_SoloMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:Entrega_SoloMensajeResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsPetsAppSoap">
     <wsdl:operation name="ValidaUsuario">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida el Usuario y su contraseña</wsdl:documentation>
       <wsdl:input message="tns:ValidaUsuarioSoapIn" />
       <wsdl:output message="tns:ValidaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaContrasena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Envía la contraseña del Usuario a su correo electrónico registrado</wsdl:documentation>
+      <wsdl:input message="tns:EnviaContrasenaSoapIn" />
+      <wsdl:output message="tns:EnviaContrasenaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Pais_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Paises</wsdl:documentation>
@@ -468,7 +661,7 @@
       <wsdl:output message="tns:Ciudad_BuscaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="CAM_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Ciudad y Asociado</wsdl:documentation>
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Asociado o ubicación</wsdl:documentation>
       <wsdl:input message="tns:CAM_BuscaSoapIn" />
       <wsdl:output message="tns:CAM_BuscaSoapOut" />
     </wsdl:operation>
@@ -497,6 +690,11 @@
       <wsdl:input message="tns:Servicio_BuscaSoapIn" />
       <wsdl:output message="tns:Servicio_BuscaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Veterinarias o Asociados para CAM</wsdl:documentation>
+      <wsdl:input message="tns:Veterinario_RegistroSoapIn" />
+      <wsdl:output message="tns:Veterinario_RegistroSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Mascota</wsdl:documentation>
       <wsdl:input message="tns:MascotaTipo_BuscaSoapIn" />
@@ -517,10 +715,35 @@
       <wsdl:input message="tns:MascotaEstatus_BuscaSoapIn" />
       <wsdl:output message="tns:MascotaEstatus_BuscaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Registro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de nueva Mascota y (opcional) Dueño</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_RegistroSoapIn" />
+      <wsdl:output message="tns:Mascota_RegistroSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
       <wsdl:input message="tns:Codigo_ValidaSoapIn" />
       <wsdl:output message="tns:Codigo_ValidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Leido">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lectura de codigo para publico en general</wsdl:documentation>
+      <wsdl:input message="tns:Codigo_LeidoSoapIn" />
+      <wsdl:output message="tns:Codigo_LeidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_CAM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Entrega de Mascota en CAM</wsdl:documentation>
+      <wsdl:input message="tns:Entrega_CAMSoapIn" />
+      <wsdl:output message="tns:Entrega_CAMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_Localizacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descubridor deja localización</wsdl:documentation>
+      <wsdl:input message="tns:Entrega_LocalizacionSoapIn" />
+      <wsdl:output message="tns:Entrega_LocalizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_SoloMensaje">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descubridor deja mensaje</wsdl:documentation>
+      <wsdl:input message="tns:Entrega_SoloMensajeSoapIn" />
+      <wsdl:output message="tns:Entrega_SoloMensajeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsPetsAppSoap" type="tns:wsPetsAppSoap">
@@ -530,6 +753,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:ValidaUsuarioAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaContrasena">
+      <soap:operation soapAction="http://www.petshero.com.mx/EnviaContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EnviaContrasenaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -625,6 +858,16 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <soap:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -665,11 +908,57 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Registro">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Registro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <soap:operation soapAction="http://www.petshero.com.mx/Codigo_Valida" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Codigo_ValidaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Leido">
+      <soap:operation soapAction="http://www.petshero.com.mx/Codigo_Leido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_CAM">
+      <soap:operation soapAction="http://www.petshero.com.mx/Entrega_CAM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_Localizacion">
+      <soap:operation soapAction="http://www.petshero.com.mx/Entrega_Localizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_SoloMensaje">
+      <soap:operation soapAction="http://www.petshero.com.mx/Entrega_SoloMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -683,6 +972,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:ValidaUsuarioAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaContrasena">
+      <soap12:operation soapAction="http://www.petshero.com.mx/EnviaContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EnviaContrasenaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />
@@ -778,6 +1077,16 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap12:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -818,11 +1127,57 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Registro">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Registro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <soap12:operation soapAction="http://www.petshero.com.mx/Codigo_Valida" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Codigo_ValidaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Codigo_Leido">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Codigo_Leido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_CAM">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Entrega_CAM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_Localizacion">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Entrega_Localizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entrega_SoloMensaje">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Entrega_SoloMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

@@ -38,15 +38,23 @@
           "dependencies": {
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.673156, )"
+              "version": "[4.2.0.709249, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.1.0.673156, )"
+              "version": "[4.2.0.709249, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           }
         }
@@ -120,6 +128,14 @@
             "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.1.0.673156, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

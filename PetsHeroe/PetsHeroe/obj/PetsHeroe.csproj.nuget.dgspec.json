@@ -61,6 +61,14 @@
             "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.1.0.673156, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

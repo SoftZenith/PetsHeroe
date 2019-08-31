@@ -25,15 +25,29 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <maps:Map
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="12"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="0"
                 Grid.RowSpan="4"
-                x:Name="mapCAMS">
-            </maps:Map>
-
-            <ListView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="7" HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvCAMS">     
+                Margin="4,4,4,0"
+                Padding="4">
+                <maps:Map
+                    x:Name="mapCAMS">
+                </maps:Map>
+            </Frame>
+            <Frame
+                BorderColor="#006561"
+                CornerRadius="12"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                Grid.RowSpan="7"
+                Margin="4,0,4,4"
+                Padding="4">
+            <ListView HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvCAMS" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">     
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -61,7 +75,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            </Frame>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

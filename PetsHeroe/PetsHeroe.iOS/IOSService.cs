@@ -2,15 +2,16 @@
 using PetsHeroe.iOS;
 using System.Data;
 using PetsHeroe.iOS.mx.com.petshero;
+using PetsHeroe.Model;
 
 [assembly: Xamarin.Forms.Dependency(typeof(IOSService))]
 namespace PetsHeroe.iOS
 {
     class IOSService : IIOS
     {
-        public DataTable CAM_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable CAM_Busca { get; set; }
         public DataTable Ciudad_Busca { get; set; }
-        public DataTable Codigo_Valida { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool Codigo_Valida { get; set; }
         public DataTable Estado_Busca { get; set; }
         public DataTable MarcaProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable MascotaColor_Busca { get; set; }
@@ -21,7 +22,7 @@ namespace PetsHeroe.iOS
         public DataTable Servicio_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable TipoAsociado_Busca { get; set; }
         public DataTable TipoProducto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DataTable ValidaUsuario { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Asociado ValidaUsuario { get; set; }
         public DataTable MascotaRaza_Busca { get; set; }
 
         //Variables out
@@ -29,6 +30,12 @@ namespace PetsHeroe.iOS
         public int IDMiembro { get; set; }
         public int IDAsociado { get; set; }
         public string nombre { get; set; }
+        public bool EnviaContrasena { get; set; }
+        public DataTable Veterinario_Registro { get; set; }
+        public bool Mascota_Registro { get; set; }
+        public MensajeDueno Entrega_SoloMensaje { get; set; }
+        public bool Entrega_Localizacion { get; set; }
+
         //
 
         wsPetsApp wsPets = new wsPetsApp();
@@ -41,9 +48,17 @@ namespace PetsHeroe.iOS
         };
 
 
-        public void getCAM_busca()
+        public void getCAM_busca(double lat, double lon, double kms)
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                CAM_Busca = wsPets.CAM_Busca(-1, -1, -1, -1, lat, lon, kms);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }
         }
 
         public void getCiudad_Busca(int IDEstado)
@@ -52,9 +67,17 @@ namespace PetsHeroe.iOS
             Ciudad_Busca = wsPets.Ciudad_Busca(IDEstado);
         }
 
-        public void getCodigo_Valida()
+        public void getCodigo_Valida(string codigo)
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                Codigo_Valida = wsPets.Codigo_Valida(codigo, out int IDCodigo, out int IDEstatusCodigo, out int IDMascotaCodigo);
+            }
+            catch (Exception ex)
+            {
+                Codigo_Valida = false;
+            }
         }
 
         public void getEstado_Busca()
@@ -103,7 +126,7 @@ namespace PetsHeroe.iOS
         public void getTipoAsociado_Busca()
         {
             wsPets.AuthHeaderValue = auth;
-            TipoAsociado_Busca = wsPets.TipoAsociado_Busca().Copy();
+            TipoAsociado_Busca = wsPets.TipoAsociado_Busca();
         }
 
         public void getTipoProducto_Busca()
@@ -121,6 +144,12 @@ namespace PetsHeroe.iOS
                 this.IDMiembro = IDMiembro;
                 this.IDAsociado = IDAsociado;
                 this.nombre = nombre;
+                Asociado asociado = new Asociado();
+                asociado.idUsuario = IDUsuario;
+                asociado.idMiembro = IDMiembro;
+                asociado.idAsociado = IDAsociado;
+                asociado.nombre = nombre;
+                ValidaUsuario = asociado;
                 return result;
             }
             catch (Exception ex) {
@@ -133,6 +162,71 @@ namespace PetsHeroe.iOS
         {
             wsPets.AuthHeaderValue = auth;
             MascotaRaza_Busca = wsPets.MascotaRaza_Busca(IDTipo);
+        }
+
+        public void getEnviaContrasena(string correo)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try{
+                wsPets.EnviaContrasena(correo);
+                EnviaContrasena = true;
+            }catch (Exception){
+                EnviaContrasena = false;
+            }
+        }
+
+        public bool setVeterinario_Registro(Asociado asociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
+                    asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
+            }
+            catch (Exception ex) {
+                return false;
+            }
+        }
+
+        public void getMascota_Registro(Dueno mascota)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try{
+                Mascota_Registro = wsPets.Mascota_Registro(mascota.idDueno.ToString(), mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
+                    mascota.contrasena, mascota.mascostaCodigo.ToString(), mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
+                    mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascotaCodigo, out int IDEstatusCodigo);
+            }catch (Exception ex){
+                Console.WriteLine("Error al registrar mascota: "+ex.ToString());
+                Mascota_Registro = false;
+            }
+        }
+
+        public bool setEntrega_SoloMensaje(MensajeDueno mensaje)
+        {
+            try
+            {
+                wsPets.Entrega_SoloMensaje(5, mensaje.codigo, mensaje.nombre, mensaje.correo, mensaje.telefono, mensaje.mensaje, mensaje.latitud, mensaje.longitud);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+                return false;
+            }
+        }
+
+        public bool setEntrega_Localizacion(MensajeDueno localizacion)
+        {
+            try
+            {
+                wsPets.Entrega_Localizacion(5, localizacion.codigo, localizacion.idCiudad, localizacion.nombre, localizacion.correo, localizacion.telefono, localizacion.localizacion, localizacion.notas, localizacion.latitud, localizacion.longitud);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+                return false;
+            }
         }
     }
 }

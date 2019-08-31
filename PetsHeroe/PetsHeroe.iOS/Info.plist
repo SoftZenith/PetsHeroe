@@ -41,5 +41,7 @@
 	<string>1</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need your camera to scan codes QR</string>
 </dict>
 </plist>

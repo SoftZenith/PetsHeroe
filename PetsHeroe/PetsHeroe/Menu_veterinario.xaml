@@ -15,6 +15,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Button
                 BackgroundColor="#6a00ff"
@@ -23,7 +24,7 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="0"
                 Margin="8,8,8,0"
-                Text="Lista de mascotas"
+                Text="Ver mis Mascotas"
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
@@ -36,6 +37,7 @@
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#6a00ff"
+                Clicked="onLocMascota"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -50,7 +52,17 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
                 Margin="8,8,8,8"
-                Text="Lista de CAMS"
+                Text="Veterinarias asociadas"
+                TextColor="Black"/>
+            <Button
+                BackgroundColor="#ff6a00"
+                Clicked="onCerrarSesion"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                Margin="8,8,8,8"
+                Text="Salir Sesión"
                 TextColor="Black"/>
         </Grid>
     </ContentPage.Content>

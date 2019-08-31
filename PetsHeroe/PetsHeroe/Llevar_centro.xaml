@@ -28,19 +28,43 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <maps:Map x:Name="mapLlevarCentro"
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="10"
             Grid.Row="0"
             Grid.RowSpan="6"
-            Margin="8">
-        </maps:Map>
-
+            Margin="8"
+            Padding="4">
+            <maps:Map
+                x:Name="mapLlevarCentro">
+            </maps:Map>
+        </Frame>
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="12"
+            Margin="8,0,8,8"
+            Padding="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="10"
+            Grid.Row="6"
+            Grid.RowSpan="2">
+            <Editor
+                VerticalOptions="FillAndExpand"
+                Placeholder="Notas">
+            </Editor>
+        </Frame>
         <Button
-            Grid.Column="2"
-            Grid.ColumnSpan="6"
+            BackgroundColor="#006561"
+            BorderWidth="1"
+            BorderColor="#FF7100"
+            CornerRadius="16"
+            Grid.Column="1"
+            Grid.ColumnSpan="8"
             Grid.Row="8"
-            Text="Dejare a la mascota ahí">
+            Text="Dejare a la mascota ahí"
+            TextColor="White">
         </Button>
         
     </Grid>

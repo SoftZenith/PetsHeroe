@@ -26,7 +26,8 @@
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="16,0,16,0"
-            Placeholder="Nombre">
+            Placeholder="Nombre"
+            x:Name="txtNombre">
         </Entry>
 
         <Entry
@@ -35,7 +36,8 @@
             Grid.Row="2"
             Keyboard="Email"
             Margin="16,0,16,0"
-            Placeholder="Correo electronico">
+            Placeholder="Correo electronico"
+            x:Name="txtCorreo">
         </Entry>
 
         <Entry
@@ -44,29 +46,38 @@
             Grid.Row="3"
             Keyboard="Telephone"
             Margin="16,0,16,0"
-            Placeholder="Teléfono">
+            Placeholder="Teléfono"
+            x:Name="txtTelefono">
         </Entry>
 
-        <Editor
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="4"
             Grid.RowSpan="2"
-            Margin="16,0,16,0"
-            Placeholder="Comentarios"
-            StyleClass="">
-        </Editor>
+            Margin="16,0,16,0">
+            <Editor
+                Placeholder="Mensaje"
+                Keyboard="Text"
+                x:Name="txtMensaje">
+            </Editor>
+        </Frame>
 
         <Button
-            BorderColor="Black"
+            BackgroundColor="#006561"
             BorderWidth="1"
-            CornerRadius="30"
+            BorderColor="#FF7100"
+            CornerRadius="16"
+            Clicked="onMensaje"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="7"
             Margin="32,0,32,0"
             Text="Enviar mensaje"
-            FontSize="Medium">
+            FontSize="Medium"
+            TextColor="White">
         </Button>
 
     </Grid>

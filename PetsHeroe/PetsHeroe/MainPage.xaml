@@ -29,42 +29,42 @@
         </Button>
         <Button
             BackgroundColor = "#ff6a00"
-            Clicked = "onRegDueno"
+            Clicked = "onMascEnc"
             FontSize="Large"
             Grid.Row = "1"
             Grid.Column = "0"
             Margin = "5,3,5,0"
-            Text = "Registrarse como dueño"
+            Text = "¿Encontraste una mascota?"
+            TextColor = "black">
+        </Button>
+        <Button
+            BackgroundColor = "#6a00ff"
+            Clicked = "onListaCAM"
+            FontSize="Large"
+            Grid.Row = "2"
+            Grid.Column = "0"
+            Margin = "5,3,5,0"
+            Text = "Veterinarias asociadas"
+            TextColor = "black">
+        </Button>
+        <Button
+            BackgroundColor = "#ff6a00"
+            Clicked = "onRegDueno"
+            FontSize="Large"
+            Grid.Row = "3"
+            Grid.Column = "0"
+            Margin = "5,3,5,0"
+            Text = "Registrar mascota"
             TextColor = "black">
         </Button>
         <Button
             BackgroundColor = "#6a00ff"
             Clicked = "onRegVet"
             FontSize="Large"
-            Grid.Row = "2"
-            Grid.Column = "0"
-            Margin = "5,3,5,0"
-            Text = "Registrarse como veterinario"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#ff6a00"
-            Clicked = "onListaCAM"
-            FontSize="Large"
-            Grid.Row = "3"
-            Grid.Column = "0"
-            Margin = "5,3,5,0"
-            Text = "Lista de CAMS"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#6a00ff"
-            Clicked = "onMascEnc"
-            FontSize="Large"
             Grid.Row = "4"
             Grid.Column = "0"
             Margin = "5,3,5,5"
-            Text = "¿Encontraste una mascota?"
+            Text = "Registrar veterinaria"
             TextColor = "black">
         </Button>
     </Grid>

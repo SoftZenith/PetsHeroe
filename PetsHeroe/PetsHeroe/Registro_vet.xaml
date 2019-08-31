@@ -26,12 +26,21 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
+            <Picker Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Grid.Row="0"
+                    Margin="16,4,16,0"
+                    Title="Tipo asociado"
+                    x:Name="pkrAsociado">
+            </Picker>
+
             <Entry
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
                 Margin="16,0,16,0"
-                Placeholder="Nombre comercial">
+                Placeholder="Nombre comercial"
+                x:Name="txtNombreComercial">
             </Entry>
 
             <Entry
@@ -39,7 +48,8 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
                 Margin="16,0,16,0"
-                Placeholder="Nombre">
+                Placeholder="Nombre"
+                x:Name="txtNombre">
             </Entry>
 
             <Entry
@@ -47,7 +57,8 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
                 Margin="16,0,16,0"
-                Placeholder="Apellido paterno">
+                Placeholder="Apellido paterno"
+                x:Name="txtApellidoP">
             </Entry>
 
             <Entry
@@ -55,14 +66,16 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="4"
                 Margin="16,0,16,0"
-                Placeholder="Apellido materno">
+                Placeholder="Apellido materno"
+                x:Name="txtApellidoM">
             </Entry>
 
             <Picker Grid.Column="0"
                     Grid.ColumnSpan="3"
                     Grid.Row="5"
                     Margin="16,0,16,0"
-                    Title="Sexo">
+                    Title="Sexo"
+                    x:Name="pkrSexo">
                 <Picker.Items>
                     <x:String>Masculino</x:String>
                     <x:String>Femenino</x:String>
@@ -73,9 +86,10 @@
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"
+                Keyboard="Email"
                 Margin="16,0,16,0"
-                StyleClass="Email"
-                Placeholder="Correo electronico">
+                Placeholder="Correo electronico"
+                x:Name="txtCorreo">
             </Entry>
 
             <Entry
@@ -84,7 +98,8 @@
                 Grid.Row="7"
                 Margin="16,0,16,0"
                 IsPassword="True"
-                Placeholder="Contraseña">
+                Placeholder="Contraseña"
+                x:Name="txtContrasena">
             </Entry>
 
             <Entry
@@ -93,7 +108,8 @@
                 Grid.Row="8"
                 Margin="16,0,16,0"
                 IsPassword="True"
-                Placeholder="Confirme contraseña">
+                Placeholder="Confirme contraseña"
+                x:Name="txtConConstrasena">
             </Entry>
 
             <StackLayout
@@ -116,6 +132,7 @@
             <Button
                 BackgroundColor="#006561"
                 CornerRadius="16"
+                Clicked="onRegVet"
                 Grid.Column="1"
                 Grid.Row="10"
                 Margin="0,8,0,0"

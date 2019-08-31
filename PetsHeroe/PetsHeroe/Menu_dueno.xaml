@@ -28,6 +28,7 @@
 
             <Button
                 BackgroundColor="#ff6a00"
+                Clicked="onMascotaPerdida"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -43,17 +44,28 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
                 Margin="8,8,8,0"
-                Text="Reportar mascota perdida"
+                Text="Ver mis Mascotas"
                 TextColor="Black"/>
 
             <Button
-                BackgroundColor="#ff6a00"
+                BackgroundColor="#6a00ff"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
+                Margin="8,8,8,0"
+                Text="Registrar mascota"
+                TextColor="Black"/>
+
+            <Button
+                BackgroundColor="#ff6a00"
+                Clicked="onCerrarSesion"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
                 Margin="8,8,8,8"
-                Text="Lista de mascotas"
+                Text="Salir Sesión"
                 TextColor="Black"/>
 
         </Grid>

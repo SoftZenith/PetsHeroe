@@ -11,5 +11,13 @@ namespace PetsHeroe
         {
             InitializeComponent();
         }
+
+        async void onMascotaPerdida(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Loc_Mascota());
+        }
+
+        async void onCerrarSesion(object sender, EventArgs args) {
+            await Navigation.PopAsync();
+        }
     }
 }

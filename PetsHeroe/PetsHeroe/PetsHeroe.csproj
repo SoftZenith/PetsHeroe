@@ -15,9 +15,13 @@
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.12" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.1.0.673156" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
+    <Folder Include="Services\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="View\Mensaje_Dueno.xaml" />

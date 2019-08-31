@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using PetsHeroe.Model;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -9,16 +11,24 @@ namespace PetsHeroe
     {
         private DataTable estados;
         private DataTable ciudades;
-        private int idEstado = 0;
-        private int idCiudad = 0;
+        private int idEstado = -1;
+        private int idCiudad = -1;
+        private string codigo_pre = "";
+        private string nombre = "";
+        private string correo = "";
+        private string telefono = "";
+        private string localizacion = "";
+        private string notas = "";
+        private double latitud = -1;
+        private double longitud = -1;
         //Dictionarios para guardar nombre - id
         Dictionary<string, int> estadoDic = new Dictionary<string, int>();
         Dictionary<string, int> ciudadDic = new Dictionary<string, int>();
 
-        public Tomar_Nota()
+        public Tomar_Nota(string codigo)
         {
             InitializeComponent();
-
+            codigo_pre = codigo;
             if (Device.RuntimePlatform == Device.Android)
             {
                 DependencyService.Get<IAndroid>().getEstado_Busca();
@@ -61,9 +71,79 @@ namespace PetsHeroe
             }
 
             pkrMunicipio.SelectedIndexChanged += (object send, EventArgs ev) => {
-
+                idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
             };
 
+        }
+
+
+        async void onAviso(object sender, EventArgs args) {
+
+            bool estatus = false;
+
+            try
+            {
+                localizacion = txtLocalizacion.Text;
+                notas = txtNotas.Text;
+                nombre = txtNombre.Text;
+                correo = txtCorreo.Text;
+                telefono = txtTelefono.Text;
+
+                int[] enteros = { idEstado, idCiudad };
+                string[] textos = { codigo_pre, nombre, correo, telefono, localizacion, notas };
+
+                if (enteros.Any(item => item < 0)) {
+                    await DisplayAlert("Error","Faltan campos por llenar","OK");
+                    return;
+                }
+
+                if (textos.Any(item => item.Trim().Length == 0)) {
+                    await DisplayAlert("Error", "Faltan campos por llenar", "OK");
+                    return;
+                }
+
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    estatus = DependencyService.Get<IAndroid>().setEntrega_Localizacion(new MensajeDueno()
+                    {
+                        codigo = codigo_pre,
+                        nombre = nombre,
+                        correo = correo,
+                        telefono = telefono,
+                        localizacion = localizacion,
+                        notas = notas,
+                        latitud = latitud,
+                        longitud = longitud,
+                        idCiudad = idCiudad
+                    });
+                } else if (Device.RuntimePlatform == Device.iOS) {
+                    estatus = DependencyService.Get<IIOS>().setEntrega_Localizacion(new MensajeDueno()
+                    {
+                        codigo = codigo_pre,
+                        nombre = nombre,
+                        correo = correo,
+                        telefono = telefono,
+                        localizacion = localizacion,
+                        notas = notas,
+                        latitud = latitud,
+                        longitud = longitud,
+                        idCiudad = idCiudad
+                    });
+                }
+
+                if (estatus)
+                {
+                    await DisplayAlert("OK", "Se envio tu localización al dueño", "OK");
+                }
+                else {
+                    await DisplayAlert("ERROR", "Algo salio mal enviando tu localización", "OK");
+                }
+
+            }catch (Exception ex){
+                await DisplayAlert("Error","Faltan campos por llenar","OK");
+                Console.WriteLine("Error: " + ex.ToString());
+                return;
+            }
         }
     }
 }
