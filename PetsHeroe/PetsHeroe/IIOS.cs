@@ -53,7 +53,7 @@ namespace PetsHeroe
         void getTipoProducto_Busca();
         bool getValidaUsuario(String user, String pass);
         bool setVeterinario_Registro(Asociado asociado);
-        bool setEntrega_SoloMensaje(MensajeDueno mensaje);
+        Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);
     }
 }

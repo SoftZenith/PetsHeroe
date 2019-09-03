@@ -44,7 +44,7 @@
             Grid.Row = "2"
             Grid.Column = "0"
             Margin = "5,3,5,0"
-            Text = "Veterinarias asociadas"
+            Text = "Lista de Veterinarias/CAMS"
             TextColor = "black">
         </Button>
         <Button
@@ -64,7 +64,7 @@
             Grid.Row = "4"
             Grid.Column = "0"
             Margin = "5,3,5,5"
-            Text = "Registrar veterinaria"
+            Text = "Registrar negocio"
             TextColor = "black">
         </Button>
     </Grid>

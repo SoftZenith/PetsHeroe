@@ -24,7 +24,7 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="0"
                 Margin="8,8,8,0"
-                Text="Ver mis Mascotas"
+                Text="Ver mis Clientes"
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
@@ -45,22 +45,13 @@
                 Margin="8,8,8,0"
                 Text="¿Encontraste una mascota?"
                 TextColor="Black"/>
-             <Button
-                BackgroundColor="#ff6a00"
-                FontSize="Large"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="3"
-                Margin="8,8,8,8"
-                Text="Veterinarias asociadas"
-                TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
                 Clicked="onCerrarSesion"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="4"
+                Grid.Row="3"
                 Margin="8,8,8,8"
                 Text="Salir Sesión"
                 TextColor="Black"/>

@@ -16,7 +16,10 @@ namespace PetsHeroe
 
         protected override bool OnBackButtonPressed()
         {
-            return true;
+            if (Device.RuntimePlatform == Device.Android) {
+                DependencyService.Get<IAndroid>().CloseApp();
+            }
+            return base.OnBackButtonPressed();
         }
 
         async void onIniciar(object sender, EventArgs args)

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Registro_mascota">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Frame
+                CornerRadius="8"
+                BorderColor="#FF7100"
+                Grid.Row="1"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Entry
+                    Margin="0,4,0,0"
+                    Placeholder="Código"
+                    FontSize="Large"
+                    x:Name="txtCodigo">
+                </Entry>
+            </Frame>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Row="2"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Entry
+                    FontSize="Large"
+                    Placeholder="Nombre"
+                    x:Name="txtNombre">
+                </Entry>
+            </Frame>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Picker FontSize="Large" Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
+            </Frame>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Picker FontSize="Large" Title="Raza" x:Name="pkrRazaMascota"></Picker>
+            </Frame>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Picker FontSize="Large" Title="Color" x:Name="pkrColorMascota"></Picker>
+            </Frame>
+            <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="8,0,8,0" Orientation="Horizontal">
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="8"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0">
+                    <Picker FontSize="Large" Title="Sexo" x:Name="pkrSexoMascota">
+                        <Picker.Items>
+                            <x:String>Macho</x:String>
+                            <x:String>Hembra</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="8"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0">
+                    <Entry FontSize="Large" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
+                </Frame>
+
+            </StackLayout>
+
+            <Button
+                BackgroundColor="#006561"
+                CornerRadius="16"
+                Clicked="onRegistraMascota"
+                FontSize="Medium"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="8"
+                Margin="24,0,24,4"
+                Text="Registrar"
+                TextColor="White">
+            </Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

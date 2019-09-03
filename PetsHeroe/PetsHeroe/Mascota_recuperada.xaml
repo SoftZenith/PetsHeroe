@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsHeroe.Mascota_recuperada">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Margin="8,0,8,0"
+                HorizontalOptions="CenterAndExpand"
+                Text="Cuentanos como recuperaste a tu mascota">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="26"></On>
+                        <On Platform="Android" Value="26"></On>
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Picker FontSize="Large" Title="¿Como regresó?" x:Name="pkrRetorno"></Picker>
+            </Frame>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="8,0,8,0"
+                Padding="0">
+                <Picker FontSize="Large" Title="¿En cual condición?" x:Name="pkrCondicion"></Picker>
+            </Frame>
+
+            <Button
+                BackgroundColor="#006561"
+                CornerRadius="16"
+                Clicked="onRegistraMascota"
+                FontSize="Medium"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="6"
+                Margin="24,0,24,4"
+                Text="Registrar"
+                TextColor="White">
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

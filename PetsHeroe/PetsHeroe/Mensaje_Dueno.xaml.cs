@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using PetsHeroe.Model;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -15,7 +16,7 @@ namespace PetsHeroe
         }
 
         async void onMensaje(object sender, EventArgs args) {
-            bool status = false;
+            Retorno status = new Retorno();
             string codigo = "", nombre = "", correo = "", telefono = "", mensaje = "";
             try
             { 
@@ -64,10 +65,10 @@ namespace PetsHeroe
                 });
             }
 
-            if (status){
+            if (status.Resultado){
                 await DisplayAlert("OK", "Se envio correctamente tu mensaje al dueño", "OK");
             } else {
-                await DisplayAlert("Error", "Hubo un error al enviar el mensaje", "OK");
+                await DisplayAlert("Error", "Esta mascota no ha sido reportada como extraviada o robada", "OK");
             }
 
         }

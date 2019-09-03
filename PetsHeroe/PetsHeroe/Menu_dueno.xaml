@@ -34,7 +34,7 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
                 Margin="8,8,8,0"
-                Text="Reportar mascota perdida"
+                Text="¿Encontraste una mascota?"
                 TextColor="Black"/>
 
             <Button
@@ -47,8 +47,20 @@
                 Text="Ver mis Mascotas"
                 TextColor="Black"/>
 
+             <Button
+                BackgroundColor="#6a00ff"
+                Clicked="onListaCAMs"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Margin="8,8,8,0"
+                Text="Lista de Veterinarias/CAMS"
+                TextColor="Black"/>
+
             <Button
                 BackgroundColor="#6a00ff"
+                Clicked="onRegistrarMascota"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"

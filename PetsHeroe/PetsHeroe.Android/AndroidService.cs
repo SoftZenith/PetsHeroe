@@ -190,16 +190,22 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool setEntrega_SoloMensaje(MensajeDueno mensaje)
+        public Retorno setEntrega_SoloMensaje(MensajeDueno mensaje)
         {
             try
             {
                 wsPets.Entrega_SoloMensaje(5, mensaje.codigo, mensaje.nombre, mensaje.correo, mensaje.telefono, mensaje.mensaje, mensaje.latitud, mensaje.longitud);
-                return true;
+                return new Retorno() {
+                    Resultado = true,
+                    Mensaje = "Se envio mensaje al dueño"
+                };
             }
             catch (Exception ex) {
                 Console.WriteLine("Error: "+ex);
-                return false;
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = ex.ToString()
+                };
             }
         }
 
@@ -214,6 +220,11 @@ namespace PetsHeroe.Droid
                 Console.WriteLine("Error: "+ex);
                 return false;
             }
+        }
+
+        public void CloseApp()
+        {
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
         }
     }
 }
