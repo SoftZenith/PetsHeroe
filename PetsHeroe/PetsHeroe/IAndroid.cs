@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Threading.Tasks;
 using PetsHeroe.Model;
 
 namespace PetsHeroe
@@ -56,5 +57,6 @@ namespace PetsHeroe
         void CloseApp();
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);
+        Task<bool> getPermisoLocation();
     }
 }

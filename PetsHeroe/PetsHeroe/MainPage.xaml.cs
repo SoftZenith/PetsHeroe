@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -8,11 +9,24 @@ namespace PetsHeroe
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
-    {               
+    {
+        Location currentlocation;
+
         public MainPage()
         {
             InitializeComponent();
+            getCurrentLocation();
+
         }//Constructor
+
+        async void getCurrentLocation()
+        {
+            try{
+                currentlocation = await Geolocation.GetLastKnownLocationAsync();
+            }catch (Exception ex) {
+
+            }
+        }
 
         protected override bool OnBackButtonPressed()
         {

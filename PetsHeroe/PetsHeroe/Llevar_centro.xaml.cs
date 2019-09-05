@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using PetsHeroe.Model;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -13,21 +12,125 @@ namespace PetsHeroe
 
         DataTable lista_CAM = new DataTable();
         Location currentlocation;
+        bool locationGrant = false;
+        DataTable estados = new DataTable();
+        DataTable ciudades = new DataTable();
+        Picker picker, pickerC;
+        int idEstado = -1, idCiudad = -1;
+        Dictionary<string, int> estadoDic = new Dictionary<string, int>();
+        Dictionary<string, int> ciudadDic = new Dictionary<string, int>();
 
         public Llevar_centro(string codigo)
         {
-            
+
             InitializeComponent();
+
             getCurrentLocation();
+
+            getPermisoLocation();
+
+
+            if (!locationGrant)
+            {
+                picker = new Picker()
+                {
+                    Margin = new Thickness(8, 4, 8, 0),
+                    Title = "Estado",
+                    HorizontalOptions = LayoutOptions.FillAndExpand
+                };
+
+                pickerC = new Picker()
+                {
+                    Margin = new Thickness(0, 4, 8, 0),
+                    Title = "Ciudad",
+                    HorizontalOptions = LayoutOptions.FillAndExpand
+                };
+                gridContenedor.Children.Add(picker, 0, 0);
+                gridContenedor.Children.Add(pickerC, 5, 0);
+                Grid.SetColumnSpan(picker, 5);
+                Grid.SetColumnSpan(pickerC, 5);
+            }
+            else
+            {
+                Grid.SetRow(frmMapa, 0);
+                Grid.SetRowSpan(frmMapa, 5);
+            }
+
             try
             {
                 if (Device.RuntimePlatform == Device.Android)
                 {
+                    if (!locationGrant) {
+
+                        DependencyService.Get<IAndroid>().getEstado_Busca();
+                        estados = DependencyService.Get<IAndroid>().Estado_Busca;
+
+                        estadoDic.Clear();
+                        picker.Items.Clear();
+                        foreach (DataRow dr in estados.Rows)
+                        {
+                            picker.Items.Add(dr["Name"].ToString());
+                            estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
+                        }
+
+                        picker.SelectedIndexChanged += (object sender, EventArgs args) => {
+
+                            idEstado = estadoDic[picker.SelectedItem.ToString()];
+
+                            DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
+                            ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
+
+                            ciudadDic.Clear();
+                            pickerC.Items.Clear();
+                            foreach (DataRow dr in ciudades.Rows)
+                            {
+                                pickerC.Items.Add(dr["Name"].ToString());
+                                ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                            }
+
+                        };
+
+                    }
                     DependencyService.Get<IAndroid>().getCAM_busca(25.708742, -100.344950, 100.0);
                     lista_CAM = DependencyService.Get<IAndroid>().CAM_Busca;
                 }
                 else if (Device.RuntimePlatform == Device.iOS)
                 {
+
+                    if (!locationGrant)
+                    {
+
+                        DependencyService.Get<IIOS>().getEstado_Busca();
+                        estados = DependencyService.Get<IIOS>().Estado_Busca;
+
+                        estadoDic.Clear();
+                        picker.Items.Clear();
+                        foreach (DataRow dr in estados.Rows)
+                        {
+                            picker.Items.Add(dr["Name"].ToString());
+                            estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
+                        }
+
+                        picker.SelectedIndexChanged += (object sender, EventArgs args) => {
+
+                            idEstado = estadoDic[picker.SelectedItem.ToString()];
+
+                            DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
+                            ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
+
+                            ciudadDic.Clear();
+                            pickerC.Items.Clear();
+                            foreach (DataRow dr in ciudades.Rows)
+                            {
+                                pickerC.Items.Add(dr["Name"].ToString());
+                                ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                            }
+
+                        };
+
+                    }
+
+
                     DependencyService.Get<IIOS>().getCAM_busca(25.708742, -100.344950, 100.0);
                     lista_CAM = DependencyService.Get<IIOS>().CAM_Busca;
                 }
@@ -59,38 +162,30 @@ namespace PetsHeroe
                 //listaPins.Add(pinCAM);
             }
 
-            /*
-            var pinVet = new CAMPin() {
-                Position = new Position(25.708742, -100.344950)
-            };
-
-            var pin = new Pin() {
-                Position = new Position(21.512188, -104.889230),
-                Label = "Dotech Tepic",
-                Address = "San Luis Nte 297"
-            };
-            
-            pin.Clicked += (object sender, EventArgs e) => {
-                var pinClicked = sender as CAMPin;
-                DisplayAlert("CAM", "Coordenadas: " + pinClicked.Position.Latitude.ToString(), "OK");
-            };*/
-
-            /*
-            foreach (var pinMap in listaPins)
-            {
-                pinMap.Clicked += (object sender, EventArgs e) => {
-                    var pinClicked = sender as Pin;
-                    DisplayAlert("CAM", "Coordenadas: " + pinClicked.Position.Latitude.ToString(), "OK");
-                };
-                mapLlevarCentro.Pins.Add(pinMap);
-            }*/
-
             mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.8494, -100.3523), 0.5, 0.5));
 
         }
 
         async void getCurrentLocation() {
-            currentlocation = await Geolocation.GetLastKnownLocationAsync();
+            try{
+                currentlocation = await Geolocation.GetLastKnownLocationAsync();
+            }catch (Exception ex) {
+
+            }
+        }
+
+        public async void getPermisoLocation()
+        {
+
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
+            }
+            else if (Device.RuntimePlatform == Device.Android)
+            {
+                locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
+            }
+
         }
     }
 }

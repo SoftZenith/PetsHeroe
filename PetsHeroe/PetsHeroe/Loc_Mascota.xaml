@@ -28,7 +28,7 @@
             BorderColor="#FF7100"
             CornerRadius="8"
             Padding="0"
-            Grid.Row="3"
+            Grid.Row="2"
             Grid.ColumnSpan="4"
             Margin="10,0,10,0">
             <Entry
@@ -45,21 +45,21 @@
             CornerRadius="12"
             Clicked="onScan"
             Grid.ColumnSpan="4"
-            Grid.Row="4"
+            Grid.Row="3"
             Margin="10,4,10,0"
             Text="Escanear"
             TextColor="White">
         </Button>
 
         <input:RadioButtonGroupView 
-            Grid.Row="5"
-            Grid.RowSpan="3"
+            Grid.Row="4"
+            Grid.RowSpan="4"
             Grid.ColumnSpan="4"
             Margin="10,8,0,10"
             x:Name="rdOpcion">
-            <input:RadioButton IsChecked="True" Margin="0,0,0,0" Text="Llevame a un centro de atención Pet's Heroe"/>
-            <input:RadioButton Margin="0,0,0,0" Text="Manda un mensaje a mi dueño para que se comunique contigo"/>
-            <input:RadioButton Margin="0,0,0,0" Text="Toma nota del lugar donde me encuentro y Pet's Heroe se encargará"/>
+            <input:RadioButton IsChecked="True" Margin="0,4,0,4" Text="Llevame a un centro de atención Pet's Hero"/>
+            <input:RadioButton Margin="0,4,0,4" Text="Manda un mensaje a mi dueño para que se comunique contigo"/>
+            <input:RadioButton Margin="0,4,0,4" Text="Toma nota del lugar donde me encuentro y Pet's Hero se encargará"/>
         </input:RadioButtonGroupView>
 
         <Button
@@ -70,7 +70,7 @@
             Clicked="onSiguiente"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Grid.Row="8"
+            Grid.Row="7"
             Text="Siguiente"
             TextColor="White">
 

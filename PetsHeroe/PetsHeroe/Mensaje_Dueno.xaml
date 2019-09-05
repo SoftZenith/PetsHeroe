@@ -59,7 +59,7 @@
             Grid.RowSpan="2"
             Margin="16,0,16,0">
             <Editor
-                Placeholder="Mensaje"
+                Placeholder="Notas..."
                 Keyboard="Text"
                 x:Name="txtMensaje">
             </Editor>

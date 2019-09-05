@@ -13,7 +13,6 @@ namespace PetsHeroe
         public IniciarSesion()
         {
             InitializeComponent();
-
             var forgetPassword_tap = new TapGestureRecognizer();
             forgetPassword_tap.Tapped += (s, e) =>
             {
@@ -25,8 +24,7 @@ namespace PetsHeroe
                         DisplayAlert("Error", "Ingresa tu correo", "OK");
                         return;
                     }
-                }
-                catch (Exception) {
+                }catch (Exception) {
                     correo = "";
                 }
 
@@ -71,6 +69,9 @@ namespace PetsHeroe
             {
                 if (DependencyService.Get<IIOS>().getValidaUsuario(user, pass))
                 {
+                    bool locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
+                    await DisplayAlert("Permisos", "Permisos: " + locationGrant, "OK");
+
                     var asociado = DependencyService.Get<IIOS>().ValidaUsuario;
                     if (asociado.idMiembro > 0){
                         await DisplayAlert("Bienvenido", "Dueño "+asociado.nombre, "OK");
@@ -88,6 +89,10 @@ namespace PetsHeroe
             }else if (Device.RuntimePlatform == Device.Android) {
                 if (DependencyService.Get<IAndroid>().getValidaUsuario(user, pass))
                 {
+
+                    bool locationGrant = await DependencyService.Get<IAndroid>().getPermisoLocation();
+                    await DisplayAlert("Permisos", "Permisos: " + locationGrant, "OK");
+
                     var asociado = DependencyService.Get<IAndroid>().ValidaUsuario;
                     if (asociado.idMiembro > 0)
                     {

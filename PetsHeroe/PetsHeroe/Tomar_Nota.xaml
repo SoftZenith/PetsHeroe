@@ -74,7 +74,7 @@
             Grid.ColumnSpan="3"
             Grid.Row="5"
             Margin="19,0,19,0"
-            Text="Opcionalmente deja tus datos para que mi dueño te agradezca y para que seas elegible para una promoción de Pet's Heroe">
+            Text="Opcionalmente deja tus datos para que mi dueño te agradezca y para que seas elegible para una promoción de Pet's Hero">
         </Label>
 
         <Entry

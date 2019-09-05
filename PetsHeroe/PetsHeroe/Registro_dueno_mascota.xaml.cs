@@ -22,6 +22,8 @@ namespace PetsHeroe
         {
             InitializeComponent();
 
+            pkrRazaMascota.IsEnabled = false;
+            pkrColorMascota.IsEnabled = false;
             DataTable tipoMascota = new DataTable();
 
             if (Device.RuntimePlatform == Device.iOS)
@@ -67,6 +69,8 @@ namespace PetsHeroe
 
         public void tipoMascotaSeleccionado(object sender, EventArgs args){
             idTipoMascota = tipoMascotaDic[pkrTipoMascota.SelectedItem.ToString()];
+            pkrRazaMascota.IsEnabled = true;
+            pkrColorMascota.IsEnabled = false;
             DataTable razaMascota = new DataTable();
             DataTable colorMascota = new DataTable();
 
@@ -104,8 +108,8 @@ namespace PetsHeroe
             try
             {
                 idRazaMascota = razaMascotaDic[pkrRazaMascota.SelectedItem.ToString()];
-            }
-            catch (Exception) {
+                pkrColorMascota.IsEnabled = true;
+            }catch (Exception) {
                 
             }
         }
@@ -113,6 +117,10 @@ namespace PetsHeroe
         public void colorMascotaSeleccionado(object sender, EventArgs args) {
             try
             {
+                if (idRazaMascota == -1) {
+                    DisplayAlert("Advertencia","Es necesario seleccionar la raza","OK");
+                }
+
                 idColorMascota = colorMascotaDic[pkrColorMascota.SelectedItem.ToString()];
             }
             catch (Exception)

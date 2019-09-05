@@ -3,6 +3,9 @@ using PetsHeroe.iOS;
 using System.Data;
 using PetsHeroe.iOS.mx.com.petshero;
 using PetsHeroe.Model;
+using Plugin.Permissions.Abstractions;
+using Plugin.Permissions;
+using System.Threading.Tasks;
 
 [assembly: Xamarin.Forms.Dependency(typeof(IOSService))]
 namespace PetsHeroe.iOS
@@ -235,6 +238,16 @@ namespace PetsHeroe.iOS
                 Console.WriteLine("Error: " + ex);
                 return false;
             }
+        }
+
+        public async Task<bool> getPermisoLocation()
+        {
+            var permissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
+            if (permissionStatus != PermissionStatus.Granted)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

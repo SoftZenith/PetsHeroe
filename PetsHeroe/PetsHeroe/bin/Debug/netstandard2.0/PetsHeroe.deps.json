@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "92fb543bea2a4b74189ae24e52ef18c0f707044c"
+    "signature": "567a83918bcfb751327cdade23a9dc147018a9f4"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "PetsHeroe/1.0.0": {
         "dependencies": {
-          "NETStandard.Library": "2.0.2",
+          "NETStandard.Library": "2.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.1.0.673156",
@@ -23,7 +23,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "NETStandard.Library/2.0.2": {
+      "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
@@ -136,12 +136,12 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
-    "NETStandard.Library/2.0.2": {
+    "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5hB7QTrTeMzV5xnTH4+zNBOGCD5/DcSVb3iPGgyta4Xje5AI2gJoeLnArlQCzxTbRVpx8YrjnjAmUhkxjbd2ZA==",
-      "path": "netstandard.library/2.0.2",
-      "hashPath": "netstandard.library.2.0.2.nupkg.sha512"
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

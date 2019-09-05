@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Data;
+using System.Threading.Tasks;
 using PetsHeroe.Droid;
 using PetsHeroe.Droid.mx.com.petshero;
 using PetsHeroe.Model;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AndroidService))]
 namespace PetsHeroe.Droid
@@ -225,6 +228,15 @@ namespace PetsHeroe.Droid
         public void CloseApp()
         {
             Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+        }
+
+        public async Task<bool> getPermisoLocation()
+        {
+            var permissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
+            if (permissionStatus != PermissionStatus.Granted) {
+                return false;
+            }
+            return true;
         }
     }
 }

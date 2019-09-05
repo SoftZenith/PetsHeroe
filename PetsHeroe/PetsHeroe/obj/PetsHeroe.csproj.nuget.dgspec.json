@@ -13,6 +13,9 @@
         "packagesPath": "/Users/bryangutierrez/.nuget/packages/",
         "outputPath": "/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/Users/bryangutierrez/.config/NuGet/NuGet.Config"
         ],
@@ -39,7 +42,7 @@
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.2, )",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             },
             "Xam.Plugin.Geolocator": {
