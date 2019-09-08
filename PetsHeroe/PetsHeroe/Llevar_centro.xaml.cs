@@ -183,7 +183,7 @@ namespace PetsHeroe
             }
             else if (Device.RuntimePlatform == Device.Android)
             {
-                locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
+                locationGrant = await DependencyService.Get<IAndroid>().getPermisoLocation();
             }
 
         }

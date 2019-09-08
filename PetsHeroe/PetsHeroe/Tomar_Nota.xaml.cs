@@ -9,10 +9,10 @@ namespace PetsHeroe
 {
     public partial class Tomar_Nota : ContentPage
     {
-        private DataTable estados;
-        private DataTable ciudades;
-        private int idEstado = -1;
-        private int idCiudad = -1;
+        private DataTable estados = new DataTable();
+        private DataTable ciudades = new DataTable();
+        int idEstado = -1;
+        int idCiudad = -1;
         private string codigo_pre = "";
         private string nombre = "";
         private string correo = "";
@@ -33,49 +33,73 @@ namespace PetsHeroe
             {
                 DependencyService.Get<IAndroid>().getEstado_Busca();
                 estados = DependencyService.Get<IAndroid>().Estado_Busca;
-            } else if(Device.RuntimePlatform == Device.iOS){
+            } else if (Device.RuntimePlatform == Device.iOS) {
                 DependencyService.Get<IIOS>().getEstado_Busca();
                 estados = DependencyService.Get<IIOS>().Estado_Busca;
             }
-
-            pkrEstado.Items.Clear();
             estadoDic.Clear();
+            pkrEstado.Items.Clear();
             foreach (DataRow dr in estados.Rows)
             {
-                pkrEstado.Items.Add(dr[5].ToString());
-                estadoDic.Add(dr[5].ToString(), Convert.ToInt32(dr[1]));
+                pkrEstado.Items.Add(dr["Name"].ToString());
+                estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
             }
 
-            pkrEstado.SelectedIndexChanged += PkrEstado_SelectedIndexChanged;   
+            pkrEstado.SelectedIndexChanged += pkrEstadoSeleccionado;
 
         }
 
-        private void PkrEstado_SelectedIndexChanged(object sender, EventArgs e)
+        private void pkrEstadoSeleccionado(object sender, EventArgs e)
         {
             idEstado = estadoDic[pkrEstado.SelectedItem.ToString()];
-
-            if (Device.RuntimePlatform == Device.Android)
+            try
             {
-                DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
-                ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
-                ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
+                ciudadDic.Clear();
+                pkrMunicipio.SelectedIndex = -1;
+                pkrMunicipio.Items.Clear();
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
+                }
+                else if (Device.RuntimePlatform == Device.iOS)
+                {
+                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
+                }
+                foreach (DataRow dr in ciudades.Rows)
+                {
+                    pkrMunicipio.Items.Add(dr["Name"].ToString());
+                    ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                }
+                pkrMunicipio.SelectedIndex = 0;
             }
-
-            pkrMunicipio.Items.Clear();
-            ciudadDic.Clear();
-            foreach (DataRow dr in ciudades.Rows) {
-                pkrMunicipio.Items.Add(dr[8].ToString());
-                ciudadDic.Add(dr[8].ToString(), Convert.ToInt32(dr[2]));
+            catch (Exception ex) {
+                ciudadDic.Clear();
+                pkrMunicipio.SelectedIndex = -1;
+                pkrMunicipio.Items.Clear();
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
+                }
+                else if (Device.RuntimePlatform == Device.iOS)
+                {
+                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
+                }
+                foreach (DataRow dr in ciudades.Rows)
+                {
+                    pkrMunicipio.Items.Add(dr["Name"].ToString());
+                    ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                }
+                pkrMunicipio.SelectedIndex = 0;
             }
-
-            pkrMunicipio.SelectedIndexChanged += (object send, EventArgs ev) => {
+            pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
+            {
                 idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
             };
-
         }
-
 
         async void onAviso(object sender, EventArgs args) {
 
@@ -90,7 +114,7 @@ namespace PetsHeroe
                 telefono = txtTelefono.Text;
 
                 int[] enteros = { idEstado, idCiudad };
-                string[] textos = { codigo_pre, nombre, correo, telefono, localizacion, notas };
+                string[] textos = { codigo_pre, localizacion, notas };
 
                 if (enteros.Any(item => item < 0)) {
                     await DisplayAlert("Error","Faltan campos por llenar","OK");

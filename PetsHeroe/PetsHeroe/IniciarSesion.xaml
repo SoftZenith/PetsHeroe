@@ -30,23 +30,35 @@
             Margin="0,0,0,0"
             Source="http://www.petshero.com.mx/images/Logos/Logo-simple.png">
         </Image>
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Row="3"
             Grid.Column="0"
             Grid.ColumnSpan="4"
             Margin="50,0,50,15"
-            Placeholder="Usuario"
-            x:Name="txtUsuario">
-        </Entry>
-        <Entry
+            Padding="0,4,0,0">
+            <Entry
+                FontSize="Medium"
+                Placeholder="Usuario"
+                x:Name="txtUsuario">
+            </Entry>
+        </Frame>
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Row="4"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            IsPassword="True"
             Margin="50,0,50,15"
-            Placeholder="Contraseña"
-            x:Name="txtPassword">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                FontSize="Medium"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                x:Name="txtPassword">
+            </Entry>
+        </Frame>
         <Button
             BackgroundColor="#006561"
             BorderWidth="1"

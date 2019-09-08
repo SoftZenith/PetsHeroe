@@ -86,16 +86,16 @@ namespace PetsHeroe
                     asociado.contrasena = txtContrasena.Text;
                     asociado.sexo = sexo;
 
-                    string[] textos = { asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, asociado.correo, asociado.contrasena };
+                    string[] textos = { asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.correo, asociado.contrasena };
                     int[] enteros = { asociado.idAsociado, asociado.tipoAsociado, asociado.sexo };
 
                     if (textos.Any(item => item.Length <= 0)) {
-                        await DisplayAlert("Error", "Faltan campos por llenar texto", "OK");
+                        await DisplayAlert("Error", "Faltan campos por llenar", "OK");
                         return;
                     }
 
                     if (enteros.Any(item => item <= -1)) {
-                        await DisplayAlert("Error", "Faltan campos por llenar entero", "OK");
+                        await DisplayAlert("Error", "Faltan campos por llenar", "OK");
                         return;
                     }
 
@@ -118,7 +118,7 @@ namespace PetsHeroe
 
                 }
                 catch{
-                    await DisplayAlert("Error", "Faltan campos por llenar entero", "OK");
+                    await DisplayAlert("Error", "Faltan campos por llenar", "OK");
                 }
             }
             else {

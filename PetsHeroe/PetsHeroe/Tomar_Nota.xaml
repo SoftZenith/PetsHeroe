@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.Tomar_Nota">
+    <ScrollView>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -51,23 +52,34 @@
                 x:Name="txtNotas">
             </Entry>
         </Frame>
-        <Picker
-            Title="Estado"
+
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Row="3"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="16,0,16,0"
-            x:Name="pkrEstado">
-        </Picker>
+            Padding="0">
+            <Picker
+                Title="Estado"
+                x:Name="pkrEstado">
+            </Picker>
+        </Frame>
 
-        <Picker
-            Title="Municipio"
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Row="4"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="16,0,16,0"
-            x:Name="pkrMunicipio">
-        </Picker>
+            Padding="0">
+            <Picker
+                Title="Municipio"
+                x:Name="pkrMunicipio">
+            </Picker>
+        </Frame>
 
         <Label
             Grid.Column="0"
@@ -77,32 +89,47 @@
             Text="Opcionalmente deja tus datos para que mi dueño te agradezca y para que seas elegible para una promoción de Pet's Hero">
         </Label>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="6"
             Margin="16,0,16,0"
-            Placeholder="Nombre"
-            x:Name="txtNombre">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                Placeholder="Nombre"
+                x:Name="txtNombre">
+            </Entry>
+        </Frame>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="7"
             Margin="16,0,16,0"
-            Placeholder="Correo electronico"
-            x:Name="txtCorreo">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                Placeholder="Correo electronico"
+                x:Name="txtCorreo">
+            </Entry>
+        </Frame>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="8"
             Margin="16,0,16,0"
-            Placeholder="Telefono"
-            x:Name="txtTelefono">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                Placeholder="Telefono"
+                x:Name="txtTelefono">
+            </Entry>
+        </Frame>
 
         <Button
             BackgroundColor="#006561"
@@ -119,4 +146,5 @@
         </Button>
 
     </Grid>
+    </ScrollView>
 </ContentPage>

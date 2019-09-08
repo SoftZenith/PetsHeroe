@@ -33,13 +33,13 @@
                                         Clicked="mascotaSelectedPerdida"
                                         CommandParameter="{Binding nombre}"
                                         CornerRadius="10"
-                                        Text="{Binding perdida}"></Button>
+                                        Text="Reportar como perdida"></Button>
                                 <Button
                                         Clicked="mascotaSelectedRobada"
                                         CommandParameter="{Binding nombre}"
                                         CornerRadius="10"
                                         HorizontalOptions="FillAndExpand"
-                                        Text="{Binding robada}"></Button>
+                                        Text="Reportar como robada"></Button>
                             </StackLayout>
                         </Grid>
                     </ViewCell>

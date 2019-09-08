@@ -12,7 +12,7 @@ namespace PetsHeroe
         int idRazaMascota = -1;
         int idColorMascota = -1;
         char sexoDuenoC;
-        char sexoMascotaC;
+        char sexoMascotaC = (char)78;
         //Diccionarios para guardar nombre - id
         Dictionary<string, int> tipoMascotaDic = new Dictionary<string, int>(); 
         Dictionary<string, int> razaMascotaDic = new Dictionary<string, int>();
@@ -131,7 +131,7 @@ namespace PetsHeroe
 
         async void onReg_dueno(object sender, EventArgs args) {
             string codigoMascota = "", nombreMascota = "", nombreDueno = "", apellidoP = "", apellidoM = "", correo = "", contrasena = "";
-            int tipoMascota = -1, razaMascota = -1, colorMascota = -1, sexoMascota = -1, sexoDueno = -1, edadMascotaE = -1;
+            int tipoMascota = -1, razaMascota = -1, colorMascota = -1, sexoMascota = 0, sexoDueno = -1, edadMascotaE = -1;
 
             try{
                 codigoMascota = txtCodigoMascota.Text;
@@ -150,14 +150,14 @@ namespace PetsHeroe
                 correo = txtCorreo.Text;
                 contrasena = txtContrasena.Text;
 
-                string[] textos = { codigoMascota, nombreMascota, nombreDueno, apellidoP, apellidoM, correo, contrasena };
-                int[] enteros = { tipoMascota, razaMascota, colorMascota, sexoMascota, sexoDueno, edadMascotaE };
+                string[] textos = { codigoMascota, nombreMascota, nombreDueno, apellidoP, correo, contrasena };
+                int[] enteros = { tipoMascota, razaMascota, colorMascota, sexoDueno, edadMascotaE };
                 if (textos.Any(item => item.Length <= 0))
                 {
                     await DisplayAlert("Error", "Faltan campos por llenar textos", "OK");
                     return;
                 }
-                else if (enteros.Any(item => item == -1)) {
+                if (enteros.Any(item => item == -1)) {
                     await DisplayAlert("Error", "Faltan campos por llenar enteros", "OK");
                     return;
                 }
@@ -200,12 +200,10 @@ namespace PetsHeroe
                     });
                     estatus = DependencyService.Get<IIOS>().Mascota_Registro;
                 }
-                if (estatus)
-                {
-                    await DisplayAlert("OK", "Se guardo registro", "OK");
-                }
-                else {
-                    await DisplayAlert("Error", "Error al guardar registro", "OK");
+                if (estatus){
+                    await DisplayAlert("OK", "Se registro correctamente", "OK");
+                }else {
+                    await DisplayAlert("Error", "Error al registro su mascota, por favor verifique que el código sea valido", "OK");
                 }
 
             }catch (Exception){

@@ -26,21 +26,43 @@ namespace PetsHeroe
 
             if (!locationGrant)
             {
+
                 picker = new Picker()
                 {
-                    Margin = new Thickness(8, 4, 8, 0),
+                    //Margin = new Thickness(8, 4, 8, 0),
                     Title = "Estado",
                     HorizontalOptions = LayoutOptions.FillAndExpand
                 };
 
+                Frame frmEstado = new Frame() {
+                    BorderColor = Color.FromRgb(255, 113, 0),
+                    CornerRadius = 8,
+                    Content = picker,
+                    Padding = 0,
+                    Margin = new Thickness(8,4,8,0),
+                    HorizontalOptions = LayoutOptions.FillAndExpand
+                };
+
+
                 pickerC = new Picker()
                 {
-                    Margin = new Thickness(0, 4, 8, 0),
+                    //Margin = new Thickness(0, 4, 8, 0),
                     Title = "Ciudad",
                     HorizontalOptions = LayoutOptions.FillAndExpand
                 };
-                gridContenedor.Children.Add(picker, 0, 0);
-                gridContenedor.Children.Add(pickerC, 1, 0);
+
+
+                Frame frmCiudad = new Frame() {
+                    BorderColor = Color.FromRgb(255, 113, 0),
+                    CornerRadius = 8,
+                    Content = pickerC,
+                    Padding = 0,
+                    Margin = new Thickness(0, 4, 8, 0),
+                    HorizontalOptions = LayoutOptions.FillAndExpand
+                };
+
+                gridContenedor.Children.Add(frmEstado, 0, 0);
+                gridContenedor.Children.Add(frmCiudad, 1, 0);
             } else {
                 Grid.SetRow(frmMapa, 0);
                 Grid.SetRowSpan(frmMapa, 4);
@@ -63,13 +85,14 @@ namespace PetsHeroe
                         estados = DependencyService.Get<IAndroid>().Estado_Busca;
 
                         estadoDic.Clear();
+                        picker.SelectedIndex = -1;
                         picker.Items.Clear();
                         foreach (DataRow dr in estados.Rows)
                         {
                             picker.Items.Add(dr["Name"].ToString());
                             estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
                         }
-
+                        picker.SelectedIndex = 0;
                         picker.SelectedIndexChanged += (object sender, EventArgs args) => {
 
                             idEstado = estadoDic[picker.SelectedItem.ToString()];
@@ -78,18 +101,18 @@ namespace PetsHeroe
                             ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
 
                             ciudadDic.Clear();
+                            pickerC.SelectedIndex = -1;
                             pickerC.Items.Clear();
                             foreach (DataRow dr in ciudades.Rows)
                             {
                                 pickerC.Items.Add(dr["Name"].ToString());
                                 ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
                             }
-
-                            pickerC.SelectedIndexChanged += (object senderC, EventArgs eventArgs) => {
-                                idCiudad = ciudadDic[pickerC.SelectedItem.ToString()];
-                            };
+                            pickerC.SelectedIndex = 0;
 
                         };
+
+                        pickerC.SelectedIndexChanged += PickerC_SelectedIndexChanged;
 
                     }
 
@@ -122,18 +145,17 @@ namespace PetsHeroe
                             ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
 
                             ciudadDic.Clear();
+                            pickerC.SelectedIndex = -1;
                             pickerC.Items.Clear();
                             foreach (DataRow dr in ciudades.Rows)
                             {
                                 pickerC.Items.Add(dr["Name"].ToString());
                                 ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
                             }
-
-                            pickerC.SelectedIndexChanged += (object senderC, EventArgs eventArgs) => {
-                                idCiudad = ciudadDic[pickerC.SelectedItem.ToString()];
-                            };
-
+                            pickerC.SelectedIndex = 0;
                         };
+
+                        pickerC.SelectedIndexChanged += PickerC_SelectedIndexChanged;
 
                     }
 
@@ -165,6 +187,12 @@ namespace PetsHeroe
 
         }
 
+
+        private void PickerC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idCiudad = 0;
+        }
+
         public async void getPermisoLocation() {
 
             if (Device.RuntimePlatform == Device.iOS)
@@ -173,7 +201,7 @@ namespace PetsHeroe
             }
             else if (Device.RuntimePlatform == Device.Android)
             {
-                locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
+                locationGrant = await DependencyService.Get<IAndroid>().getPermisoLocation();
             }
 
         }

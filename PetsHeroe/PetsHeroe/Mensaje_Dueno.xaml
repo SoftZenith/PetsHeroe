@@ -21,35 +21,49 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="16,0,16,0"
-            Placeholder="Nombre"
-            x:Name="txtNombre">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                Placeholder="Nombre"
+                x:Name="txtNombre">
+            </Entry>
+        </Frame>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="2"
-            Keyboard="Email"
             Margin="16,0,16,0"
-            Placeholder="Correo electronico"
-            x:Name="txtCorreo">
-        </Entry>
+            Padding="0,4,0,0">
+            <Entry
+                Keyboard="Email"
+                Placeholder="Correo electronico"
+                x:Name="txtCorreo">
+            </Entry>
+        </Frame>
 
-        <Entry
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="3"
-            Keyboard="Telephone"
             Margin="16,0,16,0"
-            Placeholder="Teléfono"
-            x:Name="txtTelefono">
-        </Entry>
-
+            Padding="0,4,0,0">
+            <Entry
+                Keyboard="Telephone"
+                Placeholder="Teléfono"
+                x:Name="txtTelefono">
+            </Entry>
+        </Frame>
         <Frame
             BorderColor="#FF7100"
             CornerRadius="8"

@@ -22,7 +22,15 @@ namespace PetsHeroe
         }
 
         async void onListaCAMs(object sender, EventArgs args) {
+            
+        }
 
+        async void verMascotas(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Masc_existentes());
+        }
+
+        async void onReportarMascota(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Reg_Masc_Perdida());
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {
