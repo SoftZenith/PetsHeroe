@@ -20,77 +20,84 @@
             </Grid.RowDefinitions>
             <Button
                 BackgroundColor="#6a00ff"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="0"
-                Margin="8,8,8,0"
+                Margin="8,4,8,0"
                 Text="Consulta de beneficios"
                 TextColor="Black"/>
 
             <Button
                 BackgroundColor="#ff6a00"
                 Clicked="onMascotaPerdida"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
-                Margin="8,8,8,0"
+                Margin="8,2,8,0"
                 Text="¿Encontraste una mascota?"
                 TextColor="Black"/>
 
             <Button
                 BackgroundColor="#6a00ff"
                 Clicked="verMascotas"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
-                Margin="8,8,8,0"
+                Margin="8,2,8,0"
                 Text="Ver mis Mascotas"
                 TextColor="Black"/>
 
              <Button
-                BackgroundColor="#6a00ff"
+                BackgroundColor="#ff6a00"
                 Clicked="onListaCAMs"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
-                Margin="8,8,8,0"
+                Margin="8,2,8,0"
                 Text="Lista de Veterinarias/CAMS"
                 TextColor="Black"/>
 
             <Button
                 BackgroundColor="#6a00ff"
                 Clicked="onRegistrarMascota"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="4"
-                Margin="8,8,8,0"
+                Margin="8,2,8,0"
                 Text="Registrar mascota"
                 TextColor="Black"/>
 
             <Button
-                BackgroundColor="#6a00ff"
+                BackgroundColor="#ff6a00"
                 Clicked="onReportarMascota"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="5"
-                Margin="8,8,8,0"
+                Margin="8,2,8,0"
                 Text="Reportar mascota perdida"
                 TextColor="Black"/>
 
             <Button
-                BackgroundColor="#ff6a00"
+                BackgroundColor="#6a00ff"
                 Clicked="onCerrarSesion"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"
-                Margin="8,8,8,8"
+                Margin="8,2,8,4"
                 Text="Salir Sesión"
                 TextColor="Black"/>
 

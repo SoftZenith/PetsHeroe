@@ -20,7 +20,8 @@
         <Button
             BackgroundColor = "#6a00ff"
             Clicked = "onIniciar"
-            FontSize="Large"
+            CornerRadius = "8"
+            FontSize = "Large"
             Grid.Row = "0"
             Grid.Column = "0"
             Margin = "5,5,5,0"
@@ -30,7 +31,8 @@
         <Button
             BackgroundColor = "#ff6a00"
             Clicked = "onMascEnc"
-            FontSize="Large"
+            CornerRadius = "8"
+            FontSize = "Large"
             Grid.Row = "1"
             Grid.Column = "0"
             Margin = "5,3,5,0"
@@ -40,7 +42,8 @@
         <Button
             BackgroundColor = "#6a00ff"
             Clicked = "onListaCAM"
-            FontSize="Large"
+            CornerRadius = "8"
+            FontSize = "Large"
             Grid.Row = "2"
             Grid.Column = "0"
             Margin = "5,3,5,0"
@@ -50,7 +53,8 @@
         <Button
             BackgroundColor = "#ff6a00"
             Clicked = "onRegDueno"
-            FontSize="Large"
+            CornerRadius = "8"
+            FontSize = "Large"
             Grid.Row = "3"
             Grid.Column = "0"
             Margin = "5,3,5,0"
@@ -60,7 +64,8 @@
         <Button
             BackgroundColor = "#6a00ff"
             Clicked = "onRegVet"
-            FontSize="Large"
+            CornerRadius = "8"
+            FontSize = "Large"
             Grid.Row = "4"
             Grid.Column = "0"
             Margin = "5,3,5,5"

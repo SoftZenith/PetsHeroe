@@ -30,11 +30,15 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="8,18,8,16"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
                                 <Button HorizontalOptions="FillAndExpand"
+                                        BorderColor="#FF7100"
+                                        BorderWidth="1"
                                         Clicked="mascotaSelectedPerdida"
                                         CommandParameter="{Binding nombre}"
                                         CornerRadius="10"
                                         Text="Reportar como perdida"></Button>
                                 <Button
+                                        BorderColor="#FF7100"
+                                        BorderWidth="1"
                                         Clicked="mascotaSelectedRobada"
                                         CommandParameter="{Binding nombre}"
                                         CornerRadius="10"

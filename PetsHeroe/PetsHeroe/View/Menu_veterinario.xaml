@@ -15,10 +15,10 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Button
                 BackgroundColor="#6a00ff"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -28,6 +28,7 @@
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -38,6 +39,7 @@
             <Button
                 BackgroundColor="#6a00ff"
                 Clicked="onLocMascota"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -48,6 +50,7 @@
             <Button
                 BackgroundColor="#ff6a00"
                 Clicked="onCerrarSesion"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"

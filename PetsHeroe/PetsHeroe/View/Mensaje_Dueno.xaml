@@ -2,8 +2,98 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.View.Mensaje_Dueno">
-    <ContentPage.Content>
-        <Label>Enviar mensaje a mi dueño</Label>
-    </ContentPage.Content>
+    x:Class="PetsHeroe.Mensaje_Dueno">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="16,0,16,0"
+            Padding="0,4,0,0">
+            <Entry
+                Placeholder="Nombre"
+                x:Name="txtNombre">
+            </Entry>
+        </Frame>
+
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="2"
+            Margin="16,0,16,0"
+            Padding="0,4,0,0">
+            <Entry
+                Keyboard="Email"
+                Placeholder="Correo electronico"
+                x:Name="txtCorreo">
+            </Entry>
+        </Frame>
+
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="3"
+            Margin="16,0,16,0"
+            Padding="0,4,0,0">
+            <Entry
+                Keyboard="Telephone"
+                Placeholder="Teléfono"
+                x:Name="txtTelefono">
+            </Entry>
+        </Frame>
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="4"
+            Grid.RowSpan="2"
+            Margin="16,0,16,0"
+            Padding="4">
+            <Editor
+                Placeholder="Notas..."
+                Keyboard="Text"
+                x:Name="txtMensaje">
+            </Editor>
+        </Frame>
+
+        <Button
+            BackgroundColor="#006561"
+            BorderWidth="1"
+            BorderColor="#FF7100"
+            CornerRadius="16"
+            Clicked="onMensaje"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="7"
+            Margin="32,0,32,0"
+            Text="Enviar mensaje"
+            FontSize="Medium"
+            TextColor="White">
+        </Button>
+
+    </Grid>
 </ContentPage>

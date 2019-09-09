@@ -17,12 +17,11 @@ namespace PetsHeroe
         }
 
         async void onRegistrarMascota(object sender, EventArgs args) {
-            //await Navigation.PushAsync(new Registro_mascota());
-            await Navigation.PushAsync(new Mascota_recuperada());
+            await Navigation.PushAsync(new Registro_mascota());
         }
 
         async void onListaCAMs(object sender, EventArgs args) {
-            
+            await Navigation.PushAsync(new Consulta_CAMS());
         }
 
         async void verMascotas(object sender, EventArgs args) {

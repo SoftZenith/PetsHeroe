@@ -120,10 +120,11 @@
                 BorderColor="#FF7100"
                 CornerRadius="8"
                 HorizontalOptions="FillAndExpand"
+                Margin="0,0,8,0"
                 Padding="0,4,0,0">
                 <Entry
                     HorizontalOptions="FillAndExpand"
-                    Placeholder="Apellido materno (opcional)"
+                    Placeholder="Apellido materno(opcional)"
                     x:Name="txtApellidoMaterno"></Entry>
             </Frame>
         </StackLayout>
