@@ -253,6 +253,36 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Cliente_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cliente_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cliente_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="MascotaTipo_Busca">
         <s:complexType />
       </s:element>
@@ -355,10 +385,55 @@
             <s:element minOccurs="1" maxOccurs="1" name="Mascota_RegistroResult" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDCodigo" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDMascotaCodigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDEstatusCodigo" type="s:int" />
           </s:sequence>
         </s:complexType>
+      </s:element>
+      <s:element name="Mascota_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaza" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoDueno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mascota_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_Incidente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoIncidente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCondicion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoRetorno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_IncidenteResponse">
+        <s:complexType />
       </s:element>
       <s:element name="Codigo_Valida">
         <s:complexType>
@@ -556,6 +631,15 @@
   <wsdl:message name="Veterinario_RegistroAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Cliente_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Cliente_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Cliente_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Cliente_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cliente_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="MascotaTipo_BuscaSoapIn">
     <wsdl:part name="parameters" element="tns:MascotaTipo_Busca" />
   </wsdl:message>
@@ -599,6 +683,24 @@
     <wsdl:part name="parameters" element="tns:Mascota_RegistroResponse" />
   </wsdl:message>
   <wsdl:message name="Mascota_RegistroAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_Incidente" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_IncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
   <wsdl:message name="Codigo_ValidaSoapIn">
@@ -695,6 +797,11 @@
       <wsdl:input message="tns:Veterinario_RegistroSoapIn" />
       <wsdl:output message="tns:Veterinario_RegistroSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Clientes con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Cliente_BuscaSoapIn" />
+      <wsdl:output message="tns:Cliente_BuscaSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Mascota</wsdl:documentation>
       <wsdl:input message="tns:MascotaTipo_BuscaSoapIn" />
@@ -719,6 +826,16 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de nueva Mascota y (opcional) Dueño</wsdl:documentation>
       <wsdl:input message="tns:Mascota_RegistroSoapIn" />
       <wsdl:output message="tns:Mascota_RegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Mascota con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_BuscaSoapIn" />
+      <wsdl:output message="tns:Mascota_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Incidente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambia el Estatus de la Mascota (perdida o encontrada)</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_IncidenteSoapIn" />
+      <wsdl:output message="tns:Mascota_IncidenteSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
@@ -868,6 +985,16 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -913,6 +1040,26 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Incidente">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Incidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1087,6 +1234,16 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap12:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -1132,6 +1289,26 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_Incidente">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Incidente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

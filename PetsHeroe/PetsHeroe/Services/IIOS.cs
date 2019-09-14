@@ -23,6 +23,8 @@ namespace PetsHeroe
         Asociado ValidaUsuario { get; set; }
         DataTable MascotaRaza_Busca { get; set; }
         DataTable Veterinario_Registro { get; set; }
+        DataTable Mascota_Busca { get; set; }
+        DataTable Cliente_Busca { get; set; }
         bool EnviaContrasena { get; set; }
         bool Mascota_Registro { get; set; }
         bool Entrega_Localizacion { get; set; }
@@ -34,8 +36,6 @@ namespace PetsHeroe
         int IDMiembro { get; set; }
         int IDAsociado { get; set; }
         string nombre { get; set; }
-
-
         void getCAM_busca(double lat, double lon, double kms);
         void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida(string codigo);
@@ -53,7 +53,10 @@ namespace PetsHeroe
         void getTipoAsociado_Busca();
         void getTipoProducto_Busca();
         bool getValidaUsuario(String user, String pass);
+        bool getMascota_Busca(int idMiembro);
+        bool getCliente_Busca(int idAsociado);
         bool setVeterinario_Registro(Asociado asociado);
+        bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);
         Task<bool> getPermisoLocation();

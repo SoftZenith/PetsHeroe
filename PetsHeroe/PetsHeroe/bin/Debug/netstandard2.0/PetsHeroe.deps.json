@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "567a83918bcfb751327cdade23a9dc147018a9f4"
+    "signature": "fde0324e46fcebcb284662bd8c4e4b81d19cd99a"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,10 +11,10 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
-          "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.1.0.673156",
+          "Xamarin.Essentials": "1.3.0",
+          "Xamarin.Forms": "4.2.0.778463",
           "Xamarin.Forms.InputKit": "3.0.12",
-          "Xamarin.Forms.Maps": "4.1.0.673156",
+          "Xamarin.Forms.Maps": "4.2.0.778463",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -44,7 +44,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.0": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -55,25 +55,25 @@
           }
         }
       },
-      "Xamarin.Forms/4.1.0.673156": {
+      "Xamarin.Forms/4.2.0.778463": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.308"
+            "fileVersion": "4.2.0.102"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.308"
+            "fileVersion": "4.2.0.102"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.308"
+            "fileVersion": "4.2.0.102"
           }
         }
       },
       "Xamarin.Forms.InputKit/3.0.12": {
         "dependencies": {
-          "Xamarin.Forms": "4.1.0.673156"
+          "Xamarin.Forms": "4.2.0.778463"
         },
         "runtime": {
           "lib/netstandard2.0/Plugin.InputKit.dll": {
@@ -82,14 +82,14 @@
           }
         }
       },
-      "Xamarin.Forms.Maps/4.1.0.673156": {
+      "Xamarin.Forms.Maps/4.2.0.778463": {
         "dependencies": {
-          "Xamarin.Forms": "4.1.0.673156"
+          "Xamarin.Forms": "4.2.0.778463"
         },
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.308"
+            "fileVersion": "4.2.0.102"
           }
         }
       },
@@ -111,7 +111,7 @@
       },
       "ZXing.Net.Mobile.Forms/2.4.1": {
         "dependencies": {
-          "Xamarin.Forms": "4.1.0.673156",
+          "Xamarin.Forms": "4.2.0.778463",
           "ZXing.Net.Mobile": "2.4.1"
         },
         "runtime": {
@@ -157,19 +157,19 @@
       "path": "xam.plugin.geolocator/4.5.0.6",
       "hashPath": "xam.plugin.geolocator.4.5.0.6.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.2.0": {
+    "Xamarin.Essentials/1.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
-      "path": "xamarin.essentials/1.2.0",
-      "hashPath": "xamarin.essentials.1.2.0.nupkg.sha512"
+      "sha512": "sha512-AI6NZ7ngolTQmUI2dnsP/t6xxwPNWXuOY1sfol2yNVPSw4RfI8+D/kjz5p7Yabl5vRtoFhI6sWDT40IK9VwlBg==",
+      "path": "xamarin.essentials/1.3.0",
+      "hashPath": "xamarin.essentials.1.3.0.nupkg.sha512"
     },
-    "Xamarin.Forms/4.1.0.673156": {
+    "Xamarin.Forms/4.2.0.778463": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9NrnfD7kzGq/qjMOrdkTMxtZBOakwo5kEcay8Z6Iwv88bx11J/CDtDVJ0a5IPzfRwRq9XCcrMj3nu9DLQy6ZdA==",
-      "path": "xamarin.forms/4.1.0.673156",
-      "hashPath": "xamarin.forms.4.1.0.673156.nupkg.sha512"
+      "sha512": "sha512-0dGuPOn9KrS65rmVgOrV5knDYHxWkWEm7c/CLp6AKSlvOpZ40+YrN+7oX5hHE6lpX+dizLCaOE/RvYS3ONy9/Q==",
+      "path": "xamarin.forms/4.2.0.778463",
+      "hashPath": "xamarin.forms.4.2.0.778463.nupkg.sha512"
     },
     "Xamarin.Forms.InputKit/3.0.12": {
       "type": "package",
@@ -178,12 +178,12 @@
       "path": "xamarin.forms.inputkit/3.0.12",
       "hashPath": "xamarin.forms.inputkit.3.0.12.nupkg.sha512"
     },
-    "Xamarin.Forms.Maps/4.1.0.673156": {
+    "Xamarin.Forms.Maps/4.2.0.778463": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vvMBdAgAb3xEYZI/TSANOUuInj6gHs0AqUENv0sseWqvc4nX8ttDvbm8yuU8y0u5LPXVxHqWRSjTbjTY2uytRw==",
-      "path": "xamarin.forms.maps/4.1.0.673156",
-      "hashPath": "xamarin.forms.maps.4.1.0.673156.nupkg.sha512"
+      "sha512": "sha512-PaTT+5hfEAEJakfUpGWGUtHRWJqvuHvtgbox9Y+H6aRyTbCvivqtmkVKQZaNboUzXtrQ3r1Ig7CHG9sS32ZSSw==",
+      "path": "xamarin.forms.maps/4.2.0.778463",
+      "hashPath": "xamarin.forms.maps.4.2.0.778463.nupkg.sha512"
     },
     "ZXing.Net.Mobile/2.4.1": {
       "type": "package",

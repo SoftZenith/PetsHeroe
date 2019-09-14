@@ -134,6 +134,51 @@ namespace PetsHeroe
         }
 
         public void onRegistraMascota(object sender, EventArgs args) {
+            bool estatus = false;
+            if (Device.RuntimePlatform == Device.Android) {
+                DependencyService.Get<IAndroid>().getMascota_Registro(new Model.Dueno()
+                {
+                    idDueno = "-1",
+                    nombre = "-1",
+                    apellidoP = "-1",
+                    apellidoM = "-1",
+                    sexo = -1,
+                    correo = "-1",
+                    contrasena = "-1",
+                    mascostaCodigo = txtCodigo.Text,
+                    sexoMascota = sexoMascotaC,
+                    idTipoMascota = idTipoMascota,
+                    idRazaMascota = idRazaMascota,
+                    idColorMascota = idColorMascota,
+                    edadMascota = Convert.ToInt32(txtedadMascota.Text)
+                });
+                estatus = DependencyService.Get<IAndroid>().Mascota_Registro;
+            } else if (Device.RuntimePlatform == Device.iOS) {
+                DependencyService.Get<IIOS>().getMascota_Registro(new Model.Dueno()
+                {
+                    idDueno = "-1",
+                    nombre = "-1",
+                    apellidoP = "-1",
+                    apellidoM = "-1",
+                    sexo = -1,
+                    correo = "-1",
+                    contrasena = "-1",
+                    mascostaCodigo = txtCodigo.Text,
+                    sexoMascota = sexoMascotaC,
+                    idTipoMascota = idTipoMascota,
+                    idRazaMascota = idRazaMascota,
+                    idColorMascota = idColorMascota,
+                    edadMascota = Convert.ToInt32(txtedadMascota.Text)
+                });
+                estatus = DependencyService.Get<IIOS>().Mascota_Registro;
+            }
+            if (estatus)
+            {
+                DisplayAlert("Registro", "Se registro correctamente", "OK");
+            }
+            else {
+                DisplayAlert("Error","Tipo: "+ idTipoMascota+" ,raza: "+ idRazaMascota+",color: "+ idColorMascota, "OK");
+            }
 
         }
 

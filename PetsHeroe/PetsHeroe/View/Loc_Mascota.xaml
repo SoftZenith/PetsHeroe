@@ -24,20 +24,19 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Frame
+        <input:AdvancedEntry
             BorderColor="#FF7100"
-            CornerRadius="8"
-            Padding="0"
             Grid.Row="2"
+            Grid.Column="0"
             Grid.ColumnSpan="4"
-            Margin="10,0,10,0">
-            <Entry
-                FontSize="Large"
-                VerticalOptions="FillAndExpand"
-                Placeholder="Ingresar codigo manual"
-                x:Name="txtCodigo">
-            </Entry>
-        </Frame>
+            Margin="8,0,8,0"
+            Placeholder="Código mascota"
+            Padding="0"
+            IconImage="code.png"
+            TextColor="black"
+            x:Name="txtCodigo">
+        </input:AdvancedEntry>
+
         <Button
             BackgroundColor="#006561"
             BorderWidth="1"

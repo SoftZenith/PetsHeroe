@@ -10,6 +10,7 @@ namespace PetsHeroe
         public Mascota_recuperada()
         {
             InitializeComponent();
+
         }
 
         public void onRegistraMascota(object sender, EventArgs args) {

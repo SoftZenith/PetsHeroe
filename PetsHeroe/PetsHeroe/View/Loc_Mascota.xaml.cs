@@ -39,9 +39,9 @@ namespace PetsHeroe
                     txtCodigo.Text = result;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                txtCodigo.Text = ex.ToString();
+                txtCodigo.Text = "";
             }
         }
 

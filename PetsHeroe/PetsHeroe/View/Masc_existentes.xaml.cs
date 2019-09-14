@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -13,7 +13,7 @@ namespace PetsHeroe
 
             Mascota mascotasExisten = new Mascota();
 
-            lsvMascotasExiste.ItemsSource = mascotasExisten.getMascotaList();
+            lsvMascotasExiste.ItemsSource = mascotasExisten.getMascotaList(Preferences.Get("idMiembro", -1));
         }
     }
 }

@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.IniciarSesion">
+    x:Class="PetsHeroe.IniciarSesion"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
     <ContentPage.Content>
     <Grid>
         <Grid.RowDefinitions>
@@ -28,37 +29,36 @@
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Margin="0,0,0,0"
-            Source="http://www.petshero.com.mx/images/Logos/Logo-simple.png">
+            Source="icono_petshero.png">
         </Image>
-        <Frame
+
+        <input:AdvancedEntry
             BorderColor="#FF7100"
-            CornerRadius="8"
             Grid.Row="3"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            Margin="50,0,50,15"
-            Padding="0,4,0,0">
-            <Entry
-                FontSize="Medium"
-                Placeholder="Usuario"
-                x:Name="txtUsuario">
-            </Entry>
-        </Frame>
-        <Frame
+            IconImage="user.png"
+            Margin="50,0,50,0"
+            TextColor="black"
+            TextFontSize="Medium"
+            Placeholder="Correo"
+            x:Name="txtUsuario">
+        </input:AdvancedEntry>
+
+        <input:AdvancedEntry
             BorderColor="#FF7100"
-            CornerRadius="8"
             Grid.Row="4"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            Margin="50,0,50,15"
-            Padding="0,4,0,0">
-            <Entry
-                FontSize="Medium"
-                Placeholder="Contraseña"
-                IsPassword="True"
-                x:Name="txtPassword">
-            </Entry>
-        </Frame>
+            IconImage="password.png"
+            IsPassword="True"
+            Margin="50,0,50,0"
+            Placeholder="Contraseña"
+            TextColor="black"
+            TextFontSize="Medium"
+            x:Name="txtPassword">
+        </input:AdvancedEntry>
+
         <Button
             BackgroundColor="#006561"
             BorderWidth="1"
@@ -73,6 +73,7 @@
             Text="Entrar"
             x:Name="btnEntrar">
         </Button>
+
         <Label
             Grid.Row="6"
             Grid.Column="0"

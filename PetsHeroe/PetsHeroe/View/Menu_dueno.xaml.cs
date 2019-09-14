@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -33,7 +33,18 @@ namespace PetsHeroe
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {
-            await Navigation.PopAsync();
+            Preferences.Clear();
+            await Navigation.PushAsync(new MainPage());
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                DependencyService.Get<IAndroid>().CloseApp();
+            }
+            return base.OnBackButtonPressed();
+        }
+
     }
 }

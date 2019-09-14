@@ -11,6 +11,7 @@ namespace PetsHeroe
     {
 
         DataTable lista_CAM = new DataTable();
+        double latitud = -1, longitud = -1;
         Location currentlocation;
         bool locationGrant = false;
         DataTable estados = new DataTable();
@@ -156,13 +157,29 @@ namespace PetsHeroe
                 
                 pinCAM.Clicked += (object sender, EventArgs e) => {
                     var pinClicked = sender as Pin;
-                    DisplayAlert("CAM", "Coordenadas: " + pinClicked.Position.Latitude.ToString(), "OK");
+                    DisplayAlert("CAM", "Cam seleccionado: " + pinClicked.Label.ToString(), "OK");
+                    latitud = pinClicked.Position.Latitude;
+                    longitud = pinClicked.Position.Longitude;
                 };
                 mapLlevarCentro.Pins.Add(pinCAM);
                 //listaPins.Add(pinCAM);
             }
 
             mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.8494, -100.3523), 0.5, 0.5));
+
+        }
+
+        async void onDejarMascota(object sender, EventArgs args) {
+            if (txtNotas.Text == "") {
+                await DisplayAlert("Error","Agregar alguna nota","OK");
+                return;
+            }else if(latitud == -1 || longitud == -1)
+            {
+                await DisplayAlert("Error","Selecciona un CAM","OK");
+                return;
+            }
+
+
 
         }
 

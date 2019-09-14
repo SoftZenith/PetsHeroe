@@ -37,6 +37,8 @@ namespace PetsHeroe.Droid
         public DataTable Veterinario_Registro { get; set; }
         public MensajeDueno Entrega_SoloMensaje { get; set; }
         public bool Entrega_Localizacion { get; set; }
+        public DataTable Mascota_Busca { get; set; }
+        public DataTable Cliente_Busca { get; set; }
 
         wsPetsApp wsPets = new wsPetsApp();
 
@@ -71,7 +73,7 @@ namespace PetsHeroe.Droid
                 wsPets.AuthHeaderValue = auth;
                 Codigo_Valida = wsPets.Codigo_Valida(codigo, out int IDCodigo, out int IDEstatusCodigo, out int IDMascotaCodigo);
             }
-            catch (Exception ex) {
+            catch (Exception) {
                 Codigo_Valida = false;
             }
         }
@@ -95,7 +97,8 @@ namespace PetsHeroe.Droid
 
         public void getMascotaEstatus_Busca()
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            MascotaEstatus_Busca = wsPets.MascotaEstatus_Busca();
         }
 
         public void getMascotaTipo_Busca()
@@ -188,7 +191,7 @@ namespace PetsHeroe.Droid
             try{
                 return wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
                     asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
-            }catch (Exception ex){
+            }catch (Exception){
                 return false;
             }
         }
@@ -237,6 +240,42 @@ namespace PetsHeroe.Droid
                 return false;
             }
             return true;
+        }
+
+        public bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud)
+        {
+            try
+            {
+                wsPets.Entrega_CAM(5, codigo, -1, notas, latitud, longitud);
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }
+        }
+
+        public bool getMascota_Busca(int idMiembro)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, idMiembro, "", "", "");
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }
+        }
+
+        public bool getCliente_Busca(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                Cliente_Busca = wsPets.Cliente_Busca(idAsociado, -1,"","","","","","","","");
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }
         }
     }
 }

@@ -54,6 +54,8 @@ namespace PetsHeroe
             idEstado = estadoDic[pkrEstado.SelectedItem.ToString()];
             try
             {
+                cargarCiudades(idEstado);
+                /*
                 ciudadDic.Clear();
                 pkrMunicipio.SelectedIndex = -1;
                 pkrMunicipio.Items.Clear();
@@ -73,8 +75,45 @@ namespace PetsHeroe
                     ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
                 }
                 pkrMunicipio.SelectedIndex = 0;
+                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
+                {
+                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
+                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
+                };*/
             }
             catch (Exception ex) {
+                /*DisplayAlert("Error", "Fallo carga ciudades", "OK");
+                ciudadDic.Clear();
+                pkrMunicipio.SelectedIndex = 0;
+                pkrMunicipio.Items.Clear();
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
+                }
+                else if (Device.RuntimePlatform == Device.iOS)
+                {
+                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
+                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
+                }
+                foreach (DataRow dr in ciudades.Rows)
+                {
+                    pkrMunicipio.Items.Add(dr["Name"].ToString());
+                    ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                }
+                pkrMunicipio.SelectedIndex = 0;
+                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
+                {
+                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
+                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
+                };*/
+            }
+
+        }
+
+        private void cargarCiudades(int idEstado) {
+            try
+            {
                 ciudadDic.Clear();
                 pkrMunicipio.SelectedIndex = -1;
                 pkrMunicipio.Items.Clear();
@@ -94,11 +133,15 @@ namespace PetsHeroe
                     ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
                 }
                 pkrMunicipio.SelectedIndex = 0;
+                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
+                {
+                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
+                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
+                };
             }
-            pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
-            {
-                idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
-            };
+            catch (Exception ex) {
+                cargarCiudades(idEstado);
+            }
         }
 
         async void onAviso(object sender, EventArgs args) {
@@ -117,12 +160,12 @@ namespace PetsHeroe
                 string[] textos = { codigo_pre, localizacion, notas };
 
                 if (enteros.Any(item => item < 0)) {
-                    await DisplayAlert("Error","Faltan campos por llenar","OK");
+                    await DisplayAlert("Error","Faltan campos por llenar enteros, idEstado: "+idEstado+" idCiudad: "+idCiudad,"OK");
                     return;
                 }
 
                 if (textos.Any(item => item.Trim().Length == 0)) {
-                    await DisplayAlert("Error", "Faltan campos por llenar", "OK");
+                    await DisplayAlert("Error", "Faltan campos por llenar textos", "OK");
                     return;
                 }
 

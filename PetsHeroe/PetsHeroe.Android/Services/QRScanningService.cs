@@ -28,9 +28,9 @@ namespace PetsHeroe.Droid.Services
             {
                 scanResult = await scanner.Scan(optionsCustom);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return ex.ToString();
+                return "";
             }
             return scanResult.Text;
         }

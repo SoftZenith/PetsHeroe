@@ -16,6 +16,17 @@ namespace PetsHeroe
         {
             InitializeComponent();
             getCurrentLocation();
+           
+            bool logged = Preferences.Get("logged", false, "usuarioLogeado"); 
+            int userType = Preferences.Get("userType", 0, "tipoUsuario");
+            
+            if (logged && userType == 1)
+            {
+                Navigation.PushAsync(new Menu_dueno());
+            }
+            else if (logged && userType == 2) {
+                Navigation.PushAsync(new Menu_veterinario());
+            }
 
         }//Constructor
 

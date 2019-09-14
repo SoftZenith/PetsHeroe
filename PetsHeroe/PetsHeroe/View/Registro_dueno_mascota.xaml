@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.Registro_dueno_mascota">
+    x:Class="PetsHeroe.Registro_dueno_mascota"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
     <ScrollView>
     <Grid>
         <Grid.RowDefinitions>
@@ -23,44 +24,57 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Frame
+        <input:AdvancedEntry
             BorderColor="#FF7100"
-            CornerRadius="8"
             Grid.Row="0"
+            IconImage="code.png"
             Margin="8,4,8,0"
-            Padding="0,4,0,0">
-            <Entry Placeholder="Codigo mascota" Keyboard="Numeric" x:Name="txtCodigoMascota"></Entry>
-        </Frame>
+            Placeholder="Codigo mascota"
+            TextColor="black"
+            x:Name="txtCodigoMascota">
+        </input:AdvancedEntry>
 
         <Frame
             BorderColor="#FF7100"
-            CornerRadius="8"
+            CornerRadius="20"
             Grid.Row="1"
             Grid.Column="0"
             Margin="8,0,8,0"
-            Padding="0,4,0,0">
+            Padding="4,4,0,4">
             <Picker Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
         </Frame>
 
         <Frame
             BorderColor="#FF7100"
-            CornerRadius="8"
+            CornerRadius="20"
             Grid.Row="2"
             Grid.Column="0"
             Margin="8,0,8,0"
-            Padding="0,4,0,0">
+            Padding="4,4,0,4">
             <Picker Title="Raza" x:Name="pkrRazaMascota"></Picker>
         </Frame>
 
         <Frame
             BorderColor="#FF7100"
-            CornerRadius="8"
+            CornerRadius="20"
             Grid.Row="3"
             Grid.Column="0"
             Margin="8,0,8,0"
-            Padding="0,4,0,0">
+            Padding="4">
             <Picker Title="Color" x:Name="pkrColorMascota"></Picker>
         </Frame>
+
+        <input:AdvancedEntry
+            BorderColor="#FF7100"
+            Grid.Row="4"
+            IconImage="pet.png"
+            Keyboard="Text"
+            Margin="8,4,8,0"
+            Placeholder="Nombre mascota"
+            TextColor="black"
+            x:Name="txtnombreMascota">
+        </input:AdvancedEntry>
+        <!--
         <Frame
             BorderColor="#FF7100"
             CornerRadius="8"
@@ -68,13 +82,14 @@
             Margin="8,0,8,0"
             Padding="0,4,0,0">
             <Entry Placeholder="Nombre (Mascota)" x:Name="txtnombreMascota"></Entry>
-        </Frame>
+        </Frame>-->
+
         <StackLayout Grid.Row="5" Grid.Column="0" Margin="8,0,8,0" Orientation="Horizontal">
 
             <Frame
                 BorderColor="#FF7100"
-                CornerRadius="8"
-                Padding="0"
+                CornerRadius="20"
+                Padding="4"
                 HorizontalOptions="FillAndExpand">
                 <Picker HorizontalOptions="FillAndExpand" Title="Sexo" x:Name="pkrSexoMascota">
                     <Picker.Items>
@@ -83,28 +98,63 @@
                     </Picker.Items>
                 </Picker>
             </Frame>
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                IconImage="pet.png"
+                Keyboard="Numeric"
+                Padding="0"
+                Placeholder="Edad"
+                TextColor="black"
+                x:Name="txtedadMascota">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
                 Padding="0,4,0,0"
                 HorizontalOptions="FillAndExpand">
                 <Entry HorizontalOptions="FillAndExpand" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
-            </Frame>
+            </Frame>-->
         </StackLayout>
         <!--Datos del dueño-->
+
+        <input:AdvancedEntry
+            BorderColor="#FF7100"
+            Grid.Row="6"
+            IconImage="user.png"
+            Margin="8,0"
+            Placeholder="Nombre del dueño"
+            TextColor="black"
+            x:Name="txtnombreDueno">
+        </input:AdvancedEntry>
+        <!--
         <Frame
             BorderColor="#FF7100"
             CornerRadius="8"
             Grid.Row="6"
             Margin="8,0,8,0"
             Padding="0,4,0,0">
-            <Entry Placeholder="Nombre del dueño" x:Name="txtnombreDueno"></Entry>
+            <Entry Placeholder="Nombre del dueño" ></Entry>
         </Frame>
+        -->
         <StackLayout
             Grid.Row="7"
             Margin="8,0,8,0"
             Orientation="Horizontal">
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                HorizontalOptions="FillAndExpand"
+                IconImage="user.png"
+                Margin="0"
+                Padding="0"
+                Placeholder="Ap. Paterno"
+                TextColor="black"
+                x:Name="txtApellidoPaterno">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -112,10 +162,19 @@
                 Padding="0,4,0,0">
                 <Entry
                     HorizontalOptions="FillAndExpand"
-                    Placeholder="Apellido paterno"
-                    x:Name="txtApellidoPaterno"></Entry>
-            </Frame>
+                    Placeholder="Apellido paterno"></Entry>
+            </Frame>-->
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                HorizontalOptions="FillAndExpand"
+                IconImage="user.png"
+                Margin="0"
+                Placeholder="Materno(opcional)"
+                TextColor="black"
+                x:Name="txtApellidoMaterno">
 
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -124,18 +183,18 @@
                 Padding="0,4,0,0">
                 <Entry
                     HorizontalOptions="FillAndExpand"
-                    Placeholder="Apellido materno(opcional)"
-                    x:Name="txtApellidoMaterno"></Entry>
-            </Frame>
+                    Placeholder="Ap materno(opcional)"
+                    ></Entry>
+            </Frame>-->
         </StackLayout>
 
         <Frame
             BorderColor="#FF7100"
-            CornerRadius="8"
+            CornerRadius="20"
             Grid.Row="8"
             Grid.Column="0"
             Margin="8,0,8,0"
-            Padding="0,4,0,0">
+            Padding="4">
             <Picker Title="Sexo" x:Name="pkrSexoDueno">
                 <Picker.Items>
                     <x:String>Masculino</x:String>
@@ -144,24 +203,47 @@
             </Picker>
         </Frame>
 
+        <input:AdvancedEntry
+            BorderColor="#FF7100"
+            Grid.Row="9"
+            IconImage="email.png"
+            Keyboard="Email"
+            Margin="8,0"
+            Placeholder="Correo"
+            TextColor="black"
+            x:Name="txtCorreo">
+        </input:AdvancedEntry>
+        <!--
         <Frame
             BorderColor="#FF7100"
             CornerRadius="8"
             Grid.Row="9"
             Margin="8,0,8,0"
             Padding="0,4,0,0">
-            <Entry Placeholder="Correo" Keyboard="Email" x:Name="txtCorreo"></Entry>
-        </Frame>
+            <Entry Placeholder="Correo" Keyboard="Email" ></Entry>
+        </Frame>-->
 
+        <input:AdvancedEntry
+            BorderColor="#FF7100"
+            Grid.Row="10"
+            IconImage="password.png"
+            IsPassword="True"
+            Margin="8,0,8,0"
+            Placeholder="Contraseña"
+            TextColor="black"
+            x:Name="txtContrasena">
+
+        </input:AdvancedEntry>
+        <!--
         <Frame
             BorderColor="#FF7100"
             CornerRadius="8"
             Grid.Row="10"
             Margin="8,0,8,0"
             Padding="0,4,0,0">
-            <Entry Placeholder="Contraseña" IsPassword="True" x:Name="txtContrasena"></Entry>
+            <Entry Placeholder="Contraseña" IsPassword="True" ></Entry>
         </Frame>
-
+        -->
         <Button
             BorderColor="#FF7100"
             BackgroundColor="#006561"

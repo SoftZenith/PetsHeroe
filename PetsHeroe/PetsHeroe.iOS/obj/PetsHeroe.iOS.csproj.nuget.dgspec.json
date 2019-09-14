@@ -42,11 +42,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.709249, )"
+              "version": "[4.2.0.778463, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.2.0.709249, )"
+              "version": "[4.2.0.778463, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -118,11 +118,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.673156, )"
+              "version": "[4.2.0.778463, )"
             },
             "Xamarin.Forms.InputKit": {
               "target": "Package",
@@ -130,7 +130,7 @@
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.1.0.673156, )"
+              "version": "[4.2.0.778463, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",

@@ -211,5 +211,19 @@ namespace PetsHeroe
                 return;
             }
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                pkrTipoMascota.Focused += (object sender, FocusEventArgs eventHandler) =>
+                {
+                    Navigation.PopAsync();
+                };
+                pkrRazaMascota.IsVisible = false;
+                pkrColorMascota.IsVisible = false;
+            }
+            return base.OnBackButtonPressed();
+        }
     }
 }

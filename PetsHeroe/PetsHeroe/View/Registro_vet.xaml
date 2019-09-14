@@ -3,7 +3,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.Registro_vet">
+    x:Class="PetsHeroe.Registro_vet"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
     <ContentPage.Content>
         <ScrollView>
         <Grid>
@@ -29,18 +30,30 @@
 
             <Frame
                 BorderColor="#FF7100"
-                CornerRadius="8"
+                CornerRadius="20"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="0"
                 Margin="16,4,16,0"
-                Padding="0,4,0,0">
+                Padding="4">
                 <Picker
                     Title="Tipo asociado"
                     x:Name="pkrAsociado">
                 </Picker>
             </Frame>
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                IconImage="store.png"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Nombre comercial"
+                x:Name="txtNombreComercial">
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -53,8 +66,21 @@
                     Placeholder="Nombre comercial"
                     x:Name="txtNombreComercial">
                 </Entry>
-            </Frame>
+            </Frame>-->
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                IconImage="user.png"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Nombre"
+                x:Name="txtNombre">
+
+            </input:AdvancedEntry>
+<!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -68,7 +94,19 @@
                     x:Name="txtNombre">
                 </Entry>
             </Frame>
-
+-->
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                IconImage="user.png"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Apellido paterno"
+                x:Name="txtApellidoP">
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -82,7 +120,21 @@
                     x:Name="txtApellidoP">
                 </Entry>
             </Frame>
+            -->
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
+                IconImage="user.png"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Apellido materno (opcional)"
+                x:Name="txtApellidoM">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -96,15 +148,15 @@
                     x:Name="txtApellidoM">
                 </Entry>
             </Frame>
-
+            -->
             <Frame
                 BorderColor="#FF7100"
-                CornerRadius="8"
+                CornerRadius="20"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="5"
                 Margin="16,0,16,0"
-                Padding="0,4,0,0">
+                Padding="4">
                 <Picker 
                     Title="Sexo"
                     x:Name="pkrSexo">
@@ -115,6 +167,20 @@
                 </Picker>
             </Frame>
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="6"
+                IconImage="email.png"
+                Keyboard="Email"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Correo electronico"
+                x:Name="txtCorreo">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -129,7 +195,22 @@
                     x:Name="txtCorreo">
                 </Entry>
             </Frame>
+            -->
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="7"
+                IconImage="password.png"
+                IsPassword="True"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Contraseña"
+                x:Name="txtContrasena">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -144,7 +225,22 @@
                     x:Name="txtContrasena">
                 </Entry>
             </Frame>
+            -->
 
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="8"
+                IconImage="password.png"
+                IsPassword="True"
+                Margin="16,0,16,0"
+                TextColor="black"
+                Placeholder="Confirme contraseña"
+                x:Name="txtConConstrasena">
+
+            </input:AdvancedEntry>
+            <!--
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
@@ -159,7 +255,7 @@
                     x:Name="txtConConstrasena">
                 </Entry>
             </Frame>
-
+            -->
             <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="3"

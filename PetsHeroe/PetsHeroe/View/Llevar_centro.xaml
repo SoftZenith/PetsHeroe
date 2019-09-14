@@ -53,7 +53,8 @@
             Grid.RowSpan="2">
             <Editor
                 VerticalOptions="FillAndExpand"
-                Placeholder="Notas">
+                Placeholder="Notas"
+                x:Name="txtNotas">
             </Editor>
         </Frame>
         <Button
@@ -61,6 +62,7 @@
             BorderWidth="1"
             BorderColor="#FF7100"
             CornerRadius="16"
+            Clicked="onDejarMascota"
             Grid.Column="1"
             Grid.ColumnSpan="8"
             Grid.Row="8"

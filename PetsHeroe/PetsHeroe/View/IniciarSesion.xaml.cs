@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -73,10 +73,16 @@ namespace PetsHeroe
                     var asociado = DependencyService.Get<IIOS>().ValidaUsuario;
                     if (asociado.idMiembro > 0){
                         await DisplayAlert("Bienvenido", "Dueño "+asociado.nombre, "OK");
+                        Preferences.Set("logged", true, "usuarioLogeado");
+                        Preferences.Set("userType", 1, "tipoUsuario");
+                        Preferences.Set("idMiembro", asociado.idMiembro);
                         await Navigation.PushAsync(new Menu_dueno());
                     }
                     else if(asociado.idAsociado > 0){
                         await DisplayAlert("Bienvenido", "Asociado "+asociado.nombre, "OK");
+                        Preferences.Set("logged", true, "usuarioLogeado");
+                        Preferences.Set("userType", 2, "tipoUsuario");
+                        Preferences.Set("idAsociado", asociado.idAsociado);
                         await Navigation.PushAsync(new Menu_veterinario());
                     }
                     //Navigation.PushModalAsync(new menu_general());
@@ -92,11 +98,17 @@ namespace PetsHeroe
                     if (asociado.idMiembro > 0)
                     {
                         await DisplayAlert("Bienvenido", "Dueño " + asociado.nombre, "OK");
+                        Preferences.Set("logged", true, "usuarioLogeado");
+                        Preferences.Set("userType", 1, "tipoUsuario");
+                        Preferences.Set("idMiembro", asociado.idMiembro);
                         await Navigation.PushAsync(new Menu_dueno());
                     }
                     else if (asociado.idAsociado > 0)
                     {
                         await DisplayAlert("Bienvenido", "Asociado " + asociado.nombre, "OK");
+                        Preferences.Set("logged", true, "usuarioLogeado");
+                        Preferences.Set("userType", 2, "tipoUsuario");
+                        Preferences.Set("idAsociado", asociado.idAsociado);
                         await Navigation.PushAsync(new Menu_veterinario());
                     }
                 }

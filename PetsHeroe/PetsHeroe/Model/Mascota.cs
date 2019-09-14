@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using Xamarin.Forms;
 
 namespace PetsHeroe
 {
@@ -16,32 +18,70 @@ namespace PetsHeroe
         public bool perdida { get; set; }
         public bool robada { get; set; }
 
-        public List<Mascota> getMascotaList() {
+        public List<Mascota> getMascotaList(int idMiembro) {
 
-            List<Mascota> mascotas = new List<Mascota>() {
-                new Mascota(){
-                    idMascota = 0,
-                    nombre = "Firulais",
-                    codigo = "098774839",
-                    estatus = "Quo",
-                    suscripcion = "Anual",
-                    veterinario = "Dr. Carlos Perez",
-                    alta = "20/06/2019",
-                    expira = "20/06/2020",
-                    perdida = false,
-                    robada = false },
-                new Mascota(){
-                    idMascota = 1,
-                    nombre = "El prieto",
-                    codigo = "98667302",
-                    estatus = "Quo",
-                    suscripcion = "Anual",
-                    veterinario = "Dra. Diana Laura",
-                    alta = "02/01/2019",
-                    expira = "02/01/2020",
-                    perdida = false,
-                    robada = false }
-            };
+            DataTable mascotasTbl = new DataTable();
+
+            List<Mascota> mascotas = new List<Mascota>();
+
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                bool status = DependencyService.Get<IAndroid>().getMascota_Busca(idMiembro);
+                if (status)
+                {
+                    mascotasTbl = DependencyService.Get<IAndroid>().Mascota_Busca;
+
+                    foreach (DataRow dr in mascotasTbl.Rows)
+                    {
+
+                        var mascotaTmp = new Mascota()
+                        {
+                            idMascota = Convert.ToInt32(dr["IDPet"]),
+                            nombre = dr["Name"].ToString(),
+                            codigo = dr["Code"].ToString(),
+                            estatus = dr["PetStatus"].ToString(),
+                            suscripcion = dr["SubscriptionType"].ToString(),
+                            veterinario = "",
+                            alta = dr["DateActivated"].ToString(),
+                            expira = dr["DateExpiration"].ToString(),
+                            perdida = false,
+                            robada = false
+                        };
+
+                        mascotas.Add(mascotaTmp);
+
+                    }
+
+                }
+            } else if (Device.RuntimePlatform == Device.iOS) {
+                bool status = DependencyService.Get<IIOS>().getMascota_Busca(idMiembro);
+                if (status)
+                {
+                    mascotasTbl = DependencyService.Get<IIOS>().Mascota_Busca;
+
+                    foreach (DataRow dr in mascotasTbl.Rows)
+                    {
+
+                        var mascotaTmp = new Mascota()
+                        {
+                            idMascota = Convert.ToInt32(dr["IDPet"]),
+                            nombre = dr["Name"].ToString(),
+                            codigo = dr["Code"].ToString(),
+                            estatus = dr["PetStatus"].ToString(),
+                            suscripcion = dr["SubscriptionType"].ToString(),
+                            veterinario = "",
+                            alta = dr["DateActivated"].ToString(),
+                            expira = dr["DateExpiration"].ToString(),
+                            perdida = false,
+                            robada = false
+                        };
+
+                        mascotas.Add(mascotaTmp);
+
+                    }
+
+                }
+            }
 
             return mascotas;
         }
