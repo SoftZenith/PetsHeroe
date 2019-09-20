@@ -30,6 +30,7 @@
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
+                Clicked="onBeneficios"
                 CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"

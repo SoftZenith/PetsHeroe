@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using PetsHeroe.Services;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -15,8 +16,11 @@ namespace PetsHeroe
         public string veterinario { get; set; }
         public string alta { get; set; }
         public string expira { get; set; }
-        public bool perdida { get; set; }
-        public bool robada { get; set; }
+        public bool perdida { get; set; } //EXT
+        public bool robada { get; set; } //
+        public string botonIzq { get; set; }
+        public string botonDer { get; set; }
+        //REG en casa con dueño
 
         public List<Mascota> getMascotaList(int idMiembro) {
 
@@ -24,63 +28,33 @@ namespace PetsHeroe
 
             List<Mascota> mascotas = new List<Mascota>();
 
-            if (Device.RuntimePlatform == Device.Android)
+            bool status = DependencyService.Get<IWebService>().getMascota_Busca(idMiembro);
+            if (status)
             {
-                bool status = DependencyService.Get<IAndroid>().getMascota_Busca(idMiembro);
-                if (status)
+                mascotasTbl = DependencyService.Get<IWebService>().Mascota_Busca;
+
+                foreach (DataRow dr in mascotasTbl.Rows)
                 {
-                    mascotasTbl = DependencyService.Get<IAndroid>().Mascota_Busca;
 
-                    foreach (DataRow dr in mascotasTbl.Rows)
+                    var mascotaTmp = new Mascota()
                     {
+                        idMascota = Convert.ToInt32(dr["IDPet"]),
+                        nombre = dr["Name"].ToString(),
+                        codigo = dr["Code"].ToString(),
+                        estatus = dr["PetStatus"].ToString(),
+                        suscripcion = dr["SubscriptionType"].ToString(),
+                        veterinario = "",
+                        alta = dr["DateActivated"].ToString(),
+                        expira = dr["DateExpiration"].ToString(),
+                        perdida = (dr["PetStatusCode"].ToString() != "REG"),
+                        robada = (dr["PetStatusCode"].ToString() != "REG"),
+                        botonIzq = (dr["PetStatusCode"].ToString() == "REG") ? "Reportar como perdida" : "Cancelar reporte",
+                        botonDer = (dr["PetStatusCode"].ToString() == "REG") ? "Reportar como robada" : "Reportar como encontrada"
+                    };
 
-                        var mascotaTmp = new Mascota()
-                        {
-                            idMascota = Convert.ToInt32(dr["IDPet"]),
-                            nombre = dr["Name"].ToString(),
-                            codigo = dr["Code"].ToString(),
-                            estatus = dr["PetStatus"].ToString(),
-                            suscripcion = dr["SubscriptionType"].ToString(),
-                            veterinario = "",
-                            alta = dr["DateActivated"].ToString(),
-                            expira = dr["DateExpiration"].ToString(),
-                            perdida = false,
-                            robada = false
-                        };
-
-                        mascotas.Add(mascotaTmp);
-
-                    }
-
+                    mascotas.Add(mascotaTmp);
                 }
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                bool status = DependencyService.Get<IIOS>().getMascota_Busca(idMiembro);
-                if (status)
-                {
-                    mascotasTbl = DependencyService.Get<IIOS>().Mascota_Busca;
 
-                    foreach (DataRow dr in mascotasTbl.Rows)
-                    {
-
-                        var mascotaTmp = new Mascota()
-                        {
-                            idMascota = Convert.ToInt32(dr["IDPet"]),
-                            nombre = dr["Name"].ToString(),
-                            codigo = dr["Code"].ToString(),
-                            estatus = dr["PetStatus"].ToString(),
-                            suscripcion = dr["SubscriptionType"].ToString(),
-                            veterinario = "",
-                            alta = dr["DateActivated"].ToString(),
-                            expira = dr["DateExpiration"].ToString(),
-                            perdida = false,
-                            robada = false
-                        };
-
-                        mascotas.Add(mascotaTmp);
-
-                    }
-
-                }
             }
 
             return mascotas;

@@ -1,5 +1,6 @@
 ﻿using System;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -7,21 +8,14 @@ namespace PetsHeroe
     public partial class Loc_Mascota : ContentPage
     {
         private int opcion = 0;
-        IAndroid wsDependency;
-        IIOS wsDdependecyIOS;
+        IWebService wsDependency;
         IQRScanning scanningDepen;
 
         public Loc_Mascota()
         {
             InitializeComponent();
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                wsDependency = DependencyService.Get<IAndroid>();
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                wsDdependecyIOS = DependencyService.Get<IIOS>();
-            }
+            wsDependency = DependencyService.Get<IWebService>();
             scanningDepen = DependencyService.Get<IQRScanning>();
-
             txtCodigo.Text = "";
             rdOpcion.SelectedItemChanged += onOpcionSeleccionada;
         }
@@ -48,21 +42,22 @@ namespace PetsHeroe
         async void onSiguiente(object sender, EventArgs args) {
 
             string codigo;
-            try
-            {
+            try { 
                 codigo = txtCodigo.Text;
             }catch (Exception){
                 codigo = "";
             }
 
             bool valido = false;
-            if (Device.RuntimePlatform == Device.Android) {
-                wsDependency.getCodigo_Valida(codigo);
-                valido = wsDependency.Codigo_Valida;
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                wsDdependecyIOS.getCodigo_Valida(codigo);
-                valido = wsDdependecyIOS.Codigo_Valida;
+            try
+            {
+                wsDependency.getCodigo_Valida(codigo); //call function to verify code
+                valido = wsDependency.Codigo_Valida; //get result from code verified 
             }
+            catch (Exception) {
+                await DisplayAlert("Error", "Hubo un error al verificar el código", "OK");
+            }
+
             if (!valido) {
                 await DisplayAlert("Código no valido", "Código no valido", "OK");
                 return;
@@ -70,13 +65,31 @@ namespace PetsHeroe
 
             switch (opcion) {
                 case 0:
-                    _ = Navigation.PushAsync(new Llevar_centro(codigo));
+                    try
+                    {
+                        _ = Navigation.PushAsync(new Llevar_centro(codigo)); //Display "Llevar a CAM" screen
+                    }
+                    catch (Exception ex) {
+                        await DisplayAlert("Error","Opción no disponible actualmente "+ex,"OK");
+                    }
                     break;
                 case 1:
-                    _ = Navigation.PushAsync(new Mensaje_Dueno(codigo));
+                    try
+                    {
+                        _ = Navigation.PushAsync(new Mensaje_Dueno(codigo));
+                    }
+                    catch (Exception) {
+                        await DisplayAlert("Error", "Opción no disponible actualmente", "OK"); //Display ""
+                    }
                     break;
                 case 2:
-                    _ = Navigation.PushAsync(new Tomar_Nota(codigo));
+                    try
+                    {
+                        _ = Navigation.PushAsync(new Tomar_Nota(codigo));
+                    }
+                    catch (Exception) {
+                        await DisplayAlert("Error", "Opción no disponible actualmente", "OK");
+                    }
                     break;
                 default:
                     await DisplayAlert("Seleccionado", "Ninguno seleccionado", "OK");

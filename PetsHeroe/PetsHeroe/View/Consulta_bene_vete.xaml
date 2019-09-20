@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetsHeroe.View.Consulta_bene_vete">
+  <!--Pages can be added as references or inline-->
+  <ContentPage Title="Dinero electr" IconImageSource="money.png" Padding="8">
+      <ContentPage.Content>
+          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">
+            <ListView.Header>
+                <ContentView Padding="0,5" BackgroundColor="White">
+                    <Label FontSize="Large" TextColor="Black"
+                       Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </ContentView>
+            </ListView.Header>     
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding codigo, StringFormat='Código: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Suscripción: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding veterinario, StringFormat='Veterinario: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding alta, StringFormat='Alta: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding expira, StringFormat='Expira: {0}'}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+      </ContentPage.Content>
+  </ContentPage>
+  <ContentPage Title="Productos" IconImageSource="product.png" Padding="8">
+      <ContentPage.Content>
+          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvProductos">
+            <ListView.Header>
+                <ContentView Padding="0,5" BackgroundColor="White">
+                    <Label FontSize="Large" TextColor="Black"
+                       Text="Productos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </ContentView>
+            </ListView.Header>     
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='CAM: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding codigo, StringFormat='Descripción: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Marca: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding estatus, StringFormat='Producto: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding veterinario, StringFormat='Precio: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding alta, StringFormat='Dinero electr: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding expira, StringFormat='Hasta el: {0}'}" />
+                                <BoxView
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   HeightRequest="1"  
+                                   Color="#000000"></BoxView>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+      </ContentPage.Content>
+  </ContentPage>
+  <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
+      <ContentPage.Content>
+          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
+            <ListView.Header>
+                <ContentView Padding="0,5" BackgroundColor="White">
+                    <Label FontSize="Large" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </ContentView>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='CAM: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding codigo, StringFormat='Descripción: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Para: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding estatus, StringFormat='En: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding veterinario, StringFormat='Precio: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding alta, StringFormat='Compra: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding alta, StringFormat='Y lleva gratis: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding expira, StringFormat='Hasta el: {0}'}" />
+                                <BoxView
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   HeightRequest="1"  
+                                   Color="#000000"></BoxView>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+      </ContentPage.Content>
+  </ContentPage>
+</TabbedPage>

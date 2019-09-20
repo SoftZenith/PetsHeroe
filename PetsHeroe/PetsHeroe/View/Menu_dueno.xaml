@@ -21,6 +21,7 @@
             </Grid.RowDefinitions>
             <Button
                 BackgroundColor="#6a00ff"
+                Clicked="onConsultaBene"
                 CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"

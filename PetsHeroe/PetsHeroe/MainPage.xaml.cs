@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -34,7 +35,7 @@ namespace PetsHeroe
         {
             try{
                 currentlocation = await Geolocation.GetLastKnownLocationAsync();
-            }catch (Exception ex) {
+            }catch (Exception) {
 
             }
         }
@@ -42,7 +43,7 @@ namespace PetsHeroe
         protected override bool OnBackButtonPressed()
         {
             if (Device.RuntimePlatform == Device.Android) {
-                DependencyService.Get<IAndroid>().CloseApp();
+                DependencyService.Get<IWebService>().CloseApp();
             }
             return base.OnBackButtonPressed();
         }
@@ -50,7 +51,6 @@ namespace PetsHeroe
         async void onIniciar(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new IniciarSesion());
-            //_ = Navigation.PushModalAsync(new IniciarSesion());
         }
 
         async void onRegDueno(object sender, EventArgs args)
@@ -62,7 +62,6 @@ namespace PetsHeroe
         async void onRegVet(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new Registro_vet());
-            //_ = Navigation.PushModalAsync(new Registro_vet());
         }
 
         async void onMascEnc(object sender, EventArgs args) {
@@ -70,9 +69,6 @@ namespace PetsHeroe
         }
 
         async void onListaCAM(object sender, EventArgs args) {
-            //NavigationPage npMasc_existen = new NavigationPage(new Masc_existentes());
-            //await Navigation.PushAsync(new Masc_existentes());
-            //await Navigation.PushAsync(new Reg_Masc_Perdida());
             await Navigation.PushAsync(new Consulta_CAMS());
         }
 

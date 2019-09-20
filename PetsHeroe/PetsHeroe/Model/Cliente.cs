@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using PetsHeroe.Services;
 using Xamarin.Forms;
 
 namespace PetsHeroe.Model
@@ -16,47 +17,25 @@ namespace PetsHeroe.Model
             DataTable clientesTbl = new DataTable();
             List<Cliente> clientes = new List<Cliente>();
 
-            if (Device.RuntimePlatform == Device.Android)
+            bool status = DependencyService.Get<IWebService>().getCliente_Busca(idAsociado);
+
+            if (status)
             {
-                bool status = DependencyService.Get<IAndroid>().getCliente_Busca(idAsociado);
+                clientesTbl = DependencyService.Get<IWebService>().Cliente_Busca;
+            }
 
-                if (status) {
-                    clientesTbl = DependencyService.Get<IAndroid>().Cliente_Busca;
-                }
-
-                foreach (DataRow dr in clientesTbl.Rows) {
-                    var clientTmp = new Cliente() {
-                        idDueno = dr["IDMember"].ToString(),
-                        codigoMiembro = dr["MemberCode"].ToString(),
-                        nombre = dr["FullName"].ToString(),
-                        correo = dr["EMail"].ToString(),
-                        telefono = dr["PhoneCel"].ToString()
-                    };
-
-                    clientes.Add(clientTmp);
-                }
-
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                bool status = DependencyService.Get<IIOS>().getCliente_Busca(idAsociado);
-
-                if (status)
+            foreach (DataRow dr in clientesTbl.Rows)
+            {
+                var clientTmp = new Cliente()
                 {
-                    clientesTbl = DependencyService.Get<IIOS>().Cliente_Busca;
-                }
+                    idDueno = dr["IDMember"].ToString(),
+                    codigoMiembro = dr["MemberCode"].ToString(),
+                    nombre = dr["FullName"].ToString(),
+                    correo = dr["EMail"].ToString(),
+                    telefono = dr["PhoneCel"].ToString()
+                };
 
-                foreach (DataRow dr in clientesTbl.Rows)
-                {
-                    var clientTmp = new Cliente()
-                    {
-                        idDueno = dr["IDMember"].ToString(),
-                        codigoMiembro = dr["MemberCode"].ToString(),
-                        nombre = dr["FullName"].ToString(),
-                        correo = dr["EMail"].ToString(),
-                        telefono = dr["PhoneCel"].ToString()
-                    };
-
-                    clientes.Add(clientTmp);
-                }
+                clientes.Add(clientTmp);
             }
 
             return clientes;

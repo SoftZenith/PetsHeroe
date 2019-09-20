@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
+using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -10,12 +12,13 @@ namespace PetsHeroe
     public partial class Llevar_centro : ContentPage
     {
 
+        private string codigo = "";
         DataTable lista_CAM = new DataTable();
+        DataTable estados = new DataTable();
+        DataTable ciudades = new DataTable();
         double latitud = -1, longitud = -1;
         Location currentlocation;
         bool locationGrant = false;
-        DataTable estados = new DataTable();
-        DataTable ciudades = new DataTable();
         Picker picker, pickerC;
         int idEstado = -1, idCiudad = -1;
         Dictionary<string, int> estadoDic = new Dictionary<string, int>();
@@ -23,13 +26,10 @@ namespace PetsHeroe
 
         public Llevar_centro(string codigo)
         {
-
+            this.codigo = codigo;
             InitializeComponent();
-
-            getCurrentLocation();
-
-            getPermisoLocation();
-
+            _ = getCurrentLocation();
+            _ = getPermisoLocation();
 
             if (!locationGrant)
             {
@@ -59,82 +59,48 @@ namespace PetsHeroe
 
             try
             {
-                if (Device.RuntimePlatform == Device.Android)
-                {
-                    if (!locationGrant) {
-
-                        DependencyService.Get<IAndroid>().getEstado_Busca();
-                        estados = DependencyService.Get<IAndroid>().Estado_Busca;
-
-                        estadoDic.Clear();
-                        picker.Items.Clear();
-                        foreach (DataRow dr in estados.Rows)
-                        {
-                            picker.Items.Add(dr["Name"].ToString());
-                            estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
-                        }
-
-                        picker.SelectedIndexChanged += (object sender, EventArgs args) => {
-
-                            idEstado = estadoDic[picker.SelectedItem.ToString()];
-
-                            DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
-                            ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
-
-                            ciudadDic.Clear();
-                            pickerC.Items.Clear();
-                            foreach (DataRow dr in ciudades.Rows)
-                            {
-                                pickerC.Items.Add(dr["Name"].ToString());
-                                ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
-                            }
-
-                        };
-
-                    }
-                    DependencyService.Get<IAndroid>().getCAM_busca(25.708742, -100.344950, 100.0);
-                    lista_CAM = DependencyService.Get<IAndroid>().CAM_Busca;
-                }
-                else if (Device.RuntimePlatform == Device.iOS)
+                if (!locationGrant) //if hasn´t location permissions
                 {
 
-                    if (!locationGrant)
+                    DependencyService.Get<IWebService>().getEstado_Busca(); //call to get states list
+                    estados = DependencyService.Get<IWebService>().Estado_Busca; //get DataTable with states list
+
+                    estadoDic.Clear();
+                    picker.Items.Clear();
+                    foreach (DataRow dr in estados.Rows)
                     {
-
-                        DependencyService.Get<IIOS>().getEstado_Busca();
-                        estados = DependencyService.Get<IIOS>().Estado_Busca;
-
-                        estadoDic.Clear();
-                        picker.Items.Clear();
-                        foreach (DataRow dr in estados.Rows)
-                        {
-                            picker.Items.Add(dr["Name"].ToString());
-                            estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
-                        }
-
-                        picker.SelectedIndexChanged += (object sender, EventArgs args) => {
-
-                            idEstado = estadoDic[picker.SelectedItem.ToString()];
-
-                            DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
-                            ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
-
-                            ciudadDic.Clear();
-                            pickerC.Items.Clear();
-                            foreach (DataRow dr in ciudades.Rows)
-                            {
-                                pickerC.Items.Add(dr["Name"].ToString());
-                                ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
-                            }
-
-                        };
-
+                        picker.Items.Add(dr["Name"].ToString());
+                        estadoDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDState"]));
                     }
 
+                    picker.SelectedIndexChanged += (object sender, EventArgs args) => {
 
-                    DependencyService.Get<IIOS>().getCAM_busca(25.708742, -100.344950, 100.0);
-                    lista_CAM = DependencyService.Get<IIOS>().CAM_Busca;
+                        idEstado = estadoDic[picker.SelectedItem.ToString()];
+
+                        DependencyService.Get<IWebService>().getCiudad_Busca(idEstado); //call to get cities list
+                        ciudades = DependencyService.Get<IWebService>().Ciudad_Busca; //get DataTable with cities list
+
+                        ciudadDic.Clear();
+                        pickerC.Items.Clear();
+                        foreach (DataRow dr in ciudades.Rows)
+                        {
+                            pickerC.Items.Add(dr["Name"].ToString());
+                            ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
+                        }
+
+                    };
+
                 }
+                try
+                {
+                    DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 30); //call to get CAMs list
+                    lista_CAM = DependencyService.Get<IWebService>().CAM_Busca; //get DataTable with Cams list
+                }
+                catch (Exception) {
+                    DependencyService.Get<IWebService>().getCAM_busca(25.8782, -100.1424, 50); //call to get CAMs list
+                    lista_CAM = DependencyService.Get<IWebService>().CAM_Busca; //get DataTable with Cams list
+                }
+
             }
             catch (Exception ex) {
                 Console.WriteLine("Error: "+ex.ToString());
@@ -150,10 +116,6 @@ namespace PetsHeroe
                     Label = dr["BusinessName"].ToString(),
                     Position = new Position(Convert.ToDouble(dr["GeoLat"].ToString()), Convert.ToDouble(dr["GeoLon"].ToString()))
                 };
-                /*
-                pinCAM.Clicked += async (sender, e) => {
-                    await DisplayAlert("Test", "Test", "test");
-                };*/
                 
                 pinCAM.Clicked += (object sender, EventArgs e) => {
                     var pinClicked = sender as Pin;
@@ -164,8 +126,13 @@ namespace PetsHeroe
                 mapLlevarCentro.Pins.Add(pinCAM);
                 //listaPins.Add(pinCAM);
             }
-
-            mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.8494, -100.3523), 0.5, 0.5));
+            try
+            {
+                mapLlevarCentro.MoveToRegion(new MapSpan(new Position(currentlocation.Latitude, currentlocation.Longitude), 0.15, 0.15));
+            }
+            catch (Exception) {
+                mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.00, -100.00), 0.15, 0.15));
+            }
 
         }
 
@@ -173,36 +140,39 @@ namespace PetsHeroe
             if (txtNotas.Text == "") {
                 await DisplayAlert("Error","Agregar alguna nota","OK");
                 return;
-            }else if(latitud == -1 || longitud == -1)
-            {
+            }else if(latitud == -1 || longitud == -1){
                 await DisplayAlert("Error","Selecciona un CAM","OK");
                 return;
             }
 
+            bool status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, currentlocation.Longitude, currentlocation.Latitude);
 
+            if (status) {
+
+                await DisplayAlert("OK","Se envio un mensaje al dueño","OK");
+                if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno()); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario()); }
+            }
+            else
+            {
+                await DisplayAlert("Error","Hubo un error al enviar tu mensaje","OK");
+            }
 
         }
 
-        async void getCurrentLocation() {
-            try{
+        private async Task getCurrentLocation() {
+            try {
                 currentlocation = await Geolocation.GetLastKnownLocationAsync();
-            }catch (Exception ex) {
-
+            }catch(Exception ex) {
+                Console.WriteLine("Error al obtener location: "+ex);
+                currentlocation = new Location(25.00, -100.00);
             }
         }
 
-        public async void getPermisoLocation()
+        private async Task getPermisoLocation()
         {
-
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                locationGrant = await DependencyService.Get<IIOS>().getPermisoLocation();
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                locationGrant = await DependencyService.Get<IAndroid>().getPermisoLocation();
-            }
-
+            locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
         }
     }
 }

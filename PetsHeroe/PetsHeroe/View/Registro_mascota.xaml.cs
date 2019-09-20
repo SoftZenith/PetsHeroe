@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -24,16 +26,8 @@ namespace PetsHeroe
             pkrColorMascota.IsEnabled = false;
             DataTable tipoMascota = new DataTable();
 
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                DependencyService.Get<IIOS>().getMascotaTipo_Busca();
-                tipoMascota = DependencyService.Get<IIOS>().MascotaTipo_Busca;
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                DependencyService.Get<IAndroid>().getMascotaTipo_Busca();
-                tipoMascota = DependencyService.Get<IAndroid>().MascotaTipo_Busca;
-            }
+            DependencyService.Get<IWebService>().getMascotaTipo_Busca();
+            tipoMascota = DependencyService.Get<IWebService>().MascotaTipo_Busca;
 
             pkrTipoMascota.Items.Clear();
             tipoMascotaDic.Clear();
@@ -68,20 +62,10 @@ namespace PetsHeroe
             DataTable razaMascota = new DataTable();
             DataTable colorMascota = new DataTable();
 
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                DependencyService.Get<IIOS>().getMascotaRaza_Busca(idTipoMascota);
-                DependencyService.Get<IIOS>().getMascotaColor_Busca(idTipoMascota);
-                colorMascota = DependencyService.Get<IIOS>().MascotaColor_Busca;
-                razaMascota = DependencyService.Get<IIOS>().MascotaRaza_Busca;
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                DependencyService.Get<IAndroid>().getMascotaRaza_Busca(idTipoMascota);
-                DependencyService.Get<IAndroid>().getMascotaColor_Busca(idTipoMascota);
-                colorMascota = DependencyService.Get<IAndroid>().MascotaColor_Busca;
-                razaMascota = DependencyService.Get<IAndroid>().MascotaRaza_Busca;
-            }
+            DependencyService.Get<IWebService>().getMascotaRaza_Busca(idTipoMascota);
+            DependencyService.Get<IWebService>().getMascotaColor_Busca(idTipoMascota);
+            colorMascota = DependencyService.Get<IWebService>().MascotaColor_Busca;
+            razaMascota = DependencyService.Get<IWebService>().MascotaRaza_Busca;
 
             pkrRazaMascota.Items.Clear();
             razaMascotaDic.Clear();
@@ -135,43 +119,25 @@ namespace PetsHeroe
 
         public void onRegistraMascota(object sender, EventArgs args) {
             bool estatus = false;
-            if (Device.RuntimePlatform == Device.Android) {
-                DependencyService.Get<IAndroid>().getMascota_Registro(new Model.Dueno()
-                {
-                    idDueno = "-1",
-                    nombre = "-1",
-                    apellidoP = "-1",
-                    apellidoM = "-1",
-                    sexo = -1,
-                    correo = "-1",
-                    contrasena = "-1",
-                    mascostaCodigo = txtCodigo.Text,
-                    sexoMascota = sexoMascotaC,
-                    idTipoMascota = idTipoMascota,
-                    idRazaMascota = idRazaMascota,
-                    idColorMascota = idColorMascota,
-                    edadMascota = Convert.ToInt32(txtedadMascota.Text)
-                });
-                estatus = DependencyService.Get<IAndroid>().Mascota_Registro;
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                DependencyService.Get<IIOS>().getMascota_Registro(new Model.Dueno()
-                {
-                    idDueno = "-1",
-                    nombre = "-1",
-                    apellidoP = "-1",
-                    apellidoM = "-1",
-                    sexo = -1,
-                    correo = "-1",
-                    contrasena = "-1",
-                    mascostaCodigo = txtCodigo.Text,
-                    sexoMascota = sexoMascotaC,
-                    idTipoMascota = idTipoMascota,
-                    idRazaMascota = idRazaMascota,
-                    idColorMascota = idColorMascota,
-                    edadMascota = Convert.ToInt32(txtedadMascota.Text)
-                });
-                estatus = DependencyService.Get<IIOS>().Mascota_Registro;
-            }
+
+            DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
+            {
+                idDueno = txtCodigo.Text,
+                nombre = "-1", //Preferences.Get("name","")
+                apellidoP = "-1", //Preferences.Get("lastNameP","")
+                apellidoM = "-1", //Preferences.Get("lastNameM","")
+                sexo = -1, //Preferences.Get("sex",'M')
+                correo = "-1", //Preferences.Get("email",456)
+                contrasena = "-1", //Preferences.Get("password", 456)
+                mascostaCodigo = txtCodigo.Text,
+                sexoMascota = sexoMascotaC,
+                idTipoMascota = idTipoMascota,
+                idRazaMascota = idRazaMascota,
+                idColorMascota = idColorMascota,
+                edadMascota = Convert.ToInt32(txtedadMascota.Text)
+            }); 
+            estatus = DependencyService.Get<IWebService>().Mascota_Registro;
+
             if (estatus)
             {
                 DisplayAlert("Registro", "Se registro correctamente", "OK");

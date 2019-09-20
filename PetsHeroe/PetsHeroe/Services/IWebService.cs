@@ -3,9 +3,9 @@ using System.Data;
 using System.Threading.Tasks;
 using PetsHeroe.Model;
 
-namespace PetsHeroe
+namespace PetsHeroe.Services
 {
-    public interface IAndroid
+    public interface IWebService
     {
         Asociado ValidaUsuario { get; set; }
         bool Codigo_Valida { get; set; }
@@ -30,9 +30,6 @@ namespace PetsHeroe
         DataTable Cliente_Busca { get; set; }
         MensajeDueno Entrega_SoloMensaje { get; set; }
 
-        int IDUsuario { get; set; }
-        int IDMiembro { get; set; }
-        int IDAsociado { get; set; }
         string nombre { get; set; }
 
         void getCAM_busca(double lat, double lon, double kms);
@@ -56,6 +53,8 @@ namespace PetsHeroe
         bool getCliente_Busca(int idAsociado);
         bool setVeterinario_Registro(Asociado asociado);
         bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
+        bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
+        DataTable setPuntosPromociones_Busca(int idMiembro, int idAsociado, int idMascota);
         void CloseApp();
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);

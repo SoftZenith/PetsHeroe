@@ -4,6 +4,7 @@ using System.Data;
 using Xamarin.Forms;
 using PetsHeroe.Model;
 using System.Linq;
+using PetsHeroe.Services;
 
 namespace PetsHeroe
 {
@@ -21,16 +22,8 @@ namespace PetsHeroe
 
             DataTable tipoAsociado = new DataTable();
 
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                DependencyService.Get<IIOS>().getTipoAsociado_Busca();
-                tipoAsociado = DependencyService.Get<IIOS>().TipoAsociado_Busca;
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                DependencyService.Get<IAndroid>().getTipoAsociado_Busca();
-                tipoAsociado = DependencyService.Get<IAndroid>().TipoAsociado_Busca;
-            }
+            DependencyService.Get<IWebService>().getTipoAsociado_Busca();
+            tipoAsociado = DependencyService.Get<IWebService>().TipoAsociado_Busca;
 
             pkrAsociado.Items.Clear();
             tipoAsociadoDic.Clear();
@@ -99,14 +92,7 @@ namespace PetsHeroe
                         return;
                     }
 
-                    if (Device.RuntimePlatform == Device.iOS)
-                    {
-                       status = DependencyService.Get<IIOS>().setVeterinario_Registro(asociado);
-                    }
-                    else if (Device.RuntimePlatform == Device.Android)
-                    {
-                       status = DependencyService.Get<IAndroid>().setVeterinario_Registro(asociado);
-                    }
+                    status = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
 
                     if (status)
                     {

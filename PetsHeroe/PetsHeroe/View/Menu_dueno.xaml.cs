@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using PetsHeroe.Services;
+using PetsHeroe.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -10,6 +11,10 @@ namespace PetsHeroe
         public Menu_dueno()
         {
             InitializeComponent();
+        }
+
+        async void onConsultaBene(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Consulta_bene_dueno());
         }
 
         async void onMascotaPerdida(object sender, EventArgs args) {
@@ -33,7 +38,9 @@ namespace PetsHeroe
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {
-            Preferences.Clear();
+            Preferences.Set("logged", false, "usuarioLogeado");
+            Preferences.Set("userType", 0, "tipoUsuario");
+            Preferences.Set("idAsociado", -1);
             await Navigation.PushAsync(new MainPage());
         }
 
@@ -41,8 +48,9 @@ namespace PetsHeroe
         {
             if (Device.RuntimePlatform == Device.Android)
             {
-                DependencyService.Get<IAndroid>().CloseApp();
+               DependencyService.Get<IWebService>().CloseApp();
             }
+            
             return base.OnBackButtonPressed();
         }
 

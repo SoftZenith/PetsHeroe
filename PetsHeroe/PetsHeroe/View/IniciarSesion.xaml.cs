@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -13,7 +14,9 @@ namespace PetsHeroe
         public IniciarSesion()
         {
             InitializeComponent();
+
             var forgetPassword_tap = new TapGestureRecognizer();
+
             forgetPassword_tap.Tapped += (s, e) =>
             {
                 var correo = "";
@@ -28,26 +31,18 @@ namespace PetsHeroe
                     correo = "";
                 }
 
-                if (Device.RuntimePlatform == Device.Android) {
-                    DependencyService.Get<IAndroid>().getEnviaContrasena(correo);
-                    if (DependencyService.Get<IAndroid>().EnviaContrasena)
-                    {
-                        DisplayAlert("Correcto", "Te enviamos un correo con tu contraseña", "OK");
-                    } else {
-                        DisplayAlert("Error", "Verifica que sea la dirección de correo con la que te registraste", "OK");
-                    }
-                } else if (Device.RuntimePlatform == Device.iOS) {
-                    DependencyService.Get<IIOS>().getEnviaContrasena(correo);
-                    if (DependencyService.Get<IIOS>().EnviaContrasena)
-                    {
-                        DisplayAlert("Correcto", "Te enviamos un correo con tu contraseña", "OK");
-                    }
-                    else
-                    {
-                        DisplayAlert("Error", "Verifica que sea la dirección de correo con la que te registraste", "OK");
-                    }
+
+                DependencyService.Get<IWebService>().getEnviaContrasena(correo);
+                if (DependencyService.Get<IWebService>().EnviaContrasena)
+                {
+                    DisplayAlert("Correcto", "Te enviamos un correo con tu contraseña", "OK");
+                }
+                else
+                {
+                    DisplayAlert("Error", "Verifica que sea la dirección de correo con la que te registraste", "OK");
                 }
             };
+
             lblOlvide.GestureRecognizers.Add(forgetPassword_tap);
         }
 
@@ -56,7 +51,7 @@ namespace PetsHeroe
             try{
                 user = txtUsuario.Text.ToString();
                 pass = txtPassword.Text.ToString();
-            }catch (Exception ex) {
+            }catch (Exception) {
                 await DisplayAlert("Campos faltantes","Llena todos los campos","OK");
                 return;
             }
@@ -65,56 +60,28 @@ namespace PetsHeroe
                 await DisplayAlert("Campos faltantes", "Llena todos los campos", "OK");
                 return;
             }
-            else if(Device.RuntimePlatform == Device.iOS)
-            {
-                if (DependencyService.Get<IIOS>().getValidaUsuario(user, pass))
-                {
 
-                    var asociado = DependencyService.Get<IIOS>().ValidaUsuario;
-                    if (asociado.idMiembro > 0){
-                        await DisplayAlert("Bienvenido", "Dueño "+asociado.nombre, "OK");
-                        Preferences.Set("logged", true, "usuarioLogeado");
-                        Preferences.Set("userType", 1, "tipoUsuario");
-                        Preferences.Set("idMiembro", asociado.idMiembro);
-                        await Navigation.PushAsync(new Menu_dueno());
-                    }
-                    else if(asociado.idAsociado > 0){
-                        await DisplayAlert("Bienvenido", "Asociado "+asociado.nombre, "OK");
-                        Preferences.Set("logged", true, "usuarioLogeado");
-                        Preferences.Set("userType", 2, "tipoUsuario");
-                        Preferences.Set("idAsociado", asociado.idAsociado);
-                        await Navigation.PushAsync(new Menu_veterinario());
-                    }
-                    //Navigation.PushModalAsync(new menu_general());
-                }
-                else {
-                    await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
-                }
-            }else if (Device.RuntimePlatform == Device.Android) {
-                if (DependencyService.Get<IAndroid>().getValidaUsuario(user, pass))
+            if (DependencyService.Get<IWebService>().getValidaUsuario(user, pass)) {
+                var asociado = DependencyService.Get<IWebService>().ValidaUsuario;
+                if (asociado.idMiembro > 0)
                 {
+                    await DisplayAlert("Bienvenido", "Dueño " + asociado.nombre, "OK");
+                    Preferences.Set("logged", true, "usuarioLogeado");
+                    Preferences.Set("userType", 1, "tipoUsuario");
+                    Preferences.Set("idMiembro", asociado.idMiembro);
+                    await Navigation.PushAsync(new Menu_dueno());
+                }
+                else if (asociado.idAsociado > 0)
+                {
+                    await DisplayAlert("Bienvenido", "Asociado " + asociado.nombre, "OK");
+                    Preferences.Set("logged", true, "usuarioLogeado");
+                    Preferences.Set("userType", 2, "tipoUsuario");
+                    Preferences.Set("idAsociado", asociado.idAsociado);
+                    await Navigation.PushAsync(new Menu_veterinario());
+                }
 
-                    var asociado = DependencyService.Get<IAndroid>().ValidaUsuario;
-                    if (asociado.idMiembro > 0)
-                    {
-                        await DisplayAlert("Bienvenido", "Dueño " + asociado.nombre, "OK");
-                        Preferences.Set("logged", true, "usuarioLogeado");
-                        Preferences.Set("userType", 1, "tipoUsuario");
-                        Preferences.Set("idMiembro", asociado.idMiembro);
-                        await Navigation.PushAsync(new Menu_dueno());
-                    }
-                    else if (asociado.idAsociado > 0)
-                    {
-                        await DisplayAlert("Bienvenido", "Asociado " + asociado.nombre, "OK");
-                        Preferences.Set("logged", true, "usuarioLogeado");
-                        Preferences.Set("userType", 2, "tipoUsuario");
-                        Preferences.Set("idAsociado", asociado.idAsociado);
-                        await Navigation.PushAsync(new Menu_veterinario());
-                    }
-                }
-                else {
-                    await DisplayAlert("Error", "Usuario y/o contraseña incorrectos", "OK");
-                }
+            } else {
+                await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
             }
         }
 

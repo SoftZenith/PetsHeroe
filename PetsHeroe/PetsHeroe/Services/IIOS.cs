@@ -7,9 +7,13 @@ namespace PetsHeroe
 {
     public interface IIOS
     {
+        Asociado ValidaUsuario { get; set; }
+        bool Codigo_Valida { get; set; }
+        bool Entrega_Localizacion { get; set; }
+        bool EnviaContrasena { get; set; }
+        bool Mascota_Registro { get; set; }
         DataTable CAM_Busca { get; set; }
         DataTable Ciudad_Busca { get; set; }
-        bool Codigo_Valida { get; set; }
         DataTable Estado_Busca { get; set; }
         DataTable MarcaProducto_Busca { get; set; }
         DataTable MascotaColor_Busca { get; set; }
@@ -20,22 +24,17 @@ namespace PetsHeroe
         DataTable Servicio_Busca { get; set; }
         DataTable TipoAsociado_Busca { get; set; }
         DataTable TipoProducto_Busca { get; set; }
-        Asociado ValidaUsuario { get; set; }
         DataTable MascotaRaza_Busca { get; set; }
         DataTable Veterinario_Registro { get; set; }
         DataTable Mascota_Busca { get; set; }
         DataTable Cliente_Busca { get; set; }
-        bool EnviaContrasena { get; set; }
-        bool Mascota_Registro { get; set; }
-        bool Entrega_Localizacion { get; set; }
-
-        /*Localización de mascota*/
         MensajeDueno Entrega_SoloMensaje { get; set; }
 
         int IDUsuario { get; set; }
         int IDMiembro { get; set; }
         int IDAsociado { get; set; }
         string nombre { get; set; }
+
         void getCAM_busca(double lat, double lon, double kms);
         void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida(string codigo);

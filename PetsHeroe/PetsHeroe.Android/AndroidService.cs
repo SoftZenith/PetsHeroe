@@ -4,13 +4,14 @@ using System.Threading.Tasks;
 using PetsHeroe.Droid;
 using PetsHeroe.Droid.mx.com.petshero;
 using PetsHeroe.Model;
+using PetsHeroe.Services;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AndroidService))]
 namespace PetsHeroe.Droid
 {
-    public class AndroidService : IAndroid
+    public class AndroidService : IWebService
     {
         public DataTable CAM_Busca { get; set; }
         public DataTable Ciudad_Busca { get; set; }
@@ -28,9 +29,9 @@ namespace PetsHeroe.Droid
         public Asociado ValidaUsuario { get; set; }
         public DataTable MascotaRaza_Busca { get; set; }
         //Variables out
-        public int IDUsuario { get; set; }
-        public int IDMiembro { get; set; }
-        public int IDAsociado { get; set; }
+        public int IDUsuario = -1;
+        public int IDMiembro = -1;
+        public int IDAsociado = -1;
         public string nombre { get; set; }
         public bool EnviaContrasena { get; set; }
         public bool Mascota_Registro { get; set; }
@@ -176,9 +177,10 @@ namespace PetsHeroe.Droid
         {
             wsPets.AuthHeaderValue = auth;
             try{
-                Mascota_Registro = wsPets.Mascota_Registro(mascota.idDueno.ToString(), mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
-                    mascota.contrasena, mascota.mascostaCodigo.ToString(), mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
+                Mascota_Registro = wsPets.Mascota_Registro(mascota.idDueno, mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
+                    mascota.contrasena, mascota.mascostaCodigo, mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
                     mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascotaCodigo, out int IDEstatusCodigo);
+                Mascota_Registro = true;
             }catch (Exception ex) {
                 Console.WriteLine("Error al registrar: "+ex.ToString());
                 Mascota_Registro = false;
@@ -258,7 +260,7 @@ namespace PetsHeroe.Droid
         {
             wsPets.AuthHeaderValue = auth;
             try {
-                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, idMiembro, "", "", "");
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", "", "");
                 return true;
             }
             catch (Exception) {
@@ -270,11 +272,35 @@ namespace PetsHeroe.Droid
         {
             wsPets.AuthHeaderValue = auth;
             try {
-                Cliente_Busca = wsPets.Cliente_Busca(idAsociado, -1,"","","","","","","","");
+                Cliente_Busca = wsPets.Cliente_Busca(idAsociado, idAsociado, -1, "", "", "", "", "", "", "", "");
                 return true;
             }
             catch (Exception) {
                 return false;
+            }
+        }
+
+        public bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.Mascota_Incidente(idMascota, tipoIncidente, 5, condicion, tipoRetorno, -1, notas);
+                return true;
+            }catch (Exception) {
+                return false;
+            }
+        }
+
+        public DataTable setPuntosPromociones_Busca(int idMiembro, int idAsociado, int idMascota)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.PuntosPromociones_Busca(idMiembro, idAsociado, idMascota);
+            }
+            catch (Exception) {
+                return null;
             }
         }
     }

@@ -29,6 +29,10 @@ namespace PetsHeroe.iOS.Services
             }catch (Exception) {
                 return "";
             }
+            if (scanResult.ToString().Contains("http"))
+            {
+                return scanResult.ToString().Substring(40, 12);
+            }
             return scanResult.Text;
         }
     }

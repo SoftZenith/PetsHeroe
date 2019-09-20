@@ -57,9 +57,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: bhn.rock@icloud.com (H98MYN8WTK)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>iOS Team Provisioning Profile: mx.com.dotech.PetsHeroe</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="IOSService.cs" />
@@ -187,5 +186,10 @@
     <BundleResource Include="Resources\pet.png" />
     <BundleResource Include="Resources\email.png" />
     <BundleResource Include="Resources\store.png" />
+    <BundleResource Include="Resources\service.png" />
+    <BundleResource Include="Resources\product.png" />
+    <BundleResource Include="Resources\money.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\delete.png" />
   </ItemGroup>
 </Project>

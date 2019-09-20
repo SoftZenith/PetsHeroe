@@ -49,9 +49,9 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback Servicio_BuscaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback Veterinario_RegistroOperationCompleted;
-        
         private System.Threading.SendOrPostCallback Cliente_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Veterinario_RegistroOperationCompleted;
         
         private System.Threading.SendOrPostCallback MascotaTipo_BuscaOperationCompleted;
         
@@ -61,11 +61,13 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback MascotaEstatus_BuscaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback Mascota_RegistroOperationCompleted;
-        
         private System.Threading.SendOrPostCallback Mascota_BuscaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Mascota_RegistroOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Mascota_IncidenteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PuntosPromociones_BuscaOperationCompleted;
         
         private System.Threading.SendOrPostCallback Codigo_ValidaOperationCompleted;
         
@@ -120,10 +122,10 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         public event Servicio_BuscaCompletedEventHandler Servicio_BuscaCompleted;
         
         /// <remarks/>
-        public event Veterinario_RegistroCompletedEventHandler Veterinario_RegistroCompleted;
+        public event Cliente_BuscaCompletedEventHandler Cliente_BuscaCompleted;
         
         /// <remarks/>
-        public event Cliente_BuscaCompletedEventHandler Cliente_BuscaCompleted;
+        public event Veterinario_RegistroCompletedEventHandler Veterinario_RegistroCompleted;
         
         /// <remarks/>
         public event MascotaTipo_BuscaCompletedEventHandler MascotaTipo_BuscaCompleted;
@@ -138,13 +140,16 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         public event MascotaEstatus_BuscaCompletedEventHandler MascotaEstatus_BuscaCompleted;
         
         /// <remarks/>
-        public event Mascota_RegistroCompletedEventHandler Mascota_RegistroCompleted;
-        
-        /// <remarks/>
         public event Mascota_BuscaCompletedEventHandler Mascota_BuscaCompleted;
         
         /// <remarks/>
+        public event Mascota_RegistroCompletedEventHandler Mascota_RegistroCompleted;
+        
+        /// <remarks/>
         public event Mascota_IncidenteCompletedEventHandler Mascota_IncidenteCompleted;
+        
+        /// <remarks/>
+        public event PuntosPromociones_BuscaCompletedEventHandler PuntosPromociones_BuscaCompleted;
         
         /// <remarks/>
         public event Codigo_ValidaCompletedEventHandler Codigo_ValidaCompleted;
@@ -522,6 +527,56 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Cliente_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Cliente_Busca(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
+            object[] results = this.Invoke("Cliente_Busca", new object[] {
+                        IDMiembro,
+                        IDAsociado,
+                        IDSucursal,
+                        Codigo,
+                        NombreCompleto,
+                        Nombre,
+                        Paterno,
+                        Materno,
+                        Sexo,
+                        CorreoElectronico,
+                        RFC});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
+            this.Cliente_BuscaAsync(IDMiembro, IDAsociado, IDSucursal, Codigo, NombreCompleto, Nombre, Paterno, Materno, Sexo, CorreoElectronico, RFC, null);
+        }
+        
+        /// <remarks/>
+        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC, object userState) {
+            if ((this.Cliente_BuscaOperationCompleted == null)) {
+                this.Cliente_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCliente_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("Cliente_Busca", new object[] {
+                        IDMiembro,
+                        IDAsociado,
+                        IDSucursal,
+                        Codigo,
+                        NombreCompleto,
+                        Nombre,
+                        Paterno,
+                        Materno,
+                        Sexo,
+                        CorreoElectronico,
+                        RFC}, this.Cliente_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnCliente_BuscaOperationCompleted(object arg) {
+            if ((this.Cliente_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Cliente_BuscaCompleted(this, new Cliente_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Veterinario_Registro", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool Veterinario_Registro(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado, out int IDAsociado) {
             object[] results = this.Invoke("Veterinario_Registro", new object[] {
@@ -562,54 +617,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             if ((this.Veterinario_RegistroCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Veterinario_RegistroCompleted(this, new Veterinario_RegistroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Cliente_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable Cliente_Busca(int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
-            object[] results = this.Invoke("Cliente_Busca", new object[] {
-                        IDAsociado,
-                        IDSucursal,
-                        Codigo,
-                        NombreCompleto,
-                        Nombre,
-                        Paterno,
-                        Materno,
-                        Sexo,
-                        CorreoElectronico,
-                        RFC});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Cliente_BuscaAsync(int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
-            this.Cliente_BuscaAsync(IDAsociado, IDSucursal, Codigo, NombreCompleto, Nombre, Paterno, Materno, Sexo, CorreoElectronico, RFC, null);
-        }
-        
-        /// <remarks/>
-        public void Cliente_BuscaAsync(int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC, object userState) {
-            if ((this.Cliente_BuscaOperationCompleted == null)) {
-                this.Cliente_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCliente_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("Cliente_Busca", new object[] {
-                        IDAsociado,
-                        IDSucursal,
-                        Codigo,
-                        NombreCompleto,
-                        Nombre,
-                        Paterno,
-                        Materno,
-                        Sexo,
-                        CorreoElectronico,
-                        RFC}, this.Cliente_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnCliente_BuscaOperationCompleted(object arg) {
-            if ((this.Cliente_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Cliente_BuscaCompleted(this, new Cliente_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -731,6 +738,54 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Mascota_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Mascota_Busca(int IDMascota, int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno) {
+            object[] results = this.Invoke("Mascota_Busca", new object[] {
+                        IDMascota,
+                        IDTipoMascota,
+                        IDEstatus,
+                        IDRaza,
+                        IDAsociado,
+                        IDSucursal,
+                        IDMiembro,
+                        Nombre,
+                        Codigo,
+                        CodigoDueno});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Mascota_BuscaAsync(int IDMascota, int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno) {
+            this.Mascota_BuscaAsync(IDMascota, IDTipoMascota, IDEstatus, IDRaza, IDAsociado, IDSucursal, IDMiembro, Nombre, Codigo, CodigoDueno, null);
+        }
+        
+        /// <remarks/>
+        public void Mascota_BuscaAsync(int IDMascota, int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno, object userState) {
+            if ((this.Mascota_BuscaOperationCompleted == null)) {
+                this.Mascota_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMascota_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("Mascota_Busca", new object[] {
+                        IDMascota,
+                        IDTipoMascota,
+                        IDEstatus,
+                        IDRaza,
+                        IDAsociado,
+                        IDSucursal,
+                        IDMiembro,
+                        Nombre,
+                        Codigo,
+                        CodigoDueno}, this.Mascota_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnMascota_BuscaOperationCompleted(object arg) {
+            if ((this.Mascota_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Mascota_BuscaCompleted(this, new Mascota_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Mascota_Registro", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool Mascota_Registro(
                     string DuenoCodigo, 
@@ -809,52 +864,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Mascota_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable Mascota_Busca(int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno) {
-            object[] results = this.Invoke("Mascota_Busca", new object[] {
-                        IDTipoMascota,
-                        IDEstatus,
-                        IDRaza,
-                        IDAsociado,
-                        IDSucursal,
-                        IDMiembro,
-                        Nombre,
-                        Codigo,
-                        CodigoDueno});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Mascota_BuscaAsync(int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno) {
-            this.Mascota_BuscaAsync(IDTipoMascota, IDEstatus, IDRaza, IDAsociado, IDSucursal, IDMiembro, Nombre, Codigo, CodigoDueno, null);
-        }
-        
-        /// <remarks/>
-        public void Mascota_BuscaAsync(int IDTipoMascota, int IDEstatus, int IDRaza, int IDAsociado, int IDSucursal, int IDMiembro, string Nombre, string Codigo, string CodigoDueno, object userState) {
-            if ((this.Mascota_BuscaOperationCompleted == null)) {
-                this.Mascota_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMascota_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("Mascota_Busca", new object[] {
-                        IDTipoMascota,
-                        IDEstatus,
-                        IDRaza,
-                        IDAsociado,
-                        IDSucursal,
-                        IDMiembro,
-                        Nombre,
-                        Codigo,
-                        CodigoDueno}, this.Mascota_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnMascota_BuscaOperationCompleted(object arg) {
-            if ((this.Mascota_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Mascota_BuscaCompleted(this, new Mascota_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Mascota_Incidente", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void Mascota_Incidente(int IDMascota, int IDTipoIncidente, int IDCanal, int IDCondicion, int IDTipoRetorno, int IDSucursal, string Notas) {
             this.Invoke("Mascota_Incidente", new object[] {
@@ -891,6 +900,40 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             if ((this.Mascota_IncidenteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Mascota_IncidenteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PuntosPromociones_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable PuntosPromociones_Busca(int IDMiembro, int IDMascota, int IDAsociado) {
+            object[] results = this.Invoke("PuntosPromociones_Busca", new object[] {
+                        IDMiembro,
+                        IDMascota,
+                        IDAsociado});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado) {
+            this.PuntosPromociones_BuscaAsync(IDMiembro, IDMascota, IDAsociado, null);
+        }
+        
+        /// <remarks/>
+        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado, object userState) {
+            if ((this.PuntosPromociones_BuscaOperationCompleted == null)) {
+                this.PuntosPromociones_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPuntosPromociones_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("PuntosPromociones_Busca", new object[] {
+                        IDMiembro,
+                        IDMascota,
+                        IDAsociado}, this.PuntosPromociones_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnPuntosPromociones_BuscaOperationCompleted(object arg) {
+            if ((this.PuntosPromociones_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PuntosPromociones_BuscaCompleted(this, new PuntosPromociones_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1417,6 +1460,32 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
+    public delegate void Cliente_BuscaCompletedEventHandler(object sender, Cliente_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Cliente_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Cliente_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
     public delegate void Veterinario_RegistroCompletedEventHandler(object sender, Veterinario_RegistroCompletedEventArgs e);
     
     /// <remarks/>
@@ -1445,32 +1514,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[1]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
-    public delegate void Cliente_BuscaCompletedEventHandler(object sender, Cliente_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class Cliente_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal Cliente_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
             }
         }
     }
@@ -1581,6 +1624,32 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
+    public delegate void Mascota_BuscaCompletedEventHandler(object sender, Mascota_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Mascota_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Mascota_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
     public delegate void Mascota_RegistroCompletedEventHandler(object sender, Mascota_RegistroCompletedEventArgs e);
     
     /// <remarks/>
@@ -1639,17 +1708,21 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
-    public delegate void Mascota_BuscaCompletedEventHandler(object sender, Mascota_BuscaCompletedEventArgs e);
+    public delegate void Mascota_IncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
+    public delegate void PuntosPromociones_BuscaCompletedEventHandler(object sender, PuntosPromociones_BuscaCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class Mascota_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class PuntosPromociones_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal Mascota_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal PuntosPromociones_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1662,10 +1735,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             }
         }
     }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]
-    public delegate void Mascota_IncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.2.6.26")]

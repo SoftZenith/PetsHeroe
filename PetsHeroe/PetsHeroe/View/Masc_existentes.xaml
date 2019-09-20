@@ -2,15 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.Masc_existentes">
+    x:Class="PetsHeroe.Masc_existentes"
+    Title="Mis mascotas">
     <ContentPage.Content>
-        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotasExiste">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black"
-                       Text="Mis mascotas" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>     
+        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotasExiste">     
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -21,7 +16,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,8,8,0" Grid.Column="0" Grid.Row="0">
                                 <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
                                 <Label FontSize="16"  Text="{Binding codigo, StringFormat='Código: {0}'}" />
                                 <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Suscripción: {0}'}" />
@@ -32,7 +27,7 @@
                                 <BoxView
                                    VerticalOptions="FillAndExpand"
                                    HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"  
+                                   HeightRequest="1"
                                    Color="#000000"></BoxView>
                             </StackLayout>
                         </Grid>

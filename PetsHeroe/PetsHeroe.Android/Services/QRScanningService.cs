@@ -32,6 +32,10 @@ namespace PetsHeroe.Droid.Services
             {
                 return "";
             }
+            if (scanResult.ToString().Contains("http"))
+            {
+                return scanResult.ToString().Substring(40, 12);
+            }
             return scanResult.Text;
         }
     }

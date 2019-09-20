@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.Reg_Masc_Perdida">
     <ContentPage.Content>
-        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotas">
+        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotas"
+                    IsPullToRefreshEnabled="True">
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
                     <Label FontSize="Large" TextColor="Black"
@@ -33,17 +34,17 @@
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
                                         Clicked="mascotaSelectedPerdida"
-                                        CommandParameter="{Binding nombre}"
+                                        CommandParameter="{Binding idMascota}"
                                         CornerRadius="10"
-                                        Text="Reportar como perdida"></Button>
+                                        Text="{Binding botonIzq}"></Button>
                                 <Button
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
                                         Clicked="mascotaSelectedRobada"
-                                        CommandParameter="{Binding nombre}"
+                                        CommandParameter="{Binding idMascota}"
                                         CornerRadius="10"
                                         HorizontalOptions="FillAndExpand"
-                                        Text="Reportar como robada"></Button>
+                                        Text="{Binding botonDer}"></Button>
                             </StackLayout>
                         </Grid>
                     </ViewCell>

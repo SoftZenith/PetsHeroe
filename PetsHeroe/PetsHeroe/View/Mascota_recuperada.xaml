@@ -43,7 +43,16 @@
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="¿Como regresó?" x:Name="pkrRetorno"></Picker>
+                <Picker FontSize="Large" Title="¿Como regresó?" x:Name="pkrRetorno">
+                    <Picker.Items>
+                        <x:String>Directo dueño o vecino</x:String>
+                        <x:String>Servicio Municipal o Control animal</x:String>
+                        <x:String>Entrega en CAM (PH)</x:String>
+                        <x:String>Contacto Privado (PH)</x:String>
+                        <x:String>Entrega a domicilo (PH)</x:String>
+                        <x:String>Entrega con veterinario externo</x:String>
+                    </Picker.Items>
+                </Picker>
             </Frame>
             <Frame
                 BorderColor="#FF7100"
@@ -52,7 +61,15 @@
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="¿En cual condición?" x:Name="pkrCondicion"></Picker>
+                <Picker FontSize="Large" Title="¿En cual condición?" x:Name="pkrCondicion">
+                     <Picker.Items>
+                        <x:String>Buena</x:String>
+                        <x:String>Deshidratada o Inanición</x:String>
+                        <x:String>Accidentada o lastimada</x:String>
+                        <x:String>Enferma</x:String>
+                        <x:String>Fallecida</x:String>
+                    </Picker.Items>
+                </Picker>
             </Frame>
 
             <Button

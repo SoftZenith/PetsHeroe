@@ -40,3 +40,5 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.dll
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.pdb
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Mis_Clientes.xaml.g.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Consulta_bene_dueno.xaml.g.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Consulta_bene_vete.xaml.g.cs

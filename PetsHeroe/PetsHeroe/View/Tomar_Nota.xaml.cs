@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using PetsHeroe.Model;
+using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -29,14 +31,10 @@ namespace PetsHeroe
         {
             InitializeComponent();
             codigo_pre = codigo;
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                DependencyService.Get<IAndroid>().getEstado_Busca();
-                estados = DependencyService.Get<IAndroid>().Estado_Busca;
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                DependencyService.Get<IIOS>().getEstado_Busca();
-                estados = DependencyService.Get<IIOS>().Estado_Busca;
-            }
+
+            DependencyService.Get<IWebService>().getEstado_Busca();
+            estados = DependencyService.Get<IWebService>().Estado_Busca;
+
             estadoDic.Clear();
             pkrEstado.Items.Clear();
             foreach (DataRow dr in estados.Rows)
@@ -81,7 +79,7 @@ namespace PetsHeroe
                     idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
                 };*/
             }
-            catch (Exception ex) {
+            catch (Exception) {
                 /*DisplayAlert("Error", "Fallo carga ciudades", "OK");
                 ciudadDic.Clear();
                 pkrMunicipio.SelectedIndex = 0;
@@ -117,16 +115,10 @@ namespace PetsHeroe
                 ciudadDic.Clear();
                 pkrMunicipio.SelectedIndex = -1;
                 pkrMunicipio.Items.Clear();
-                if (Device.RuntimePlatform == Device.Android)
-                {
-                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
-                }
-                else if (Device.RuntimePlatform == Device.iOS)
-                {
-                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
-                }
+
+                DependencyService.Get<IWebService>().getCiudad_Busca(idEstado);
+                ciudades = DependencyService.Get<IWebService>().Ciudad_Busca;
+
                 foreach (DataRow dr in ciudades.Rows)
                 {
                     pkrMunicipio.Items.Add(dr["Name"].ToString());
@@ -139,7 +131,7 @@ namespace PetsHeroe
                     idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
                 };
             }
-            catch (Exception ex) {
+            catch (Exception) {
                 cargarCiudades(idEstado);
             }
         }
@@ -169,38 +161,24 @@ namespace PetsHeroe
                     return;
                 }
 
-                if (Device.RuntimePlatform == Device.Android)
+                estatus = DependencyService.Get<IWebService>().setEntrega_Localizacion(new MensajeDueno()
                 {
-                    estatus = DependencyService.Get<IAndroid>().setEntrega_Localizacion(new MensajeDueno()
-                    {
-                        codigo = codigo_pre,
-                        nombre = nombre,
-                        correo = correo,
-                        telefono = telefono,
-                        localizacion = localizacion,
-                        notas = notas,
-                        latitud = latitud,
-                        longitud = longitud,
-                        idCiudad = idCiudad
-                    });
-                } else if (Device.RuntimePlatform == Device.iOS) {
-                    estatus = DependencyService.Get<IIOS>().setEntrega_Localizacion(new MensajeDueno()
-                    {
-                        codigo = codigo_pre,
-                        nombre = nombre,
-                        correo = correo,
-                        telefono = telefono,
-                        localizacion = localizacion,
-                        notas = notas,
-                        latitud = latitud,
-                        longitud = longitud,
-                        idCiudad = idCiudad
-                    });
-                }
+                    codigo = codigo_pre,
+                    nombre = nombre,
+                    correo = correo,
+                    telefono = telefono,
+                    localizacion = localizacion,
+                    notas = notas,
+                    latitud = latitud,
+                    longitud = longitud,
+                    idCiudad = idCiudad
+                });
 
                 if (estatus)
                 {
-                    await DisplayAlert("OK", "Se envio tu localización al dueño", "OK");
+                    if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
+                    if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno()); }
+                    if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario()); }
                 }
                 else {
                     await DisplayAlert("ERROR", "Algo salio mal enviando tu localización", "OK");
@@ -208,7 +186,7 @@ namespace PetsHeroe
 
             }catch (Exception ex){
                 await DisplayAlert("Error","Faltan campos por llenar","OK");
-                Console.WriteLine("Error: " + ex.ToString());
+                Console.WriteLine("Error: " + ex);
                 return;
             }
         }

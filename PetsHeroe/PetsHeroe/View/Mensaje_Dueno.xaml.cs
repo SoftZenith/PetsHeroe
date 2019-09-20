@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using PetsHeroe.Model;
+using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -40,33 +42,23 @@ namespace PetsHeroe
                 Console.WriteLine("Error: "+ex);
                 return;
             }
-            if (Device.RuntimePlatform == Device.Android)
+
+            status = DependencyService.Get<IWebService>().setEntrega_SoloMensaje(new Model.MensajeDueno()
             {
-                status = DependencyService.Get<IAndroid>().setEntrega_SoloMensaje(new Model.MensajeDueno()
-                {
-                    codigo = codigo,
-                    correo = correo,
-                    nombre = nombre,
-                    telefono = telefono,
-                    mensaje = mensaje,
-                    latitud = 0.0000,
-                    longitud = 0.0000
-                });
-            } else if (Device.RuntimePlatform == Device.iOS) {
-                status = DependencyService.Get<IIOS>().setEntrega_SoloMensaje(new Model.MensajeDueno()
-                {
-                    codigo = codigo,
-                    correo = correo,
-                    nombre = nombre,
-                    telefono = telefono,
-                    mensaje = mensaje,
-                    latitud = 0.0000,
-                    longitud = 0.0000
-                });
-            }
+                codigo = codigo,
+                correo = correo,
+                nombre = nombre,
+                telefono = telefono,
+                mensaje = mensaje,
+                latitud = 0.0000,
+                longitud = 0.0000
+            });
 
             if (status.Resultado){
                 await DisplayAlert("OK", "Se envio correctamente tu mensaje al dueño", "OK");
+                if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno()); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario()); }
             } else {
                 await DisplayAlert("Error", "Esta mascota no ha sido reportada como extraviada o robada", "OK");
             }
