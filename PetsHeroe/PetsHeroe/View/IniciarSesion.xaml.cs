@@ -69,6 +69,7 @@ namespace PetsHeroe
                     Preferences.Set("logged", true, "usuarioLogeado");
                     Preferences.Set("userType", 1, "tipoUsuario");
                     Preferences.Set("idMiembro", asociado.idMiembro);
+                    Preferences.Set("password", pass);
                     await Navigation.PushAsync(new Menu_dueno());
                 }
                 else if (asociado.idAsociado > 0)
@@ -77,6 +78,7 @@ namespace PetsHeroe
                     Preferences.Set("logged", true, "usuarioLogeado");
                     Preferences.Set("userType", 2, "tipoUsuario");
                     Preferences.Set("idAsociado", asociado.idAsociado);
+                    Preferences.Set("password", pass);
                     await Navigation.PushAsync(new Menu_veterinario());
                 }
 

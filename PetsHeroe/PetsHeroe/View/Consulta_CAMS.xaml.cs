@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -14,6 +16,7 @@ namespace PetsHeroe
         DataTable estados = new DataTable();
         DataTable ciudades = new DataTable();
         Picker picker, pickerC;
+        Location currentlocation;
         int idEstado = -1, idCiudad = -1;
         Dictionary<string, int> estadoDic = new Dictionary<string, int>();
         Dictionary<string, int> ciudadDic = new Dictionary<string, int>();
@@ -21,8 +24,9 @@ namespace PetsHeroe
         public Consulta_CAMS()
         {
             InitializeComponent();
-
-            getPermisoLocation();
+            _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
+            _ = getCurrentLocation();
+            _ = getPermisoLocation();
 
             if (!locationGrant)
             {
@@ -51,7 +55,6 @@ namespace PetsHeroe
                     HorizontalOptions = LayoutOptions.FillAndExpand
                 };
 
-
                 Frame frmCiudad = new Frame() {
                     BorderColor = Color.FromRgb(255, 113, 0),
                     CornerRadius = 8,
@@ -71,8 +74,20 @@ namespace PetsHeroe
 
             CAM lista = new CAM();
             DataTable lista_CAM = new DataTable();
-            lsvCAMS.ItemsSource = lista.getCAMS();
-            mapCAMS.MoveToRegion(new MapSpan(new Position(25.708742, -100.809230), 0.5, 0.5));
+            if(currentlocation is null)
+            {
+                _ = getCurrentLocation();
+            }
+            try
+            {
+                lsvCAMS.ItemsSource = lista.getCAMS(currentlocation.Latitude, currentlocation.Longitude);
+                mapCAMS.MoveToRegion(new MapSpan(new Position(currentlocation.Latitude, currentlocation.Longitude), 0.15, 0.15));
+            }
+            catch (Exception)
+            {
+                lsvCAMS.ItemsSource = lista.getCAMS(25.691288, -100.316775);
+                mapCAMS.MoveToRegion(new MapSpan(new Position(25.691288, -100.316775), 0.15, 0.15));
+            }
 
             try{
 
@@ -112,7 +127,10 @@ namespace PetsHeroe
 
                 }
 
-                DependencyService.Get<IWebService>().getCAM_busca(25.708742, -100.344950, 100.0);
+                if (currentlocation is null) {
+                    _ = getCurrentLocation();
+                }
+                DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 50.0);
                 lista_CAM = DependencyService.Get<IWebService>().CAM_Busca;
             }
             catch (Exception ex){
@@ -131,7 +149,7 @@ namespace PetsHeroe
                 };
                 pinCAM.Clicked += (object sender, EventArgs e) => {
                     var pinClicked = sender as Pin;
-                    DisplayAlert("CAM", "Coordenadas: " + pinClicked.Position.Latitude.ToString(), "OK");
+                    DisplayAlert("CAM", "Dirección: " + pinClicked.Address, "OK");
                 };
                 mapCAMS.Pins.Add(pinCAM);
                 //listaPins.Add(pinCAM);
@@ -145,7 +163,28 @@ namespace PetsHeroe
             idCiudad = 0;
         }
 
-        public async void getPermisoLocation() {
+        private async Task getCurrentLocation()
+        {
+            try
+            {
+                var geoLocation = await Plugin.Geolocator.CrossGeolocator.Current.GetLastKnownLocationAsync();
+                if (geoLocation != null)
+                {
+                    currentlocation = new Location(geoLocation.Latitude, geoLocation.Longitude);
+                }
+                else
+                {
+                    currentlocation = new Location(25.691288, -100.316775);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener location: " + ex);
+                currentlocation = new Location(25.691288, -100.316775);
+            }
+        }
+
+        public async Task getPermisoLocation() {
             locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
         }
 

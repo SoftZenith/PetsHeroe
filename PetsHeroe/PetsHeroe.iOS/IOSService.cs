@@ -284,12 +284,12 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public bool getCliente_Busca(int idAsociado)
+        public bool getCliente_Busca(int idMiembro)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Cliente_Busca = wsPets.Cliente_Busca(idAsociado, idAsociado, -1, "", "", "", "", "", "", "", "");
+                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, -1, -1, "", "", "", "", "", "", "", "");
                 return true;
             }
             catch (Exception)

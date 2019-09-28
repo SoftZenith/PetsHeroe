@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -9,15 +11,18 @@ namespace PetsHeroe
 {
     public partial class Registro_mascota : ContentPage
     {
-        int idTipoMascota = -1;
-        int idRazaMascota = -1;
-        int idColorMascota = -1;
-        char sexoMascotaC = (char)78;
-        //Diccionarios para guardar nombre - id
-        Dictionary<string, int> tipoMascotaDic = new Dictionary<string, int>();
-        Dictionary<string, int> razaMascotaDic = new Dictionary<string, int>();
-        Dictionary<string, int> colorMascotaDic = new Dictionary<string, int>();
-
+        private int idTipoMascota = -1;
+        private int idRazaMascota = -1;
+        private int idColorMascota = -1;
+        private char sexoMascotaC = (char)0;
+        private int idMiembro = -1;
+        //Diccionarios para guardar tipo - id
+        private Dictionary<string, int> tipoMascotaDic = new Dictionary<string, int>();
+        private Dictionary<string, int> razaMascotaDic = new Dictionary<string, int>();
+        private Dictionary<string, int> colorMascotaDic = new Dictionary<string, int>();
+        //DataTable para datos del dueño
+        private DataTable dtDueno = new DataTable();
+        private Dueno dueno;
         public Registro_mascota()
         {
             InitializeComponent();
@@ -28,6 +33,27 @@ namespace PetsHeroe
 
             DependencyService.Get<IWebService>().getMascotaTipo_Busca();
             tipoMascota = DependencyService.Get<IWebService>().MascotaTipo_Busca;
+
+            //get client data by memberId
+            try
+            {
+                DependencyService.Get<IWebService>().getCliente_Busca(Preferences.Get("idMiembro", 0));
+                dtDueno = DependencyService.Get<IWebService>().Cliente_Busca;
+
+                foreach (DataRow dr in dtDueno.Rows) {
+                    dueno = new Dueno() {
+                        nombre = dr["Name"].ToString(),
+                        apellidoP = dr["LastName"].ToString(),
+                        apellidoM = dr["LastName2"].ToString(),
+                        sexo = dr["Sex"].ToString() == "M" ? 77 : 70,
+                        correo = dr["EMail"].ToString().Replace("\t","").Trim(),
+                        contrasena = Preferences.Get("password", "")
+                    };
+                }
+            }
+            catch (Exception) {
+
+            }
 
             pkrTipoMascota.Items.Clear();
             tipoMascotaDic.Clear();
@@ -120,18 +146,59 @@ namespace PetsHeroe
         public void onRegistraMascota(object sender, EventArgs args) {
             bool estatus = false;
 
+            if (idTipoMascota < 0)
+            {
+                DisplayAlert("Error", "Selecciona el tipo de mascota", "OK");
+                return;
+            } else if (idRazaMascota < 0) {
+                DisplayAlert("Error", "Selecciona la raza", "OK");
+                return;
+            } else if (idColorMascota < 0) {
+                DisplayAlert("Error", "Selecciona el color de tu mascota", "OK");
+                return;
+            }
+            else if (sexoMascotaC == 0) {
+                DisplayAlert("Error","Selecciona el sexo de tu mascota","OK");
+                return;
+            }else if (txtCodigo.Text == "" || txtCodigo.Text == null)
+            {
+                DisplayAlert("Error", "Ingresa el código de tu mascota", "OK");
+                return;
+            }
+            else if (txtNombre.Text == "" || txtNombre.Text == null)
+            {
+                DisplayAlert("Error", "Ingresa un nombre de tu mascota", "OK");
+                return;
+            }
+            else if (txtedadMascota.Text == "" || txtedadMascota.Text == null)
+            {
+                DisplayAlert("Error", "Ingresa la edad de tu mascota", "OK");
+                return;
+            }
+
+            try
+            {
+                Convert.ToInt32(txtedadMascota.Text);
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", "Edad invalida", "Error");
+                return;
+            }
+
             DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
             {
                 idDueno = txtCodigo.Text,
-                nombre = "-1", //Preferences.Get("name","")
-                apellidoP = "-1", //Preferences.Get("lastNameP","")
-                apellidoM = "-1", //Preferences.Get("lastNameM","")
-                sexo = -1, //Preferences.Get("sex",'M')
-                correo = "-1", //Preferences.Get("email",456)
-                contrasena = "-1", //Preferences.Get("password", 456)
+                nombre = dueno.nombre,
+                apellidoP = dueno.apellidoP,
+                apellidoM = dueno.apellidoM,
+                sexo = dueno.sexo,
+                correo = dueno.correo,
+                contrasena = dueno.contrasena,
                 mascostaCodigo = txtCodigo.Text,
                 sexoMascota = sexoMascotaC,
                 idTipoMascota = idTipoMascota,
+                nombreMascota = txtNombre.Text,
                 idRazaMascota = idRazaMascota,
                 idColorMascota = idColorMascota,
                 edadMascota = Convert.ToInt32(txtedadMascota.Text)
@@ -143,7 +210,7 @@ namespace PetsHeroe
                 DisplayAlert("Registro", "Se registro correctamente", "OK");
             }
             else {
-                DisplayAlert("Error","Tipo: "+ idTipoMascota+" ,raza: "+ idRazaMascota+",color: "+ idColorMascota, "OK");
+                DisplayAlert("Error","Hubo un error al registrar tu mascota", "OK");
             }
 
         }

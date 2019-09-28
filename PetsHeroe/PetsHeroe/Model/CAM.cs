@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using PetsHeroe.Services;
 using Xamarin.Forms;
 
 namespace PetsHeroe
@@ -18,26 +19,22 @@ namespace PetsHeroe
 
         }
 
-
-        public List<CAM> getCAMS() {
+        public List<CAM> getCAMS(Double latitud, Double longitud) {
 
             List<CAM> listaCAMs = new List<CAM>();
             DataTable lista_CAM = new DataTable();
 
-            if (Device.RuntimePlatform == Device.Android)
+            try
             {
-                DependencyService.Get<IAndroid>().getCAM_busca(25.708742, -100.344950, 100.0);
-                lista_CAM = DependencyService.Get<IAndroid>().CAM_Busca;
-            }
-            else if (Device.RuntimePlatform == Device.iOS)
+                DependencyService.Get<IWebService>().getCAM_busca(latitud, longitud, 50.0);
+                lista_CAM = DependencyService.Get<IWebService>().CAM_Busca;
+            }catch (Exception ex)
             {
-                DependencyService.Get<IIOS>().getCAM_busca(25.708742, -100.344950, 100.0);
-                lista_CAM = DependencyService.Get<IIOS>().CAM_Busca;
+                Console.WriteLine("Error al obtener CAMs: "+ex);
             }
 
             foreach (DataRow dr in lista_CAM.Rows)
             {
-
                 listaCAMs.Add(
                     new CAM()
                     {

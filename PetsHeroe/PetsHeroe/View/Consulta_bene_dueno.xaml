@@ -2,15 +2,15 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetsHeroe.View.Consulta_bene_dueno"
-             Title="Beneficios">
+             Title="Consulta de beneficios">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Dinero electr" IconImageSource="money.png" Padding="8">
+  <ContentPage Title="Edo cuenta" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
                     <Label FontSize="Large" TextColor="Black"
-                       Text="Dinero electrónico" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                       Text="Estado de cuenta" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                 </ContentView>
             </ListView.Header>     
             <ListView.ItemTemplate>
@@ -51,7 +51,7 @@
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
                     <Label FontSize="Large" TextColor="Black"
-                       Text="Productos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                       Text="Beneficios en productos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                 </ContentView>
             </ListView.Header>     
             <ListView.ItemTemplate>
@@ -77,7 +77,7 @@
                                 <BoxView
                                    VerticalOptions="FillAndExpand"
                                    HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"  
+                                   HeightRequest="1"
                                    Color="#000000"></BoxView>
                             </StackLayout>
                         </Grid>
@@ -92,7 +92,7 @@
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    <Label FontSize="Large" TextColor="Black" Text="Beneficios en servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                 </ContentView>
             </ListView.Header>
             <ListView.ItemTemplate>

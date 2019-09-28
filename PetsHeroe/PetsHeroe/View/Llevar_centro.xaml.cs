@@ -28,6 +28,7 @@ namespace PetsHeroe
         {
             this.codigo = codigo;
             InitializeComponent();
+            _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
             _ = getCurrentLocation();
             _ = getPermisoLocation();
 
@@ -93,11 +94,11 @@ namespace PetsHeroe
                 }
                 try
                 {
-                    DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 30); //call to get CAMs list
+                    DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 50); //call to get CAMs list
                     lista_CAM = DependencyService.Get<IWebService>().CAM_Busca; //get DataTable with Cams list
                 }
                 catch (Exception) {
-                    DependencyService.Get<IWebService>().getCAM_busca(25.8782, -100.1424, 50); //call to get CAMs list
+                    DependencyService.Get<IWebService>().getCAM_busca(25.691288, -100.316775, 50); //call to get CAMs list
                     lista_CAM = DependencyService.Get<IWebService>().CAM_Busca; //get DataTable with Cams list
                 }
 
@@ -131,7 +132,7 @@ namespace PetsHeroe
                 mapLlevarCentro.MoveToRegion(new MapSpan(new Position(currentlocation.Latitude, currentlocation.Longitude), 0.15, 0.15));
             }
             catch (Exception) {
-                mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.00, -100.00), 0.15, 0.15));
+                mapLlevarCentro.MoveToRegion(new MapSpan(new Position(25.691288, -100.316775), 0.15, 0.15));
             }
 
         }
@@ -163,10 +164,17 @@ namespace PetsHeroe
 
         private async Task getCurrentLocation() {
             try {
-                currentlocation = await Geolocation.GetLastKnownLocationAsync();
+                var geoLocation = await Plugin.Geolocator.CrossGeolocator.Current.GetLastKnownLocationAsync();
+                if (geoLocation != null)
+                {
+                    currentlocation = new Location(geoLocation.Latitude, geoLocation.Longitude);
+                }
+                else {
+                    currentlocation = new Location(25.691288, -100.316775);
+                }
             }catch(Exception ex) {
                 Console.WriteLine("Error al obtener location: "+ex);
-                currentlocation = new Location(25.00, -100.00);
+                currentlocation = new Location(25.691288, -100.316775);
             }
         }
 
