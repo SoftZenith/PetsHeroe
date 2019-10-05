@@ -37,7 +37,7 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
                 Margin="8,8,8,0"
-                Text="Caja y asignaciónde beneficios"
+                Text="Caja y asignación de beneficios"
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#6a00ff"

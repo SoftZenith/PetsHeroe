@@ -4,7 +4,7 @@
              x:Class="PetsHeroe.View.Consulta_bene_dueno"
              Title="Consulta de beneficios">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Edo cuenta" IconImageSource="money.png" Padding="8">
+  <ContentPage Title="Dinero eléctronico" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">
             <ListView.Header>
@@ -45,48 +45,6 @@
         </ListView>
       </ContentPage.Content>
   </ContentPage>
-  <ContentPage Title="Productos" IconImageSource="product.png" Padding="8">
-      <ContentPage.Content>
-          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvProductos">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black"
-                       Text="Beneficios en productos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>     
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding partner, StringFormat='CAM: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding mascota, StringFormat='Mascota: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding descripcion, StringFormat='Descripción: {0}'}" />
-                                <!--<Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Para: {0}'}" />-->
-                                <!--<Label FontSize="16"  Text="{Binding estatus, StringFormat='En: {0}'}" />-->
-                                <Label FontSize="16"  Text="{Binding puntos, StringFormat='Precio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding compra, StringFormat='Compra: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding gratis, StringFormat='Y lleva gratis: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding vigencia, StringFormat='Hasta el: {0}'}" />
-                                <BoxView
-                                   VerticalOptions="FillAndExpand"
-                                   HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"
-                                   Color="#000000"></BoxView>
-                            </StackLayout>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-      </ContentPage.Content>
-  </ContentPage>
   <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
@@ -109,11 +67,9 @@
                                 <Label FontSize="16"  Text="{Binding partner, StringFormat='CAM: {0}'}" />
                                 <Label FontSize="16"  Text="{Binding mascota, StringFormat='Mascota: {0}'}" />
                                 <Label FontSize="16"  Text="{Binding descripcion, StringFormat='Descripción: {0}'}" />
-                                <!--<Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Para: {0}'}" />-->
-                                <!--<Label FontSize="16"  Text="{Binding estatus, StringFormat='En: {0}'}" />-->
-                                <Label FontSize="16"  Text="{Binding puntos, StringFormat='Precio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding compra, StringFormat='Compra: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding gratis, StringFormat='Y lleva gratis: {0}'}" />
+                                <Label FontSize="16"  Text="{Binding gratis, StringFormat='{0}'}" />
+                                <Label FontSize="16"  Text="{Binding compra, StringFormat='de {0}'}" />
+                                <Label FontSize="16"  Text="{Binding gratis, StringFormat='para 1 gratis'}" />
                                 <Label FontSize="16"  Text="{Binding vigencia, StringFormat='Hasta el: {0}'}" />
                                 <BoxView
                                    VerticalOptions="FillAndExpand"

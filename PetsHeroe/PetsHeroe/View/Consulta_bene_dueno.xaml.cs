@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
@@ -33,7 +30,6 @@ namespace PetsHeroe.View
             }
 
             lsvDineroElect.ItemsSource = dataTableToListDinero();
-            lsvProductos.ItemsSource = dataTableToListServicio();
             lsvServicios.ItemsSource = dataTableToListServicio();
 
         }

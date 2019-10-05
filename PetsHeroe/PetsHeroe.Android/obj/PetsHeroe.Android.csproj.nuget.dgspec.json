@@ -74,11 +74,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.815419, )"
+              "version": "[4.2.0.848062, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.2.0.815419, )"
+              "version": "[4.2.0.848062, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",

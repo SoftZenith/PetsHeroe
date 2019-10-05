@@ -127,6 +127,8 @@
             Padding="0,4,0,0">
             <Entry
                 Placeholder="Telefono"
+                Keyboard="Telephone"
+                MaxLength="15"
                 x:Name="txtTelefono">
             </Entry>
         </Frame>

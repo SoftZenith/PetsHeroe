@@ -173,6 +173,7 @@ namespace PetsHeroe
 
                 if (estatus){
                     await DisplayAlert("OK", "Se registro correctamente", "OK");
+                    await Navigation.PushAsync(new MainPage());
                 }else {
                     await DisplayAlert("Error", "Error al registro su mascota, por favor verifique que el código sea valido", "OK");
                 }

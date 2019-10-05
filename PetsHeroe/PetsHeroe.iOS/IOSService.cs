@@ -275,21 +275,7 @@ namespace PetsHeroe.iOS
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", "", "");
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public bool getCliente_Busca(int idMiembro)
-        {
-            wsPets.AuthHeaderValue = auth;
-            try
-            {
-                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, -1, -1, "", "", "", "", "", "", "", "");
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1,idMiembro, "", "", "");
                 return true;
             }
             catch (Exception)
@@ -327,6 +313,34 @@ namespace PetsHeroe.iOS
             catch (Exception)
             {
                 return null;
+            }
+        }
+
+        public bool getCliente_Busca(int idMiembro)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, -1, -1, "", "", "", "", "", "", "", "");
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool getClientes_Busca(string codigo, string correo, string nombre)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                Cliente_Busca = wsPets.Cliente_Busca(-1, -1, -1, codigo, "", nombre, "", "", "", correo, "");
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

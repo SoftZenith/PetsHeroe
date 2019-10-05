@@ -51,6 +51,7 @@ namespace PetsHeroe.Services
         bool getValidaUsuario(String user, String pass);
         bool getMascota_Busca(int idMiembro);
         bool getCliente_Busca(int idAsociado);
+        bool getClientes_Busca(string codigo, string correo, string nombre);
         bool setVeterinario_Registro(Asociado asociado);
         bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
         bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);

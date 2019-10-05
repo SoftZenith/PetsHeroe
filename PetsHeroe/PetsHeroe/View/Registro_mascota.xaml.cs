@@ -208,6 +208,7 @@ namespace PetsHeroe
             if (estatus)
             {
                 DisplayAlert("Registro", "Se registro correctamente", "OK");
+                Navigation.PushAsync(new Menu_dueno());
             }
             else {
                 DisplayAlert("Error","Hubo un error al registrar tu mascota", "OK");

@@ -176,6 +176,7 @@ namespace PetsHeroe
 
                 if (estatus)
                 {
+                    await DisplayAlert("OK","Se enviaron tus notas al dueño","Ok");
                     if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
                     if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno()); }
                     if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario()); }
