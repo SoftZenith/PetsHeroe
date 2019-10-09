@@ -6,15 +6,18 @@ using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
 
 namespace PetsHeroe
 {
     public partial class Tomar_Nota : ContentPage
     {
-        private DataTable estados = new DataTable();
-        private DataTable ciudades = new DataTable();
-        int idEstado = -1;
-        int idCiudad = -1;
+
+        Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        Regex PhoneRegex = new Regex(@"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$");
+
+        private int idEstado = -1;
+        private int idCiudad = -1;
         private string codigo_pre = "";
         private string nombre = "";
         private string correo = "";
@@ -23,6 +26,7 @@ namespace PetsHeroe
         private string notas = "";
         private double latitud = -1;
         private double longitud = -1;
+        private List<String> listaCiudades = new List<string>();
         //Dictionarios para guardar nombre - id
         Dictionary<string, int> estadoDic = new Dictionary<string, int>();
         Dictionary<string, int> ciudadDic = new Dictionary<string, int>();
@@ -31,6 +35,8 @@ namespace PetsHeroe
         {
             InitializeComponent();
             codigo_pre = codigo;
+
+            DataTable estados = new DataTable();
 
             DependencyService.Get<IWebService>().getEstado_Busca();
             estados = DependencyService.Get<IWebService>().Estado_Busca;
@@ -44,95 +50,57 @@ namespace PetsHeroe
             }
 
             pkrEstado.SelectedIndexChanged += pkrEstadoSeleccionado;
+            pkrMunicipio.SelectedIndexChanged += pkrMunicipioSeleccionado;
+        }//Tomar_Nota
 
+        public void pkrMunicipioSeleccionado(object sender, EventArgs e)
+        {
+            try
+            {
+                idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
+            }
+            catch (Exception ex) {
+                Console.WriteLine("Error: "+ex);
+            }
+            //DisplayAlert("Ciudad seleccionada", "Ciudad: "+idCiudad, "Ok");
         }
 
-        private void pkrEstadoSeleccionado(object sender, EventArgs e)
+        public void pkrEstadoSeleccionado(object sender, EventArgs e)
         {
             idEstado = estadoDic[pkrEstado.SelectedItem.ToString()];
             try
             {
                 cargarCiudades(idEstado);
-                /*
-                ciudadDic.Clear();
-                pkrMunicipio.SelectedIndex = -1;
-                pkrMunicipio.Items.Clear();
-                if (Device.RuntimePlatform == Device.Android)
-                {
-                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
-                }
-                else if (Device.RuntimePlatform == Device.iOS)
-                {
-                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
-                }
-                foreach (DataRow dr in ciudades.Rows)
-                {
-                    pkrMunicipio.Items.Add(dr["Name"].ToString());
-                    ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
-                }
-                pkrMunicipio.SelectedIndex = 0;
-                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
-                {
-                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
-                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
-                };*/
             }
             catch (Exception) {
-                /*DisplayAlert("Error", "Fallo carga ciudades", "OK");
-                ciudadDic.Clear();
-                pkrMunicipio.SelectedIndex = 0;
-                pkrMunicipio.Items.Clear();
-                if (Device.RuntimePlatform == Device.Android)
-                {
-                    DependencyService.Get<IAndroid>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IAndroid>().Ciudad_Busca;
-                }
-                else if (Device.RuntimePlatform == Device.iOS)
-                {
-                    DependencyService.Get<IIOS>().getCiudad_Busca(idEstado);
-                    ciudades = DependencyService.Get<IIOS>().Ciudad_Busca;
-                }
-                foreach (DataRow dr in ciudades.Rows)
-                {
-                    pkrMunicipio.Items.Add(dr["Name"].ToString());
-                    ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
-                }
-                pkrMunicipio.SelectedIndex = 0;
-                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
-                {
-                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
-                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
-                };*/
+                
             }
 
         }
 
-        private void cargarCiudades(int idEstado) {
+        public void cargarCiudades(int idEstadoP) {
             try
             {
+                DataTable ciudades = new DataTable();
                 ciudadDic.Clear();
-                pkrMunicipio.SelectedIndex = -1;
                 pkrMunicipio.Items.Clear();
-
-                DependencyService.Get<IWebService>().getCiudad_Busca(idEstado);
+                //listaCiudades.Clear();
+                DependencyService.Get<IWebService>().getCiudad_Busca(idEstadoP);
                 ciudades = DependencyService.Get<IWebService>().Ciudad_Busca;
 
                 foreach (DataRow dr in ciudades.Rows)
                 {
                     pkrMunicipio.Items.Add(dr["Name"].ToString());
+                    listaCiudades.Add(dr["Name"].ToString());
                     ciudadDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDCity"]));
                 }
-                pkrMunicipio.SelectedIndex = 0;
-                pkrMunicipio.SelectedIndexChanged += (object senderM, EventArgs args) =>
-                {
-                    DisplayAlert("Ciudad seleccionada", "Ciudad: ", "Ok");
-                    idCiudad = ciudadDic[pkrMunicipio.SelectedItem.ToString()];
-                };
+                //pkrMunicipio.ItemsSource = listaCiudades;
+                //pkrMunicipio.SelectedIndexChanged += PkrMunicipio_SelectedIndexChanged;
+
             }
-            catch (Exception) {
-                cargarCiudades(idEstado);
+            catch (Exception ex) {
+                Console.WriteLine("Error: "+ex);
+                cargarCiudades(idEstadoP);
             }
         }
 
@@ -152,14 +120,25 @@ namespace PetsHeroe
                 string[] textos = { codigo_pre, localizacion, notas };
 
                 if (enteros.Any(item => item < 0)) {
-                    await DisplayAlert("Error","Faltan campos por llenar enteros, idEstado: "+idEstado+" idCiudad: "+idCiudad,"OK");
+                    await DisplayAlert("Error","Faltan campos por llenar","OK");
                     return;
                 }
 
                 if (textos.Any(item => item.Trim().Length == 0)) {
-                    await DisplayAlert("Error", "Faltan campos por llenar textos", "OK");
+                    await DisplayAlert("Error", "Faltan campos por llenar", "OK");
                     return;
                 }
+
+                if (!ValidateEmail(txtCorreo.Text)) {
+                    await DisplayAlert("Error", "Correo inválido", "OK");
+                    return;
+                }
+
+                if (!IsPhoneNumber(txtTelefono.Text)) {
+                    await DisplayAlert("Error", "Telefono inválido", "OK");
+                    return;
+                }
+
 
                 estatus = DependencyService.Get<IWebService>().setEntrega_Localizacion(new MensajeDueno()
                 {
@@ -190,6 +169,26 @@ namespace PetsHeroe
                 Console.WriteLine("Error: " + ex);
                 return;
             }
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            return EmailRegex.IsMatch(email);
+        }
+
+        public bool IsPhoneNumber(string number)
+        {
+            number = number.Replace("-", "");
+            number = number.Replace("(", "");
+            number = number.Replace(")", "");
+            if (number.Length <10)
+            {
+                return false;
+            }
+            return PhoneRegex.IsMatch(number);
         }
     }
 }

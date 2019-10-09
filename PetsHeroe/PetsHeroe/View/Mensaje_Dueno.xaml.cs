@@ -4,12 +4,15 @@ using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
 
 namespace PetsHeroe
 {
     public partial class Mensaje_Dueno : ContentPage
     {
-        string codigo_pre; 
+        string codigo_pre;
+        Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        Regex PhoneRegex = new Regex(@"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$");
 
         public Mensaje_Dueno(string codigo)
         {
@@ -33,6 +36,16 @@ namespace PetsHeroe
                 if (textos.Any(item => item.Trim().Length <= 0))
                 {
                     await DisplayAlert("Error", "Faltan campos por llenar", "OK");
+                    return;
+                }
+
+                if (!ValidateEmail(txtCorreo.Text)) {
+                    await DisplayAlert("Error", "Correo invalido", "OK");
+                    return;
+                }
+
+                if (!IsPhoneNumber(txtTelefono.Text)) {
+                    await DisplayAlert("Error", "Telefono inválido", "OK");
                     return;
                 }
 
@@ -65,5 +78,24 @@ namespace PetsHeroe
 
         }
 
+        public bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            return EmailRegex.IsMatch(email);
+        }
+
+        public bool IsPhoneNumber(string number)
+        {
+            number = number.Replace("-", "");
+            number = number.Replace("(", "");
+            number = number.Replace(")", "");
+            if (number.Length < 10)
+            {
+                return false;
+            }
+            return PhoneRegex.IsMatch(number);
+        }
     }
 }

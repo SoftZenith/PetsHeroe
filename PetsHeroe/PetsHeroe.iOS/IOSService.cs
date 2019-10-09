@@ -54,7 +54,7 @@ namespace PetsHeroe.iOS
         };
 
 
-        public void getCAM_busca(double lat, double lon, double kms)
+        public void getCAM_busca(double lat, double lon, int kms)
         {
             wsPets.AuthHeaderValue = auth;
             try
@@ -316,12 +316,12 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public bool getCliente_Busca(int idMiembro)
+        public bool getCliente_Busca(int idMiembro, int idAsociado)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, -1, -1, "", "", "", "", "", "", "", "");
+                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, idAsociado, -1, "", "", "", "", "", "", "", "");
                 return true;
             }
             catch (Exception)
@@ -341,6 +341,29 @@ namespace PetsHeroe.iOS
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public DataTable getPromoProductos_Busca(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.PromoProductos_Busca(idAsociado, -1);
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        public DataTable getPromoServicios_Busca(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                return wsPets.PromoServicios_Busca(idAsociado, -1);
+            }
+            catch (Exception ex) {
+                return null;
             }
         }
     }

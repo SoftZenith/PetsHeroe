@@ -130,7 +130,7 @@ namespace PetsHeroe
                 if (currentlocation is null) {
                     _ = getCurrentLocation();
                 }
-                DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 50.0);
+                DependencyService.Get<IWebService>().getCAM_busca(currentlocation.Latitude, currentlocation.Longitude, 50);
                 lista_CAM = DependencyService.Get<IWebService>().CAM_Busca;
             }
             catch (Exception ex){

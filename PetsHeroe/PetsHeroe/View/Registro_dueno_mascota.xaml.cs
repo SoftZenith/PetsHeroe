@@ -4,11 +4,13 @@ using System.Data;
 using System.Linq;
 using PetsHeroe.Services;
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
 
 namespace PetsHeroe
 {
     public partial class Registro_dueno_mascota : ContentPage
     {
+        Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         int idTipoMascota = -1;
         int idRazaMascota = -1;
         int idColorMascota = -1;
@@ -150,6 +152,11 @@ namespace PetsHeroe
                     return;
                 }
 
+                if (!ValidateEmail(txtCorreo.Text)) {
+                    await DisplayAlert("Error","Correo invalido","OK");
+                    return;
+                }
+
                 bool estatus = false;
 
                 DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
@@ -196,6 +203,14 @@ namespace PetsHeroe
                 pkrColorMascota.IsVisible = false;
             }
             return base.OnBackButtonPressed();
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            return EmailRegex.IsMatch(email);
         }
     }
 }

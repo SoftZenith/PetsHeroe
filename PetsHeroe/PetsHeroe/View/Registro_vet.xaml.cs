@@ -5,12 +5,13 @@ using Xamarin.Forms;
 using PetsHeroe.Model;
 using System.Linq;
 using PetsHeroe.Services;
+using System.Text.RegularExpressions;
 
 namespace PetsHeroe
 {
     public partial class Registro_vet : ContentPage
     {
-
+        Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         Dictionary<string, int> tipoAsociadoDic = new Dictionary<string, int>();
         int idTipoAsociado = -1;
         int sexo = -1;
@@ -92,14 +93,18 @@ namespace PetsHeroe
                         return;
                     }
 
+                    if (!ValidateEmail(txtCorreo.Text)) {
+                        await DisplayAlert("Error", "Correo invalido", "OK");
+                        return;
+                    }
+
                     status = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
 
-                    if (status)
-                    {
-                       await DisplayAlert("OK", "Registro exitoso, te enviamos un enlace a tu correo para poder activar tu cuenta","OK");
-                    }
-                    else {
-                        await DisplayAlert("ERROR", "Ups parece que hubo un error", "OK");
+                    if (status){
+                        await DisplayAlert("OK", "Registro exitoso, te enviamos un enlace a tu correo para poder activar tu cuenta","OK");
+                        await Navigation.PushAsync(new MainPage());
+                    }else {
+                        await DisplayAlert("ERROR", "Ups parece que hubo un error revisa todos tus datos", "OK");
                     }
 
                 }
@@ -111,5 +116,14 @@ namespace PetsHeroe
                 await DisplayAlert("Error", "Para poder registrarte es necesario que aceptes los terminos y condiciones", "OK");
             }
         }
+
+        public bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            return EmailRegex.IsMatch(email);
+        }
+
     }
 }

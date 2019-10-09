@@ -26,7 +26,7 @@ namespace PetsHeroe
 
             try
             {
-                DependencyService.Get<IWebService>().getCAM_busca(latitud, longitud, 50.0);
+                DependencyService.Get<IWebService>().getCAM_busca(latitud, longitud, 50);
                 lista_CAM = DependencyService.Get<IWebService>().CAM_Busca;
             }catch (Exception ex)
             {

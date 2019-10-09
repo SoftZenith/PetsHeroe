@@ -17,7 +17,7 @@ namespace PetsHeroe.Model
             DataTable clientesTbl = new DataTable();
             List<Cliente> clientes = new List<Cliente>();
 
-            bool status = DependencyService.Get<IWebService>().getCliente_Busca(idAsociado);
+            bool status = DependencyService.Get<IWebService>().getCliente_Busca(-1,idAsociado);
 
             if (status)
             {

@@ -51,7 +51,7 @@ namespace PetsHeroe.Droid
             IPAddress = "0"
         };
 
-        public void getCAM_busca(double lat, double lon, double kms)
+        public void getCAM_busca(double lat, double lon, int kms)
         {
             wsPets.AuthHeaderValue = auth;
             try{
@@ -175,14 +175,19 @@ namespace PetsHeroe.Droid
 
         public void getMascota_Registro(Dueno mascota)
         {
-            wsPets.AuthHeaderValue = auth;
-            try{
-                Mascota_Registro = wsPets.Mascota_Registro(mascota.idDueno, mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
+            var wsPetsRegistro = new wsPetsApp();
+
+            wsPetsRegistro.AuthHeaderValue = auth;
+            try
+            {
+                wsPetsRegistro.Mascota_Registro(mascota.mascostaCodigo, mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
                     mascota.contrasena, mascota.mascostaCodigo, mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
-                    mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascotaCodigo, out int IDEstatusCodigo);
+                    mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascota, out int IDEstatusCodigo);
                 Mascota_Registro = true;
-            }catch (Exception ex) {
-                Console.WriteLine("Error al registrar: "+ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar mascota: " + ex);
                 Mascota_Registro = false;
             }
         }
@@ -193,7 +198,8 @@ namespace PetsHeroe.Droid
             try{
                 return wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
                     asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
-            }catch (Exception){
+            }catch (Exception ex){
+                Console.WriteLine("Error en registro: "+ex);
                 return false;
             }
         }
@@ -292,12 +298,12 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool getCliente_Busca(int idMiembro)
+        public bool getCliente_Busca(int idMiembro, int idAsociado)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, -1, -1, "", "", "", "", "", "", "", "");
+                Cliente_Busca = wsPets.Cliente_Busca(idMiembro, idAsociado, -1, "", "", "", "", "", "", "", "");
                 return true;
             }
             catch (Exception)
@@ -319,5 +325,32 @@ namespace PetsHeroe.Droid
                 return false;
             }
         }
+
+        public DataTable getPromoProductos_Busca(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.PromoProductos_Busca(idAsociado, -1);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public DataTable getPromoServicios_Busca(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.PromoServicios_Busca(idAsociado, -1);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
     }
 }

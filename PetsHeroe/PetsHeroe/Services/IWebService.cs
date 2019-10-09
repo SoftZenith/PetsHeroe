@@ -32,7 +32,7 @@ namespace PetsHeroe.Services
 
         string nombre { get; set; }
 
-        void getCAM_busca(double lat, double lon, double kms);
+        void getCAM_busca(double lat, double lon, int kms);
         void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida(string codigo);
         void getEstado_Busca();
@@ -50,11 +50,13 @@ namespace PetsHeroe.Services
         void getTipoProducto_Busca();
         bool getValidaUsuario(String user, String pass);
         bool getMascota_Busca(int idMiembro);
-        bool getCliente_Busca(int idAsociado);
+        bool getCliente_Busca(int idMiembro, int idAsociado);
         bool getClientes_Busca(string codigo, string correo, string nombre);
         bool setVeterinario_Registro(Asociado asociado);
         bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
         bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
+        DataTable getPromoProductos_Busca(int idAsociado);
+        DataTable getPromoServicios_Busca(int idAsociado);
         DataTable setPuntosPromociones_Busca(int idMiembro, int idAsociado, int idMascota);
         void CloseApp();
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
