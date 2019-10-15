@@ -36,25 +36,19 @@
                    Text="Estado de cuenta"
                    VerticalTextAlignment="Center" />
             <Entry
+                BackgroundColor="White"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 Grid.Row="1"
                 Placeholder="Buscar..."
+                TextColor="Black"
                 x:Name="txtBuscar"></Entry>
-            <Button
-                BorderColor="#ff0065"
-                BorderWidth="1"
-                Clicked="onBorrar"
-                CornerRadius="12"
-                Grid.Column="3"
-                Grid.ColumnSpan="1"
-                Grid.Row="1"
-                Text="Borrar">
-            </Button>
             <Picker
+                BackgroundColor="White"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
+                TextColor="Black"
                 Title="Buscar por..."
                 x:Name="pkrBuscarPor">
                 <Picker.Items>
@@ -74,6 +68,7 @@
                 Text="Buscar">
             </Button>
             <ListView
+                BackgroundColor="White"
                 Grid.ColumnSpan="4"
                 Grid.Row="3"
                 Grid.RowSpan="4"
@@ -117,7 +112,34 @@
   </ContentPage>
   <ContentPage Title="Productos" IconImageSource="product.png" Padding="8">
       <ContentPage.Content>
-          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvProductos">
+          <Grid>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+              </Grid.RowDefinitions>
+          <ListView
+              Grid.ColumnSpan="6"
+              Grid.Row="0"
+              Grid.RowSpan="9"
+              HasUnevenRows="True"
+              BackgroundColor="White"
+              x:Name="lsvProductos">
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
                     <Label FontSize="Large" TextColor="Black"
@@ -153,47 +175,96 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+          </ListView>
+          <Button
+            BorderColor="#FF7100"
+            BackgroundColor="#006561"
+            CornerRadius="16"
+            Grid.Column="1"
+            Grid.ColumnSpan="4"
+            Grid.Row="9"
+            Text="Agregar promoción"
+            Clicked="onAgregarPromoPrd">
+          </Button>
+        </Grid>
       </ContentPage.Content>
   </ContentPage>
   <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
-          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding inicia, StringFormat='Inicia: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding vigencia, StringFormat='Termina: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding tipo, StringFormat='Tipo: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding producto, StringFormat='Servicio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding precio, StringFormat='Precio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding compra, StringFormat='Unidades: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding PartnerPrice, StringFormat='Precio unitario: {0}'}" />
-                                <BoxView
-                                   VerticalOptions="FillAndExpand"
-                                   HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"  
-                                   Color="#000000"></BoxView>
-                            </StackLayout>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+          <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <ListView
+                    Grid.ColumnSpan="6"
+                    Grid.Row="0"
+                    Grid.RowSpan="9"
+                    HasUnevenRows="True"
+                    BackgroundColor="White"
+                    x:Name="lsvServicios">
+                <ListView.Header>
+                    <ContentView Padding="0,5" BackgroundColor="White">
+                        <Label FontSize="Large" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    </ContentView>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding inicia, StringFormat='Inicia: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding vigencia, StringFormat='Termina: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding tipo, StringFormat='Tipo: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding producto, StringFormat='Servicio: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding precio, StringFormat='Precio: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding compra, StringFormat='Unidades: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding PartnerPrice, StringFormat='Precio unitario: {0}'}" />
+                                    <BoxView
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       HeightRequest="1"  
+                                       Color="#000000"></BoxView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <Button
+                    BorderColor="#FF7100"
+                    BackgroundColor="#006561"
+                    CornerRadius="16"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    Grid.Row="9"
+                    Text="Agregar promoción"
+                    Clicked="onAgregarPromo">
+                </Button>
+          </Grid>
       </ContentPage.Content>
   </ContentPage>
 </TabbedPage>

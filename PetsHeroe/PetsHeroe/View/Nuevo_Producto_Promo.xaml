@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit" x:Class="PetsHeroe.View.Nuevo_Producto_Promo">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="0"
+                Grid.ColumnSpan="6"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Descripción de la promoción"
+                TextColor="black"
+                x:Name="txtNombrePromo">
+            </input:AdvancedEntry>
+
+            <StackLayout
+                Grid.ColumnSpan="6"
+                Grid.Row="1"
+                Margin="16,0,16,0"
+                Orientation="Horizontal">
+                <Label
+                    VerticalOptions="CenterAndExpand"
+                    Text="A partir del: ">
+                </Label>
+                <DatePicker
+                    MinimumDate="{Binding hoy}">
+                </DatePicker>
+            </StackLayout>
+
+            <StackLayout
+                Grid.ColumnSpan="6"
+                Grid.Row="2"
+                Margin="16,0,16,0"
+                Orientation="Horizontal">
+                <Label
+                    VerticalOptions="CenterAndExpand"
+                    Text="Hasta el: ">
+                </Label>
+                <DatePicker
+                    MinimumDate="{Binding hoy}">
+                </DatePicker>
+            </StackLayout>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="3"
+                Grid.ColumnSpan="6"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Descripción ó UPC"
+                TextColor="black"
+                x:Name="txtBuscarE">
+            </input:AdvancedEntry>
+
+            <Button
+                Grid.Row="4"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                BackgroundColor="#FF7100"
+                BorderColor="#FF7100"
+                CornerRadius="16"
+                Clicked="onEscanear"
+                Text="Escanear">
+            </Button>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="6"
+                Grid.Row="5"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Tipo"
+                    x:Name="pkrTipo">
+                </Picker>
+            </Frame>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="7"
+                Grid.Row="6"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Marca"
+                    x:Name="pkrMarcar">
+                </Picker>
+            </Frame>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="8"
+                Grid.Row="7"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Producto"
+                    x:Name="pkrProducto">
+                </Picker>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

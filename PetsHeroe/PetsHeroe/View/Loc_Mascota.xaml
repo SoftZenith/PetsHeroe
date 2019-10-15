@@ -53,7 +53,7 @@
 
         <input:RadioButtonGroupView 
             Grid.Row="4"
-            Grid.RowSpan="4"
+            Grid.RowSpan="5"
             Grid.ColumnSpan="4"
             Margin="10,8,0,10"
             x:Name="rdOpcion">
@@ -70,7 +70,7 @@
             Clicked="onSiguiente"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Grid.Row="8"
+            Grid.Row="9"
             Text="Siguiente"
             TextColor="White">
 

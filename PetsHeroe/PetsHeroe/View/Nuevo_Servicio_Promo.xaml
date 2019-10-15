@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="PetsHeroe.View.Nuevo_Servicio_Promo"
+    Title="Nueva promoción servicio">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="0"
+                Grid.ColumnSpan="6"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Descripción de la promoción"
+                TextColor="black"
+                x:Name="txtNombrePromo">
+            </input:AdvancedEntry>
+
+            <StackLayout
+                Margin="16,0,16,0"
+                Grid.ColumnSpan="6"
+                Grid.Row="1"
+                Orientation="Horizontal">
+                <Label
+                    Margin="8,0,0,0"
+                    FontSize="Medium"
+                    VerticalOptions="CenterAndExpand"
+                    Text="A partir del: ">
+                </Label>
+                <DatePicker
+                    MinimumDate="{Binding hoy}">
+                </DatePicker>
+            </StackLayout>
+
+            <StackLayout
+                Margin="16,0,16,0"
+                Grid.ColumnSpan="6"
+                Grid.Row="2"
+                Orientation="Horizontal">
+                <Label
+                    Margin="8,0,0,0"
+                    FontSize="Medium"
+                    VerticalOptions="CenterAndExpand"
+                    Text="Hasta el: ">
+                </Label>
+                <DatePicker
+                    MinimumDate="{Binding hoy}">
+                </DatePicker>
+            </StackLayout>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="6"
+                Grid.Row="3"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Grid.ColumnSpan="6"
+                    Grid.Row="3"
+                    Title="Tipo de mascota"
+                    x:Name="pkrTipoMascota">
+                </Picker>
+            </Frame>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="6"
+                Grid.Row="4"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Servicios"
+                    x:Name="pkrServicio">
+                </Picker>
+            </Frame>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="5"
+                Grid.ColumnSpan="6"
+                IconImage="code.png"
+                Keyboard="Numeric"
+                Margin="8,4,8,0"
+                Placeholder="Precio"
+                TextColor="black"
+                x:Name="txtPrecio">
+            </input:AdvancedEntry>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="6"
+                Grid.ColumnSpan="6"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Unidades a comprar"
+                TextColor="black"
+                x:Name="txtUnidades">
+            </input:AdvancedEntry>
+
+            <input:CheckBox
+                Grid.ColumnSpan="6"
+                Grid.Row="7"
+                Margin="16,0,16,0"
+                x:Name="chkActivo"
+                Text="Activo: ">
+            </input:CheckBox>
+
+            <Button
+                BorderColor="#FF7100"
+                BackgroundColor="#006561"
+                CornerRadius="16"
+                Clicked="onGuardarPromo"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Grid.Row="8"
+                Text="Guardar">
+            </Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

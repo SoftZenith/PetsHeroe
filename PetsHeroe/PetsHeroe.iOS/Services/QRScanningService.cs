@@ -31,7 +31,9 @@ namespace PetsHeroe.iOS.Services
             }
             if (scanResult.ToString().Contains("http"))
             {
-                return scanResult.ToString().Substring(40, 12);
+                int inicia = scanResult.ToString().IndexOf("e=", StringComparison.Ordinal);
+                //return scanResult.ToString().Substring(39, 12);
+                return scanResult.ToString().Substring(inicia + 2);
             }
             return scanResult.Text;
         }

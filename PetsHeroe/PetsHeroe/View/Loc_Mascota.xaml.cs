@@ -24,16 +24,17 @@ namespace PetsHeroe
             opcion = rdOpcion.SelectedIndex;
         }
 
-        async void onScan(object sender, EventArgs args) {
+        public async void onScan(object sender, EventArgs args) {
             try
             {
                 var result = await scanningDepen.ScanAsync();
                 if (result != null)
                 {
+                    result = result.Replace("=","");
                     txtCodigo.Text = result;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 txtCodigo.Text = "";
             }

@@ -41,23 +41,34 @@
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#6a00ff"
-                Clicked="onLocMascota"
+                Clicked="onVentas"
                 CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
                 Margin="8,8,8,0"
-                Text="¿Encontraste una mascota?"
+                Text="Ventas"
                 TextColor="Black"/>
             <Button
                 BackgroundColor="#ff6a00"
-                Clicked="onCerrarSesion"
+                Clicked="onLocMascota"
                 CornerRadius="8"
                 FontSize="Large"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
+                Margin="8,8,8,0"
+                Text="¿Encontraste una mascota?"
+                TextColor="Black"/>
+            <Button
+                BackgroundColor="#6a00ff"
+                Clicked="onCerrarSesion"
+                CornerRadius="8"
+                FontSize="Large"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="4"
                 Margin="8,8,8,8"
                 Text="Salir Sesión"
                 TextColor="Black"/>

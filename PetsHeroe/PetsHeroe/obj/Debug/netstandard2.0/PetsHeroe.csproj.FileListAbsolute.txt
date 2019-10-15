@@ -13,9 +13,6 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.pdb
 C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.csprojAssemblyReference.cache
 C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/XamlC.stamp
-/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.deps.json
-/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.dll
-/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.pdb
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Consulta_bene_dueno.xaml.g.cs
@@ -37,7 +34,12 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Tomar_Nota.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.AssemblyInfoInputs.cache
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.AssemblyInfo.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Servicio_Promo.xaml.g.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.deps.json
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.dll
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/bin/Debug/netstandard2.0/PetsHeroe.pdb
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.dll
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.pdb
-/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.csprojAssemblyReference.cache
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Producto_Promo.xaml.g.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Caja_Ventas.xaml.g.cs

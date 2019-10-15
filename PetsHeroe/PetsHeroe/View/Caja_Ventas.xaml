@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="PetsHeroe.View.Caja_Ventas">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Código de mascota"
+                TextColor="black"
+                x:Name="txtCodigoMascota">
+            </input:AdvancedEntry>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Tipo"
+                    x:Name="pkrTipo">
+                    <Picker.Items>
+                        <x:String>Producto</x:String>
+                        <x:String>Servicio</x:String>
+                        <x:String>Otro</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Frame>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Producto/Servicio"
+                TextColor="black"
+                x:Name="txtProducto">
+            </input:AdvancedEntry>
+
+            <Button
+                BorderColor="#FF7100"
+                Grid.Column="2"
+                Grid.ColumnSpan="1"
+                Grid.Row="2"
+                TextColor="White"
+                Text="Escanear">
+            </Button>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.Row="3"
+                Grid.ColumnSpan="3"
+                Keyboard="Numeric"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="Monto"
+                TextColor="black"
+                x:Name="txtMonto">
+            </input:AdvancedEntry>
+
+            <Button
+                BorderColor="#FF7100"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                Grid.Row="4"
+                TextColor="White"
+                Text="Agregar">
+            </Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

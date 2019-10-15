@@ -130,6 +130,7 @@ namespace PetsHeroe.View
                         usuario = dr["FullName"].ToString();
                     }
                     lsvResultados.ItemsSource = null;
+                    DisplayAlert("Encontrado", "Un resultado de la busqueda", "Ok");
                 }
                 else {
                     MiembroDic.Clear();
@@ -171,10 +172,6 @@ namespace PetsHeroe.View
 
             //DisplayAlert("OK","Puntos: "+puntos,"OK");
 
-        }
-
-        public void onBorrar(object sender, EventArgs args) {
-            txtBuscar.Text = "";
         }
 
         private List<Promocion> dataTableToListProductos()
@@ -227,6 +224,14 @@ namespace PetsHeroe.View
             }
 
             return promociones;
+        }
+
+        public void onAgregarPromo(object sender, EventArgs args) {
+            Navigation.PushAsync(new Nuevo_Servicio_Promo());
+        }
+
+        public void onAgregarPromoPrd(object sender, EventArgs args) {
+            Navigation.PushAsync(new Nuevo_Producto_Promo());
         }
 
     }

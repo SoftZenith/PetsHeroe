@@ -25,6 +25,10 @@ namespace PetsHeroe
             await Navigation.PushAsync(new Loc_Mascota());
         }
 
+        async void onVentas(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Caja_Ventas());
+        }
+
         async void onCerrarSesion(object sender, EventArgs args) {
             Preferences.Set("logged", false, "usuarioLogeado");
             Preferences.Set("userType", 0, "tipoUsuario");
