@@ -38,16 +38,16 @@
             <Entry
                 BackgroundColor="White"
                 Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
                 Placeholder="Buscar..."
                 TextColor="Black"
                 x:Name="txtBuscar"></Entry>
             <Picker
                 BackgroundColor="White"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="2"
+                Grid.ColumnSpan="4"
+                Grid.Row="1"
                 TextColor="Black"
                 Title="Buscar por..."
                 x:Name="pkrBuscarPor">

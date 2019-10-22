@@ -206,7 +206,11 @@ namespace PetsHeroe.iOS
                     mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascota, out int IDEstatusCodigo);
                 Mascota_Registro = true;
             }catch (Exception ex){
-                Console.WriteLine("Error al registrar mascota: "+ex);
+                int indexSoap = ex.ToString().IndexOf("SoapException:");
+                string error = ex.ToString().Substring(indexSoap);
+                int indexPoint = error.IndexOf(".");
+                error = ex.ToString().Substring(24, indexPoint);
+                Console.WriteLine("Error al registrar mascota: "+error);
                 Mascota_Registro = false;
             }
         }

@@ -24,7 +24,8 @@ namespace PetsHeroe.View
         public Consulta_bene_vete()
         {
             InitializeComponent();
-
+            tipoBusqueda = 2;
+            pkrBuscarPor.SelectedIndex = tipoBusqueda;
             try
             {
                 promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));

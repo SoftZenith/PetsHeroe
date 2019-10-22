@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Input;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -8,6 +7,12 @@ namespace PetsHeroe
 {
     public partial class Reg_Masc_Perdida : ContentPage
     {
+
+        protected override void OnAppearing()
+        {
+            lsvMascotas.BeginRefresh();
+            base.OnAppearing();
+        }
 
         public void mascotaSelectedPerdida(object sender, EventArgs args) {
             Button button = (Button)sender;
@@ -63,7 +68,6 @@ namespace PetsHeroe
             }
         }
 
-
         public Reg_Masc_Perdida(){
             InitializeComponent();
             Mascota listaMasc = new Mascota();
@@ -75,5 +79,8 @@ namespace PetsHeroe
                 lsvMascotas.IsRefreshing = false;
             });
         }
+
+
+
     }
 }

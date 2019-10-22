@@ -14,18 +14,18 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Frame
@@ -53,20 +53,6 @@
                 Placeholder="Nombre comercial"
                 x:Name="txtNombreComercial">
             </input:AdvancedEntry>
-            <!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="1"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    Placeholder="Nombre comercial"
-                    x:Name="txtNombreComercial">
-                </Entry>
-            </Frame>-->
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
@@ -78,23 +64,8 @@
                 TextColor="black"
                 Placeholder="Nombre"
                 x:Name="txtNombre">
-
             </input:AdvancedEntry>
-<!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="2"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    Placeholder="Nombre"
-                    x:Name="txtNombre">
-                </Entry>
-            </Frame>
--->
+
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 Grid.Column="0"
@@ -106,21 +77,6 @@
                 Placeholder="Apellido paterno"
                 x:Name="txtApellidoP">
             </input:AdvancedEntry>
-            <!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="3"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    Placeholder="Apellido paterno"
-                    x:Name="txtApellidoP">
-                </Entry>
-            </Frame>
-            -->
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
@@ -132,23 +88,7 @@
                 TextColor="black"
                 Placeholder="Apellido materno (opcional)"
                 x:Name="txtApellidoM">
-
             </input:AdvancedEntry>
-            <!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="4"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    Placeholder="Apellido materno (opcional)"
-                    x:Name="txtApellidoM">
-                </Entry>
-            </Frame>
-            -->
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="20"
@@ -210,22 +150,6 @@
                 x:Name="txtContrasena">
 
             </input:AdvancedEntry>
-            <!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="7"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    IsPassword="True"
-                    Placeholder="Contraseña"
-                    x:Name="txtContrasena">
-                </Entry>
-            </Frame>
-            -->
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
@@ -240,22 +164,6 @@
                 x:Name="txtConConstrasena">
 
             </input:AdvancedEntry>
-            <!--
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="8"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Grid.Row="8"
-                Margin="16,0,16,0"
-                Padding="0,4,0,0">
-                <Entry
-                    IsPassword="True"
-                    Placeholder="Confirme contraseña"
-                    x:Name="txtConConstrasena">
-                </Entry>
-            </Frame>
-            -->
             <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="3"

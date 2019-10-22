@@ -5,18 +5,19 @@
     x:Class="PetsHeroe.Loc_Mascota"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
     Title="¿Encontraste unas mascota?">
+    <ScrollView>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -27,7 +28,7 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
-            Grid.Row="2"
+            Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="4"
             Margin="8,0,8,0"
@@ -45,14 +46,14 @@
             CornerRadius="12"
             Clicked="onScan"
             Grid.ColumnSpan="4"
-            Grid.Row="3"
+            Grid.Row="2"
             Margin="10,4,10,0"
             Text="Escanear"
             TextColor="White">
         </Button>
 
         <input:RadioButtonGroupView 
-            Grid.Row="4"
+            Grid.Row="3"
             Grid.RowSpan="5"
             Grid.ColumnSpan="4"
             Margin="10,8,0,10"
@@ -70,10 +71,11 @@
             Clicked="onSiguiente"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Grid.Row="9"
+            Grid.Row="8"
             Text="Siguiente"
             TextColor="White">
 
         </Button>
     </Grid>
+    </ScrollView>
 </ContentPage>

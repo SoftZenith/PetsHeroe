@@ -30,20 +30,26 @@
                                 <Label FontSize="16" Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="8,18,8,16"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
-                                <Button HorizontalOptions="FillAndExpand"
+                                <Button HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="FillAndExpand"
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
+                                        MinimumHeightRequest="80"
+                                        WidthRequest="150"
                                         Clicked="mascotaSelectedPerdida"
                                         CommandParameter="{Binding idMascota}"
                                         CornerRadius="10"
                                         Text="{Binding botonIzq}"></Button>
                                 <Button
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="CenterAndExpand"
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
+                                        MinimumHeightRequest="80"
+                                        WidthRequest="120"
                                         Clicked="mascotaSelectedRobada"
                                         CommandParameter="{Binding idMascota}"
                                         CornerRadius="10"
-                                        HorizontalOptions="FillAndExpand"
                                         Text="{Binding botonDer}"></Button>
                             </StackLayout>
                         </Grid>
