@@ -2,9 +2,10 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetsHeroe.View.Consulta_bene_dueno"
+             
              Title="Consulta de beneficios">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Dinero eléctronico" IconImageSource="money.png" Padding="8">
+  <ContentPage Title="" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">
             <ListView.Header>
@@ -45,7 +46,7 @@
         </ListView>
       </ContentPage.Content>
   </ContentPage>
-  <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
+  <ContentPage Title="" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
             <ListView.Header>

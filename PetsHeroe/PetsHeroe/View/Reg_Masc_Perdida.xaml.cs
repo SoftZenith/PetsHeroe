@@ -6,13 +6,12 @@ using Xamarin.Forms;
 namespace PetsHeroe
 {
     public partial class Reg_Masc_Perdida : ContentPage
-    {
-
+    {/*
         protected override void OnAppearing()
         {
-            lsvMascotas.BeginRefresh();
+            //lsvMascotas.BeginRefresh();
             base.OnAppearing();
-        }
+        }*/
 
         public void mascotaSelectedPerdida(object sender, EventArgs args) {
             Button button = (Button)sender;
@@ -69,15 +68,16 @@ namespace PetsHeroe
         }
 
         public Reg_Masc_Perdida(){
-            InitializeComponent();
+            InitializeComponent();/*
             Mascota listaMasc = new Mascota();
             lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
 
+            
             lsvMascotas.RefreshCommand = new Command(() => {
                 lsvMascotas.IsRefreshing = true;
                 lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
                 lsvMascotas.IsRefreshing = false;
-            });
+            });*/
         }
 
 

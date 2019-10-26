@@ -2,15 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.View.Mis_Clientes">
+    x:Class="PetsHeroe.View.Mis_Clientes"
+    Title="Mis clientes">
     <ContentPage.Content>
-        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvClientes">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black"
-                       Text="Mis clientes" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>     
+        <ListView HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvClientes">    
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -27,10 +22,10 @@
                                 <Label FontSize="16"  Text="{Binding correo, StringFormat='Correo: {0}'}" />
                                 <Label FontSize="16"  Text="{Binding telefono, StringFormat='Telefono: {0}'}" />
                                 <BoxView
-                                   VerticalOptions="FillAndExpand"
-                                   HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"  
-                                   Color="#000000"></BoxView>
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="1"  
+                                    Color="#000000"></BoxView>
                             </StackLayout>
                         </Grid>
                     </ViewCell>

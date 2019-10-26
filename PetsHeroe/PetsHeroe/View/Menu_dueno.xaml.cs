@@ -3,13 +3,19 @@ using PetsHeroe.Services;
 using PetsHeroe.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace PetsHeroe
 {
-    public partial class Menu_dueno : ContentPage
+    public partial class Menu_dueno : Xamarin.Forms.TabbedPage
     {
+
         public Menu_dueno()
         {
+            _ = On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
+             .SetBarItemColor(Color.White)
+             .SetBarSelectedItemColor(Color.OrangeRed);
             InitializeComponent();
         }
 

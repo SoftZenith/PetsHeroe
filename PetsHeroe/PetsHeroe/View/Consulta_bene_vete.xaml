@@ -58,14 +58,16 @@
                 </Picker.Items>
             </Picker>
             <Button
-                BorderColor="#ff0065"
+                BackgroundColor="#006561"
+                BorderColor="#FF7100"
                 BorderWidth="1"
                 Clicked="onBuscar"
                 CornerRadius="12"
                 Grid.Column="3"
                 Grid.ColumnSpan="1"
                 Grid.Row="2"
-                Text="Buscar">
+                Text="Buscar"
+                TextColor="White">
             </Button>
             <ListView
                 BackgroundColor="White"
@@ -131,12 +133,11 @@
                   <RowDefinition></RowDefinition>
                   <RowDefinition></RowDefinition>
                   <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
               </Grid.RowDefinitions>
           <ListView
               Grid.ColumnSpan="6"
               Grid.Row="0"
-              Grid.RowSpan="9"
+              Grid.RowSpan="8"
               HasUnevenRows="True"
               BackgroundColor="White"
               x:Name="lsvProductos">
@@ -178,12 +179,14 @@
           </ListView>
           <Button
             BorderColor="#FF7100"
+            BorderWidth="2"
             BackgroundColor="#006561"
             CornerRadius="16"
             Grid.Column="1"
             Grid.ColumnSpan="4"
-            Grid.Row="9"
+            Grid.Row="8"
             Text="Agregar promoción"
+            TextColor="White"
             Clicked="onAgregarPromoPrd">
           </Button>
         </Grid>
@@ -193,7 +196,6 @@
       <ContentPage.Content>
           <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -215,7 +217,7 @@
                 <ListView
                     Grid.ColumnSpan="6"
                     Grid.Row="0"
-                    Grid.RowSpan="9"
+                    Grid.RowSpan="8"
                     HasUnevenRows="True"
                     BackgroundColor="White"
                     x:Name="lsvServicios">
@@ -256,12 +258,14 @@
             </ListView>
                 <Button
                     BorderColor="#FF7100"
+                    BorderWidth="2"
                     BackgroundColor="#006561"
                     CornerRadius="16"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
-                    Grid.Row="9"
+                    Grid.Row="8"
                     Text="Agregar promoción"
+                    TextColor="White"
                     Clicked="onAgregarPromo">
                 </Button>
           </Grid>

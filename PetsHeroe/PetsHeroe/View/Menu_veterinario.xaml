@@ -1,10 +1,46 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<TabbedPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Pages="clr-namespace:PetsHeroe.View"
+    xmlns:Pages1="clr-namespace:PetsHeroe"
     x:Class="PetsHeroe.Menu_veterinario"
-    NavigationPage.HasBackButton="False">
-    <ContentPage.Content>
+    NavigationPage.HasBackButton="False"
+    BarBackgroundColor="#006561">
+
+    <TabbedPage.Title>Asociado</TabbedPage.Title>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logout.png" Text="Salir" Clicked="onCerrarSesion" ></ToolbarItem>
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <Pages:Mis_Clientes Title="" IconImageSource="clients.png"/>
+        <Pages:Consulta_bene_vete Title="" IconImageSource="calculator.png"/>
+        <Pages:Caja_Ventas Title="" IconImageSource="money.png"/>
+        <Pages1:Loc_Mascota Title="" IconImageSource="pet.png"/>
+    </TabbedPage.Children>
+
+    <!--
+    <NavigationPage IconImageSource="clients.png" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <Pages:Mis_Clientes/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="calculator.png">
+        <x:Arguments>
+            <Pages:Consulta_bene_vete/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="money.png">
+        <x:Arguments>
+            <Pages:Caja_Ventas/>
+        </x:Arguments>
+    </NavigationPage>
+    -->
+
+    <!--<ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -73,5 +109,6 @@
                 Text="Salir Sesión"
                 TextColor="Black"/>
         </Grid>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage.Content>-->
+
+</TabbedPage>

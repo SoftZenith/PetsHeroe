@@ -55,15 +55,15 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.815419, )"
+              "version": "[4.3.0.908675, )"
             },
             "Xamarin.Forms.InputKit": {
               "target": "Package",
-              "version": "[3.0.12, )"
+              "version": "[3.0.15, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.2.0.815419, )"
+              "version": "[4.3.0.908675, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",

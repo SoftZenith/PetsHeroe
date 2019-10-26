@@ -5,73 +5,111 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="PetsHeroe.MainPage"
-             NavigationPage.HasBackButton="False">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Button
-            BackgroundColor = "#6a00ff"
-            Clicked = "onIniciar"
-            CornerRadius = "8"
-            FontSize = "Large"
-            Grid.Row = "0"
-            Grid.Column = "0"
-            Margin = "5,5,5,0"
-            Text = "Iniciar sesión"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#ff6a00"
-            Clicked = "onMascEnc"
-            CornerRadius = "8"
-            FontSize = "Large"
-            Grid.Row = "1"
-            Grid.Column = "0"
-            Margin = "5,3,5,0"
-            Text = "¿Encontraste una mascota?"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#6a00ff"
-            Clicked = "onListaCAM"
-            CornerRadius = "8"
-            FontSize = "Large"
-            Grid.Row = "2"
-            Grid.Column = "0"
-            Margin = "5,3,5,0"
-            Text = "Lista de Veterinarias/CAMS"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#ff6a00"
-            Clicked = "onRegDueno"
-            CornerRadius = "8"
-            FontSize = "Large"
-            Grid.Row = "3"
-            Grid.Column = "0"
-            Margin = "5,3,5,0"
-            Text = "Registrar mascota"
-            TextColor = "black">
-        </Button>
-        <Button
-            BackgroundColor = "#6a00ff"
-            Clicked = "onRegVet"
-            CornerRadius = "8"
-            FontSize = "Large"
-            Grid.Row = "4"
-            Grid.Column = "0"
-            Margin = "5,3,5,5"
-            Text = "Registrar negocio"
-            TextColor = "black">
-        </Button>
-    </Grid>
+             NavigationPage.HasBackButton="False"
+             xmlns:local="clr-namespace:PetsHeroe; assembly=PetsHeroe.Model.Custom">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                FontSize="Title"
+                HorizontalOptions="CenterAndExpand"
+                Text="Bienvenido a"
+                VerticalOptions="CenterAndExpand">
+            </Label>
+            <Image
+                Grid.Row="1"
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                Source="icono_petshero.png"
+                VerticalOptions="CenterAndExpand">
+            </Image>
+            <Grid
+                Margin="16"
+                Grid.Row="2"
+                Grid.RowSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button
+                    Margin="0,0,4,4"
+                    BackgroundColor="#FF7100"
+                    Clicked="onRegDueno"
+                    ContentLayout="Top,0"
+                    FontSize="Large"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    ImageSource="paw.png"
+                    Text="Registrar mi mascota"
+                    TextColor="White">
+                </Button>
+                <Button
+                    BackgroundColor="#FF7100"
+                    Clicked="onMascEnc"
+                    ContentLayout="Top,0"
+                    FontSize="Large"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    ImageSource="target.png"
+                    Margin="4,0,0,4"
+                    Text="Encontré una mascota"
+                    TextColor="White">
+                </Button>
+                <Button
+                    BackgroundColor="#FF7100"
+                    Clicked="onRegVet"
+                    ContentLayout="Top,0"
+                    FontSize="Large"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    ImageSource="vet.png"
+                    Margin="0,4,5,0"
+                    Text="Registrar veterinaria"
+                    TextColor="White">
+                </Button>
+                <local:CustomButton>
+
+                </local:CustomButton> 
+                <!--
+                <Button
+                    BackgroundColor="#FF7100"
+                    Clicked="onListaCAM"
+                    ContentLayout="Top,0"
+                    FontSize="Large"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    ImageSource="location.png"
+                    Margin="4,4,0,0"
+                    Text="Veterinarias CAMS"
+                    TextColor="White">
+                </Button>-->
+            </Grid>
+
+            <Button
+                BackgroundColor="#006561"
+                Clicked="onIniciar"
+                FontSize="Large"
+                Grid.Row="6"
+                Margin="16,0,16,16"
+                Text="Iniciar sesión"
+                TextColor="White">
+            </Button>
+
+        </Grid>
 
 </ContentPage>

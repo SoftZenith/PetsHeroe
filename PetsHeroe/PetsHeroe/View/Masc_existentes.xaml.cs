@@ -15,5 +15,10 @@ namespace PetsHeroe
 
             lsvMascotasExiste.ItemsSource = mascotasExisten.getMascotaList(Preferences.Get("idMiembro", -1));
         }
+
+        async void onReportar(object sender, EventArgs args) {
+            await Navigation.PushAsync(new Reg_Masc_Perdida());
+        }
+
     }
 }

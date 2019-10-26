@@ -29,7 +29,7 @@
             Grid.Row="0"
             IconImage="code.png"
             Margin="8,4,8,0"
-            Placeholder="Codigo mascota"
+            Placeholder="Código mascota"
             TextColor="black"
             x:Name="txtCodigoMascota">
         </input:AdvancedEntry>

@@ -5,35 +5,66 @@
     x:Class="PetsHeroe.Masc_existentes"
     Title="Mis mascotas">
     <ContentPage.Content>
-        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotasExiste">     
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,8,8,0" Grid.Column="0" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding codigo, StringFormat='Código: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Suscripción: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding veterinario, StringFormat='Veterinario: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding alta, StringFormat='Alta: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding expira, StringFormat='Expira: {0}'}" />
-                                <BoxView
-                                   VerticalOptions="FillAndExpand"
-                                   HorizontalOptions="FillAndExpand"
-                                   HeightRequest="1"
-                                   Color="#000000"></BoxView>
-                            </StackLayout>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="8" HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotasExiste">     
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout VerticalOptions="FillAndExpand" Padding="8,8,8,0" Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding codigo, StringFormat='Código: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding suscripcion, StringFormat='Suscripción: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding veterinario, StringFormat='Veterinario: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding alta, StringFormat='Alta: {0}'}" />
+                                    <Label FontSize="16"  Text="{Binding expira, StringFormat='Expira: {0}'}" />
+                                    <BoxView
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        HeightRequest="1"
+                                        Color="#000000"></BoxView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                BorderColor="#FF7100"
+                BackgroundColor="#006561"
+                CornerRadius="14"
+                Clicked="onReportar"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Grid.Row="8"
+                Margin="0,0,0,4"
+                Text="Reportar mascota"
+                TextColor="White">
+            </Button>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

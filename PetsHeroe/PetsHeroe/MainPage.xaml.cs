@@ -23,10 +23,17 @@ namespace PetsHeroe
             
             if (logged && userType == 1)
             {
-                Navigation.PushAsync(new Menu_dueno());
+                Device.BeginInvokeOnMainThread(async () =>
+                { // Code for navigation });
+                    Navigation.PushAsync(new Menu_dueno());
+                });
             }
             else if (logged && userType == 2) {
-                Navigation.PushAsync(new Menu_veterinario());
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    Navigation.PushAsync(new Menu_veterinario());
+                });
+
             }
 
         }//Constructor

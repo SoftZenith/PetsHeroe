@@ -1,9 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<TabbedPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Pages="clr-namespace:PetsHeroe.View"
+    xmlns:Pages1="clr-namespace:PetsHeroe"
     x:Class="PetsHeroe.Menu_dueno"
-    NavigationPage.HasBackButton="False">
+    NavigationPage.HasBackButton="False"
+    BarBackgroundColor="#006561">
+
+    <TabbedPage.Title>Dueño</TabbedPage.Title>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logout.png" Text="Salir" Clicked="onCerrarSesion" ></ToolbarItem>
+    </TabbedPage.ToolbarItems>
+    <TabbedPage.Children>
+        <Pages:Consulta_bene_dueno Title="" IconImageSource="gift.png"/>
+        <Pages1:Loc_Mascota Title="" IconImageSource="target_pet.png"/>
+        <Pages1:Masc_existentes Title="" IconImageSource="pet.png"/>
+        <Pages1:Consulta_CAMS Title="" IconImageSource="vet_cam.png"/>
+        <!--<Pages1:Loc_Mascota Title="" IconImageSource="lost.png"/>-->
+    </TabbedPage.Children>
+
+    <!--
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -104,5 +121,5 @@
                 TextColor="Black"/>
 
         </Grid>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage.Content>-->
+</TabbedPage>

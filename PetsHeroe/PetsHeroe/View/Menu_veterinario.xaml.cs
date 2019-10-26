@@ -3,14 +3,21 @@ using PetsHeroe.Services;
 using PetsHeroe.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace PetsHeroe
 {
-    public partial class Menu_veterinario : ContentPage
+    public partial class Menu_veterinario : Xamarin.Forms.TabbedPage
     {
+
         public Menu_veterinario()
         {
             InitializeComponent();
+
+            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
+             .SetBarItemColor(Color.White)
+             .SetBarSelectedItemColor(Color.OrangeRed);
         }
 
         async void onMisClientes(object sender, EventArgs args) {

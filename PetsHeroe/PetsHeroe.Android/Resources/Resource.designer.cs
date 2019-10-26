@@ -101,8 +101,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Attribute.behavior_overlapTop = global::PetsHeroe.Droid.Resource.Attribute.behavior_overlapTop;
 			global::Plugin.InputKit.Resource.Attribute.behavior_peekHeight = global::PetsHeroe.Droid.Resource.Attribute.behavior_peekHeight;
 			global::Plugin.InputKit.Resource.Attribute.behavior_skipCollapsed = global::PetsHeroe.Droid.Resource.Attribute.behavior_skipCollapsed;
-			global::Plugin.InputKit.Resource.Attribute.borderWidth = global::PetsHeroe.Droid.Resource.Attribute.borderWidth;
 			global::Plugin.InputKit.Resource.Attribute.borderlessButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.borderWidth = global::PetsHeroe.Droid.Resource.Attribute.borderWidth;
 			global::Plugin.InputKit.Resource.Attribute.bottomSheetDialogTheme = global::PetsHeroe.Droid.Resource.Attribute.bottomSheetDialogTheme;
 			global::Plugin.InputKit.Resource.Attribute.bottomSheetStyle = global::PetsHeroe.Droid.Resource.Attribute.bottomSheetStyle;
 			global::Plugin.InputKit.Resource.Attribute.buttonBarButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarButtonStyle;
@@ -127,9 +127,9 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Attribute.closeIcon = global::PetsHeroe.Droid.Resource.Attribute.closeIcon;
 			global::Plugin.InputKit.Resource.Attribute.closeItemLayout = global::PetsHeroe.Droid.Resource.Attribute.closeItemLayout;
 			global::Plugin.InputKit.Resource.Attribute.collapseContentDescription = global::PetsHeroe.Droid.Resource.Attribute.collapseContentDescription;
-			global::Plugin.InputKit.Resource.Attribute.collapseIcon = global::PetsHeroe.Droid.Resource.Attribute.collapseIcon;
 			global::Plugin.InputKit.Resource.Attribute.collapsedTitleGravity = global::PetsHeroe.Droid.Resource.Attribute.collapsedTitleGravity;
 			global::Plugin.InputKit.Resource.Attribute.collapsedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.collapseIcon = global::PetsHeroe.Droid.Resource.Attribute.collapseIcon;
 			global::Plugin.InputKit.Resource.Attribute.color = global::PetsHeroe.Droid.Resource.Attribute.color;
 			global::Plugin.InputKit.Resource.Attribute.colorAccent = global::PetsHeroe.Droid.Resource.Attribute.colorAccent;
 			global::Plugin.InputKit.Resource.Attribute.colorBackgroundFloating = global::PetsHeroe.Droid.Resource.Attribute.colorBackgroundFloating;
@@ -171,8 +171,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Attribute.dividerVertical = global::PetsHeroe.Droid.Resource.Attribute.dividerVertical;
 			global::Plugin.InputKit.Resource.Attribute.drawableSize = global::PetsHeroe.Droid.Resource.Attribute.drawableSize;
 			global::Plugin.InputKit.Resource.Attribute.drawerArrowStyle = global::PetsHeroe.Droid.Resource.Attribute.drawerArrowStyle;
-			global::Plugin.InputKit.Resource.Attribute.dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Attribute.dropDownListViewStyle;
 			global::Plugin.InputKit.Resource.Attribute.dropdownListPreferredItemHeight = global::PetsHeroe.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Attribute.dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Attribute.dropDownListViewStyle;
 			global::Plugin.InputKit.Resource.Attribute.editTextBackground = global::PetsHeroe.Droid.Resource.Attribute.editTextBackground;
 			global::Plugin.InputKit.Resource.Attribute.editTextColor = global::PetsHeroe.Droid.Resource.Attribute.editTextColor;
 			global::Plugin.InputKit.Resource.Attribute.editTextStyle = global::PetsHeroe.Droid.Resource.Attribute.editTextStyle;
@@ -217,9 +217,9 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Attribute.homeAsUpIndicator = global::PetsHeroe.Droid.Resource.Attribute.homeAsUpIndicator;
 			global::Plugin.InputKit.Resource.Attribute.homeLayout = global::PetsHeroe.Droid.Resource.Attribute.homeLayout;
 			global::Plugin.InputKit.Resource.Attribute.icon = global::PetsHeroe.Droid.Resource.Attribute.icon;
+			global::Plugin.InputKit.Resource.Attribute.iconifiedByDefault = global::PetsHeroe.Droid.Resource.Attribute.iconifiedByDefault;
 			global::Plugin.InputKit.Resource.Attribute.iconTint = global::PetsHeroe.Droid.Resource.Attribute.iconTint;
 			global::Plugin.InputKit.Resource.Attribute.iconTintMode = global::PetsHeroe.Droid.Resource.Attribute.iconTintMode;
-			global::Plugin.InputKit.Resource.Attribute.iconifiedByDefault = global::PetsHeroe.Droid.Resource.Attribute.iconifiedByDefault;
 			global::Plugin.InputKit.Resource.Attribute.imageButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.imageButtonStyle;
 			global::Plugin.InputKit.Resource.Attribute.indeterminateProgressStyle = global::PetsHeroe.Droid.Resource.Attribute.indeterminateProgressStyle;
 			global::Plugin.InputKit.Resource.Attribute.initialActivityCount = global::PetsHeroe.Droid.Resource.Attribute.initialActivityCount;
@@ -384,9 +384,9 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Attribute.titleMargin = global::PetsHeroe.Droid.Resource.Attribute.titleMargin;
 			global::Plugin.InputKit.Resource.Attribute.titleMarginBottom = global::PetsHeroe.Droid.Resource.Attribute.titleMarginBottom;
 			global::Plugin.InputKit.Resource.Attribute.titleMarginEnd = global::PetsHeroe.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.InputKit.Resource.Attribute.titleMargins = global::PetsHeroe.Droid.Resource.Attribute.titleMargins;
 			global::Plugin.InputKit.Resource.Attribute.titleMarginStart = global::PetsHeroe.Droid.Resource.Attribute.titleMarginStart;
 			global::Plugin.InputKit.Resource.Attribute.titleMarginTop = global::PetsHeroe.Droid.Resource.Attribute.titleMarginTop;
-			global::Plugin.InputKit.Resource.Attribute.titleMargins = global::PetsHeroe.Droid.Resource.Attribute.titleMargins;
 			global::Plugin.InputKit.Resource.Attribute.titleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.titleTextAppearance;
 			global::Plugin.InputKit.Resource.Attribute.titleTextColor = global::PetsHeroe.Droid.Resource.Attribute.titleTextColor;
 			global::Plugin.InputKit.Resource.Attribute.titleTextStyle = global::PetsHeroe.Droid.Resource.Attribute.titleTextStyle;
@@ -745,6 +745,11 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Drawable.abc_switch_track_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
 			global::Plugin.InputKit.Resource.Drawable.abc_tab_indicator_material = global::PetsHeroe.Droid.Resource.Drawable.abc_tab_indicator_material;
 			global::Plugin.InputKit.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_material = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_material;
 			global::Plugin.InputKit.Resource.Drawable.abc_text_cursor_material = global::PetsHeroe.Droid.Resource.Drawable.abc_text_cursor_material;
 			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
 			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
@@ -752,11 +757,6 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
 			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
 			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::Plugin.InputKit.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::Plugin.InputKit.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_material = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_material;
 			global::Plugin.InputKit.Resource.Drawable.abc_vector_test = global::PetsHeroe.Droid.Resource.Drawable.abc_vector_test;
 			global::Plugin.InputKit.Resource.Drawable.avd_hide_password = global::PetsHeroe.Droid.Resource.Drawable.avd_hide_password;
 			global::Plugin.InputKit.Resource.Drawable.avd_show_password = global::PetsHeroe.Droid.Resource.Drawable.avd_show_password;
@@ -978,13 +978,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Drawable.notify_panel_notification_icon_bg = global::PetsHeroe.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Plugin.InputKit.Resource.Drawable.tooltip_frame_dark = global::PetsHeroe.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Plugin.InputKit.Resource.Drawable.tooltip_frame_light = global::PetsHeroe.Droid.Resource.Drawable.tooltip_frame_light;
-			global::Plugin.InputKit.Resource.Id.ALT = global::PetsHeroe.Droid.Resource.Id.ALT;
-			global::Plugin.InputKit.Resource.Id.CTRL = global::PetsHeroe.Droid.Resource.Id.CTRL;
-			global::Plugin.InputKit.Resource.Id.FUNCTION = global::PetsHeroe.Droid.Resource.Id.FUNCTION;
-			global::Plugin.InputKit.Resource.Id.META = global::PetsHeroe.Droid.Resource.Id.META;
-			global::Plugin.InputKit.Resource.Id.SHIFT = global::PetsHeroe.Droid.Resource.Id.SHIFT;
-			global::Plugin.InputKit.Resource.Id.SYM = global::PetsHeroe.Droid.Resource.Id.SYM;
 			global::Plugin.InputKit.Resource.Id.action0 = global::PetsHeroe.Droid.Resource.Id.action0;
+			global::Plugin.InputKit.Resource.Id.actions = global::PetsHeroe.Droid.Resource.Id.actions;
 			global::Plugin.InputKit.Resource.Id.action_bar = global::PetsHeroe.Droid.Resource.Id.action_bar;
 			global::Plugin.InputKit.Resource.Id.action_bar_activity_content = global::PetsHeroe.Droid.Resource.Id.action_bar_activity_content;
 			global::Plugin.InputKit.Resource.Id.action_bar_container = global::PetsHeroe.Droid.Resource.Id.action_bar_container;
@@ -1002,11 +997,11 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.action_mode_bar_stub = global::PetsHeroe.Droid.Resource.Id.action_mode_bar_stub;
 			global::Plugin.InputKit.Resource.Id.action_mode_close_button = global::PetsHeroe.Droid.Resource.Id.action_mode_close_button;
 			global::Plugin.InputKit.Resource.Id.action_text = global::PetsHeroe.Droid.Resource.Id.action_text;
-			global::Plugin.InputKit.Resource.Id.actions = global::PetsHeroe.Droid.Resource.Id.actions;
 			global::Plugin.InputKit.Resource.Id.activity_chooser_view_content = global::PetsHeroe.Droid.Resource.Id.activity_chooser_view_content;
 			global::Plugin.InputKit.Resource.Id.add = global::PetsHeroe.Droid.Resource.Id.add;
 			global::Plugin.InputKit.Resource.Id.alertTitle = global::PetsHeroe.Droid.Resource.Id.alertTitle;
 			global::Plugin.InputKit.Resource.Id.all = global::PetsHeroe.Droid.Resource.Id.all;
+			global::Plugin.InputKit.Resource.Id.ALT = global::PetsHeroe.Droid.Resource.Id.ALT;
 			global::Plugin.InputKit.Resource.Id.always = global::PetsHeroe.Droid.Resource.Id.always;
 			global::Plugin.InputKit.Resource.Id.async = global::PetsHeroe.Droid.Resource.Id.async;
 			global::Plugin.InputKit.Resource.Id.auto = global::PetsHeroe.Droid.Resource.Id.auto;
@@ -1026,6 +1021,7 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.container = global::PetsHeroe.Droid.Resource.Id.container;
 			global::Plugin.InputKit.Resource.Id.contentPanel = global::PetsHeroe.Droid.Resource.Id.contentPanel;
 			global::Plugin.InputKit.Resource.Id.coordinator = global::PetsHeroe.Droid.Resource.Id.coordinator;
+			global::Plugin.InputKit.Resource.Id.CTRL = global::PetsHeroe.Droid.Resource.Id.CTRL;
 			global::Plugin.InputKit.Resource.Id.custom = global::PetsHeroe.Droid.Resource.Id.custom;
 			global::Plugin.InputKit.Resource.Id.customPanel = global::PetsHeroe.Droid.Resource.Id.customPanel;
 			global::Plugin.InputKit.Resource.Id.decor_content_parent = global::PetsHeroe.Droid.Resource.Id.decor_content_parent;
@@ -1042,13 +1038,14 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.enterAlways = global::PetsHeroe.Droid.Resource.Id.enterAlways;
 			global::Plugin.InputKit.Resource.Id.enterAlwaysCollapsed = global::PetsHeroe.Droid.Resource.Id.enterAlwaysCollapsed;
 			global::Plugin.InputKit.Resource.Id.exitUntilCollapsed = global::PetsHeroe.Droid.Resource.Id.exitUntilCollapsed;
-			global::Plugin.InputKit.Resource.Id.expand_activities_button = global::PetsHeroe.Droid.Resource.Id.expand_activities_button;
 			global::Plugin.InputKit.Resource.Id.expanded_menu = global::PetsHeroe.Droid.Resource.Id.expanded_menu;
+			global::Plugin.InputKit.Resource.Id.expand_activities_button = global::PetsHeroe.Droid.Resource.Id.expand_activities_button;
 			global::Plugin.InputKit.Resource.Id.fill = global::PetsHeroe.Droid.Resource.Id.fill;
 			global::Plugin.InputKit.Resource.Id.fill_horizontal = global::PetsHeroe.Droid.Resource.Id.fill_horizontal;
 			global::Plugin.InputKit.Resource.Id.fill_vertical = global::PetsHeroe.Droid.Resource.Id.fill_vertical;
 			global::Plugin.InputKit.Resource.Id.@fixed = global::PetsHeroe.Droid.Resource.Id.@fixed;
 			global::Plugin.InputKit.Resource.Id.forever = global::PetsHeroe.Droid.Resource.Id.forever;
+			global::Plugin.InputKit.Resource.Id.FUNCTION = global::PetsHeroe.Droid.Resource.Id.FUNCTION;
 			global::Plugin.InputKit.Resource.Id.ghost_view = global::PetsHeroe.Droid.Resource.Id.ghost_view;
 			global::Plugin.InputKit.Resource.Id.home = global::PetsHeroe.Droid.Resource.Id.home;
 			global::Plugin.InputKit.Resource.Id.homeAsUp = global::PetsHeroe.Droid.Resource.Id.homeAsUp;
@@ -1068,6 +1065,7 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.masked = global::PetsHeroe.Droid.Resource.Id.masked;
 			global::Plugin.InputKit.Resource.Id.media_actions = global::PetsHeroe.Droid.Resource.Id.media_actions;
 			global::Plugin.InputKit.Resource.Id.message = global::PetsHeroe.Droid.Resource.Id.message;
+			global::Plugin.InputKit.Resource.Id.META = global::PetsHeroe.Droid.Resource.Id.META;
 			global::Plugin.InputKit.Resource.Id.middle = global::PetsHeroe.Droid.Resource.Id.middle;
 			global::Plugin.InputKit.Resource.Id.mini = global::PetsHeroe.Droid.Resource.Id.mini;
 			global::Plugin.InputKit.Resource.Id.mr_art = global::PetsHeroe.Droid.Resource.Id.mr_art;
@@ -1118,10 +1116,10 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.save_scale_type = global::PetsHeroe.Droid.Resource.Id.save_scale_type;
 			global::Plugin.InputKit.Resource.Id.screen = global::PetsHeroe.Droid.Resource.Id.screen;
 			global::Plugin.InputKit.Resource.Id.scroll = global::PetsHeroe.Droid.Resource.Id.scroll;
+			global::Plugin.InputKit.Resource.Id.scrollable = global::PetsHeroe.Droid.Resource.Id.scrollable;
 			global::Plugin.InputKit.Resource.Id.scrollIndicatorDown = global::PetsHeroe.Droid.Resource.Id.scrollIndicatorDown;
 			global::Plugin.InputKit.Resource.Id.scrollIndicatorUp = global::PetsHeroe.Droid.Resource.Id.scrollIndicatorUp;
 			global::Plugin.InputKit.Resource.Id.scrollView = global::PetsHeroe.Droid.Resource.Id.scrollView;
-			global::Plugin.InputKit.Resource.Id.scrollable = global::PetsHeroe.Droid.Resource.Id.scrollable;
 			global::Plugin.InputKit.Resource.Id.search_badge = global::PetsHeroe.Droid.Resource.Id.search_badge;
 			global::Plugin.InputKit.Resource.Id.search_bar = global::PetsHeroe.Droid.Resource.Id.search_bar;
 			global::Plugin.InputKit.Resource.Id.search_button = global::PetsHeroe.Droid.Resource.Id.search_button;
@@ -1133,6 +1131,7 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.search_src_text = global::PetsHeroe.Droid.Resource.Id.search_src_text;
 			global::Plugin.InputKit.Resource.Id.search_voice_btn = global::PetsHeroe.Droid.Resource.Id.search_voice_btn;
 			global::Plugin.InputKit.Resource.Id.select_dialog_listview = global::PetsHeroe.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.InputKit.Resource.Id.SHIFT = global::PetsHeroe.Droid.Resource.Id.SHIFT;
 			global::Plugin.InputKit.Resource.Id.shortcut = global::PetsHeroe.Droid.Resource.Id.shortcut;
 			global::Plugin.InputKit.Resource.Id.showCustom = global::PetsHeroe.Droid.Resource.Id.showCustom;
 			global::Plugin.InputKit.Resource.Id.showHome = global::PetsHeroe.Droid.Resource.Id.showHome;
@@ -1150,15 +1149,16 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Id.status_bar_latest_event_content = global::PetsHeroe.Droid.Resource.Id.status_bar_latest_event_content;
 			global::Plugin.InputKit.Resource.Id.submenuarrow = global::PetsHeroe.Droid.Resource.Id.submenuarrow;
 			global::Plugin.InputKit.Resource.Id.submit_area = global::PetsHeroe.Droid.Resource.Id.submit_area;
+			global::Plugin.InputKit.Resource.Id.SYM = global::PetsHeroe.Droid.Resource.Id.SYM;
 			global::Plugin.InputKit.Resource.Id.tabMode = global::PetsHeroe.Droid.Resource.Id.tabMode;
 			global::Plugin.InputKit.Resource.Id.tag_transition_group = global::PetsHeroe.Droid.Resource.Id.tag_transition_group;
 			global::Plugin.InputKit.Resource.Id.text = global::PetsHeroe.Droid.Resource.Id.text;
 			global::Plugin.InputKit.Resource.Id.text2 = global::PetsHeroe.Droid.Resource.Id.text2;
+			global::Plugin.InputKit.Resource.Id.textinput_counter = global::PetsHeroe.Droid.Resource.Id.textinput_counter;
+			global::Plugin.InputKit.Resource.Id.textinput_error = global::PetsHeroe.Droid.Resource.Id.textinput_error;
 			global::Plugin.InputKit.Resource.Id.textSpacerNoButtons = global::PetsHeroe.Droid.Resource.Id.textSpacerNoButtons;
 			global::Plugin.InputKit.Resource.Id.textSpacerNoTitle = global::PetsHeroe.Droid.Resource.Id.textSpacerNoTitle;
 			global::Plugin.InputKit.Resource.Id.text_input_password_toggle = global::PetsHeroe.Droid.Resource.Id.text_input_password_toggle;
-			global::Plugin.InputKit.Resource.Id.textinput_counter = global::PetsHeroe.Droid.Resource.Id.textinput_counter;
-			global::Plugin.InputKit.Resource.Id.textinput_error = global::PetsHeroe.Droid.Resource.Id.textinput_error;
 			global::Plugin.InputKit.Resource.Id.time = global::PetsHeroe.Droid.Resource.Id.time;
 			global::Plugin.InputKit.Resource.Id.title = global::PetsHeroe.Droid.Resource.Id.title;
 			global::Plugin.InputKit.Resource.Id.titleDividerNoCustom = global::PetsHeroe.Droid.Resource.Id.titleDividerNoCustom;
@@ -1263,8 +1263,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.String.abc_action_bar_up_description = global::PetsHeroe.Droid.Resource.String.abc_action_bar_up_description;
 			global::Plugin.InputKit.Resource.String.abc_action_menu_overflow_description = global::PetsHeroe.Droid.Resource.String.abc_action_menu_overflow_description;
 			global::Plugin.InputKit.Resource.String.abc_action_mode_done = global::PetsHeroe.Droid.Resource.String.abc_action_mode_done;
-			global::Plugin.InputKit.Resource.String.abc_activity_chooser_view_see_all = global::PetsHeroe.Droid.Resource.String.abc_activity_chooser_view_see_all;
 			global::Plugin.InputKit.Resource.String.abc_activitychooserview_choose_application = global::PetsHeroe.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.InputKit.Resource.String.abc_activity_chooser_view_see_all = global::PetsHeroe.Droid.Resource.String.abc_activity_chooser_view_see_all;
 			global::Plugin.InputKit.Resource.String.abc_capital_off = global::PetsHeroe.Droid.Resource.String.abc_capital_off;
 			global::Plugin.InputKit.Resource.String.abc_capital_on = global::PetsHeroe.Droid.Resource.String.abc_capital_on;
 			global::Plugin.InputKit.Resource.String.abc_font_family_body_1_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_body_1_material;
@@ -1279,12 +1279,12 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.String.abc_font_family_menu_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_menu_material;
 			global::Plugin.InputKit.Resource.String.abc_font_family_subhead_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_subhead_material;
 			global::Plugin.InputKit.Resource.String.abc_font_family_title_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_title_material;
-			global::Plugin.InputKit.Resource.String.abc_search_hint = global::PetsHeroe.Droid.Resource.String.abc_search_hint;
 			global::Plugin.InputKit.Resource.String.abc_searchview_description_clear = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_clear;
 			global::Plugin.InputKit.Resource.String.abc_searchview_description_query = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_query;
 			global::Plugin.InputKit.Resource.String.abc_searchview_description_search = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_search;
 			global::Plugin.InputKit.Resource.String.abc_searchview_description_submit = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_submit;
 			global::Plugin.InputKit.Resource.String.abc_searchview_description_voice = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.InputKit.Resource.String.abc_search_hint = global::PetsHeroe.Droid.Resource.String.abc_search_hint;
 			global::Plugin.InputKit.Resource.String.abc_shareactionprovider_share_with = global::PetsHeroe.Droid.Resource.String.abc_shareactionprovider_share_with;
 			global::Plugin.InputKit.Resource.String.abc_shareactionprovider_share_with_application = global::PetsHeroe.Droid.Resource.String.abc_shareactionprovider_share_with_application;
 			global::Plugin.InputKit.Resource.String.abc_toolbar_collapse_description = global::PetsHeroe.Droid.Resource.String.abc_toolbar_collapse_description;
@@ -1331,8 +1331,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::PetsHeroe.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
 			global::Plugin.InputKit.Resource.Style.Base_Animation_AppCompat_Tooltip = global::PetsHeroe.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
 			global::Plugin.InputKit.Resource.Style.Base_CardView = global::PetsHeroe.Droid.Resource.Style.Base_CardView;
-			global::Plugin.InputKit.Resource.Style.Base_DialogWindowTitle_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_DialogWindowTitle_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
@@ -1381,20 +1381,6 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
@@ -1402,11 +1388,25 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::Plugin.InputKit.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V22_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V22_Theme_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_V22_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
 			global::Plugin.InputKit.Resource.Style.Base_V23_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V23_Theme_AppCompat;
@@ -1414,11 +1414,11 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Base_V26_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V26_Theme_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_V26_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
 			global::Plugin.InputKit.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::Plugin.InputKit.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
 			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
@@ -1434,13 +1434,13 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Small = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
 			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
@@ -1500,12 +1500,12 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
 			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
 			global::Plugin.InputKit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::PetsHeroe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
 			global::Plugin.InputKit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::PetsHeroe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
 			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat;
@@ -1579,25 +1579,34 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MediaRouter_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_CompactMenu = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_Design = global::PetsHeroe.Droid.Resource.Style.Theme_Design;
@@ -1608,17 +1617,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Theme_Design_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_Design_NoActionBar;
 			global::Plugin.InputKit.Resource.Style.Theme_MediaRouter = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter;
 			global::Plugin.InputKit.Resource.Style.Theme_MediaRouter_Light = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::Plugin.InputKit.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
 			global::Plugin.InputKit.Resource.Style.Theme_MediaRouter_LightControlPanel = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
-			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MediaRouter_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::Plugin.InputKit.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
@@ -1631,13 +1631,13 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActivityChooserView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Borderless = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Colored = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Small = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
 			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
@@ -1706,6 +1706,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::PetsHeroe.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
 			global::Plugin.InputKit.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::PetsHeroe.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar = global::PetsHeroe.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_background = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_background;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_backgroundSplit = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_backgroundSplit;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_backgroundStacked = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_backgroundStacked;
@@ -1735,8 +1737,6 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_subtitleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_title = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_title;
 			global::Plugin.InputKit.Resource.Styleable.ActionBar_titleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout;
-			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
 			global::Plugin.InputKit.Resource.Styleable.ActionMenuItemView = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuItemView;
 			global::Plugin.InputKit.Resource.Styleable.ActionMenuItemView_android_minWidth = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
 			global::Plugin.InputKit.Resource.Styleable.ActionMenuView = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuView;
@@ -1759,14 +1759,14 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.AlertDialog_showTitle = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_showTitle;
 			global::Plugin.InputKit.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_background = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_background;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_elevation = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_elevation;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_expanded = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates;
-			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
-			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
 			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
@@ -1861,8 +1861,8 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dialogTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dividerVertical = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextColor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
 			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
@@ -1954,15 +1954,15 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_title = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
 			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
-			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
-			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
 			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem;
 			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem_alpha = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem_alpha;
 			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem_android_alpha = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
@@ -1973,7 +1973,6 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.CompoundButton_buttonTintMode = global::PetsHeroe.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_keylines = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
@@ -1982,6 +1981,7 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
 			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
 			global::Plugin.InputKit.Resource.Styleable.DesignTheme = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme;
 			global::Plugin.InputKit.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
 			global::Plugin.InputKit.Resource.Styleable.DesignTheme_bottomSheetStyle = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
@@ -1997,21 +1997,15 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_backgroundTint = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_borderWidth = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_elevation = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_elevation;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_fabSize = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_fabSize;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_rippleColor = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
 			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_useCompatPadding = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
-			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
 			global::Plugin.InputKit.Resource.Styleable.FontFamily = global::PetsHeroe.Droid.Resource.Styleable.FontFamily;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderAuthority = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderCerts = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderPackage = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderQuery = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont;
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_font = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_android_font;
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_fontStyle = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
@@ -2019,6 +2013,12 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_font = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_font;
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_fontStyle = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
 			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_fontWeight = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderAuthority = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderCerts = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderPackage = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderQuery = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout;
 			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
 			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
@@ -2031,13 +2031,13 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_divider = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_divider;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_showDividers = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
 			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_showDividers = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
 			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow;
 			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
 			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
@@ -2099,11 +2099,11 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemTextColor = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_itemTextColor;
 			global::Plugin.InputKit.Resource.Styleable.NavigationView_menu = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_menu;
 			global::Plugin.InputKit.Resource.Styleable.PopupWindow = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
 			global::Plugin.InputKit.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
 			global::Plugin.InputKit.Resource.Styleable.PopupWindow_android_popupBackground = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
 			global::Plugin.InputKit.Resource.Styleable.PopupWindow_overlapAnchor = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
 			global::Plugin.InputKit.Resource.Styleable.RecycleListView = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView;
 			global::Plugin.InputKit.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Plugin.InputKit.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
@@ -2243,17 +2243,12 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMargin = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMargin;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginBottom = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginEnd = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMargins = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMargins;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginStart = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginStart;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginTop = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMargins = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMargins;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
 			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleTextColor = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleTextColor;
 			global::Plugin.InputKit.Resource.Styleable.View = global::PetsHeroe.Droid.Resource.Styleable.View;
-			global::Plugin.InputKit.Resource.Styleable.View_android_focusable = global::PetsHeroe.Droid.Resource.Styleable.View_android_focusable;
-			global::Plugin.InputKit.Resource.Styleable.View_android_theme = global::PetsHeroe.Droid.Resource.Styleable.View_android_theme;
-			global::Plugin.InputKit.Resource.Styleable.View_paddingEnd = global::PetsHeroe.Droid.Resource.Styleable.View_paddingEnd;
-			global::Plugin.InputKit.Resource.Styleable.View_paddingStart = global::PetsHeroe.Droid.Resource.Styleable.View_paddingStart;
-			global::Plugin.InputKit.Resource.Styleable.View_theme = global::PetsHeroe.Droid.Resource.Styleable.View_theme;
 			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper;
 			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper_android_background = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
 			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
@@ -2262,6 +2257,11 @@ namespace PetsHeroe.Droid
 			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_id = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_inflatedId = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_layout = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Plugin.InputKit.Resource.Styleable.View_android_focusable = global::PetsHeroe.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.InputKit.Resource.Styleable.View_android_theme = global::PetsHeroe.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.InputKit.Resource.Styleable.View_paddingEnd = global::PetsHeroe.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.InputKit.Resource.Styleable.View_paddingStart = global::PetsHeroe.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.InputKit.Resource.Styleable.View_theme = global::PetsHeroe.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::PetsHeroe.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::PetsHeroe.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::PetsHeroe.Droid.Resource.Attribute.font;
@@ -8138,772 +8138,808 @@ namespace PetsHeroe.Droid
 			public const int avd_show_password = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int code = 2131165276;
+			public const int calculator = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int common_full_open_on_phone = 2131165277;
+			public const int cam = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int common_google_signin_btn_icon_dark = 2131165278;
+			public const int clients = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int common_google_signin_btn_icon_dark_focused = 2131165279;
+			public const int code = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int common_google_signin_btn_icon_dark_normal = 2131165280;
+			public const int common_full_open_on_phone = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131165281;
+			public const int common_google_signin_btn_icon_dark = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int common_google_signin_btn_icon_disabled = 2131165282;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int common_google_signin_btn_icon_light = 2131165283;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int common_google_signin_btn_icon_light_focused = 2131165284;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int common_google_signin_btn_icon_light_normal = 2131165285;
+			public const int common_google_signin_btn_icon_disabled = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int common_google_signin_btn_icon_light_normal_background = 2131165286;
+			public const int common_google_signin_btn_icon_light = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int common_google_signin_btn_text_dark = 2131165287;
+			public const int common_google_signin_btn_icon_light_focused = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int common_google_signin_btn_text_dark_focused = 2131165288;
+			public const int common_google_signin_btn_icon_light_normal = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int common_google_signin_btn_text_dark_normal = 2131165289;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int common_google_signin_btn_text_dark_normal_background = 2131165290;
+			public const int common_google_signin_btn_text_dark = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int common_google_signin_btn_text_disabled = 2131165291;
+			public const int common_google_signin_btn_text_dark_focused = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int common_google_signin_btn_text_light = 2131165292;
+			public const int common_google_signin_btn_text_dark_normal = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int common_google_signin_btn_text_light_focused = 2131165293;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int common_google_signin_btn_text_light_normal = 2131165294;
+			public const int common_google_signin_btn_text_disabled = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int common_google_signin_btn_text_light_normal_background = 2131165295;
+			public const int common_google_signin_btn_text_light = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int delete = 2131165296;
+			public const int common_google_signin_btn_text_light_focused = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int design_bottom_navigation_item_background = 2131165297;
+			public const int common_google_signin_btn_text_light_normal = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int design_fab_background = 2131165298;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int design_ic_visibility = 2131165299;
+			public const int delete = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int design_ic_visibility_off = 2131165300;
+			public const int design_bottom_navigation_item_background = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int design_password_eye = 2131165301;
+			public const int design_fab_background = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int design_snackbar_background = 2131165302;
+			public const int design_ic_visibility = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int edit = 2131165303;
+			public const int design_ic_visibility_off = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int email = 2131165304;
+			public const int design_password_eye = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int googleg_disabled_color_18 = 2131165305;
+			public const int design_snackbar_background = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int googleg_standard_color_18 = 2131165306;
-			
-			// aapt resource value: 0x7F07012F
-			public const int icono_petshero = 2131165487;
+			public const int edit = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int ic_audiotrack_dark = 2131165307;
+			public const int email = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int ic_audiotrack_light = 2131165308;
+			public const int gift = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int ic_dialog_close_dark = 2131165309;
+			public const int googleg_disabled_color_18 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int ic_dialog_close_light = 2131165310;
-			
-			// aapt resource value: 0x7F07007F
-			public const int ic_group_collapse_00 = 2131165311;
-			
-			// aapt resource value: 0x7F070080
-			public const int ic_group_collapse_01 = 2131165312;
-			
-			// aapt resource value: 0x7F070081
-			public const int ic_group_collapse_02 = 2131165313;
-			
-			// aapt resource value: 0x7F070082
-			public const int ic_group_collapse_03 = 2131165314;
-			
-			// aapt resource value: 0x7F070083
-			public const int ic_group_collapse_04 = 2131165315;
-			
-			// aapt resource value: 0x7F070084
-			public const int ic_group_collapse_05 = 2131165316;
-			
-			// aapt resource value: 0x7F070085
-			public const int ic_group_collapse_06 = 2131165317;
-			
-			// aapt resource value: 0x7F070086
-			public const int ic_group_collapse_07 = 2131165318;
-			
-			// aapt resource value: 0x7F070087
-			public const int ic_group_collapse_08 = 2131165319;
-			
-			// aapt resource value: 0x7F070088
-			public const int ic_group_collapse_09 = 2131165320;
-			
-			// aapt resource value: 0x7F070089
-			public const int ic_group_collapse_10 = 2131165321;
-			
-			// aapt resource value: 0x7F07008A
-			public const int ic_group_collapse_11 = 2131165322;
-			
-			// aapt resource value: 0x7F07008B
-			public const int ic_group_collapse_12 = 2131165323;
-			
-			// aapt resource value: 0x7F07008C
-			public const int ic_group_collapse_13 = 2131165324;
-			
-			// aapt resource value: 0x7F07008D
-			public const int ic_group_collapse_14 = 2131165325;
-			
-			// aapt resource value: 0x7F07008E
-			public const int ic_group_collapse_15 = 2131165326;
-			
-			// aapt resource value: 0x7F07008F
-			public const int ic_group_expand_00 = 2131165327;
-			
-			// aapt resource value: 0x7F070090
-			public const int ic_group_expand_01 = 2131165328;
-			
-			// aapt resource value: 0x7F070091
-			public const int ic_group_expand_02 = 2131165329;
-			
-			// aapt resource value: 0x7F070092
-			public const int ic_group_expand_03 = 2131165330;
-			
-			// aapt resource value: 0x7F070093
-			public const int ic_group_expand_04 = 2131165331;
-			
-			// aapt resource value: 0x7F070094
-			public const int ic_group_expand_05 = 2131165332;
-			
-			// aapt resource value: 0x7F070095
-			public const int ic_group_expand_06 = 2131165333;
-			
-			// aapt resource value: 0x7F070096
-			public const int ic_group_expand_07 = 2131165334;
-			
-			// aapt resource value: 0x7F070097
-			public const int ic_group_expand_08 = 2131165335;
-			
-			// aapt resource value: 0x7F070098
-			public const int ic_group_expand_09 = 2131165336;
-			
-			// aapt resource value: 0x7F070099
-			public const int ic_group_expand_10 = 2131165337;
-			
-			// aapt resource value: 0x7F07009A
-			public const int ic_group_expand_11 = 2131165338;
-			
-			// aapt resource value: 0x7F07009B
-			public const int ic_group_expand_12 = 2131165339;
-			
-			// aapt resource value: 0x7F07009C
-			public const int ic_group_expand_13 = 2131165340;
-			
-			// aapt resource value: 0x7F07009D
-			public const int ic_group_expand_14 = 2131165341;
-			
-			// aapt resource value: 0x7F07009E
-			public const int ic_group_expand_15 = 2131165342;
-			
-			// aapt resource value: 0x7F07009F
-			public const int ic_media_pause_dark = 2131165343;
-			
-			// aapt resource value: 0x7F0700A0
-			public const int ic_media_pause_light = 2131165344;
-			
-			// aapt resource value: 0x7F0700A1
-			public const int ic_media_play_dark = 2131165345;
-			
-			// aapt resource value: 0x7F0700A2
-			public const int ic_media_play_light = 2131165346;
-			
-			// aapt resource value: 0x7F0700A3
-			public const int ic_media_stop_dark = 2131165347;
-			
-			// aapt resource value: 0x7F0700A4
-			public const int ic_media_stop_light = 2131165348;
-			
-			// aapt resource value: 0x7F0700A5
-			public const int ic_mr_button_connected_00_dark = 2131165349;
-			
-			// aapt resource value: 0x7F0700A6
-			public const int ic_mr_button_connected_00_light = 2131165350;
-			
-			// aapt resource value: 0x7F0700A7
-			public const int ic_mr_button_connected_01_dark = 2131165351;
-			
-			// aapt resource value: 0x7F0700A8
-			public const int ic_mr_button_connected_01_light = 2131165352;
-			
-			// aapt resource value: 0x7F0700A9
-			public const int ic_mr_button_connected_02_dark = 2131165353;
-			
-			// aapt resource value: 0x7F0700AA
-			public const int ic_mr_button_connected_02_light = 2131165354;
-			
-			// aapt resource value: 0x7F0700AB
-			public const int ic_mr_button_connected_03_dark = 2131165355;
-			
-			// aapt resource value: 0x7F0700AC
-			public const int ic_mr_button_connected_03_light = 2131165356;
-			
-			// aapt resource value: 0x7F0700AD
-			public const int ic_mr_button_connected_04_dark = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int ic_mr_button_connected_04_light = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int ic_mr_button_connected_05_dark = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int ic_mr_button_connected_05_light = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int ic_mr_button_connected_06_dark = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int ic_mr_button_connected_06_light = 2131165362;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int ic_mr_button_connected_07_dark = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int ic_mr_button_connected_07_light = 2131165364;
-			
-			// aapt resource value: 0x7F0700B5
-			public const int ic_mr_button_connected_08_dark = 2131165365;
-			
-			// aapt resource value: 0x7F0700B6
-			public const int ic_mr_button_connected_08_light = 2131165366;
-			
-			// aapt resource value: 0x7F0700B7
-			public const int ic_mr_button_connected_09_dark = 2131165367;
-			
-			// aapt resource value: 0x7F0700B8
-			public const int ic_mr_button_connected_09_light = 2131165368;
-			
-			// aapt resource value: 0x7F0700B9
-			public const int ic_mr_button_connected_10_dark = 2131165369;
-			
-			// aapt resource value: 0x7F0700BA
-			public const int ic_mr_button_connected_10_light = 2131165370;
-			
-			// aapt resource value: 0x7F0700BB
-			public const int ic_mr_button_connected_11_dark = 2131165371;
-			
-			// aapt resource value: 0x7F0700BC
-			public const int ic_mr_button_connected_11_light = 2131165372;
-			
-			// aapt resource value: 0x7F0700BD
-			public const int ic_mr_button_connected_12_dark = 2131165373;
-			
-			// aapt resource value: 0x7F0700BE
-			public const int ic_mr_button_connected_12_light = 2131165374;
-			
-			// aapt resource value: 0x7F0700BF
-			public const int ic_mr_button_connected_13_dark = 2131165375;
-			
-			// aapt resource value: 0x7F0700C0
-			public const int ic_mr_button_connected_13_light = 2131165376;
-			
-			// aapt resource value: 0x7F0700C1
-			public const int ic_mr_button_connected_14_dark = 2131165377;
-			
-			// aapt resource value: 0x7F0700C2
-			public const int ic_mr_button_connected_14_light = 2131165378;
-			
-			// aapt resource value: 0x7F0700C3
-			public const int ic_mr_button_connected_15_dark = 2131165379;
-			
-			// aapt resource value: 0x7F0700C4
-			public const int ic_mr_button_connected_15_light = 2131165380;
-			
-			// aapt resource value: 0x7F0700C5
-			public const int ic_mr_button_connected_16_dark = 2131165381;
-			
-			// aapt resource value: 0x7F0700C6
-			public const int ic_mr_button_connected_16_light = 2131165382;
-			
-			// aapt resource value: 0x7F0700C7
-			public const int ic_mr_button_connected_17_dark = 2131165383;
-			
-			// aapt resource value: 0x7F0700C8
-			public const int ic_mr_button_connected_17_light = 2131165384;
-			
-			// aapt resource value: 0x7F0700C9
-			public const int ic_mr_button_connected_18_dark = 2131165385;
-			
-			// aapt resource value: 0x7F0700CA
-			public const int ic_mr_button_connected_18_light = 2131165386;
-			
-			// aapt resource value: 0x7F0700CB
-			public const int ic_mr_button_connected_19_dark = 2131165387;
-			
-			// aapt resource value: 0x7F0700CC
-			public const int ic_mr_button_connected_19_light = 2131165388;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int ic_mr_button_connected_20_dark = 2131165389;
-			
-			// aapt resource value: 0x7F0700CE
-			public const int ic_mr_button_connected_20_light = 2131165390;
-			
-			// aapt resource value: 0x7F0700CF
-			public const int ic_mr_button_connected_21_dark = 2131165391;
-			
-			// aapt resource value: 0x7F0700D0
-			public const int ic_mr_button_connected_21_light = 2131165392;
-			
-			// aapt resource value: 0x7F0700D1
-			public const int ic_mr_button_connected_22_dark = 2131165393;
-			
-			// aapt resource value: 0x7F0700D2
-			public const int ic_mr_button_connected_22_light = 2131165394;
-			
-			// aapt resource value: 0x7F0700D3
-			public const int ic_mr_button_connected_23_dark = 2131165395;
-			
-			// aapt resource value: 0x7F0700D4
-			public const int ic_mr_button_connected_23_light = 2131165396;
-			
-			// aapt resource value: 0x7F0700D5
-			public const int ic_mr_button_connected_24_dark = 2131165397;
-			
-			// aapt resource value: 0x7F0700D6
-			public const int ic_mr_button_connected_24_light = 2131165398;
-			
-			// aapt resource value: 0x7F0700D7
-			public const int ic_mr_button_connected_25_dark = 2131165399;
-			
-			// aapt resource value: 0x7F0700D8
-			public const int ic_mr_button_connected_25_light = 2131165400;
-			
-			// aapt resource value: 0x7F0700D9
-			public const int ic_mr_button_connected_26_dark = 2131165401;
-			
-			// aapt resource value: 0x7F0700DA
-			public const int ic_mr_button_connected_26_light = 2131165402;
-			
-			// aapt resource value: 0x7F0700DB
-			public const int ic_mr_button_connected_27_dark = 2131165403;
-			
-			// aapt resource value: 0x7F0700DC
-			public const int ic_mr_button_connected_27_light = 2131165404;
-			
-			// aapt resource value: 0x7F0700DD
-			public const int ic_mr_button_connected_28_dark = 2131165405;
-			
-			// aapt resource value: 0x7F0700DE
-			public const int ic_mr_button_connected_28_light = 2131165406;
-			
-			// aapt resource value: 0x7F0700DF
-			public const int ic_mr_button_connected_29_dark = 2131165407;
-			
-			// aapt resource value: 0x7F0700E0
-			public const int ic_mr_button_connected_29_light = 2131165408;
-			
-			// aapt resource value: 0x7F0700E1
-			public const int ic_mr_button_connected_30_dark = 2131165409;
-			
-			// aapt resource value: 0x7F0700E2
-			public const int ic_mr_button_connected_30_light = 2131165410;
-			
-			// aapt resource value: 0x7F0700E3
-			public const int ic_mr_button_connecting_00_dark = 2131165411;
-			
-			// aapt resource value: 0x7F0700E4
-			public const int ic_mr_button_connecting_00_light = 2131165412;
-			
-			// aapt resource value: 0x7F0700E5
-			public const int ic_mr_button_connecting_01_dark = 2131165413;
-			
-			// aapt resource value: 0x7F0700E6
-			public const int ic_mr_button_connecting_01_light = 2131165414;
-			
-			// aapt resource value: 0x7F0700E7
-			public const int ic_mr_button_connecting_02_dark = 2131165415;
-			
-			// aapt resource value: 0x7F0700E8
-			public const int ic_mr_button_connecting_02_light = 2131165416;
-			
-			// aapt resource value: 0x7F0700E9
-			public const int ic_mr_button_connecting_03_dark = 2131165417;
-			
-			// aapt resource value: 0x7F0700EA
-			public const int ic_mr_button_connecting_03_light = 2131165418;
-			
-			// aapt resource value: 0x7F0700EB
-			public const int ic_mr_button_connecting_04_dark = 2131165419;
-			
-			// aapt resource value: 0x7F0700EC
-			public const int ic_mr_button_connecting_04_light = 2131165420;
-			
-			// aapt resource value: 0x7F0700ED
-			public const int ic_mr_button_connecting_05_dark = 2131165421;
-			
-			// aapt resource value: 0x7F0700EE
-			public const int ic_mr_button_connecting_05_light = 2131165422;
-			
-			// aapt resource value: 0x7F0700EF
-			public const int ic_mr_button_connecting_06_dark = 2131165423;
-			
-			// aapt resource value: 0x7F0700F0
-			public const int ic_mr_button_connecting_06_light = 2131165424;
-			
-			// aapt resource value: 0x7F0700F1
-			public const int ic_mr_button_connecting_07_dark = 2131165425;
-			
-			// aapt resource value: 0x7F0700F2
-			public const int ic_mr_button_connecting_07_light = 2131165426;
-			
-			// aapt resource value: 0x7F0700F3
-			public const int ic_mr_button_connecting_08_dark = 2131165427;
-			
-			// aapt resource value: 0x7F0700F4
-			public const int ic_mr_button_connecting_08_light = 2131165428;
-			
-			// aapt resource value: 0x7F0700F5
-			public const int ic_mr_button_connecting_09_dark = 2131165429;
-			
-			// aapt resource value: 0x7F0700F6
-			public const int ic_mr_button_connecting_09_light = 2131165430;
-			
-			// aapt resource value: 0x7F0700F7
-			public const int ic_mr_button_connecting_10_dark = 2131165431;
-			
-			// aapt resource value: 0x7F0700F8
-			public const int ic_mr_button_connecting_10_light = 2131165432;
-			
-			// aapt resource value: 0x7F0700F9
-			public const int ic_mr_button_connecting_11_dark = 2131165433;
-			
-			// aapt resource value: 0x7F0700FA
-			public const int ic_mr_button_connecting_11_light = 2131165434;
-			
-			// aapt resource value: 0x7F0700FB
-			public const int ic_mr_button_connecting_12_dark = 2131165435;
-			
-			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connecting_12_light = 2131165436;
-			
-			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connecting_13_dark = 2131165437;
-			
-			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connecting_13_light = 2131165438;
-			
-			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connecting_14_dark = 2131165439;
-			
-			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connecting_14_light = 2131165440;
-			
-			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connecting_15_dark = 2131165441;
-			
-			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connecting_15_light = 2131165442;
-			
-			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connecting_16_dark = 2131165443;
-			
-			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connecting_16_light = 2131165444;
-			
-			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connecting_17_dark = 2131165445;
-			
-			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connecting_17_light = 2131165446;
-			
-			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connecting_18_dark = 2131165447;
-			
-			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_connecting_18_light = 2131165448;
-			
-			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_connecting_19_dark = 2131165449;
-			
-			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_connecting_19_light = 2131165450;
-			
-			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_connecting_20_dark = 2131165451;
-			
-			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_connecting_20_light = 2131165452;
-			
-			// aapt resource value: 0x7F07010D
-			public const int ic_mr_button_connecting_21_dark = 2131165453;
-			
-			// aapt resource value: 0x7F07010E
-			public const int ic_mr_button_connecting_21_light = 2131165454;
-			
-			// aapt resource value: 0x7F07010F
-			public const int ic_mr_button_connecting_22_dark = 2131165455;
-			
-			// aapt resource value: 0x7F070110
-			public const int ic_mr_button_connecting_22_light = 2131165456;
-			
-			// aapt resource value: 0x7F070111
-			public const int ic_mr_button_connecting_23_dark = 2131165457;
-			
-			// aapt resource value: 0x7F070112
-			public const int ic_mr_button_connecting_23_light = 2131165458;
-			
-			// aapt resource value: 0x7F070113
-			public const int ic_mr_button_connecting_24_dark = 2131165459;
-			
-			// aapt resource value: 0x7F070114
-			public const int ic_mr_button_connecting_24_light = 2131165460;
-			
-			// aapt resource value: 0x7F070115
-			public const int ic_mr_button_connecting_25_dark = 2131165461;
-			
-			// aapt resource value: 0x7F070116
-			public const int ic_mr_button_connecting_25_light = 2131165462;
-			
-			// aapt resource value: 0x7F070117
-			public const int ic_mr_button_connecting_26_dark = 2131165463;
-			
-			// aapt resource value: 0x7F070118
-			public const int ic_mr_button_connecting_26_light = 2131165464;
-			
-			// aapt resource value: 0x7F070119
-			public const int ic_mr_button_connecting_27_dark = 2131165465;
-			
-			// aapt resource value: 0x7F07011A
-			public const int ic_mr_button_connecting_27_light = 2131165466;
-			
-			// aapt resource value: 0x7F07011B
-			public const int ic_mr_button_connecting_28_dark = 2131165467;
-			
-			// aapt resource value: 0x7F07011C
-			public const int ic_mr_button_connecting_28_light = 2131165468;
-			
-			// aapt resource value: 0x7F07011D
-			public const int ic_mr_button_connecting_29_dark = 2131165469;
-			
-			// aapt resource value: 0x7F07011E
-			public const int ic_mr_button_connecting_29_light = 2131165470;
-			
-			// aapt resource value: 0x7F07011F
-			public const int ic_mr_button_connecting_30_dark = 2131165471;
-			
-			// aapt resource value: 0x7F070120
-			public const int ic_mr_button_connecting_30_light = 2131165472;
-			
-			// aapt resource value: 0x7F070121
-			public const int ic_mr_button_disabled_dark = 2131165473;
-			
-			// aapt resource value: 0x7F070122
-			public const int ic_mr_button_disabled_light = 2131165474;
-			
-			// aapt resource value: 0x7F070123
-			public const int ic_mr_button_disconnected_dark = 2131165475;
-			
-			// aapt resource value: 0x7F070124
-			public const int ic_mr_button_disconnected_light = 2131165476;
-			
-			// aapt resource value: 0x7F070125
-			public const int ic_mr_button_grey = 2131165477;
-			
-			// aapt resource value: 0x7F070126
-			public const int ic_mtrl_chip_checked_black = 2131165478;
-			
-			// aapt resource value: 0x7F070127
-			public const int ic_mtrl_chip_checked_circle = 2131165479;
-			
-			// aapt resource value: 0x7F070128
-			public const int ic_mtrl_chip_close_circle = 2131165480;
-			
-			// aapt resource value: 0x7F070129
-			public const int ic_vol_type_speaker_dark = 2131165481;
-			
-			// aapt resource value: 0x7F07012A
-			public const int ic_vol_type_speaker_group_dark = 2131165482;
-			
-			// aapt resource value: 0x7F07012B
-			public const int ic_vol_type_speaker_group_light = 2131165483;
-			
-			// aapt resource value: 0x7F07012C
-			public const int ic_vol_type_speaker_light = 2131165484;
-			
-			// aapt resource value: 0x7F07012D
-			public const int ic_vol_type_tv_dark = 2131165485;
-			
-			// aapt resource value: 0x7F07012E
-			public const int ic_vol_type_tv_light = 2131165486;
-			
-			// aapt resource value: 0x7F070130
-			public const int money = 2131165488;
-			
-			// aapt resource value: 0x7F070131
-			public const int mr_button_connected_dark = 2131165489;
-			
-			// aapt resource value: 0x7F070132
-			public const int mr_button_connected_light = 2131165490;
+			public const int googleg_standard_color_18 = 2131165310;
 			
 			// aapt resource value: 0x7F070133
-			public const int mr_button_connecting_dark = 2131165491;
+			public const int icono_petshero = 2131165491;
+			
+			// aapt resource value: 0x7F07007F
+			public const int ic_audiotrack_dark = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int ic_audiotrack_light = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int ic_dialog_close_dark = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int ic_dialog_close_light = 2131165314;
+			
+			// aapt resource value: 0x7F070083
+			public const int ic_group_collapse_00 = 2131165315;
+			
+			// aapt resource value: 0x7F070084
+			public const int ic_group_collapse_01 = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int ic_group_collapse_02 = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int ic_group_collapse_03 = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int ic_group_collapse_04 = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int ic_group_collapse_05 = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int ic_group_collapse_06 = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int ic_group_collapse_07 = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int ic_group_collapse_08 = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int ic_group_collapse_09 = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int ic_group_collapse_10 = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int ic_group_collapse_11 = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int ic_group_collapse_12 = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int ic_group_collapse_13 = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int ic_group_collapse_14 = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int ic_group_collapse_15 = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int ic_group_expand_00 = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int ic_group_expand_01 = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int ic_group_expand_02 = 2131165333;
+			
+			// aapt resource value: 0x7F070096
+			public const int ic_group_expand_03 = 2131165334;
+			
+			// aapt resource value: 0x7F070097
+			public const int ic_group_expand_04 = 2131165335;
+			
+			// aapt resource value: 0x7F070098
+			public const int ic_group_expand_05 = 2131165336;
+			
+			// aapt resource value: 0x7F070099
+			public const int ic_group_expand_06 = 2131165337;
+			
+			// aapt resource value: 0x7F07009A
+			public const int ic_group_expand_07 = 2131165338;
+			
+			// aapt resource value: 0x7F07009B
+			public const int ic_group_expand_08 = 2131165339;
+			
+			// aapt resource value: 0x7F07009C
+			public const int ic_group_expand_09 = 2131165340;
+			
+			// aapt resource value: 0x7F07009D
+			public const int ic_group_expand_10 = 2131165341;
+			
+			// aapt resource value: 0x7F07009E
+			public const int ic_group_expand_11 = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int ic_group_expand_12 = 2131165343;
+			
+			// aapt resource value: 0x7F0700A0
+			public const int ic_group_expand_13 = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int ic_group_expand_14 = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int ic_group_expand_15 = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int ic_media_pause_dark = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int ic_media_pause_light = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int ic_media_play_dark = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int ic_media_play_light = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int ic_media_stop_dark = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int ic_media_stop_light = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int ic_mr_button_connected_00_dark = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int ic_mr_button_connected_00_light = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int ic_mr_button_connected_01_dark = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int ic_mr_button_connected_01_light = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int ic_mr_button_connected_02_dark = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int ic_mr_button_connected_02_light = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int ic_mr_button_connected_03_dark = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int ic_mr_button_connected_03_light = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int ic_mr_button_connected_04_dark = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int ic_mr_button_connected_04_light = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int ic_mr_button_connected_05_dark = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int ic_mr_button_connected_05_light = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int ic_mr_button_connected_06_dark = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int ic_mr_button_connected_06_light = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int ic_mr_button_connected_07_dark = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int ic_mr_button_connected_07_light = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int ic_mr_button_connected_08_dark = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int ic_mr_button_connected_08_light = 2131165370;
+			
+			// aapt resource value: 0x7F0700BB
+			public const int ic_mr_button_connected_09_dark = 2131165371;
+			
+			// aapt resource value: 0x7F0700BC
+			public const int ic_mr_button_connected_09_light = 2131165372;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int ic_mr_button_connected_10_dark = 2131165373;
+			
+			// aapt resource value: 0x7F0700BE
+			public const int ic_mr_button_connected_10_light = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int ic_mr_button_connected_11_dark = 2131165375;
+			
+			// aapt resource value: 0x7F0700C0
+			public const int ic_mr_button_connected_11_light = 2131165376;
+			
+			// aapt resource value: 0x7F0700C1
+			public const int ic_mr_button_connected_12_dark = 2131165377;
+			
+			// aapt resource value: 0x7F0700C2
+			public const int ic_mr_button_connected_12_light = 2131165378;
+			
+			// aapt resource value: 0x7F0700C3
+			public const int ic_mr_button_connected_13_dark = 2131165379;
+			
+			// aapt resource value: 0x7F0700C4
+			public const int ic_mr_button_connected_13_light = 2131165380;
+			
+			// aapt resource value: 0x7F0700C5
+			public const int ic_mr_button_connected_14_dark = 2131165381;
+			
+			// aapt resource value: 0x7F0700C6
+			public const int ic_mr_button_connected_14_light = 2131165382;
+			
+			// aapt resource value: 0x7F0700C7
+			public const int ic_mr_button_connected_15_dark = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int ic_mr_button_connected_15_light = 2131165384;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int ic_mr_button_connected_16_dark = 2131165385;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int ic_mr_button_connected_16_light = 2131165386;
+			
+			// aapt resource value: 0x7F0700CB
+			public const int ic_mr_button_connected_17_dark = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int ic_mr_button_connected_17_light = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int ic_mr_button_connected_18_dark = 2131165389;
+			
+			// aapt resource value: 0x7F0700CE
+			public const int ic_mr_button_connected_18_light = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int ic_mr_button_connected_19_dark = 2131165391;
+			
+			// aapt resource value: 0x7F0700D0
+			public const int ic_mr_button_connected_19_light = 2131165392;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int ic_mr_button_connected_20_dark = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int ic_mr_button_connected_20_light = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int ic_mr_button_connected_21_dark = 2131165395;
+			
+			// aapt resource value: 0x7F0700D4
+			public const int ic_mr_button_connected_21_light = 2131165396;
+			
+			// aapt resource value: 0x7F0700D5
+			public const int ic_mr_button_connected_22_dark = 2131165397;
+			
+			// aapt resource value: 0x7F0700D6
+			public const int ic_mr_button_connected_22_light = 2131165398;
+			
+			// aapt resource value: 0x7F0700D7
+			public const int ic_mr_button_connected_23_dark = 2131165399;
+			
+			// aapt resource value: 0x7F0700D8
+			public const int ic_mr_button_connected_23_light = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int ic_mr_button_connected_24_dark = 2131165401;
+			
+			// aapt resource value: 0x7F0700DA
+			public const int ic_mr_button_connected_24_light = 2131165402;
+			
+			// aapt resource value: 0x7F0700DB
+			public const int ic_mr_button_connected_25_dark = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int ic_mr_button_connected_25_light = 2131165404;
+			
+			// aapt resource value: 0x7F0700DD
+			public const int ic_mr_button_connected_26_dark = 2131165405;
+			
+			// aapt resource value: 0x7F0700DE
+			public const int ic_mr_button_connected_26_light = 2131165406;
+			
+			// aapt resource value: 0x7F0700DF
+			public const int ic_mr_button_connected_27_dark = 2131165407;
+			
+			// aapt resource value: 0x7F0700E0
+			public const int ic_mr_button_connected_27_light = 2131165408;
+			
+			// aapt resource value: 0x7F0700E1
+			public const int ic_mr_button_connected_28_dark = 2131165409;
+			
+			// aapt resource value: 0x7F0700E2
+			public const int ic_mr_button_connected_28_light = 2131165410;
+			
+			// aapt resource value: 0x7F0700E3
+			public const int ic_mr_button_connected_29_dark = 2131165411;
+			
+			// aapt resource value: 0x7F0700E4
+			public const int ic_mr_button_connected_29_light = 2131165412;
+			
+			// aapt resource value: 0x7F0700E5
+			public const int ic_mr_button_connected_30_dark = 2131165413;
+			
+			// aapt resource value: 0x7F0700E6
+			public const int ic_mr_button_connected_30_light = 2131165414;
+			
+			// aapt resource value: 0x7F0700E7
+			public const int ic_mr_button_connecting_00_dark = 2131165415;
+			
+			// aapt resource value: 0x7F0700E8
+			public const int ic_mr_button_connecting_00_light = 2131165416;
+			
+			// aapt resource value: 0x7F0700E9
+			public const int ic_mr_button_connecting_01_dark = 2131165417;
+			
+			// aapt resource value: 0x7F0700EA
+			public const int ic_mr_button_connecting_01_light = 2131165418;
+			
+			// aapt resource value: 0x7F0700EB
+			public const int ic_mr_button_connecting_02_dark = 2131165419;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int ic_mr_button_connecting_02_light = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int ic_mr_button_connecting_03_dark = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int ic_mr_button_connecting_03_light = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int ic_mr_button_connecting_04_dark = 2131165423;
+			
+			// aapt resource value: 0x7F0700F0
+			public const int ic_mr_button_connecting_04_light = 2131165424;
+			
+			// aapt resource value: 0x7F0700F1
+			public const int ic_mr_button_connecting_05_dark = 2131165425;
+			
+			// aapt resource value: 0x7F0700F2
+			public const int ic_mr_button_connecting_05_light = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int ic_mr_button_connecting_06_dark = 2131165427;
+			
+			// aapt resource value: 0x7F0700F4
+			public const int ic_mr_button_connecting_06_light = 2131165428;
+			
+			// aapt resource value: 0x7F0700F5
+			public const int ic_mr_button_connecting_07_dark = 2131165429;
+			
+			// aapt resource value: 0x7F0700F6
+			public const int ic_mr_button_connecting_07_light = 2131165430;
+			
+			// aapt resource value: 0x7F0700F7
+			public const int ic_mr_button_connecting_08_dark = 2131165431;
+			
+			// aapt resource value: 0x7F0700F8
+			public const int ic_mr_button_connecting_08_light = 2131165432;
+			
+			// aapt resource value: 0x7F0700F9
+			public const int ic_mr_button_connecting_09_dark = 2131165433;
+			
+			// aapt resource value: 0x7F0700FA
+			public const int ic_mr_button_connecting_09_light = 2131165434;
+			
+			// aapt resource value: 0x7F0700FB
+			public const int ic_mr_button_connecting_10_dark = 2131165435;
+			
+			// aapt resource value: 0x7F0700FC
+			public const int ic_mr_button_connecting_10_light = 2131165436;
+			
+			// aapt resource value: 0x7F0700FD
+			public const int ic_mr_button_connecting_11_dark = 2131165437;
+			
+			// aapt resource value: 0x7F0700FE
+			public const int ic_mr_button_connecting_11_light = 2131165438;
+			
+			// aapt resource value: 0x7F0700FF
+			public const int ic_mr_button_connecting_12_dark = 2131165439;
+			
+			// aapt resource value: 0x7F070100
+			public const int ic_mr_button_connecting_12_light = 2131165440;
+			
+			// aapt resource value: 0x7F070101
+			public const int ic_mr_button_connecting_13_dark = 2131165441;
+			
+			// aapt resource value: 0x7F070102
+			public const int ic_mr_button_connecting_13_light = 2131165442;
+			
+			// aapt resource value: 0x7F070103
+			public const int ic_mr_button_connecting_14_dark = 2131165443;
+			
+			// aapt resource value: 0x7F070104
+			public const int ic_mr_button_connecting_14_light = 2131165444;
+			
+			// aapt resource value: 0x7F070105
+			public const int ic_mr_button_connecting_15_dark = 2131165445;
+			
+			// aapt resource value: 0x7F070106
+			public const int ic_mr_button_connecting_15_light = 2131165446;
+			
+			// aapt resource value: 0x7F070107
+			public const int ic_mr_button_connecting_16_dark = 2131165447;
+			
+			// aapt resource value: 0x7F070108
+			public const int ic_mr_button_connecting_16_light = 2131165448;
+			
+			// aapt resource value: 0x7F070109
+			public const int ic_mr_button_connecting_17_dark = 2131165449;
+			
+			// aapt resource value: 0x7F07010A
+			public const int ic_mr_button_connecting_17_light = 2131165450;
+			
+			// aapt resource value: 0x7F07010B
+			public const int ic_mr_button_connecting_18_dark = 2131165451;
+			
+			// aapt resource value: 0x7F07010C
+			public const int ic_mr_button_connecting_18_light = 2131165452;
+			
+			// aapt resource value: 0x7F07010D
+			public const int ic_mr_button_connecting_19_dark = 2131165453;
+			
+			// aapt resource value: 0x7F07010E
+			public const int ic_mr_button_connecting_19_light = 2131165454;
+			
+			// aapt resource value: 0x7F07010F
+			public const int ic_mr_button_connecting_20_dark = 2131165455;
+			
+			// aapt resource value: 0x7F070110
+			public const int ic_mr_button_connecting_20_light = 2131165456;
+			
+			// aapt resource value: 0x7F070111
+			public const int ic_mr_button_connecting_21_dark = 2131165457;
+			
+			// aapt resource value: 0x7F070112
+			public const int ic_mr_button_connecting_21_light = 2131165458;
+			
+			// aapt resource value: 0x7F070113
+			public const int ic_mr_button_connecting_22_dark = 2131165459;
+			
+			// aapt resource value: 0x7F070114
+			public const int ic_mr_button_connecting_22_light = 2131165460;
+			
+			// aapt resource value: 0x7F070115
+			public const int ic_mr_button_connecting_23_dark = 2131165461;
+			
+			// aapt resource value: 0x7F070116
+			public const int ic_mr_button_connecting_23_light = 2131165462;
+			
+			// aapt resource value: 0x7F070117
+			public const int ic_mr_button_connecting_24_dark = 2131165463;
+			
+			// aapt resource value: 0x7F070118
+			public const int ic_mr_button_connecting_24_light = 2131165464;
+			
+			// aapt resource value: 0x7F070119
+			public const int ic_mr_button_connecting_25_dark = 2131165465;
+			
+			// aapt resource value: 0x7F07011A
+			public const int ic_mr_button_connecting_25_light = 2131165466;
+			
+			// aapt resource value: 0x7F07011B
+			public const int ic_mr_button_connecting_26_dark = 2131165467;
+			
+			// aapt resource value: 0x7F07011C
+			public const int ic_mr_button_connecting_26_light = 2131165468;
+			
+			// aapt resource value: 0x7F07011D
+			public const int ic_mr_button_connecting_27_dark = 2131165469;
+			
+			// aapt resource value: 0x7F07011E
+			public const int ic_mr_button_connecting_27_light = 2131165470;
+			
+			// aapt resource value: 0x7F07011F
+			public const int ic_mr_button_connecting_28_dark = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int ic_mr_button_connecting_28_light = 2131165472;
+			
+			// aapt resource value: 0x7F070121
+			public const int ic_mr_button_connecting_29_dark = 2131165473;
+			
+			// aapt resource value: 0x7F070122
+			public const int ic_mr_button_connecting_29_light = 2131165474;
+			
+			// aapt resource value: 0x7F070123
+			public const int ic_mr_button_connecting_30_dark = 2131165475;
+			
+			// aapt resource value: 0x7F070124
+			public const int ic_mr_button_connecting_30_light = 2131165476;
+			
+			// aapt resource value: 0x7F070125
+			public const int ic_mr_button_disabled_dark = 2131165477;
+			
+			// aapt resource value: 0x7F070126
+			public const int ic_mr_button_disabled_light = 2131165478;
+			
+			// aapt resource value: 0x7F070127
+			public const int ic_mr_button_disconnected_dark = 2131165479;
+			
+			// aapt resource value: 0x7F070128
+			public const int ic_mr_button_disconnected_light = 2131165480;
+			
+			// aapt resource value: 0x7F070129
+			public const int ic_mr_button_grey = 2131165481;
+			
+			// aapt resource value: 0x7F07012A
+			public const int ic_mtrl_chip_checked_black = 2131165482;
+			
+			// aapt resource value: 0x7F07012B
+			public const int ic_mtrl_chip_checked_circle = 2131165483;
+			
+			// aapt resource value: 0x7F07012C
+			public const int ic_mtrl_chip_close_circle = 2131165484;
+			
+			// aapt resource value: 0x7F07012D
+			public const int ic_vol_type_speaker_dark = 2131165485;
+			
+			// aapt resource value: 0x7F07012E
+			public const int ic_vol_type_speaker_group_dark = 2131165486;
+			
+			// aapt resource value: 0x7F07012F
+			public const int ic_vol_type_speaker_group_light = 2131165487;
+			
+			// aapt resource value: 0x7F070130
+			public const int ic_vol_type_speaker_light = 2131165488;
+			
+			// aapt resource value: 0x7F070131
+			public const int ic_vol_type_tv_dark = 2131165489;
+			
+			// aapt resource value: 0x7F070132
+			public const int ic_vol_type_tv_light = 2131165490;
 			
 			// aapt resource value: 0x7F070134
-			public const int mr_button_connecting_light = 2131165492;
+			public const int location = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int mr_button_dark = 2131165493;
+			public const int logout = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int mr_button_light = 2131165494;
+			public const int lost = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int mr_dialog_close_dark = 2131165495;
+			public const int money = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int mr_dialog_close_light = 2131165496;
+			public const int mr_button_connected_dark = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int mr_dialog_material_background_dark = 2131165497;
+			public const int mr_button_connected_light = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int mr_dialog_material_background_light = 2131165498;
+			public const int mr_button_connecting_dark = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int mr_group_collapse = 2131165499;
+			public const int mr_button_connecting_light = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int mr_group_expand = 2131165500;
+			public const int mr_button_dark = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int mr_media_pause_dark = 2131165501;
+			public const int mr_button_light = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int mr_media_pause_light = 2131165502;
+			public const int mr_dialog_close_dark = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int mr_media_play_dark = 2131165503;
+			public const int mr_dialog_close_light = 2131165503;
 			
 			// aapt resource value: 0x7F070140
-			public const int mr_media_play_light = 2131165504;
+			public const int mr_dialog_material_background_dark = 2131165504;
 			
 			// aapt resource value: 0x7F070141
-			public const int mr_media_stop_dark = 2131165505;
+			public const int mr_dialog_material_background_light = 2131165505;
 			
 			// aapt resource value: 0x7F070142
-			public const int mr_media_stop_light = 2131165506;
+			public const int mr_group_collapse = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int mr_vol_type_audiotrack_dark = 2131165507;
+			public const int mr_group_expand = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int mr_vol_type_audiotrack_light = 2131165508;
+			public const int mr_media_pause_dark = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int mtrl_snackbar_background = 2131165509;
+			public const int mr_media_pause_light = 2131165509;
 			
 			// aapt resource value: 0x7F070146
-			public const int mtrl_tabs_default_indicator = 2131165510;
+			public const int mr_media_play_dark = 2131165510;
 			
 			// aapt resource value: 0x7F070147
-			public const int navigation_empty_icon = 2131165511;
+			public const int mr_media_play_light = 2131165511;
 			
 			// aapt resource value: 0x7F070148
-			public const int notification_action_background = 2131165512;
+			public const int mr_media_stop_dark = 2131165512;
 			
 			// aapt resource value: 0x7F070149
-			public const int notification_bg = 2131165513;
+			public const int mr_media_stop_light = 2131165513;
 			
 			// aapt resource value: 0x7F07014A
-			public const int notification_bg_low = 2131165514;
+			public const int mr_vol_type_audiotrack_dark = 2131165514;
 			
 			// aapt resource value: 0x7F07014B
-			public const int notification_bg_low_normal = 2131165515;
+			public const int mr_vol_type_audiotrack_light = 2131165515;
 			
 			// aapt resource value: 0x7F07014C
-			public const int notification_bg_low_pressed = 2131165516;
+			public const int mtrl_snackbar_background = 2131165516;
 			
 			// aapt resource value: 0x7F07014D
-			public const int notification_bg_normal = 2131165517;
+			public const int mtrl_tabs_default_indicator = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int notification_bg_normal_pressed = 2131165518;
+			public const int navigation_empty_icon = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int notification_icon_background = 2131165519;
+			public const int notification_action_background = 2131165519;
 			
 			// aapt resource value: 0x7F070150
-			public const int notification_template_icon_bg = 2131165520;
+			public const int notification_bg = 2131165520;
 			
 			// aapt resource value: 0x7F070151
-			public const int notification_template_icon_low_bg = 2131165521;
+			public const int notification_bg_low = 2131165521;
 			
 			// aapt resource value: 0x7F070152
-			public const int notification_tile_bg = 2131165522;
+			public const int notification_bg_low_normal = 2131165522;
 			
 			// aapt resource value: 0x7F070153
-			public const int notify_panel_notification_icon_bg = 2131165523;
+			public const int notification_bg_low_pressed = 2131165523;
 			
 			// aapt resource value: 0x7F070154
-			public const int password = 2131165524;
+			public const int notification_bg_normal = 2131165524;
 			
 			// aapt resource value: 0x7F070155
-			public const int pet = 2131165525;
+			public const int notification_bg_normal_pressed = 2131165525;
 			
 			// aapt resource value: 0x7F070156
-			public const int product = 2131165526;
+			public const int notification_icon_background = 2131165526;
 			
 			// aapt resource value: 0x7F070157
-			public const int service = 2131165527;
+			public const int notification_template_icon_bg = 2131165527;
 			
 			// aapt resource value: 0x7F070158
-			public const int store = 2131165528;
+			public const int notification_template_icon_low_bg = 2131165528;
 			
 			// aapt resource value: 0x7F070159
-			public const int tooltip_frame_dark = 2131165529;
+			public const int notification_tile_bg = 2131165529;
 			
 			// aapt resource value: 0x7F07015A
-			public const int tooltip_frame_light = 2131165530;
+			public const int notify_panel_notification_icon_bg = 2131165530;
 			
 			// aapt resource value: 0x7F07015B
-			public const int user = 2131165531;
+			public const int password = 2131165531;
+			
+			// aapt resource value: 0x7F07015C
+			public const int paw = 2131165532;
+			
+			// aapt resource value: 0x7F07015D
+			public const int pet = 2131165533;
+			
+			// aapt resource value: 0x7F07015E
+			public const int product = 2131165534;
+			
+			// aapt resource value: 0x7F07015F
+			public const int service = 2131165535;
+			
+			// aapt resource value: 0x7F070160
+			public const int store = 2131165536;
+			
+			// aapt resource value: 0x7F070161
+			public const int target = 2131165537;
+			
+			// aapt resource value: 0x7F070162
+			public const int target_pet = 2131165538;
+			
+			// aapt resource value: 0x7F070163
+			public const int tooltip_frame_dark = 2131165539;
+			
+			// aapt resource value: 0x7F070164
+			public const int tooltip_frame_light = 2131165540;
+			
+			// aapt resource value: 0x7F070165
+			public const int user = 2131165541;
+			
+			// aapt resource value: 0x7F070166
+			public const int vet = 2131165542;
+			
+			// aapt resource value: 0x7F070167
+			public const int vet_cam = 2131165543;
 			
 			static Drawable()
 			{

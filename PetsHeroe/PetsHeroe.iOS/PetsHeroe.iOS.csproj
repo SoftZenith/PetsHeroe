@@ -80,6 +80,7 @@
     <Compile Include="Web References\mx.com.petshero\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="CustomButtoniOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -142,10 +143,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.2.0.815419</Version>
+      <Version>4.3.0.908675</Version>
     </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile">
       <Version>2.4.1</Version>
@@ -195,5 +196,16 @@
     <BundleResource Include="Resources\money.png" />
     <BundleResource Include="Resources\edit.png" />
     <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\paw.png" />
+    <BundleResource Include="Resources\location.png" />
+    <BundleResource Include="Resources\vet.png" />
+    <BundleResource Include="Resources\target.png" />
+    <BundleResource Include="Resources\clients.png" />
+    <BundleResource Include="Resources\calculator.png" />
+    <BundleResource Include="Resources\gift.png" />
+    <BundleResource Include="Resources\target_pet.png" />
+    <BundleResource Include="Resources\cam.png" />
+    <BundleResource Include="Resources\lost.png" />
+    <BundleResource Include="Resources\vet_cam.png" />
   </ItemGroup>
 </Project>

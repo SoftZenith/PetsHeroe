@@ -872,7 +872,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.848062": {
+      "Xamarin.Forms/4.3.0.908675": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
@@ -900,7 +900,7 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.InputKit/3.0.12": {
+      "Xamarin.Forms.InputKit/3.0.15": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "3.2.0.839982"
@@ -912,11 +912,11 @@
           "lib/monoandroid90/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.2.0.848062": {
+      "Xamarin.Forms.Maps/4.3.0.908675": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
-          "Xamarin.Forms": "4.2.0.848062",
+          "Xamarin.Forms": "4.3.0.908675",
           "Xamarin.GooglePlayServices.Maps": "60.1142.1"
         },
         "compile": {
@@ -1033,9 +1033,9 @@
         "dependencies": {
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.2.0.815419",
-          "Xamarin.Forms.InputKit": "3.0.12",
-          "Xamarin.Forms.Maps": "4.2.0.815419",
+          "Xamarin.Forms": "4.3.0.908675",
+          "Xamarin.Forms.InputKit": "3.0.15",
+          "Xamarin.Forms.Maps": "4.3.0.908675",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
         },
@@ -2042,10 +2042,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.2.0.848062": {
-      "sha512": "/JIC5p3M9h0MdSg+uH3Hy260YIWkXrQA8m4yO/3TQhSSIe+FNwyPi0SkIomvikunWXu6rEJh/aDbFYEyks0mbw==",
+    "Xamarin.Forms/4.3.0.908675": {
+      "sha512": "kXrbXKJvXYF4cKjs1Jsb+pQFEnFGl0AONYSeABjgOJqN/o5Y4zC0XXQ68xiUI81PKQTuRB5F3oDom2t5ccJDZw==",
       "type": "package",
-      "path": "xamarin.forms/4.2.0.848062",
+      "path": "xamarin.forms/4.3.0.908675",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2273,9 +2273,11 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/StepperControl.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
@@ -2284,19 +2286,17 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.2.0.848062.nupkg.sha512",
+        "xamarin.forms.4.3.0.908675.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.InputKit/3.0.12": {
-      "sha512": "fcfRUEUn+C6cEWA5iBYIZFn7G13WaYY5GgIEMNBk2H/pw9i94ouDtzvjFZ2JpXeZ/QjAHKLUVEz5ZOnFndlExQ==",
+    "Xamarin.Forms.InputKit/3.0.15": {
+      "sha512": "ea0ahzN2XwqswS3jvc1KMIcm7c+B+BEnyJdFptgd5Ml73015A7OKMzsnf3gzAodzVNZtrK/AGctJSbz5fkK6og==",
       "type": "package",
-      "path": "xamarin.forms.inputkit/3.0.12",
+      "path": "xamarin.forms.inputkit/3.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid81/Plugin.InputKit.dll",
-        "lib/monoandroid81/Plugin.InputKit.xml",
         "lib/monoandroid90/Plugin.InputKit.dll",
         "lib/monoandroid90/Plugin.InputKit.xml",
         "lib/netstandard1.0/Plugin.InputKit.dll",
@@ -2306,14 +2306,14 @@
         "lib/xamarin.ios10/Plugin.InputKit.dll",
         "lib/xamarin.ios10/Plugin.InputKit.xml",
         "readme.txt",
-        "xamarin.forms.inputkit.3.0.12.nupkg.sha512",
+        "xamarin.forms.inputkit.3.0.15.nupkg.sha512",
         "xamarin.forms.inputkit.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.2.0.848062": {
-      "sha512": "29oyFTBa+19gsq+c9WiaMKEyEsdPs1Q4KdwmbdTIFvpt+d37qRLPS72P3FYhUeHfFSvbpTa7ho6KCNoiydQHVg==",
+    "Xamarin.Forms.Maps/4.3.0.908675": {
+      "sha512": "+A67X2ijiICMRLqGADjj8ngAEUYpq+KihBVA1+5Y0kFJg++rs8QrEEw8Qz/jHwIH3a0hCr+5qiDNkEPG+5xX7Q==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.2.0.848062",
+      "path": "xamarin.forms.maps/4.3.0.908675",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2339,7 +2339,7 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.2.0.848062.nupkg.sha512",
+        "xamarin.forms.maps.4.3.0.908675.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -2458,8 +2458,8 @@
       "Xamarin.Android.Support.v7.CardView >= 28.0.0.3",
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.3",
       "Xamarin.Essentials >= 1.3.1",
-      "Xamarin.Forms >= 4.2.0.848062",
-      "Xamarin.Forms.Maps >= 4.2.0.848062",
+      "Xamarin.Forms >= 4.3.0.908675",
+      "Xamarin.Forms.Maps >= 4.3.0.908675",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1"
     ]
@@ -2537,11 +2537,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.2.0.848062, )"
+            "version": "[4.3.0.908675, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.2.0.848062, )"
+            "version": "[4.3.0.908675, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
