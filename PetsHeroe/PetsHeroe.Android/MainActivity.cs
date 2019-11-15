@@ -11,7 +11,7 @@ using ZXing.Mobile;
 
 namespace PetsHeroe.Droid
 {
-    [Activity(Label = "PetsHeroe", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "PetsHeroe", Icon = "@drawable/icono_app", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,6 +28,7 @@ namespace PetsHeroe.Droid
             MobileBarcodeScanner.Initialize(Application);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
             LoadApplication(new App());
         }
 

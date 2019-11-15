@@ -70,8 +70,8 @@ namespace PetsHeroe
             if (status.Resultado){
                 await DisplayAlert("OK", "Se envio correctamente tu mensaje al dueño", "OK");
                 if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
-                if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno()); }
-                if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario()); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 1) { await Navigation.PushAsync(new Menu_dueno(1)); }
+                if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario(3)); }
             } else {
                 await DisplayAlert("Error", "Esta mascota no ha sido reportada como extraviada o robada", "OK");
             }

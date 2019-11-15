@@ -39,11 +39,23 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Behaviors.Forms": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "LeoJHarris.XForms.Plugin.EnhancedEntry": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Xam.Plugin.Geolocator": {
               "target": "Package",
@@ -55,7 +67,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.908675, )"
+              "version": "[4.3.0.991211, )"
             },
             "Xamarin.Forms.InputKit": {
               "target": "Package",

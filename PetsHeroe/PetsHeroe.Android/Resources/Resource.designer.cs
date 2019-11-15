@@ -26,6 +26,2243 @@ namespace PetsHeroe.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_fade_in = global::PetsHeroe.Droid.Resource.Animation.abc_fade_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_fade_out = global::PetsHeroe.Droid.Resource.Animation.abc_fade_out;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::PetsHeroe.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_popup_enter = global::PetsHeroe.Droid.Resource.Animation.abc_popup_enter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_popup_exit = global::PetsHeroe.Droid.Resource.Animation.abc_popup_exit;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::PetsHeroe.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_slide_in_bottom = global::PetsHeroe.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_slide_in_top = global::PetsHeroe.Droid.Resource.Animation.abc_slide_in_top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_slide_out_bottom = global::PetsHeroe.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.abc_slide_out_top = global::PetsHeroe.Droid.Resource.Animation.abc_slide_out_top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::PetsHeroe.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::PetsHeroe.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.design_snackbar_in = global::PetsHeroe.Droid.Resource.Animation.design_snackbar_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animation.design_snackbar_out = global::PetsHeroe.Droid.Resource.Animation.design_snackbar_out;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Animator.design_appbar_state_list_animator = global::PetsHeroe.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarDivider = global::PetsHeroe.Droid.Resource.Attribute.actionBarDivider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarItemBackground = global::PetsHeroe.Droid.Resource.Attribute.actionBarItemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarPopupTheme = global::PetsHeroe.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarSize = global::PetsHeroe.Droid.Resource.Attribute.actionBarSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarSplitStyle = global::PetsHeroe.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarStyle = global::PetsHeroe.Droid.Resource.Attribute.actionBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarTabBarStyle = global::PetsHeroe.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarTabStyle = global::PetsHeroe.Droid.Resource.Attribute.actionBarTabStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarTabTextStyle = global::PetsHeroe.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarTheme = global::PetsHeroe.Droid.Resource.Attribute.actionBarTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionBarWidgetTheme = global::PetsHeroe.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.actionButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionDropDownStyle = global::PetsHeroe.Droid.Resource.Attribute.actionDropDownStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionLayout = global::PetsHeroe.Droid.Resource.Attribute.actionLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionMenuTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionMenuTextColor = global::PetsHeroe.Droid.Resource.Attribute.actionMenuTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeBackground = global::PetsHeroe.Droid.Resource.Attribute.actionModeBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeCloseDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeCopyDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeCutDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeFindDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModePasteDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModePopupWindowStyle = global::PetsHeroe.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeShareDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeSplitBackground = global::PetsHeroe.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeStyle = global::PetsHeroe.Droid.Resource.Attribute.actionModeStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::PetsHeroe.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionOverflowButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionOverflowMenuStyle = global::PetsHeroe.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionProviderClass = global::PetsHeroe.Droid.Resource.Attribute.actionProviderClass;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.actionViewClass = global::PetsHeroe.Droid.Resource.Attribute.actionViewClass;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.activityChooserViewStyle = global::PetsHeroe.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::PetsHeroe.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alertDialogCenterButtons = global::PetsHeroe.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alertDialogStyle = global::PetsHeroe.Droid.Resource.Attribute.alertDialogStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alertDialogTheme = global::PetsHeroe.Droid.Resource.Attribute.alertDialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.allowStacking = global::PetsHeroe.Droid.Resource.Attribute.allowStacking;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alpha = global::PetsHeroe.Droid.Resource.Attribute.alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.alphabeticModifiers = global::PetsHeroe.Droid.Resource.Attribute.alphabeticModifiers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.arrowHeadLength = global::PetsHeroe.Droid.Resource.Attribute.arrowHeadLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.arrowShaftLength = global::PetsHeroe.Droid.Resource.Attribute.arrowShaftLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::PetsHeroe.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoSizeMaxTextSize = global::PetsHeroe.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoSizeMinTextSize = global::PetsHeroe.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoSizePresetSizes = global::PetsHeroe.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoSizeStepGranularity = global::PetsHeroe.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.autoSizeTextType = global::PetsHeroe.Droid.Resource.Attribute.autoSizeTextType;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.background = global::PetsHeroe.Droid.Resource.Attribute.background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.backgroundSplit = global::PetsHeroe.Droid.Resource.Attribute.backgroundSplit;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.backgroundStacked = global::PetsHeroe.Droid.Resource.Attribute.backgroundStacked;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.backgroundTint = global::PetsHeroe.Droid.Resource.Attribute.backgroundTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.backgroundTintMode = global::PetsHeroe.Droid.Resource.Attribute.backgroundTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.barLength = global::PetsHeroe.Droid.Resource.Attribute.barLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.behavior_autoHide = global::PetsHeroe.Droid.Resource.Attribute.behavior_autoHide;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.behavior_hideable = global::PetsHeroe.Droid.Resource.Attribute.behavior_hideable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.behavior_overlapTop = global::PetsHeroe.Droid.Resource.Attribute.behavior_overlapTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.behavior_peekHeight = global::PetsHeroe.Droid.Resource.Attribute.behavior_peekHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.behavior_skipCollapsed = global::PetsHeroe.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.borderWidth = global::PetsHeroe.Droid.Resource.Attribute.borderWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.borderlessButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.bottomSheetDialogTheme = global::PetsHeroe.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.bottomSheetStyle = global::PetsHeroe.Droid.Resource.Attribute.bottomSheetStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonBarButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonBarStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonGravity = global::PetsHeroe.Droid.Resource.Attribute.buttonGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonPanelSideLayout = global::PetsHeroe.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonStyle = global::PetsHeroe.Droid.Resource.Attribute.buttonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonStyleSmall = global::PetsHeroe.Droid.Resource.Attribute.buttonStyleSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonTint = global::PetsHeroe.Droid.Resource.Attribute.buttonTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.buttonTintMode = global::PetsHeroe.Droid.Resource.Attribute.buttonTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardBackgroundColor = global::PetsHeroe.Droid.Resource.Attribute.cardBackgroundColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardCornerRadius = global::PetsHeroe.Droid.Resource.Attribute.cardCornerRadius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardElevation = global::PetsHeroe.Droid.Resource.Attribute.cardElevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardMaxElevation = global::PetsHeroe.Droid.Resource.Attribute.cardMaxElevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardPreventCornerOverlap = global::PetsHeroe.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.cardUseCompatPadding = global::PetsHeroe.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.checkboxStyle = global::PetsHeroe.Droid.Resource.Attribute.checkboxStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.checkedTextViewStyle = global::PetsHeroe.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.closeIcon = global::PetsHeroe.Droid.Resource.Attribute.closeIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.closeItemLayout = global::PetsHeroe.Droid.Resource.Attribute.closeItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.collapseContentDescription = global::PetsHeroe.Droid.Resource.Attribute.collapseContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.collapseIcon = global::PetsHeroe.Droid.Resource.Attribute.collapseIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.collapsedTitleGravity = global::PetsHeroe.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.color = global::PetsHeroe.Droid.Resource.Attribute.color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorAccent = global::PetsHeroe.Droid.Resource.Attribute.colorAccent;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorBackgroundFloating = global::PetsHeroe.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorButtonNormal = global::PetsHeroe.Droid.Resource.Attribute.colorButtonNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorControlActivated = global::PetsHeroe.Droid.Resource.Attribute.colorControlActivated;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorControlHighlight = global::PetsHeroe.Droid.Resource.Attribute.colorControlHighlight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorControlNormal = global::PetsHeroe.Droid.Resource.Attribute.colorControlNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorError = global::PetsHeroe.Droid.Resource.Attribute.colorError;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorPrimary = global::PetsHeroe.Droid.Resource.Attribute.colorPrimary;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorPrimaryDark = global::PetsHeroe.Droid.Resource.Attribute.colorPrimaryDark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.colorSwitchThumbNormal = global::PetsHeroe.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.commitIcon = global::PetsHeroe.Droid.Resource.Attribute.commitIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentDescription = global::PetsHeroe.Droid.Resource.Attribute.contentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetEnd = global::PetsHeroe.Droid.Resource.Attribute.contentInsetEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetEndWithActions = global::PetsHeroe.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetLeft = global::PetsHeroe.Droid.Resource.Attribute.contentInsetLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetRight = global::PetsHeroe.Droid.Resource.Attribute.contentInsetRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetStart = global::PetsHeroe.Droid.Resource.Attribute.contentInsetStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::PetsHeroe.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentPadding = global::PetsHeroe.Droid.Resource.Attribute.contentPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentPaddingBottom = global::PetsHeroe.Droid.Resource.Attribute.contentPaddingBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentPaddingLeft = global::PetsHeroe.Droid.Resource.Attribute.contentPaddingLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentPaddingRight = global::PetsHeroe.Droid.Resource.Attribute.contentPaddingRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentPaddingTop = global::PetsHeroe.Droid.Resource.Attribute.contentPaddingTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.contentScrim = global::PetsHeroe.Droid.Resource.Attribute.contentScrim;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.controlBackground = global::PetsHeroe.Droid.Resource.Attribute.controlBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.counterEnabled = global::PetsHeroe.Droid.Resource.Attribute.counterEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.counterMaxLength = global::PetsHeroe.Droid.Resource.Attribute.counterMaxLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.counterOverflowTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.counterTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.counterTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.customNavigationLayout = global::PetsHeroe.Droid.Resource.Attribute.customNavigationLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.defaultQueryHint = global::PetsHeroe.Droid.Resource.Attribute.defaultQueryHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dialogPreferredPadding = global::PetsHeroe.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dialogTheme = global::PetsHeroe.Droid.Resource.Attribute.dialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.displayOptions = global::PetsHeroe.Droid.Resource.Attribute.displayOptions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.divider = global::PetsHeroe.Droid.Resource.Attribute.divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dividerHorizontal = global::PetsHeroe.Droid.Resource.Attribute.dividerHorizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dividerPadding = global::PetsHeroe.Droid.Resource.Attribute.dividerPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dividerVertical = global::PetsHeroe.Droid.Resource.Attribute.dividerVertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.drawableSize = global::PetsHeroe.Droid.Resource.Attribute.drawableSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.drawerArrowStyle = global::PetsHeroe.Droid.Resource.Attribute.drawerArrowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::PetsHeroe.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.editTextBackground = global::PetsHeroe.Droid.Resource.Attribute.editTextBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.editTextColor = global::PetsHeroe.Droid.Resource.Attribute.editTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.editTextStyle = global::PetsHeroe.Droid.Resource.Attribute.editTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.elevation = global::PetsHeroe.Droid.Resource.Attribute.elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.errorEnabled = global::PetsHeroe.Droid.Resource.Attribute.errorEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.errorTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.errorTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::PetsHeroe.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expanded = global::PetsHeroe.Droid.Resource.Attribute.expanded;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleGravity = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleMargin = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleMargin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleMarginBottom = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleMarginEnd = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleMarginStart = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleMarginTop = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.expandedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::PetsHeroe.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fabSize = global::PetsHeroe.Droid.Resource.Attribute.fabSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fastScrollEnabled = global::PetsHeroe.Droid.Resource.Attribute.fastScrollEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::PetsHeroe.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::PetsHeroe.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::PetsHeroe.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::PetsHeroe.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.font = global::PetsHeroe.Droid.Resource.Attribute.font;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontFamily = global::PetsHeroe.Droid.Resource.Attribute.fontFamily;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderAuthority = global::PetsHeroe.Droid.Resource.Attribute.fontProviderAuthority;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderCerts = global::PetsHeroe.Droid.Resource.Attribute.fontProviderCerts;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderFetchStrategy = global::PetsHeroe.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderFetchTimeout = global::PetsHeroe.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderPackage = global::PetsHeroe.Droid.Resource.Attribute.fontProviderPackage;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontProviderQuery = global::PetsHeroe.Droid.Resource.Attribute.fontProviderQuery;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontStyle = global::PetsHeroe.Droid.Resource.Attribute.fontStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.fontWeight = global::PetsHeroe.Droid.Resource.Attribute.fontWeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.foregroundInsidePadding = global::PetsHeroe.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.gapBetweenBars = global::PetsHeroe.Droid.Resource.Attribute.gapBetweenBars;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.goIcon = global::PetsHeroe.Droid.Resource.Attribute.goIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.headerLayout = global::PetsHeroe.Droid.Resource.Attribute.headerLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.height = global::PetsHeroe.Droid.Resource.Attribute.height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.hideOnContentScroll = global::PetsHeroe.Droid.Resource.Attribute.hideOnContentScroll;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.hintAnimationEnabled = global::PetsHeroe.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.hintEnabled = global::PetsHeroe.Droid.Resource.Attribute.hintEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.hintTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.hintTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.homeAsUpIndicator = global::PetsHeroe.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.homeLayout = global::PetsHeroe.Droid.Resource.Attribute.homeLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.icon = global::PetsHeroe.Droid.Resource.Attribute.icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.iconTint = global::PetsHeroe.Droid.Resource.Attribute.iconTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.iconTintMode = global::PetsHeroe.Droid.Resource.Attribute.iconTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.iconifiedByDefault = global::PetsHeroe.Droid.Resource.Attribute.iconifiedByDefault;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.imageButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.imageButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.indeterminateProgressStyle = global::PetsHeroe.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.initialActivityCount = global::PetsHeroe.Droid.Resource.Attribute.initialActivityCount;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.insetForeground = global::PetsHeroe.Droid.Resource.Attribute.insetForeground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.isLightTheme = global::PetsHeroe.Droid.Resource.Attribute.isLightTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.itemBackground = global::PetsHeroe.Droid.Resource.Attribute.itemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.itemIconTint = global::PetsHeroe.Droid.Resource.Attribute.itemIconTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.itemPadding = global::PetsHeroe.Droid.Resource.Attribute.itemPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.itemTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.itemTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.itemTextColor = global::PetsHeroe.Droid.Resource.Attribute.itemTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.keylines = global::PetsHeroe.Droid.Resource.Attribute.keylines;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout = global::PetsHeroe.Droid.Resource.Attribute.layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layoutManager = global::PetsHeroe.Droid.Resource.Attribute.layoutManager;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_anchor = global::PetsHeroe.Droid.Resource.Attribute.layout_anchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_anchorGravity = global::PetsHeroe.Droid.Resource.Attribute.layout_anchorGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_behavior = global::PetsHeroe.Droid.Resource.Attribute.layout_behavior;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_collapseMode = global::PetsHeroe.Droid.Resource.Attribute.layout_collapseMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::PetsHeroe.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::PetsHeroe.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_insetEdge = global::PetsHeroe.Droid.Resource.Attribute.layout_insetEdge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_keyline = global::PetsHeroe.Droid.Resource.Attribute.layout_keyline;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_scrollFlags = global::PetsHeroe.Droid.Resource.Attribute.layout_scrollFlags;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.layout_scrollInterpolator = global::PetsHeroe.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::PetsHeroe.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listDividerAlertDialog = global::PetsHeroe.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listItemLayout = global::PetsHeroe.Droid.Resource.Attribute.listItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listLayout = global::PetsHeroe.Droid.Resource.Attribute.listLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listMenuViewStyle = global::PetsHeroe.Droid.Resource.Attribute.listMenuViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPopupWindowStyle = global::PetsHeroe.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPreferredItemHeight = global::PetsHeroe.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::PetsHeroe.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::PetsHeroe.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::PetsHeroe.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::PetsHeroe.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.logo = global::PetsHeroe.Droid.Resource.Attribute.logo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.logoDescription = global::PetsHeroe.Droid.Resource.Attribute.logoDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.maxActionInlineWidth = global::PetsHeroe.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.maxButtonHeight = global::PetsHeroe.Droid.Resource.Attribute.maxButtonHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.measureWithLargestChild = global::PetsHeroe.Droid.Resource.Attribute.measureWithLargestChild;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteButtonTint = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteButtonTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteStopDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteStopDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteTheme = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::PetsHeroe.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.menu = global::PetsHeroe.Droid.Resource.Attribute.menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.multiChoiceItemLayout = global::PetsHeroe.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.navigationContentDescription = global::PetsHeroe.Droid.Resource.Attribute.navigationContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.navigationIcon = global::PetsHeroe.Droid.Resource.Attribute.navigationIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.navigationMode = global::PetsHeroe.Droid.Resource.Attribute.navigationMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.numericModifiers = global::PetsHeroe.Droid.Resource.Attribute.numericModifiers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.overlapAnchor = global::PetsHeroe.Droid.Resource.Attribute.overlapAnchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.paddingBottomNoButtons = global::PetsHeroe.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.paddingEnd = global::PetsHeroe.Droid.Resource.Attribute.paddingEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.paddingStart = global::PetsHeroe.Droid.Resource.Attribute.paddingStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.paddingTopNoTitle = global::PetsHeroe.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.panelBackground = global::PetsHeroe.Droid.Resource.Attribute.panelBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.panelMenuListTheme = global::PetsHeroe.Droid.Resource.Attribute.panelMenuListTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.panelMenuListWidth = global::PetsHeroe.Droid.Resource.Attribute.panelMenuListWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.passwordToggleContentDescription = global::PetsHeroe.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.passwordToggleDrawable = global::PetsHeroe.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.passwordToggleEnabled = global::PetsHeroe.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.passwordToggleTint = global::PetsHeroe.Droid.Resource.Attribute.passwordToggleTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.passwordToggleTintMode = global::PetsHeroe.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.popupMenuStyle = global::PetsHeroe.Droid.Resource.Attribute.popupMenuStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.popupTheme = global::PetsHeroe.Droid.Resource.Attribute.popupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.popupWindowStyle = global::PetsHeroe.Droid.Resource.Attribute.popupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.preserveIconSpacing = global::PetsHeroe.Droid.Resource.Attribute.preserveIconSpacing;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.pressedTranslationZ = global::PetsHeroe.Droid.Resource.Attribute.pressedTranslationZ;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.progressBarPadding = global::PetsHeroe.Droid.Resource.Attribute.progressBarPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.progressBarStyle = global::PetsHeroe.Droid.Resource.Attribute.progressBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.queryBackground = global::PetsHeroe.Droid.Resource.Attribute.queryBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.queryHint = global::PetsHeroe.Droid.Resource.Attribute.queryHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.radioButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.radioButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.ratingBarStyle = global::PetsHeroe.Droid.Resource.Attribute.ratingBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.ratingBarStyleIndicator = global::PetsHeroe.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.ratingBarStyleSmall = global::PetsHeroe.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.reverseLayout = global::PetsHeroe.Droid.Resource.Attribute.reverseLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.rippleColor = global::PetsHeroe.Droid.Resource.Attribute.rippleColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.scrimAnimationDuration = global::PetsHeroe.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::PetsHeroe.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.searchHintIcon = global::PetsHeroe.Droid.Resource.Attribute.searchHintIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.searchIcon = global::PetsHeroe.Droid.Resource.Attribute.searchIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.searchViewStyle = global::PetsHeroe.Droid.Resource.Attribute.searchViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.seekBarStyle = global::PetsHeroe.Droid.Resource.Attribute.seekBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.selectableItemBackground = global::PetsHeroe.Droid.Resource.Attribute.selectableItemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::PetsHeroe.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.showAsAction = global::PetsHeroe.Droid.Resource.Attribute.showAsAction;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.showDividers = global::PetsHeroe.Droid.Resource.Attribute.showDividers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.showText = global::PetsHeroe.Droid.Resource.Attribute.showText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.showTitle = global::PetsHeroe.Droid.Resource.Attribute.showTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.singleChoiceItemLayout = global::PetsHeroe.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.spanCount = global::PetsHeroe.Droid.Resource.Attribute.spanCount;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.spinBars = global::PetsHeroe.Droid.Resource.Attribute.spinBars;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::PetsHeroe.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.spinnerStyle = global::PetsHeroe.Droid.Resource.Attribute.spinnerStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.splitTrack = global::PetsHeroe.Droid.Resource.Attribute.splitTrack;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.srcCompat = global::PetsHeroe.Droid.Resource.Attribute.srcCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.stackFromEnd = global::PetsHeroe.Droid.Resource.Attribute.stackFromEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.state_above_anchor = global::PetsHeroe.Droid.Resource.Attribute.state_above_anchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.state_collapsed = global::PetsHeroe.Droid.Resource.Attribute.state_collapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.state_collapsible = global::PetsHeroe.Droid.Resource.Attribute.state_collapsible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.statusBarBackground = global::PetsHeroe.Droid.Resource.Attribute.statusBarBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.statusBarScrim = global::PetsHeroe.Droid.Resource.Attribute.statusBarScrim;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.subMenuArrow = global::PetsHeroe.Droid.Resource.Attribute.subMenuArrow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.submitBackground = global::PetsHeroe.Droid.Resource.Attribute.submitBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.subtitle = global::PetsHeroe.Droid.Resource.Attribute.subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.subtitleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.subtitleTextColor = global::PetsHeroe.Droid.Resource.Attribute.subtitleTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.subtitleTextStyle = global::PetsHeroe.Droid.Resource.Attribute.subtitleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.suggestionRowLayout = global::PetsHeroe.Droid.Resource.Attribute.suggestionRowLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.switchMinWidth = global::PetsHeroe.Droid.Resource.Attribute.switchMinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.switchPadding = global::PetsHeroe.Droid.Resource.Attribute.switchPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.switchStyle = global::PetsHeroe.Droid.Resource.Attribute.switchStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.switchTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.switchTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabBackground = global::PetsHeroe.Droid.Resource.Attribute.tabBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabContentStart = global::PetsHeroe.Droid.Resource.Attribute.tabContentStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabGravity = global::PetsHeroe.Droid.Resource.Attribute.tabGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabIndicatorColor = global::PetsHeroe.Droid.Resource.Attribute.tabIndicatorColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabIndicatorHeight = global::PetsHeroe.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabMaxWidth = global::PetsHeroe.Droid.Resource.Attribute.tabMaxWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabMinWidth = global::PetsHeroe.Droid.Resource.Attribute.tabMinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabMode = global::PetsHeroe.Droid.Resource.Attribute.tabMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabPadding = global::PetsHeroe.Droid.Resource.Attribute.tabPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabPaddingBottom = global::PetsHeroe.Droid.Resource.Attribute.tabPaddingBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabPaddingEnd = global::PetsHeroe.Droid.Resource.Attribute.tabPaddingEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabPaddingStart = global::PetsHeroe.Droid.Resource.Attribute.tabPaddingStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabPaddingTop = global::PetsHeroe.Droid.Resource.Attribute.tabPaddingTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabSelectedTextColor = global::PetsHeroe.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.tabTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tabTextColor = global::PetsHeroe.Droid.Resource.Attribute.tabTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAllCaps = global::PetsHeroe.Droid.Resource.Attribute.textAllCaps;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceListItem = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceListItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceListItemSmall = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::PetsHeroe.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::PetsHeroe.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textColorAlertDialogListItem = global::PetsHeroe.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.textColorSearchUrl = global::PetsHeroe.Droid.Resource.Attribute.textColorSearchUrl;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.theme = global::PetsHeroe.Droid.Resource.Attribute.theme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.thickness = global::PetsHeroe.Droid.Resource.Attribute.thickness;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.thumbTextPadding = global::PetsHeroe.Droid.Resource.Attribute.thumbTextPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.thumbTint = global::PetsHeroe.Droid.Resource.Attribute.thumbTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.thumbTintMode = global::PetsHeroe.Droid.Resource.Attribute.thumbTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tickMark = global::PetsHeroe.Droid.Resource.Attribute.tickMark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tickMarkTint = global::PetsHeroe.Droid.Resource.Attribute.tickMarkTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tickMarkTintMode = global::PetsHeroe.Droid.Resource.Attribute.tickMarkTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tint = global::PetsHeroe.Droid.Resource.Attribute.tint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tintMode = global::PetsHeroe.Droid.Resource.Attribute.tintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.title = global::PetsHeroe.Droid.Resource.Attribute.title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleEnabled = global::PetsHeroe.Droid.Resource.Attribute.titleEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMargin = global::PetsHeroe.Droid.Resource.Attribute.titleMargin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMarginBottom = global::PetsHeroe.Droid.Resource.Attribute.titleMarginBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMarginEnd = global::PetsHeroe.Droid.Resource.Attribute.titleMarginEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMarginStart = global::PetsHeroe.Droid.Resource.Attribute.titleMarginStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMarginTop = global::PetsHeroe.Droid.Resource.Attribute.titleMarginTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleMargins = global::PetsHeroe.Droid.Resource.Attribute.titleMargins;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleTextAppearance = global::PetsHeroe.Droid.Resource.Attribute.titleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleTextColor = global::PetsHeroe.Droid.Resource.Attribute.titleTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.titleTextStyle = global::PetsHeroe.Droid.Resource.Attribute.titleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.toolbarId = global::PetsHeroe.Droid.Resource.Attribute.toolbarId;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::PetsHeroe.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.toolbarStyle = global::PetsHeroe.Droid.Resource.Attribute.toolbarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tooltipForegroundColor = global::PetsHeroe.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tooltipFrameBackground = global::PetsHeroe.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.tooltipText = global::PetsHeroe.Droid.Resource.Attribute.tooltipText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.track = global::PetsHeroe.Droid.Resource.Attribute.track;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.trackTint = global::PetsHeroe.Droid.Resource.Attribute.trackTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.trackTintMode = global::PetsHeroe.Droid.Resource.Attribute.trackTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.useCompatPadding = global::PetsHeroe.Droid.Resource.Attribute.useCompatPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.voiceIcon = global::PetsHeroe.Droid.Resource.Attribute.voiceIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowActionBar = global::PetsHeroe.Droid.Resource.Attribute.windowActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowActionBarOverlay = global::PetsHeroe.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowActionModeOverlay = global::PetsHeroe.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowFixedHeightMajor = global::PetsHeroe.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowFixedHeightMinor = global::PetsHeroe.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowFixedWidthMajor = global::PetsHeroe.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowFixedWidthMinor = global::PetsHeroe.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowMinWidthMajor = global::PetsHeroe.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowMinWidthMinor = global::PetsHeroe.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Attribute.windowNoTitle = global::PetsHeroe.Droid.Resource.Attribute.windowNoTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::PetsHeroe.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::PetsHeroe.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::PetsHeroe.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::PetsHeroe.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::PetsHeroe.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::PetsHeroe.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_btn_colored_text_material = global::PetsHeroe.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_color_highlight_material = global::PetsHeroe.Droid.Resource.Color.abc_color_highlight_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_hint_foreground_material_dark = global::PetsHeroe.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_hint_foreground_material_light = global::PetsHeroe.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_input_method_navigation_guard = global::PetsHeroe.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::PetsHeroe.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::PetsHeroe.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_primary_text_material_dark = global::PetsHeroe.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_primary_text_material_light = global::PetsHeroe.Droid.Resource.Color.abc_primary_text_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_search_url_text = global::PetsHeroe.Droid.Resource.Color.abc_search_url_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_search_url_text_normal = global::PetsHeroe.Droid.Resource.Color.abc_search_url_text_normal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_search_url_text_pressed = global::PetsHeroe.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_search_url_text_selected = global::PetsHeroe.Droid.Resource.Color.abc_search_url_text_selected;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_secondary_text_material_dark = global::PetsHeroe.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_secondary_text_material_light = global::PetsHeroe.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_btn_checkable = global::PetsHeroe.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_default = global::PetsHeroe.Droid.Resource.Color.abc_tint_default;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_edittext = global::PetsHeroe.Droid.Resource.Color.abc_tint_edittext;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_seek_thumb = global::PetsHeroe.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_spinner = global::PetsHeroe.Droid.Resource.Color.abc_tint_spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.abc_tint_switch_track = global::PetsHeroe.Droid.Resource.Color.abc_tint_switch_track;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.accent_material_dark = global::PetsHeroe.Droid.Resource.Color.accent_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.accent_material_light = global::PetsHeroe.Droid.Resource.Color.accent_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.background_floating_material_dark = global::PetsHeroe.Droid.Resource.Color.background_floating_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.background_floating_material_light = global::PetsHeroe.Droid.Resource.Color.background_floating_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.background_material_dark = global::PetsHeroe.Droid.Resource.Color.background_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.background_material_light = global::PetsHeroe.Droid.Resource.Color.background_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::PetsHeroe.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_disabled_material_light = global::PetsHeroe.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::PetsHeroe.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_inverse_material_light = global::PetsHeroe.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_material_dark = global::PetsHeroe.Droid.Resource.Color.bright_foreground_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.bright_foreground_material_light = global::PetsHeroe.Droid.Resource.Color.bright_foreground_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.button_material_dark = global::PetsHeroe.Droid.Resource.Color.button_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.button_material_light = global::PetsHeroe.Droid.Resource.Color.button_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.cardview_dark_background = global::PetsHeroe.Droid.Resource.Color.cardview_dark_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.cardview_light_background = global::PetsHeroe.Droid.Resource.Color.cardview_light_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.cardview_shadow_end_color = global::PetsHeroe.Droid.Resource.Color.cardview_shadow_end_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.cardview_shadow_start_color = global::PetsHeroe.Droid.Resource.Color.cardview_shadow_start_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::PetsHeroe.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_error = global::PetsHeroe.Droid.Resource.Color.design_error;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_shadow_end_color = global::PetsHeroe.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_shadow_mid_color = global::PetsHeroe.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_shadow_start_color = global::PetsHeroe.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::PetsHeroe.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::PetsHeroe.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::PetsHeroe.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::PetsHeroe.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_snackbar_background_color = global::PetsHeroe.Droid.Resource.Color.design_snackbar_background_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.design_tint_password_toggle = global::PetsHeroe.Droid.Resource.Color.design_tint_password_toggle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::PetsHeroe.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.dim_foreground_disabled_material_light = global::PetsHeroe.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.dim_foreground_material_dark = global::PetsHeroe.Droid.Resource.Color.dim_foreground_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.dim_foreground_material_light = global::PetsHeroe.Droid.Resource.Color.dim_foreground_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.foreground_material_dark = global::PetsHeroe.Droid.Resource.Color.foreground_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.foreground_material_light = global::PetsHeroe.Droid.Resource.Color.foreground_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.highlighted_text_material_dark = global::PetsHeroe.Droid.Resource.Color.highlighted_text_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.highlighted_text_material_light = global::PetsHeroe.Droid.Resource.Color.highlighted_text_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_blue_grey_800 = global::PetsHeroe.Droid.Resource.Color.material_blue_grey_800;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_blue_grey_900 = global::PetsHeroe.Droid.Resource.Color.material_blue_grey_900;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_blue_grey_950 = global::PetsHeroe.Droid.Resource.Color.material_blue_grey_950;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_deep_teal_200 = global::PetsHeroe.Droid.Resource.Color.material_deep_teal_200;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_deep_teal_500 = global::PetsHeroe.Droid.Resource.Color.material_deep_teal_500;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_100 = global::PetsHeroe.Droid.Resource.Color.material_grey_100;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_300 = global::PetsHeroe.Droid.Resource.Color.material_grey_300;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_50 = global::PetsHeroe.Droid.Resource.Color.material_grey_50;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_600 = global::PetsHeroe.Droid.Resource.Color.material_grey_600;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_800 = global::PetsHeroe.Droid.Resource.Color.material_grey_800;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_850 = global::PetsHeroe.Droid.Resource.Color.material_grey_850;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.material_grey_900 = global::PetsHeroe.Droid.Resource.Color.material_grey_900;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.notification_action_color_filter = global::PetsHeroe.Droid.Resource.Color.notification_action_color_filter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.notification_icon_bg_color = global::PetsHeroe.Droid.Resource.Color.notification_icon_bg_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.notification_material_background_media_default_color = global::PetsHeroe.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_dark_material_dark = global::PetsHeroe.Droid.Resource.Color.primary_dark_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_dark_material_light = global::PetsHeroe.Droid.Resource.Color.primary_dark_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_material_dark = global::PetsHeroe.Droid.Resource.Color.primary_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_material_light = global::PetsHeroe.Droid.Resource.Color.primary_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_text_default_material_dark = global::PetsHeroe.Droid.Resource.Color.primary_text_default_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_text_default_material_light = global::PetsHeroe.Droid.Resource.Color.primary_text_default_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_text_disabled_material_dark = global::PetsHeroe.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.primary_text_disabled_material_light = global::PetsHeroe.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.ripple_material_dark = global::PetsHeroe.Droid.Resource.Color.ripple_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.ripple_material_light = global::PetsHeroe.Droid.Resource.Color.ripple_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.secondary_text_default_material_dark = global::PetsHeroe.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.secondary_text_default_material_light = global::PetsHeroe.Droid.Resource.Color.secondary_text_default_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.secondary_text_disabled_material_dark = global::PetsHeroe.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.secondary_text_disabled_material_light = global::PetsHeroe.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::PetsHeroe.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_disabled_material_light = global::PetsHeroe.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_material_dark = global::PetsHeroe.Droid.Resource.Color.switch_thumb_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_material_light = global::PetsHeroe.Droid.Resource.Color.switch_thumb_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_normal_material_dark = global::PetsHeroe.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.switch_thumb_normal_material_light = global::PetsHeroe.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.tooltip_background_dark = global::PetsHeroe.Droid.Resource.Color.tooltip_background_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Color.tooltip_background_light = global::PetsHeroe.Droid.Resource.Color.tooltip_background_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_button_min_height_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_button_min_width_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::PetsHeroe.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::PetsHeroe.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::PetsHeroe.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::PetsHeroe.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::PetsHeroe.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::PetsHeroe.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_control_corner_material = global::PetsHeroe.Droid.Resource.Dimension.abc_control_corner_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_control_inset_material = global::PetsHeroe.Droid.Resource.Dimension.abc_control_inset_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_control_padding_material = global::PetsHeroe.Droid.Resource.Dimension.abc_control_padding_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_min_width_major = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_padding_material = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::PetsHeroe.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::PetsHeroe.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::PetsHeroe.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::PetsHeroe.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::PetsHeroe.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::PetsHeroe.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::PetsHeroe.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::PetsHeroe.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_floating_window_z = global::PetsHeroe.Droid.Resource.Dimension.abc_floating_window_z;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_panel_menu_list_width = global::PetsHeroe.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_progress_bar_height_material = global::PetsHeroe.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_search_view_preferred_height = global::PetsHeroe.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_search_view_preferred_width = global::PetsHeroe.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::PetsHeroe.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::PetsHeroe.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::PetsHeroe.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_switch_padding = global::PetsHeroe.Droid.Resource.Dimension.abc_switch_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_body_1_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_body_2_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_button_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_caption_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_display_1_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_display_2_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_display_3_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_display_4_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_headline_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_large_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_medium_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_menu_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_small_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_subhead_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_title_material = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::PetsHeroe.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::PetsHeroe.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.cardview_default_elevation = global::PetsHeroe.Droid.Resource.Dimension.cardview_default_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.cardview_default_radius = global::PetsHeroe.Droid.Resource.Dimension.cardview_default_radius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::PetsHeroe.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::PetsHeroe.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::PetsHeroe.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.compat_control_corner_material = global::PetsHeroe.Droid.Resource.Dimension.compat_control_corner_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_appbar_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_appbar_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_height = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_margin = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::PetsHeroe.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_border_width = global::PetsHeroe.Droid.Resource.Dimension.design_fab_border_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_fab_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_image_size = global::PetsHeroe.Droid.Resource.Dimension.design_fab_image_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_size_mini = global::PetsHeroe.Droid.Resource.Dimension.design_fab_size_mini;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_size_normal = global::PetsHeroe.Droid.Resource.Dimension.design_fab_size_normal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::PetsHeroe.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_icon_padding = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_icon_size = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_padding_bottom = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::PetsHeroe.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_elevation = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_min_width = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_snackbar_text_size = global::PetsHeroe.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_tab_max_width = global::PetsHeroe.Droid.Resource.Dimension.design_tab_max_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::PetsHeroe.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_tab_text_size = global::PetsHeroe.Droid.Resource.Dimension.design_tab_text_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.design_tab_text_size_2line = global::PetsHeroe.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.disabled_alpha_material_dark = global::PetsHeroe.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.disabled_alpha_material_light = global::PetsHeroe.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.fastscroll_default_thickness = global::PetsHeroe.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.fastscroll_margin = global::PetsHeroe.Droid.Resource.Dimension.fastscroll_margin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.fastscroll_minimum_range = global::PetsHeroe.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.highlight_alpha_material_colored = global::PetsHeroe.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.highlight_alpha_material_dark = global::PetsHeroe.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.highlight_alpha_material_light = global::PetsHeroe.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.hint_alpha_material_dark = global::PetsHeroe.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.hint_alpha_material_light = global::PetsHeroe.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::PetsHeroe.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::PetsHeroe.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::PetsHeroe.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::PetsHeroe.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::PetsHeroe.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::PetsHeroe.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::PetsHeroe.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::PetsHeroe.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::PetsHeroe.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::PetsHeroe.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::PetsHeroe.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_action_icon_size = global::PetsHeroe.Droid.Resource.Dimension.notification_action_icon_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_action_text_size = global::PetsHeroe.Droid.Resource.Dimension.notification_action_text_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_big_circle_margin = global::PetsHeroe.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_content_margin_start = global::PetsHeroe.Droid.Resource.Dimension.notification_content_margin_start;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_large_icon_height = global::PetsHeroe.Droid.Resource.Dimension.notification_large_icon_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_large_icon_width = global::PetsHeroe.Droid.Resource.Dimension.notification_large_icon_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_main_column_padding_top = global::PetsHeroe.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_media_narrow_margin = global::PetsHeroe.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_right_icon_size = global::PetsHeroe.Droid.Resource.Dimension.notification_right_icon_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_right_side_padding_top = global::PetsHeroe.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_small_icon_background_padding = global::PetsHeroe.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::PetsHeroe.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_subtext_size = global::PetsHeroe.Droid.Resource.Dimension.notification_subtext_size;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_top_pad = global::PetsHeroe.Droid.Resource.Dimension.notification_top_pad;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.notification_top_pad_large_text = global::PetsHeroe.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_corner_radius = global::PetsHeroe.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_horizontal_padding = global::PetsHeroe.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_margin = global::PetsHeroe.Droid.Resource.Dimension.tooltip_margin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::PetsHeroe.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::PetsHeroe.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_vertical_padding = global::PetsHeroe.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::PetsHeroe.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Dimension.tooltip_y_offset_touch = global::PetsHeroe.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::PetsHeroe.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_borderless_material = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_check_material = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_check_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_colored_material = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_radio_material = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::PetsHeroe.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::PetsHeroe.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_cab_background_top_material = global::PetsHeroe.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_control_background_material = global::PetsHeroe.Droid.Resource.Drawable.abc_control_background_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_dialog_material_background = global::PetsHeroe.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_edit_text_material = global::PetsHeroe.Droid.Resource.Drawable.abc_edit_text_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_ab_back_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_clear_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_search_api_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_item_background_holo_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_item_background_holo_light = global::PetsHeroe.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_focused_holo = global::PetsHeroe.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_longpressed_holo = global::PetsHeroe.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::PetsHeroe.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_list_selector_holo_light = global::PetsHeroe.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::PetsHeroe.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::PetsHeroe.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ratingbar_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_ratingbar_small_material = global::PetsHeroe.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::PetsHeroe.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::PetsHeroe.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::PetsHeroe.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::PetsHeroe.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_seekbar_track_material = global::PetsHeroe.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::PetsHeroe.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_switch_thumb_material = global::PetsHeroe.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_tab_indicator_material = global::PetsHeroe.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_cursor_material = global::PetsHeroe.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::PetsHeroe.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_textfield_search_material = global::PetsHeroe.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.abc_vector_test = global::PetsHeroe.Droid.Resource.Drawable.abc_vector_test;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.avd_hide_password = global::PetsHeroe.Droid.Resource.Drawable.avd_hide_password;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.avd_show_password = global::PetsHeroe.Droid.Resource.Drawable.avd_show_password;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::PetsHeroe.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_fab_background = global::PetsHeroe.Droid.Resource.Drawable.design_fab_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_ic_visibility = global::PetsHeroe.Droid.Resource.Drawable.design_ic_visibility;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_ic_visibility_off = global::PetsHeroe.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_password_eye = global::PetsHeroe.Droid.Resource.Drawable.design_password_eye;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.design_snackbar_background = global::PetsHeroe.Droid.Resource.Drawable.design_snackbar_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.hide_password = global::PetsHeroe.Droid.Resource.Drawable.hide_password;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_audiotrack_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_audiotrack_light = global::PetsHeroe.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_dialog_close_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_dialog_close_light = global::PetsHeroe.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_00 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_01 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_02 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_03 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_04 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_05 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_06 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_07 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_08 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_09 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_10 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_11 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_12 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_13 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_14 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_collapse_15 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_00 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_00;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_01 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_01;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_02 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_02;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_03 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_03;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_04 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_04;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_05 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_05;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_06 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_06;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_07 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_07;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_08 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_08;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_09 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_09;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_10 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_10;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_11 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_11;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_12 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_12;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_13 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_13;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_14 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_14;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_group_expand_15 = global::PetsHeroe.Droid.Resource.Drawable.ic_group_expand_15;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_pause_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_pause_light = global::PetsHeroe.Droid.Resource.Drawable.ic_media_pause_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_play_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_media_play_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_play_light = global::PetsHeroe.Droid.Resource.Drawable.ic_media_play_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_stop_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_media_stop_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_media_stop_light = global::PetsHeroe.Droid.Resource.Drawable.ic_media_stop_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_mr_button_grey = global::PetsHeroe.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.ic_vol_type_tv_light = global::PetsHeroe.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_connected_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_connected_light = global::PetsHeroe.Droid.Resource.Drawable.mr_button_connected_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_connecting_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_connecting_light = global::PetsHeroe.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_button_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_button_light = global::PetsHeroe.Droid.Resource.Drawable.mr_button_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_dialog_close_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_dialog_close_light = global::PetsHeroe.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_dialog_material_background_light = global::PetsHeroe.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_group_collapse = global::PetsHeroe.Droid.Resource.Drawable.mr_group_collapse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_group_expand = global::PetsHeroe.Droid.Resource.Drawable.mr_group_expand;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_pause_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_pause_light = global::PetsHeroe.Droid.Resource.Drawable.mr_media_pause_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_play_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_media_play_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_play_light = global::PetsHeroe.Droid.Resource.Drawable.mr_media_play_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_stop_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_media_stop_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_media_stop_light = global::PetsHeroe.Droid.Resource.Drawable.mr_media_stop_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::PetsHeroe.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::PetsHeroe.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.navigation_empty_icon = global::PetsHeroe.Droid.Resource.Drawable.navigation_empty_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_action_background = global::PetsHeroe.Droid.Resource.Drawable.notification_action_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg = global::PetsHeroe.Droid.Resource.Drawable.notification_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg_low = global::PetsHeroe.Droid.Resource.Drawable.notification_bg_low;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg_low_normal = global::PetsHeroe.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg_low_pressed = global::PetsHeroe.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg_normal = global::PetsHeroe.Droid.Resource.Drawable.notification_bg_normal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_bg_normal_pressed = global::PetsHeroe.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_icon_background = global::PetsHeroe.Droid.Resource.Drawable.notification_icon_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_template_icon_bg = global::PetsHeroe.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_template_icon_low_bg = global::PetsHeroe.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notification_tile_bg = global::PetsHeroe.Droid.Resource.Drawable.notification_tile_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::PetsHeroe.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.show_password = global::PetsHeroe.Droid.Resource.Drawable.show_password;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.tooltip_frame_dark = global::PetsHeroe.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Drawable.tooltip_frame_light = global::PetsHeroe.Droid.Resource.Drawable.tooltip_frame_light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.ALT = global::PetsHeroe.Droid.Resource.Id.ALT;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.CTRL = global::PetsHeroe.Droid.Resource.Id.CTRL;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.FUNCTION = global::PetsHeroe.Droid.Resource.Id.FUNCTION;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.META = global::PetsHeroe.Droid.Resource.Id.META;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.SHIFT = global::PetsHeroe.Droid.Resource.Id.SHIFT;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.SYM = global::PetsHeroe.Droid.Resource.Id.SYM;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action0 = global::PetsHeroe.Droid.Resource.Id.action0;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar = global::PetsHeroe.Droid.Resource.Id.action_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_activity_content = global::PetsHeroe.Droid.Resource.Id.action_bar_activity_content;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_container = global::PetsHeroe.Droid.Resource.Id.action_bar_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_root = global::PetsHeroe.Droid.Resource.Id.action_bar_root;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_spinner = global::PetsHeroe.Droid.Resource.Id.action_bar_spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_subtitle = global::PetsHeroe.Droid.Resource.Id.action_bar_subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_bar_title = global::PetsHeroe.Droid.Resource.Id.action_bar_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_container = global::PetsHeroe.Droid.Resource.Id.action_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_context_bar = global::PetsHeroe.Droid.Resource.Id.action_context_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_divider = global::PetsHeroe.Droid.Resource.Id.action_divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_image = global::PetsHeroe.Droid.Resource.Id.action_image;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_menu_divider = global::PetsHeroe.Droid.Resource.Id.action_menu_divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_menu_presenter = global::PetsHeroe.Droid.Resource.Id.action_menu_presenter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_mode_bar = global::PetsHeroe.Droid.Resource.Id.action_mode_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_mode_bar_stub = global::PetsHeroe.Droid.Resource.Id.action_mode_bar_stub;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_mode_close_button = global::PetsHeroe.Droid.Resource.Id.action_mode_close_button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.action_text = global::PetsHeroe.Droid.Resource.Id.action_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.actions = global::PetsHeroe.Droid.Resource.Id.actions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.activity_chooser_view_content = global::PetsHeroe.Droid.Resource.Id.activity_chooser_view_content;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.add = global::PetsHeroe.Droid.Resource.Id.add;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.alertTitle = global::PetsHeroe.Droid.Resource.Id.alertTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.all = global::PetsHeroe.Droid.Resource.Id.all;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.always = global::PetsHeroe.Droid.Resource.Id.always;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.async = global::PetsHeroe.Droid.Resource.Id.async;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.auto = global::PetsHeroe.Droid.Resource.Id.auto;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.beginning = global::PetsHeroe.Droid.Resource.Id.beginning;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.blocking = global::PetsHeroe.Droid.Resource.Id.blocking;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.bottom = global::PetsHeroe.Droid.Resource.Id.bottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.buttonPanel = global::PetsHeroe.Droid.Resource.Id.buttonPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.cancel_action = global::PetsHeroe.Droid.Resource.Id.cancel_action;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.center = global::PetsHeroe.Droid.Resource.Id.center;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.center_horizontal = global::PetsHeroe.Droid.Resource.Id.center_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.center_vertical = global::PetsHeroe.Droid.Resource.Id.center_vertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.checkbox = global::PetsHeroe.Droid.Resource.Id.checkbox;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.chronometer = global::PetsHeroe.Droid.Resource.Id.chronometer;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.clip_horizontal = global::PetsHeroe.Droid.Resource.Id.clip_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.clip_vertical = global::PetsHeroe.Droid.Resource.Id.clip_vertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.collapseActionView = global::PetsHeroe.Droid.Resource.Id.collapseActionView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.container = global::PetsHeroe.Droid.Resource.Id.container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.contentPanel = global::PetsHeroe.Droid.Resource.Id.contentPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.coordinator = global::PetsHeroe.Droid.Resource.Id.coordinator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.custom = global::PetsHeroe.Droid.Resource.Id.custom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.customPanel = global::PetsHeroe.Droid.Resource.Id.customPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.decor_content_parent = global::PetsHeroe.Droid.Resource.Id.decor_content_parent;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.default_activity_button = global::PetsHeroe.Droid.Resource.Id.default_activity_button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.design_bottom_sheet = global::PetsHeroe.Droid.Resource.Id.design_bottom_sheet;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.design_menu_item_action_area = global::PetsHeroe.Droid.Resource.Id.design_menu_item_action_area;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.design_menu_item_action_area_stub = global::PetsHeroe.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.design_menu_item_text = global::PetsHeroe.Droid.Resource.Id.design_menu_item_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.design_navigation_view = global::PetsHeroe.Droid.Resource.Id.design_navigation_view;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.disableHome = global::PetsHeroe.Droid.Resource.Id.disableHome;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.edit_query = global::PetsHeroe.Droid.Resource.Id.edit_query;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.end = global::PetsHeroe.Droid.Resource.Id.end;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.end_padder = global::PetsHeroe.Droid.Resource.Id.end_padder;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.enterAlways = global::PetsHeroe.Droid.Resource.Id.enterAlways;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.enterAlwaysCollapsed = global::PetsHeroe.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.exitUntilCollapsed = global::PetsHeroe.Droid.Resource.Id.exitUntilCollapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.expand_activities_button = global::PetsHeroe.Droid.Resource.Id.expand_activities_button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.expanded_menu = global::PetsHeroe.Droid.Resource.Id.expanded_menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.fill = global::PetsHeroe.Droid.Resource.Id.fill;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.fill_horizontal = global::PetsHeroe.Droid.Resource.Id.fill_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.fill_vertical = global::PetsHeroe.Droid.Resource.Id.fill_vertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.@fixed = global::PetsHeroe.Droid.Resource.Id.@fixed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.forever = global::PetsHeroe.Droid.Resource.Id.forever;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.ghost_view = global::PetsHeroe.Droid.Resource.Id.ghost_view;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.home = global::PetsHeroe.Droid.Resource.Id.home;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.homeAsUp = global::PetsHeroe.Droid.Resource.Id.homeAsUp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.icon = global::PetsHeroe.Droid.Resource.Id.icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.icon_group = global::PetsHeroe.Droid.Resource.Id.icon_group;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.ifRoom = global::PetsHeroe.Droid.Resource.Id.ifRoom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.image = global::PetsHeroe.Droid.Resource.Id.image;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.info = global::PetsHeroe.Droid.Resource.Id.info;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.italic = global::PetsHeroe.Droid.Resource.Id.italic;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.item_touch_helper_previous_elevation = global::PetsHeroe.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.largeLabel = global::PetsHeroe.Droid.Resource.Id.largeLabel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.left = global::PetsHeroe.Droid.Resource.Id.left;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.line1 = global::PetsHeroe.Droid.Resource.Id.line1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.line3 = global::PetsHeroe.Droid.Resource.Id.line3;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.listMode = global::PetsHeroe.Droid.Resource.Id.listMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.list_item = global::PetsHeroe.Droid.Resource.Id.list_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.masked = global::PetsHeroe.Droid.Resource.Id.masked;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.media_actions = global::PetsHeroe.Droid.Resource.Id.media_actions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.message = global::PetsHeroe.Droid.Resource.Id.message;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.middle = global::PetsHeroe.Droid.Resource.Id.middle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mini = global::PetsHeroe.Droid.Resource.Id.mini;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_art = global::PetsHeroe.Droid.Resource.Id.mr_art;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_chooser_list = global::PetsHeroe.Droid.Resource.Id.mr_chooser_list;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_chooser_route_desc = global::PetsHeroe.Droid.Resource.Id.mr_chooser_route_desc;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_chooser_route_icon = global::PetsHeroe.Droid.Resource.Id.mr_chooser_route_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_chooser_route_name = global::PetsHeroe.Droid.Resource.Id.mr_chooser_route_name;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_chooser_title = global::PetsHeroe.Droid.Resource.Id.mr_chooser_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_close = global::PetsHeroe.Droid.Resource.Id.mr_close;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_control_divider = global::PetsHeroe.Droid.Resource.Id.mr_control_divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_control_playback_ctrl = global::PetsHeroe.Droid.Resource.Id.mr_control_playback_ctrl;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_control_subtitle = global::PetsHeroe.Droid.Resource.Id.mr_control_subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_control_title = global::PetsHeroe.Droid.Resource.Id.mr_control_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_control_title_container = global::PetsHeroe.Droid.Resource.Id.mr_control_title_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_custom_control = global::PetsHeroe.Droid.Resource.Id.mr_custom_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_default_control = global::PetsHeroe.Droid.Resource.Id.mr_default_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_dialog_area = global::PetsHeroe.Droid.Resource.Id.mr_dialog_area;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_expandable_area = global::PetsHeroe.Droid.Resource.Id.mr_expandable_area;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_group_expand_collapse = global::PetsHeroe.Droid.Resource.Id.mr_group_expand_collapse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_media_main_control = global::PetsHeroe.Droid.Resource.Id.mr_media_main_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_name = global::PetsHeroe.Droid.Resource.Id.mr_name;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_playback_control = global::PetsHeroe.Droid.Resource.Id.mr_playback_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_title_bar = global::PetsHeroe.Droid.Resource.Id.mr_title_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_volume_control = global::PetsHeroe.Droid.Resource.Id.mr_volume_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_volume_group_list = global::PetsHeroe.Droid.Resource.Id.mr_volume_group_list;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_volume_item_icon = global::PetsHeroe.Droid.Resource.Id.mr_volume_item_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.mr_volume_slider = global::PetsHeroe.Droid.Resource.Id.mr_volume_slider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.multiply = global::PetsHeroe.Droid.Resource.Id.multiply;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.navigation_header_container = global::PetsHeroe.Droid.Resource.Id.navigation_header_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.never = global::PetsHeroe.Droid.Resource.Id.never;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.none = global::PetsHeroe.Droid.Resource.Id.none;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.normal = global::PetsHeroe.Droid.Resource.Id.normal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.notification_background = global::PetsHeroe.Droid.Resource.Id.notification_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.notification_main_column = global::PetsHeroe.Droid.Resource.Id.notification_main_column;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.notification_main_column_container = global::PetsHeroe.Droid.Resource.Id.notification_main_column_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.parallax = global::PetsHeroe.Droid.Resource.Id.parallax;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.parentPanel = global::PetsHeroe.Droid.Resource.Id.parentPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.parent_matrix = global::PetsHeroe.Droid.Resource.Id.parent_matrix;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.pin = global::PetsHeroe.Droid.Resource.Id.pin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.progress_circular = global::PetsHeroe.Droid.Resource.Id.progress_circular;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.progress_horizontal = global::PetsHeroe.Droid.Resource.Id.progress_horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.radio = global::PetsHeroe.Droid.Resource.Id.radio;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.right = global::PetsHeroe.Droid.Resource.Id.right;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.right_icon = global::PetsHeroe.Droid.Resource.Id.right_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.right_side = global::PetsHeroe.Droid.Resource.Id.right_side;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.save_image_matrix = global::PetsHeroe.Droid.Resource.Id.save_image_matrix;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.save_non_transition_alpha = global::PetsHeroe.Droid.Resource.Id.save_non_transition_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.save_scale_type = global::PetsHeroe.Droid.Resource.Id.save_scale_type;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.screen = global::PetsHeroe.Droid.Resource.Id.screen;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.scroll = global::PetsHeroe.Droid.Resource.Id.scroll;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.scrollIndicatorDown = global::PetsHeroe.Droid.Resource.Id.scrollIndicatorDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.scrollIndicatorUp = global::PetsHeroe.Droid.Resource.Id.scrollIndicatorUp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.scrollView = global::PetsHeroe.Droid.Resource.Id.scrollView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.scrollable = global::PetsHeroe.Droid.Resource.Id.scrollable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_badge = global::PetsHeroe.Droid.Resource.Id.search_badge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_bar = global::PetsHeroe.Droid.Resource.Id.search_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_button = global::PetsHeroe.Droid.Resource.Id.search_button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_close_btn = global::PetsHeroe.Droid.Resource.Id.search_close_btn;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_edit_frame = global::PetsHeroe.Droid.Resource.Id.search_edit_frame;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_go_btn = global::PetsHeroe.Droid.Resource.Id.search_go_btn;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_mag_icon = global::PetsHeroe.Droid.Resource.Id.search_mag_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_plate = global::PetsHeroe.Droid.Resource.Id.search_plate;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_src_text = global::PetsHeroe.Droid.Resource.Id.search_src_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.search_voice_btn = global::PetsHeroe.Droid.Resource.Id.search_voice_btn;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.select_dialog_listview = global::PetsHeroe.Droid.Resource.Id.select_dialog_listview;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.shortcut = global::PetsHeroe.Droid.Resource.Id.shortcut;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.showCustom = global::PetsHeroe.Droid.Resource.Id.showCustom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.showHome = global::PetsHeroe.Droid.Resource.Id.showHome;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.showTitle = global::PetsHeroe.Droid.Resource.Id.showTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.smallLabel = global::PetsHeroe.Droid.Resource.Id.smallLabel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.snackbar_action = global::PetsHeroe.Droid.Resource.Id.snackbar_action;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.snackbar_text = global::PetsHeroe.Droid.Resource.Id.snackbar_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.snap = global::PetsHeroe.Droid.Resource.Id.snap;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.spacer = global::PetsHeroe.Droid.Resource.Id.spacer;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.split_action_bar = global::PetsHeroe.Droid.Resource.Id.split_action_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.src_atop = global::PetsHeroe.Droid.Resource.Id.src_atop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.src_in = global::PetsHeroe.Droid.Resource.Id.src_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.src_over = global::PetsHeroe.Droid.Resource.Id.src_over;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.start = global::PetsHeroe.Droid.Resource.Id.start;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.status_bar_latest_event_content = global::PetsHeroe.Droid.Resource.Id.status_bar_latest_event_content;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.submenuarrow = global::PetsHeroe.Droid.Resource.Id.submenuarrow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.submit_area = global::PetsHeroe.Droid.Resource.Id.submit_area;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.tabMode = global::PetsHeroe.Droid.Resource.Id.tabMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.tag_transition_group = global::PetsHeroe.Droid.Resource.Id.tag_transition_group;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.text = global::PetsHeroe.Droid.Resource.Id.text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.text2 = global::PetsHeroe.Droid.Resource.Id.text2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.textSpacerNoButtons = global::PetsHeroe.Droid.Resource.Id.textSpacerNoButtons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.textSpacerNoTitle = global::PetsHeroe.Droid.Resource.Id.textSpacerNoTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.text_input_password_toggle = global::PetsHeroe.Droid.Resource.Id.text_input_password_toggle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.textinput_counter = global::PetsHeroe.Droid.Resource.Id.textinput_counter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.textinput_error = global::PetsHeroe.Droid.Resource.Id.textinput_error;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.time = global::PetsHeroe.Droid.Resource.Id.time;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.title = global::PetsHeroe.Droid.Resource.Id.title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.titleDividerNoCustom = global::PetsHeroe.Droid.Resource.Id.titleDividerNoCustom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.title_template = global::PetsHeroe.Droid.Resource.Id.title_template;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.top = global::PetsHeroe.Droid.Resource.Id.top;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.topPanel = global::PetsHeroe.Droid.Resource.Id.topPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.touch_outside = global::PetsHeroe.Droid.Resource.Id.touch_outside;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.transition_current_scene = global::PetsHeroe.Droid.Resource.Id.transition_current_scene;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.transition_layout_save = global::PetsHeroe.Droid.Resource.Id.transition_layout_save;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.transition_position = global::PetsHeroe.Droid.Resource.Id.transition_position;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.transition_scene_layoutid_cache = global::PetsHeroe.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.transition_transform = global::PetsHeroe.Droid.Resource.Id.transition_transform;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.uniform = global::PetsHeroe.Droid.Resource.Id.uniform;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.up = global::PetsHeroe.Droid.Resource.Id.up;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.useLogo = global::PetsHeroe.Droid.Resource.Id.useLogo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.view_offset_helper = global::PetsHeroe.Droid.Resource.Id.view_offset_helper;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.visible = global::PetsHeroe.Droid.Resource.Id.visible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.volume_item_container = global::PetsHeroe.Droid.Resource.Id.volume_item_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.withText = global::PetsHeroe.Droid.Resource.Id.withText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Id.wrap_content = global::PetsHeroe.Droid.Resource.Id.wrap_content;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.abc_config_activityDefaultDur = global::PetsHeroe.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.abc_config_activityShortDur = global::PetsHeroe.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::PetsHeroe.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.bottom_sheet_slide_duration = global::PetsHeroe.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.cancel_button_image_alpha = global::PetsHeroe.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.config_tooltipAnimTime = global::PetsHeroe.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.design_snackbar_text_max_lines = global::PetsHeroe.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.hide_password_duration = global::PetsHeroe.Droid.Resource.Integer.hide_password_duration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::PetsHeroe.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::PetsHeroe.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::PetsHeroe.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.show_password_duration = global::PetsHeroe.Droid.Resource.Integer.show_password_duration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::PetsHeroe.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::PetsHeroe.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::PetsHeroe.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_bar_title_item = global::PetsHeroe.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_bar_up_container = global::PetsHeroe.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_menu_item_layout = global::PetsHeroe.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_menu_layout = global::PetsHeroe.Droid.Resource.Layout.abc_action_menu_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_mode_bar = global::PetsHeroe.Droid.Resource.Layout.abc_action_mode_bar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_action_mode_close_item_material = global::PetsHeroe.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_activity_chooser_view = global::PetsHeroe.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::PetsHeroe.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::PetsHeroe.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_alert_dialog_material = global::PetsHeroe.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_alert_dialog_title_material = global::PetsHeroe.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_dialog_title_material = global::PetsHeroe.Droid.Resource.Layout.abc_dialog_title_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_expanded_menu_layout = global::PetsHeroe.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::PetsHeroe.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_list_menu_item_icon = global::PetsHeroe.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_list_menu_item_layout = global::PetsHeroe.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_list_menu_item_radio = global::PetsHeroe.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::PetsHeroe.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_popup_menu_item_layout = global::PetsHeroe.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_screen_content_include = global::PetsHeroe.Droid.Resource.Layout.abc_screen_content_include;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_screen_simple = global::PetsHeroe.Droid.Resource.Layout.abc_screen_simple;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::PetsHeroe.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_screen_toolbar = global::PetsHeroe.Droid.Resource.Layout.abc_screen_toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::PetsHeroe.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_search_view = global::PetsHeroe.Droid.Resource.Layout.abc_search_view;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.abc_select_dialog_material = global::PetsHeroe.Droid.Resource.Layout.abc_select_dialog_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_bottom_navigation_item = global::PetsHeroe.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_bottom_sheet_dialog = global::PetsHeroe.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_layout_snackbar = global::PetsHeroe.Droid.Resource.Layout.design_layout_snackbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_layout_snackbar_include = global::PetsHeroe.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_layout_tab_icon = global::PetsHeroe.Droid.Resource.Layout.design_layout_tab_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_layout_tab_text = global::PetsHeroe.Droid.Resource.Layout.design_layout_tab_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_menu_item_action_area = global::PetsHeroe.Droid.Resource.Layout.design_menu_item_action_area;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_item = global::PetsHeroe.Droid.Resource.Layout.design_navigation_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_item_header = global::PetsHeroe.Droid.Resource.Layout.design_navigation_item_header;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_item_separator = global::PetsHeroe.Droid.Resource.Layout.design_navigation_item_separator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_item_subheader = global::PetsHeroe.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_menu = global::PetsHeroe.Droid.Resource.Layout.design_navigation_menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_navigation_menu_item = global::PetsHeroe.Droid.Resource.Layout.design_navigation_menu_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.design_text_input_password_icon = global::PetsHeroe.Droid.Resource.Layout.design_text_input_password_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_chooser_dialog = global::PetsHeroe.Droid.Resource.Layout.mr_chooser_dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_chooser_list_item = global::PetsHeroe.Droid.Resource.Layout.mr_chooser_list_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_controller_material_dialog_b = global::PetsHeroe.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_controller_volume_item = global::PetsHeroe.Droid.Resource.Layout.mr_controller_volume_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_playback_control = global::PetsHeroe.Droid.Resource.Layout.mr_playback_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.mr_volume_control = global::PetsHeroe.Droid.Resource.Layout.mr_volume_control;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_action = global::PetsHeroe.Droid.Resource.Layout.notification_action;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_action_tombstone = global::PetsHeroe.Droid.Resource.Layout.notification_action_tombstone;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_media_action = global::PetsHeroe.Droid.Resource.Layout.notification_media_action;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_media_cancel_action = global::PetsHeroe.Droid.Resource.Layout.notification_media_cancel_action;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_big_media = global::PetsHeroe.Droid.Resource.Layout.notification_template_big_media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_big_media_custom = global::PetsHeroe.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_big_media_narrow = global::PetsHeroe.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::PetsHeroe.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_custom_big = global::PetsHeroe.Droid.Resource.Layout.notification_template_custom_big;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_icon_group = global::PetsHeroe.Droid.Resource.Layout.notification_template_icon_group;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_lines_media = global::PetsHeroe.Droid.Resource.Layout.notification_template_lines_media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_media = global::PetsHeroe.Droid.Resource.Layout.notification_template_media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_media_custom = global::PetsHeroe.Droid.Resource.Layout.notification_template_media_custom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_part_chronometer = global::PetsHeroe.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.notification_template_part_time = global::PetsHeroe.Droid.Resource.Layout.notification_template_part_time;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.select_dialog_item_material = global::PetsHeroe.Droid.Resource.Layout.select_dialog_item_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.select_dialog_multichoice_material = global::PetsHeroe.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.select_dialog_singlechoice_material = global::PetsHeroe.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::PetsHeroe.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_action_bar_home_description = global::PetsHeroe.Droid.Resource.String.abc_action_bar_home_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_action_bar_up_description = global::PetsHeroe.Droid.Resource.String.abc_action_bar_up_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_action_menu_overflow_description = global::PetsHeroe.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_action_mode_done = global::PetsHeroe.Droid.Resource.String.abc_action_mode_done;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_activity_chooser_view_see_all = global::PetsHeroe.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_activitychooserview_choose_application = global::PetsHeroe.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_capital_off = global::PetsHeroe.Droid.Resource.String.abc_capital_off;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_capital_on = global::PetsHeroe.Droid.Resource.String.abc_capital_on;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_body_1_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_body_1_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_body_2_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_body_2_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_button_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_button_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_caption_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_caption_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_display_1_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_display_1_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_display_2_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_display_2_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_display_3_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_display_3_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_display_4_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_display_4_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_headline_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_headline_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_menu_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_menu_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_subhead_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_subhead_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_font_family_title_material = global::PetsHeroe.Droid.Resource.String.abc_font_family_title_material;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_search_hint = global::PetsHeroe.Droid.Resource.String.abc_search_hint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_searchview_description_clear = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_clear;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_searchview_description_query = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_query;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_searchview_description_search = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_search;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_searchview_description_submit = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_submit;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_searchview_description_voice = global::PetsHeroe.Droid.Resource.String.abc_searchview_description_voice;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_shareactionprovider_share_with = global::PetsHeroe.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::PetsHeroe.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.abc_toolbar_collapse_description = global::PetsHeroe.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.appbar_scrolling_view_behavior = global::PetsHeroe.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.bottom_sheet_behavior = global::PetsHeroe.Droid.Resource.String.bottom_sheet_behavior;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.character_counter_pattern = global::PetsHeroe.Droid.Resource.String.character_counter_pattern;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_button_content_description = global::PetsHeroe.Droid.Resource.String.mr_button_content_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_cast_button_connected = global::PetsHeroe.Droid.Resource.String.mr_cast_button_connected;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_cast_button_connecting = global::PetsHeroe.Droid.Resource.String.mr_cast_button_connecting;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_cast_button_disconnected = global::PetsHeroe.Droid.Resource.String.mr_cast_button_disconnected;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_chooser_searching = global::PetsHeroe.Droid.Resource.String.mr_chooser_searching;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_chooser_title = global::PetsHeroe.Droid.Resource.String.mr_chooser_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_album_art = global::PetsHeroe.Droid.Resource.String.mr_controller_album_art;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_casting_screen = global::PetsHeroe.Droid.Resource.String.mr_controller_casting_screen;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_close_description = global::PetsHeroe.Droid.Resource.String.mr_controller_close_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_collapse_group = global::PetsHeroe.Droid.Resource.String.mr_controller_collapse_group;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_disconnect = global::PetsHeroe.Droid.Resource.String.mr_controller_disconnect;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_expand_group = global::PetsHeroe.Droid.Resource.String.mr_controller_expand_group;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_no_info_available = global::PetsHeroe.Droid.Resource.String.mr_controller_no_info_available;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_no_media_selected = global::PetsHeroe.Droid.Resource.String.mr_controller_no_media_selected;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_pause = global::PetsHeroe.Droid.Resource.String.mr_controller_pause;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_play = global::PetsHeroe.Droid.Resource.String.mr_controller_play;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_stop = global::PetsHeroe.Droid.Resource.String.mr_controller_stop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_stop_casting = global::PetsHeroe.Droid.Resource.String.mr_controller_stop_casting;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_controller_volume_slider = global::PetsHeroe.Droid.Resource.String.mr_controller_volume_slider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_system_route_name = global::PetsHeroe.Droid.Resource.String.mr_system_route_name;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.mr_user_route_category_name = global::PetsHeroe.Droid.Resource.String.mr_user_route_category_name;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.password_toggle_content_description = global::PetsHeroe.Droid.Resource.String.password_toggle_content_description;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.path_password_eye = global::PetsHeroe.Droid.Resource.String.path_password_eye;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.path_password_eye_mask_strike_through = global::PetsHeroe.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.path_password_eye_mask_visible = global::PetsHeroe.Droid.Resource.String.path_password_eye_mask_visible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.path_password_strike_through = global::PetsHeroe.Droid.Resource.String.path_password_strike_through;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.search_menu_title = global::PetsHeroe.Droid.Resource.String.search_menu_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.String.status_bar_notification_info_overflow = global::PetsHeroe.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.AlertDialog_AppCompat = global::PetsHeroe.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Animation_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::PetsHeroe.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::PetsHeroe.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::PetsHeroe.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::PetsHeroe.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::PetsHeroe.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_CardView = global::PetsHeroe.Droid.Resource.Style.Base_CardView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetsHeroe.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::PetsHeroe.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::PetsHeroe.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.CardView = global::PetsHeroe.Droid.Resource.Style.CardView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.CardView_Dark = global::PetsHeroe.Droid.Resource.Style.CardView_Dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.CardView_Light = global::PetsHeroe.Droid.Resource.Style.CardView_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_AppCompat = global::PetsHeroe.Droid.Resource.Style.Platform_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_V21_AppCompat = global::PetsHeroe.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_V25_AppCompat = global::PetsHeroe.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::PetsHeroe.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::PetsHeroe.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::PetsHeroe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::PetsHeroe.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PetsHeroe.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Counter = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Error = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Hint = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Design_Tab = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::PetsHeroe.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::PetsHeroe.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::PetsHeroe.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design = global::PetsHeroe.Droid.Resource.Style.Theme_Design;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::PetsHeroe.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design_Light = global::PetsHeroe.Droid.Resource.Style.Theme_Design_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::PetsHeroe.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_Design_NoActionBar = global::PetsHeroe.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_MediaRouter = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_MediaRouter_Light = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::PetsHeroe.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::PetsHeroe.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_EditText = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ListView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_SearchView = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Spinner = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::PetsHeroe.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::PetsHeroe.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::PetsHeroe.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_AppBarLayout = global::PetsHeroe.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::PetsHeroe.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::PetsHeroe.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::PetsHeroe.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::PetsHeroe.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_NavigationView = global::PetsHeroe.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::PetsHeroe.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_Snackbar = global::PetsHeroe.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_TabLayout = global::PetsHeroe.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_Design_TextInputLayout = global::PetsHeroe.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::PetsHeroe.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::PetsHeroe.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar = global::PetsHeroe.Droid.Resource.Styleable.ActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_background = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_displayOptions = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_divider = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_elevation = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_height = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_homeLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_icon = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_itemPadding = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_logo = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_logo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_navigationMode = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_popupTheme = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_subtitle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_title = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBarLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMenuItemView = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuItemView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMenuView = global::PetsHeroe.Droid.Resource.Styleable.ActionMenuView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode = global::PetsHeroe.Droid.Resource.Styleable.ActionMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_background = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_height = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::PetsHeroe.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActivityChooserView = global::PetsHeroe.Droid.Resource.Styleable.ActivityChooserView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::PetsHeroe.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::PetsHeroe.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_android_layout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_listLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_showTitle = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::PetsHeroe.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_android_background = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_elevation = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_expanded = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayoutStates = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::PetsHeroe.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatImageView = global::PetsHeroe.Droid.Resource.Styleable.AppCompatImageView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatImageView_android_src = global::PetsHeroe.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::PetsHeroe.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatImageView_tint = global::PetsHeroe.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::PetsHeroe.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatSeekBar = global::PetsHeroe.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::PetsHeroe.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::PetsHeroe.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::PetsHeroe.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::PetsHeroe.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorError = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::PetsHeroe.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView_elevation = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomNavigationView_menu = global::PetsHeroe.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::PetsHeroe.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::PetsHeroe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::PetsHeroe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::PetsHeroe.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ButtonBarLayout = global::PetsHeroe.Droid.Resource.Styleable.ButtonBarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::PetsHeroe.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView = global::PetsHeroe.Droid.Resource.Styleable.CardView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_android_minHeight = global::PetsHeroe.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_android_minWidth = global::PetsHeroe.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardCornerRadius = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardElevation = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardElevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardMaxElevation = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::PetsHeroe.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_contentPadding = global::PetsHeroe.Droid.Resource.Styleable.CardView_contentPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::PetsHeroe.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::PetsHeroe.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_contentPaddingRight = global::PetsHeroe.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CardView_contentPaddingTop = global::PetsHeroe.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::PetsHeroe.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ColorStateListItem = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ColorStateListItem_alpha = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ColorStateListItem_android_color = global::PetsHeroe.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CompoundButton = global::PetsHeroe.Droid.Resource.Styleable.CompoundButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CompoundButton_android_button = global::PetsHeroe.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CompoundButton_buttonTint = global::PetsHeroe.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::PetsHeroe.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::PetsHeroe.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DesignTheme = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::PetsHeroe.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_color = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::PetsHeroe.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_elevation = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::PetsHeroe.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily = global::PetsHeroe.Droid.Resource.Styleable.FontFamily;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::PetsHeroe.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_android_font = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_font = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::PetsHeroe.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ForegroundLinearLayout = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::PetsHeroe.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::PetsHeroe.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ListPopupWindow = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::PetsHeroe.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MediaRouteButton = global::PetsHeroe.Droid.Resource.Styleable.MediaRouteButton;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::PetsHeroe.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::PetsHeroe.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::PetsHeroe.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::PetsHeroe.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_enabled = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_id = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuGroup_android_visible = global::PetsHeroe.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem = global::PetsHeroe.Droid.Resource.Styleable.MenuItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_actionLayout = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_actionViewClass = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_checkable = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_checked = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_enabled = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_icon = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_id = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_id;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_onClick = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_title = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_android_visible = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_contentDescription = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_iconTint = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_iconTintMode = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_numericModifiers = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_showAsAction = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuItem_tooltipText = global::PetsHeroe.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView = global::PetsHeroe.Droid.Resource.Styleable.MenuView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_headerBackground = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_itemBackground = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::PetsHeroe.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::PetsHeroe.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.MenuView_subMenuArrow = global::PetsHeroe.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView = global::PetsHeroe.Droid.Resource.Styleable.NavigationView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_android_background = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_android_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_elevation = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_headerLayout = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_itemBackground = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_itemIconTint = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_itemTextColor = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.NavigationView_menu = global::PetsHeroe.Droid.Resource.Styleable.NavigationView_menu;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindow = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::PetsHeroe.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindowBackgroundState = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::PetsHeroe.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecycleListView = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::PetsHeroe.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_android_orientation = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_layoutManager = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_spanCount = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::PetsHeroe.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::PetsHeroe.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::PetsHeroe.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::PetsHeroe.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::PetsHeroe.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView = global::PetsHeroe.Droid.Resource.Styleable.SearchView;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_android_focusable = global::PetsHeroe.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_android_imeOptions = global::PetsHeroe.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_android_inputType = global::PetsHeroe.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_android_maxWidth = global::PetsHeroe.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_closeIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_commitIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::PetsHeroe.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_goIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_goIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::PetsHeroe.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_layout = global::PetsHeroe.Droid.Resource.Styleable.SearchView_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_queryBackground = global::PetsHeroe.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_queryHint = global::PetsHeroe.Droid.Resource.Styleable.SearchView_queryHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_searchHintIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_searchIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_submitBackground = global::PetsHeroe.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::PetsHeroe.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SearchView_voiceIcon = global::PetsHeroe.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SnackbarLayout = global::PetsHeroe.Droid.Resource.Styleable.SnackbarLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::PetsHeroe.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SnackbarLayout_elevation = global::PetsHeroe.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::PetsHeroe.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner = global::PetsHeroe.Droid.Resource.Styleable.Spinner;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::PetsHeroe.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner_android_entries = global::PetsHeroe.Droid.Resource.Styleable.Spinner_android_entries;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner_android_popupBackground = global::PetsHeroe.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner_android_prompt = global::PetsHeroe.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Spinner_popupTheme = global::PetsHeroe.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_showText = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_track = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_track;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_trackTint = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::PetsHeroe.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabItem = global::PetsHeroe.Droid.Resource.Styleable.TabItem;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabItem_android_icon = global::PetsHeroe.Droid.Resource.Styleable.TabItem_android_icon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabItem_android_layout = global::PetsHeroe.Droid.Resource.Styleable.TabItem_android_layout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabItem_android_text = global::PetsHeroe.Droid.Resource.Styleable.TabItem_android_text;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout = global::PetsHeroe.Droid.Resource.Styleable.TabLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabBackground = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabContentStart = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabGravity = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabMode = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabPadding = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TabLayout_tabTextColor = global::PetsHeroe.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_textColor = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_textSize = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_android_typeface = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_fontFamily = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::PetsHeroe.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_android_hint = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::PetsHeroe.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar = global::PetsHeroe.Droid.Resource.Styleable.Toolbar;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_android_gravity = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_android_minHeight = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_buttonGravity = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_collapseIcon = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_logo = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_logo;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_logoDescription = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_navigationIcon = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_popupTheme = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_subtitle = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_title = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_title;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMargin = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleMargins = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.Toolbar_titleTextColor = global::PetsHeroe.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View = global::PetsHeroe.Droid.Resource.Styleable.View;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View_android_focusable = global::PetsHeroe.Droid.Resource.Styleable.View_android_focusable;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View_android_theme = global::PetsHeroe.Droid.Resource.Styleable.View_android_theme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View_paddingEnd = global::PetsHeroe.Droid.Resource.Styleable.View_paddingEnd;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View_paddingStart = global::PetsHeroe.Droid.Resource.Styleable.View_paddingStart;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.View_theme = global::PetsHeroe.Droid.Resource.Styleable.View_theme;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewBackgroundHelper = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::PetsHeroe.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewStubCompat = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewStubCompat_android_id = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::LeoJHarris.FormsPlugin.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::PetsHeroe.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Plugin.InputKit.Resource.Animation.abc_fade_in = global::PetsHeroe.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.InputKit.Resource.Animation.abc_fade_out = global::PetsHeroe.Droid.Resource.Animation.abc_fade_out;
 			global::Plugin.InputKit.Resource.Animation.abc_grow_fade_in_from_bottom = global::PetsHeroe.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -8231,715 +10468,727 @@ namespace PetsHeroe.Droid
 			public const int edit = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int email = 2131165307;
+			public const int electronic = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int gift = 2131165308;
+			public const int email = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int googleg_disabled_color_18 = 2131165309;
+			public const int gift = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int googleg_standard_color_18 = 2131165310;
-			
-			// aapt resource value: 0x7F070133
-			public const int icono_petshero = 2131165491;
+			public const int googleg_disabled_color_18 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int ic_audiotrack_dark = 2131165311;
+			public const int googleg_standard_color_18 = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int ic_audiotrack_light = 2131165312;
-			
-			// aapt resource value: 0x7F070081
-			public const int ic_dialog_close_dark = 2131165313;
-			
-			// aapt resource value: 0x7F070082
-			public const int ic_dialog_close_light = 2131165314;
-			
-			// aapt resource value: 0x7F070083
-			public const int ic_group_collapse_00 = 2131165315;
-			
-			// aapt resource value: 0x7F070084
-			public const int ic_group_collapse_01 = 2131165316;
-			
-			// aapt resource value: 0x7F070085
-			public const int ic_group_collapse_02 = 2131165317;
-			
-			// aapt resource value: 0x7F070086
-			public const int ic_group_collapse_03 = 2131165318;
-			
-			// aapt resource value: 0x7F070087
-			public const int ic_group_collapse_04 = 2131165319;
-			
-			// aapt resource value: 0x7F070088
-			public const int ic_group_collapse_05 = 2131165320;
-			
-			// aapt resource value: 0x7F070089
-			public const int ic_group_collapse_06 = 2131165321;
-			
-			// aapt resource value: 0x7F07008A
-			public const int ic_group_collapse_07 = 2131165322;
-			
-			// aapt resource value: 0x7F07008B
-			public const int ic_group_collapse_08 = 2131165323;
-			
-			// aapt resource value: 0x7F07008C
-			public const int ic_group_collapse_09 = 2131165324;
-			
-			// aapt resource value: 0x7F07008D
-			public const int ic_group_collapse_10 = 2131165325;
-			
-			// aapt resource value: 0x7F07008E
-			public const int ic_group_collapse_11 = 2131165326;
-			
-			// aapt resource value: 0x7F07008F
-			public const int ic_group_collapse_12 = 2131165327;
-			
-			// aapt resource value: 0x7F070090
-			public const int ic_group_collapse_13 = 2131165328;
-			
-			// aapt resource value: 0x7F070091
-			public const int ic_group_collapse_14 = 2131165329;
-			
-			// aapt resource value: 0x7F070092
-			public const int ic_group_collapse_15 = 2131165330;
-			
-			// aapt resource value: 0x7F070093
-			public const int ic_group_expand_00 = 2131165331;
-			
-			// aapt resource value: 0x7F070094
-			public const int ic_group_expand_01 = 2131165332;
-			
-			// aapt resource value: 0x7F070095
-			public const int ic_group_expand_02 = 2131165333;
-			
-			// aapt resource value: 0x7F070096
-			public const int ic_group_expand_03 = 2131165334;
-			
-			// aapt resource value: 0x7F070097
-			public const int ic_group_expand_04 = 2131165335;
-			
-			// aapt resource value: 0x7F070098
-			public const int ic_group_expand_05 = 2131165336;
-			
-			// aapt resource value: 0x7F070099
-			public const int ic_group_expand_06 = 2131165337;
-			
-			// aapt resource value: 0x7F07009A
-			public const int ic_group_expand_07 = 2131165338;
-			
-			// aapt resource value: 0x7F07009B
-			public const int ic_group_expand_08 = 2131165339;
-			
-			// aapt resource value: 0x7F07009C
-			public const int ic_group_expand_09 = 2131165340;
-			
-			// aapt resource value: 0x7F07009D
-			public const int ic_group_expand_10 = 2131165341;
-			
-			// aapt resource value: 0x7F07009E
-			public const int ic_group_expand_11 = 2131165342;
-			
-			// aapt resource value: 0x7F07009F
-			public const int ic_group_expand_12 = 2131165343;
-			
-			// aapt resource value: 0x7F0700A0
-			public const int ic_group_expand_13 = 2131165344;
-			
-			// aapt resource value: 0x7F0700A1
-			public const int ic_group_expand_14 = 2131165345;
-			
-			// aapt resource value: 0x7F0700A2
-			public const int ic_group_expand_15 = 2131165346;
-			
-			// aapt resource value: 0x7F0700A3
-			public const int ic_media_pause_dark = 2131165347;
-			
-			// aapt resource value: 0x7F0700A4
-			public const int ic_media_pause_light = 2131165348;
-			
-			// aapt resource value: 0x7F0700A5
-			public const int ic_media_play_dark = 2131165349;
-			
-			// aapt resource value: 0x7F0700A6
-			public const int ic_media_play_light = 2131165350;
-			
-			// aapt resource value: 0x7F0700A7
-			public const int ic_media_stop_dark = 2131165351;
-			
-			// aapt resource value: 0x7F0700A8
-			public const int ic_media_stop_light = 2131165352;
-			
-			// aapt resource value: 0x7F0700A9
-			public const int ic_mr_button_connected_00_dark = 2131165353;
-			
-			// aapt resource value: 0x7F0700AA
-			public const int ic_mr_button_connected_00_light = 2131165354;
-			
-			// aapt resource value: 0x7F0700AB
-			public const int ic_mr_button_connected_01_dark = 2131165355;
-			
-			// aapt resource value: 0x7F0700AC
-			public const int ic_mr_button_connected_01_light = 2131165356;
-			
-			// aapt resource value: 0x7F0700AD
-			public const int ic_mr_button_connected_02_dark = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int ic_mr_button_connected_02_light = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int ic_mr_button_connected_03_dark = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int ic_mr_button_connected_03_light = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int ic_mr_button_connected_04_dark = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int ic_mr_button_connected_04_light = 2131165362;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int ic_mr_button_connected_05_dark = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int ic_mr_button_connected_05_light = 2131165364;
-			
-			// aapt resource value: 0x7F0700B5
-			public const int ic_mr_button_connected_06_dark = 2131165365;
-			
-			// aapt resource value: 0x7F0700B6
-			public const int ic_mr_button_connected_06_light = 2131165366;
-			
-			// aapt resource value: 0x7F0700B7
-			public const int ic_mr_button_connected_07_dark = 2131165367;
-			
-			// aapt resource value: 0x7F0700B8
-			public const int ic_mr_button_connected_07_light = 2131165368;
-			
-			// aapt resource value: 0x7F0700B9
-			public const int ic_mr_button_connected_08_dark = 2131165369;
-			
-			// aapt resource value: 0x7F0700BA
-			public const int ic_mr_button_connected_08_light = 2131165370;
-			
-			// aapt resource value: 0x7F0700BB
-			public const int ic_mr_button_connected_09_dark = 2131165371;
-			
-			// aapt resource value: 0x7F0700BC
-			public const int ic_mr_button_connected_09_light = 2131165372;
-			
-			// aapt resource value: 0x7F0700BD
-			public const int ic_mr_button_connected_10_dark = 2131165373;
-			
-			// aapt resource value: 0x7F0700BE
-			public const int ic_mr_button_connected_10_light = 2131165374;
-			
-			// aapt resource value: 0x7F0700BF
-			public const int ic_mr_button_connected_11_dark = 2131165375;
-			
-			// aapt resource value: 0x7F0700C0
-			public const int ic_mr_button_connected_11_light = 2131165376;
-			
-			// aapt resource value: 0x7F0700C1
-			public const int ic_mr_button_connected_12_dark = 2131165377;
-			
-			// aapt resource value: 0x7F0700C2
-			public const int ic_mr_button_connected_12_light = 2131165378;
-			
-			// aapt resource value: 0x7F0700C3
-			public const int ic_mr_button_connected_13_dark = 2131165379;
-			
-			// aapt resource value: 0x7F0700C4
-			public const int ic_mr_button_connected_13_light = 2131165380;
-			
-			// aapt resource value: 0x7F0700C5
-			public const int ic_mr_button_connected_14_dark = 2131165381;
-			
-			// aapt resource value: 0x7F0700C6
-			public const int ic_mr_button_connected_14_light = 2131165382;
-			
-			// aapt resource value: 0x7F0700C7
-			public const int ic_mr_button_connected_15_dark = 2131165383;
-			
-			// aapt resource value: 0x7F0700C8
-			public const int ic_mr_button_connected_15_light = 2131165384;
-			
-			// aapt resource value: 0x7F0700C9
-			public const int ic_mr_button_connected_16_dark = 2131165385;
-			
-			// aapt resource value: 0x7F0700CA
-			public const int ic_mr_button_connected_16_light = 2131165386;
-			
-			// aapt resource value: 0x7F0700CB
-			public const int ic_mr_button_connected_17_dark = 2131165387;
-			
-			// aapt resource value: 0x7F0700CC
-			public const int ic_mr_button_connected_17_light = 2131165388;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int ic_mr_button_connected_18_dark = 2131165389;
-			
-			// aapt resource value: 0x7F0700CE
-			public const int ic_mr_button_connected_18_light = 2131165390;
-			
-			// aapt resource value: 0x7F0700CF
-			public const int ic_mr_button_connected_19_dark = 2131165391;
-			
-			// aapt resource value: 0x7F0700D0
-			public const int ic_mr_button_connected_19_light = 2131165392;
-			
-			// aapt resource value: 0x7F0700D1
-			public const int ic_mr_button_connected_20_dark = 2131165393;
-			
-			// aapt resource value: 0x7F0700D2
-			public const int ic_mr_button_connected_20_light = 2131165394;
-			
-			// aapt resource value: 0x7F0700D3
-			public const int ic_mr_button_connected_21_dark = 2131165395;
-			
-			// aapt resource value: 0x7F0700D4
-			public const int ic_mr_button_connected_21_light = 2131165396;
-			
-			// aapt resource value: 0x7F0700D5
-			public const int ic_mr_button_connected_22_dark = 2131165397;
-			
-			// aapt resource value: 0x7F0700D6
-			public const int ic_mr_button_connected_22_light = 2131165398;
-			
-			// aapt resource value: 0x7F0700D7
-			public const int ic_mr_button_connected_23_dark = 2131165399;
-			
-			// aapt resource value: 0x7F0700D8
-			public const int ic_mr_button_connected_23_light = 2131165400;
-			
-			// aapt resource value: 0x7F0700D9
-			public const int ic_mr_button_connected_24_dark = 2131165401;
-			
-			// aapt resource value: 0x7F0700DA
-			public const int ic_mr_button_connected_24_light = 2131165402;
-			
-			// aapt resource value: 0x7F0700DB
-			public const int ic_mr_button_connected_25_dark = 2131165403;
-			
-			// aapt resource value: 0x7F0700DC
-			public const int ic_mr_button_connected_25_light = 2131165404;
-			
-			// aapt resource value: 0x7F0700DD
-			public const int ic_mr_button_connected_26_dark = 2131165405;
-			
-			// aapt resource value: 0x7F0700DE
-			public const int ic_mr_button_connected_26_light = 2131165406;
-			
-			// aapt resource value: 0x7F0700DF
-			public const int ic_mr_button_connected_27_dark = 2131165407;
-			
-			// aapt resource value: 0x7F0700E0
-			public const int ic_mr_button_connected_27_light = 2131165408;
-			
-			// aapt resource value: 0x7F0700E1
-			public const int ic_mr_button_connected_28_dark = 2131165409;
-			
-			// aapt resource value: 0x7F0700E2
-			public const int ic_mr_button_connected_28_light = 2131165410;
-			
-			// aapt resource value: 0x7F0700E3
-			public const int ic_mr_button_connected_29_dark = 2131165411;
-			
-			// aapt resource value: 0x7F0700E4
-			public const int ic_mr_button_connected_29_light = 2131165412;
-			
-			// aapt resource value: 0x7F0700E5
-			public const int ic_mr_button_connected_30_dark = 2131165413;
-			
-			// aapt resource value: 0x7F0700E6
-			public const int ic_mr_button_connected_30_light = 2131165414;
-			
-			// aapt resource value: 0x7F0700E7
-			public const int ic_mr_button_connecting_00_dark = 2131165415;
-			
-			// aapt resource value: 0x7F0700E8
-			public const int ic_mr_button_connecting_00_light = 2131165416;
-			
-			// aapt resource value: 0x7F0700E9
-			public const int ic_mr_button_connecting_01_dark = 2131165417;
-			
-			// aapt resource value: 0x7F0700EA
-			public const int ic_mr_button_connecting_01_light = 2131165418;
-			
-			// aapt resource value: 0x7F0700EB
-			public const int ic_mr_button_connecting_02_dark = 2131165419;
-			
-			// aapt resource value: 0x7F0700EC
-			public const int ic_mr_button_connecting_02_light = 2131165420;
-			
-			// aapt resource value: 0x7F0700ED
-			public const int ic_mr_button_connecting_03_dark = 2131165421;
-			
-			// aapt resource value: 0x7F0700EE
-			public const int ic_mr_button_connecting_03_light = 2131165422;
-			
-			// aapt resource value: 0x7F0700EF
-			public const int ic_mr_button_connecting_04_dark = 2131165423;
-			
-			// aapt resource value: 0x7F0700F0
-			public const int ic_mr_button_connecting_04_light = 2131165424;
-			
-			// aapt resource value: 0x7F0700F1
-			public const int ic_mr_button_connecting_05_dark = 2131165425;
-			
-			// aapt resource value: 0x7F0700F2
-			public const int ic_mr_button_connecting_05_light = 2131165426;
-			
-			// aapt resource value: 0x7F0700F3
-			public const int ic_mr_button_connecting_06_dark = 2131165427;
-			
-			// aapt resource value: 0x7F0700F4
-			public const int ic_mr_button_connecting_06_light = 2131165428;
-			
-			// aapt resource value: 0x7F0700F5
-			public const int ic_mr_button_connecting_07_dark = 2131165429;
-			
-			// aapt resource value: 0x7F0700F6
-			public const int ic_mr_button_connecting_07_light = 2131165430;
-			
-			// aapt resource value: 0x7F0700F7
-			public const int ic_mr_button_connecting_08_dark = 2131165431;
-			
-			// aapt resource value: 0x7F0700F8
-			public const int ic_mr_button_connecting_08_light = 2131165432;
-			
-			// aapt resource value: 0x7F0700F9
-			public const int ic_mr_button_connecting_09_dark = 2131165433;
-			
-			// aapt resource value: 0x7F0700FA
-			public const int ic_mr_button_connecting_09_light = 2131165434;
-			
-			// aapt resource value: 0x7F0700FB
-			public const int ic_mr_button_connecting_10_dark = 2131165435;
-			
-			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connecting_10_light = 2131165436;
-			
-			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connecting_11_dark = 2131165437;
-			
-			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connecting_11_light = 2131165438;
-			
-			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connecting_12_dark = 2131165439;
-			
-			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connecting_12_light = 2131165440;
-			
-			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connecting_13_dark = 2131165441;
-			
-			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connecting_13_light = 2131165442;
-			
-			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connecting_14_dark = 2131165443;
-			
-			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connecting_14_light = 2131165444;
-			
-			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connecting_15_dark = 2131165445;
-			
-			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connecting_15_light = 2131165446;
-			
-			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connecting_16_dark = 2131165447;
-			
-			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_connecting_16_light = 2131165448;
-			
-			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_connecting_17_dark = 2131165449;
-			
-			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_connecting_17_light = 2131165450;
-			
-			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_connecting_18_dark = 2131165451;
-			
-			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_connecting_18_light = 2131165452;
-			
-			// aapt resource value: 0x7F07010D
-			public const int ic_mr_button_connecting_19_dark = 2131165453;
-			
-			// aapt resource value: 0x7F07010E
-			public const int ic_mr_button_connecting_19_light = 2131165454;
-			
-			// aapt resource value: 0x7F07010F
-			public const int ic_mr_button_connecting_20_dark = 2131165455;
-			
-			// aapt resource value: 0x7F070110
-			public const int ic_mr_button_connecting_20_light = 2131165456;
-			
-			// aapt resource value: 0x7F070111
-			public const int ic_mr_button_connecting_21_dark = 2131165457;
-			
-			// aapt resource value: 0x7F070112
-			public const int ic_mr_button_connecting_21_light = 2131165458;
-			
-			// aapt resource value: 0x7F070113
-			public const int ic_mr_button_connecting_22_dark = 2131165459;
-			
-			// aapt resource value: 0x7F070114
-			public const int ic_mr_button_connecting_22_light = 2131165460;
-			
-			// aapt resource value: 0x7F070115
-			public const int ic_mr_button_connecting_23_dark = 2131165461;
-			
-			// aapt resource value: 0x7F070116
-			public const int ic_mr_button_connecting_23_light = 2131165462;
-			
-			// aapt resource value: 0x7F070117
-			public const int ic_mr_button_connecting_24_dark = 2131165463;
-			
-			// aapt resource value: 0x7F070118
-			public const int ic_mr_button_connecting_24_light = 2131165464;
-			
-			// aapt resource value: 0x7F070119
-			public const int ic_mr_button_connecting_25_dark = 2131165465;
-			
-			// aapt resource value: 0x7F07011A
-			public const int ic_mr_button_connecting_25_light = 2131165466;
-			
-			// aapt resource value: 0x7F07011B
-			public const int ic_mr_button_connecting_26_dark = 2131165467;
-			
-			// aapt resource value: 0x7F07011C
-			public const int ic_mr_button_connecting_26_light = 2131165468;
-			
-			// aapt resource value: 0x7F07011D
-			public const int ic_mr_button_connecting_27_dark = 2131165469;
-			
-			// aapt resource value: 0x7F07011E
-			public const int ic_mr_button_connecting_27_light = 2131165470;
-			
-			// aapt resource value: 0x7F07011F
-			public const int ic_mr_button_connecting_28_dark = 2131165471;
-			
-			// aapt resource value: 0x7F070120
-			public const int ic_mr_button_connecting_28_light = 2131165472;
-			
-			// aapt resource value: 0x7F070121
-			public const int ic_mr_button_connecting_29_dark = 2131165473;
-			
-			// aapt resource value: 0x7F070122
-			public const int ic_mr_button_connecting_29_light = 2131165474;
-			
-			// aapt resource value: 0x7F070123
-			public const int ic_mr_button_connecting_30_dark = 2131165475;
-			
-			// aapt resource value: 0x7F070124
-			public const int ic_mr_button_connecting_30_light = 2131165476;
-			
-			// aapt resource value: 0x7F070125
-			public const int ic_mr_button_disabled_dark = 2131165477;
-			
-			// aapt resource value: 0x7F070126
-			public const int ic_mr_button_disabled_light = 2131165478;
-			
-			// aapt resource value: 0x7F070127
-			public const int ic_mr_button_disconnected_dark = 2131165479;
-			
-			// aapt resource value: 0x7F070128
-			public const int ic_mr_button_disconnected_light = 2131165480;
-			
-			// aapt resource value: 0x7F070129
-			public const int ic_mr_button_grey = 2131165481;
-			
-			// aapt resource value: 0x7F07012A
-			public const int ic_mtrl_chip_checked_black = 2131165482;
-			
-			// aapt resource value: 0x7F07012B
-			public const int ic_mtrl_chip_checked_circle = 2131165483;
-			
-			// aapt resource value: 0x7F07012C
-			public const int ic_mtrl_chip_close_circle = 2131165484;
-			
-			// aapt resource value: 0x7F07012D
-			public const int ic_vol_type_speaker_dark = 2131165485;
-			
-			// aapt resource value: 0x7F07012E
-			public const int ic_vol_type_speaker_group_dark = 2131165486;
-			
-			// aapt resource value: 0x7F07012F
-			public const int ic_vol_type_speaker_group_light = 2131165487;
-			
-			// aapt resource value: 0x7F070130
-			public const int ic_vol_type_speaker_light = 2131165488;
-			
-			// aapt resource value: 0x7F070131
-			public const int ic_vol_type_tv_dark = 2131165489;
-			
-			// aapt resource value: 0x7F070132
-			public const int ic_vol_type_tv_light = 2131165490;
-			
-			// aapt resource value: 0x7F070134
-			public const int location = 2131165492;
+			public const int hide_password = 2131165312;
 			
 			// aapt resource value: 0x7F070135
-			public const int logout = 2131165493;
+			public const int icono_app = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int lost = 2131165494;
+			public const int icono_petshero = 2131165494;
+			
+			// aapt resource value: 0x7F070081
+			public const int ic_audiotrack_dark = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int ic_audiotrack_light = 2131165314;
+			
+			// aapt resource value: 0x7F070083
+			public const int ic_dialog_close_dark = 2131165315;
+			
+			// aapt resource value: 0x7F070084
+			public const int ic_dialog_close_light = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int ic_group_collapse_00 = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int ic_group_collapse_01 = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int ic_group_collapse_02 = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int ic_group_collapse_03 = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int ic_group_collapse_04 = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int ic_group_collapse_05 = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int ic_group_collapse_06 = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int ic_group_collapse_07 = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int ic_group_collapse_08 = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int ic_group_collapse_09 = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int ic_group_collapse_10 = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int ic_group_collapse_11 = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int ic_group_collapse_12 = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int ic_group_collapse_13 = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int ic_group_collapse_14 = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int ic_group_collapse_15 = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int ic_group_expand_00 = 2131165333;
+			
+			// aapt resource value: 0x7F070096
+			public const int ic_group_expand_01 = 2131165334;
+			
+			// aapt resource value: 0x7F070097
+			public const int ic_group_expand_02 = 2131165335;
+			
+			// aapt resource value: 0x7F070098
+			public const int ic_group_expand_03 = 2131165336;
+			
+			// aapt resource value: 0x7F070099
+			public const int ic_group_expand_04 = 2131165337;
+			
+			// aapt resource value: 0x7F07009A
+			public const int ic_group_expand_05 = 2131165338;
+			
+			// aapt resource value: 0x7F07009B
+			public const int ic_group_expand_06 = 2131165339;
+			
+			// aapt resource value: 0x7F07009C
+			public const int ic_group_expand_07 = 2131165340;
+			
+			// aapt resource value: 0x7F07009D
+			public const int ic_group_expand_08 = 2131165341;
+			
+			// aapt resource value: 0x7F07009E
+			public const int ic_group_expand_09 = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int ic_group_expand_10 = 2131165343;
+			
+			// aapt resource value: 0x7F0700A0
+			public const int ic_group_expand_11 = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int ic_group_expand_12 = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int ic_group_expand_13 = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int ic_group_expand_14 = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int ic_group_expand_15 = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int ic_media_pause_dark = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int ic_media_pause_light = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int ic_media_play_dark = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int ic_media_play_light = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int ic_media_stop_dark = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int ic_media_stop_light = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int ic_mr_button_connected_00_dark = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int ic_mr_button_connected_00_light = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int ic_mr_button_connected_01_dark = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int ic_mr_button_connected_01_light = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int ic_mr_button_connected_02_dark = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int ic_mr_button_connected_02_light = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int ic_mr_button_connected_03_dark = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int ic_mr_button_connected_03_light = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int ic_mr_button_connected_04_dark = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int ic_mr_button_connected_04_light = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int ic_mr_button_connected_05_dark = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int ic_mr_button_connected_05_light = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int ic_mr_button_connected_06_dark = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int ic_mr_button_connected_06_light = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int ic_mr_button_connected_07_dark = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int ic_mr_button_connected_07_light = 2131165370;
+			
+			// aapt resource value: 0x7F0700BB
+			public const int ic_mr_button_connected_08_dark = 2131165371;
+			
+			// aapt resource value: 0x7F0700BC
+			public const int ic_mr_button_connected_08_light = 2131165372;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int ic_mr_button_connected_09_dark = 2131165373;
+			
+			// aapt resource value: 0x7F0700BE
+			public const int ic_mr_button_connected_09_light = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int ic_mr_button_connected_10_dark = 2131165375;
+			
+			// aapt resource value: 0x7F0700C0
+			public const int ic_mr_button_connected_10_light = 2131165376;
+			
+			// aapt resource value: 0x7F0700C1
+			public const int ic_mr_button_connected_11_dark = 2131165377;
+			
+			// aapt resource value: 0x7F0700C2
+			public const int ic_mr_button_connected_11_light = 2131165378;
+			
+			// aapt resource value: 0x7F0700C3
+			public const int ic_mr_button_connected_12_dark = 2131165379;
+			
+			// aapt resource value: 0x7F0700C4
+			public const int ic_mr_button_connected_12_light = 2131165380;
+			
+			// aapt resource value: 0x7F0700C5
+			public const int ic_mr_button_connected_13_dark = 2131165381;
+			
+			// aapt resource value: 0x7F0700C6
+			public const int ic_mr_button_connected_13_light = 2131165382;
+			
+			// aapt resource value: 0x7F0700C7
+			public const int ic_mr_button_connected_14_dark = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int ic_mr_button_connected_14_light = 2131165384;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int ic_mr_button_connected_15_dark = 2131165385;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int ic_mr_button_connected_15_light = 2131165386;
+			
+			// aapt resource value: 0x7F0700CB
+			public const int ic_mr_button_connected_16_dark = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int ic_mr_button_connected_16_light = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int ic_mr_button_connected_17_dark = 2131165389;
+			
+			// aapt resource value: 0x7F0700CE
+			public const int ic_mr_button_connected_17_light = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int ic_mr_button_connected_18_dark = 2131165391;
+			
+			// aapt resource value: 0x7F0700D0
+			public const int ic_mr_button_connected_18_light = 2131165392;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int ic_mr_button_connected_19_dark = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int ic_mr_button_connected_19_light = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int ic_mr_button_connected_20_dark = 2131165395;
+			
+			// aapt resource value: 0x7F0700D4
+			public const int ic_mr_button_connected_20_light = 2131165396;
+			
+			// aapt resource value: 0x7F0700D5
+			public const int ic_mr_button_connected_21_dark = 2131165397;
+			
+			// aapt resource value: 0x7F0700D6
+			public const int ic_mr_button_connected_21_light = 2131165398;
+			
+			// aapt resource value: 0x7F0700D7
+			public const int ic_mr_button_connected_22_dark = 2131165399;
+			
+			// aapt resource value: 0x7F0700D8
+			public const int ic_mr_button_connected_22_light = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int ic_mr_button_connected_23_dark = 2131165401;
+			
+			// aapt resource value: 0x7F0700DA
+			public const int ic_mr_button_connected_23_light = 2131165402;
+			
+			// aapt resource value: 0x7F0700DB
+			public const int ic_mr_button_connected_24_dark = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int ic_mr_button_connected_24_light = 2131165404;
+			
+			// aapt resource value: 0x7F0700DD
+			public const int ic_mr_button_connected_25_dark = 2131165405;
+			
+			// aapt resource value: 0x7F0700DE
+			public const int ic_mr_button_connected_25_light = 2131165406;
+			
+			// aapt resource value: 0x7F0700DF
+			public const int ic_mr_button_connected_26_dark = 2131165407;
+			
+			// aapt resource value: 0x7F0700E0
+			public const int ic_mr_button_connected_26_light = 2131165408;
+			
+			// aapt resource value: 0x7F0700E1
+			public const int ic_mr_button_connected_27_dark = 2131165409;
+			
+			// aapt resource value: 0x7F0700E2
+			public const int ic_mr_button_connected_27_light = 2131165410;
+			
+			// aapt resource value: 0x7F0700E3
+			public const int ic_mr_button_connected_28_dark = 2131165411;
+			
+			// aapt resource value: 0x7F0700E4
+			public const int ic_mr_button_connected_28_light = 2131165412;
+			
+			// aapt resource value: 0x7F0700E5
+			public const int ic_mr_button_connected_29_dark = 2131165413;
+			
+			// aapt resource value: 0x7F0700E6
+			public const int ic_mr_button_connected_29_light = 2131165414;
+			
+			// aapt resource value: 0x7F0700E7
+			public const int ic_mr_button_connected_30_dark = 2131165415;
+			
+			// aapt resource value: 0x7F0700E8
+			public const int ic_mr_button_connected_30_light = 2131165416;
+			
+			// aapt resource value: 0x7F0700E9
+			public const int ic_mr_button_connecting_00_dark = 2131165417;
+			
+			// aapt resource value: 0x7F0700EA
+			public const int ic_mr_button_connecting_00_light = 2131165418;
+			
+			// aapt resource value: 0x7F0700EB
+			public const int ic_mr_button_connecting_01_dark = 2131165419;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int ic_mr_button_connecting_01_light = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int ic_mr_button_connecting_02_dark = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int ic_mr_button_connecting_02_light = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int ic_mr_button_connecting_03_dark = 2131165423;
+			
+			// aapt resource value: 0x7F0700F0
+			public const int ic_mr_button_connecting_03_light = 2131165424;
+			
+			// aapt resource value: 0x7F0700F1
+			public const int ic_mr_button_connecting_04_dark = 2131165425;
+			
+			// aapt resource value: 0x7F0700F2
+			public const int ic_mr_button_connecting_04_light = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int ic_mr_button_connecting_05_dark = 2131165427;
+			
+			// aapt resource value: 0x7F0700F4
+			public const int ic_mr_button_connecting_05_light = 2131165428;
+			
+			// aapt resource value: 0x7F0700F5
+			public const int ic_mr_button_connecting_06_dark = 2131165429;
+			
+			// aapt resource value: 0x7F0700F6
+			public const int ic_mr_button_connecting_06_light = 2131165430;
+			
+			// aapt resource value: 0x7F0700F7
+			public const int ic_mr_button_connecting_07_dark = 2131165431;
+			
+			// aapt resource value: 0x7F0700F8
+			public const int ic_mr_button_connecting_07_light = 2131165432;
+			
+			// aapt resource value: 0x7F0700F9
+			public const int ic_mr_button_connecting_08_dark = 2131165433;
+			
+			// aapt resource value: 0x7F0700FA
+			public const int ic_mr_button_connecting_08_light = 2131165434;
+			
+			// aapt resource value: 0x7F0700FB
+			public const int ic_mr_button_connecting_09_dark = 2131165435;
+			
+			// aapt resource value: 0x7F0700FC
+			public const int ic_mr_button_connecting_09_light = 2131165436;
+			
+			// aapt resource value: 0x7F0700FD
+			public const int ic_mr_button_connecting_10_dark = 2131165437;
+			
+			// aapt resource value: 0x7F0700FE
+			public const int ic_mr_button_connecting_10_light = 2131165438;
+			
+			// aapt resource value: 0x7F0700FF
+			public const int ic_mr_button_connecting_11_dark = 2131165439;
+			
+			// aapt resource value: 0x7F070100
+			public const int ic_mr_button_connecting_11_light = 2131165440;
+			
+			// aapt resource value: 0x7F070101
+			public const int ic_mr_button_connecting_12_dark = 2131165441;
+			
+			// aapt resource value: 0x7F070102
+			public const int ic_mr_button_connecting_12_light = 2131165442;
+			
+			// aapt resource value: 0x7F070103
+			public const int ic_mr_button_connecting_13_dark = 2131165443;
+			
+			// aapt resource value: 0x7F070104
+			public const int ic_mr_button_connecting_13_light = 2131165444;
+			
+			// aapt resource value: 0x7F070105
+			public const int ic_mr_button_connecting_14_dark = 2131165445;
+			
+			// aapt resource value: 0x7F070106
+			public const int ic_mr_button_connecting_14_light = 2131165446;
+			
+			// aapt resource value: 0x7F070107
+			public const int ic_mr_button_connecting_15_dark = 2131165447;
+			
+			// aapt resource value: 0x7F070108
+			public const int ic_mr_button_connecting_15_light = 2131165448;
+			
+			// aapt resource value: 0x7F070109
+			public const int ic_mr_button_connecting_16_dark = 2131165449;
+			
+			// aapt resource value: 0x7F07010A
+			public const int ic_mr_button_connecting_16_light = 2131165450;
+			
+			// aapt resource value: 0x7F07010B
+			public const int ic_mr_button_connecting_17_dark = 2131165451;
+			
+			// aapt resource value: 0x7F07010C
+			public const int ic_mr_button_connecting_17_light = 2131165452;
+			
+			// aapt resource value: 0x7F07010D
+			public const int ic_mr_button_connecting_18_dark = 2131165453;
+			
+			// aapt resource value: 0x7F07010E
+			public const int ic_mr_button_connecting_18_light = 2131165454;
+			
+			// aapt resource value: 0x7F07010F
+			public const int ic_mr_button_connecting_19_dark = 2131165455;
+			
+			// aapt resource value: 0x7F070110
+			public const int ic_mr_button_connecting_19_light = 2131165456;
+			
+			// aapt resource value: 0x7F070111
+			public const int ic_mr_button_connecting_20_dark = 2131165457;
+			
+			// aapt resource value: 0x7F070112
+			public const int ic_mr_button_connecting_20_light = 2131165458;
+			
+			// aapt resource value: 0x7F070113
+			public const int ic_mr_button_connecting_21_dark = 2131165459;
+			
+			// aapt resource value: 0x7F070114
+			public const int ic_mr_button_connecting_21_light = 2131165460;
+			
+			// aapt resource value: 0x7F070115
+			public const int ic_mr_button_connecting_22_dark = 2131165461;
+			
+			// aapt resource value: 0x7F070116
+			public const int ic_mr_button_connecting_22_light = 2131165462;
+			
+			// aapt resource value: 0x7F070117
+			public const int ic_mr_button_connecting_23_dark = 2131165463;
+			
+			// aapt resource value: 0x7F070118
+			public const int ic_mr_button_connecting_23_light = 2131165464;
+			
+			// aapt resource value: 0x7F070119
+			public const int ic_mr_button_connecting_24_dark = 2131165465;
+			
+			// aapt resource value: 0x7F07011A
+			public const int ic_mr_button_connecting_24_light = 2131165466;
+			
+			// aapt resource value: 0x7F07011B
+			public const int ic_mr_button_connecting_25_dark = 2131165467;
+			
+			// aapt resource value: 0x7F07011C
+			public const int ic_mr_button_connecting_25_light = 2131165468;
+			
+			// aapt resource value: 0x7F07011D
+			public const int ic_mr_button_connecting_26_dark = 2131165469;
+			
+			// aapt resource value: 0x7F07011E
+			public const int ic_mr_button_connecting_26_light = 2131165470;
+			
+			// aapt resource value: 0x7F07011F
+			public const int ic_mr_button_connecting_27_dark = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int ic_mr_button_connecting_27_light = 2131165472;
+			
+			// aapt resource value: 0x7F070121
+			public const int ic_mr_button_connecting_28_dark = 2131165473;
+			
+			// aapt resource value: 0x7F070122
+			public const int ic_mr_button_connecting_28_light = 2131165474;
+			
+			// aapt resource value: 0x7F070123
+			public const int ic_mr_button_connecting_29_dark = 2131165475;
+			
+			// aapt resource value: 0x7F070124
+			public const int ic_mr_button_connecting_29_light = 2131165476;
+			
+			// aapt resource value: 0x7F070125
+			public const int ic_mr_button_connecting_30_dark = 2131165477;
+			
+			// aapt resource value: 0x7F070126
+			public const int ic_mr_button_connecting_30_light = 2131165478;
+			
+			// aapt resource value: 0x7F070127
+			public const int ic_mr_button_disabled_dark = 2131165479;
+			
+			// aapt resource value: 0x7F070128
+			public const int ic_mr_button_disabled_light = 2131165480;
+			
+			// aapt resource value: 0x7F070129
+			public const int ic_mr_button_disconnected_dark = 2131165481;
+			
+			// aapt resource value: 0x7F07012A
+			public const int ic_mr_button_disconnected_light = 2131165482;
+			
+			// aapt resource value: 0x7F07012B
+			public const int ic_mr_button_grey = 2131165483;
+			
+			// aapt resource value: 0x7F07012C
+			public const int ic_mtrl_chip_checked_black = 2131165484;
+			
+			// aapt resource value: 0x7F07012D
+			public const int ic_mtrl_chip_checked_circle = 2131165485;
+			
+			// aapt resource value: 0x7F07012E
+			public const int ic_mtrl_chip_close_circle = 2131165486;
+			
+			// aapt resource value: 0x7F07012F
+			public const int ic_vol_type_speaker_dark = 2131165487;
+			
+			// aapt resource value: 0x7F070130
+			public const int ic_vol_type_speaker_group_dark = 2131165488;
+			
+			// aapt resource value: 0x7F070131
+			public const int ic_vol_type_speaker_group_light = 2131165489;
+			
+			// aapt resource value: 0x7F070132
+			public const int ic_vol_type_speaker_light = 2131165490;
+			
+			// aapt resource value: 0x7F070133
+			public const int ic_vol_type_tv_dark = 2131165491;
+			
+			// aapt resource value: 0x7F070134
+			public const int ic_vol_type_tv_light = 2131165492;
 			
 			// aapt resource value: 0x7F070137
-			public const int money = 2131165495;
+			public const int location = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int mr_button_connected_dark = 2131165496;
+			public const int logout = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int mr_button_connected_light = 2131165497;
+			public const int lost = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int mr_button_connecting_dark = 2131165498;
+			public const int money = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int mr_button_connecting_light = 2131165499;
+			public const int mr_button_connected_dark = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int mr_button_dark = 2131165500;
+			public const int mr_button_connected_light = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int mr_button_light = 2131165501;
+			public const int mr_button_connecting_dark = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int mr_dialog_close_dark = 2131165502;
+			public const int mr_button_connecting_light = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int mr_dialog_close_light = 2131165503;
+			public const int mr_button_dark = 2131165503;
 			
 			// aapt resource value: 0x7F070140
-			public const int mr_dialog_material_background_dark = 2131165504;
+			public const int mr_button_light = 2131165504;
 			
 			// aapt resource value: 0x7F070141
-			public const int mr_dialog_material_background_light = 2131165505;
+			public const int mr_dialog_close_dark = 2131165505;
 			
 			// aapt resource value: 0x7F070142
-			public const int mr_group_collapse = 2131165506;
+			public const int mr_dialog_close_light = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int mr_group_expand = 2131165507;
+			public const int mr_dialog_material_background_dark = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int mr_media_pause_dark = 2131165508;
+			public const int mr_dialog_material_background_light = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int mr_media_pause_light = 2131165509;
+			public const int mr_group_collapse = 2131165509;
 			
 			// aapt resource value: 0x7F070146
-			public const int mr_media_play_dark = 2131165510;
+			public const int mr_group_expand = 2131165510;
 			
 			// aapt resource value: 0x7F070147
-			public const int mr_media_play_light = 2131165511;
+			public const int mr_media_pause_dark = 2131165511;
 			
 			// aapt resource value: 0x7F070148
-			public const int mr_media_stop_dark = 2131165512;
+			public const int mr_media_pause_light = 2131165512;
 			
 			// aapt resource value: 0x7F070149
-			public const int mr_media_stop_light = 2131165513;
+			public const int mr_media_play_dark = 2131165513;
 			
 			// aapt resource value: 0x7F07014A
-			public const int mr_vol_type_audiotrack_dark = 2131165514;
+			public const int mr_media_play_light = 2131165514;
 			
 			// aapt resource value: 0x7F07014B
-			public const int mr_vol_type_audiotrack_light = 2131165515;
+			public const int mr_media_stop_dark = 2131165515;
 			
 			// aapt resource value: 0x7F07014C
-			public const int mtrl_snackbar_background = 2131165516;
+			public const int mr_media_stop_light = 2131165516;
 			
 			// aapt resource value: 0x7F07014D
-			public const int mtrl_tabs_default_indicator = 2131165517;
+			public const int mr_vol_type_audiotrack_dark = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int navigation_empty_icon = 2131165518;
+			public const int mr_vol_type_audiotrack_light = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int notification_action_background = 2131165519;
+			public const int mtrl_snackbar_background = 2131165519;
 			
 			// aapt resource value: 0x7F070150
-			public const int notification_bg = 2131165520;
+			public const int mtrl_tabs_default_indicator = 2131165520;
 			
 			// aapt resource value: 0x7F070151
-			public const int notification_bg_low = 2131165521;
+			public const int navigation_empty_icon = 2131165521;
 			
 			// aapt resource value: 0x7F070152
-			public const int notification_bg_low_normal = 2131165522;
+			public const int notification_action_background = 2131165522;
 			
 			// aapt resource value: 0x7F070153
-			public const int notification_bg_low_pressed = 2131165523;
+			public const int notification_bg = 2131165523;
 			
 			// aapt resource value: 0x7F070154
-			public const int notification_bg_normal = 2131165524;
+			public const int notification_bg_low = 2131165524;
 			
 			// aapt resource value: 0x7F070155
-			public const int notification_bg_normal_pressed = 2131165525;
+			public const int notification_bg_low_normal = 2131165525;
 			
 			// aapt resource value: 0x7F070156
-			public const int notification_icon_background = 2131165526;
+			public const int notification_bg_low_pressed = 2131165526;
 			
 			// aapt resource value: 0x7F070157
-			public const int notification_template_icon_bg = 2131165527;
+			public const int notification_bg_normal = 2131165527;
 			
 			// aapt resource value: 0x7F070158
-			public const int notification_template_icon_low_bg = 2131165528;
+			public const int notification_bg_normal_pressed = 2131165528;
 			
 			// aapt resource value: 0x7F070159
-			public const int notification_tile_bg = 2131165529;
+			public const int notification_icon_background = 2131165529;
 			
 			// aapt resource value: 0x7F07015A
-			public const int notify_panel_notification_icon_bg = 2131165530;
+			public const int notification_template_icon_bg = 2131165530;
 			
 			// aapt resource value: 0x7F07015B
-			public const int password = 2131165531;
+			public const int notification_template_icon_low_bg = 2131165531;
 			
 			// aapt resource value: 0x7F07015C
-			public const int paw = 2131165532;
+			public const int notification_tile_bg = 2131165532;
 			
 			// aapt resource value: 0x7F07015D
-			public const int pet = 2131165533;
+			public const int notify_panel_notification_icon_bg = 2131165533;
 			
 			// aapt resource value: 0x7F07015E
-			public const int product = 2131165534;
+			public const int password = 2131165534;
 			
 			// aapt resource value: 0x7F07015F
-			public const int service = 2131165535;
+			public const int paw = 2131165535;
 			
 			// aapt resource value: 0x7F070160
-			public const int store = 2131165536;
+			public const int pet = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int target = 2131165537;
+			public const int product = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int target_pet = 2131165538;
+			public const int service = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int tooltip_frame_dark = 2131165539;
+			public const int show_password = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int tooltip_frame_light = 2131165540;
+			public const int store = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int user = 2131165541;
+			public const int target = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int vet = 2131165542;
+			public const int target_pet = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int vet_cam = 2131165543;
+			public const int tooltip_frame_dark = 2131165543;
+			
+			// aapt resource value: 0x7F070168
+			public const int tooltip_frame_light = 2131165544;
+			
+			// aapt resource value: 0x7F070169
+			public const int user = 2131165545;
+			
+			// aapt resource value: 0x7F07016A
+			public const int vet = 2131165546;
+			
+			// aapt resource value: 0x7F07016B
+			public const int vet_cam = 2131165547;
 			
 			static Drawable()
 			{

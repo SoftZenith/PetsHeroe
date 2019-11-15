@@ -23,6 +23,7 @@ namespace PetsHeroe.View
 
         public Consulta_bene_vete()
         {
+
             InitializeComponent();
             tipoBusqueda = 2;
             pkrBuscarPor.SelectedIndex = tipoBusqueda;

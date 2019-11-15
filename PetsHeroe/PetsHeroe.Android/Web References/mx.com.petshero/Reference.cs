@@ -19,7 +19,7 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="wsPetsAppSoap", Namespace="http://www.petshero.com.mx")]
@@ -37,26 +37,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback Ciudad_BuscaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback CAM_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback TipoAsociado_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback TipoProducto_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback MarcaProducto_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback Producto_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback Servicio_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback Cliente_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback Veterinario_RegistroOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback PromoProductos_BuscaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback PromoServicios_BuscaOperationCompleted;
-        
         private System.Threading.SendOrPostCallback MascotaTipo_BuscaOperationCompleted;
         
         private System.Threading.SendOrPostCallback MascotaRaza_BuscaOperationCompleted;
@@ -65,13 +45,39 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback MascotaEstatus_BuscaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback TipoProducto_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback MarcaProducto_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Producto_AgregaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Producto_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Servicio_AgregaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Servicio_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoProductos_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoProductos_AgregaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoServicios_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoServicios_AgregaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CAM_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TipoAsociado_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Cliente_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Veterinario_RegistroOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Mascota_BuscaOperationCompleted;
         
         private System.Threading.SendOrPostCallback Mascota_RegistroOperationCompleted;
         
         private System.Threading.SendOrPostCallback Mascota_IncidenteOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback PuntosPromociones_BuscaOperationCompleted;
         
         private System.Threading.SendOrPostCallback Codigo_ValidaOperationCompleted;
         
@@ -82,6 +88,22 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         private System.Threading.SendOrPostCallback Entrega_LocalizacionOperationCompleted;
         
         private System.Threading.SendOrPostCallback Entrega_SoloMensajeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PuntosPromociones_BuscaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TicketUltimoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TicketCargaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VentaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VentaCambiaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VentaCancelaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TicketCancelaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TicketPagaOperationCompleted;
         
         /// <remarks/>
         public wsPetsApp() {
@@ -108,36 +130,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         public event Ciudad_BuscaCompletedEventHandler Ciudad_BuscaCompleted;
         
         /// <remarks/>
-        public event CAM_BuscaCompletedEventHandler CAM_BuscaCompleted;
-        
-        /// <remarks/>
-        public event TipoAsociado_BuscaCompletedEventHandler TipoAsociado_BuscaCompleted;
-        
-        /// <remarks/>
-        public event TipoProducto_BuscaCompletedEventHandler TipoProducto_BuscaCompleted;
-        
-        /// <remarks/>
-        public event MarcaProducto_BuscaCompletedEventHandler MarcaProducto_BuscaCompleted;
-        
-        /// <remarks/>
-        public event Producto_BuscaCompletedEventHandler Producto_BuscaCompleted;
-        
-        /// <remarks/>
-        public event Servicio_BuscaCompletedEventHandler Servicio_BuscaCompleted;
-        
-        /// <remarks/>
-        public event Cliente_BuscaCompletedEventHandler Cliente_BuscaCompleted;
-        
-        /// <remarks/>
-        public event Veterinario_RegistroCompletedEventHandler Veterinario_RegistroCompleted;
-        
-        /// <remarks/>
-        public event PromoProductos_BuscaCompletedEventHandler PromoProductos_BuscaCompleted;
-        
-        /// <remarks/>
-        public event PromoServicios_BuscaCompletedEventHandler PromoServicios_BuscaCompleted;
-        
-        /// <remarks/>
         public event MascotaTipo_BuscaCompletedEventHandler MascotaTipo_BuscaCompleted;
         
         /// <remarks/>
@@ -150,6 +142,48 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         public event MascotaEstatus_BuscaCompletedEventHandler MascotaEstatus_BuscaCompleted;
         
         /// <remarks/>
+        public event TipoProducto_BuscaCompletedEventHandler TipoProducto_BuscaCompleted;
+        
+        /// <remarks/>
+        public event MarcaProducto_BuscaCompletedEventHandler MarcaProducto_BuscaCompleted;
+        
+        /// <remarks/>
+        public event Producto_AgregaCompletedEventHandler Producto_AgregaCompleted;
+        
+        /// <remarks/>
+        public event Producto_BuscaCompletedEventHandler Producto_BuscaCompleted;
+        
+        /// <remarks/>
+        public event Servicio_AgregaCompletedEventHandler Servicio_AgregaCompleted;
+        
+        /// <remarks/>
+        public event Servicio_BuscaCompletedEventHandler Servicio_BuscaCompleted;
+        
+        /// <remarks/>
+        public event PromoProductos_BuscaCompletedEventHandler PromoProductos_BuscaCompleted;
+        
+        /// <remarks/>
+        public event PromoProductos_AgregaCompletedEventHandler PromoProductos_AgregaCompleted;
+        
+        /// <remarks/>
+        public event PromoServicios_BuscaCompletedEventHandler PromoServicios_BuscaCompleted;
+        
+        /// <remarks/>
+        public event PromoServicios_AgregaCompletedEventHandler PromoServicios_AgregaCompleted;
+        
+        /// <remarks/>
+        public event CAM_BuscaCompletedEventHandler CAM_BuscaCompleted;
+        
+        /// <remarks/>
+        public event TipoAsociado_BuscaCompletedEventHandler TipoAsociado_BuscaCompleted;
+        
+        /// <remarks/>
+        public event Cliente_BuscaCompletedEventHandler Cliente_BuscaCompleted;
+        
+        /// <remarks/>
+        public event Veterinario_RegistroCompletedEventHandler Veterinario_RegistroCompleted;
+        
+        /// <remarks/>
         public event Mascota_BuscaCompletedEventHandler Mascota_BuscaCompleted;
         
         /// <remarks/>
@@ -157,9 +191,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         public event Mascota_IncidenteCompletedEventHandler Mascota_IncidenteCompleted;
-        
-        /// <remarks/>
-        public event PuntosPromociones_BuscaCompletedEventHandler PuntosPromociones_BuscaCompleted;
         
         /// <remarks/>
         public event Codigo_ValidaCompletedEventHandler Codigo_ValidaCompleted;
@@ -175,6 +206,30 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         public event Entrega_SoloMensajeCompletedEventHandler Entrega_SoloMensajeCompleted;
+        
+        /// <remarks/>
+        public event PuntosPromociones_BuscaCompletedEventHandler PuntosPromociones_BuscaCompleted;
+        
+        /// <remarks/>
+        public event TicketUltimoCompletedEventHandler TicketUltimoCompleted;
+        
+        /// <remarks/>
+        public event TicketCargaCompletedEventHandler TicketCargaCompleted;
+        
+        /// <remarks/>
+        public event VentaCompletedEventHandler VentaCompleted;
+        
+        /// <remarks/>
+        public event VentaCambiaCompletedEventHandler VentaCambiaCompleted;
+        
+        /// <remarks/>
+        public event VentaCancelaCompletedEventHandler VentaCancelaCompleted;
+        
+        /// <remarks/>
+        public event TicketCancelaCompletedEventHandler TicketCancelaCompleted;
+        
+        /// <remarks/>
+        public event TicketPagaCompletedEventHandler TicketPagaCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
@@ -331,371 +386,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/CAM_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable CAM_Busca(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm) {
-            object[] results = this.Invoke("CAM_Busca", new object[] {
-                        IDPais,
-                        IDEstado,
-                        IDCiudad,
-                        IDAsociado,
-                        Latitud,
-                        Longitud,
-                        DistanciaKm});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void CAM_BuscaAsync(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm) {
-            this.CAM_BuscaAsync(IDPais, IDEstado, IDCiudad, IDAsociado, Latitud, Longitud, DistanciaKm, null);
-        }
-        
-        /// <remarks/>
-        public void CAM_BuscaAsync(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm, object userState) {
-            if ((this.CAM_BuscaOperationCompleted == null)) {
-                this.CAM_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCAM_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("CAM_Busca", new object[] {
-                        IDPais,
-                        IDEstado,
-                        IDCiudad,
-                        IDAsociado,
-                        Latitud,
-                        Longitud,
-                        DistanciaKm}, this.CAM_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnCAM_BuscaOperationCompleted(object arg) {
-            if ((this.CAM_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.CAM_BuscaCompleted(this, new CAM_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TipoAsociado_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable TipoAsociado_Busca() {
-            object[] results = this.Invoke("TipoAsociado_Busca", new object[0]);
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void TipoAsociado_BuscaAsync() {
-            this.TipoAsociado_BuscaAsync(null);
-        }
-        
-        /// <remarks/>
-        public void TipoAsociado_BuscaAsync(object userState) {
-            if ((this.TipoAsociado_BuscaOperationCompleted == null)) {
-                this.TipoAsociado_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTipoAsociado_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("TipoAsociado_Busca", new object[0], this.TipoAsociado_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnTipoAsociado_BuscaOperationCompleted(object arg) {
-            if ((this.TipoAsociado_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.TipoAsociado_BuscaCompleted(this, new TipoAsociado_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TipoProducto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable TipoProducto_Busca() {
-            object[] results = this.Invoke("TipoProducto_Busca", new object[0]);
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void TipoProducto_BuscaAsync() {
-            this.TipoProducto_BuscaAsync(null);
-        }
-        
-        /// <remarks/>
-        public void TipoProducto_BuscaAsync(object userState) {
-            if ((this.TipoProducto_BuscaOperationCompleted == null)) {
-                this.TipoProducto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTipoProducto_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("TipoProducto_Busca", new object[0], this.TipoProducto_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnTipoProducto_BuscaOperationCompleted(object arg) {
-            if ((this.TipoProducto_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.TipoProducto_BuscaCompleted(this, new TipoProducto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/MarcaProducto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable MarcaProducto_Busca() {
-            object[] results = this.Invoke("MarcaProducto_Busca", new object[0]);
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void MarcaProducto_BuscaAsync() {
-            this.MarcaProducto_BuscaAsync(null);
-        }
-        
-        /// <remarks/>
-        public void MarcaProducto_BuscaAsync(object userState) {
-            if ((this.MarcaProducto_BuscaOperationCompleted == null)) {
-                this.MarcaProducto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMarcaProducto_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("MarcaProducto_Busca", new object[0], this.MarcaProducto_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnMarcaProducto_BuscaOperationCompleted(object arg) {
-            if ((this.MarcaProducto_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.MarcaProducto_BuscaCompleted(this, new MarcaProducto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Producto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable Producto_Busca(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones) {
-            object[] results = this.Invoke("Producto_Busca", new object[] {
-                        IDAsociado,
-                        IDProducto,
-                        IDTipoProducto,
-                        IDMarca,
-                        Nombre,
-                        UPC,
-                        Promociones});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Producto_BuscaAsync(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones) {
-            this.Producto_BuscaAsync(IDAsociado, IDProducto, IDTipoProducto, IDMarca, Nombre, UPC, Promociones, null);
-        }
-        
-        /// <remarks/>
-        public void Producto_BuscaAsync(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones, object userState) {
-            if ((this.Producto_BuscaOperationCompleted == null)) {
-                this.Producto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnProducto_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("Producto_Busca", new object[] {
-                        IDAsociado,
-                        IDProducto,
-                        IDTipoProducto,
-                        IDMarca,
-                        Nombre,
-                        UPC,
-                        Promociones}, this.Producto_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnProducto_BuscaOperationCompleted(object arg) {
-            if ((this.Producto_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Producto_BuscaCompleted(this, new Producto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Servicio_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable Servicio_Busca(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones) {
-            object[] results = this.Invoke("Servicio_Busca", new object[] {
-                        IDAsociado,
-                        IDServicio,
-                        IDTipoMascota,
-                        Nombre,
-                        Promociones});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Servicio_BuscaAsync(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones) {
-            this.Servicio_BuscaAsync(IDAsociado, IDServicio, IDTipoMascota, Nombre, Promociones, null);
-        }
-        
-        /// <remarks/>
-        public void Servicio_BuscaAsync(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones, object userState) {
-            if ((this.Servicio_BuscaOperationCompleted == null)) {
-                this.Servicio_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnServicio_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("Servicio_Busca", new object[] {
-                        IDAsociado,
-                        IDServicio,
-                        IDTipoMascota,
-                        Nombre,
-                        Promociones}, this.Servicio_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnServicio_BuscaOperationCompleted(object arg) {
-            if ((this.Servicio_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Servicio_BuscaCompleted(this, new Servicio_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Cliente_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable Cliente_Busca(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
-            object[] results = this.Invoke("Cliente_Busca", new object[] {
-                        IDMiembro,
-                        IDAsociado,
-                        IDSucursal,
-                        Codigo,
-                        NombreCompleto,
-                        Nombre,
-                        Paterno,
-                        Materno,
-                        Sexo,
-                        CorreoElectronico,
-                        RFC});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
-            this.Cliente_BuscaAsync(IDMiembro, IDAsociado, IDSucursal, Codigo, NombreCompleto, Nombre, Paterno, Materno, Sexo, CorreoElectronico, RFC, null);
-        }
-        
-        /// <remarks/>
-        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC, object userState) {
-            if ((this.Cliente_BuscaOperationCompleted == null)) {
-                this.Cliente_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCliente_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("Cliente_Busca", new object[] {
-                        IDMiembro,
-                        IDAsociado,
-                        IDSucursal,
-                        Codigo,
-                        NombreCompleto,
-                        Nombre,
-                        Paterno,
-                        Materno,
-                        Sexo,
-                        CorreoElectronico,
-                        RFC}, this.Cliente_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnCliente_BuscaOperationCompleted(object arg) {
-            if ((this.Cliente_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Cliente_BuscaCompleted(this, new Cliente_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Veterinario_Registro", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public bool Veterinario_Registro(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado, out int IDAsociado) {
-            object[] results = this.Invoke("Veterinario_Registro", new object[] {
-                        NombreComercial,
-                        UsuarioNombre,
-                        UsuarioPaterno,
-                        UsuarioMaterno,
-                        UsuarioSexo,
-                        CorreoElectronico,
-                        Contrasena,
-                        IDTipoAsociado});
-            IDAsociado = ((int)(results[1]));
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void Veterinario_RegistroAsync(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado) {
-            this.Veterinario_RegistroAsync(NombreComercial, UsuarioNombre, UsuarioPaterno, UsuarioMaterno, UsuarioSexo, CorreoElectronico, Contrasena, IDTipoAsociado, null);
-        }
-        
-        /// <remarks/>
-        public void Veterinario_RegistroAsync(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado, object userState) {
-            if ((this.Veterinario_RegistroOperationCompleted == null)) {
-                this.Veterinario_RegistroOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVeterinario_RegistroOperationCompleted);
-            }
-            this.InvokeAsync("Veterinario_Registro", new object[] {
-                        NombreComercial,
-                        UsuarioNombre,
-                        UsuarioPaterno,
-                        UsuarioMaterno,
-                        UsuarioSexo,
-                        CorreoElectronico,
-                        Contrasena,
-                        IDTipoAsociado}, this.Veterinario_RegistroOperationCompleted, userState);
-        }
-        
-        private void OnVeterinario_RegistroOperationCompleted(object arg) {
-            if ((this.Veterinario_RegistroCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.Veterinario_RegistroCompleted(this, new Veterinario_RegistroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoProductos_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable PromoProductos_Busca(int IDAsociado, int IDTipoProducto) {
-            object[] results = this.Invoke("PromoProductos_Busca", new object[] {
-                        IDAsociado,
-                        IDTipoProducto});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void PromoProductos_BuscaAsync(int IDAsociado, int IDTipoProducto) {
-            this.PromoProductos_BuscaAsync(IDAsociado, IDTipoProducto, null);
-        }
-        
-        /// <remarks/>
-        public void PromoProductos_BuscaAsync(int IDAsociado, int IDTipoProducto, object userState) {
-            if ((this.PromoProductos_BuscaOperationCompleted == null)) {
-                this.PromoProductos_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoProductos_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("PromoProductos_Busca", new object[] {
-                        IDAsociado,
-                        IDTipoProducto}, this.PromoProductos_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnPromoProductos_BuscaOperationCompleted(object arg) {
-            if ((this.PromoProductos_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.PromoProductos_BuscaCompleted(this, new PromoProductos_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable PromoServicios_Busca(int IDAsociado, int IDTipoMascota) {
-            object[] results = this.Invoke("PromoServicios_Busca", new object[] {
-                        IDAsociado,
-                        IDTipoMascota});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void PromoServicios_BuscaAsync(int IDAsociado, int IDTipoMascota) {
-            this.PromoServicios_BuscaAsync(IDAsociado, IDTipoMascota, null);
-        }
-        
-        /// <remarks/>
-        public void PromoServicios_BuscaAsync(int IDAsociado, int IDTipoMascota, object userState) {
-            if ((this.PromoServicios_BuscaOperationCompleted == null)) {
-                this.PromoServicios_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoServicios_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("PromoServicios_Busca", new object[] {
-                        IDAsociado,
-                        IDTipoMascota}, this.PromoServicios_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnPromoServicios_BuscaOperationCompleted(object arg) {
-            if ((this.PromoServicios_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.PromoServicios_BuscaCompleted(this, new PromoServicios_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/MascotaTipo_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataTable MascotaTipo_Busca() {
             object[] results = this.Invoke("MascotaTipo_Busca", new object[0]);
@@ -807,6 +497,537 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             if ((this.MascotaEstatus_BuscaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.MascotaEstatus_BuscaCompleted(this, new MascotaEstatus_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TipoProducto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable TipoProducto_Busca() {
+            object[] results = this.Invoke("TipoProducto_Busca", new object[0]);
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void TipoProducto_BuscaAsync() {
+            this.TipoProducto_BuscaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void TipoProducto_BuscaAsync(object userState) {
+            if ((this.TipoProducto_BuscaOperationCompleted == null)) {
+                this.TipoProducto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTipoProducto_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("TipoProducto_Busca", new object[0], this.TipoProducto_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnTipoProducto_BuscaOperationCompleted(object arg) {
+            if ((this.TipoProducto_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TipoProducto_BuscaCompleted(this, new TipoProducto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/MarcaProducto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable MarcaProducto_Busca() {
+            object[] results = this.Invoke("MarcaProducto_Busca", new object[0]);
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void MarcaProducto_BuscaAsync() {
+            this.MarcaProducto_BuscaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void MarcaProducto_BuscaAsync(object userState) {
+            if ((this.MarcaProducto_BuscaOperationCompleted == null)) {
+                this.MarcaProducto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMarcaProducto_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("MarcaProducto_Busca", new object[0], this.MarcaProducto_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnMarcaProducto_BuscaOperationCompleted(object arg) {
+            if ((this.MarcaProducto_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.MarcaProducto_BuscaCompleted(this, new MarcaProducto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Producto_Agrega", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int Producto_Agrega(int IDTipoProducto, int IDMarca, string Nombre, string UPC) {
+            object[] results = this.Invoke("Producto_Agrega", new object[] {
+                        IDTipoProducto,
+                        IDMarca,
+                        Nombre,
+                        UPC});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Producto_AgregaAsync(int IDTipoProducto, int IDMarca, string Nombre, string UPC) {
+            this.Producto_AgregaAsync(IDTipoProducto, IDMarca, Nombre, UPC, null);
+        }
+        
+        /// <remarks/>
+        public void Producto_AgregaAsync(int IDTipoProducto, int IDMarca, string Nombre, string UPC, object userState) {
+            if ((this.Producto_AgregaOperationCompleted == null)) {
+                this.Producto_AgregaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnProducto_AgregaOperationCompleted);
+            }
+            this.InvokeAsync("Producto_Agrega", new object[] {
+                        IDTipoProducto,
+                        IDMarca,
+                        Nombre,
+                        UPC}, this.Producto_AgregaOperationCompleted, userState);
+        }
+        
+        private void OnProducto_AgregaOperationCompleted(object arg) {
+            if ((this.Producto_AgregaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Producto_AgregaCompleted(this, new Producto_AgregaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Producto_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Producto_Busca(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones) {
+            object[] results = this.Invoke("Producto_Busca", new object[] {
+                        IDAsociado,
+                        IDProducto,
+                        IDTipoProducto,
+                        IDMarca,
+                        Nombre,
+                        UPC,
+                        Promociones});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Producto_BuscaAsync(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones) {
+            this.Producto_BuscaAsync(IDAsociado, IDProducto, IDTipoProducto, IDMarca, Nombre, UPC, Promociones, null);
+        }
+        
+        /// <remarks/>
+        public void Producto_BuscaAsync(int IDAsociado, int IDProducto, int IDTipoProducto, int IDMarca, string Nombre, string UPC, bool Promociones, object userState) {
+            if ((this.Producto_BuscaOperationCompleted == null)) {
+                this.Producto_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnProducto_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("Producto_Busca", new object[] {
+                        IDAsociado,
+                        IDProducto,
+                        IDTipoProducto,
+                        IDMarca,
+                        Nombre,
+                        UPC,
+                        Promociones}, this.Producto_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnProducto_BuscaOperationCompleted(object arg) {
+            if ((this.Producto_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Producto_BuscaCompleted(this, new Producto_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Servicio_Agrega", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int Servicio_Agrega(int IDTipoMascota, string Codigo, string Nombre) {
+            object[] results = this.Invoke("Servicio_Agrega", new object[] {
+                        IDTipoMascota,
+                        Codigo,
+                        Nombre});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Servicio_AgregaAsync(int IDTipoMascota, string Codigo, string Nombre) {
+            this.Servicio_AgregaAsync(IDTipoMascota, Codigo, Nombre, null);
+        }
+        
+        /// <remarks/>
+        public void Servicio_AgregaAsync(int IDTipoMascota, string Codigo, string Nombre, object userState) {
+            if ((this.Servicio_AgregaOperationCompleted == null)) {
+                this.Servicio_AgregaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnServicio_AgregaOperationCompleted);
+            }
+            this.InvokeAsync("Servicio_Agrega", new object[] {
+                        IDTipoMascota,
+                        Codigo,
+                        Nombre}, this.Servicio_AgregaOperationCompleted, userState);
+        }
+        
+        private void OnServicio_AgregaOperationCompleted(object arg) {
+            if ((this.Servicio_AgregaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Servicio_AgregaCompleted(this, new Servicio_AgregaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Servicio_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Servicio_Busca(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones) {
+            object[] results = this.Invoke("Servicio_Busca", new object[] {
+                        IDAsociado,
+                        IDServicio,
+                        IDTipoMascota,
+                        Nombre,
+                        Promociones});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Servicio_BuscaAsync(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones) {
+            this.Servicio_BuscaAsync(IDAsociado, IDServicio, IDTipoMascota, Nombre, Promociones, null);
+        }
+        
+        /// <remarks/>
+        public void Servicio_BuscaAsync(int IDAsociado, int IDServicio, int IDTipoMascota, string Nombre, bool Promociones, object userState) {
+            if ((this.Servicio_BuscaOperationCompleted == null)) {
+                this.Servicio_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnServicio_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("Servicio_Busca", new object[] {
+                        IDAsociado,
+                        IDServicio,
+                        IDTipoMascota,
+                        Nombre,
+                        Promociones}, this.Servicio_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnServicio_BuscaOperationCompleted(object arg) {
+            if ((this.Servicio_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Servicio_BuscaCompleted(this, new Servicio_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoProductos_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable PromoProductos_Busca(int IDAsociado, int IDTipoProducto, int IDProducto) {
+            object[] results = this.Invoke("PromoProductos_Busca", new object[] {
+                        IDAsociado,
+                        IDTipoProducto,
+                        IDProducto});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_BuscaAsync(int IDAsociado, int IDTipoProducto, int IDProducto) {
+            this.PromoProductos_BuscaAsync(IDAsociado, IDTipoProducto, IDProducto, null);
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_BuscaAsync(int IDAsociado, int IDTipoProducto, int IDProducto, object userState) {
+            if ((this.PromoProductos_BuscaOperationCompleted == null)) {
+                this.PromoProductos_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoProductos_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("PromoProductos_Busca", new object[] {
+                        IDAsociado,
+                        IDTipoProducto,
+                        IDProducto}, this.PromoProductos_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnPromoProductos_BuscaOperationCompleted(object arg) {
+            if ((this.PromoProductos_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoProductos_BuscaCompleted(this, new PromoProductos_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoProductos_Agrega", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int PromoProductos_Agrega(int IDAsociado, int IDProducto, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            object[] results = this.Invoke("PromoProductos_Agrega", new object[] {
+                        IDAsociado,
+                        IDProducto,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_AgregaAsync(int IDAsociado, int IDProducto, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.PromoProductos_AgregaAsync(IDAsociado, IDProducto, Nombre, PrecioRegular, PrecioPromo, Desde, Hasta, Puntos, Unidades, null);
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_AgregaAsync(int IDAsociado, int IDProducto, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades, object userState) {
+            if ((this.PromoProductos_AgregaOperationCompleted == null)) {
+                this.PromoProductos_AgregaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoProductos_AgregaOperationCompleted);
+            }
+            this.InvokeAsync("PromoProductos_Agrega", new object[] {
+                        IDAsociado,
+                        IDProducto,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades}, this.PromoProductos_AgregaOperationCompleted, userState);
+        }
+        
+        private void OnPromoProductos_AgregaOperationCompleted(object arg) {
+            if ((this.PromoProductos_AgregaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoProductos_AgregaCompleted(this, new PromoProductos_AgregaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable PromoServicios_Busca(int IDAsociado, int IDTipoMascota, int IDServicio) {
+            object[] results = this.Invoke("PromoServicios_Busca", new object[] {
+                        IDAsociado,
+                        IDTipoMascota,
+                        IDServicio});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_BuscaAsync(int IDAsociado, int IDTipoMascota, int IDServicio) {
+            this.PromoServicios_BuscaAsync(IDAsociado, IDTipoMascota, IDServicio, null);
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_BuscaAsync(int IDAsociado, int IDTipoMascota, int IDServicio, object userState) {
+            if ((this.PromoServicios_BuscaOperationCompleted == null)) {
+                this.PromoServicios_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoServicios_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("PromoServicios_Busca", new object[] {
+                        IDAsociado,
+                        IDTipoMascota,
+                        IDServicio}, this.PromoServicios_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnPromoServicios_BuscaOperationCompleted(object arg) {
+            if ((this.PromoServicios_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoServicios_BuscaCompleted(this, new PromoServicios_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Agrega", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int PromoServicios_Agrega(int IDAsociado, int IDTipoServicio, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            object[] results = this.Invoke("PromoServicios_Agrega", new object[] {
+                        IDAsociado,
+                        IDTipoServicio,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_AgregaAsync(int IDAsociado, int IDTipoServicio, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.PromoServicios_AgregaAsync(IDAsociado, IDTipoServicio, Nombre, PrecioRegular, PrecioPromo, Desde, Hasta, Puntos, Unidades, null);
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_AgregaAsync(int IDAsociado, int IDTipoServicio, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades, object userState) {
+            if ((this.PromoServicios_AgregaOperationCompleted == null)) {
+                this.PromoServicios_AgregaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoServicios_AgregaOperationCompleted);
+            }
+            this.InvokeAsync("PromoServicios_Agrega", new object[] {
+                        IDAsociado,
+                        IDTipoServicio,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades}, this.PromoServicios_AgregaOperationCompleted, userState);
+        }
+        
+        private void OnPromoServicios_AgregaOperationCompleted(object arg) {
+            if ((this.PromoServicios_AgregaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoServicios_AgregaCompleted(this, new PromoServicios_AgregaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/CAM_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable CAM_Busca(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm) {
+            object[] results = this.Invoke("CAM_Busca", new object[] {
+                        IDPais,
+                        IDEstado,
+                        IDCiudad,
+                        IDAsociado,
+                        Latitud,
+                        Longitud,
+                        DistanciaKm});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CAM_BuscaAsync(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm) {
+            this.CAM_BuscaAsync(IDPais, IDEstado, IDCiudad, IDAsociado, Latitud, Longitud, DistanciaKm, null);
+        }
+        
+        /// <remarks/>
+        public void CAM_BuscaAsync(int IDPais, int IDEstado, int IDCiudad, int IDAsociado, double Latitud, double Longitud, int DistanciaKm, object userState) {
+            if ((this.CAM_BuscaOperationCompleted == null)) {
+                this.CAM_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCAM_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("CAM_Busca", new object[] {
+                        IDPais,
+                        IDEstado,
+                        IDCiudad,
+                        IDAsociado,
+                        Latitud,
+                        Longitud,
+                        DistanciaKm}, this.CAM_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnCAM_BuscaOperationCompleted(object arg) {
+            if ((this.CAM_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CAM_BuscaCompleted(this, new CAM_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TipoAsociado_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable TipoAsociado_Busca() {
+            object[] results = this.Invoke("TipoAsociado_Busca", new object[0]);
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void TipoAsociado_BuscaAsync() {
+            this.TipoAsociado_BuscaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void TipoAsociado_BuscaAsync(object userState) {
+            if ((this.TipoAsociado_BuscaOperationCompleted == null)) {
+                this.TipoAsociado_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTipoAsociado_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("TipoAsociado_Busca", new object[0], this.TipoAsociado_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnTipoAsociado_BuscaOperationCompleted(object arg) {
+            if ((this.TipoAsociado_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TipoAsociado_BuscaCompleted(this, new TipoAsociado_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Cliente_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Cliente_Busca(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
+            object[] results = this.Invoke("Cliente_Busca", new object[] {
+                        IDMiembro,
+                        IDAsociado,
+                        IDSucursal,
+                        Codigo,
+                        NombreCompleto,
+                        Nombre,
+                        Paterno,
+                        Materno,
+                        Sexo,
+                        CorreoElectronico,
+                        RFC});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC) {
+            this.Cliente_BuscaAsync(IDMiembro, IDAsociado, IDSucursal, Codigo, NombreCompleto, Nombre, Paterno, Materno, Sexo, CorreoElectronico, RFC, null);
+        }
+        
+        /// <remarks/>
+        public void Cliente_BuscaAsync(int IDMiembro, int IDAsociado, int IDSucursal, string Codigo, string NombreCompleto, string Nombre, string Paterno, string Materno, string Sexo, string CorreoElectronico, string RFC, object userState) {
+            if ((this.Cliente_BuscaOperationCompleted == null)) {
+                this.Cliente_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCliente_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("Cliente_Busca", new object[] {
+                        IDMiembro,
+                        IDAsociado,
+                        IDSucursal,
+                        Codigo,
+                        NombreCompleto,
+                        Nombre,
+                        Paterno,
+                        Materno,
+                        Sexo,
+                        CorreoElectronico,
+                        RFC}, this.Cliente_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnCliente_BuscaOperationCompleted(object arg) {
+            if ((this.Cliente_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Cliente_BuscaCompleted(this, new Cliente_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Veterinario_Registro", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool Veterinario_Registro(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado, out int IDAsociado) {
+            object[] results = this.Invoke("Veterinario_Registro", new object[] {
+                        NombreComercial,
+                        UsuarioNombre,
+                        UsuarioPaterno,
+                        UsuarioMaterno,
+                        UsuarioSexo,
+                        CorreoElectronico,
+                        Contrasena,
+                        IDTipoAsociado});
+            IDAsociado = ((int)(results[1]));
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Veterinario_RegistroAsync(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado) {
+            this.Veterinario_RegistroAsync(NombreComercial, UsuarioNombre, UsuarioPaterno, UsuarioMaterno, UsuarioSexo, CorreoElectronico, Contrasena, IDTipoAsociado, null);
+        }
+        
+        /// <remarks/>
+        public void Veterinario_RegistroAsync(string NombreComercial, string UsuarioNombre, string UsuarioPaterno, string UsuarioMaterno, char UsuarioSexo, string CorreoElectronico, string Contrasena, int IDTipoAsociado, object userState) {
+            if ((this.Veterinario_RegistroOperationCompleted == null)) {
+                this.Veterinario_RegistroOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVeterinario_RegistroOperationCompleted);
+            }
+            this.InvokeAsync("Veterinario_Registro", new object[] {
+                        NombreComercial,
+                        UsuarioNombre,
+                        UsuarioPaterno,
+                        UsuarioMaterno,
+                        UsuarioSexo,
+                        CorreoElectronico,
+                        Contrasena,
+                        IDTipoAsociado}, this.Veterinario_RegistroOperationCompleted, userState);
+        }
+        
+        private void OnVeterinario_RegistroOperationCompleted(object arg) {
+            if ((this.Veterinario_RegistroCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Veterinario_RegistroCompleted(this, new Veterinario_RegistroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -974,40 +1195,6 @@ namespace PetsHeroe.Droid.mx.com.petshero {
             if ((this.Mascota_IncidenteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Mascota_IncidenteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PuntosPromociones_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable PuntosPromociones_Busca(int IDMiembro, int IDMascota, int IDAsociado) {
-            object[] results = this.Invoke("PuntosPromociones_Busca", new object[] {
-                        IDMiembro,
-                        IDMascota,
-                        IDAsociado});
-            return ((System.Data.DataTable)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado) {
-            this.PuntosPromociones_BuscaAsync(IDMiembro, IDMascota, IDAsociado, null);
-        }
-        
-        /// <remarks/>
-        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado, object userState) {
-            if ((this.PuntosPromociones_BuscaOperationCompleted == null)) {
-                this.PuntosPromociones_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPuntosPromociones_BuscaOperationCompleted);
-            }
-            this.InvokeAsync("PuntosPromociones_Busca", new object[] {
-                        IDMiembro,
-                        IDMascota,
-                        IDAsociado}, this.PuntosPromociones_BuscaOperationCompleted, userState);
-        }
-        
-        private void OnPuntosPromociones_BuscaOperationCompleted(object arg) {
-            if ((this.PuntosPromociones_BuscaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.PuntosPromociones_BuscaCompleted(this, new PuntosPromociones_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1205,13 +1392,282 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PuntosPromociones_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable PuntosPromociones_Busca(int IDMiembro, int IDMascota, int IDAsociado) {
+            object[] results = this.Invoke("PuntosPromociones_Busca", new object[] {
+                        IDMiembro,
+                        IDMascota,
+                        IDAsociado});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado) {
+            this.PuntosPromociones_BuscaAsync(IDMiembro, IDMascota, IDAsociado, null);
+        }
+        
+        /// <remarks/>
+        public void PuntosPromociones_BuscaAsync(int IDMiembro, int IDMascota, int IDAsociado, object userState) {
+            if ((this.PuntosPromociones_BuscaOperationCompleted == null)) {
+                this.PuntosPromociones_BuscaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPuntosPromociones_BuscaOperationCompleted);
+            }
+            this.InvokeAsync("PuntosPromociones_Busca", new object[] {
+                        IDMiembro,
+                        IDMascota,
+                        IDAsociado}, this.PuntosPromociones_BuscaOperationCompleted, userState);
+        }
+        
+        private void OnPuntosPromociones_BuscaOperationCompleted(object arg) {
+            if ((this.PuntosPromociones_BuscaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PuntosPromociones_BuscaCompleted(this, new PuntosPromociones_BuscaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TicketUltimo", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable TicketUltimo(int IDSucursal, int IDMascota) {
+            object[] results = this.Invoke("TicketUltimo", new object[] {
+                        IDSucursal,
+                        IDMascota});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void TicketUltimoAsync(int IDSucursal, int IDMascota) {
+            this.TicketUltimoAsync(IDSucursal, IDMascota, null);
+        }
+        
+        /// <remarks/>
+        public void TicketUltimoAsync(int IDSucursal, int IDMascota, object userState) {
+            if ((this.TicketUltimoOperationCompleted == null)) {
+                this.TicketUltimoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTicketUltimoOperationCompleted);
+            }
+            this.InvokeAsync("TicketUltimo", new object[] {
+                        IDSucursal,
+                        IDMascota}, this.TicketUltimoOperationCompleted, userState);
+        }
+        
+        private void OnTicketUltimoOperationCompleted(object arg) {
+            if ((this.TicketUltimoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TicketUltimoCompleted(this, new TicketUltimoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TicketCarga", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable TicketCarga(int IDSucursal, int IDMascota, int IDTicket) {
+            object[] results = this.Invoke("TicketCarga", new object[] {
+                        IDSucursal,
+                        IDMascota,
+                        IDTicket});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void TicketCargaAsync(int IDSucursal, int IDMascota, int IDTicket) {
+            this.TicketCargaAsync(IDSucursal, IDMascota, IDTicket, null);
+        }
+        
+        /// <remarks/>
+        public void TicketCargaAsync(int IDSucursal, int IDMascota, int IDTicket, object userState) {
+            if ((this.TicketCargaOperationCompleted == null)) {
+                this.TicketCargaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTicketCargaOperationCompleted);
+            }
+            this.InvokeAsync("TicketCarga", new object[] {
+                        IDSucursal,
+                        IDMascota,
+                        IDTicket}, this.TicketCargaOperationCompleted, userState);
+        }
+        
+        private void OnTicketCargaOperationCompleted(object arg) {
+            if ((this.TicketCargaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TicketCargaCompleted(this, new TicketCargaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Venta", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int Venta(ref int IDTicket, int IDMascota, int IDSucursal, int IDProducto, int IDServicio, int Unidades, decimal Costo) {
+            object[] results = this.Invoke("Venta", new object[] {
+                        IDTicket,
+                        IDMascota,
+                        IDSucursal,
+                        IDProducto,
+                        IDServicio,
+                        Unidades,
+                        Costo});
+            IDTicket = ((int)(results[1]));
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void VentaAsync(int IDTicket, int IDMascota, int IDSucursal, int IDProducto, int IDServicio, int Unidades, decimal Costo) {
+            this.VentaAsync(IDTicket, IDMascota, IDSucursal, IDProducto, IDServicio, Unidades, Costo, null);
+        }
+        
+        /// <remarks/>
+        public void VentaAsync(int IDTicket, int IDMascota, int IDSucursal, int IDProducto, int IDServicio, int Unidades, decimal Costo, object userState) {
+            if ((this.VentaOperationCompleted == null)) {
+                this.VentaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVentaOperationCompleted);
+            }
+            this.InvokeAsync("Venta", new object[] {
+                        IDTicket,
+                        IDMascota,
+                        IDSucursal,
+                        IDProducto,
+                        IDServicio,
+                        Unidades,
+                        Costo}, this.VentaOperationCompleted, userState);
+        }
+        
+        private void OnVentaOperationCompleted(object arg) {
+            if ((this.VentaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VentaCompleted(this, new VentaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/VentaCambia", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void VentaCambia(int IDVenta, int Unidades, decimal Costo) {
+            this.Invoke("VentaCambia", new object[] {
+                        IDVenta,
+                        Unidades,
+                        Costo});
+        }
+        
+        /// <remarks/>
+        public void VentaCambiaAsync(int IDVenta, int Unidades, decimal Costo) {
+            this.VentaCambiaAsync(IDVenta, Unidades, Costo, null);
+        }
+        
+        /// <remarks/>
+        public void VentaCambiaAsync(int IDVenta, int Unidades, decimal Costo, object userState) {
+            if ((this.VentaCambiaOperationCompleted == null)) {
+                this.VentaCambiaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVentaCambiaOperationCompleted);
+            }
+            this.InvokeAsync("VentaCambia", new object[] {
+                        IDVenta,
+                        Unidades,
+                        Costo}, this.VentaCambiaOperationCompleted, userState);
+        }
+        
+        private void OnVentaCambiaOperationCompleted(object arg) {
+            if ((this.VentaCambiaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VentaCambiaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/VentaCancela", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void VentaCancela(int IDVenta) {
+            this.Invoke("VentaCancela", new object[] {
+                        IDVenta});
+        }
+        
+        /// <remarks/>
+        public void VentaCancelaAsync(int IDVenta) {
+            this.VentaCancelaAsync(IDVenta, null);
+        }
+        
+        /// <remarks/>
+        public void VentaCancelaAsync(int IDVenta, object userState) {
+            if ((this.VentaCancelaOperationCompleted == null)) {
+                this.VentaCancelaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVentaCancelaOperationCompleted);
+            }
+            this.InvokeAsync("VentaCancela", new object[] {
+                        IDVenta}, this.VentaCancelaOperationCompleted, userState);
+        }
+        
+        private void OnVentaCancelaOperationCompleted(object arg) {
+            if ((this.VentaCancelaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VentaCancelaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TicketCancela", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void TicketCancela(int IDTicket) {
+            this.Invoke("TicketCancela", new object[] {
+                        IDTicket});
+        }
+        
+        /// <remarks/>
+        public void TicketCancelaAsync(int IDTicket) {
+            this.TicketCancelaAsync(IDTicket, null);
+        }
+        
+        /// <remarks/>
+        public void TicketCancelaAsync(int IDTicket, object userState) {
+            if ((this.TicketCancelaOperationCompleted == null)) {
+                this.TicketCancelaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTicketCancelaOperationCompleted);
+            }
+            this.InvokeAsync("TicketCancela", new object[] {
+                        IDTicket}, this.TicketCancelaOperationCompleted, userState);
+        }
+        
+        private void OnTicketCancelaOperationCompleted(object arg) {
+            if ((this.TicketCancelaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TicketCancelaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TicketPaga", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void TicketPaga(int IDMascota, int IDSucursal, int Ticket, decimal PuntosGastados) {
+            this.Invoke("TicketPaga", new object[] {
+                        IDMascota,
+                        IDSucursal,
+                        Ticket,
+                        PuntosGastados});
+        }
+        
+        /// <remarks/>
+        public void TicketPagaAsync(int IDMascota, int IDSucursal, int Ticket, decimal PuntosGastados) {
+            this.TicketPagaAsync(IDMascota, IDSucursal, Ticket, PuntosGastados, null);
+        }
+        
+        /// <remarks/>
+        public void TicketPagaAsync(int IDMascota, int IDSucursal, int Ticket, decimal PuntosGastados, object userState) {
+            if ((this.TicketPagaOperationCompleted == null)) {
+                this.TicketPagaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTicketPagaOperationCompleted);
+            }
+            this.InvokeAsync("TicketPaga", new object[] {
+                        IDMascota,
+                        IDSucursal,
+                        Ticket,
+                        PuntosGastados}, this.TicketPagaOperationCompleted, userState);
+        }
+        
+        private void OnTicketPagaOperationCompleted(object arg) {
+            if ((this.TicketPagaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TicketPagaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1237,11 +1693,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void ValidaUsuarioCompletedEventHandler(object sender, ValidaUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ValidaUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1295,15 +1751,15 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void EnviaContrasenaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Pais_BuscaCompletedEventHandler(object sender, Pais_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Pais_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1325,11 +1781,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Estado_BuscaCompletedEventHandler(object sender, Estado_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Estado_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1351,11 +1807,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Ciudad_BuscaCompletedEventHandler(object sender, Ciudad_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Ciudad_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1377,18 +1833,18 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void CAM_BuscaCompletedEventHandler(object sender, CAM_BuscaCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void MascotaTipo_BuscaCompletedEventHandler(object sender, MascotaTipo_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CAM_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class MascotaTipo_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal CAM_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal MascotaTipo_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1403,18 +1859,18 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void TipoAsociado_BuscaCompletedEventHandler(object sender, TipoAsociado_BuscaCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void MascotaRaza_BuscaCompletedEventHandler(object sender, MascotaRaza_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class TipoAsociado_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class MascotaRaza_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal TipoAsociado_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal MascotaRaza_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1429,11 +1885,63 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void MascotaColor_BuscaCompletedEventHandler(object sender, MascotaColor_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class MascotaColor_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal MascotaColor_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void MascotaEstatus_BuscaCompletedEventHandler(object sender, MascotaEstatus_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class MascotaEstatus_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal MascotaEstatus_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void TipoProducto_BuscaCompletedEventHandler(object sender, TipoProducto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TipoProducto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1455,11 +1963,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void MarcaProducto_BuscaCompletedEventHandler(object sender, MarcaProducto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaProducto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1481,11 +1989,37 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void Producto_AgregaCompletedEventHandler(object sender, Producto_AgregaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Producto_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Producto_AgregaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Producto_BuscaCompletedEventHandler(object sender, Producto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Producto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1507,11 +2041,37 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void Servicio_AgregaCompletedEventHandler(object sender, Servicio_AgregaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Servicio_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Servicio_AgregaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Servicio_BuscaCompletedEventHandler(object sender, Servicio_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Servicio_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1533,11 +2093,167 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void PromoProductos_BuscaCompletedEventHandler(object sender, PromoProductos_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PromoProductos_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PromoProductos_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void PromoProductos_AgregaCompletedEventHandler(object sender, PromoProductos_AgregaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PromoProductos_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PromoProductos_AgregaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void PromoServicios_BuscaCompletedEventHandler(object sender, PromoServicios_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PromoServicios_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PromoServicios_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void PromoServicios_AgregaCompletedEventHandler(object sender, PromoServicios_AgregaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PromoServicios_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PromoServicios_AgregaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void CAM_BuscaCompletedEventHandler(object sender, CAM_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CAM_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CAM_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void TipoAsociado_BuscaCompletedEventHandler(object sender, TipoAsociado_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class TipoAsociado_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal TipoAsociado_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Cliente_BuscaCompletedEventHandler(object sender, Cliente_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Cliente_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1559,11 +2275,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Veterinario_RegistroCompletedEventHandler(object sender, Veterinario_RegistroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Veterinario_RegistroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1593,167 +2309,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void PromoProductos_BuscaCompletedEventHandler(object sender, PromoProductos_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class PromoProductos_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal PromoProductos_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void PromoServicios_BuscaCompletedEventHandler(object sender, PromoServicios_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class PromoServicios_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal PromoServicios_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void MascotaTipo_BuscaCompletedEventHandler(object sender, MascotaTipo_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MascotaTipo_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MascotaTipo_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void MascotaRaza_BuscaCompletedEventHandler(object sender, MascotaRaza_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MascotaRaza_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MascotaRaza_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void MascotaColor_BuscaCompletedEventHandler(object sender, MascotaColor_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MascotaColor_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MascotaColor_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void MascotaEstatus_BuscaCompletedEventHandler(object sender, MascotaEstatus_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MascotaEstatus_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MascotaEstatus_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Mascota_BuscaCompletedEventHandler(object sender, Mascota_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Mascota_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1775,11 +2335,11 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Mascota_RegistroCompletedEventHandler(object sender, Mascota_RegistroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Mascota_RegistroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1833,41 +2393,15 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Mascota_IncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    public delegate void PuntosPromociones_BuscaCompletedEventHandler(object sender, PuntosPromociones_BuscaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class PuntosPromociones_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal PuntosPromociones_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataTable Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataTable)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Codigo_ValidaCompletedEventHandler(object sender, Codigo_ValidaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Codigo_ValidaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1913,18 +2447,146 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Codigo_LeidoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Entrega_CAMCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Entrega_LocalizacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.1.18")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
     public delegate void Entrega_SoloMensajeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void PuntosPromociones_BuscaCompletedEventHandler(object sender, PuntosPromociones_BuscaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PuntosPromociones_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PuntosPromociones_BuscaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void TicketUltimoCompletedEventHandler(object sender, TicketUltimoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class TicketUltimoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal TicketUltimoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void TicketCargaCompletedEventHandler(object sender, TicketCargaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class TicketCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal TicketCargaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void VentaCompletedEventHandler(object sender, VentaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class VentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal VentaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public int IDTicket {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void VentaCambiaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void VentaCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void TicketCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    public delegate void TicketPagaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }

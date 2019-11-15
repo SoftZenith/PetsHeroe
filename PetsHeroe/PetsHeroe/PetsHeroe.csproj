@@ -10,17 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.15" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.3.0.908675" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="LeoJHarris.XForms.Plugin.EnhancedEntry" Version="1.0.6" />
+    <PackageReference Include="Behaviors.Forms" Version="1.4.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
     <Folder Include="Services\" />
     <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="View\Nuevo_Producto.xaml.cs" />
   </ItemGroup>
 </Project>

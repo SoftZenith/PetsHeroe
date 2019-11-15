@@ -92,9 +92,10 @@ namespace PetsHeroe.iOS
             Estado_Busca = wsPets.Estado_Busca(1);
         }
 
-        public void getMarcaProducto_Busca()
+        public DataTable getMarcaProducto_Busca()
         {
-            throw new NotImplementedException();
+            wsPets.AuthHeaderValue = auth;
+            return wsPets.MarcaProducto_Busca();
         }
 
         public void getMascotaColor_Busca(int IDTipo)
@@ -120,14 +121,42 @@ namespace PetsHeroe.iOS
             throw new NotImplementedException();
         }
 
-        public void getProducto_Busca()
+        public DataTable getProducto_Busca(int idAsociado, int idTipoProducto, int idMarca)
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                return wsPets.Producto_Busca(idAsociado, -1, idTipoProducto, idMarca, "", "", false);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
-        public void getServicio_Busca()
+        public DataTable getProducto_Busca(int idAsociado, string UPC)
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                return wsPets.Producto_Busca(idAsociado, -1, -1, -1, "", UPC, false);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public DataTable getServicio_Busca(int tipoMascota)
+        {
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                return wsPets.Servicio_Busca(-1, -1, tipoMascota, "", true);
+            }
+            catch (Exception ex) {
+                return null;
+            }
         }
 
         public void getTipoAsociado_Busca()
@@ -136,9 +165,17 @@ namespace PetsHeroe.iOS
             TipoAsociado_Busca = wsPets.TipoAsociado_Busca();
         }
 
-        public void getTipoProducto_Busca()
+        public DataTable getTipoProducto_Busca()
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                return wsPets.TipoProducto_Busca();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public bool getValidaUsuario(string user, string pass)
@@ -288,6 +325,20 @@ namespace PetsHeroe.iOS
             }
         }
 
+        public bool getIdMascota_Busca(string codigoMascota)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", codigoMascota, "");
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public void CloseApp()
         {
             
@@ -353,7 +404,8 @@ namespace PetsHeroe.iOS
             wsPets.AuthHeaderValue = auth;
             try
             {
-                return wsPets.PromoProductos_Busca(idAsociado, -1);
+                //return wsPets.PromoProductos_Busca(idAsociado, -1);
+                return wsPets.PromoProductos_Busca(idAsociado, -1, -1);
             }
             catch (Exception ex) {
                 return null;
@@ -364,11 +416,56 @@ namespace PetsHeroe.iOS
         {
             wsPets.AuthHeaderValue = auth;
             try {
-                return wsPets.PromoServicios_Busca(idAsociado, -1);
+                //return wsPets.PromoServicios_Busca(idAsociado, -1);
+                return wsPets.PromoServicios_Busca(idAsociado, -1, -1);
             }
             catch (Exception ex) {
                 return null;
             }
         }
+
+        public void agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult)
+        {
+            int IDTicket = ticket;
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                ventaResult = wsPets.Venta(ref IDTicket, idMascota, idSucursal, idProducto, idServicio, unidades, Convert.ToDecimal(costo));
+                idTicketOut = IDTicket;
+            }
+            catch (Exception ex)
+            {
+                ventaResult = -1;
+                idTicketOut = -1;
+            }
+        }
+
+        public bool ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.TicketPaga(idMascota, idSucursal, ticket, puntosGastados);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public int producto_Agrega(int idTipoProducto, int idMarca, string nombre, string UPC)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.Producto_Agrega(idTipoProducto, idMarca, nombre, UPC);
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+        }
+
     }
 }

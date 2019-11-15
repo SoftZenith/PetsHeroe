@@ -11,13 +11,15 @@ namespace PetsHeroe
     public partial class Menu_veterinario : Xamarin.Forms.TabbedPage
     {
 
-        public Menu_veterinario()
+        public Menu_veterinario(int tab)
         {
             InitializeComponent();
 
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
              .SetBarItemColor(Color.White)
              .SetBarSelectedItemColor(Color.OrangeRed);
+
+            tbVete.CurrentPage = tbVete.Children[tab];
         }
 
         async void onMisClientes(object sender, EventArgs args) {
@@ -37,10 +39,15 @@ namespace PetsHeroe
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {
-            Preferences.Set("logged", false, "usuarioLogeado");
-            Preferences.Set("userType", 0, "tipoUsuario");
-            Preferences.Set("idAsociado", -1);
-            await Navigation.PushAsync(new MainPage());
+
+            var result = await this.DisplayAlert("Cerrar sesión", "¿Desea cerrar sesión?", "Si", "No");
+            if (result)
+            {
+                Preferences.Set("logged", false, "usuarioLogeado");
+                Preferences.Set("userType", 0, "tipoUsuario");
+                Preferences.Set("idAsociado", -1);
+                await Navigation.PushAsync(new MainPage());
+            }
         }
 
         protected override bool OnBackButtonPressed()

@@ -11,12 +11,13 @@ namespace PetsHeroe
     public partial class Menu_dueno : Xamarin.Forms.TabbedPage
     {
 
-        public Menu_dueno()
+        public Menu_dueno(int tab)
         {
             _ = On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
              .SetBarItemColor(Color.White)
              .SetBarSelectedItemColor(Color.OrangeRed);
             InitializeComponent();
+            tbMenuDueno.CurrentPage = tbMenuDueno.Children[tab];
         }
 
         async void onConsultaBene(object sender, EventArgs args) {
@@ -44,10 +45,20 @@ namespace PetsHeroe
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {
-            Preferences.Set("logged", false, "usuarioLogeado");
-            Preferences.Set("userType", 0, "tipoUsuario");
-            Preferences.Set("idAsociado", -1);
-            await Navigation.PushAsync(new MainPage());
+
+
+            Device.BeginInvokeOnMainThread(async () => {
+                var result = await this.DisplayAlert("Cerrar sesión", "¿Desea cerrar sesión?", "Si", "No");
+                if (result)
+                {
+                    Preferences.Set("logged", false, "usuarioLogeado");
+                    Preferences.Set("userType", 0, "tipoUsuario");
+                    Preferences.Set("idAsociado", -1);
+                    await Navigation.PushAsync(new MainPage());
+                }
+            });
+
+
         }
 
         protected override bool OnBackButtonPressed()

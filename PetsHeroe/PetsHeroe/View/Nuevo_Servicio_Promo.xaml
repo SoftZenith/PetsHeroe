@@ -32,7 +32,7 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
                 Margin="8,4,8,0"
@@ -43,14 +43,14 @@
 
             <StackLayout
                 Margin="16,0,16,0"
-                Grid.ColumnSpan="6"
-                Grid.Row="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
                 Orientation="Horizontal">
                 <Label
-                    Margin="8,0,0,0"
+                    Margin="4,0,0,0"
                     FontSize="Medium"
                     VerticalOptions="CenterAndExpand"
-                    Text="A partir del: ">
+                    Text="A partir del:">
                 </Label>
                 <DatePicker
                     MinimumDate="{Binding hoy}">
@@ -59,14 +59,15 @@
 
             <StackLayout
                 Margin="16,0,16,0"
-                Grid.ColumnSpan="6"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
                 Grid.Row="2"
                 Orientation="Horizontal">
                 <Label
-                    Margin="8,0,0,0"
+                    Margin="4,0,0,0"
                     FontSize="Medium"
                     VerticalOptions="CenterAndExpand"
-                    Text="Hasta el: ">
+                    Text="Hasta el:">
                 </Label>
                 <DatePicker
                     MinimumDate="{Binding hoy}">
@@ -129,7 +130,7 @@
                 Grid.Row="7"
                 Margin="16,0,16,0"
                 x:Name="chkActivo"
-                Text="Activo: ">
+                Text="Activo">
             </input:CheckBox>
 
             <Button
@@ -140,7 +141,8 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="4"
                 Grid.Row="8"
-                Text="Guardar">
+                Text="Guardar"
+                TextColor="White">
             </Button>
 
         </Grid>

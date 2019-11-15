@@ -72,7 +72,7 @@ namespace PetsHeroe
                     Preferences.Set("password", pass);
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        Navigation.PushAsync(new Menu_dueno());
+                        Navigation.PushAsync(new Menu_dueno(0));
                     });
                 }
                 else if (asociado.idAsociado > 0)
@@ -84,7 +84,7 @@ namespace PetsHeroe
                     Preferences.Set("password", pass);
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        await Navigation.PushAsync(new Menu_veterinario());
+                        await Navigation.PushAsync(new Menu_veterinario(0));
                     });
                 }
 
@@ -92,6 +92,8 @@ namespace PetsHeroe
                 await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
             }
         }
+
+
 
     }
 }

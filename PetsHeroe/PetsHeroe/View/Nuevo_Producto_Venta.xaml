@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="PetsHeroe.View.Nuevo_Producto_Venta">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.Row="0"
+                HorizontalOptions="CenterAndExpand"
+                Text="Agregar nuevo Producto/Servicio">
+            </Label>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.ColumnSpan="4"
+                Grid.Row="1"
+                IconImage="product.png"
+                Margin="8,4,8,0"
+                Placeholder="Nombre del producto"
+                TextColor="black"
+                x:Name="txtNombre">
+            </input:AdvancedEntry>
+
+            <input:AdvancedEntry
+                BorderColor="#FF7100"
+                Grid.ColumnSpan="4"
+                Grid.Row="2"
+                IconImage="code.png"
+                Margin="8,4,8,0"
+                Placeholder="UPC"
+                TextColor="black"
+                x:Name="txtUPC">
+            </input:AdvancedEntry>
+
+            <Button
+                Grid.Row="3"
+                Grid.ColumnSpan="4"
+                BackgroundColor="#006561"
+                BorderColor="#FF7100"
+                BorderWidth="1"
+                CornerRadius="16"
+                Clicked="onEscanear"
+                Margin="8,0"
+                Text="Escanear"
+                TextColor="White">
+            </Button>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="4"
+                Grid.Row="4"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Tipo"
+                    x:Name="pkrTipo">
+                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </Frame>
+
+            <Frame
+                BorderColor="#FF7100"
+                CornerRadius="20"
+                Grid.ColumnSpan="4"
+                Grid.Row="5"
+                Margin="8,0,8,0"
+                Padding="4,4,4,4">
+                <Picker
+                    Title="Marca"
+                    x:Name="pkrMarcar">
+                </Picker>
+            </Frame>
+
+
+            <Button
+                BackgroundColor="#006561"
+                BorderColor="#FF7100"
+                BorderWidth="1"
+                CornerRadius="16"
+                Clicked="onAgregar"
+                Grid.ColumnSpan="4"
+                Grid.Row="6"
+                Margin="8,0"
+                Text="Agregar"
+                TextColor="White">
+            </Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

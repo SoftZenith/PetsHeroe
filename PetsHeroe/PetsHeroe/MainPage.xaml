@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PetsHeroe"    
+             xmlns:controls="clr-namespace:PetsHeroe"
              mc:Ignorable="d"
              x:Class="PetsHeroe.MainPage"
-             NavigationPage.HasBackButton="False"
-             xmlns:local="clr-namespace:PetsHeroe; assembly=PetsHeroe.Model.Custom">
+             NavigationPage.HasBackButton="False">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -46,7 +47,23 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button
+
+                <controls:CustomButton
+                    BackgroundColor="#FF7100"
+                    Clicked="onRegDueno"
+                    ContentLayout="Top,0"
+                    CornerRadius="8"
+                    FontSize="Large"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    ImageSource="paw.png"
+                    Margin="0,0,4,4"
+                    Text="Registrar mi mascota"
+                    TextColor="White">
+
+                </controls:CustomButton>
+
+                <!--<Button
                     Margin="0,0,4,4"
                     BackgroundColor="#FF7100"
                     Clicked="onRegDueno"
@@ -57,7 +74,24 @@
                     ImageSource="paw.png"
                     Text="Registrar mi mascota"
                     TextColor="White">
-                </Button>
+                </Button>-->
+
+                <controls:CustomButton
+                    BackgroundColor="#FF7100"
+                    Clicked="onMascEnc"
+                    ContentLayout="Top,0"
+                    CornerRadius="8"
+                    FontSize="Large"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    ImageSource="target.png"
+                    Margin="4,0,0,4"
+                    Text="Encontré una mascota"
+                    TextColor="White">
+
+                </controls:CustomButton>
+
+                <!--
                 <Button
                     BackgroundColor="#FF7100"
                     Clicked="onMascEnc"
@@ -69,7 +103,24 @@
                     Margin="4,0,0,4"
                     Text="Encontré una mascota"
                     TextColor="White">
-                </Button>
+                </Button>-->
+
+                <controls:CustomButton
+                    BackgroundColor="#FF7100"
+                    Clicked="onRegVet"
+                    ContentLayout="Top,0"
+                    CornerRadius="8"
+                    FontSize="Large"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    ImageSource="vet.png"
+                    Margin="0,4,5,0"
+                    Text="Registrar veterinaria"
+                    TextColor="White">
+
+                </controls:CustomButton>
+
+                <!--
                 <Button
                     BackgroundColor="#FF7100"
                     Clicked="onRegVet"
@@ -81,10 +132,22 @@
                     Margin="0,4,5,0"
                     Text="Registrar veterinaria"
                     TextColor="White">
-                </Button>
-                <local:CustomButton>
+                </Button>-->
 
-                </local:CustomButton> 
+                <controls:CustomButton
+                    BackgroundColor="#FF7100"
+                    Clicked="onListaCAM"
+                    ContentLayout="Top,0"
+                    CornerRadius="8"
+                    FontSize="Large"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    ImageSource="location.png"
+                    Margin="4,4,0,0"
+                    Text="Veterinarias CAMS"
+                    TextColor="White">
+
+                </controls:CustomButton>
                 <!--
                 <Button
                     BackgroundColor="#FF7100"
@@ -103,6 +166,7 @@
             <Button
                 BackgroundColor="#006561"
                 Clicked="onIniciar"
+                CornerRadius="8"
                 FontSize="Large"
                 Grid.Row="6"
                 Margin="16,0,16,16"

@@ -71,6 +71,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\QRScanningService.cs" />
+    <Compile Include="CustomButtoniOS.cs" />
+    <Compile Include="CustomEntryRenderer.cs" />
     <None Include="Web References\mx.com.petshero\wsPetsApp.disco" />
     <None Include="Web References\mx.com.petshero\wsPetsApp.wsdl" />
     <None Include="Web References\mx.com.petshero\Reference.map">
@@ -80,17 +82,10 @@
     <Compile Include="Web References\mx.com.petshero\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="CustomButtoniOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
@@ -99,25 +94,13 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
@@ -127,6 +110,15 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_180-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,10 +135,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.3.0.908675</Version>
+      <Version>4.3.0.947036</Version>
     </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile">
       <Version>2.4.1</Version>
@@ -207,5 +199,7 @@
     <BundleResource Include="Resources\cam.png" />
     <BundleResource Include="Resources\lost.png" />
     <BundleResource Include="Resources\vet_cam.png" />
+    <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\electronic.png" />
   </ItemGroup>
 </Project>

@@ -236,7 +236,7 @@ namespace PetsHeroe
                 if (estatus)
                 {
                     DisplayAlert("Registro", "Se registro correctamente", "OK");
-                    Navigation.PushAsync(new Menu_dueno());
+                    Navigation.PushAsync(new Menu_dueno(1));
                 }
                 else
                 {

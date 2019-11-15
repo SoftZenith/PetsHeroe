@@ -2,6 +2,42 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
+      "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "compile": {
@@ -47,7 +83,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.908675": {
+      "Xamarin.Forms/4.3.0.947036": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -182,10 +218,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.908675": {
+      "Xamarin.Forms.Maps/4.3.0.947036": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -228,9 +264,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Behaviors.Forms": "1.4.0",
+          "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
+          "Newtonsoft.Json": "12.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.908675",
+          "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.Forms.InputKit": "3.0.15",
           "Xamarin.Forms.Maps": "4.3.0.908675",
           "ZXing.Net.Mobile": "2.4.1",
@@ -245,6 +284,42 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
+      "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "compile": {
@@ -290,7 +365,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.908675": {
+      "Xamarin.Forms/4.3.0.947036": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -425,10 +500,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.908675": {
+      "Xamarin.Forms.Maps/4.3.0.947036": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -471,9 +546,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Behaviors.Forms": "1.4.0",
+          "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
+          "Newtonsoft.Json": "12.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.908675",
+          "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.Forms.InputKit": "3.0.15",
           "Xamarin.Forms.Maps": "4.3.0.908675",
           "ZXing.Net.Mobile": "2.4.1",
@@ -488,6 +566,42 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
+      "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "compile": {
@@ -533,7 +647,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.908675": {
+      "Xamarin.Forms/4.3.0.947036": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -668,10 +782,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.908675": {
+      "Xamarin.Forms.Maps/4.3.0.947036": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -714,9 +828,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Behaviors.Forms": "1.4.0",
+          "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
+          "Newtonsoft.Json": "12.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.908675",
+          "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.Forms.InputKit": "3.0.15",
           "Xamarin.Forms.Maps": "4.3.0.908675",
           "ZXing.Net.Mobile": "2.4.1",
@@ -731,6 +848,42 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
+      "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "compile": {
@@ -776,7 +929,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.908675": {
+      "Xamarin.Forms/4.3.0.947036": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -911,10 +1064,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.908675": {
+      "Xamarin.Forms.Maps/4.3.0.947036": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -957,9 +1110,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Behaviors.Forms": "1.4.0",
+          "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
+          "Newtonsoft.Json": "12.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.908675",
+          "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.Forms.InputKit": "3.0.15",
           "Xamarin.Forms.Maps": "4.3.0.908675",
           "ZXing.Net.Mobile": "2.4.1",
@@ -975,6 +1131,66 @@
     }
   },
   "libraries": {
+    "Behaviors.Forms/1.4.0": {
+      "sha512": "z0D3U3LgiezsF+uKqG9KJdBTPpfjCZ+gG+ctRHLxC98WCVumBmPhCvBKwFVafMR0Ez87x617BQsgzK5ARu853g==",
+      "type": "package",
+      "path": "behaviors.forms/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "behaviors.forms.1.4.0.nupkg.sha512",
+        "behaviors.forms.nuspec",
+        "lib/netstandard1.0/Behaviors.dll",
+        "lib/netstandard1.0/Behaviors.pdb"
+      ]
+    },
+    "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
+      "sha512": "5LhifPaVbxCiMAjBRY0Q4pxGbYNKSadjUqg8HTLGS+r4jSnK1nlVKWI6PEt0D5crLjSc9lxCxKnL9/4fvW8dxQ==",
+      "type": "package",
+      "path": "leojharris.xforms.plugin.enhancedentry/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "leojharris.xforms.plugin.enhancedentry.1.0.6.nupkg.sha512",
+        "leojharris.xforms.plugin.enhancedentry.nuspec",
+        "lib/MonoAndroid/LeoJHarris.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid/LeoJHarris.FormsPlugin.Droid.dll",
+        "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/LeoJHarris.FormsPlugin.iOS.dll",
+        "lib/netstandard2.0/LeoJHarris.FormsPlugin.Abstractions.dll"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Plugin.Permissions/3.0.0.12": {
       "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
       "type": "package",
@@ -1124,10 +1340,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.3.0.908675": {
-      "sha512": "kXrbXKJvXYF4cKjs1Jsb+pQFEnFGl0AONYSeABjgOJqN/o5Y4zC0XXQ68xiUI81PKQTuRB5F3oDom2t5ccJDZw==",
+    "Xamarin.Forms/4.3.0.947036": {
+      "sha512": "oEAwwHfaZesC+VvP07UoctI1DGIgewZlKMr/sHPl/hNMRM6ZfccPgOY19Yw017asj9z7PKXqpDDUbFFOJ2jN4A==",
       "type": "package",
-      "path": "xamarin.forms/4.3.0.908675",
+      "path": "xamarin.forms/4.3.0.947036",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1368,7 +1584,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.3.0.908675.nupkg.sha512",
+        "xamarin.forms.4.3.0.947036.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -1392,10 +1608,10 @@
         "xamarin.forms.inputkit.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.3.0.908675": {
-      "sha512": "+A67X2ijiICMRLqGADjj8ngAEUYpq+KihBVA1+5Y0kFJg++rs8QrEEw8Qz/jHwIH3a0hCr+5qiDNkEPG+5xX7Q==",
+    "Xamarin.Forms.Maps/4.3.0.947036": {
+      "sha512": "CFzqd9+KVWvrm8S3LVFt5clmJu2853diExlwMgPL1vSvmKVf4s3OkjVsdGAEG9oLd3GPZcqlYz0YLRwFcMAN5g==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.3.0.908675",
+      "path": "xamarin.forms.maps/4.3.0.947036",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1421,7 +1637,7 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.3.0.908675.nupkg.sha512",
+        "xamarin.forms.maps.4.3.0.947036.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -1479,8 +1695,8 @@
     "Xamarin.iOS,Version=v1.0": [
       "PetsHeroe >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
-      "Xamarin.Forms >= 4.3.0.908675",
-      "Xamarin.Forms.Maps >= 4.3.0.908675",
+      "Xamarin.Forms >= 4.3.0.947036",
+      "Xamarin.Forms.Maps >= 4.3.0.947036",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1"
     ]
@@ -1526,11 +1742,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.3.0.908675, )"
+            "version": "[4.3.0.947036, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.3.0.908675, )"
+            "version": "[4.3.0.947036, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
@@ -1554,5 +1770,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.3.0.991211 to 4.3.0.947036. Reference the package directly from the project to select a different version. \n PetsHeroe.iOS -> PetsHeroe -> Xamarin.Forms (>= 4.3.0.991211) \n PetsHeroe.iOS -> Xamarin.Forms (>= 4.3.0.947036)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

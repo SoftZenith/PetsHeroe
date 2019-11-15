@@ -6,7 +6,8 @@
     xmlns:Pages1="clr-namespace:PetsHeroe"
     x:Class="PetsHeroe.Menu_dueno"
     NavigationPage.HasBackButton="False"
-    BarBackgroundColor="#006561">
+    BarBackgroundColor="#006561"
+    x:Name="tbMenuDueno">
 
     <TabbedPage.Title>Dueño</TabbedPage.Title>
     <TabbedPage.ToolbarItems>

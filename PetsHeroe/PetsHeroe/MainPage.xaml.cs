@@ -25,13 +25,13 @@ namespace PetsHeroe
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 { // Code for navigation });
-                    Navigation.PushAsync(new Menu_dueno());
+                    Navigation.PushAsync(new Menu_dueno(0));
                 });
             }
             else if (logged && userType == 2) {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    Navigation.PushAsync(new Menu_veterinario());
+                    Navigation.PushAsync(new Menu_veterinario(0));
                 });
 
             }

@@ -101,233 +101,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="CAM_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDPais" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDEstado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDCiudad" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="DistanciaKm" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="CAM_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CAM_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="TipoAsociado_Busca">
-        <s:complexType />
-      </s:element>
-      <s:element name="TipoAsociado_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="TipoAsociado_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="TipoProducto_Busca">
-        <s:complexType />
-      </s:element>
-      <s:element name="TipoProducto_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="TipoProducto_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="MarcaProducto_Busca">
-        <s:complexType />
-      </s:element>
-      <s:element name="MarcaProducto_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="MarcaProducto_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Producto_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDMarca" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="UPC" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Producto_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Producto_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Servicio_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Servicio_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Servicio_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Cliente_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Cliente_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Cliente_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Veterinario_Registro">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="NombreComercial" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="UsuarioNombre" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="UsuarioPaterno" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="UsuarioMaterno" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="UsuarioSexo" type="s1:char" />
-            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDTipoAsociado" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Veterinario_RegistroResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Veterinario_RegistroResult" type="s:boolean" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PromoProductos_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PromoProductos_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="PromoProductos_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PromoServicios_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PromoServicios_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="PromoServicios_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="MascotaTipo_Busca">
         <s:complexType />
       </s:element>
@@ -401,6 +174,312 @@
                 </s:sequence>
               </s:complexType>
             </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoProducto_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="TipoProducto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProducto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarcaProducto_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="MarcaProducto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaProducto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_Agrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMarca" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UPC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_AgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Producto_AgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMarca" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UPC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Producto_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Producto_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_Agrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_AgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Servicio_AgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Servicio_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Servicio_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PromoProductos_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_Agrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioRegular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioPromo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Desde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_AgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PromoProductos_AgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PromoServicios_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_Agrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoServicio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioRegular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioPromo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Desde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_AgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PromoServicios_AgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAM_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPais" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEstado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCiudad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Longitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="DistanciaKm" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CAM_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CAM_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoAsociado_Busca">
+        <s:complexType />
+      </s:element>
+      <s:element name="TipoAsociado_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoAsociado_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cliente_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreCompleto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cliente_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cliente_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Veterinario_Registro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreComercial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioMaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioSexo" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoAsociado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Veterinario_RegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Veterinario_RegistroResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -480,29 +559,6 @@
       </s:element>
       <s:element name="Mascota_IncidenteResponse">
         <s:complexType />
-      </s:element>
-      <s:element name="PuntosPromociones_Busca">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="PuntosPromociones_BuscaResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="PuntosPromociones_BuscaResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
       </s:element>
       <s:element name="Codigo_Valida">
         <s:complexType>
@@ -585,6 +641,140 @@
       <s:element name="Entrega_SoloMensajeResponse">
         <s:complexType />
       </s:element>
+      <s:element name="PuntosPromociones_Busca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PuntosPromociones_BuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PuntosPromociones_BuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketUltimo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketUltimoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TicketUltimoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketCarga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTicket" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketCargaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TicketCargaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Venta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTicket" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VentaResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTicket" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VentaCambia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDVenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VentaCambiaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VentaCancela">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDVenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VentaCancelaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TicketCancela">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTicket" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketCancelaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TicketPaga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ticket" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PuntosGastados" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketPagaResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
       <s:simpleType name="char">
@@ -637,96 +827,6 @@
   <wsdl:message name="Ciudad_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
-  <wsdl:message name="CAM_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:CAM_Busca" />
-  </wsdl:message>
-  <wsdl:message name="CAM_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:CAM_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="CAM_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="TipoAsociado_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:TipoAsociado_Busca" />
-  </wsdl:message>
-  <wsdl:message name="TipoAsociado_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:TipoAsociado_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="TipoAsociado_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="TipoProducto_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:TipoProducto_Busca" />
-  </wsdl:message>
-  <wsdl:message name="TipoProducto_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:TipoProducto_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="TipoProducto_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="MarcaProducto_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:MarcaProducto_Busca" />
-  </wsdl:message>
-  <wsdl:message name="MarcaProducto_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:MarcaProducto_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="MarcaProducto_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="Producto_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:Producto_Busca" />
-  </wsdl:message>
-  <wsdl:message name="Producto_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:Producto_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="Producto_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="Servicio_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:Servicio_Busca" />
-  </wsdl:message>
-  <wsdl:message name="Servicio_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:Servicio_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="Servicio_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="Cliente_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:Cliente_Busca" />
-  </wsdl:message>
-  <wsdl:message name="Cliente_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:Cliente_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="Cliente_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="Veterinario_RegistroSoapIn">
-    <wsdl:part name="parameters" element="tns:Veterinario_Registro" />
-  </wsdl:message>
-  <wsdl:message name="Veterinario_RegistroSoapOut">
-    <wsdl:part name="parameters" element="tns:Veterinario_RegistroResponse" />
-  </wsdl:message>
-  <wsdl:message name="Veterinario_RegistroAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="PromoProductos_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:PromoProductos_Busca" />
-  </wsdl:message>
-  <wsdl:message name="PromoProductos_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:PromoProductos_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="PromoProductos_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="PromoServicios_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:PromoServicios_Busca" />
-  </wsdl:message>
-  <wsdl:message name="PromoServicios_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:PromoServicios_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="PromoServicios_BuscaAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
   <wsdl:message name="MascotaTipo_BuscaSoapIn">
     <wsdl:part name="parameters" element="tns:MascotaTipo_Busca" />
   </wsdl:message>
@@ -763,6 +863,132 @@
   <wsdl:message name="MascotaEstatus_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoProducto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoProducto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoProducto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:MarcaProducto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:MarcaProducto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarcaProducto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Producto_AgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:Producto_Agrega" />
+  </wsdl:message>
+  <wsdl:message name="Producto_AgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:Producto_AgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Producto_AgregaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Producto_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Producto_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Producto_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_AgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:Servicio_Agrega" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_AgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:Servicio_AgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_AgregaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Servicio_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Servicio_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Servicio_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoProductos_Busca" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoProductos_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_AgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoProductos_Agrega" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_AgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoProductos_AgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_AgregaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoServicios_Busca" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoServicios_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_AgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoServicios_Agrega" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_AgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoServicios_AgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_AgregaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:CAM_Busca" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:CAM_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CAM_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoAsociado_Busca" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoAsociado_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoAsociado_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Cliente_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Cliente_Busca" />
+  </wsdl:message>
+  <wsdl:message name="Cliente_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Cliente_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cliente_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:Veterinario_Registro" />
+  </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:Veterinario_RegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Veterinario_RegistroAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="Mascota_BuscaSoapIn">
     <wsdl:part name="parameters" element="tns:Mascota_Busca" />
   </wsdl:message>
@@ -788,15 +1014,6 @@
     <wsdl:part name="parameters" element="tns:Mascota_IncidenteResponse" />
   </wsdl:message>
   <wsdl:message name="Mascota_IncidenteAuthHeader">
-    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
-  </wsdl:message>
-  <wsdl:message name="PuntosPromociones_BuscaSoapIn">
-    <wsdl:part name="parameters" element="tns:PuntosPromociones_Busca" />
-  </wsdl:message>
-  <wsdl:message name="PuntosPromociones_BuscaSoapOut">
-    <wsdl:part name="parameters" element="tns:PuntosPromociones_BuscaResponse" />
-  </wsdl:message>
-  <wsdl:message name="PuntosPromociones_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
   <wsdl:message name="Codigo_ValidaSoapIn">
@@ -832,6 +1049,78 @@
   <wsdl:message name="Entrega_SoloMensajeSoapOut">
     <wsdl:part name="parameters" element="tns:Entrega_SoloMensajeResponse" />
   </wsdl:message>
+  <wsdl:message name="PuntosPromociones_BuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:PuntosPromociones_Busca" />
+  </wsdl:message>
+  <wsdl:message name="PuntosPromociones_BuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:PuntosPromociones_BuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PuntosPromociones_BuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TicketUltimoSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketUltimo" />
+  </wsdl:message>
+  <wsdl:message name="TicketUltimoSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketUltimoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketUltimoAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TicketCargaSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketCarga" />
+  </wsdl:message>
+  <wsdl:message name="TicketCargaSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketCargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketCargaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="VentaSoapIn">
+    <wsdl:part name="parameters" element="tns:Venta" />
+  </wsdl:message>
+  <wsdl:message name="VentaSoapOut">
+    <wsdl:part name="parameters" element="tns:VentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VentaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="VentaCambiaSoapIn">
+    <wsdl:part name="parameters" element="tns:VentaCambia" />
+  </wsdl:message>
+  <wsdl:message name="VentaCambiaSoapOut">
+    <wsdl:part name="parameters" element="tns:VentaCambiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VentaCambiaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="VentaCancelaSoapIn">
+    <wsdl:part name="parameters" element="tns:VentaCancela" />
+  </wsdl:message>
+  <wsdl:message name="VentaCancelaSoapOut">
+    <wsdl:part name="parameters" element="tns:VentaCancelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VentaCancelaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TicketCancelaSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketCancela" />
+  </wsdl:message>
+  <wsdl:message name="TicketCancelaSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketCancelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketCancelaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="TicketPagaSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketPaga" />
+  </wsdl:message>
+  <wsdl:message name="TicketPagaSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketPagaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketPagaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:portType name="wsPetsAppSoap">
     <wsdl:operation name="ValidaUsuario">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida el Usuario y su contraseña</wsdl:documentation>
@@ -858,56 +1147,6 @@
       <wsdl:input message="tns:Ciudad_BuscaSoapIn" />
       <wsdl:output message="tns:Ciudad_BuscaSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="CAM_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Asociado o ubicación</wsdl:documentation>
-      <wsdl:input message="tns:CAM_BuscaSoapIn" />
-      <wsdl:output message="tns:CAM_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoAsociado_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Asociado</wsdl:documentation>
-      <wsdl:input message="tns:TipoAsociado_BuscaSoapIn" />
-      <wsdl:output message="tns:TipoAsociado_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoProducto_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Producto</wsdl:documentation>
-      <wsdl:input message="tns:TipoProducto_BuscaSoapIn" />
-      <wsdl:output message="tns:TipoProducto_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="MarcaProducto_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Marcas de Producto</wsdl:documentation>
-      <wsdl:input message="tns:MarcaProducto_BuscaSoapIn" />
-      <wsdl:output message="tns:MarcaProducto_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Producto_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Productos con filtros</wsdl:documentation>
-      <wsdl:input message="tns:Producto_BuscaSoapIn" />
-      <wsdl:output message="tns:Producto_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Servicio_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Servicios de un Asociado con filtros</wsdl:documentation>
-      <wsdl:input message="tns:Servicio_BuscaSoapIn" />
-      <wsdl:output message="tns:Servicio_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Cliente_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Clientes con filtros</wsdl:documentation>
-      <wsdl:input message="tns:Cliente_BuscaSoapIn" />
-      <wsdl:output message="tns:Cliente_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Veterinario_Registro">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Veterinarias o Asociados para CAM</wsdl:documentation>
-      <wsdl:input message="tns:Veterinario_RegistroSoapIn" />
-      <wsdl:output message="tns:Veterinario_RegistroSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="PromoProductos_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las Promociones de Productos vigentes por Asociado</wsdl:documentation>
-      <wsdl:input message="tns:PromoProductos_BuscaSoapIn" />
-      <wsdl:output message="tns:PromoProductos_BuscaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="PromoServicios_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las Promociones de Servicios vigentes por Asociado</wsdl:documentation>
-      <wsdl:input message="tns:PromoServicios_BuscaSoapIn" />
-      <wsdl:output message="tns:PromoServicios_BuscaSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Mascota</wsdl:documentation>
       <wsdl:input message="tns:MascotaTipo_BuscaSoapIn" />
@@ -928,6 +1167,76 @@
       <wsdl:input message="tns:MascotaEstatus_BuscaSoapIn" />
       <wsdl:output message="tns:MascotaEstatus_BuscaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Producto</wsdl:documentation>
+      <wsdl:input message="tns:TipoProducto_BuscaSoapIn" />
+      <wsdl:output message="tns:TipoProducto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Marcas de Producto</wsdl:documentation>
+      <wsdl:input message="tns:MarcaProducto_BuscaSoapIn" />
+      <wsdl:output message="tns:MarcaProducto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Agrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega nuevo Producto</wsdl:documentation>
+      <wsdl:input message="tns:Producto_AgregaSoapIn" />
+      <wsdl:output message="tns:Producto_AgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Productos con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Producto_BuscaSoapIn" />
+      <wsdl:output message="tns:Producto_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Agrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega Tipo de Servicio</wsdl:documentation>
+      <wsdl:input message="tns:Servicio_AgregaSoapIn" />
+      <wsdl:output message="tns:Servicio_AgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Servicios de un Asociado con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Servicio_BuscaSoapIn" />
+      <wsdl:output message="tns:Servicio_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las Promociones de Productos vigentes por Asociado</wsdl:documentation>
+      <wsdl:input message="tns:PromoProductos_BuscaSoapIn" />
+      <wsdl:output message="tns:PromoProductos_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Agrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega Promoción de Productos</wsdl:documentation>
+      <wsdl:input message="tns:PromoProductos_AgregaSoapIn" />
+      <wsdl:output message="tns:PromoProductos_AgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las Promociones de Servicios vigentes por Asociado</wsdl:documentation>
+      <wsdl:input message="tns:PromoServicios_BuscaSoapIn" />
+      <wsdl:output message="tns:PromoServicios_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Agrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega Promoción por Servicios</wsdl:documentation>
+      <wsdl:input message="tns:PromoServicios_AgregaSoapIn" />
+      <wsdl:output message="tns:PromoServicios_AgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Asociado o ubicación</wsdl:documentation>
+      <wsdl:input message="tns:CAM_BuscaSoapIn" />
+      <wsdl:output message="tns:CAM_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Tipos de Asociado</wsdl:documentation>
+      <wsdl:input message="tns:TipoAsociado_BuscaSoapIn" />
+      <wsdl:output message="tns:TipoAsociado_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Clientes con filtros</wsdl:documentation>
+      <wsdl:input message="tns:Cliente_BuscaSoapIn" />
+      <wsdl:output message="tns:Cliente_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Veterinarias o Asociados para CAM</wsdl:documentation>
+      <wsdl:input message="tns:Veterinario_RegistroSoapIn" />
+      <wsdl:output message="tns:Veterinario_RegistroSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Mascota con filtros</wsdl:documentation>
       <wsdl:input message="tns:Mascota_BuscaSoapIn" />
@@ -942,11 +1251,6 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambia el Estatus de la Mascota (perdida o encontrada)</wsdl:documentation>
       <wsdl:input message="tns:Mascota_IncidenteSoapIn" />
       <wsdl:output message="tns:Mascota_IncidenteSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="PuntosPromociones_Busca">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el Estado de cuenta de Puntos y Promociones ganados actuales por Dueño o por Mascota-Asociado</wsdl:documentation>
-      <wsdl:input message="tns:PuntosPromociones_BuscaSoapIn" />
-      <wsdl:output message="tns:PuntosPromociones_BuscaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
@@ -972,6 +1276,46 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descubridor deja mensaje</wsdl:documentation>
       <wsdl:input message="tns:Entrega_SoloMensajeSoapIn" />
       <wsdl:output message="tns:Entrega_SoloMensajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PuntosPromociones_Busca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el Estado de cuenta de Puntos y Promociones ganados actuales por Dueño o por Mascota-Asociado</wsdl:documentation>
+      <wsdl:input message="tns:PuntosPromociones_BuscaSoapIn" />
+      <wsdl:output message="tns:PuntosPromociones_BuscaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketUltimo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el ultimo ticket de la Mascota en esa Sucursal</wsdl:documentation>
+      <wsdl:input message="tns:TicketUltimoSoapIn" />
+      <wsdl:output message="tns:TicketUltimoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketCarga">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los datos del ticket</wsdl:documentation>
+      <wsdl:input message="tns:TicketCargaSoapIn" />
+      <wsdl:output message="tns:TicketCargaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Venta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega Producto, Servicio o costo fijo al Ticket</wsdl:documentation>
+      <wsdl:input message="tns:VentaSoapIn" />
+      <wsdl:output message="tns:VentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VentaCambia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modifica renglon del Ticket</wsdl:documentation>
+      <wsdl:input message="tns:VentaCambiaSoapIn" />
+      <wsdl:output message="tns:VentaCambiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VentaCancela">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina renglon del Ticket</wsdl:documentation>
+      <wsdl:input message="tns:VentaCancelaSoapIn" />
+      <wsdl:output message="tns:VentaCancelaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketCancela">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina Ticket completo</wsdl:documentation>
+      <wsdl:input message="tns:TicketCancelaSoapIn" />
+      <wsdl:output message="tns:TicketCancelaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketPaga">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pagar ticket y aplicar puntos gastados</wsdl:documentation>
+      <wsdl:input message="tns:TicketPagaSoapIn" />
+      <wsdl:output message="tns:TicketPagaSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsPetsAppSoap" type="tns:wsPetsAppSoap">
@@ -1026,106 +1370,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CAM_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoAsociado_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoProducto_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="MarcaProducto_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Producto_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Servicio_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Cliente_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Veterinario_Registro">
-      <soap:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PromoProductos_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/PromoProductos_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:PromoProductos_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PromoServicios_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:PromoServicios_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -1166,6 +1410,146 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Agrega">
+      <soap:operation soapAction="http://www.petshero.com.mx/Producto_Agrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Producto_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Agrega">
+      <soap:operation soapAction="http://www.petshero.com.mx/Servicio_Agrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Servicio_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoProductos_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoProductos_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Agrega">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoProductos_Agrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoProductos_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoServicios_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Agrega">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Agrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoServicios_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <soap:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Busca">
       <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Busca" style="document" />
       <wsdl:input>
@@ -1191,16 +1575,6 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PuntosPromociones_Busca">
-      <soap:operation soapAction="http://www.petshero.com.mx/PuntosPromociones_Busca" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:PuntosPromociones_BuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1247,6 +1621,86 @@
       <soap:operation soapAction="http://www.petshero.com.mx/Entrega_SoloMensaje" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PuntosPromociones_Busca">
+      <soap:operation soapAction="http://www.petshero.com.mx/PuntosPromociones_Busca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PuntosPromociones_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketUltimo">
+      <soap:operation soapAction="http://www.petshero.com.mx/TicketUltimo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TicketUltimoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketCarga">
+      <soap:operation soapAction="http://www.petshero.com.mx/TicketCarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TicketCargaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Venta">
+      <soap:operation soapAction="http://www.petshero.com.mx/Venta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VentaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaCambia">
+      <soap:operation soapAction="http://www.petshero.com.mx/VentaCambia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VentaCambiaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaCancela">
+      <soap:operation soapAction="http://www.petshero.com.mx/VentaCancela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VentaCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketCancela">
+      <soap:operation soapAction="http://www.petshero.com.mx/TicketCancela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TicketCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketPaga">
+      <soap:operation soapAction="http://www.petshero.com.mx/TicketPaga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TicketPagaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1305,106 +1759,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CAM_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoAsociado_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoProducto_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="MarcaProducto_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Producto_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Servicio_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Cliente_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Veterinario_Registro">
-      <soap12:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PromoProductos_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/PromoProductos_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:PromoProductos_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PromoServicios_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:PromoServicios_BuscaAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="MascotaTipo_Busca">
       <soap12:operation soapAction="http://www.petshero.com.mx/MascotaTipo_Busca" style="document" />
       <wsdl:input>
@@ -1445,6 +1799,146 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="TipoProducto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TipoProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TipoProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarcaProducto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/MarcaProducto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MarcaProducto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Agrega">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Producto_Agrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Producto_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Producto_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Producto_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Agrega">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Servicio_Agrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Servicio_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Servicio_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Servicio_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Servicio_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoProductos_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoProductos_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Agrega">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoProductos_Agrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoProductos_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoServicios_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Agrega">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Agrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoServicios_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CAM_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/CAM_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CAM_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoAsociado_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TipoAsociado_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TipoAsociado_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cliente_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Cliente_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Cliente_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veterinario_Registro">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Veterinario_Registro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Veterinario_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Busca">
       <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Busca" style="document" />
       <wsdl:input>
@@ -1470,16 +1964,6 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="PuntosPromociones_Busca">
-      <soap12:operation soapAction="http://www.petshero.com.mx/PuntosPromociones_Busca" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:PuntosPromociones_BuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />
@@ -1526,6 +2010,86 @@
       <soap12:operation soapAction="http://www.petshero.com.mx/Entrega_SoloMensaje" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PuntosPromociones_Busca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PuntosPromociones_Busca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PuntosPromociones_BuscaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketUltimo">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TicketUltimo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TicketUltimoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketCarga">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TicketCarga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TicketCargaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Venta">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Venta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VentaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaCambia">
+      <soap12:operation soapAction="http://www.petshero.com.mx/VentaCambia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VentaCambiaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaCancela">
+      <soap12:operation soapAction="http://www.petshero.com.mx/VentaCancela" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VentaCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketCancela">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TicketCancela" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TicketCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketPaga">
+      <soap12:operation soapAction="http://www.petshero.com.mx/TicketPaga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TicketPagaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.IniciarSesion"
-    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions">
     <ContentPage.Content>
     <Grid>
         <Grid.RowDefinitions>
@@ -44,6 +45,23 @@
             Placeholder="Correo"
             x:Name="txtUsuario">
         </input:AdvancedEntry>
+
+        <!--
+        <enhancedEntry:EnhancedEntry
+            BorderColor="#FF7100"
+            BorderWidth="2"
+            CornerRadius="30"
+            FocusBorderColor="#FF7100"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Margin="50,0,50,0"
+            TextColor="black"
+            FontSize="Medium"
+            LeftIcon="user.png"
+            Placeholder="Correo"
+            x:Name="txtUsuario">
+        </enhancedEntry:EnhancedEntry>-->
 
         <input:AdvancedEntry
             BorderColor="#FF7100"

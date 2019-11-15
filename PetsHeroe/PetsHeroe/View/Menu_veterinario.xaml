@@ -5,6 +5,7 @@
     xmlns:Pages="clr-namespace:PetsHeroe.View"
     xmlns:Pages1="clr-namespace:PetsHeroe"
     x:Class="PetsHeroe.Menu_veterinario"
+    x:Name="tbVete"
     NavigationPage.HasBackButton="False"
     BarBackgroundColor="#006561">
 
