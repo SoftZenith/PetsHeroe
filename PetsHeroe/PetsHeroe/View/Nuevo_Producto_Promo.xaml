@@ -34,38 +34,48 @@
                 x:Name="txtNombrePromo">
             </input:AdvancedEntry>
 
-            <StackLayout
+            <Label
+                FontSize="20"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
+                HorizontalOptions="EndAndExpand"
                 Margin="16,0,16,0"
-                Orientation="Horizontal">
-                <Label
-                    VerticalOptions="CenterAndExpand"
-                    Text="A partir del: ">
-                </Label>
-                <DatePicker
-                    MinimumDate="{Binding hoy}">
-                </DatePicker>
-            </StackLayout>
+                VerticalOptions="CenterAndExpand"
+                Text="A partir del: ">
+            </Label>
 
-            <StackLayout
+            <DatePicker
                 Grid.Column="3"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
                 Margin="16,0,16,0"
-                Orientation="Horizontal">
-                <Label
-                    VerticalOptions="CenterAndExpand"
-                    Text="Hasta el: ">
-                </Label>
-                <DatePicker
-                    MinimumDate="{Binding hoy}">
-                </DatePicker>
-            </StackLayout>
+                MinimumDate="{Binding hoy}"
+                x:Name="dpkrAPartir">
+            </DatePicker>
+
+            <Label
+                FontSize="20"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                HorizontalOptions="EndAndExpand"
+                Margin="16,0,16,0"
+                VerticalOptions="CenterAndExpand"
+                Text="Hasta el: ">
+            </Label>
+
+            <DatePicker
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Margin="16,0,16,0"
+                MinimumDate="{Binding hoy}"
+                x:Name="dpkrHasta">
+            </DatePicker>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.ColumnSpan="4"
                 IconImage="code.png"
                 Margin="8,4,8,0"
@@ -75,7 +85,7 @@
             </input:AdvancedEntry>
 
             <Button
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.Column="4"
                 Grid.ColumnSpan="2"
                 BackgroundColor="#006561"
@@ -92,7 +102,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="3"
+                Grid.Row="4"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -105,7 +115,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -118,7 +128,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="5"
+                Grid.Row="6"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -127,10 +137,9 @@
                 </Picker>
             </Frame>
 
-
             <input:AdvancedEntry
                 BorderColor="#FF7100"
-                Grid.Row="6"
+                Grid.Row="7"
                 Grid.ColumnSpan="6"
                 IconImage="money.png"
                 Margin="8,0"
@@ -141,7 +150,7 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
-                Grid.Row="7"
+                Grid.Row="8"
                 Grid.ColumnSpan="6"
                 IconImage="electronic.png"
                 Keyboard="Numeric"
@@ -151,6 +160,28 @@
                 x:Name="txtDineroElectr">
             </input:AdvancedEntry>
 
+            <input:CheckBox
+                Grid.ColumnSpan="6"
+                Grid.Row="9"
+                Margin="16,0,16,0"
+                Text="Activo"
+                x:Name="chkActivo">
+            </input:CheckBox>
+
+            <Button
+                BackgroundColor="#006561"
+                BorderColor="#FF7100"
+                BorderWidth="2"
+                Clicked="onAgregar"
+                CornerRadius="20"
+                Grid.Row="10"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Margin="0,0,0,8"
+                Text="Agregar"
+                TextColor="White">
+
+            </Button>
         </Grid>
         </ScrollView>
     </ContentPage.Content>

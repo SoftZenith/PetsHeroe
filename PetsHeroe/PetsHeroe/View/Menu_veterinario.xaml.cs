@@ -22,20 +22,24 @@ namespace PetsHeroe
             tbVete.CurrentPage = tbVete.Children[tab];
         }
 
-        async void onMisClientes(object sender, EventArgs args) {
-            await Navigation.PushAsync(new Mis_Clientes());
+        private void onAppearingClients(object sender, EventArgs e)
+        {
+            tbVete.Title = "Mis Clientes";
         }
 
-        async void onBeneficios(object sender, EventArgs args) {
-            await Navigation.PushAsync(new Consulta_bene_vete());
+        private void onAppearingBenefics(object sender, EventArgs e)
+        {
+            tbVete.Title = "Consulta de beneficios";
         }
 
-        async void onLocMascota(object sender, EventArgs args) {
-            await Navigation.PushAsync(new Loc_Mascota());
+        private void onAppearingSales(object sender, EventArgs e)
+        {
+            tbVete.Title = "Caja de ventas";
         }
 
-        async void onVentas(object sender, EventArgs args) {
-            await Navigation.PushAsync(new Caja_Ventas());
+        private void onAppearLocation(object sender, EventArgs e)
+        {
+            tbVete.Title = "¿Encontraste una mascota?";
         }
 
         async void onCerrarSesion(object sender, EventArgs args) {

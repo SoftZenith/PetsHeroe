@@ -15,6 +15,21 @@
           "lib/netstandard1.0/Behaviors.dll": {}
         }
       },
+      "dotMorten.Xamarin.Forms.AutoSuggestBox/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid60/dotMorten.Xamarin.Forms.AutoSuggestBox.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid60/dotMorten.Xamarin.Forms.AutoSuggestBox.dll": {}
+        }
+      },
       "FastAndroidCamera/2.0.0": {
         "type": "package",
         "compile": {
@@ -908,7 +923,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.947036": {
+      "Xamarin.Forms/4.3.0.991211": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
@@ -948,11 +963,11 @@
           "lib/monoandroid90/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.947036": {
+      "Xamarin.Forms.Maps/4.3.0.991211": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
-          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.GooglePlayServices.Maps": "60.1142.1"
         },
         "compile": {
@@ -1074,9 +1089,10 @@
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.991211",
           "Xamarin.Forms.InputKit": "3.0.15",
-          "Xamarin.Forms.Maps": "4.3.0.908675",
+          "Xamarin.Forms.Maps": "4.3.0.991211",
           "ZXing.Net.Mobile": "2.4.1",
-          "ZXing.Net.Mobile.Forms": "2.4.1"
+          "ZXing.Net.Mobile.Forms": "2.4.1",
+          "dotMorten.Xamarin.Forms.AutoSuggestBox": "0.7.0"
         },
         "compile": {
           "bin/placeholder/PetsHeroe.dll": {}
@@ -1099,6 +1115,30 @@
         "behaviors.forms.nuspec",
         "lib/netstandard1.0/Behaviors.dll",
         "lib/netstandard1.0/Behaviors.pdb"
+      ]
+    },
+    "dotMorten.Xamarin.Forms.AutoSuggestBox/0.7.0": {
+      "sha512": "I8ucs5GGDSgAjVucuj+Lu4lrXQiK/l26poeZwlwwN39l7WKfvtwswQONLVLbVcysLQcyQ27jVyAvARv7BZugLQ==",
+      "type": "package",
+      "path": "dotmorten.xamarin.forms.autosuggestbox/0.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotmorten.xamarin.forms.autosuggestbox.0.7.0.nupkg.sha512",
+        "dotmorten.xamarin.forms.autosuggestbox.nuspec",
+        "lib/monoandroid60/dotMorten.Xamarin.Forms.AutoSuggestBox.dll",
+        "lib/monoandroid60/dotMorten.Xamarin.Forms.AutoSuggestBox.pdb",
+        "lib/monoandroid60/dotMorten.Xamarin.Forms.AutoSuggestBox.xml",
+        "lib/netstandard2.0/dotMorten.Xamarin.Forms.AutoSuggestBox.dll",
+        "lib/netstandard2.0/dotMorten.Xamarin.Forms.AutoSuggestBox.pdb",
+        "lib/netstandard2.0/dotMorten.Xamarin.Forms.AutoSuggestBox.xml",
+        "lib/uap10.0.16299/dotMorten.Xamarin.Forms.AutoSuggestBox.dll",
+        "lib/uap10.0.16299/dotMorten.Xamarin.Forms.AutoSuggestBox.pdb",
+        "lib/uap10.0.16299/dotMorten.Xamarin.Forms.AutoSuggestBox.pri",
+        "lib/uap10.0.16299/dotMorten.Xamarin.Forms.AutoSuggestBox.xml",
+        "lib/xamarinios10/dotMorten.Xamarin.Forms.AutoSuggestBox.dll",
+        "lib/xamarinios10/dotMorten.Xamarin.Forms.AutoSuggestBox.pdb",
+        "lib/xamarinios10/dotMorten.Xamarin.Forms.AutoSuggestBox.xml"
       ]
     },
     "FastAndroidCamera/2.0.0": {
@@ -2141,10 +2181,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.3.0.947036": {
-      "sha512": "oEAwwHfaZesC+VvP07UoctI1DGIgewZlKMr/sHPl/hNMRM6ZfccPgOY19Yw017asj9z7PKXqpDDUbFFOJ2jN4A==",
+    "Xamarin.Forms/4.3.0.991211": {
+      "sha512": "cWbxRKy6oPbFvpw2K6Du3bSo34LDyVKYSR6jCDSbB3Ieyj6549bWQbBLUEptRGQQ8fhDTcJQ/ezqwGwxd+7bkg==",
       "type": "package",
-      "path": "xamarin.forms/4.3.0.947036",
+      "path": "xamarin.forms/4.3.0.991211",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2374,6 +2414,7 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/PickerStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xbf",
@@ -2385,7 +2426,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.3.0.947036.nupkg.sha512",
+        "xamarin.forms.4.3.0.991211.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2409,10 +2450,10 @@
         "xamarin.forms.inputkit.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.3.0.947036": {
-      "sha512": "CFzqd9+KVWvrm8S3LVFt5clmJu2853diExlwMgPL1vSvmKVf4s3OkjVsdGAEG9oLd3GPZcqlYz0YLRwFcMAN5g==",
+    "Xamarin.Forms.Maps/4.3.0.991211": {
+      "sha512": "0S7xnE4FA+23BbRKf570eeaJ0pttoPa2SWVt9W9jt+OPU0GM5w1j9hmuY16vAWodElnaLiaLqarr+SjPQoCrKg==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.3.0.947036",
+      "path": "xamarin.forms.maps/4.3.0.991211",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2438,7 +2479,7 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.3.0.947036.nupkg.sha512",
+        "xamarin.forms.maps.4.3.0.991211.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -2558,10 +2599,11 @@
       "Xamarin.Android.Support.v7.CardView >= 28.0.0.3",
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.3",
       "Xamarin.Essentials >= 1.3.1",
-      "Xamarin.Forms >= 4.3.0.947036",
-      "Xamarin.Forms.Maps >= 4.3.0.947036",
+      "Xamarin.Forms >= 4.3.0.991211",
+      "Xamarin.Forms.Maps >= 4.3.0.991211",
       "ZXing.Net.Mobile >= 2.4.1",
-      "ZXing.Net.Mobile.Forms >= 2.4.1"
+      "ZXing.Net.Mobile.Forms >= 2.4.1",
+      "dotMorten.Xamarin.Forms.AutoSuggestBox >= 0.7.0"
     ]
   },
   "packageFolders": {
@@ -2641,11 +2683,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.3.0.947036, )"
+            "version": "[4.3.0.991211, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.3.0.947036, )"
+            "version": "[4.3.0.991211, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
@@ -2654,21 +2696,13 @@
           "ZXing.Net.Mobile.Forms": {
             "target": "Package",
             "version": "[2.4.1, )"
+          },
+          "dotMorten.Xamarin.Forms.AutoSuggestBox": {
+            "target": "Package",
+            "version": "[0.7.0, )"
           }
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.3.0.991211 to 4.3.0.947036. Reference the package directly from the project to select a different version. \n PetsHeroe.Android -> PetsHeroe -> Xamarin.Forms (>= 4.3.0.991211) \n PetsHeroe.Android -> Xamarin.Forms (>= 4.3.0.947036)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v9.0"
-      ]
-    }
-  ]
+  }
 }

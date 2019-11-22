@@ -30,78 +30,138 @@
                 <RowDefinition Height="60"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label
+            <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Grid.Row="0"
-                HorizontalTextAlignment="Center"
-                Text="Pago de venta">
-            </Label>
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Orientation="Vertical">
 
-            <Label
+                <Label
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    HorizontalTextAlignment="Center"
+                    Text="Tienes 0 puntos"
+                    x:Name="lblPuntos">
+                </Label>
+
+                <Label
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    HorizontalTextAlignment="Center"
+                    Text="¿Cuantos deseas aplicar?">
+                </Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <input:AdvancedEntry
+                        BorderColor="#FF7100"
+                        FontFamily="Lobster-Regular"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        IconImage="money.png"
+                        Margin="16,0,0,0"
+                        Placeholder="Puntos"
+                        TextColor="Black"
+                        TextFontSize="18"
+                        x:Name="txtPuntosAplicar">
+                    </input:AdvancedEntry>
+                    <Button
+                        BackgroundColor="#006561"
+                        BorderColor="#FF7100"
+                        BorderWidth="2"
+                        CornerRadius="16"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="1"
+                        Margin="0,0,16,0"
+                        Text="Aplicar"
+                        TextColor="White">
+                    </Button>
+                </Grid>
+
+            </StackLayout>
+
+            <StackLayout
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Grid.Row="2"
-                HorizontalTextAlignment="End"
-                Text="Total: ">
-            </Label>
-
-            <Label
-                Grid.Column="2"
-                Grid.ColumnSpan="2"
-                Grid.Row="2"
-                HorizontalTextAlignment="Start"
-                Text=""
-                x:Name="lblTotal">
-            </Label>
-
-            <Label
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="4"
                 Grid.Row="3"
-                HorizontalTextAlignment="End"
-                Text="Puntos disponibles: ">
-            </Label>
+                Grid.RowSpan="2"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
 
-            <Label
-                Grid.Column="2"
-                Grid.ColumnSpan="2"
-                Grid.Row="3"
-                HorizontalTextAlignment="Start"
-                Text=""
-                x:Name="lblPuntos">
-            </Label>
+                    <Label
+                        FontSize="18"
+                        FontFamily="Lobster-Regular"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0"
+                        HorizontalTextAlignment="End"
+                        Text="Subtotal: "
+                        TextDecorations="Strikethrough">
+                    </Label>
 
-            <input:AdvancedEntry
+                    <Label
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0"
+                        HorizontalTextAlignment="Start"
+                        Margin="0,3,0,0"
+                        Text="$ 0 MXN"
+                        TextDecorations="Strikethrough"
+                        x:Name="lblSubTotal">
+                    </Label>
+
+                    <Label
+                        FontSize="18"
+                        FontFamily="Lobster-Regular"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="1"
+                        HorizontalTextAlignment="End"
+                        Text="Total a pagar: ">
+                    </Label>
+
+                    <Label
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="1"
+                        HorizontalTextAlignment="Start"
+                        Margin="0,3,0,0"
+                        Text="$ 0 MXN"
+                        x:Name="lblTotal">
+                    </Label>
+
+                </Grid>
+
+            </StackLayout>
+
+            <Button
+                BackgroundColor="#006561"
                 BorderColor="#FF7100"
+                BorderWidth="2"
+                Clicked="onPagar"
+                CornerRadius="16"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Grid.Row="4"
-                IconImage="money.png"
-                Margin="8,4,8,0"
-                Placeholder="Puntos descontar"
-                TextColor="Black"
-                x:Name="txtPuntosAplicar">
-            </input:AdvancedEntry>
-
-            <Button
-                BackgroundColor="#006561"
-                BorderColor="#FF7100"
-                Clicked="onAplicar"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="5"
-                Text="Aplicar"
-                TextColor="White">
-            </Button>
-
-            <Button
-                BackgroundColor="#006561"
-                BorderColor="#FF7100"
-                Clicked="onPagar"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="6"
+                Margin="16,8,16,0"
                 Text="Pagar"
                 TextColor="White">
             </Button>

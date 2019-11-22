@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="PetsHeroe.View.Consulta_bene_vete">
-  <!--Pages can be added as references or inline-->
   <ContentPage Title="Edo cuenta" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
         <Grid>
@@ -27,16 +27,10 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Label FontSize="Large"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="4"
-                   Grid.Row="0"
-                   HorizontalTextAlignment="Center"
-                   TextColor="Black"
-                   Text="Estado de cuenta"
-                   VerticalTextAlignment="Center" />
             <Entry
                 BackgroundColor="White"
+                FontFamily="Lobster-Regular"
+                FontSize="18"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
@@ -45,6 +39,8 @@
                 x:Name="txtBuscar"></Entry>
             <Picker
                 BackgroundColor="White"
+                FontFamily="Lobster-Regular"
+                FontSize="18"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Grid.Row="1"
@@ -63,6 +59,8 @@
                 BorderWidth="1"
                 Clicked="onBuscar"
                 CornerRadius="12"
+                FontFamily="Lobster-Regular"
+                FontSize="18"
                 Grid.Column="3"
                 Grid.ColumnSpan="1"
                 Grid.Row="2"
@@ -73,8 +71,8 @@
                 BackgroundColor="White"
                 Grid.ColumnSpan="4"
                 Grid.Row="3"
-                Grid.RowSpan="4"
-                Margin="0,0,10,10"
+                Grid.RowSpan="6"
+                Margin="0,0,0,0"
                 x:Name="lsvResultados">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -88,30 +86,38 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Label Grid.Column="0" FontSize="12" Text="{Binding mascostaCodigo, StringFormat='{0}'}"></Label>
-                                <Label Grid.Column="1" FontSize="12" Text="{Binding nombre, StringFormat='{0}'}"></Label>
-                                <Label Grid.Column="2" FontSize="12" Text="{Binding correo, StringFormat='{0}'}"></Label>
+                                <Label Grid.Column="0" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding mascostaCodigo, StringFormat='{0}'}"></Label>
+                                <Label Grid.Column="1" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding nombre, StringFormat='{0}'}"></Label>
+                                <Label Grid.Column="2" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='{0}'}"></Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label
-                Grid.Row="7"
-                Grid.RowSpan="2"
+            <StackLayout
+                Grid.Column="0"
                 Grid.ColumnSpan="4"
-                FontSize="18"
-                x:Name="txtNombre">
-            </Label>
-            <Label
-                Grid.Row="9"
-                Grid.ColumnSpan="4"
-                FontSize="18"
-                x:Name="txtPuntos">
-            </Label>
+                Grid.Row="10"
+                Orientation="Vertical">
+                <Label
+                    FontFamily="Lobster-Regular"
+                    FontSize="18"
+                    IsVisible="false"
+                    x:Name="txtNombre">
+                </Label>
+                <Label
+                    FontFamily="Lobster-Regular"
+                    FontSize="18"
+                    IsVisible="false"
+                    x:Name="txtPuntos">
+                </Label>
+            </StackLayout>
         </Grid>
       </ContentPage.Content>
   </ContentPage>
+<!--***************************************************************************************************************************-->
+    
+<!--***************************************************************************************************************************-->
   <ContentPage Title="Productos" IconImageSource="product.png" Padding="8">
       <ContentPage.Content>
           <Grid>
@@ -134,19 +140,42 @@
                   <RowDefinition></RowDefinition>
                   <RowDefinition></RowDefinition>
               </Grid.RowDefinitions>
+
+          <input:AdvancedEntry
+              FontFamily="Lobster-Regular"
+              Grid.Column="0"
+              Grid.ColumnSpan="4"
+              Grid.Row="0"
+              IconImage="search.png"
+              Placeholder="Buscar..."
+              TextColor="Black"
+              TextFontSize="18"
+              x:Name="txtBuscarLsv">
+          </input:AdvancedEntry>
+
+          <Button
+              BorderColor="#FF7100"
+              BorderWidth="2"
+              BackgroundColor="#006561"
+              Clicked="onFiltrar"
+              CornerRadius="16"
+              FontFamily="Lobster-Regular"
+              FontSize="18"
+              Grid.Column="4"
+              Grid.ColumnSpan="2"
+              Grid.Row="0"
+              Text="Escanear"
+              TextColor="White">
+          </Button>
+
           <ListView
               Grid.ColumnSpan="6"
-              Grid.Row="0"
-              Grid.RowSpan="8"
+              Grid.Row="1"
+              Grid.RowSpan="7"
               HasUnevenRows="True"
               BackgroundColor="White"
+              ItemsSource="{Binding ListaProductos}"
               x:Name="lsvProductos">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black"
-                       Text="Productos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>     
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -158,14 +187,39 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding inicia, StringFormat='Inicio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding vigencia, StringFormat='Termina: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding tipo, StringFormat='Tipo: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding marca, StringFormat='Marca: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding producto, StringFormat='Producto: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding precios, StringFormat='Precio: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding puntos, StringFormat='Dinero electrónico: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding inicia, StringFormat='Inicio: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding vigencia, StringFormat='Termina: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding tipo, StringFormat='Tipo: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding marca, StringFormat='Marca: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding producto, StringFormat='Producto: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding precios, StringFormat='Precio: {0}'}" />
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding puntos, StringFormat='Dinero electrónico: {0}'}" />
+                                    <StackLayout
+                                        Orientation="Horizontal"
+                                        HorizontalOptions="EndAndExpand">
+                                        <Button
+                                            Clicked="ProductoSelectedEdit"
+                                            CommandParameter="{Binding .}"
+                                            FontSize="16"
+                                            FontFamily="Lobster-Regular"
+                                            ImageSource="edit.png"
+                                            Text="Editar"
+                                            TextColor="Black">
+                                        </Button>
+                                        <Button
+                                            Clicked="ProductoSelectedDelete"
+                                            CommandParameter="{Binding idPromocion}"
+                                            FontSize="16"
+                                            FontFamily="Lobster-Regular"
+                                            ImageSource="delete.png"
+                                            Text="Eliminar"
+                                            TextColor="Black">
+                                        </Button>
+                                    </StackLayout>
+                                </StackLayout>
                                 <BoxView
                                    VerticalOptions="FillAndExpand"
                                    HorizontalOptions="FillAndExpand"
@@ -177,11 +231,14 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
           </ListView>
+
+          <!--             -->
           <Button
             BorderColor="#FF7100"
             BorderWidth="2"
             BackgroundColor="#006561"
             CornerRadius="16"
+
             Grid.Column="1"
             Grid.ColumnSpan="4"
             Grid.Row="8"
@@ -192,6 +249,9 @@
         </Grid>
       </ContentPage.Content>
   </ContentPage>
+<!--***************************************************************************************************************************-->
+
+<!--***************************************************************************************************************************-->
   <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
           <Grid>
@@ -223,7 +283,7 @@
                     x:Name="lsvServicios">
                 <ListView.Header>
                     <ContentView Padding="0,5" BackgroundColor="White">
-                        <Label FontSize="Large" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                        <!--<Label FontSize="16" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />-->
                     </ContentView>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -244,7 +304,32 @@
                                     <Label FontSize="16"  Text="{Binding producto, StringFormat='Servicio: {0}'}" />
                                     <Label FontSize="16"  Text="{Binding precio, StringFormat='Precio: {0}'}" />
                                     <Label FontSize="16"  Text="{Binding compra, StringFormat='Unidades: {0}'}" />
-                                    <Label FontSize="16"  Text="{Binding PartnerPrice, StringFormat='Precio unitario: {0}'}" />
+                                    <StackLayout
+                                        Orientation="Horizontal">
+                                        <Label FontSize="16"  Text="{Binding PartnerPrice, StringFormat='Precio unitario: {0}'}" />
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            HorizontalOptions="EndAndExpand">
+                                            <Button
+                                                Clicked="ServicioSelectedEdit"
+                                                CommandParameter="{Binding .}"
+                                                FontSize="16"
+                                                FontFamily="Lobster-Regular"
+                                                ImageSource="edit.png"
+                                                Text="Editar"
+                                                TextColor="Black">
+                                            </Button>
+                                            <Button
+                                                Clicked="ServicioSelectedDelete"
+                                                CommandParameter="{Binding idPromocion}"
+                                                FontSize="16"
+                                                FontFamily="Lobster-Regular"
+                                                ImageSource="delete.png"
+                                                Text="Eliminar"
+                                                TextColor="Black">
+                                            </Button>
+                                        </StackLayout>
+                                    </StackLayout>
                                     <BoxView
                                        VerticalOptions="FillAndExpand"
                                        HorizontalOptions="FillAndExpand"
@@ -261,6 +346,8 @@
                     BorderWidth="2"
                     BackgroundColor="#006561"
                     CornerRadius="16"
+                    FontFamily="Lobster-Regular"
+                    FontSize="18"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
                     Grid.Row="8"

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
@@ -12,6 +13,9 @@ namespace PetsHeroe.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Consulta_bene_vete : TabbedPage
     {
+        ObservableCollection<Promocion> listaProductos = new ObservableCollection<Promocion>();
+        public ObservableCollection<Promocion> ListaProductos { get { return listaProductos; } set { listaProductos = value; } }
+        ObservableCollection<Promocion> listaProductosCompleto = new ObservableCollection<Promocion>();
         private int tipoBusqueda = -1, idMiembro = -1, puntos = 0;
         private string nombre = "", correo = "", codigo = "", usuario = "";
         private DataTable clientes = new DataTable();
@@ -20,6 +24,7 @@ namespace PetsHeroe.View
         private DataTable promocionesDueno = new DataTable();
         private DataTable promoProductosVet = new DataTable();
         private DataTable promoServiciosVet = new DataTable();
+        IQRScanning scanningDepen;
 
         public Consulta_bene_vete()
         {
@@ -27,12 +32,15 @@ namespace PetsHeroe.View
             InitializeComponent();
             tipoBusqueda = 2;
             pkrBuscarPor.SelectedIndex = tipoBusqueda;
+            scanningDepen = DependencyService.Get<IQRScanning>();
             try
             {
                 promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
                 promoServiciosVet = DependencyService.Get<IWebService>().getPromoServicios_Busca(Preferences.Get("idAsociado", -1));
 
-                lsvProductos.ItemsSource = dataTableToListProductos();
+                listaProductosCompleto = dataTableToListProductos();
+                lsvProductos.ItemsSource = listaProductos;
+                //ListaProductos = dataTableToListProductos();
                 lsvServicios.ItemsSource = dataTableToListServicios();
 
             }
@@ -67,6 +75,8 @@ namespace PetsHeroe.View
                         }
                     }
 
+                    txtNombre.IsVisible = true;
+                    txtPuntos.IsVisible = true;
                     txtNombre.Text = " Nombre: " + usuario;
                     txtPuntos.Text = " Puntos: " + puntos;
                     puntos = 0;
@@ -78,6 +88,14 @@ namespace PetsHeroe.View
                 }
 
             };
+
+            txtBuscarLsv.TextChanged += TxtBuscarLsv_TextChanged;
+        }
+
+        private void TxtBuscarLsv_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            listaProductos = dataTableToListProductos(txtBuscarLsv.Text);
+            lsvProductos.ItemsSource = listaProductos;
         }
 
         public void onBuscar(object sender, EventArgs args) {
@@ -133,6 +151,8 @@ namespace PetsHeroe.View
                     }
                     lsvResultados.ItemsSource = null;
                     DisplayAlert("Encontrado", "Un resultado de la busqueda", "Ok");
+                    txtNombre.IsVisible = true;
+                    txtPuntos.IsVisible = true;
                 }
                 else {
                     MiembroDic.Clear();
@@ -176,10 +196,25 @@ namespace PetsHeroe.View
 
         }
 
-        private List<Promocion> dataTableToListProductos()
+        public async void onFiltrar(object sender, EventArgs args) {
+            try
+            {
+                var result = await scanningDepen.ScanAsync();
+                if (result != null)
+                {
+                    txtBuscarLsv.Text = convertUPCtoName(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                txtBuscarLsv.Text = "";
+            }
+        }
+
+        private ObservableCollection<Promocion> dataTableToListProductos()
         {
 
-            List<Promocion> promociones = new List<Promocion>();
+            ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
             foreach (DataRow dr in promoProductosVet.Rows)
             {
@@ -192,14 +227,69 @@ namespace PetsHeroe.View
                     marca = dr["Brand"].ToString(),
                     producto = dr["Product"].ToString(),
                     precio = Convert.ToDouble(dr["RegularPrice"]),
-                    puntos = Convert.ToDouble(dr["Points"])
+                    puntos = Convert.ToDouble(dr["Points"]),
+                    UPC = dr["UPC"].ToString()
                 };
-
+                listaProductos.Add(promoTemp);
                 promociones.Add(promoTemp);
 
             }
 
             return promociones;
+        }
+
+        private ObservableCollection<Promocion> dataTableToListProductos(string texto)
+        {
+
+            ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
+
+            foreach (DataRow dr in promoProductosVet.Rows)
+            {
+                Promocion promoTemp = new Promocion()
+                {
+                    nombre = dr["Name"].ToString(),
+                    inicia = dr["StartDate"].ToString(),
+                    vigencia = dr["EndDate"].ToString(),
+                    tipo = dr["ProductType"].ToString(),
+                    marca = dr["Brand"].ToString(),
+                    producto = dr["Product"].ToString(),
+                    precio = Convert.ToDouble(dr["RegularPrice"]),
+                    puntos = Convert.ToDouble(dr["Points"]),
+                    UPC = dr["UPC"].ToString()
+                };
+
+                if (promoTemp.nombre.Contains(texto)) {
+                    promociones.Add(promoTemp);
+                }
+            }
+            return promociones;
+        }
+
+        private string convertUPCtoName(string UPC) {
+
+            foreach (DataRow dr in promoProductosVet.Rows)
+            {
+                Promocion promoTemp = new Promocion()
+                {
+                    nombre = dr["Name"].ToString(),
+                    inicia = dr["StartDate"].ToString(),
+                    vigencia = dr["EndDate"].ToString(),
+                    tipo = dr["ProductType"].ToString(),
+                    marca = dr["Brand"].ToString(),
+                    producto = dr["Product"].ToString(),
+                    precio = Convert.ToDouble(dr["RegularPrice"]),
+                    puntos = Convert.ToDouble(dr["Points"]),
+                    UPC = dr["UPC"].ToString()
+                };
+
+                if (promoTemp.UPC == UPC)
+                {
+                    return promoTemp.nombre;
+                }
+            }
+
+            return "";
+
         }
 
         private List<Promocion> dataTableToListServicios()
@@ -229,11 +319,53 @@ namespace PetsHeroe.View
         }
 
         public void onAgregarPromo(object sender, EventArgs args) {
-            Navigation.PushAsync(new Nuevo_Servicio_Promo());
+            Navigation.PushAsync(new Nuevo_Servicio_Promo(false, null));
         }
 
         public void onAgregarPromoPrd(object sender, EventArgs args) {
-            Navigation.PushAsync(new Nuevo_Producto_Promo());
+            Navigation.PushAsync(new Nuevo_Producto_Promo(false, null));
+        }
+
+        public void ProductoSelectedEdit(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            Promocion promocion = button.CommandParameter as Promocion;
+            Navigation.PushAsync(new Nuevo_Producto_Promo(true, promocion));
+        }
+
+        public void ProductoSelectedDelete(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            int idPromocion = Convert.ToInt32(button.CommandParameter);
+
+            Device.BeginInvokeOnMainThread(async () => {
+                var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
+                if (result)
+                {
+                    
+                }
+            });
+        }
+
+        public void ServicioSelectedEdit(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            Promocion promocion = button.CommandParameter as Promocion;
+            Navigation.PushAsync(new Nuevo_Servicio_Promo(true, promocion));
+        }
+
+        public void ServicioSelectedDelete(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            int idPromocion = Convert.ToInt32(button.CommandParameter);
+
+            Device.BeginInvokeOnMainThread(async () => {
+                var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
+                if (result)
+                {
+
+                }
+            });
         }
 
     }

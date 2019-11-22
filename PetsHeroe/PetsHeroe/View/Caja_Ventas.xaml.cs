@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using dotMorten.Xamarin.Forms;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Forms;
@@ -22,9 +23,12 @@ namespace PetsHeroe.View
         private int idItemPointer = 0;
         private int idProducto = -1;
         private int tipo = 1;
+        private string UPCG = "";
         private DataTable productosEntryComplete;
-        public List<string> productosEntry;
+        public Dictionary<String,String> productosEntryDic;
+        public List<Promocion> productosEntry;
         public string txtProductoEntry;
+        private bool UPCEncontrado = false;
 
         public Caja_Ventas()
         {
@@ -35,21 +39,77 @@ namespace PetsHeroe.View
             scanningDepen = DependencyService.Get<IQRScanning>();
             pkrTipo.SelectedIndexChanged += PkrTipo_SelectedIndexChanged;
             //listaCarrito.CollectionChanged += ListaCarrito_CollectionChanged;
-
+            
             productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(-1, "");
-            productosEntry = new List<string>();
+            productosEntryDic = new Dictionary<string, string>();
+            productosEntry = new List<Promocion>();
             foreach (DataRow dr in productosEntryComplete.Rows) {
-                productosEntry.Add(dr["UPC"].ToString());
+                try
+                {
+                    productosEntryDic.Add(dr["UPC"].ToString(), dr["Product"].ToString());
+                    Promocion promoTemp = new Promocion()
+                    {
+                        nombre = dr["Product"].ToString(),
+                        UPC = dr["UPC"].ToString()
+                    };
+                    productosEntry.Add(promoTemp);
+                }
+                catch (Exception ex) {
+
+                }
             }
 
-            txtProducto.ItemsSource = productosEntry;
+            //txtUPC.ItemsSource = productosEntry;
 
         }
 
         private void PkrTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tipo = pkrTipo.SelectedIndex + 1;
+            if (pkrTipo.SelectedIndex == 0)
+            {
+                productosEntry.Clear();
+                productosEntryDic.Clear();
+                productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(-1, "");
+                foreach (DataRow dr in productosEntryComplete.Rows)
+                {
+                    try
+                    {
+                        productosEntryDic.Add(dr["UPC"].ToString(), dr["Product"].ToString());
+                        Promocion promoTemp = new Promocion()
+                        {
+                            nombre = dr["Product"].ToString(),
+                            UPC = dr["UPC"].ToString()
+                        };
+                        productosEntry.Add(promoTemp);
+                    }
+                    catch (Exception ex)
+                    {
 
+                    }
+                }
+            }
+            else {
+                productosEntry.Clear();
+                productosEntryComplete = DependencyService.Get<IWebService>().getServicio_Busca(-1);
+                foreach (DataRow dr in productosEntryComplete.Rows)
+                {
+                    try
+                    {
+                        //productosEntryDic.Add(dr["UPC"].ToString(), dr["Product"].ToString());
+                        Promocion promoTemp = new Promocion()
+                        {
+
+                            nombre = dr["name"].ToString()
+                            //UPC = dr["UPC"].ToString()
+                        };
+                        productosEntry.Add(promoTemp);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+            }
         }
 
         /*
@@ -84,9 +144,16 @@ namespace PetsHeroe.View
                     listaCarrito.Add(ventaTmp);
                 }
             }
+            puntos = 0;
+            total = 0;
+            foreach (Venta venta in listaCarrito)
+            {
+                puntos += (venta.puntos * venta.cantidad);
+                total += (venta.precio * venta.cantidad);
+            }
+            lblTotal.Text = "$ " + total.ToString() + " MXN";
+            lblPuntos.Text = puntos.ToString() + " PTS";
         }
-
-
 
         public void btnMenos(object sender, EventArgs args)
         {
@@ -101,7 +168,7 @@ namespace PetsHeroe.View
                     {
                         idItem = listaCarrito[i].idItem,
                         idProducto = listaCarrito[i].idProducto,
-                        cantidad = listaCarrito[i].cantidad - 1, //VALIDACION PARA NO TENER NEGATIVOS
+                        cantidad = listaCarrito[i].cantidad - 1 < 0 ? 0 : listaCarrito[i].cantidad - 1, //VALIDACION PARA NO TENER NEGATIVOS
                         nombre = listaCarrito[i].nombre,
                         precio = listaCarrito[i].precio,
                         puntos = listaCarrito[i].puntos
@@ -110,6 +177,16 @@ namespace PetsHeroe.View
                     listaCarrito.Add(ventaTmp);
                 }
             }
+            puntos = 0;
+            total = 0;
+            foreach (Venta venta in listaCarrito)
+            {
+                puntos += (venta.puntos * venta.cantidad);
+                total += (venta.precio * venta.cantidad);
+            }
+            lblTotal.Text = "$ " + total.ToString() + " MXN";
+            lblPuntos.Text = puntos.ToString() + " PTS";
+
         }
 
         async void scanCode(object sender, EventArgs args) {
@@ -133,13 +210,22 @@ namespace PetsHeroe.View
                 var result = await scanningDepen.ScanAsync();
                 if (result != null)
                 {
-                    txtProducto.Text = result;
-                    txtProductoEntry = result;
+                    //txtProducto.Text = result;
+                    //txtProductoEntry = result;
+                    //txtUPC.Text = result;
+                    try
+                    {
+                        txtUPC.Text = productosEntryDic[result];
+                        UPCG = result;
+                    }
+                    catch (Exception ex) {
+                        await DisplayAlert("Error","Producto no existente","OK");
+                    }
                 }
             }
             catch (Exception ex)
             {
-                txtProducto.Text = "";
+                await DisplayAlert("Error", "Error al leer código de barras intentelo nuevamente", "OK");
             }
         }
 
@@ -150,11 +236,11 @@ namespace PetsHeroe.View
                 await DisplayAlert("Error", "Ingresa un código de mascota", "Ok");
                 return;
                 
-            }else if (txtProducto.Text == "" || txtProducto.Text == null) {
+            }/*else if (txtProducto.Text == "" || txtProducto.Text == null) {
                 await DisplayAlert("Error", "Ingrese nombre o código del producto", "Ok");
                 return;
                 
-            } else if (txtMonto.Text == "" || txtMonto.Text == null) {
+            }*/ else if (txtMonto.Text == "" || txtMonto.Text == null) {
                 await DisplayAlert("Error", "Ingrese un monto para este producto", "Ok");
                 return;
             }
@@ -168,14 +254,28 @@ namespace PetsHeroe.View
             }
 
             DependencyService.Get<IWebService>().getCodigo_Valida(txtCodigoMascota.Text);
+            UPCEncontrado = false;
+            foreach (Promocion promo in productosEntry) {
+                if (promo.nombre == txtUPC.Text || promo.UPC == txtUPC.Text) {
+                    UPCG = promo.UPC;
+                    UPCEncontrado = true;
+                }
+            }
 
-            DataTable productosEncontrados = DependencyService.Get<IWebService>().getProducto_Busca(-1, txtProducto.Text);
+            DataTable productosEncontrados = DependencyService.Get<IWebService>().getProducto_Busca(-1, UPCG);
+
+            DataTable serviciosEncontrados = DependencyService.Get<IWebService>().getServicio_Busca(-1);
 
             if (!DependencyService.Get<IWebService>().Codigo_Valida) {
                 await DisplayAlert("Error", "Código de mascota invalido", "Ok");
                 return;
             }
-            else if (productosEncontrados.Rows.Count > 0){
+            else if (UPCEncontrado && pkrTipo.SelectedIndex == 0)
+            {
+
+                if (productosEncontrados.Rows.Count <= 0) {
+                    return;
+                }
 
                 string productName = "";
                 Double productPoints = 0.0;
@@ -191,15 +291,51 @@ namespace PetsHeroe.View
                 total = 0;
                 puntos = 0;
                 foreach (Venta venta in listaCarrito) {
+                    puntos += (venta.puntos * venta.cantidad);
+                    total += (venta.precio * venta.cantidad);
+                }
+                lblTotal.Text = "$ "+total.ToString() + " MXN";
+                lblPuntos.Text = puntos.ToString() + " PTS";
+                codigoMascota = txtCodigoMascota.Text;
+                await DisplayAlert("Correcto", "Se agrego correctamente", "Ok");
+                txtUPC.Text = "";
+                txtMonto.Text = "";
+                //txtCodigoMascota.Text = "";
+            }else if (pkrTipo.SelectedIndex == 1)
+            {
+
+                if (serviciosEncontrados.Rows.Count <= 0) {
+                    return;
+                }
+
+                string productName = "";
+                Double productPoints = 0.0;
+
+                foreach (DataRow dr in serviciosEncontrados.Rows)
+                {
+                    if (dr["Name"].ToString() == txtUPC.Text)
+                    {
+                        productName = dr["Name"].ToString();
+                        productPoints = Convert.ToDouble(dr["Points"].ToString());
+                    }
+                }
+                idItemPointer += 1;
+                listaCarrito.Add(new Venta() { idItem = idItemPointer, cantidad = 1, nombre = productName, precio = Convert.ToDouble(txtMonto.Text), puntos = productPoints });
+                total = 0;
+                puntos = 0;
+                foreach (Venta venta in listaCarrito)
+                {
                     puntos += venta.puntos;
                     total += venta.precio;
                 }
-                lblTotal.Text = total.ToString();
-                lblPuntos.Text = puntos.ToString();
+                lblTotal.Text = "$ " + total.ToString() + " MXN";
+                lblPuntos.Text = puntos.ToString() + " PTS";
                 codigoMascota = txtCodigoMascota.Text;
                 await DisplayAlert("Correcto", "Se agrego correctamente", "Ok");
-            }
-            else {
+                txtUPC.Text = "";
+                txtMonto.Text = "";
+                //txtCodigoMascota.Text = "";
+            }else {
                 //await DisplayAlert("Error", "No se encontro el producto o servicio", "Ok");
                 Device.BeginInvokeOnMainThread(async () => {
                     var result = await this.DisplayAlert("Producto no encontrado", "¿Deseas agregarlo?", "Si", "No");
@@ -219,6 +355,52 @@ namespace PetsHeroe.View
                 await Navigation.PushAsync(new Pago_Venta(codigoMascota, total, listaCarrito));
             } else {
                 await DisplayAlert("Error","No hay ningún producto/servicio en tu carrito","Ok");
+            }
+        }
+
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            // Only get results when it was a user typing, 
+            // otherwise assume the value got filled in by TextMemberPath 
+            // or the handler for SuggestionChosen.
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                //Set the ItemsSource to be your filtered dataset
+                
+                sender.ItemsSource = filtrar(sender.Text);
+            }
+        }
+
+        public List<String> filtrar(string texto) {
+
+            List<String> listaFiltrada = new List<String>();
+
+            foreach (Promocion producto in productosEntry) {
+                if (producto.nombre.Contains(texto)) {
+                    listaFiltrada.Add(producto.nombre);
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            // Set sender.Text. You can use args.SelectedItem to build your text string.
+            //sender.Text = args.SelectedItem.ToString();
+        }
+
+
+        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            if (args.ChosenSuggestion != null)
+            {
+                // User selected an item from the suggestion list, take an action on it here.
+            }
+            else
+            {
+                // User hit Enter from the search box. Use args.QueryText to determine what to do.
             }
         }
 

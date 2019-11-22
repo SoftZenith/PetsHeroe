@@ -9,16 +9,16 @@
     NavigationPage.HasBackButton="False"
     BarBackgroundColor="#006561">
 
-    <TabbedPage.Title>Asociado</TabbedPage.Title>
+    <!--<TabbedPage.Title>Asociado</TabbedPage.Title>-->
     <TabbedPage.ToolbarItems>
         <ToolbarItem IconImageSource="logout.png" Text="Salir" Clicked="onCerrarSesion" ></ToolbarItem>
     </TabbedPage.ToolbarItems>
 
     <TabbedPage.Children>
-        <Pages:Mis_Clientes Title="" IconImageSource="clients.png"/>
-        <Pages:Consulta_bene_vete Title="" IconImageSource="calculator.png"/>
-        <Pages:Caja_Ventas Title="" IconImageSource="money.png"/>
-        <Pages1:Loc_Mascota Title="" IconImageSource="pet.png"/>
+        <Pages:Mis_Clientes Title="" IconImageSource="clients.png" Appearing="onAppearingClients"/>
+        <Pages:Consulta_bene_vete Title="" IconImageSource="calculator.png" Appearing="onAppearingBenefics"/>
+        <Pages:Caja_Ventas Title="" IconImageSource="money.png" Appearing="onAppearingSales"/>
+        <Pages1:Loc_Mascota Title="" IconImageSource="pet.png" Appearing="onAppearLocation"/>
     </TabbedPage.Children>
 
     <!--

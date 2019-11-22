@@ -18,21 +18,21 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
             </Grid.RowDefinitions>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
                 Margin="8,4,8,0"
@@ -41,38 +41,42 @@
                 x:Name="txtNombrePromo">
             </input:AdvancedEntry>
 
-            <StackLayout
+            <Label
+                FontSize="20"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                HorizontalOptions="EndAndExpand"
                 Margin="16,0,16,0"
+                Text="A partir del:"
+                VerticalOptions="CenterAndExpand">
+            </Label>
+            <DatePicker
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Margin="16,0,16,0"
+                MinimumDate="{Binding hoy}"
+                x:Name="txtAPartir">
+            </DatePicker>
+
+            <Label
+                FontSize="20"
+                Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
-                Orientation="Horizontal">
-                <Label
-                    Margin="4,0,0,0"
-                    FontSize="Medium"
-                    VerticalOptions="CenterAndExpand"
-                    Text="A partir del:">
-                </Label>
-                <DatePicker
-                    MinimumDate="{Binding hoy}">
-                </DatePicker>
-            </StackLayout>
-
-            <StackLayout
+                HorizontalOptions="EndAndExpand"
                 Margin="16,0,16,0"
+                Text="Hasta el:"
+                VerticalOptions="CenterAndExpand">
+            </Label>
+            <DatePicker
                 Grid.Column="3"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
-                Orientation="Horizontal">
-                <Label
-                    Margin="4,0,0,0"
-                    FontSize="Medium"
-                    VerticalOptions="CenterAndExpand"
-                    Text="Hasta el:">
-                </Label>
-                <DatePicker
-                    MinimumDate="{Binding hoy}">
-                </DatePicker>
-            </StackLayout>
+                Margin="16,0,16,0"
+                MinimumDate="{Binding hoy}"
+                x:Name="txtHasta">
+            </DatePicker>
 
             <Frame
                 BorderColor="#FF7100"
@@ -129,13 +133,14 @@
                 Grid.ColumnSpan="6"
                 Grid.Row="7"
                 Margin="16,0,16,0"
-                x:Name="chkActivo"
-                Text="Activo">
+                Text="Activo"
+                x:Name="chkActivo">
             </input:CheckBox>
 
             <Button
-                BorderColor="#FF7100"
                 BackgroundColor="#006561"
+                BorderColor="#FF7100"
+                BorderWidth="2"
                 CornerRadius="16"
                 Clicked="onGuardarPromo"
                 Grid.Column="1"

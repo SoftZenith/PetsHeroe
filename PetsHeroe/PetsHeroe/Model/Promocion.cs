@@ -19,6 +19,7 @@ namespace PetsHeroe.Model
         public string inicia { get; set; }
         public string vigencia { get; set; }
         public bool esDineroElectr { get; set; }
+        public string UPC { get; set; }
 
 
         public Promocion()

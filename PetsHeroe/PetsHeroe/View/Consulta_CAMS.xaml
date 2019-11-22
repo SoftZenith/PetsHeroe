@@ -59,11 +59,11 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
-                                    <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                    <Label FontSize="16"  Text="{Binding sucursal, StringFormat='Sucursal: {0}'}" />
-                                    <Label FontSize="16"  Text="{Binding codigopostal, StringFormat='C.P.: {0}'}" />
-                                    <Label FontSize="16"  Text="{Binding telefono, StringFormat='Telefonos: {0}'}" />
-                                    <Label FontSize="16"  Text="{Binding ciudad, StringFormat='{0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding sucursal, StringFormat='Sucursal: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigopostal, StringFormat='C.P.: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding telefono, StringFormat='Telefonos: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding ciudad, StringFormat='{0}'}" />
                                     <BoxView
                                        VerticalOptions="FillAndExpand"
                                        HorizontalOptions="FillAndExpand"

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -17,7 +18,7 @@ namespace PetsHeroe.View
         private int idTipoProducto = -1;
         private int idMarcaProducto = -1;
 
-        public Nuevo_Producto_Promo()
+        public Nuevo_Producto_Promo(bool isEdit, Promocion promocionEdit)
         {
             InitializeComponent();
 
@@ -38,6 +39,30 @@ namespace PetsHeroe.View
             }
 
             pkrTipo.SelectedIndexChanged += tipoProductoSeleccionado;
+
+            if (isEdit) {
+                try
+                {
+                    pkrTipo.SelectedItem = promocionEdit.tipo;
+                    //int indexTipo = tipoProductoDic[promocionEdit.tipo];
+                    //pkrTipo.SelectedIndex = indexTipo;
+                    pkrMarcar.SelectedItem = promocionEdit.marca;
+                    //int indexMarca = marcaProductoDic[promocionEdit.marca];
+                    //pkrMarcar.SelectedIndex = indexMarca;
+                    pkrProducto.SelectedItem = promocionEdit.nombre;
+                    //int indexProdcuto = ProductosDic[promocionEdit.nombre];
+                    //pkrProducto.SelectedIndex = indexProdcuto;
+                }
+                catch (Exception ex) {
+
+                }
+                txtNombrePromo.Text = promocionEdit.nombre.ToString();
+                txtPrecio.Text = promocionEdit.precio.ToString();
+                txtDineroElectr.Text = promocionEdit.puntos.ToString();
+                txtBuscarE.Text = promocionEdit.UPC;
+                dpkrAPartir.Date = Convert.ToDateTime(promocionEdit.inicia);
+                dpkrHasta.Date = Convert.ToDateTime(promocionEdit.vigencia);
+            }
 
         }
 
@@ -64,8 +89,13 @@ namespace PetsHeroe.View
 
         private void PkrMarcar_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            idMarcaProducto = marcaProductoDic[pkrMarcar.SelectedItem.ToString()];
+            try
+            {
+                idMarcaProducto = marcaProductoDic[pkrMarcar.SelectedItem.ToString()];
+            }
+            catch (Exception ex) {
+                idMarcaProducto = -1;
+            }
 
             DataTable productos = new DataTable();
             productos = DependencyService.Get<IWebService>().getProducto_Busca(idAsociado, idTipoProducto, idMarcaProducto);
@@ -79,6 +109,13 @@ namespace PetsHeroe.View
                 ProductosDic.Add(dr[11].ToString(), Convert.ToInt32(dr[2]));
             }
 
+            pkrProducto.SelectedIndexChanged += PkrProducto_SelectedIndexChanged;
+
+        }
+
+        private void PkrProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         public async void onEscanear(object sender, EventArgs args) {
@@ -94,6 +131,22 @@ namespace PetsHeroe.View
             {
                 txtBuscarE.Text = "";
             }
+        }
+
+        public async void onAgregar(object sender, EventArgs args) {
+
+            bool status = DependencyService.Get<IWebService>().promoProductos_Agrega(-1, -1, "", 0, 0, DateTime.Now, DateTime.Now, 0, 0);
+            if (status) {
+                await DisplayAlert("OK","Se agrego correctamente","Ok");
+                pkrTipo.SelectedIndex = 0;
+                pkrMarcar.SelectedIndex = 0;
+                pkrProducto.SelectedIndex = 0;
+            }
+            else
+            {
+
+            }
+            
         }
     }
 }

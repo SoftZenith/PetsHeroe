@@ -29,6 +29,8 @@ namespace PetsHeroe.Services
         MensajeDueno Entrega_SoloMensaje { get; set; }
         string nombre { get; set; }
 
+        bool promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
+        bool promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
         bool getIdMascota_Busca(string codigoMascota);
         int producto_Agrega(int idTipoProducto, int idMarca, string nombre, string UPC);
         bool ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);

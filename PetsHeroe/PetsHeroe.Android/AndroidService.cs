@@ -144,7 +144,7 @@ namespace PetsHeroe.Droid
             try
             {
                 wsPets.AuthHeaderValue = auth;
-                return wsPets.Servicio_Busca(-1, -1, tipoMascota, "", true);
+                return wsPets.Servicio_Busca(-1, -1, tipoMascota, "", false);
             }
             catch (Exception ex)
             {
@@ -439,6 +439,33 @@ namespace PetsHeroe.Droid
             }
             catch (Exception ex) {
                 return -1;
+            }
+        }
+
+        public bool promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoProductos_Agrega(idAsociado, idProducto, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception ex) {
+                return false;
+            }
+        }
+
+        public bool promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Agrega(idAsociado, idTipoServicio, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
     }

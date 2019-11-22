@@ -46,8 +46,9 @@ namespace PetsHeroe.View
                 }
             }
 
+            lblSubTotal.Text = costo.ToString();
             lblTotal.Text = costo.ToString();
-            lblPuntos.Text = puntos.ToString();
+            lblPuntos.Text = "Tienes "+puntos.ToString()+" puntos";
 
         }
 

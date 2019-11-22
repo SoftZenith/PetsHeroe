@@ -75,7 +75,7 @@
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.908675, )"
+              "version": "[4.3.0.991211, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -84,6 +84,10 @@
             "ZXing.Net.Mobile.Forms": {
               "target": "Package",
               "version": "[2.4.1, )"
+            },
+            "dotMorten.Xamarin.Forms.AutoSuggestBox": {
+              "target": "Package",
+              "version": "[0.7.0, )"
             }
           },
           "imports": [
