@@ -54,8 +54,14 @@ namespace PetsHeroe.View
             pkrServicio.Items.Clear();
             tipoServicioDic.Clear();
             foreach (DataRow dr in servicios.Rows) {
-                pkrServicio.Items.Add(dr[7].ToString());
-                tipoServicioDic.Add(dr[7].ToString(), Convert.ToInt32(dr[2]));
+                try
+                {
+                    tipoServicioDic.Add(dr[7].ToString(), Convert.ToInt32(dr[2]));
+                    pkrServicio.Items.Add(dr[7].ToString());
+                }
+                catch (Exception ex) {
+
+                }
             }
 
             pkrServicio.SelectedIndexChanged += PkrServicio_SelectedIndexChanged;

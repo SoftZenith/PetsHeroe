@@ -25,15 +25,16 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16" Text="{Binding codigo, StringFormat='Código: {0}'}" />
-                                <Label FontSize="16" Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigo, StringFormat='Código: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding estatus, StringFormat='Estatus: {0}'}" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="8,18,8,16"  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
                                 <Button HorizontalOptions="CenterAndExpand"
                                         VerticalOptions="FillAndExpand"
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
+                                        FontFamily="Lobster-Regular"
                                         MinimumHeightRequest="80"
                                         WidthRequest="150"
                                         Clicked="mascotaSelectedPerdida"
@@ -45,6 +46,7 @@
                                         VerticalOptions="CenterAndExpand"
                                         BorderColor="#FF7100"
                                         BorderWidth="1"
+                                        FontFamily="Lobster-Regular"
                                         MinimumHeightRequest="80"
                                         WidthRequest="120"
                                         Clicked="mascotaSelectedRobada"

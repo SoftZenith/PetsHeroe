@@ -52,6 +52,8 @@
             Grid.Row="6"
             Grid.RowSpan="2">
             <Editor
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 VerticalOptions="FillAndExpand"
                 Placeholder="Notas"
                 x:Name="txtNotas">
@@ -63,6 +65,8 @@
             BorderColor="#FF7100"
             CornerRadius="16"
             Clicked="onDejarMascota"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Column="1"
             Grid.ColumnSpan="8"
             Grid.Row="8"

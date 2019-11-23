@@ -11,13 +11,14 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="65"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -29,9 +30,9 @@
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
                 Grid.Row="0"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 IconImage="code.png"
-                Margin="8,4,8,0"
+                Margin="8,8,8,0"
                 Placeholder="Código de mascota"
                 TextColor="black"
                 x:Name="txtCodigoMascota">
@@ -43,10 +44,10 @@
                 BackgroundColor="#006561"
                 Clicked="scanCode"
                 CornerRadius="20"
-                FontSize="18"
+                FontSize="14"
                 FontFamily="Lobster-Regular"
                 Grid.Row="0"
-                Grid.Column="2"
+                Grid.Column="3"
                 Grid.ColumnSpan="1"
                 Margin="0,4,10,4"
                 Text="Escanear"
@@ -57,7 +58,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 Grid.Row="1"
                 Margin="8,0,8,0"
                 Padding="6">
@@ -76,35 +77,15 @@
                 </Picker>
             </Frame>
 
-            <!--
-            <input:AdvancedEntry
-                BorderColor="#FF7100"
-                Grid.Row="2"
+            <Image
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
-                IconImage="service.png"
-                Margin="8,4,8,0"
-                Placeholder="UPC Producto/Servicio"
-                TextColor="black"
-                x:Name="txtProducto">
-            </input:AdvancedEntry>-->
-
-            <!--
-            <input:AutoCompleteEntry
-                BorderColor="#FF7100"
                 Grid.Row="2"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                IconImage="service.png"
-                Margin="8,4,8,0"
-                Placeholder="UPC Producto/Servicio"
-                TextColor="black"
-                ItemsSource="{Binding productosEntry}"
-                x:Name="txtProducto">
-            </input:AutoCompleteEntry>-->
+                Source="collar_big.png"
+                x:Name="imgTipo">
+            </Image>
 
             <Frame
-                Grid.Column="0"
+                Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Grid.Row="2"
                 Padding="8"
@@ -126,9 +107,9 @@
                 BackgroundColor="#006561"
                 Clicked="onEscanear"
                 CornerRadius="20"
-                FontSize="18"
+                FontSize="14"
                 FontFamily="Lobster-Regular"
-                Grid.Column="2"
+                Grid.Column="3"
                 Grid.ColumnSpan="1"
                 Grid.Row="2"
                 Margin="0,0,10,0"
@@ -139,7 +120,7 @@
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 Grid.Row="3"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
                 Keyboard="Numeric"
@@ -156,9 +137,9 @@
                 BorderColor="#FF7100"
                 Clicked="onAgregar"
                 CornerRadius="20"
-                FontSize="18"
+                FontSize="16"
                 FontFamily="Lobster-Regular"
-                Grid.Column="2"
+                Grid.Column="3"
                 Grid.ColumnSpan="1"
                 Grid.Row="3"
                 Margin="0,0,10,0"
@@ -169,7 +150,7 @@
             <ListView
                 BackgroundColor="White"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 Grid.Row="4"
                 Grid.RowSpan="4"
                 HasUnevenRows="True"
@@ -204,6 +185,7 @@
                                     <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                                         <Label Margin="0,5,0,0" Text="Unidades: ">
                                         </Label>
+                                        <!--
                                         <Button
                                             Margin="0,0,0,5"
                                             BorderColor="Black"
@@ -212,11 +194,37 @@
                                             CommandParameter="{Binding idItem}"
                                             Text="-"
                                             FontSize="Title">
-                                        </Button>
+                                        </Button>-->
                                         <Label
-                                            Margin="0,10,0,0"
+                                            Margin="0,4,0,0"
                                             Text="{Binding cantidad}">
                                         </Label>
+                                        <Picker
+                                            SelectedIndexChanged="pkrCantidadSelected"
+                                            BindingContext="{Binding idItem}">
+                                            <Picker.Items>
+                                                <x:String>1</x:String>
+                                                <x:String>2</x:String>
+                                                <x:String>3</x:String>
+                                                <x:String>4</x:String>
+                                                <x:String>5</x:String>
+                                                <x:String>6</x:String>
+                                                <x:String>7</x:String>
+                                                <x:String>8</x:String>
+                                                <x:String>9</x:String>
+                                            </Picker.Items>
+                                            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                                        </Picker>
+                                        <!--
+                                        <Entry
+                                            Keyboard="Numeric"
+                                            Text="{Binding cantidad}"
+                                            TextChanged="cantidad_TextChanged"
+                                            BindingContext="{Binding idItem}"
+                                            TextColor="Black">
+                                        </Entry>
+                                        -->
+                                        <!--
                                         <Button
                                             Margin="0,0,0,5"
                                             BorderColor="Black"
@@ -225,14 +233,8 @@
                                             CommandParameter="{Binding idItem}"
                                             Text="+"
                                             FontSize="Title">
-                                        </Button>
-                                    </StackLayout><!--
-                                    <BoxView
-                                        VerticalOptions="FillAndExpand"
-                                        HorizontalOptions="FillAndExpand"
-                                        HeightRequest="1"
-                                        MinimumHeightRequest="1"
-                                        Color="#FF7100"></BoxView>-->
+                                        </Button>-->
+                                    </StackLayout>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -241,7 +243,7 @@
 
             <StackLayout
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 Grid.Row="8"
                 Grid.RowSpan="2"
                 Orientation="Vertical">
@@ -324,63 +326,6 @@
                     </Label>
                 </Grid>
             </StackLayout>
-            <!--
-            <Label
-                VerticalOptions="Center"
-                FontSize="20"
-                Grid.Column="1"
-                Grid.Row="8"
-                HorizontalTextAlignment="End"
-                Margin="0"
-                Padding="0"
-                Text="Total:">
-            </Label>
-
-            <Label
-                VerticalOptions="Center"
-                Grid.Column="2"
-                Grid.Row="8"
-                HorizontalTextAlignment="Start"
-                FontSize="20"
-                Margin="0"
-                Padding="0"
-                Text=""
-                x:Name="lblTotal">
-
-            </Label>
-
-            <Label
-                FontSize="20"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Grid.Row="10"
-                HorizontalTextAlignment="End"
-                Margin="0"
-                Padding="0"
-                Text="Esta compra te genera:">
-            </Label>
-
-            <Label
-                FontSize="20"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Grid.Row="9"
-                HorizontalTextAlignment="End"
-                Margin="0"
-                Padding="0"
-                Text="Ahorro en servicios:">
-            </Label>
-
-            <Label
-                FontSize="20"
-                Grid.Column="2"
-                Grid.Row="10"
-                HorizontalTextAlignment="Start"
-                Margin="0"
-                Padding="0"
-                Text=""
-                x:Name="lblPuntos">
-            </Label>-->
 
             <Button
                 BackgroundColor="#006561"
@@ -390,8 +335,8 @@
                 CornerRadius="20"
                 FontFamily="Lobster-Regular"
                 FontSize="18"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
                 Grid.Row="10"
                 Margin="16,4,16,8"
                 TextColor="White"

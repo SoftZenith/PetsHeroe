@@ -28,6 +28,8 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="4"
@@ -45,6 +47,8 @@
             BorderColor="#FF7100"
             CornerRadius="12"
             Clicked="onScan"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.ColumnSpan="4"
             Grid.Row="2"
             Margin="10,4,10,0"
@@ -58,9 +62,12 @@
             Grid.ColumnSpan="4"
             Margin="10,8,0,10"
             x:Name="rdOpcion">
-            <input:RadioButton IsChecked="True" Margin="0,4,0,4" Text="Llevame a un centro de atención Pet's Hero"/>
-            <input:RadioButton Margin="0,4,0,4" Text="Manda un mensaje a mi dueño para que se comunique contigo"/>
-            <input:RadioButton Margin="0,4,0,4" Text="Toma nota del lugar donde me encuentro y Pet's Hero se encargará"/>
+            <input:RadioButton IsChecked="True" TextFontSize="18"
+            FontFamily="Lobster-Regular" Margin="0,4,0,4" Text="Llevame a un centro de atención Pet's Hero"/>
+            <input:RadioButton Margin="0,4,0,4" TextFontSize="18"
+            FontFamily="Lobster-Regular" Text="Manda un mensaje a mi dueño para que se comunique contigo"/>
+            <input:RadioButton Margin="0,4,0,4" TextFontSize="18"
+            FontFamily="Lobster-Regular" Text="Toma nota del lugar donde me encuentro y Pet's Hero se encargará"/>
         </input:RadioButtonGroupView>
 
         <Button
@@ -69,6 +76,8 @@
             BorderColor="#FF7100"
             CornerRadius="16"
             Clicked="onSiguiente"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Grid.Row="8"

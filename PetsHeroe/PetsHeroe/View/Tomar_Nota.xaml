@@ -33,6 +33,8 @@
             Margin="16,16,16,0"
             Padding="4">
             <Editor
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="localizacion..."
                 x:Name="txtLocalizacion">
             </Editor>
@@ -47,6 +49,8 @@
             Margin="16,0,16,0"
             Padding="2">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 VerticalOptions="FillAndExpand"
                 Placeholder="Notas..."
                 x:Name="txtNotas">
@@ -62,6 +66,8 @@
             Margin="16,0,16,0"
             Padding="0">
             <Picker
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Title="Estado"
                 x:Name="pkrEstado">
             </Picker>
@@ -76,12 +82,16 @@
             Margin="16,0,16,0"
             Padding="0">
             <Picker
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Title="Municipio"
                 x:Name="pkrMunicipio">
             </Picker>
         </Frame>
 
         <Label
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="5"
@@ -98,6 +108,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="Nombre"
                 x:Name="txtNombre">
             </Entry>
@@ -112,6 +124,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="Correo electronico"
                 x:Name="txtCorreo">
             </Entry>
@@ -126,6 +140,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="Telefono"
                 Keyboard="Telephone"
                 MaxLength="15"
@@ -139,6 +155,8 @@
             BorderColor="#FF7100"
             Clicked="onAviso"
             CornerRadius="16"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="9"

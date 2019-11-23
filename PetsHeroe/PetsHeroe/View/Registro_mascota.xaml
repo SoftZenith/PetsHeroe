@@ -30,8 +30,9 @@
                 Margin="8,0,8,0"
                 Padding="0,4,0,0">
                 <Entry
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Placeholder="Código"
-                    FontSize="Large"
                     x:Name="txtCodigo">
                 </Entry>
             </Frame>
@@ -43,7 +44,8 @@
                 Margin="8,0,8,0"
                 Padding="0,4,0,0">
                 <Entry
-                    FontSize="Large"
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Placeholder="Nombre"
                     x:Name="txtNombre">
                 </Entry>
@@ -56,7 +58,8 @@
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
+                <Picker FontSize="18"
+                        FontFamily="Lobster-Regular" Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
             </Frame>
             <Frame
                 BorderColor="#FF7100"
@@ -66,7 +69,8 @@
                 Grid.Row="4"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="Raza" x:Name="pkrRazaMascota"></Picker>
+                <Picker FontSize="18"
+                        FontFamily="Lobster-Regular" Title="Raza" x:Name="pkrRazaMascota"></Picker>
             </Frame>
             <Frame
                 BorderColor="#FF7100"
@@ -76,7 +80,8 @@
                 Grid.Row="5"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="Color" x:Name="pkrColorMascota"></Picker>
+                <Picker FontSize="18"
+                        FontFamily="Lobster-Regular" Title="Color" x:Name="pkrColorMascota"></Picker>
             </Frame>
             <StackLayout
                 Grid.Column="0"
@@ -89,7 +94,8 @@
                     CornerRadius="8"
                     HorizontalOptions="FillAndExpand"
                     Padding="0">
-                    <Picker FontSize="Large" Title="Sexo" x:Name="pkrSexoMascota">
+                    <Picker FontSize="18"
+                            FontFamily="Lobster-Regular" Title="Sexo" x:Name="pkrSexoMascota">
                         <Picker.Items>
                             <x:String>Macho</x:String>
                             <x:String>Hembra</x:String>
@@ -101,7 +107,8 @@
                     CornerRadius="8"
                     HorizontalOptions="FillAndExpand"
                     Padding="0">
-                    <Entry FontSize="Large" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
+                    <Entry FontSize="18"
+                           FontFamily="Lobster-Regular" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
                 </Frame>
 
             </StackLayout>
@@ -110,7 +117,8 @@
                 BackgroundColor="#006561"
                 CornerRadius="16"
                 Clicked="onRegistraMascota"
-                FontSize="Medium"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="7"

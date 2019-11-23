@@ -206,5 +206,7 @@
     <BundleResource Include="Resources\electronic.png" />
     <BundleResource Include="Resources\collar.png" />
     <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\collar_big.png" />
+    <BundleResource Include="Resources\shower_big.png" />
   </ItemGroup>
 </Project>

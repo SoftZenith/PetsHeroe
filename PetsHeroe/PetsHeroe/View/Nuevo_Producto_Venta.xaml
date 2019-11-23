@@ -24,6 +24,8 @@
             </Grid.RowDefinitions>
 
             <Label
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Grid.Row="0"
@@ -33,6 +35,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="4"
                 Grid.Row="1"
                 IconImage="product.png"
@@ -44,6 +48,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="4"
                 Grid.Row="2"
                 IconImage="code.png"
@@ -54,6 +60,8 @@
             </input:AdvancedEntry>
 
             <Button
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Row="3"
                 Grid.ColumnSpan="4"
                 BackgroundColor="#006561"
@@ -74,6 +82,8 @@
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Title="Tipo"
                     x:Name="pkrTipo">
                     <Picker.SelectedIndex>0</Picker.SelectedIndex>
@@ -88,6 +98,8 @@
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Title="Marca"
                     x:Name="pkrMarcar">
                 </Picker>
@@ -100,6 +112,8 @@
                 BorderWidth="1"
                 CornerRadius="16"
                 Clicked="onAgregar"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="4"
                 Grid.Row="6"
                 Margin="8,0"

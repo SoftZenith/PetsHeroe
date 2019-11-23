@@ -62,11 +62,54 @@ namespace PetsHeroe.View
             //txtUPC.ItemsSource = productosEntry;
 
         }
+        
+        private void pkrCantidadSelected(object sender, EventArgs e)
+        {
+            Picker pkr = sender as Picker;
+            int idElemento = Convert.ToInt32(pkr.BindingContext);
+
+            int cantidadPkr = pkr.SelectedIndex + 1;
+
+            if (listaCarrito.Count <= 0) {
+                return;
+            }
+
+            for (int i = 0; i < listaCarrito.Count; i++)
+            {
+                if (listaCarrito[i].idItem == idElemento)
+                {
+                    Venta ventaTmp = new Venta
+                    {
+                        idItem = listaCarrito[i].idItem,
+                        idProducto = listaCarrito[i].idProducto,
+                        cantidad = cantidadPkr,
+                        nombre = listaCarrito[i].nombre,
+                        precio = listaCarrito[i].precio,
+                        puntos = listaCarrito[i].puntos
+                    };
+
+                    listaCarrito.RemoveAt(i);
+                    listaCarrito.Add(ventaTmp);
+                }
+            }
+
+            puntos = 0;
+            total = 0;
+            foreach (Venta venta in listaCarrito)
+            {
+                puntos += (venta.puntos * venta.cantidad);
+                total += (venta.precio * venta.cantidad);
+            }
+            lblTotal.Text = "$ " + total.ToString() + " MXN";
+            lblPuntos.Text = puntos.ToString() + " PTS";
+
+        }
 
         private void PkrTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (pkrTipo.SelectedIndex == 0)
             {
+                imgTipo.Source = "collar_big.png";
                 productosEntry.Clear();
                 productosEntryDic.Clear();
                 productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(-1, "");
@@ -89,6 +132,7 @@ namespace PetsHeroe.View
                 }
             }
             else {
+                imgTipo.Source = "shower_big.png";
                 productosEntry.Clear();
                 productosEntryComplete = DependencyService.Get<IWebService>().getServicio_Busca(-1);
                 foreach (DataRow dr in productosEntryComplete.Rows)
@@ -187,6 +231,49 @@ namespace PetsHeroe.View
             lblTotal.Text = "$ " + total.ToString() + " MXN";
             lblPuntos.Text = puntos.ToString() + " PTS";
 
+        }
+
+        private void cantidad_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Entry cantidadEntry = sender as Entry;
+            int idElemento = Convert.ToInt32(cantidadEntry.BindingContext);
+            int cantidadX = 0;
+            try
+            {
+                cantidadX = Convert.ToInt32(cantidadEntry.Text);
+            }
+            catch (Exception ex) {
+                return;
+            }
+
+            for (int i = 0; i < listaCarrito.Count; i++)
+            {
+                if (listaCarrito[i].idItem == idElemento)
+                {
+                    Venta ventaTmp = new Venta
+                    {
+                        idItem = listaCarrito[i].idItem,
+                        idProducto = listaCarrito[i].idProducto,
+                        cantidad = cantidadX,
+                        nombre = listaCarrito[i].nombre,
+                        precio = listaCarrito[i].precio,
+                        puntos = listaCarrito[i].puntos
+                    };
+
+                    listaCarrito.RemoveAt(i);
+                    listaCarrito.Add(ventaTmp);
+                }
+            }
+
+            puntos = 0;
+            total = 0;
+            foreach (Venta venta in listaCarrito)
+            {
+                puntos += (venta.puntos * venta.cantidad);
+                total += (venta.precio * venta.cantidad);
+            }
+            lblTotal.Text = "$ " + total.ToString() + " MXN";
+            lblPuntos.Text = puntos.ToString() + " PTS";
         }
 
         async void scanCode(object sender, EventArgs args) {
@@ -297,7 +384,7 @@ namespace PetsHeroe.View
                 lblTotal.Text = "$ "+total.ToString() + " MXN";
                 lblPuntos.Text = puntos.ToString() + " PTS";
                 codigoMascota = txtCodigoMascota.Text;
-                await DisplayAlert("Correcto", "Se agrego correctamente", "Ok");
+                await DisplayAlert("Correcto", "Se agregó correctamente", "Ok");
                 txtUPC.Text = "";
                 txtMonto.Text = "";
                 //txtCodigoMascota.Text = "";
@@ -331,7 +418,7 @@ namespace PetsHeroe.View
                 lblTotal.Text = "$ " + total.ToString() + " MXN";
                 lblPuntos.Text = puntos.ToString() + " PTS";
                 codigoMascota = txtCodigoMascota.Text;
-                await DisplayAlert("Correcto", "Se agrego correctamente", "Ok");
+                await DisplayAlert("Correcto", "Se agregó correctamente", "Ok");
                 txtUPC.Text = "";
                 txtMonto.Text = "";
                 //txtCodigoMascota.Text = "";
@@ -372,12 +459,35 @@ namespace PetsHeroe.View
             }
         }
 
+        private void AutoSuggestBox_TextChangedCant(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            // Only get results when it was a user typing, 
+            // otherwise assume the value got filled in by TextMemberPath 
+            // or the handler for SuggestionChosen.
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                //Set the ItemsSource to be your filtered dataset
+                List<int> cantidades = new List<int>();
+                cantidades.Add(1);
+                cantidades.Add(2);
+                cantidades.Add(3);
+                cantidades.Add(4);
+                cantidades.Add(5);
+                cantidades.Add(6);
+                cantidades.Add(7);
+                cantidades.Add(8);
+                cantidades.Add(9);
+                sender.ItemsSource = cantidades;
+            }
+        }
+
+
         public List<String> filtrar(string texto) {
 
             List<String> listaFiltrada = new List<String>();
 
             foreach (Promocion producto in productosEntry) {
-                if (producto.nombre.Contains(texto)) {
+                if (producto.nombre.ToUpper().Contains(texto.ToUpper())) {
                     listaFiltrada.Add(producto.nombre);
                 }
             }
@@ -391,8 +501,25 @@ namespace PetsHeroe.View
             //sender.Text = args.SelectedItem.ToString();
         }
 
+        private void AutoSuggestBox_SuggestionChosenCant(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            // Set sender.Text. You can use args.SelectedItem to build your text string.
+            //sender.Text = args.SelectedItem.ToString();
+        }
 
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            if (args.ChosenSuggestion != null)
+            {
+                // User selected an item from the suggestion list, take an action on it here.
+            }
+            else
+            {
+                // User hit Enter from the search box. Use args.QueryText to determine what to do.
+            }
+        }
+
+        private void AutoSuggestBox_QuerySubmittedCant(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             if (args.ChosenSuggestion != null)
             {

@@ -22,6 +22,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Label
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
@@ -43,7 +44,8 @@
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="¿Como regresó?" x:Name="pkrRetorno">
+                <Picker FontSize="18"
+                FontFamily="Lobster-Regular" Title="¿Como regresó?" x:Name="pkrRetorno">
                     <Picker.Items>
                         <x:String>Directo dueño o vecino</x:String>
                         <x:String>Servicio Municipal o Control animal</x:String>
@@ -61,7 +63,7 @@
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
-                <Picker FontSize="Large" Title="¿En cual condición?" x:Name="pkrCondicion">
+                <Picker FontSize="18" FontFamily="Lobster-Regular" Title="¿En cual condición?" x:Name="pkrCondicion">
                      <Picker.Items>
                         <x:String>Buena</x:String>
                         <x:String>Deshidratada o Inanición</x:String>
@@ -76,7 +78,8 @@
                 BackgroundColor="#006561"
                 CornerRadius="16"
                 Clicked="onRegistraMascota"
-                FontSize="Medium"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"

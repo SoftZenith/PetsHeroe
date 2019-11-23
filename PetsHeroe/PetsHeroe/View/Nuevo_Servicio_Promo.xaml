@@ -32,6 +32,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Row="0"
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
@@ -42,7 +44,8 @@
             </input:AdvancedEntry>
 
             <Label
-                FontSize="20"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
                 HorizontalOptions="EndAndExpand"
@@ -51,6 +54,8 @@
                 VerticalOptions="CenterAndExpand">
             </Label>
             <DatePicker
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="3"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
@@ -60,7 +65,8 @@
             </DatePicker>
 
             <Label
-                FontSize="20"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
@@ -70,6 +76,8 @@
                 VerticalOptions="CenterAndExpand">
             </Label>
             <DatePicker
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="3"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
@@ -86,6 +94,8 @@
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Grid.ColumnSpan="6"
                     Grid.Row="3"
                     Title="Tipo de mascota"
@@ -101,6 +111,8 @@
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Title="Servicios"
                     x:Name="pkrServicio">
                 </Picker>
@@ -108,6 +120,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Row="5"
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
@@ -120,6 +134,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Row="6"
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
@@ -130,6 +146,8 @@
             </input:AdvancedEntry>
 
             <input:CheckBox
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="6"
                 Grid.Row="7"
                 Margin="16,0,16,0"
@@ -143,6 +161,8 @@
                 BorderWidth="2"
                 CornerRadius="16"
                 Clicked="onGuardarPromo"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="1"
                 Grid.ColumnSpan="4"
                 Grid.Row="8"

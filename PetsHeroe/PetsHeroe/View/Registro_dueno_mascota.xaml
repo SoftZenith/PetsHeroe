@@ -26,6 +26,8 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="0"
             IconImage="code.png"
             Margin="8,4,8,0"
@@ -41,7 +43,8 @@
             Grid.Column="0"
             Margin="8,0,8,0"
             Padding="4,4,0,4">
-            <Picker Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
+            <Picker FontSize="18"
+            FontFamily="Lobster-Regular" Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
         </Frame>
 
         <Frame
@@ -51,7 +54,8 @@
             Grid.Column="0"
             Margin="8,0,8,0"
             Padding="4,4,0,4">
-            <Picker Title="Raza" x:Name="pkrRazaMascota"></Picker>
+            <Picker FontSize="18"
+            FontFamily="Lobster-Regular" Title="Raza" x:Name="pkrRazaMascota"></Picker>
         </Frame>
 
         <Frame
@@ -61,11 +65,14 @@
             Grid.Column="0"
             Margin="8,0,8,0"
             Padding="4">
-            <Picker Title="Color" x:Name="pkrColorMascota"></Picker>
+            <Picker FontSize="18"
+            FontFamily="Lobster-Regular" Title="Color" x:Name="pkrColorMascota"></Picker>
         </Frame>
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="4"
             IconImage="pet.png"
             Keyboard="Text"
@@ -91,7 +98,8 @@
                 CornerRadius="20"
                 Padding="4"
                 HorizontalOptions="FillAndExpand">
-                <Picker HorizontalOptions="FillAndExpand" Title="Sexo" x:Name="pkrSexoMascota">
+                <Picker FontSize="18"
+            FontFamily="Lobster-Regular" HorizontalOptions="FillAndExpand" Title="Sexo" x:Name="pkrSexoMascota">
                     <Picker.Items>
                         <x:String>Macho</x:String>
                         <x:String>Hembra</x:String>
@@ -102,6 +110,8 @@
                 BorderColor="#FF7100"
                 IconImage="pet.png"
                 Keyboard="Numeric"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Padding="0"
                 Placeholder="Edad"
                 TextColor="black"
@@ -121,6 +131,8 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="6"
             IconImage="user.png"
             Margin="8,0"
@@ -146,6 +158,8 @@
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 HorizontalOptions="FillAndExpand"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 IconImage="user.png"
                 Margin="0"
                 Padding="0"
@@ -167,6 +181,8 @@
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 HorizontalOptions="FillAndExpand"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 IconImage="user.png"
                 Margin="0"
                 Placeholder="Materno(opcional)"
@@ -195,7 +211,8 @@
             Grid.Column="0"
             Margin="8,0,8,0"
             Padding="4">
-            <Picker Title="Sexo" x:Name="pkrSexoDueno">
+            <Picker FontSize="18"
+                    FontFamily="Lobster-Regular" Title="Sexo" x:Name="pkrSexoDueno">
                 <Picker.Items>
                     <x:String>Masculino</x:String>
                     <x:String>Femenino</x:String>
@@ -205,6 +222,8 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="9"
             IconImage="email.png"
             Keyboard="Email"
@@ -225,6 +244,8 @@
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
+            TextFontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="10"
             IconImage="password.png"
             IsPassword="True"
@@ -249,7 +270,8 @@
             BackgroundColor="#006561"
             CornerRadius="16"
             Clicked="onReg_dueno"
-            FontSize="Medium"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Row="11"
             Margin="24,0,24,4"
             Text="Registrar"

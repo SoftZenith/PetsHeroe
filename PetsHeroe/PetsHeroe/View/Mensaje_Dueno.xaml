@@ -31,6 +31,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="Nombre"
                 x:Name="txtNombre">
             </Entry>
@@ -45,6 +47,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Keyboard="Email"
                 Placeholder="Correo electronico"
                 x:Name="txtCorreo">
@@ -60,6 +64,8 @@
             Margin="16,0,16,0"
             Padding="0,4,0,0">
             <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Keyboard="Telephone"
                 Placeholder="Teléfono"
                 x:Name="txtTelefono">
@@ -75,6 +81,8 @@
             Margin="16,0,16,0"
             Padding="4">
             <Editor
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Placeholder="Notas..."
                 Keyboard="Text"
                 x:Name="txtMensaje">
@@ -87,12 +95,13 @@
             BorderColor="#FF7100"
             CornerRadius="16"
             Clicked="onMensaje"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Grid.Row="7"
             Margin="32,0,32,0"
             Text="Enviar mensaje"
-            FontSize="Medium"
             TextColor="White">
         </Button>
 

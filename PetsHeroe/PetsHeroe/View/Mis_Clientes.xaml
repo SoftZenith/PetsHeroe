@@ -17,10 +17,10 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
-                                <Label FontSize="16"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding codigoMiembro, StringFormat='Código: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding correo, StringFormat='Correo: {0}'}" />
-                                <Label FontSize="16"  Text="{Binding telefono, StringFormat='Telefono: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigoMiembro, StringFormat='Código: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='Correo: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding telefono, StringFormat='Telefono: {0}'}" />
                                 <BoxView
                                     VerticalOptions="FillAndExpand"
                                     HorizontalOptions="FillAndExpand"

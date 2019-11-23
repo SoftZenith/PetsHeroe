@@ -32,7 +32,6 @@ namespace PetsHeroe.View
                     idMascota = Convert.ToInt32(dr["IDPet"].ToString());
                     idMiembro = Convert.ToInt32(dr["IDMember"].ToString());
                 }
-
             }
 
 
@@ -63,7 +62,7 @@ namespace PetsHeroe.View
             }
 
             if (Convert.ToDouble(txtPuntosAplicar.Text) > puntos) {
-                await DisplayAlert("Error", "Valor invalido", "Ok");
+                await DisplayAlert("Error", "No puedes aplicar más puntos de los que tienes", "Ok");
                 return;
             }
         }

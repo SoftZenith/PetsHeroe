@@ -37,6 +37,8 @@
                 Margin="16,4,16,0"
                 Padding="4">
                 <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Title="Tipo asociado"
                     x:Name="pkrAsociado">
                 </Picker>
@@ -44,6 +46,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="1"
@@ -56,6 +60,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="2"
@@ -68,6 +74,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
@@ -80,6 +88,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="4"
@@ -97,7 +107,9 @@
                 Grid.Row="5"
                 Margin="16,0,16,0"
                 Padding="4">
-                <Picker 
+                <Picker
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
                     Title="Sexo"
                     x:Name="pkrSexo">
                     <Picker.Items>
@@ -109,6 +121,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"
@@ -139,6 +153,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="7"
@@ -153,6 +169,8 @@
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
+                TextFontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="8"
@@ -175,8 +193,9 @@
                     Color="#FF7100">
                 </CheckBox>
                 <Label
-                    FontSize="Medium"
-                    Margin="0,2,0,0"
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    Margin="0,8,0,0"
                     Text="He leído y estoy de acuerdo con los terminos y condiciones">
                 </Label>
             </StackLayout>
@@ -186,6 +205,8 @@
                 BackgroundColor="#004E55"
                 CornerRadius="16"
                 Clicked="onRegVet"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
                 Grid.Column="1"
                 Grid.Row="10"
                 Margin="0,8,0,0"
