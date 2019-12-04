@@ -14,6 +14,9 @@ namespace PetsHeroe.View
         private int idMascota = -1;
         private int idMiembro = -1;
         private double puntos = 0;
+        private double costoCompra = 0;
+        private int idTickerG = -1;
+        private ObservableCollection<Venta> listaVenta;
         
         public Pago_Venta(string codigoMascota, Double costo, ObservableCollection<Venta> listaCarrito)
         {
@@ -21,7 +24,8 @@ namespace PetsHeroe.View
 
             DataTable mascotasTbl = new DataTable();
             DataTable promocionesDueno = new DataTable();
-
+            idTickerG = -1;
+            listaVenta = listaCarrito;
             bool status = DependencyService.Get<IWebService>().getIdMascota_Busca(codigoMascota);
             if (status)
             {
@@ -34,7 +38,6 @@ namespace PetsHeroe.View
                 }
             }
 
-
             promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(idMiembro, -1, -1);
 
             foreach (DataRow dr in promocionesDueno.Rows)
@@ -45,6 +48,24 @@ namespace PetsHeroe.View
                 }
             }
 
+            if (puntos > 0)
+            {
+                lblPuntos.IsVisible = true;
+                lblSubTotal.IsVisible = true;
+                txtPuntosAplicar.IsVisible = true;
+                btnCancelPuntos.IsVisible = true;
+                lblDeseaAplicar.IsVisible = true;
+                lblLabelSubtotal.IsVisible = true;
+            } else {
+                lblPuntos.IsVisible = false;
+                lblSubTotal.IsVisible = false;
+                txtPuntosAplicar.IsVisible = false;
+                btnCancelPuntos.IsVisible = false;
+                lblDeseaAplicar.IsVisible = false;
+                lblLabelSubtotal.IsVisible = false;
+            }
+
+            costoCompra = costo;
             lblSubTotal.Text = costo.ToString();
             lblTotal.Text = costo.ToString();
             lblPuntos.Text = "Tienes "+puntos.ToString()+" puntos";
@@ -65,16 +86,42 @@ namespace PetsHeroe.View
                 await DisplayAlert("Error", "No puedes aplicar más puntos de los que tienes", "Ok");
                 return;
             }
+
+            costoCompra = costoCompra - Convert.ToDouble(txtPuntosAplicar.Text);
+            puntos = puntos - Convert.ToDouble(txtPuntosAplicar.Text);
+
+            lblApplied.IsVisible = true;
+            lblPuntosApplied.IsVisible = true;
+            btnCancelPuntos.IsVisible = true;
+
+            lblSubTotal.TextDecorations = TextDecorations.Strikethrough;
+            lblLabelSubtotal.TextDecorations = TextDecorations.Strikethrough;
         }
 
+        async void onCancelPuntos(object sender, EventArgs args) {
+            lblSubTotal.TextDecorations = TextDecorations.None;
+            lblLabelSubtotal.TextDecorations = TextDecorations.None;
+
+            lblApplied.IsVisible = false;
+            lblPuntosApplied.IsVisible = false;
+            btnCancelPuntos.IsVisible = false;
+        }
+            
         async void onPagar(object sender, EventArgs args) {
-            bool status = DependencyService.Get<IWebService>().ticketPaga(idMascota, 20, -1, Convert.ToDecimal(txtPuntosAplicar.Text));
+
+            foreach (Venta venta in listaVenta) {
+                DependencyService.Get<IWebService>().agregar_venta(idTickerG, idMascota, 20, venta.idProducto, venta.idServicio, venta.cantidad, venta.precio, out int idTicketOut, out int ventaResult); //
+                idTickerG = idTicketOut;
+            }
+
+            bool status = DependencyService.Get<IWebService>().ticketPaga(idMascota, 20, idTickerG, Convert.ToDecimal(txtPuntosAplicar.Text));
             if (status)
             {
-                DisplayAlert("Ok","Pago procesado correctamente","Ok");
+                await DisplayAlert("Ok","Pago procesado correctamente","Ok");
+                await Navigation.PopAsync();
             }
             else {
-                DisplayAlert("Ok", "Error al procesar pago", "Ok");
+                await DisplayAlert("Ok", "Error al procesar pago", "Ok");
             }
         }
 

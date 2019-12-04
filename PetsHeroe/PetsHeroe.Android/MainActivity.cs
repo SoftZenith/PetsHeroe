@@ -20,6 +20,7 @@ namespace PetsHeroe.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
             Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             //Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -65,5 +66,6 @@ namespace PetsHeroe.Droid
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

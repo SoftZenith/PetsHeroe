@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-    x:Class="PetsHeroe.View.Nuevo_Producto_Venta">
+    x:Class="PetsHeroe.View.Nuevo_Servicio_Venta">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -19,8 +19,8 @@
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Label
@@ -30,7 +30,7 @@
                 Grid.ColumnSpan="4"
                 Grid.Row="0"
                 HorizontalOptions="CenterAndExpand"
-                Text="Agregar nuevo Producto">
+                Text="Agregar nuevo servicio">
             </Label>
 
             <input:AdvancedEntry
@@ -41,9 +41,9 @@
                 Grid.Row="1"
                 IconImage="product.png"
                 Margin="8,4,8,0"
-                Placeholder="Nombre del producto"
+                Placeholder="Nombre del servicio"
                 TextColor="black"
-                x:Name="txtNombre">
+                x:Name="txtServicio">
             </input:AdvancedEntry>
 
             <input:AdvancedEntry
@@ -54,25 +54,10 @@
                 Grid.Row="2"
                 IconImage="code.png"
                 Margin="8,4,8,0"
-                Placeholder="UPC"
+                Placeholder="Código"
                 TextColor="black"
-                x:Name="txtUPC">
+                x:Name="txtCodigo">
             </input:AdvancedEntry>
-
-            <Button
-                FontSize="18"
-                FontFamily="Lobster-Regular"
-                Grid.Row="3"
-                Grid.ColumnSpan="4"
-                BackgroundColor="#006561"
-                BorderColor="#FF7100"
-                BorderWidth="1"
-                CornerRadius="16"
-                Clicked="onEscanear"
-                Margin="8,0"
-                Text="Escanear"
-                TextColor="White">
-            </Button>
 
             <Frame
                 BorderColor="#FF7100"
@@ -84,27 +69,11 @@
                 <Picker
                     FontSize="18"
                     FontFamily="Lobster-Regular"
-                    Title="Tipo"
-                    x:Name="pkrTipo">
+                    Title="Tipo de mascota"
+                    x:Name="pkrTipoMascota">
                     <Picker.SelectedIndex>0</Picker.SelectedIndex>
                 </Picker>
             </Frame>
-
-            <Frame
-                BorderColor="#FF7100"
-                CornerRadius="20"
-                Grid.ColumnSpan="4"
-                Grid.Row="5"
-                Margin="8,0,8,0"
-                Padding="4,4,4,4">
-                <Picker
-                    FontSize="18"
-                    FontFamily="Lobster-Regular"
-                    Title="Marca"
-                    x:Name="pkrMarcar">
-                </Picker>
-            </Frame>
-
 
             <Button
                 BackgroundColor="#006561"

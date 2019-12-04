@@ -31,6 +31,10 @@ namespace PetsHeroe.Services
 
         bool promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
         bool promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
+        bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
+        bool promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
+        bool promoProducto_Eliminar(int idPromocion);
+        bool promoServicio_Eliminar(int idPromocion);
         bool getIdMascota_Busca(string codigoMascota);
         int producto_Agrega(int idTipoProducto, int idMarca, string nombre, string UPC);
         bool ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);
@@ -56,7 +60,7 @@ namespace PetsHeroe.Services
         bool getMascota_Busca(int idMiembro);
         bool getCliente_Busca(int idMiembro, int idAsociado);
         bool getClientes_Busca(string codigo, string correo, string nombre);
-        bool setVeterinario_Registro(Asociado asociado);
+        Resultado setVeterinario_Registro(Asociado asociado);
         bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
         bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
         DataTable getPromoProductos_Busca(int idAsociado);

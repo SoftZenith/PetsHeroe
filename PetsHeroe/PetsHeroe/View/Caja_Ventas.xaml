@@ -12,6 +12,8 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="65"></RowDefinition>
@@ -25,12 +27,31 @@
                 <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
 
+            <Picker
+                IsVisible="false"
+                Title="Cantidad"
+                x:Name="pkrCantidad"
+                SelectedIndexChanged="pkrCantidadSelected">
+                <Picker.Items>
+                    <x:String>0</x:String>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
+                    <x:String>9</x:String>
+                </Picker.Items>
+            </Picker>
+
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
                 Grid.Row="0"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 IconImage="code.png"
                 Margin="8,8,8,0"
                 Placeholder="Código de mascota"
@@ -47,8 +68,8 @@
                 FontSize="14"
                 FontFamily="Lobster-Regular"
                 Grid.Row="0"
-                Grid.Column="3"
-                Grid.ColumnSpan="1"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
                 Margin="0,4,10,4"
                 Text="Escanear"
                 TextColor="White">
@@ -58,7 +79,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.Column="0"
-                Grid.ColumnSpan="4"
+                Grid.ColumnSpan="6"
                 Grid.Row="1"
                 Margin="8,0,8,0"
                 Padding="6">
@@ -86,7 +107,7 @@
 
             <Frame
                 Grid.Column="1"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 Grid.Row="2"
                 Padding="8"
                 BorderColor="#FF7100"
@@ -109,18 +130,19 @@
                 CornerRadius="20"
                 FontSize="14"
                 FontFamily="Lobster-Regular"
-                Grid.Column="3"
-                Grid.ColumnSpan="1"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
                 Grid.Row="2"
                 Margin="0,0,10,0"
                 TextColor="White"
-                Text="Escanear">
+                Text="Escanear"
+                x:Name="btnScanUPC">
             </Button>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 Grid.Row="3"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="4"
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
                 Keyboard="Numeric"
@@ -139,34 +161,37 @@
                 CornerRadius="20"
                 FontSize="16"
                 FontFamily="Lobster-Regular"
-                Grid.Column="3"
-                Grid.ColumnSpan="1"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
                 Grid.Row="3"
                 Margin="0,0,10,0"
                 TextColor="White"
                 Text="Agregar">
             </Button>
 
-            <ListView
-                BackgroundColor="White"
+            <Label
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Grid.Row="4"
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                HorizontalTextAlignment="Start"
+                FontAttributes="Bold"
+                Margin="16,0,0,0"
+                VerticalOptions="Center"
+                Text="Listado de compra">
+            </Label>
+            <ListView
+                BackgroundColor="White"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
+                Grid.Row="5"
                 Grid.RowSpan="4"
                 HasUnevenRows="True"
                 ItemsSource="{Binding ListaCarrito}"
+                ItemTapped="LsvCarrito_ItemTapped"
                 Margin="16,0,16,0"
                 x:Name="lsvCarrito">     
-                <ListView.Header>
-                    <Label
-                        FontSize="18"
-                        FontFamily="Lobster-Regular"
-                        HorizontalTextAlignment="Start"
-                        FontAttributes="Bold"
-                        Margin="16,0,0,0"
-                        Text="Listado de compra">
-                    </Label>
-                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -174,66 +199,33 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
                                     <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Text="{Binding nombre, StringFormat='{0}'}" />
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" HorizontalOptions="End" Text="{Binding precio, StringFormat='${0} MXN'}" />
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" Grid.Column="1" Grid.Row="1" HorizontalOptions="End" Text="{Binding puntos, StringFormat='{0} PTS'}" />
-                                    <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                                        <Label Margin="0,5,0,0" Text="Unidades: ">
+                                    <Image
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="1"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Source="{Binding imagen}">
+                                    </Image>
+                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Start" Text="{Binding nombre, StringFormat='{0}'}" />
+                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="End" Text="{Binding precio, StringFormat='${0} MXN'}" />
+                                    <Label FontSize="16"  FontFamily="Lobster-Regular" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="End" Text="{Binding puntos, StringFormat='{0} PTS'}" />
+                                    <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <Label Margin="0,0,0,4" FontFamily="Lobster-Regular" FontSize="16" Text="Cantidad: ">
                                         </Label>
-                                        <!--
-                                        <Button
-                                            Margin="0,0,0,5"
-                                            BorderColor="Black"
-                                            BorderWidth="1"
-                                            Clicked="btnMenos"
-                                            CommandParameter="{Binding idItem}"
-                                            Text="-"
-                                            FontSize="Title">
-                                        </Button>-->
                                         <Label
-                                            Margin="0,4,0,0"
+                                            FontFamily="Lobster-Regular"
+                                            FontSize="16"
+                                            Margin="0,0,0,4"
                                             Text="{Binding cantidad}">
                                         </Label>
-                                        <Picker
-                                            SelectedIndexChanged="pkrCantidadSelected"
-                                            BindingContext="{Binding idItem}">
-                                            <Picker.Items>
-                                                <x:String>1</x:String>
-                                                <x:String>2</x:String>
-                                                <x:String>3</x:String>
-                                                <x:String>4</x:String>
-                                                <x:String>5</x:String>
-                                                <x:String>6</x:String>
-                                                <x:String>7</x:String>
-                                                <x:String>8</x:String>
-                                                <x:String>9</x:String>
-                                            </Picker.Items>
-                                            <Picker.SelectedIndex>0</Picker.SelectedIndex>
-                                        </Picker>
-                                        <!--
-                                        <Entry
-                                            Keyboard="Numeric"
-                                            Text="{Binding cantidad}"
-                                            TextChanged="cantidad_TextChanged"
-                                            BindingContext="{Binding idItem}"
-                                            TextColor="Black">
-                                        </Entry>
-                                        -->
-                                        <!--
-                                        <Button
-                                            Margin="0,0,0,5"
-                                            BorderColor="Black"
-                                            BorderWidth="1"
-                                            Clicked="btnMas"
-                                            CommandParameter="{Binding idItem}"
-                                            Text="+"
-                                            FontSize="Title">
-                                        </Button>-->
                                     </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -243,14 +235,15 @@
 
             <StackLayout
                 Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="8"
+                Grid.ColumnSpan="6"
+                Grid.Row="9"
                 Grid.RowSpan="2"
                 Orientation="Vertical">
 
                 <Grid>
-
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
@@ -267,6 +260,7 @@
                         FontSize="18"
                         FontFamily="Lobster-Regular"
                         Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Grid.Row="0"
                         HorizontalTextAlignment="End"
                         Margin="0"
@@ -278,21 +272,21 @@
                         VerticalOptions="Center"
                         FontSize="18"
                         FontFamily="Lobster-Regular"
-                        Grid.Column="2"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
                         Grid.Row="0"
-                        HorizontalTextAlignment="Start"
-                        Margin="0"
+                        HorizontalTextAlignment="End"
+                        Margin="0,0,16,0"
                         Padding="0"
                         Text=""
                         x:Name="lblTotal">
-
                     </Label>
 
                     <Label
                         FontSize="18"
                         FontFamily="Lobster-Regular"
                         Grid.Column="0"
-                        Grid.ColumnSpan="2"
+                        Grid.ColumnSpan="3"
                         Grid.Row="2"
                         HorizontalTextAlignment="End"
                         Margin="0"
@@ -303,7 +297,7 @@
                     <Label
                         FontSize="18"
                         FontFamily="Lobster-Regular"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Grid.ColumnSpan="2"
                         Grid.Row="1"
                         HorizontalTextAlignment="End"
@@ -316,10 +310,11 @@
                     <Label
                         FontSize="18"
                         FontFamily="Lobster-Regular"
-                        Grid.Column="2"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
                         Grid.Row="2"
-                        HorizontalTextAlignment="Start"
-                        Margin="0"
+                        HorizontalTextAlignment="End"
+                        Margin="0,0,16,0"
                         Padding="0"
                         Text=""
                         x:Name="lblPuntos">
@@ -336,14 +331,14 @@
                 FontFamily="Lobster-Regular"
                 FontSize="18"
                 Grid.Column="1"
-                Grid.ColumnSpan="2"
-                Grid.Row="10"
+                Grid.ColumnSpan="4"
+                Grid.Row="11"
                 Margin="16,4,16,8"
                 TextColor="White"
                 Text="Continuar">
             </Button>
-
         </Grid>
         </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

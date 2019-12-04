@@ -81,40 +81,11 @@
                 x:Name="dpkrHasta">
             </DatePicker>
 
-            <input:AdvancedEntry
-                BorderColor="#FF7100"
-                TextFontSize="18"
-                FontFamily="Lobster-Regular"
-                Grid.Row="3"
-                Grid.ColumnSpan="4"
-                IconImage="code.png"
-                Margin="8,4,8,0"
-                Placeholder="Descripción ó UPC"
-                TextColor="black"
-                x:Name="txtBuscarE">
-            </input:AdvancedEntry>
-
-            <Button
-                FontSize="18"
-                FontFamily="Lobster-Regular"
-                Grid.Row="3"
-                Grid.Column="4"
-                Grid.ColumnSpan="2"
-                BackgroundColor="#006561"
-                BorderColor="#FF7100"
-                BorderWidth="1"
-                CornerRadius="16"
-                Clicked="onEscanear"
-                Margin="0,0,8,0"
-                Text="Escanear"
-                TextColor="White">
-            </Button>
-
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="4"
+                Grid.Row="3"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -129,7 +100,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="5"
+                Grid.Row="4"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -144,7 +115,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="6"
-                Grid.Row="6"
+                Grid.Row="5"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -159,7 +130,7 @@
                 BorderColor="#FF7100"
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
-                Grid.Row="7"
+                Grid.Row="6"
                 Grid.ColumnSpan="6"
                 IconImage="money.png"
                 Margin="8,0"
@@ -172,7 +143,7 @@
                 BorderColor="#FF7100"
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
-                Grid.Row="8"
+                Grid.Row="7"
                 Grid.ColumnSpan="6"
                 IconImage="electronic.png"
                 Keyboard="Numeric"
@@ -186,7 +157,7 @@
                 TextFontSize="18"
                 FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="6"
-                Grid.Row="9"
+                Grid.Row="8"
                 Margin="16,0,16,0"
                 Text="Activo"
                 x:Name="chkActivo">
@@ -200,7 +171,7 @@
                 CornerRadius="20"
                 FontSize="18"
                 FontFamily="Lobster-Regular"
-                Grid.Row="10"
+                Grid.Row="9"
                 Grid.Column="1"
                 Grid.ColumnSpan="4"
                 Margin="0,0,0,8"

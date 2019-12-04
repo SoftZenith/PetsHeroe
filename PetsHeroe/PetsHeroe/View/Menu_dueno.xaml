@@ -14,11 +14,10 @@
         <ToolbarItem IconImageSource="logout.png" Text="Salir" Clicked="onCerrarSesion" ></ToolbarItem>
     </TabbedPage.ToolbarItems>
     <TabbedPage.Children>
-        <Pages:Consulta_bene_dueno Title="" IconImageSource="gift.png"/>
-        <Pages1:Loc_Mascota Title="" IconImageSource="target_pet.png"/>
-        <Pages1:Masc_existentes Title="" IconImageSource="pet.png"/>
-        <Pages1:Consulta_CAMS Title="" IconImageSource="vet_cam.png"/>
-        <!--<Pages1:Loc_Mascota Title="" IconImageSource="lost.png"/>-->
+        <Pages:Consulta_bene_dueno Title="" IconImageSource="gift.png" Appearing="onAppearingBeneficios"/>
+        <Pages1:Loc_Mascota Title="" IconImageSource="target_pet.png" Appearing="onAppearingLocMascota"/>
+        <Pages1:Masc_existentes Title="" IconImageSource="pet.png" Appearing="onAppearingMascExisten"/>
+        <Pages1:Consulta_CAMS Title="" IconImageSource="vet_cam.png" Appearing="onAppearingCAMS"/>
     </TabbedPage.Children>
 
     <!--

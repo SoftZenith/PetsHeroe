@@ -274,13 +274,27 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-                <ListView
+
+                <input:AdvancedEntry
+                    FontFamily="Lobster-Regular"
+                    Grid.Column="0"
                     Grid.ColumnSpan="6"
                     Grid.Row="0"
+                    IconImage="search.png"
+                    Placeholder="Buscar..."
+                    TextColor="Black"
+                    TextFontSize="18"
+                    x:Name="txtBuscarServicios">
+                </input:AdvancedEntry>
+
+                <ListView
+                    Grid.ColumnSpan="6"
+                    Grid.Row="1"
                     Grid.RowSpan="8"
                     HasUnevenRows="True"
                     BackgroundColor="White"
-                    x:Name="lsvServicios">
+                    x:Name="lsvServicios"
+                    ItemsSource="{Binding ListaServicios}">
                 <ListView.Header>
                     <ContentView Padding="0,5" BackgroundColor="White">
                         <!--<Label FontSize="16" TextColor="Black" Text="Servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />-->

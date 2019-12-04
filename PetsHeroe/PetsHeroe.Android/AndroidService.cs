@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Threading.Tasks;
+using System.Web.Services.Protocols;
 using PetsHeroe.Droid;
 using PetsHeroe.Droid.mx.com.petshero;
 using PetsHeroe.Model;
@@ -40,7 +41,7 @@ namespace PetsHeroe.Droid
         public bool Entrega_Localizacion { get; set; }
         public DataTable Mascota_Busca { get; set; }
         public DataTable Cliente_Busca { get; set; }
-
+        
         wsPetsApp wsPets = new wsPetsApp();
 
         AuthHeader auth = new AuthHeader()
@@ -50,6 +51,7 @@ namespace PetsHeroe.Droid
             IDUsuario = 0,
             IPAddress = "0"
         };
+
 
         public void getCAM_busca(double lat, double lon, int kms)
         {
@@ -227,17 +229,40 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool setVeterinario_Registro(Asociado asociado)
+
+        public Resultado setVeterinario_Registro(Asociado asociado)
         {
             wsPets.AuthHeaderValue = auth;
-            try{
-                return wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
+            try
+            {
+                wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
                     asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
-            }catch (Exception ex){
-                Console.WriteLine("Error en registro: "+ex);
-                return false;
+                return new Resultado()
+                {
+                    status = true,
+                    errorMessage = ""
+                };
+            }
+            catch (SoapException ec)
+            {
+                string error = ec.Detail.InnerText;
+                return new Resultado()
+                {
+                    status = false,
+                    errorMessage = error
+                };
+            }
+            catch (Exception ex)
+            {
+                var error = "Ocurrio un error inesperado";
+                return new Resultado()
+                {
+                    status = false,
+                    errorMessage = error
+                };
             }
         }
+
 
         public Retorno setEntrega_SoloMensaje(MensajeDueno mensaje)
         {
@@ -465,6 +490,54 @@ namespace PetsHeroe.Droid
             }
             catch (Exception ex)
             {
+                return false;
+            }
+        }
+
+        public bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades) {
+
+            wsPets.AuthHeaderValue = auth;
+            try {
+                wsPets.PromoProductos_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }
+        }
+
+        public bool promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades) {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }    
+        }
+
+        public bool promoProducto_Eliminar(int idPromocion) {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoProductos_Elimina(idPromocion);
+                return true;
+            }
+            catch (Exception) {
+                return false;
+            }
+        }
+
+        public bool promoServicio_Eliminar(int idPromocion) {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Elimina(idPromocion);
+                return true;
+            }
+            catch (Exception) {
                 return false;
             }
         }

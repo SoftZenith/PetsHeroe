@@ -98,13 +98,15 @@ namespace PetsHeroe
                         return;
                     }
 
-                    status = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
+                    Resultado res = new Resultado();
 
-                    if (status){
+                    res = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
+
+                    if (res.status){
                         await DisplayAlert("OK", "Registro exitoso, te enviamos un enlace a tu correo para poder activar tu cuenta","OK");
                         await Navigation.PushAsync(new MainPage());
                     }else {
-                        await DisplayAlert("ERROR", "Ups parece que hubo un error revisa todos tus datos", "OK");
+                        await DisplayAlert("ERROR", res.errorMessage, "OK");
                     }
 
                 }

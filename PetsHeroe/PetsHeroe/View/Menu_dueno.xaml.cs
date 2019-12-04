@@ -20,6 +20,27 @@ namespace PetsHeroe
             tbMenuDueno.CurrentPage = tbMenuDueno.Children[tab];
         }
 
+        private void onAppearingBeneficios(object sender, EventArgs e)
+        {
+            tbMenuDueno.Title = "Beneficios";
+        }
+
+        private void onAppearingLocMascota(object sender, EventArgs e)
+        {
+            tbMenuDueno.Title = "¿Encontraste unas mascota?";
+        }
+
+        private void onAppearingMascExisten(object sender, EventArgs e)
+        {
+            tbMenuDueno.Title = "Mis Mascotas";
+        }
+
+        private void onAppearingCAMS(object sender, EventArgs e)
+        {
+            tbMenuDueno.Title = "Lista de CAMs";
+        }
+
+        /*
         async void onConsultaBene(object sender, EventArgs args) {
             await Navigation.PushAsync(new Consulta_bene_dueno());
         }
@@ -42,10 +63,9 @@ namespace PetsHeroe
 
         async void onReportarMascota(object sender, EventArgs args) {
             await Navigation.PushAsync(new Reg_Masc_Perdida());
-        }
+        }*/
 
         async void onCerrarSesion(object sender, EventArgs args) {
-
 
             Device.BeginInvokeOnMainThread(async () => {
                 var result = await this.DisplayAlert("Cerrar sesión", "¿Desea cerrar sesión?", "Si", "No");
@@ -57,7 +77,6 @@ namespace PetsHeroe
                     await Navigation.PushAsync(new MainPage());
                 }
             });
-
 
         }
 

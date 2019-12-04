@@ -15,7 +15,10 @@ namespace PetsHeroe.View
     {
         ObservableCollection<Promocion> listaProductos = new ObservableCollection<Promocion>();
         public ObservableCollection<Promocion> ListaProductos { get { return listaProductos; } set { listaProductos = value; } }
+        ObservableCollection<Promocion> listaServicios = new ObservableCollection<Promocion>();
+        public ObservableCollection<Promocion> ListaServicios { get { return listaServicios; } set { listaServicios = value; } }
         ObservableCollection<Promocion> listaProductosCompleto = new ObservableCollection<Promocion>();
+        ObservableCollection<Promocion> listaServiciosCompleto = new ObservableCollection<Promocion>();
         private int tipoBusqueda = -1, idMiembro = -1, puntos = 0;
         private string nombre = "", correo = "", codigo = "", usuario = "";
         private DataTable clientes = new DataTable();
@@ -26,9 +29,11 @@ namespace PetsHeroe.View
         private DataTable promoServiciosVet = new DataTable();
         IQRScanning scanningDepen;
 
+
+
+
         public Consulta_bene_vete()
         {
-
             InitializeComponent();
             tipoBusqueda = 2;
             pkrBuscarPor.SelectedIndex = tipoBusqueda;
@@ -41,7 +46,8 @@ namespace PetsHeroe.View
                 listaProductosCompleto = dataTableToListProductos();
                 lsvProductos.ItemsSource = listaProductos;
                 //ListaProductos = dataTableToListProductos();
-                lsvServicios.ItemsSource = dataTableToListServicios();
+                listaServiciosCompleto = dataTableToListServicios();
+                lsvServicios.ItemsSource = listaServicios;
 
             }
             catch (Exception ex) {
@@ -90,6 +96,13 @@ namespace PetsHeroe.View
             };
 
             txtBuscarLsv.TextChanged += TxtBuscarLsv_TextChanged;
+            txtBuscarServicios.TextChanged += TxtBuscarServicios_TextChanged;
+        }
+
+        private void TxtBuscarServicios_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            listaServicios = dataTableToListServicios(txtBuscarServicios.Text);
+            lsvServicios.ItemsSource = listaServicios;
         }
 
         private void TxtBuscarLsv_TextChanged(object sender, TextChangedEventArgs e)
@@ -220,6 +233,7 @@ namespace PetsHeroe.View
             {
                 Promocion promoTemp = new Promocion()
                 {
+                    idPromocion = Convert.ToInt32(dr["IDPartnerProduct"].ToString()),
                     nombre = dr["Name"].ToString(),
                     inicia = dr["StartDate"].ToString(),
                     vigencia = dr["EndDate"].ToString(),
@@ -258,7 +272,7 @@ namespace PetsHeroe.View
                     UPC = dr["UPC"].ToString()
                 };
 
-                if (promoTemp.nombre.Contains(texto)) {
+                if (promoTemp.nombre.ToUpper().Contains(texto.ToUpper())) {
                     promociones.Add(promoTemp);
                 }
             }
@@ -292,10 +306,36 @@ namespace PetsHeroe.View
 
         }
 
-        private List<Promocion> dataTableToListServicios()
+        private ObservableCollection<Promocion> dataTableToListServicios()
         {
 
-            List<Promocion> promociones = new List<Promocion>();
+            ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
+
+            foreach (DataRow dr in promoServiciosVet.Rows)
+            {
+                Promocion promoTemp = new Promocion()
+                {
+                    nombre = dr["Name"].ToString(),
+                    inicia = dr["StartDate"].ToString(),
+                    vigencia = dr["EndDate"].ToString(),
+                    tipo = dr["PetType"].ToString(),
+                    producto = dr["ServiceType"].ToString(),
+                    precio = Convert.ToDouble(dr["RegularPrice"]),
+                    compra = Convert.ToInt32(dr["Units"]),
+                    PartnerPrice = Convert.ToDouble(dr["PartnerPrice"])
+                };
+                listaServicios.Add(promoTemp);
+                promociones.Add(promoTemp);
+
+            }
+
+            return promociones;
+        }
+
+        private ObservableCollection<Promocion> dataTableToListServicios(string texto)
+        {
+
+            ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
             foreach (DataRow dr in promoServiciosVet.Rows)
             {
@@ -311,7 +351,10 @@ namespace PetsHeroe.View
                     PartnerPrice = Convert.ToDouble(dr["PartnerPrice"])
                 };
 
-                promociones.Add(promoTemp);
+                if (promoTemp.nombre.ToUpper().Contains(texto.ToUpper())) {
+                    listaServicios.Add(promoTemp);
+                    promociones.Add(promoTemp);
+                }
 
             }
 
@@ -342,7 +385,13 @@ namespace PetsHeroe.View
                 var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
                 if (result)
                 {
-                    
+                    bool status = DependencyService.Get<IWebService>().promoProducto_Eliminar(idPromocion);
+                    if (status) {
+                        await DisplayAlert("Eliminado","Se elimino correctamente","Ok");
+                    }
+                    else {
+                        await DisplayAlert("Error","No ha podido ser eliminado intente nuevamente","OK");
+                    }
                 }
             });
         }

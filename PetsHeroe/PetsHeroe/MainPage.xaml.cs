@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using PetsHeroe.Services;
+using PetsHeroe.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

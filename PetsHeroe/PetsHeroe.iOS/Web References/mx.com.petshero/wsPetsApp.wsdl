@@ -341,6 +341,33 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="PromoProductos_Modifica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioRegular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioPromo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Desde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_ModificaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PromoProductos_Elimina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoProductos_EliminaResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="PromoServicios_Busca">
         <s:complexType>
           <s:sequence>
@@ -385,6 +412,33 @@
             <s:element minOccurs="1" maxOccurs="1" name="PromoServicios_AgregaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_Modifica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioRegular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrecioPromo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Desde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_ModificaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PromoServicios_Elimina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromoServicios_EliminaResponse">
+        <s:complexType />
       </s:element>
       <s:element name="CAM_Busca">
         <s:complexType>
@@ -935,6 +989,24 @@
   <wsdl:message name="PromoProductos_AgregaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="PromoProductos_ModificaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoProductos_Modifica" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_ModificaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoProductos_ModificaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_ModificaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_EliminaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoProductos_Elimina" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_EliminaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoProductos_EliminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoProductos_EliminaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="PromoServicios_BuscaSoapIn">
     <wsdl:part name="parameters" element="tns:PromoServicios_Busca" />
   </wsdl:message>
@@ -951,6 +1023,24 @@
     <wsdl:part name="parameters" element="tns:PromoServicios_AgregaResponse" />
   </wsdl:message>
   <wsdl:message name="PromoServicios_AgregaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_ModificaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoServicios_Modifica" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_ModificaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoServicios_ModificaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_ModificaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_EliminaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromoServicios_Elimina" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_EliminaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromoServicios_EliminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromoServicios_EliminaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
   <wsdl:message name="CAM_BuscaSoapIn">
@@ -1207,6 +1297,16 @@
       <wsdl:input message="tns:PromoProductos_AgregaSoapIn" />
       <wsdl:output message="tns:PromoProductos_AgregaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Modifica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modifica Promoción de Productos</wsdl:documentation>
+      <wsdl:input message="tns:PromoProductos_ModificaSoapIn" />
+      <wsdl:output message="tns:PromoProductos_ModificaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Elimina">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina Promoción de Productos</wsdl:documentation>
+      <wsdl:input message="tns:PromoProductos_EliminaSoapIn" />
+      <wsdl:output message="tns:PromoProductos_EliminaSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="PromoServicios_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las Promociones de Servicios vigentes por Asociado</wsdl:documentation>
       <wsdl:input message="tns:PromoServicios_BuscaSoapIn" />
@@ -1216,6 +1316,16 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega Promoción por Servicios</wsdl:documentation>
       <wsdl:input message="tns:PromoServicios_AgregaSoapIn" />
       <wsdl:output message="tns:PromoServicios_AgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Modifica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modifica Promoción por Servicios</wsdl:documentation>
+      <wsdl:input message="tns:PromoServicios_ModificaSoapIn" />
+      <wsdl:output message="tns:PromoServicios_ModificaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Elimina">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina Promoción por Servicios</wsdl:documentation>
+      <wsdl:input message="tns:PromoServicios_EliminaSoapIn" />
+      <wsdl:output message="tns:PromoServicios_EliminaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="CAM_Busca">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de CAMs por Asociado o ubicación</wsdl:documentation>
@@ -1490,6 +1600,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Modifica">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoProductos_Modifica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoProductos_ModificaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Elimina">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoProductos_Elimina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoProductos_EliminaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="PromoServicios_Busca">
       <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
       <wsdl:input>
@@ -1505,6 +1635,26 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:PromoServicios_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Modifica">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Modifica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoServicios_ModificaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Elimina">
+      <soap:operation soapAction="http://www.petshero.com.mx/PromoServicios_Elimina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PromoServicios_EliminaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1879,6 +2029,26 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Modifica">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoProductos_Modifica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoProductos_ModificaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoProductos_Elimina">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoProductos_Elimina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoProductos_EliminaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="PromoServicios_Busca">
       <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Busca" style="document" />
       <wsdl:input>
@@ -1894,6 +2064,26 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:PromoServicios_AgregaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Modifica">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Modifica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoServicios_ModificaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromoServicios_Elimina">
+      <soap12:operation soapAction="http://www.petshero.com.mx/PromoServicios_Elimina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PromoServicios_EliminaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

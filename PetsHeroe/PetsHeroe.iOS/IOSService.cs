@@ -7,6 +7,7 @@ using Plugin.Permissions.Abstractions;
 using Plugin.Permissions;
 using System.Threading.Tasks;
 using PetsHeroe.Services;
+using System.Web.Services.Protocols;
 
 [assembly: Xamarin.Forms.Dependency(typeof(IOSService))]
 namespace PetsHeroe.iOS
@@ -219,16 +220,33 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public bool setVeterinario_Registro(Asociado asociado)
+        public Resultado setVeterinario_Registro(Asociado asociado)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                return wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
+                wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
                     asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
+                return new Resultado(){
+                    status = true,
+                    errorMessage = ""
+                };
+            }catch (SoapException ec)
+            {
+                string error = ec.Detail.InnerText;
+                return new Resultado() {
+                    status = false,
+                    errorMessage = error
+                };
             }
-            catch (Exception) {
-                return false;
+            catch (Exception ex)
+            {
+                var error = "Ocurrio un error inesperado";
+                return new Resultado()
+                {
+                    status = false,
+                    errorMessage = error
+                };
             }
         }
 
@@ -245,7 +263,7 @@ namespace PetsHeroe.iOS
             }catch (Exception ex){
                 int indexSoap = ex.ToString().IndexOf("SoapException:");
                 string error = ex.ToString().Substring(indexSoap);
-                int indexPoint = error.IndexOf(".");
+                int indexPoint = error.IndexOf("\r\n");
                 error = ex.ToString().Substring(24, indexPoint);
                 Console.WriteLine("Error al registrar mascota: "+error);
                 Mascota_Registro = false;
@@ -472,7 +490,7 @@ namespace PetsHeroe.iOS
             wsPets.AuthHeaderValue = auth;
             try
             {
-                wsPets.PromoProductos_Agrega(idAsociado, idProducto, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                wsPets.PromoProductos_Agrega(idAsociado, idProducto, nombre, precioRegular, precioPromo, desde.Date, hasta.Date, puntos, unidades);
                 return true;
             }
             catch (Exception ex)
@@ -492,5 +510,63 @@ namespace PetsHeroe.iOS
                 return false;
             }
         }
+
+        public bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
+        {
+
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoProductos_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool promoProducto_Eliminar(int idPromocion)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoProductos_Elimina(idPromocion);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool promoServicio_Eliminar(int idPromocion)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Elimina(idPromocion);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

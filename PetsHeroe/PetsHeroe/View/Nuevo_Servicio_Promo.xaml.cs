@@ -97,7 +97,8 @@ namespace PetsHeroe.View
                 return;
             }
 
-            bool status = DependencyService.Get<IWebService>().promoServicio_Agregar(-1, IdServicio, "", 0, 0, DateTime.Now, DateTime.Now, 0, 0);
+
+            bool status = DependencyService.Get<IWebService>().promoServicio_Agregar(-1, IdServicio, "", 0, 0, txtAPartir.Date, txtHasta.Date, 0, 0);
             
 
         }

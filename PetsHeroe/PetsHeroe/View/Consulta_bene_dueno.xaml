@@ -4,20 +4,9 @@
              x:Class="PetsHeroe.View.Consulta_bene_dueno"
              Title="Consulta de beneficios">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="" IconImageSource="money.png" Padding="8">
+  <ContentPage Title="EDO CUENTA" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
-          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label
-                       FontFamily="Lobster-Regular"
-                       FontSize="18"
-                       HorizontalTextAlignment="Center"
-                       Text="Estado de cuenta"
-                       TextColor="Black"
-                       VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>     
+          <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">   
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -50,14 +39,9 @@
         </ListView>
       </ContentPage.Content>
   </ContentPage>
-  <ContentPage Title="" IconImageSource="service.png" Padding="8">
+  <ContentPage Title="SERVICIOS" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
-            <ListView.Header>
-                <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontFamily="Lobster-Regular" FontSize="18" TextColor="Black" Text="Beneficios en servicios" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                </ContentView>
-            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

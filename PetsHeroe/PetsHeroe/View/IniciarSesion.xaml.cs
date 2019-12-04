@@ -17,6 +17,8 @@ namespace PetsHeroe
 
             var forgetPassword_tap = new TapGestureRecognizer();
 
+            txtUsuario.Completed += TxtPassword_Completed;
+
             forgetPassword_tap.Tapped += (s, e) =>
             {
                 var correo = "";
@@ -44,6 +46,11 @@ namespace PetsHeroe
             };
 
             lblOlvide.GestureRecognizers.Add(forgetPassword_tap);
+        }
+
+        private void TxtPassword_Completed(object sender, EventArgs e)
+        {
+
         }
 
         async void onEntrar(object sender, EventArgs args)

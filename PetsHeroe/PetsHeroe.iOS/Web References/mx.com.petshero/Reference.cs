@@ -19,7 +19,7 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="wsPetsAppSoap", Namespace="http://www.petshero.com.mx")]
@@ -61,9 +61,17 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback PromoProductos_AgregaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback PromoProductos_ModificaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoProductos_EliminaOperationCompleted;
+        
         private System.Threading.SendOrPostCallback PromoServicios_BuscaOperationCompleted;
         
         private System.Threading.SendOrPostCallback PromoServicios_AgregaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoServicios_ModificaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PromoServicios_EliminaOperationCompleted;
         
         private System.Threading.SendOrPostCallback CAM_BuscaOperationCompleted;
         
@@ -166,10 +174,22 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         public event PromoProductos_AgregaCompletedEventHandler PromoProductos_AgregaCompleted;
         
         /// <remarks/>
+        public event PromoProductos_ModificaCompletedEventHandler PromoProductos_ModificaCompleted;
+        
+        /// <remarks/>
+        public event PromoProductos_EliminaCompletedEventHandler PromoProductos_EliminaCompleted;
+        
+        /// <remarks/>
         public event PromoServicios_BuscaCompletedEventHandler PromoServicios_BuscaCompleted;
         
         /// <remarks/>
         public event PromoServicios_AgregaCompletedEventHandler PromoServicios_AgregaCompleted;
+        
+        /// <remarks/>
+        public event PromoServicios_ModificaCompletedEventHandler PromoServicios_ModificaCompleted;
+        
+        /// <remarks/>
+        public event PromoServicios_EliminaCompletedEventHandler PromoServicios_EliminaCompleted;
         
         /// <remarks/>
         public event CAM_BuscaCompletedEventHandler CAM_BuscaCompleted;
@@ -788,6 +808,78 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoProductos_Modifica", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void PromoProductos_Modifica(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.Invoke("PromoProductos_Modifica", new object[] {
+                        ID,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades});
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_ModificaAsync(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.PromoProductos_ModificaAsync(ID, Nombre, PrecioRegular, PrecioPromo, Desde, Hasta, Puntos, Unidades, null);
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_ModificaAsync(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades, object userState) {
+            if ((this.PromoProductos_ModificaOperationCompleted == null)) {
+                this.PromoProductos_ModificaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoProductos_ModificaOperationCompleted);
+            }
+            this.InvokeAsync("PromoProductos_Modifica", new object[] {
+                        ID,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades}, this.PromoProductos_ModificaOperationCompleted, userState);
+        }
+        
+        private void OnPromoProductos_ModificaOperationCompleted(object arg) {
+            if ((this.PromoProductos_ModificaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoProductos_ModificaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoProductos_Elimina", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void PromoProductos_Elimina(int ID) {
+            this.Invoke("PromoProductos_Elimina", new object[] {
+                        ID});
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_EliminaAsync(int ID) {
+            this.PromoProductos_EliminaAsync(ID, null);
+        }
+        
+        /// <remarks/>
+        public void PromoProductos_EliminaAsync(int ID, object userState) {
+            if ((this.PromoProductos_EliminaOperationCompleted == null)) {
+                this.PromoProductos_EliminaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoProductos_EliminaOperationCompleted);
+            }
+            this.InvokeAsync("PromoProductos_Elimina", new object[] {
+                        ID}, this.PromoProductos_EliminaOperationCompleted, userState);
+        }
+        
+        private void OnPromoProductos_EliminaOperationCompleted(object arg) {
+            if ((this.PromoProductos_EliminaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoProductos_EliminaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Busca", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataTable PromoServicios_Busca(int IDAsociado, int IDTipoMascota, int IDServicio) {
             object[] results = this.Invoke("PromoServicios_Busca", new object[] {
@@ -863,6 +955,78 @@ namespace PetsHeroe.iOS.mx.com.petshero {
             if ((this.PromoServicios_AgregaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.PromoServicios_AgregaCompleted(this, new PromoServicios_AgregaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Modifica", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void PromoServicios_Modifica(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.Invoke("PromoServicios_Modifica", new object[] {
+                        ID,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades});
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_ModificaAsync(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades) {
+            this.PromoServicios_ModificaAsync(ID, Nombre, PrecioRegular, PrecioPromo, Desde, Hasta, Puntos, Unidades, null);
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_ModificaAsync(int ID, string Nombre, decimal PrecioRegular, decimal PrecioPromo, System.DateTime Desde, System.DateTime Hasta, int Puntos, int Unidades, object userState) {
+            if ((this.PromoServicios_ModificaOperationCompleted == null)) {
+                this.PromoServicios_ModificaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoServicios_ModificaOperationCompleted);
+            }
+            this.InvokeAsync("PromoServicios_Modifica", new object[] {
+                        ID,
+                        Nombre,
+                        PrecioRegular,
+                        PrecioPromo,
+                        Desde,
+                        Hasta,
+                        Puntos,
+                        Unidades}, this.PromoServicios_ModificaOperationCompleted, userState);
+        }
+        
+        private void OnPromoServicios_ModificaOperationCompleted(object arg) {
+            if ((this.PromoServicios_ModificaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoServicios_ModificaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/PromoServicios_Elimina", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void PromoServicios_Elimina(int ID) {
+            this.Invoke("PromoServicios_Elimina", new object[] {
+                        ID});
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_EliminaAsync(int ID) {
+            this.PromoServicios_EliminaAsync(ID, null);
+        }
+        
+        /// <remarks/>
+        public void PromoServicios_EliminaAsync(int ID, object userState) {
+            if ((this.PromoServicios_EliminaOperationCompleted == null)) {
+                this.PromoServicios_EliminaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPromoServicios_EliminaOperationCompleted);
+            }
+            this.InvokeAsync("PromoServicios_Elimina", new object[] {
+                        ID}, this.PromoServicios_EliminaOperationCompleted, userState);
+        }
+        
+        private void OnPromoServicios_EliminaOperationCompleted(object arg) {
+            if ((this.PromoServicios_EliminaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PromoServicios_EliminaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1667,7 +1831,7 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1693,11 +1857,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void ValidaUsuarioCompletedEventHandler(object sender, ValidaUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ValidaUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1751,15 +1915,15 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void EnviaContrasenaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Pais_BuscaCompletedEventHandler(object sender, Pais_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Pais_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1781,11 +1945,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Estado_BuscaCompletedEventHandler(object sender, Estado_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Estado_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1807,11 +1971,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Ciudad_BuscaCompletedEventHandler(object sender, Ciudad_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Ciudad_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1833,11 +1997,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void MascotaTipo_BuscaCompletedEventHandler(object sender, MascotaTipo_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MascotaTipo_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1859,11 +2023,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void MascotaRaza_BuscaCompletedEventHandler(object sender, MascotaRaza_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MascotaRaza_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1885,11 +2049,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void MascotaColor_BuscaCompletedEventHandler(object sender, MascotaColor_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MascotaColor_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1911,11 +2075,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void MascotaEstatus_BuscaCompletedEventHandler(object sender, MascotaEstatus_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MascotaEstatus_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1937,11 +2101,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TipoProducto_BuscaCompletedEventHandler(object sender, TipoProducto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TipoProducto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1963,11 +2127,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void MarcaProducto_BuscaCompletedEventHandler(object sender, MarcaProducto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaProducto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1989,11 +2153,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Producto_AgregaCompletedEventHandler(object sender, Producto_AgregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Producto_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2015,11 +2179,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Producto_BuscaCompletedEventHandler(object sender, Producto_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Producto_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2041,11 +2205,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Servicio_AgregaCompletedEventHandler(object sender, Servicio_AgregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Servicio_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2067,11 +2231,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Servicio_BuscaCompletedEventHandler(object sender, Servicio_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Servicio_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2093,11 +2257,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void PromoProductos_BuscaCompletedEventHandler(object sender, PromoProductos_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PromoProductos_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2119,11 +2283,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void PromoProductos_AgregaCompletedEventHandler(object sender, PromoProductos_AgregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PromoProductos_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2145,11 +2309,19 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
+    public delegate void PromoProductos_ModificaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
+    public delegate void PromoProductos_EliminaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void PromoServicios_BuscaCompletedEventHandler(object sender, PromoServicios_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PromoServicios_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2171,11 +2343,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void PromoServicios_AgregaCompletedEventHandler(object sender, PromoServicios_AgregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PromoServicios_AgregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2197,11 +2369,19 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
+    public delegate void PromoServicios_ModificaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
+    public delegate void PromoServicios_EliminaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void CAM_BuscaCompletedEventHandler(object sender, CAM_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CAM_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2223,11 +2403,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TipoAsociado_BuscaCompletedEventHandler(object sender, TipoAsociado_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TipoAsociado_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2249,11 +2429,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Cliente_BuscaCompletedEventHandler(object sender, Cliente_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Cliente_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2275,11 +2455,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Veterinario_RegistroCompletedEventHandler(object sender, Veterinario_RegistroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Veterinario_RegistroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2309,11 +2489,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Mascota_BuscaCompletedEventHandler(object sender, Mascota_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Mascota_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2335,11 +2515,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Mascota_RegistroCompletedEventHandler(object sender, Mascota_RegistroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Mascota_RegistroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2393,15 +2573,15 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Mascota_IncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Codigo_ValidaCompletedEventHandler(object sender, Codigo_ValidaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Codigo_ValidaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2447,27 +2627,27 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Codigo_LeidoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Entrega_CAMCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Entrega_LocalizacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void Entrega_SoloMensajeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void PuntosPromociones_BuscaCompletedEventHandler(object sender, PuntosPromociones_BuscaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PuntosPromociones_BuscaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2489,11 +2669,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TicketUltimoCompletedEventHandler(object sender, TicketUltimoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TicketUltimoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2515,11 +2695,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TicketCargaCompletedEventHandler(object sender, TicketCargaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TicketCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2541,11 +2721,11 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void VentaCompletedEventHandler(object sender, VentaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class VentaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2575,18 +2755,18 @@ namespace PetsHeroe.iOS.mx.com.petshero {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void VentaCambiaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void VentaCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TicketCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.7.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.10.2")]
     public delegate void TicketPagaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
