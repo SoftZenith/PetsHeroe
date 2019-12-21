@@ -278,7 +278,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="IDServicio" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDTipoMascota" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Promociones" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -331,6 +331,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activa" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -352,6 +353,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activa" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -403,6 +405,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activa" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -424,6 +427,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="Hasta" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="Puntos" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activa" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
