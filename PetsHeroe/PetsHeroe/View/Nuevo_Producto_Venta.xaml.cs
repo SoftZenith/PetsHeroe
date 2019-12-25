@@ -100,6 +100,7 @@ namespace PetsHeroe.View
             if (DependencyService.Get<IWebService>().producto_Agrega(idTipoProducto, idMarcaProducto, txtNombre.Text, txtUPC.Text) > 0)
             {
                 await DisplayAlert("OK", "Se agrego correctamente", "Ok");
+                await Navigation.PopAsync();
             }
             else {
                 await DisplayAlert("Error","No se pudo agregar intenta con otro ","Ok");

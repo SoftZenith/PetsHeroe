@@ -5,6 +5,7 @@
              x:Class="PetsHeroe.View.Consulta_bene_vete">
   <ContentPage Title="Edo cuenta" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -16,16 +17,12 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
             <Entry
                 BackgroundColor="White"
@@ -33,7 +30,7 @@
                 FontSize="18"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="2"
+                Grid.Row="1"
                 Placeholder="Buscar..."
                 TextColor="Black"
                 x:Name="txtBuscar"></Entry>
@@ -43,7 +40,7 @@
                 FontSize="18"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Grid.Row="1"
+                Grid.Row="0"
                 TextColor="Black"
                 Title="Buscar por..."
                 x:Name="pkrBuscarPor">
@@ -63,41 +60,48 @@
                 FontSize="18"
                 Grid.Column="3"
                 Grid.ColumnSpan="1"
-                Grid.Row="2"
+                Grid.Row="1"
                 Text="Buscar"
                 TextColor="White">
             </Button>
-            <ListView
-                BackgroundColor="White"
+            <Frame
+                BorderColor="#FF7100"
                 Grid.ColumnSpan="4"
-                Grid.Row="3"
-                Grid.RowSpan="6"
-                Margin="0,0,0,0"
-                x:Name="lsvResultados">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="65"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Column="0" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding mascostaCodigo, StringFormat='{0}'}"></Label>
-                                <Label Grid.Column="1" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding nombre, StringFormat='{0}'}"></Label>
-                                <Label Grid.Column="2" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='{0}'}"></Label>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                Grid.Row="2"
+                Grid.RowSpan="2"
+                Margin="4"
+                Padding="0"
+                IsVisible="false"
+                x:Name="frmResultados">
+                <ListView
+                    BackgroundColor="White"
+                    x:Name="lsvResultados"
+                    IsVisible="false">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="65"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding mascostaCodigo, StringFormat='{0}'}"></Label>
+                                    <Label Grid.Column="1" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding nombre, StringFormat='{0}'}"></Label>
+                                    <Label Grid.Column="2" FontSize="12" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='{0}'}"></Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
             <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Grid.Row="10"
+                Grid.Row="4"
                 Orientation="Vertical">
                 <Label
                     FontFamily="Lobster-Regular"
@@ -112,7 +116,50 @@
                     x:Name="txtPuntos">
                 </Label>
             </StackLayout>
+            <Frame
+                BorderColor="#FF7100"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.Row="5"
+                Grid.RowSpan="3"
+                IsVisible="false"
+                Padding="0"
+                x:Name="frmHistorial">
+                <ListView HasUnevenRows="True" BackgroundColor="White" IsVisible="false" x:Name="lsvServiciosDueno">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding partner, StringFormat='CAM: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding mascota, StringFormat='Mascota: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding descripcion, StringFormat='Descripción: {0}'}" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='{0} '}" />
+                                        <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding compra, StringFormat='de {0} '}" />
+                                        <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='para 1 gratis'}" />
+                                    </StackLayout>
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding vigencia, StringFormat='Hasta el: {0}'}" />
+                                    <BoxView
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       HeightRequest="1"  
+                                       Color="#000000"></BoxView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Frame>
         </Grid>
+        </ScrollView>
       </ContentPage.Content>
   </ContentPage>
 <!--***************************************************************************************************************************-->
@@ -130,15 +177,15 @@
                   <ColumnDefinition></ColumnDefinition>
               </Grid.ColumnDefinitions>
               <Grid.RowDefinitions>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
-                  <RowDefinition></RowDefinition>
+                  <RowDefinition Height="50"></RowDefinition>
+                  <RowDefinition Height="50"></RowDefinition>
+                  <RowDefinition Height="50"></RowDefinition>
+                  <RowDefinition Height="50"></RowDefinition>
+                  <RowDefinition ></RowDefinition>
+                  <RowDefinition ></RowDefinition>
+                  <RowDefinition ></RowDefinition>
+                  <RowDefinition ></RowDefinition>
+                  <RowDefinition Height="50"></RowDefinition>
               </Grid.RowDefinitions>
 
           <input:AdvancedEntry
@@ -175,6 +222,7 @@
               HasUnevenRows="True"
               BackgroundColor="White"
               ItemsSource="{Binding ListaProductos}"
+              IsPullToRefreshEnabled="True"
               x:Name="lsvProductos">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -238,7 +286,8 @@
             BorderWidth="2"
             BackgroundColor="#006561"
             CornerRadius="16"
-
+            FontFamily="Lobster-Regular"
+            FontSize="18"
             Grid.Column="1"
             Grid.ColumnSpan="4"
             Grid.Row="8"
@@ -256,6 +305,7 @@
       <ContentPage.Content>
           <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -263,8 +313,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -290,10 +339,11 @@
                 <ListView
                     Grid.ColumnSpan="6"
                     Grid.Row="1"
-                    Grid.RowSpan="8"
+                    Grid.RowSpan="7"
                     HasUnevenRows="True"
                     BackgroundColor="White"
                     x:Name="lsvServicios"
+                    IsPullToRefreshEnabled="True"
                     ItemsSource="{Binding ListaServicios}">
                 <ListView.Header>
                     <ContentView Padding="0,5" BackgroundColor="White">
@@ -335,7 +385,7 @@
                                             </Button>
                                             <Button
                                                 Clicked="ServicioSelectedDelete"
-                                                CommandParameter="{Binding idPromocion}"
+                                                CommandParameter="{Binding .}"
                                                 FontSize="16"
                                                 FontFamily="Lobster-Regular"
                                                 ImageSource="delete.png"

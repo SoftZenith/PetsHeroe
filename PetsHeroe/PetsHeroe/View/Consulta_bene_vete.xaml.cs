@@ -29,12 +29,32 @@ namespace PetsHeroe.View
         private DataTable promoServiciosVet = new DataTable();
         IQRScanning scanningDepen;
 
-
-
-
         public Consulta_bene_vete()
         {
             InitializeComponent();
+
+            lsvProductos.RefreshCommand = new Command(() => {
+                lsvProductos.IsRefreshing = true;
+                listaProductosCompleto.Clear();
+                listaProductos.Clear();
+                promoProductosVet.Clear();
+                promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
+                listaProductosCompleto = dataTableToListProductos();
+                lsvProductos.ItemsSource = listaProductos;
+                lsvProductos.IsRefreshing = false;
+            });
+
+            lsvServicios.RefreshCommand = new Command(() => {
+                lsvServicios.IsRefreshing = true;
+                listaServiciosCompleto.Clear();
+                ListaServicios.Clear();
+                promoServiciosVet.Clear();
+                promoServiciosVet = DependencyService.Get<IWebService>().getPromoServicios_Busca(Preferences.Get("idAsociado", -1));
+                listaServiciosCompleto = dataTableToListServicios();
+                lsvServicios.ItemsSource = listaServicios;
+                lsvServicios.IsRefreshing = false;
+            });
+
             tipoBusqueda = 2;
             pkrBuscarPor.SelectedIndex = tipoBusqueda;
             scanningDepen = DependencyService.Get<IQRScanning>();
@@ -86,6 +106,8 @@ namespace PetsHeroe.View
                     txtNombre.Text = " Nombre: " + usuario;
                     txtPuntos.Text = " Puntos: " + puntos;
                     puntos = 0;
+                    lsvServiciosDueno.IsVisible = true;
+                    lsvServiciosDueno.ItemsSource = dataTableToListServicioDueno();
                 }
                 catch (Exception ex)
                 {
@@ -97,6 +119,43 @@ namespace PetsHeroe.View
 
             txtBuscarLsv.TextChanged += TxtBuscarLsv_TextChanged;
             txtBuscarServicios.TextChanged += TxtBuscarServicios_TextChanged;
+        }
+
+        private List<Promocion> dataTableToListServicioDueno()
+        {
+
+            List<Promocion> promociones = new List<Promocion>();
+
+            foreach (DataRow dr in promocionesDueno.Rows)
+            {
+                Promocion promoTemp = new Promocion()
+                {
+                    idPromocion = Convert.ToInt32(dr["ID"]),
+                    partner = dr["Partner"].ToString(),
+                    mascota = dr["Pet"].ToString(),
+                    descripcion = dr["Descrip"].ToString(),
+                    puntos = Convert.ToInt32(dr["PointsActive"]),
+                    compra = Convert.ToInt32(dr["UnitsTotal"]),
+                    gratis = Convert.ToInt32(dr["UnitsBought"]),
+                    vigencia = dr["Vigency"].ToString(),
+                    esDineroElectr = Convert.ToBoolean(dr["IsPoints"])
+                };
+
+                if (!promoTemp.esDineroElectr)
+                {
+                    promociones.Add(promoTemp);
+                }
+            }
+
+            return promociones;
+
+        }
+
+        protected override void OnAppearing()
+        {
+            lsvProductos.BeginRefresh();
+            lsvServicios.BeginRefresh();
+            base.OnAppearing();
         }
 
         private void TxtBuscarServicios_TextChanged(object sender, TextChangedEventArgs e)
@@ -114,6 +173,8 @@ namespace PetsHeroe.View
         public void onBuscar(object sender, EventArgs args) {
             resultados.Clear();
             MiembroDic.Clear();
+            txtNombre.IsVisible = false;
+            txtPuntos.IsVisible = false;
             if (tipoBusqueda < 0) {
                 DisplayAlert("Error", "Seleccionar el tipo de busqueda", "Ok");
                 return;
@@ -152,6 +213,10 @@ namespace PetsHeroe.View
                 if (clientes.Rows.Count <= 0) {
                     lsvResultados.ItemsSource = null;
                     DisplayAlert("Error","No se encontro ningún cliente","Ok");
+                    frmResultados.IsVisible = false;
+                    frmHistorial.IsVisible = false;
+                    lsvResultados.IsVisible = false;
+                    lsvServiciosDueno.IsVisible = false;
                     return;
                 }
 
@@ -166,6 +231,10 @@ namespace PetsHeroe.View
                     DisplayAlert("Encontrado", "Un resultado de la busqueda", "Ok");
                     txtNombre.IsVisible = true;
                     txtPuntos.IsVisible = true;
+                    frmResultados.IsVisible = false;
+                    lsvResultados.IsVisible = false;
+                    frmHistorial.IsVisible = true;
+                    lsvServiciosDueno.IsVisible = true;
                 }
                 else {
                     MiembroDic.Clear();
@@ -179,7 +248,9 @@ namespace PetsHeroe.View
                             correo = dr["EMail"].ToString()
                         });
                     }
-
+                    frmHistorial.IsVisible = true;
+                    frmResultados.IsVisible = true;
+                    lsvResultados.IsVisible = true;
                     lsvResultados.ItemsSource = resultados;
 
                     DisplayAlert("Selecciona","Más de un resultado selecciona uno","Ok");
@@ -188,12 +259,24 @@ namespace PetsHeroe.View
 
                 promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(idMiembro, -1, -1);
 
+                if (promocionesDueno.Rows.Count <= 0)
+                {
+                    frmHistorial.IsVisible = false;
+                    lsvServiciosDueno.IsVisible = false;
+                }
+                else {
+                    frmHistorial.IsVisible = true;
+                    lsvServiciosDueno.IsVisible = true;
+                }
+
                 foreach (DataRow dr in promocionesDueno.Rows) {
                     if (Convert.ToBoolean(dr["IsPoints"]))
                     {
                         puntos = Convert.ToInt32(dr["PointsActive"]);
                     }
                 }
+
+                lsvServiciosDueno.ItemsSource = dataTableToListServicioDueno();
 
                 txtNombre.Text = " Nombre: " + usuario;
                 txtPuntos.Text = " Puntos: " + puntos;
@@ -315,6 +398,7 @@ namespace PetsHeroe.View
             {
                 Promocion promoTemp = new Promocion()
                 {
+                    idPromocion = Convert.ToInt32(dr["IDPartnerService"].ToString()),
                     nombre = dr["Name"].ToString(),
                     inicia = dr["StartDate"].ToString(),
                     vigencia = dr["EndDate"].ToString(),
@@ -390,7 +474,7 @@ namespace PetsHeroe.View
                         await DisplayAlert("Eliminado","Se elimino correctamente","Ok");
                     }
                     else {
-                        await DisplayAlert("Error","No ha podido ser eliminado intente nuevamente","OK");
+                        await DisplayAlert("Error", "No se puede eliminar esta promoción ya ha sido utilizada en una venta", "OK");
                     }
                 }
             });
@@ -406,16 +490,26 @@ namespace PetsHeroe.View
         public void ServicioSelectedDelete(object sender, EventArgs args)
         {
             Button button = (Button)sender;
-            int idPromocion = Convert.ToInt32(button.CommandParameter);
+            //int idPromocion = Convert.ToInt32(button.CommandParameter);
+            Promocion promocion = button.CommandParameter as Promocion;
 
             Device.BeginInvokeOnMainThread(async () => {
                 var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
                 if (result)
                 {
-
+                    bool status = DependencyService.Get<IWebService>().promoServicio_Eliminar(promocion.idPromocion);
+                    if (status)
+                    {
+                        await DisplayAlert("Eliminado", "Se elimino correctamente", "Ok");
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "No se puede eliminar esta promoción ya ha sido utilizada en una venta", "OK");
+                    }
                 }
             });
         }
+
 
     }
 }

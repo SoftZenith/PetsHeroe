@@ -56,9 +56,11 @@
                                 <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding partner, StringFormat='CAM: {0}'}" />
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding mascota, StringFormat='Mascota: {0}'}" />
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding descripcion, StringFormat='Descripción: {0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='{0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding compra, StringFormat='de {0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='para 1 gratis'}" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='{0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding compra, StringFormat='de {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding gratis, StringFormat='para 1 gratis'}" />
+                                </StackLayout>
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding vigencia, StringFormat='Hasta el: {0}'}" />
                                 <BoxView
                                    VerticalOptions="FillAndExpand"

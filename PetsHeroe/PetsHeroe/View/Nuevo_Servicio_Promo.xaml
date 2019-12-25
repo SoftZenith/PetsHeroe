@@ -140,7 +140,7 @@
                 Grid.ColumnSpan="6"
                 IconImage="code.png"
                 Margin="8,4,8,0"
-                Placeholder="Unidades a comprar"
+                Placeholder="Unidades requeridas"
                 TextColor="black"
                 x:Name="txtUnidades">
             </input:AdvancedEntry>
@@ -152,6 +152,7 @@
                 Grid.Row="7"
                 Margin="16,0,16,0"
                 Text="Activo"
+                IsChecked="True"
                 x:Name="chkActivo">
             </input:CheckBox>
 
@@ -167,7 +168,8 @@
                 Grid.ColumnSpan="4"
                 Grid.Row="8"
                 Text="Guardar"
-                TextColor="White">
+                TextColor="White"
+                x:Name="btnGuardar">
             </Button>
 
         </Grid>

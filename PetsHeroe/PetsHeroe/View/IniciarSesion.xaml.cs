@@ -96,7 +96,16 @@ namespace PetsHeroe
                 }
 
             } else {
-                await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
+                var current = Connectivity.NetworkAccess;
+
+                if (current == NetworkAccess.Internet)
+                {
+                    await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "No estas conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
+                }
             }
         }
 

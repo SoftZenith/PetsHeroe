@@ -5,6 +5,7 @@ using System.Data;
 using dotMorten.Xamarin.Forms;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PetsHeroe.View
@@ -21,10 +22,15 @@ namespace PetsHeroe.View
         private double total = 0;
         private double puntos = 0;
         private int idItemPointer = 0;
+        private double ahorroServicios = 0;
         private int idProducto = -1;
         private int idServicio = -1;
+        private int idTicket = -1;
         private int tipo = 1;
         private int idElemento = 1;
+        private int idAsociado = -1;
+        private int idSucursal = -1;
+        private int idMascota = -1;
         private string UPCG = "";
         private DataTable productosEntryComplete;
         public Dictionary<String,String> productosEntryDic;
@@ -35,6 +41,8 @@ namespace PetsHeroe.View
         public Caja_Ventas()
         {
             InitializeComponent();
+            idAsociado = Preferences.Get("idAsociado", -1);
+            idSucursal = DependencyService.Get<IWebService>().getSucursal(idAsociado);
             btnScanUPC.IsEnabled = true;
             lsvCarrito.ItemsSource = listaCarrito;
             lblTotal.Text = total.ToString();
@@ -42,7 +50,7 @@ namespace PetsHeroe.View
             scanningDepen = DependencyService.Get<IQRScanning>();
             pkrTipo.SelectedIndexChanged += PkrTipo_SelectedIndexChanged;
             //listaCarrito.CollectionChanged += ListaCarrito_CollectionChanged;
-            productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(-1, "");
+            productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(idAsociado, "");
             productosEntryDic = new Dictionary<string, string>();
             productosEntry = new List<Promocion>();
             foreach (DataRow dr in productosEntryComplete.Rows) {
@@ -61,6 +69,40 @@ namespace PetsHeroe.View
                 }
             }
             //txtUPC.ItemsSource = productosEntry;
+
+        }
+
+        protected override void OnAppearing()
+        {
+            //lsvMascotas.BeginRefresh();
+            listaCarrito.Clear();
+            total = 0;
+            puntos = 0;
+            lblTotal.Text = "$ " + total.ToString() + " MXN";
+            lblPuntos.Text = puntos.ToString() + " PTS";
+
+            productosEntryComplete = DependencyService.Get<IWebService>().getProducto_Busca(idAsociado, "");
+            productosEntryDic = new Dictionary<string, string>();
+            productosEntry = new List<Promocion>();
+            foreach (DataRow dr in productosEntryComplete.Rows)
+            {
+                try
+                {
+                    productosEntryDic.Add(dr["UPC"].ToString(), dr["Product"].ToString());
+                    Promocion promoTemp = new Promocion()
+                    {
+                        nombre = dr["Product"].ToString(),
+                        UPC = dr["UPC"].ToString()
+                    };
+                    productosEntry.Add(promoTemp);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            base.OnAppearing();
 
         }
 
@@ -92,7 +134,6 @@ namespace PetsHeroe.View
                             puntos = listaCarrito[i].puntos,
                             imagen = listaCarrito[i].imagen
                         };
-
                         listaCarrito.RemoveAt(i);
                     }
                 }
@@ -102,6 +143,17 @@ namespace PetsHeroe.View
                 {
                     puntos += (venta.puntos * venta.cantidad);
                     total += (venta.precio * venta.cantidad);
+                }
+                if (ahorroServicios > 0)
+                {
+                    lblAhorro.IsVisible = true;
+                    lblAhorroTotal.IsVisible = true;
+                    lblAhorroTotal.Text = "$" + ahorroServicios + " MXN";
+                }
+                else
+                {
+                    lblAhorro.IsVisible = false;
+                    lblAhorroTotal.IsVisible = false;
                 }
                 lblTotal.Text = "$ " + total.ToString() + " MXN";
                 lblPuntos.Text = puntos.ToString() + " PTS";
@@ -128,7 +180,6 @@ namespace PetsHeroe.View
                         puntos = listaCarrito[i].puntos,
                         imagen = listaCarrito[i].imagen
                     };
-
                     listaCarrito.RemoveAt(i);
                     listaCarrito.Insert(i, ventaTmp);
                     //listaCarrito.Add(ventaTmp);
@@ -180,7 +231,7 @@ namespace PetsHeroe.View
                 imgTipo.Source = "shower_big.png";
                 productosEntry.Clear();
                 btnScanUPC.IsEnabled = false;
-                productosEntryComplete = DependencyService.Get<IWebService>().getServicio_Busca(-1);
+                productosEntryComplete = DependencyService.Get<IWebService>().getPromoServicios_Busca(idAsociado);
                 foreach (DataRow dr in productosEntryComplete.Rows)
                 {
                     try
@@ -188,8 +239,7 @@ namespace PetsHeroe.View
                         //productosEntryDic.Add(dr["UPC"].ToString(), dr["Product"].ToString());
                         Promocion promoTemp = new Promocion()
                         {
-
-                            nombre = dr["name"].ToString()
+                            nombre = dr["ServiceType"].ToString()
                             //UPC = dr["UPC"].ToString()
                         };
                         productosEntry.Add(promoTemp);
@@ -200,114 +250,6 @@ namespace PetsHeroe.View
                     }
                 }
             }
-        }
-
-        public void btnMas(object sender, EventArgs args)
-        {
-            Button button = (Button)sender;
-            int idItemC = Convert.ToInt32(button.CommandParameter);
-
-            for (int i = 0; i < listaCarrito.Count; i++) {
-                if (listaCarrito[i].idItem == idItemC) {
-                    Venta ventaTmp = new Venta
-                    {
-                        idItem = listaCarrito[i].idItem,
-                        idProducto = listaCarrito[i].idProducto,
-                        cantidad = listaCarrito[i].cantidad + 1,
-                        nombre = listaCarrito[i].nombre,
-                        precio = listaCarrito[i].precio,
-                        puntos = listaCarrito[i].puntos
-                    };
-                    listaCarrito.RemoveAt(i);
-                    listaCarrito.Add(ventaTmp);
-                }
-            }
-            puntos = 0;
-            total = 0;
-            foreach (Venta venta in listaCarrito)
-            {
-                puntos += (venta.puntos * venta.cantidad);
-                total += (venta.precio * venta.cantidad);
-            }
-            lblTotal.Text = "$ " + total.ToString() + " MXN";
-            lblPuntos.Text = puntos.ToString() + " PTS";
-        }
-
-        public void btnMenos(object sender, EventArgs args)
-        {
-            Button button = (Button)sender;
-            int idItemC = Convert.ToInt32(button.CommandParameter);
-
-            for (int i = 0; i < listaCarrito.Count; i++)
-            {
-                if (listaCarrito[i].idItem == idItemC)
-                {
-                    Venta ventaTmp = new Venta
-                    {
-                        idItem = listaCarrito[i].idItem,
-                        idProducto = listaCarrito[i].idProducto,
-                        cantidad = listaCarrito[i].cantidad - 1 < 0 ? 0 : listaCarrito[i].cantidad - 1, //VALIDACION PARA NO TENER NEGATIVOS
-                        nombre = listaCarrito[i].nombre,
-                        precio = listaCarrito[i].precio,
-                        puntos = listaCarrito[i].puntos
-                    };
-                    listaCarrito.RemoveAt(i);
-                    listaCarrito.Add(ventaTmp);
-                }
-            }
-            puntos = 0;
-            total = 0;
-            foreach (Venta venta in listaCarrito)
-            {
-                puntos += (venta.puntos * venta.cantidad);
-                total += (venta.precio * venta.cantidad);
-            }
-            lblTotal.Text = "$ " + total.ToString() + " MXN";
-            lblPuntos.Text = puntos.ToString() + " PTS";
-
-        }
-
-        private void cantidad_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            Entry cantidadEntry = sender as Entry;
-            int idElemento = Convert.ToInt32(cantidadEntry.BindingContext);
-            int cantidadX = 0;
-            try
-            {
-                cantidadX = Convert.ToInt32(cantidadEntry.Text);
-            }
-            catch (Exception ex) {
-                return;
-            }
-
-            for (int i = 0; i < listaCarrito.Count; i++)
-            {
-                if (listaCarrito[i].idItem == idElemento)
-                {
-                    Venta ventaTmp = new Venta
-                    {
-                        idItem = listaCarrito[i].idItem,
-                        idProducto = listaCarrito[i].idProducto,
-                        cantidad = cantidadX,
-                        nombre = listaCarrito[i].nombre,
-                        precio = listaCarrito[i].precio,
-                        puntos = listaCarrito[i].puntos
-                    };
-
-                    listaCarrito.RemoveAt(i);
-                    listaCarrito.Add(ventaTmp);
-                }
-            }
-
-            puntos = 0;
-            total = 0;
-            foreach (Venta venta in listaCarrito)
-            {
-                puntos += (venta.puntos * venta.cantidad);
-                total += (venta.precio * venta.cantidad);
-            }
-            lblTotal.Text = "$ " + total.ToString() + " MXN";
-            lblPuntos.Text = puntos.ToString() + " PTS";
         }
 
         async void scanCode(object sender, EventArgs args) {
@@ -385,7 +327,24 @@ namespace PetsHeroe.View
 
             DataTable productosEncontrados = DependencyService.Get<IWebService>().getProducto_Busca(-1, UPCG);
 
-            DataTable serviciosEncontrados = DependencyService.Get<IWebService>().getServicio_Busca(-1);
+            DataTable serviciosEncontrados = DependencyService.Get<IWebService>().getPromoServicios_Busca(idAsociado);
+
+            DataTable mascotasTbl = new DataTable();
+
+            bool status = DependencyService.Get<IWebService>().getIdMascota_Busca(txtCodigoMascota.Text);
+            if (status)
+            {
+                mascotasTbl = DependencyService.Get<IWebService>().Mascota_Busca;
+
+                foreach (DataRow dr in mascotasTbl.Rows)
+                {
+                    idMascota = Convert.ToInt32(dr["IDPet"].ToString());
+                    //idMiembro = Convert.ToInt32(dr["IDMember"].ToString());
+                }
+            }
+
+
+            //idMascota = DependencyService.Get<IWebService>().getIdMascota_Busca(txtCodigoMascota.Text);
 
             if (!DependencyService.Get<IWebService>().Codigo_Valida) {
                 await DisplayAlert("Error", "Código de mascota invalido", "Ok");
@@ -400,29 +359,33 @@ namespace PetsHeroe.View
 
                 string productName = "";
                 Double productPoints = 0.0;
-
+                string promoNameUPC = txtUPC.Text;
                 foreach (DataRow dr in productosEncontrados.Rows)
                 {
-                    productName = dr["Name"].ToString();
-                    productPoints = Convert.ToDouble(dr["Points"].ToString());
-                    idProducto = Convert.ToInt32(dr["IDProduct"].ToString());
+                    if (dr[9].ToString() == promoNameUPC) {
+                        productName = dr["Name"].ToString();
+                        productPoints = Convert.ToDouble(dr["Points"].ToString());
+                        idProducto = Convert.ToInt32(dr["IDProduct"].ToString());
+                    }
                 }
                 idItemPointer += 1;
-                listaCarrito.Add(new Venta() { idProducto = idProducto, idServicio = -1, idItem = idItemPointer, cantidad = 1, imagen = "collar_big.png", nombre = productName, precio = Convert.ToDouble(txtMonto.Text), puntos = productPoints });
+                Venta ventaTmp = new Venta() { idProducto = idProducto, idServicio = -1, idItem = idItemPointer, cantidad = 1, imagen = "collar_big.png", nombre = productName, precio = Convert.ToDouble(txtMonto.Text), puntos = productPoints };
+                ventaTmp.textoMostrar = ventaTmp.puntos + "PTS";
+                listaCarrito.Add(ventaTmp);
                 total = 0;
                 puntos = 0;
                 foreach (Venta venta in listaCarrito) {
                     puntos += (venta.puntos * venta.cantidad);
                     total += (venta.precio * venta.cantidad);
                 }
-                lblTotal.Text = "$ "+total.ToString() + " MXN";
+                lblTotal.Text = "$ " + total.ToString() + " MXN";
                 lblPuntos.Text = puntos.ToString() + " PTS";
                 codigoMascota = txtCodigoMascota.Text;
                 await DisplayAlert("Correcto", "Se agregó correctamente", "Ok");
                 txtUPC.Text = "";
                 txtMonto.Text = "";
                 //txtCodigoMascota.Text = "";
-            }else if (pkrTipo.SelectedIndex == 1)
+            } else if (pkrTipo.SelectedIndex == 1 && txtUPC.Text != "")  //Agregar servicio
             {
 
                 if (serviciosEncontrados.Rows.Count <= 0) {
@@ -431,18 +394,59 @@ namespace PetsHeroe.View
 
                 string productName = "";
                 Double productPoints = 0.0;
+                int servicesTotal = 0;
 
                 foreach (DataRow dr in serviciosEncontrados.Rows)
                 {
-                    if (dr["Name"].ToString() == txtUPC.Text)
+                    if (dr["ServiceType"].ToString() == txtUPC.Text)
                     {
                         productName = dr["Name"].ToString();
-                        productPoints = Convert.ToDouble(dr["Points"].ToString());
+                        //productPoints = Convert.ToDouble(dr["Points"].ToString());
                         idServicio = Convert.ToInt32(dr["IDServiceType"].ToString());
+                        servicesTotal = Convert.ToInt32(dr["Units"].ToString());
                     }
                 }
                 idItemPointer += 1;
-                listaCarrito.Add(new Venta() {idServicio = idServicio, idProducto = -1, idItem = idItemPointer, cantidad = 1, imagen = "shower_big.png", nombre = productName, precio = Convert.ToDouble(txtMonto.Text), puntos = productPoints });
+                //listaCarrito.Add(new Venta() {idServicio = idServicio, idProducto = -1, idItem = idItemPointer, cantidad = 1, imagen = "shower_big.png", nombre = productName, precio = Convert.ToDouble(txtMonto.Text), puntos = productPoints });
+                //llamar a ticketCarga
+                DependencyService.Get<IWebService>().agregar_venta(idTicket, idMascota, idSucursal, -1, idServicio, 1, Convert.ToDouble(txtMonto.Text), out int idTicketOut, out int ventaResulta);
+                idTicket = idTicketOut;
+                DataTable listaTicketCarga = new DataTable();
+                listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(idTicket, idMascota, idSucursal);
+                foreach (DataRow dr in listaTicketCarga.Rows) {
+                    if (Convert.ToInt32(dr["Units"].ToString()) == Convert.ToInt32(dr["UnitsToDate"].ToString())+1) {
+                        //ahorroServicios += Convert.ToDouble(txtMonto.Text);
+                    }
+                    Venta ventaTmp = new Venta()
+                    {
+                        idServicio = idServicio,
+                        idProducto = -1,
+                        idItem = idItemPointer,
+                        cantidad = 1,
+                        imagen = "shower_big.png",
+                        nombre = dr["RowDesc"].ToString(),
+                        precio = Convert.ToInt32(dr["Units"].ToString()) == Convert.ToInt32(dr["UnitsToDate"].ToString())+1 ? 0 : Convert.ToDouble(txtMonto.Text),
+                        actual = Convert.ToInt32(dr["Units"].ToString()),
+                        //total = Convert.ToInt32(dr["UnitsToDate"].ToString()),
+                        total = servicesTotal,
+                        puntos = 0
+                    };
+                    int tmpIdServicio = -1;
+                    try
+                    {
+                        tmpIdServicio = Convert.ToInt16(dr[6].ToString());
+                        if (tmpIdServicio == idServicio)
+                        {
+                            ventaTmp.textoMostrar = "Tienes " + ventaTmp.actual + " de " + ventaTmp.total;
+                            listaCarrito.Add(ventaTmp);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                    }
+                }
+                //
                 total = 0;
                 puntos = 0;
                 foreach (Venta venta in listaCarrito)
@@ -457,28 +461,74 @@ namespace PetsHeroe.View
                 txtUPC.Text = "";
                 txtMonto.Text = "";
                 txtUPC.ItemsSource = filtrar("");
-                //txtCodigoMascota.Text = "";
-            }else {
+                if (ahorroServicios > 0)
+                {
+                    lblAhorro.IsVisible = true;
+                    lblAhorroTotal.IsVisible = true;
+                    lblAhorroTotal.Text = "$" + ahorroServicios + " MXN";
+                }
+                else {
+                    lblAhorro.IsVisible = false;
+                    lblAhorroTotal.IsVisible = false;
+                }
+            } else {
                 if (pkrTipo.SelectedIndex == 0)
                 {
-                    Device.BeginInvokeOnMainThread(async () =>
+
+                    idItemPointer += 1;
+                    Venta ventaTmp = new Venta() { idProducto = -1, idServicio = -1, idItem = idItemPointer, cantidad = 1, imagen = "other_big.png", nombre = "Otro", precio = Convert.ToDouble(txtMonto.Text), puntos = 0 };
+                    ventaTmp.textoMostrar = ventaTmp.puntos + "PTS";
+                    listaCarrito.Add(ventaTmp);
+                    total = 0;
+                    puntos = 0;
+                    foreach (Venta venta in listaCarrito)
+                    {
+                        puntos += (venta.puntos * venta.cantidad);
+                        total += (venta.precio * venta.cantidad);
+                    }
+                    lblTotal.Text = "$ " + total.ToString() + " MXN";
+                    lblPuntos.Text = puntos.ToString() + " PTS";
+                    codigoMascota = txtCodigoMascota.Text;
+                    await DisplayAlert("Correcto", "Se agregó correctamente", "Ok");
+                    txtUPC.Text = "";
+                    txtMonto.Text = "";
+
+                    /*Device.BeginInvokeOnMainThread(async () =>
                     {
                         var result = await this.DisplayAlert("Producto no encontrado", "¿Deseas agregarlo?", "Si", "No");
                         if (result)
                         {
                            await Navigation.PushAsync(new Nuevo_Producto_Venta());
                         }
-                    });
-                }
-                else {
-                    Device.BeginInvokeOnMainThread(async () =>
+                    });*/
+                } else {
+
+                    idItemPointer += 1;
+                    Venta ventaTmp = new Venta() { idProducto = -1, idServicio = -1, idItem = idItemPointer, cantidad = 1, imagen = "other_big.png", nombre = "Otro", precio = Convert.ToDouble(txtMonto.Text), puntos = 0 };
+                    ventaTmp.textoMostrar = ventaTmp.puntos + "PTS";
+                    listaCarrito.Add(ventaTmp);
+                    total = 0;
+                    puntos = 0;
+                    foreach (Venta venta in listaCarrito)
+                    {
+                        puntos += (venta.puntos * venta.cantidad);
+                        total += (venta.precio * venta.cantidad);
+                    }
+                    lblTotal.Text = "$ " + total.ToString() + " MXN";
+                    lblPuntos.Text = puntos.ToString() + " PTS";
+                    codigoMascota = txtCodigoMascota.Text;
+                    await DisplayAlert("Correcto", "Se agregó correctamente", "Ok");
+                    txtUPC.Text = "";
+                    txtMonto.Text = "";
+
+                    /*Device.BeginInvokeOnMainThread(async () =>
                     {
                         var result = await this.DisplayAlert("Servicio no encontrado", "¿Deseas agregarlo?", "Si", "No");
                         if (result)
                         {
                             await Navigation.PushAsync(new Nuevo_Servicio_Venta());
                         }
-                    });
+                    });*/
                 }
             }
         }
@@ -488,7 +538,7 @@ namespace PetsHeroe.View
             //DependencyService.Get<IWebService>().agregar_venta(-1, 113, 16, 7, -1, 2, 29.93, out int idTicketOut, out int ventaResult);
 
             if (listaCarrito.Count > 0){
-                await Navigation.PushAsync(new Pago_Venta(codigoMascota, total, listaCarrito));
+                await Navigation.PushAsync(new Pago_Venta(idSucursal, codigoMascota, total, listaCarrito));
             } else {
                 await DisplayAlert("Error","No hay ningún producto/servicio en tu listado de compra","Ok");
             }

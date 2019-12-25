@@ -133,6 +133,7 @@
                 Grid.Row="6"
                 Grid.ColumnSpan="6"
                 IconImage="money.png"
+                Keyboard="Numeric"
                 Margin="8,0"
                 Placeholder="Precio"
                 TextColor="black"
@@ -160,6 +161,7 @@
                 Grid.Row="8"
                 Margin="16,0,16,0"
                 Text="Activo"
+                IsChecked="True"
                 x:Name="chkActivo">
             </input:CheckBox>
 
@@ -175,8 +177,9 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="4"
                 Margin="0,0,0,8"
-                Text="Agregar"
-                TextColor="White">
+                Text="Guardar"
+                TextColor="White"
+                x:Name="btnGuardar">
 
             </Button>
         </Grid>

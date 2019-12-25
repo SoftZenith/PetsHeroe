@@ -1,5 +1,7 @@
 ﻿using System;
 using PetsHeroe.Services;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -25,6 +27,15 @@ namespace PetsHeroe
         }
 
         public async void onScan(object sender, EventArgs args) {
+
+
+            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
+            if (cameraStatus != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Error","La app no tiene permisos para utilizar la camara","OK");
+                return;
+            }
+
             try
             {
                 var result = await scanningDepen.ScanAsync();

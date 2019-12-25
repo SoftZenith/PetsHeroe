@@ -923,7 +923,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.991211": {
+      "Xamarin.Forms/4.4.0.991265": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
@@ -963,11 +963,11 @@
           "lib/monoandroid90/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.3.0.991211": {
+      "Xamarin.Forms.Maps/4.4.0.991265": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.v7.AppCompat": "28.0.0.3",
-          "Xamarin.Forms": "4.3.0.991211",
+          "Xamarin.Forms": "4.4.0.991265",
           "Xamarin.GooglePlayServices.Maps": "60.1142.1"
         },
         "compile": {
@@ -1085,11 +1085,12 @@
           "Behaviors.Forms": "1.4.0",
           "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Permissions": "3.0.0.12",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.991211",
+          "Xamarin.Forms": "4.4.0.991265",
           "Xamarin.Forms.InputKit": "3.0.15",
-          "Xamarin.Forms.Maps": "4.3.0.991211",
+          "Xamarin.Forms.Maps": "4.4.0.991265",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "dotMorten.Xamarin.Forms.AutoSuggestBox": "0.7.0"
@@ -2181,10 +2182,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.3.0.991211": {
-      "sha512": "cWbxRKy6oPbFvpw2K6Du3bSo34LDyVKYSR6jCDSbB3Ieyj6549bWQbBLUEptRGQQ8fhDTcJQ/ezqwGwxd+7bkg==",
+    "Xamarin.Forms/4.4.0.991265": {
+      "sha512": "FhG5Sq2wzY8A6IzW3iMVVKqQf4G3hry0joDDGnw1SWBQ5cfW6YNpOiuh2wB/BRPoVnO0SuUBY+b1NPXve72NDQ==",
       "type": "package",
-      "path": "xamarin.forms/4.3.0.991211",
+      "path": "xamarin.forms/4.4.0.991265",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2413,6 +2414,7 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/Themes/generic.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PickerStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
@@ -2426,7 +2428,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.3.0.991211.nupkg.sha512",
+        "xamarin.forms.4.4.0.991265.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2450,10 +2452,10 @@
         "xamarin.forms.inputkit.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.3.0.991211": {
-      "sha512": "0S7xnE4FA+23BbRKf570eeaJ0pttoPa2SWVt9W9jt+OPU0GM5w1j9hmuY16vAWodElnaLiaLqarr+SjPQoCrKg==",
+    "Xamarin.Forms.Maps/4.4.0.991265": {
+      "sha512": "yOl1O+P/Im5zjiF76NJVLIzD7STyVtS43cEJ/DYUWc4rWkOClT9WF3oAMshVR5WxoJzcxoCK3fCanUAPmeZptw==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.3.0.991211",
+      "path": "xamarin.forms.maps/4.4.0.991265",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2479,7 +2481,7 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.3.0.991211.nupkg.sha512",
+        "xamarin.forms.maps.4.4.0.991265.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -2590,6 +2592,7 @@
     "MonoAndroid,Version=v9.0": [
       "LeoJHarris.XForms.Plugin.EnhancedEntry >= 1.0.6",
       "PetsHeroe >= 1.0.0",
+      "Plugin.Permissions >= 3.0.0.12",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
@@ -2599,8 +2602,8 @@
       "Xamarin.Android.Support.v7.CardView >= 28.0.0.3",
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.3",
       "Xamarin.Essentials >= 1.3.1",
-      "Xamarin.Forms >= 4.3.0.991211",
-      "Xamarin.Forms.Maps >= 4.3.0.991211",
+      "Xamarin.Forms >= 4.4.0.991265",
+      "Xamarin.Forms.Maps >= 4.4.0.991265",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1",
       "dotMorten.Xamarin.Forms.AutoSuggestBox >= 0.7.0"
@@ -2645,6 +2648,10 @@
             "target": "Package",
             "version": "[1.0.6, )"
           },
+          "Plugin.Permissions": {
+            "target": "Package",
+            "version": "[3.0.0.12, )"
+          },
           "Xam.Plugin.Geolocator": {
             "target": "Package",
             "version": "[4.5.0.6, )"
@@ -2683,11 +2690,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.3.0.991211, )"
+            "version": "[4.4.0.991265, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.3.0.991211, )"
+            "version": "[4.4.0.991265, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",

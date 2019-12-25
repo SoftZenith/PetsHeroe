@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-    x:Class="PetsHeroe.View.Nuevo_Producto_Venta">
+    x:Class="PetsHeroe.View.Nuevo_Producto_Venta"
+    Title="Agregar producto">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -22,16 +23,6 @@
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
             </Grid.RowDefinitions>
-
-            <Label
-                FontSize="18"
-                FontFamily="Lobster-Regular"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="0"
-                HorizontalOptions="CenterAndExpand"
-                Text="Agregar nuevo Producto">
-            </Label>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"

@@ -108,6 +108,7 @@
                     HorizontalOptions="FillAndExpand"
                     Padding="0">
                     <Entry FontSize="18"
+                           MaxLength="2"
                            FontFamily="Lobster-Regular" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
                 </Frame>
 

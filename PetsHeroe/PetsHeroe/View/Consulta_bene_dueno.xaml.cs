@@ -22,7 +22,8 @@ namespace PetsHeroe.View
 
             try
             {
-                promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(Preferences.Get("idMiembro", -1), -1, -1);
+                int idMiembro = Preferences.Get("idMiembro", -1);
+                promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(idMiembro, -1, -1);
             }
             catch(Exception)
             {

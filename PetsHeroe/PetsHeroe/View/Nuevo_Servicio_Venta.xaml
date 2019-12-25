@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-    x:Class="PetsHeroe.View.Nuevo_Servicio_Venta">
+    x:Class="PetsHeroe.View.Nuevo_Servicio_Venta"
+    Title="Agregar servicio">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -21,17 +22,8 @@
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-
-            <Label
-                FontSize="18"
-                FontFamily="Lobster-Regular"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Grid.Row="0"
-                HorizontalOptions="CenterAndExpand"
-                Text="Agregar nuevo servicio">
-            </Label>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"
@@ -63,7 +55,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="20"
                 Grid.ColumnSpan="4"
-                Grid.Row="4"
+                Grid.Row="3"
                 Margin="8,0,8,0"
                 Padding="4,4,4,4">
                 <Picker
@@ -78,13 +70,13 @@
             <Button
                 BackgroundColor="#006561"
                 BorderColor="#FF7100"
-                BorderWidth="1"
+                BorderWidth="2"
                 CornerRadius="16"
                 Clicked="onAgregar"
                 FontSize="18"
                 FontFamily="Lobster-Regular"
                 Grid.ColumnSpan="4"
-                Grid.Row="6"
+                Grid.Row="5"
                 Margin="8,0"
                 Text="Agregar"
                 TextColor="White">

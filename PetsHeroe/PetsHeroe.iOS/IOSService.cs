@@ -60,7 +60,7 @@ namespace PetsHeroe.iOS
             wsPets.AuthHeaderValue = auth;
             try
             {
-                CAM_Busca = wsPets.CAM_Busca(-1, -1, -1, -1, lat, lon, kms);
+                CAM_Busca = wsPets.CAM_Busca(-1, -1, -1, -1, lat, lon, 50);
             }
             catch (Exception ex)
             {
@@ -127,7 +127,7 @@ namespace PetsHeroe.iOS
             try
             {
                 wsPets.AuthHeaderValue = auth;
-                return wsPets.Producto_Busca(idAsociado, -1, idTipoProducto, idMarca, "", "", false);
+                return wsPets.Producto_Busca(-1, -1, idTipoProducto, idMarca, "", "", true);
             }
             catch (Exception ex)
             {
@@ -140,7 +140,8 @@ namespace PetsHeroe.iOS
             try
             {
                 wsPets.AuthHeaderValue = auth;
-                return wsPets.Producto_Busca(idAsociado, -1, -1, -1, "", UPC, false);
+                //return wsPets.Producto_Busca(-1, -1, -1, -1, "", UPC, false);
+                return wsPets.PromoProductos_Busca(-1, -1, -1);
             }
             catch (Exception ex)
             {
@@ -148,14 +149,15 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public DataTable getServicio_Busca(int tipoMascota)
+        public DataTable getServicio_Busca(int idAsociado, int tipoMascota)
         {
             try
             {
                 wsPets.AuthHeaderValue = auth;
-                return wsPets.Servicio_Busca(-1, -1, tipoMascota, "", false);
+                return wsPets.Servicio_Busca(-1, -1, tipoMascota,"","");
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return null;
             }
         }
@@ -255,11 +257,15 @@ namespace PetsHeroe.iOS
             var wsPetsRegistro = new wsPetsApp();
 
             wsPetsRegistro.AuthHeaderValue = auth;
-            try{
+            try
+            {
                 wsPetsRegistro.Mascota_Registro(mascota.mascostaCodigo, mascota.nombre, mascota.apellidoP, mascota.apellidoM, (char)mascota.sexo, mascota.correo,
                     mascota.contrasena, mascota.mascostaCodigo, mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
                     mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascota, out int IDEstatusCodigo);
                 Mascota_Registro = true;
+            }
+            catch (SoapException soapExc) {
+                string error = soapExc.Detail.InnerText;
             }catch (Exception ex){
                 int indexSoap = ex.ToString().IndexOf("SoapException:");
                 string error = ex.ToString().Substring(indexSoap);
@@ -349,6 +355,7 @@ namespace PetsHeroe.iOS
             try
             {
                 Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", codigoMascota, "");
+
                 return true;
             }
             catch (Exception)
@@ -485,58 +492,82 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public bool promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
+        public Resultado promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                wsPets.PromoProductos_Agrega(idAsociado, idProducto, nombre, precioRegular, precioPromo, desde.Date, hasta.Date, puntos, unidades);
+                wsPets.PromoProductos_Agrega(idAsociado, idProducto, nombre, precioRegular, precioPromo, desde.Date, hasta.Date, puntos, unidades, activa);
+                return new Resultado() {
+                    status = true,
+                    errorMessage = ""
+                };
+            }
+            catch (SoapException ex)
+            {
+                string error = ex.Detail.InnerText;
+                return new Resultado() {
+                    status = false,
+                    errorMessage = error
+                };
+            }
+        }
+
+        public Resultado promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Agrega(idAsociado, idTipoServicio, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades, activa);
+                return new Resultado()
+                {
+                    status = true,
+                    errorMessage = ""
+                };
+            }
+            catch (SoapException ex)
+            {
+                string error = ex.Detail.InnerText;
+                return new Resultado()
+                {
+                    status = false,
+                    errorMessage = error
+                };
+            }
+        }
+
+        public bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa)
+        {
+
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoProductos_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades, activa);
                 return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public Retorno promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.PromoServicios_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades, activa);
+                return new Retorno {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
             catch (Exception ex)
             {
-                return false;
-            }
-        }
-
-        public bool promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
-        {
-            wsPets.AuthHeaderValue = auth;
-            try {
-                wsPets.PromoServicios_Agrega(idAsociado, idTipoServicio, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
-                return true;
-            }
-            catch (Exception ex) {
-                return false;
-            }
-        }
-
-        public bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
-        {
-
-            wsPets.AuthHeaderValue = auth;
-            try
-            {
-                wsPets.PromoProductos_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public bool promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades)
-        {
-            wsPets.AuthHeaderValue = auth;
-            try
-            {
-                wsPets.PromoServicios_Modifica(idPromocion, nombre, precioRegular, precioPromo, desde, hasta, puntos, unidades);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                return new Retorno {
+                    Resultado = false,
+                    Mensaje = ex.ToString()
+                };
             }
         }
 
@@ -557,16 +588,63 @@ namespace PetsHeroe.iOS
         public bool promoServicio_Eliminar(int idPromocion)
         {
             wsPets.AuthHeaderValue = auth;
-            try
-            {
+            try{
                 wsPets.PromoServicios_Elimina(idPromocion);
                 return true;
-            }
-            catch (Exception)
-            {
+            }catch (Exception ex){
                 return false;
             }
         }
 
+        public DataTable ticketCarga(int IDTicket, int IDMascota, int IDSucursal)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.TicketCarga(IDSucursal, IDMascota, IDTicket);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public int getSucursal(int idAsociado)
+        {
+            wsPets.AuthHeaderValue = auth;
+            int idSucursal = -1;
+            DataTable dataCAM = new DataTable();
+            try{
+                dataCAM = wsPets.CAM_Busca(-1, -1, -1, idAsociado, 0, 0, 500000);
+                foreach (DataRow dr in dataCAM.Rows) {
+                    idSucursal = Convert.ToInt32(dr["IDPartnerLocation"].ToString());
+                }
+                return idSucursal;
+            } catch (Exception ex) {
+                return -1;
+            }
+        }
+
+        public Retorno setServicioAgrega(int idTipoMascota, string codigo, string nombreService)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.Servicio_Agrega(idTipoMascota, codigo, nombreService);
+                return new Retorno
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno
+                {
+                    Resultado = false,
+                    Mensaje = ex.ToString()
+                };
+            }
+        }
     }
 }

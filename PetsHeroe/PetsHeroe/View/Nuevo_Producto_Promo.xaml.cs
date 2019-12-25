@@ -51,7 +51,7 @@ namespace PetsHeroe.View
         public Nuevo_Producto_Promo(bool isEdit, Promocion promocionEdit)
         {
             InitializeComponent();
-
+            idAsociado = Preferences.Get("idAsociado", -1);
             DataTable tipoProducto = new DataTable();
 
             tipoProducto = DependencyService.Get<IWebService>().getTipoProducto_Busca();
@@ -65,6 +65,16 @@ namespace PetsHeroe.View
             }
 
             pkrTipo.SelectedIndexChanged += tipoProductoSeleccionado;
+
+            if (isEdit)
+            {
+                this.Title = "Editar promoción";
+                btnGuardar.Text = "Editar";
+            }
+            else {
+                this.Title = "Agregar promoción";
+                btnGuardar.Text = "Guardar";
+            }
 
             isEditing = isEdit;
             promocionEditing = promocionEdit;
@@ -83,7 +93,7 @@ namespace PetsHeroe.View
                 txtNombrePromo.Text = promocionEdit.nombre.ToString();
                 txtPrecio.Text = promocionEdit.precio.ToString();
                 txtDineroElectr.Text = promocionEdit.puntos.ToString();
-                dpkrAPartir.Date = Convert.ToDateTime(promocionEdit.inicia);
+                dpkrAPartir.Date = DateTime.Now;
                 dpkrHasta.Date = Convert.ToDateTime(promocionEdit.vigencia);
             }
         }
@@ -131,8 +141,12 @@ namespace PetsHeroe.View
 
             foreach (DataRow dr in productos.Rows)
             {
-                pkrProducto.Items.Add(dr[11].ToString());
-                ProductosDic.Add(dr[11].ToString(), Convert.ToInt32(dr[2]));
+                pkrProducto.Items.Add(dr["Name"].ToString());
+                try{
+                    ProductosDic.Add(dr["Name"].ToString(), Convert.ToInt32(dr["IDProduct"]));
+                }catch (Exception ex) {
+
+                }
             }
 
             pkrProducto.Items.Add("Agregar nuevo producto");
@@ -177,16 +191,16 @@ namespace PetsHeroe.View
                 return;
             }
             if (dpkrAPartir.Date.Day < DateTime.Now.Day) {
-                await DisplayAlert("Error","Fecha de inicio es menor a fecha actual","Ok");
+                await DisplayAlert("Error","Fecha \"A partir del\" es menor a fecha actual","Ok");
                 return;
             }
-            if (dpkrHasta.Date < DateTime.Now) {
-                await DisplayAlert("Error","Fecha fin es menor a la fecha actual","Ok");
+            if (dpkrHasta.Date.Day < DateTime.Now.Day) {
+                await DisplayAlert("Error","Fecha \"Hasta el\" es menor a la fecha actual","Ok");
                 return;
             }
-            if(dpkrHasta.Date < dpkrAPartir.Date)
+            if(dpkrHasta.Date.Day < dpkrAPartir.Date.Day)
             {
-                await DisplayAlert("Error","Fecha fin superior a la fecha de inicio","Ok");
+                await DisplayAlert("Error", "Fecha \"Hasta el\" superior a la fecha \"A partir del\"", "Ok");
                 return;
             }
 
@@ -227,13 +241,19 @@ namespace PetsHeroe.View
             }
             if (isEditing)
             {
-                bool status = DependencyService.Get<IWebService>().promoProducto_Edita(promocionEditing.idPromocion, txtNombrePromo.Text, Convert.ToDecimal(txtPrecio.Text), Convert.ToDecimal(txtPrecio.Text), dpkrAPartir.Date, dpkrHasta.Date, Convert.ToInt32(txtDineroElectr.Text), 1);
+                bool status = DependencyService.Get<IWebService>().promoProducto_Edita(promocionEditing.idPromocion, txtNombrePromo.Text, Convert.ToDecimal(txtPrecio.Text), Convert.ToDecimal(txtPrecio.Text), dpkrAPartir.Date, dpkrHasta.Date, Convert.ToInt32(txtDineroElectr.Text), 1, chkActivo.IsChecked);
                 if (status)
                 {
                     await DisplayAlert("OK", "Se editó correctamente", "Ok");
+                    txtNombrePromo.Text = "";
+                    dpkrAPartir.Date = DateTime.Today;
+                    dpkrHasta.Date = DateTime.Today;
+                    txtPrecio.Text = "";
+                    txtDineroElectr.Text = "";
                     pkrTipo.SelectedIndex = 0;
                     pkrMarcar.SelectedIndex = 0;
-                    pkrProducto.SelectedIndex = 0;
+                    await Navigation.PopAsync();
+                    //pkrProducto.SelectedIndex = 0;
                 }
                 else
                 {
@@ -242,17 +262,23 @@ namespace PetsHeroe.View
             }
             else
             {
-                bool status = DependencyService.Get<IWebService>().promoProductos_Agrega(idAsociado, idProducto, txtNombrePromo.Text, Convert.ToDecimal(txtPrecio.Text), Convert.ToDecimal(txtPrecio.Text), dpkrAPartir.Date, dpkrHasta.Date, Convert.ToInt32(txtDineroElectr.Text), 1);
-                if (status)
+                Resultado res  = DependencyService.Get<IWebService>().promoProductos_Agrega(idAsociado, idProducto, txtNombrePromo.Text, Convert.ToDecimal(txtPrecio.Text), Convert.ToDecimal(txtPrecio.Text), dpkrAPartir.Date, dpkrHasta.Date, Convert.ToInt32(txtDineroElectr.Text), 1, chkActivo.IsChecked);
+                if (res.status)
                 {
                     await DisplayAlert("OK", "Se agregó correctamente", "Ok");
+                    txtNombrePromo.Text = "";
+                    dpkrAPartir.Date = DateTime.Today;
+                    dpkrHasta.Date = DateTime.Today;
+                    txtPrecio.Text = "";
+                    txtDineroElectr.Text = "";
                     pkrTipo.SelectedIndex = 0;
                     pkrMarcar.SelectedIndex = 0;
-                    pkrProducto.SelectedIndex = 0;
+                    await Navigation.PopAsync();
+                    //pkrProducto.SelectedIndex = 0;
                 }
                 else
                 {
-                    await DisplayAlert("Error", "Intente nuevamente", "Ok");
+                    await DisplayAlert("Error", res.errorMessage, "Ok");
                 }
             }
         }

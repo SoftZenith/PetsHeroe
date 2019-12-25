@@ -13,17 +13,21 @@ namespace PetsHeroe.View
 
         private int idMascota = -1;
         private int idMiembro = -1;
+        private int idSucursalG = -1;
         private double puntos = 0;
         private double costoCompra = 0;
+        private double costoCompraG = 0;
+        private double puntosG = 0;
         private int idTickerG = -1;
         private ObservableCollection<Venta> listaVenta;
         
-        public Pago_Venta(string codigoMascota, Double costo, ObservableCollection<Venta> listaCarrito)
+        public Pago_Venta(int idSucursal, string codigoMascota, Double costo, ObservableCollection<Venta> listaCarrito)
         {
             InitializeComponent();
 
             DataTable mascotasTbl = new DataTable();
             DataTable promocionesDueno = new DataTable();
+            idSucursalG = idSucursal;
             idTickerG = -1;
             listaVenta = listaCarrito;
             bool status = DependencyService.Get<IWebService>().getIdMascota_Busca(codigoMascota);
@@ -53,29 +57,35 @@ namespace PetsHeroe.View
                 lblPuntos.IsVisible = true;
                 lblSubTotal.IsVisible = true;
                 txtPuntosAplicar.IsVisible = true;
-                btnCancelPuntos.IsVisible = true;
                 lblDeseaAplicar.IsVisible = true;
                 lblLabelSubtotal.IsVisible = true;
+                btnAplicar.IsVisible = true;
             } else {
                 lblPuntos.IsVisible = false;
                 lblSubTotal.IsVisible = false;
                 txtPuntosAplicar.IsVisible = false;
-                btnCancelPuntos.IsVisible = false;
                 lblDeseaAplicar.IsVisible = false;
                 lblLabelSubtotal.IsVisible = false;
+                btnAplicar.IsVisible = false;
             }
 
             costoCompra = costo;
+            costoCompraG = costo;
+            puntosG = puntos;
             lblSubTotal.Text = costo.ToString();
             lblTotal.Text = costo.ToString();
             lblPuntos.Text = "Tienes "+puntos.ToString()+" puntos";
-
         }
 
         async void onAplicar(object sender, EventArgs args)
         {
             try {
-                Convert.ToDouble(txtPuntosAplicar.Text);
+                double montoAAplicar = Convert.ToDouble(txtPuntosAplicar.Text);
+                if (montoAAplicar < 0) {
+                    await DisplayAlert("Error", "Valor invalido", "Ok");
+                    return;
+                }
+                
             }
             catch (Exception ex) {
                 await DisplayAlert("Error","Valor invalido","Ok");
@@ -87,13 +97,20 @@ namespace PetsHeroe.View
                 return;
             }
 
-            costoCompra = costoCompra - Convert.ToDouble(txtPuntosAplicar.Text);
-            puntos = puntos - Convert.ToDouble(txtPuntosAplicar.Text);
+            if (Convert.ToDouble(txtPuntosAplicar.Text) > costoCompra) {
+                await DisplayAlert("Error", "No se puede aplicar una cantidad de puntos mayor al total", "Ok");
+                return;
+            }
+
+            costoCompra = costoCompraG - Convert.ToDouble(txtPuntosAplicar.Text);
+            puntos = puntosG - Convert.ToDouble(txtPuntosAplicar.Text);
 
             lblApplied.IsVisible = true;
             lblPuntosApplied.IsVisible = true;
-            btnCancelPuntos.IsVisible = true;
 
+            lblPuntosApplied.Text = txtPuntosAplicar.Text;
+            lblTotal.Text = costoCompra.ToString();
+            lblPuntos.Text = "Tienes " + puntos.ToString() + " puntos";
             lblSubTotal.TextDecorations = TextDecorations.Strikethrough;
             lblLabelSubtotal.TextDecorations = TextDecorations.Strikethrough;
         }
@@ -102,25 +119,28 @@ namespace PetsHeroe.View
             lblSubTotal.TextDecorations = TextDecorations.None;
             lblLabelSubtotal.TextDecorations = TextDecorations.None;
 
+            lblSubTotal.Text = costoCompraG.ToString();
+            lblTotal.Text = costoCompraG.ToString();
+            costoCompra = costoCompraG;
+            puntos = puntosG;
             lblApplied.IsVisible = false;
             lblPuntosApplied.IsVisible = false;
-            btnCancelPuntos.IsVisible = false;
+            lblPuntos.Text = "Tienes " + puntos.ToString() + " puntos";
         }
             
         async void onPagar(object sender, EventArgs args) {
-
+            idTickerG = -1;
             foreach (Venta venta in listaVenta) {
-                DependencyService.Get<IWebService>().agregar_venta(idTickerG, idMascota, 20, venta.idProducto, venta.idServicio, venta.cantidad, venta.precio, out int idTicketOut, out int ventaResult); //
+                DependencyService.Get<IWebService>().agregar_venta(idTickerG, idMascota, idSucursalG, venta.idProducto, venta.idServicio, venta.cantidad, venta.precio, out int idTicketOut, out int ventaResult); //
                 idTickerG = idTicketOut;
             }
 
-            bool status = DependencyService.Get<IWebService>().ticketPaga(idMascota, 20, idTickerG, Convert.ToDecimal(txtPuntosAplicar.Text));
+            bool status = DependencyService.Get<IWebService>().ticketPaga(idMascota, idSucursalG, idTickerG, Convert.ToDecimal(txtPuntosAplicar.Text));
             if (status)
             {
                 await DisplayAlert("Ok","Pago procesado correctamente","Ok");
                 await Navigation.PopAsync();
-            }
-            else {
+            } else {
                 await DisplayAlert("Ok", "Error al procesar pago", "Ok");
             }
         }

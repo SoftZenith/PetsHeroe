@@ -2,14 +2,13 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetsHeroe.Reg_Masc_Perdida">
+    x:Class="PetsHeroe.Reg_Masc_Perdida"
+    Title="Mis mascotas">
     <ContentPage.Content>
         <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotas"
                     IsPullToRefreshEnabled="True">
             <ListView.Header>
                 <ContentView Padding="0,5" BackgroundColor="White">
-                    <Label FontSize="Large" TextColor="Black"
-                       Text="Mis mascotas" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                 </ContentView>
             </ListView.Header>     
             <ListView.ItemTemplate>

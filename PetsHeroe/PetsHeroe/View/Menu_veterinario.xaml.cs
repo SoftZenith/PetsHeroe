@@ -13,13 +13,19 @@ namespace PetsHeroe
 
         public Menu_veterinario(int tab)
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
-             .SetBarItemColor(Color.White)
-             .SetBarSelectedItemColor(Color.OrangeRed);
+                On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
+                 .SetBarItemColor(Color.White)
+                 .SetBarSelectedItemColor(Color.OrangeRed);
 
-            tbVete.CurrentPage = tbVete.Children[tab];
+                tbVete.CurrentPage = tbVete.Children[tab];
+            }catch (Exception ex) {
+                DisplayAlert("Error","No estas conectado a internet utilizar una conexión WIFI o datos celulares","OK");
+                DependencyService.Get<IWebService>().CloseApp();
+            }
         }
 
         private void onAppearingClients(object sender, EventArgs e)

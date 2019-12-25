@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.Registro_vet"
-    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    Title="Registrar veterinaria">
     <ContentPage.Content>
         <ScrollView>
         <Grid>
@@ -15,16 +16,16 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="70"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
@@ -196,12 +197,13 @@
                     FontSize="18"
                     FontFamily="Lobster-Regular"
                     Margin="0,8,0,0"
-                    Text="He leído y estoy de acuerdo con los terminos y condiciones">
+                    Text="He leído y estoy de acuerdo con los términos y condiciones">
                 </Label>
             </StackLayout>
 
             <Button
                 BorderColor="#FF7100"
+                BorderWidth="2"
                 BackgroundColor="#004E55"
                 CornerRadius="16"
                 Clicked="onRegVet"

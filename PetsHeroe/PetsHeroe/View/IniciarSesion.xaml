@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PetsHeroe.IniciarSesion"
     xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-    xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions">
+    xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
+    Title="Iniciar sesión">
     <ContentPage.Content>
     <Grid>
         <Grid.RowDefinitions>
@@ -13,7 +14,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -90,10 +91,11 @@
             Grid.Row="6"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            HorizontalOptions="StartAndExpand"
             StyleClass="Link"
-            Margin="20,16,0,0"
+            Margin="0,16,0,0"
+            HorizontalOptions="CenterAndExpand"
             Text="Si olvidaste tu contraseña, presiona aquí para recuperarla"
+            TextDecorations="Underline"
             TextColor="#FF7100"
             x:Name="lblOlvide">
         </Label>

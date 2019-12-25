@@ -69,6 +69,8 @@ namespace PetsHeroe
                     return;
                 }
 
+                
+
                 try
                 {
                     asociado.tipoAsociado = idTipoAsociado;
@@ -85,6 +87,11 @@ namespace PetsHeroe
 
                     if (textos.Any(item => item.Length <= 0)) {
                         await DisplayAlert("Error", "Faltan campos por llenar", "OK");
+                        return;
+                    }
+
+                    if (asociado.contrasena.Length < 6) {
+                        await DisplayAlert("Error", "Tu contraseña debe ser igual o mayor a 6 digitos", "OK");
                         return;
                     }
 
@@ -115,7 +122,7 @@ namespace PetsHeroe
                 }
             }
             else {
-                await DisplayAlert("Error", "Para poder registrarte es necesario que aceptes los terminos y condiciones", "OK");
+                await DisplayAlert("Error", "Para poder registrarte es necesario que aceptes los términos y condiciones", "OK");
             }
         }
 

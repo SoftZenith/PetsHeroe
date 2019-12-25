@@ -214,9 +214,37 @@
                                         Grid.RowSpan="2"
                                         Source="{Binding imagen}">
                                     </Image>
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Start" Text="{Binding nombre, StringFormat='{0}'}" />
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="End" Text="{Binding precio, StringFormat='${0} MXN'}" />
-                                    <Label FontSize="16"  FontFamily="Lobster-Regular" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="End" Text="{Binding puntos, StringFormat='{0} PTS'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Start" Text="{Binding nombre, StringFormat='{0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" FontAttributes="Bold" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="End" Text="{Binding precio, StringFormat='${0} MXN'}" />
+                                    <StackLayout Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1">
+                                        <Label FontSize="16" FontFamily="Lobster-Regular"  HorizontalOptions="End" Text="{Binding textoMostrar, StringFormat='{0}'}" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" IsVisible="false" Orientation="Horizontal" HorizontalOptions="End">
+                                        <Label
+                                            FontFamily="Lobster-Regular"
+                                            FontSize="16"
+                                            Margin="0,0,0,4"
+                                            Text="Tienes ">
+                                        </Label>
+                                        <Label
+                                            FontFamily="Lobster-Regular"
+                                            FontSize="16"
+                                            Margin="0,0,0,4"
+                                            Text="{Binding actual}">
+                                        </Label>
+                                        <Label
+                                            FontFamily="Lobster-Regular"
+                                            FontSize="16"
+                                            Margin="0,0,0,4"
+                                            Text=" de ">
+                                        </Label>
+                                        <Label
+                                            FontFamily="Lobster-Regular"
+                                            FontSize="16"
+                                            Margin="0,0,0,4"
+                                            Text="{Binding total}">
+                                        </Label>
+                                    </StackLayout>
                                     <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
                                         <Label Margin="0,0,0,4" FontFamily="Lobster-Regular" FontSize="16" Text="Cantidad: ">
                                         </Label>
@@ -297,14 +325,29 @@
                     <Label
                         FontSize="18"
                         FontFamily="Lobster-Regular"
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
                         Grid.Row="1"
                         HorizontalTextAlignment="End"
                         IsVisible="false"
                         Margin="0"
                         Padding="0"
-                        Text="Ahorro en servicios:">
+                        Text="Ahorro en servicios:"
+                        x:Name="lblAhorro">
+                    </Label>
+
+                    <Label
+                        FontSize="18"
+                        FontFamily="Lobster-Regular"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="1"
+                        HorizontalTextAlignment="End"
+                        IsVisible="false"
+                        Margin="0,0,16,0"
+                        Padding="0"
+                        Text="MXN"
+                        x:Name="lblAhorroTotal">
                     </Label>
 
                     <Label

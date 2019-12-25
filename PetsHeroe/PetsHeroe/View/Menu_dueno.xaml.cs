@@ -13,11 +13,18 @@ namespace PetsHeroe
 
         public Menu_dueno(int tab)
         {
-            _ = On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
-             .SetBarItemColor(Color.White)
-             .SetBarSelectedItemColor(Color.OrangeRed);
-            InitializeComponent();
-            tbMenuDueno.CurrentPage = tbMenuDueno.Children[tab];
+            try
+            {
+                _ = On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
+                 .SetBarItemColor(Color.White)
+                 .SetBarSelectedItemColor(Color.OrangeRed);
+                InitializeComponent();
+                tbMenuDueno.CurrentPage = tbMenuDueno.Children[tab];
+            }
+            catch (Exception ex) {
+                DisplayAlert("Error", "No estas conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
+                DependencyService.Get<IWebService>().CloseApp();
+            }
         }
 
         private void onAppearingBeneficios(object sender, EventArgs e)

@@ -29,10 +29,11 @@ namespace PetsHeroe.Services
         MensajeDueno Entrega_SoloMensaje { get; set; }
         string nombre { get; set; }
 
-        bool promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
-        bool promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
-        bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
-        bool promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades);
+        DataTable ticketCarga(int IDTicket, int IDMascota, int IDSucursal);
+        Resultado promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
+        Resultado promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
+        bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
+        Retorno promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
         bool promoProducto_Eliminar(int idPromocion);
         bool promoServicio_Eliminar(int idPromocion);
         bool getIdMascota_Busca(string codigoMascota);
@@ -53,7 +54,7 @@ namespace PetsHeroe.Services
         void getPais_Busca();
         DataTable getProducto_Busca(int idAsociado, int idTipoProducto, int idMarca);
         DataTable getProducto_Busca(int idAsociado, string UPC);
-        DataTable getServicio_Busca(int tipoMascota);
+        DataTable getServicio_Busca(int idAsociado, int tipoMascota);
         void getTipoAsociado_Busca();
         DataTable getTipoProducto_Busca();
         bool getValidaUsuario(String user, String pass);
@@ -70,5 +71,7 @@ namespace PetsHeroe.Services
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);
         Task<bool> getPermisoLocation();
+        int getSucursal(int idAsociado);
+        Retorno setServicioAgrega(int idTipoMascota, string codigo, string nombre);
     }
 }

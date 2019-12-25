@@ -90,7 +90,8 @@
                         IsVisible="false"
                         Margin="0,0,16,0"
                         Text="Aplicar"
-                        TextColor="White">
+                        TextColor="White"
+                        x:Name="btnAplicar">
                     </Button>
                 </Grid>
 
@@ -137,18 +138,6 @@
                         IsVisible="false"
                         x:Name="lblPuntosApplied">
                     </Label>
-
-                    <ImageButton
-                        BackgroundColor="White"
-                        Clicked="onCancelPuntos"
-                        Grid.Column="2"
-                        Grid.Row="0"
-                        HeightRequest="24"
-                        Margin="40,0,0,16"
-                        Source="cancel.png"
-                        IsVisible="false"
-                        x:Name="btnCancelPuntos">
-                    </ImageButton>
 
                     <Label
                         FontSize="18"

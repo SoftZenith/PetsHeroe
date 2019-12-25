@@ -145,7 +145,8 @@ namespace PetsHeroe
                 {
                     Type = PinType.Place,
                     Label = dr["BusinessName"].ToString(),
-                    Position = new Position(Convert.ToDouble(dr["GeoLat"].ToString()), Convert.ToDouble(dr["GeoLon"].ToString()))
+                    Position = new Position(Convert.ToDouble(dr["GeoLat"].ToString()), Convert.ToDouble(dr["GeoLon"].ToString())),
+                    Address = dr["Address1"].ToString()
                 };
                 pinCAM.Clicked += (object sender, EventArgs e) => {
                     var pinClicked = sender as Pin;
