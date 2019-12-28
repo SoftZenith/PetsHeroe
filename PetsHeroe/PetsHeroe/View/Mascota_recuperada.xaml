@@ -76,6 +76,8 @@
 
             <Button
                 BackgroundColor="#006561"
+                BorderColor="#FF7100"
+                BorderWidth="2"
                 CornerRadius="16"
                 Clicked="onRegistraMascota"
                 FontSize="18"

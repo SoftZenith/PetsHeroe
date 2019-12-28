@@ -5,14 +5,23 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu_dueno : Xamarin.Forms.TabbedPage
     {
 
         public Menu_dueno(int tab)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             try
             {
                 _ = On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
@@ -29,21 +38,49 @@ namespace PetsHeroe
 
         private void onAppearingBeneficios(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbMenuDueno.Title = "Beneficios";
         }
 
         private void onAppearingLocMascota(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbMenuDueno.Title = "¿Encontraste unas mascota?";
         }
 
         private void onAppearingMascExisten(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbMenuDueno.Title = "Mis Mascotas";
         }
 
         private void onAppearingCAMS(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbMenuDueno.Title = "Lista de CAMs";
         }
 
@@ -89,12 +126,18 @@ namespace PetsHeroe
 
         protected override bool OnBackButtonPressed()
         {
+            Device.BeginInvokeOnMainThread(async () => {
+                bool answer = await DisplayAlert("Salir", "¿Estás seguro que deseas salir de la aplicación?", "Si", "No");
+                if (answer) await DependencyService.Get<IWebService>().CloseApp();
+            });
+
+            return true;
+            /*
             if (Device.RuntimePlatform == Device.Android)
             {
-               DependencyService.Get<IWebService>().CloseApp();
+                DependencyService.Get<IWebService>().CloseApp();
             }
-            
-            return base.OnBackButtonPressed();
+            return base.OnBackButtonPressed();*/
         }
 
     }

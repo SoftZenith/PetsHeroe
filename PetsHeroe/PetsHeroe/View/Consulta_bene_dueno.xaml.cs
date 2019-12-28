@@ -16,6 +16,14 @@ namespace PetsHeroe.View
 
         public Consulta_bene_dueno()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             InitializeComponent();
 
             Mascota mascotasExisten = new Mascota();

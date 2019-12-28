@@ -34,6 +34,7 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Producto_Promo.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Producto_Venta.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Servicio_Promo.xaml.g.cs
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Servicio_Venta.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Pago_Venta.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Registro_dueno_mascota.xaml.g.cs
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Registro_mascota.xaml.g.cs
@@ -46,4 +47,3 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.dll
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.pdb
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.csprojAssemblyReference.cache
-/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Nuevo_Servicio_Venta.xaml.g.cs

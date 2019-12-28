@@ -4,9 +4,11 @@ using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loc_Mascota : ContentPage
     {
         private int opcion = 0;
@@ -15,6 +17,13 @@ namespace PetsHeroe
 
         public Loc_Mascota()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             InitializeComponent();
             wsDependency = DependencyService.Get<IWebService>();
             scanningDepen = DependencyService.Get<IQRScanning>();
@@ -28,6 +37,7 @@ namespace PetsHeroe
 
         public async void onScan(object sender, EventArgs args) {
 
+            var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
 
             var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
             if (cameraStatus != PermissionStatus.Granted)

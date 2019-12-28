@@ -34,11 +34,12 @@ namespace PetsHeroe.Services
         Resultado promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
         bool promoProducto_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
         Retorno promoServicio_Edita(int idPromocion, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
-        bool promoProducto_Eliminar(int idPromocion);
-        bool promoServicio_Eliminar(int idPromocion);
-        bool getIdMascota_Busca(string codigoMascota);
+        Retorno promoProducto_Eliminar(int idPromocion);
+        Retorno promoServicio_Eliminar(int idPromocion);
+        int getIdMascota_Busca(string codigoMascota);
+        bool getIdMascota_IdMember(string codigoMascota);
         int producto_Agrega(int idTipoProducto, int idMarca, string nombre, string UPC);
-        bool ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);
+        Retorno ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);
         void agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult);
         void getCAM_busca(double lat, double lon, int kms);
         void getCiudad_Busca(int IDEstado);
@@ -50,7 +51,7 @@ namespace PetsHeroe.Services
         void getMascotaEstatus_Busca();
         void getMascotaTipo_Busca();
         void getMascotaRaza_Busca(int IDTipo);
-        void getMascota_Registro(Dueno mascota);
+        Retorno getMascota_Registro(Dueno mascota);
         void getPais_Busca();
         DataTable getProducto_Busca(int idAsociado, int idTipoProducto, int idMarca);
         DataTable getProducto_Busca(int idAsociado, string UPC);
@@ -61,17 +62,20 @@ namespace PetsHeroe.Services
         bool getMascota_Busca(int idMiembro);
         bool getCliente_Busca(int idMiembro, int idAsociado);
         bool getClientes_Busca(string codigo, string correo, string nombre);
-        Resultado setVeterinario_Registro(Asociado asociado);
+        Retorno setVeterinario_Registro(Asociado asociado);
         bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
-        bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
+        Retorno setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
         DataTable getPromoProductos_Busca(int idAsociado);
         DataTable getPromoServicios_Busca(int idAsociado);
         DataTable setPuntosPromociones_Busca(int idMiembro, int idAsociado, int idMascota);
-        void CloseApp();
+        Task CloseApp();
+        void CloseAppSinc();
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
         bool setEntrega_Localizacion(MensajeDueno localizacion);
         Task<bool> getPermisoLocation();
         int getSucursal(int idAsociado);
         Retorno setServicioAgrega(int idTipoMascota, string codigo, string nombre);
+        Retorno ventaCancela(int idVenta);
+        Retorno ventaCambia(int idVenta, int unidades, decimal costo);
     }
 }

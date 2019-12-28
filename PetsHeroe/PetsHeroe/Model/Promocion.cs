@@ -20,7 +20,7 @@ namespace PetsHeroe.Model
         public string vigencia { get; set; }
         public bool esDineroElectr { get; set; }
         public string UPC { get; set; }
-
+        public bool isProduct { get; set; }
 
         public Promocion()
         {

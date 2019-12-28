@@ -4,9 +4,11 @@ using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe.View
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Nuevo_Servicio_Venta : ContentPage
     {
 

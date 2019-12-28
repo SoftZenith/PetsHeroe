@@ -6,9 +6,11 @@ using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Consulta_CAMS : ContentPage
     {
 
@@ -23,6 +25,14 @@ namespace PetsHeroe
 
         public Consulta_CAMS()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             InitializeComponent();
             _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
             _ = getCurrentLocation();

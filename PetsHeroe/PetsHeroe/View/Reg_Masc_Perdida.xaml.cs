@@ -1,15 +1,22 @@
 ﻿using System;
+using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Reg_Masc_Perdida : ContentPage
     {
         protected override void OnAppearing()
         {
-            lsvMascotas.BeginRefresh();
+            Mascota listaMasc = new Mascota();
+            lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+            lsvMascotas.IsRefreshing = true;
+            lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+            lsvMascotas.IsRefreshing = false;
             base.OnAppearing();
         }
 
@@ -23,16 +30,23 @@ namespace PetsHeroe
                     var result = await this.DisplayAlert("¿Reportar como perdido?", "¿Reportar como perdido?", "Si", "No");
                     if (result)
                     {
-                        DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 1, -1, -1, "");
-                        Mascota listaMasc = new Mascota();
-                        lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+                        Retorno retorno = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 1, -1, -1, "");
+                        if (retorno.Resultado)
+                        {
+                            Mascota listaMasc = new Mascota();
+                            lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+                        }
+                        else
+                        {
+                            await DisplayAlert("Error",retorno.Mensaje,"Ok");
+                        }
                     }
                 });
             }
             else
             {
-                bool status = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 11, -1, -1, "");
-                if (status)
+                Retorno retorno = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 11, -1, -1, "");
+                if (retorno.Resultado)
                 {
                     DisplayAlert("OK", "Se cancelo el reporte", "OK");
                     Mascota listaMasc = new Mascota();
@@ -40,7 +54,7 @@ namespace PetsHeroe
                 }
                 else
                 {
-                    DisplayAlert("Erro", "Hubo un error al cancelar el reporte", "Ok");
+                    DisplayAlert("Error", retorno.Mensaje, "Ok");
                 }
             }
         }
@@ -55,9 +69,15 @@ namespace PetsHeroe
                     var result = await this.DisplayAlert("¿Reportar como robada?", "¿Reportar como robada?", "Si", "No");
                     if (result)
                     {
-                        DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 2, -1, -1, "");
-                        Mascota listaMasc = new Mascota();
-                        lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+                        Retorno retorno = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, 2, -1, -1, "");
+                        if (retorno.Resultado)
+                        {
+                            Mascota listaMasc = new Mascota();
+                            lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+                        }
+                        else {
+                            await DisplayAlert("Error", retorno.Mensaje, "Ok");
+                        }
                     }
                 });
             }
@@ -72,7 +92,6 @@ namespace PetsHeroe
             Mascota listaMasc = new Mascota();
             lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
 
-            
             lsvMascotas.RefreshCommand = new Command(() => {
                 lsvMascotas.IsRefreshing = true;
                 lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));

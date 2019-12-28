@@ -6,9 +6,11 @@ using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro_mascota : ContentPage
     {
         private int idTipoMascota = -1;

@@ -5,14 +5,23 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu_veterinario : Xamarin.Forms.TabbedPage
     {
 
         public Menu_veterinario(int tab)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             try
             {
                 InitializeComponent();
@@ -30,21 +39,47 @@ namespace PetsHeroe
 
         private void onAppearingClients(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbVete.Title = "Mis Clientes";
         }
 
         private void onAppearingBenefics(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbVete.Title = "Consulta de beneficios";
         }
 
         private void onAppearingSales(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
+            }
             tbVete.Title = "Caja de ventas";
         }
 
         private void onAppearLocation(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             tbVete.Title = "¿Encontraste una mascota?";
         }
 
@@ -63,11 +98,18 @@ namespace PetsHeroe
         protected override bool OnBackButtonPressed()
         {
 
+            Device.BeginInvokeOnMainThread(async () => {
+                bool answer = await DisplayAlert("Salir", "¿Estás seguro que deseas salir de la aplicación?", "Si", "No");
+                if (answer) await DependencyService.Get<IWebService>().CloseApp();
+            });
+
+            return true;
+            /*
             if (Device.RuntimePlatform == Device.Android)
             {
                 DependencyService.Get<IWebService>().CloseApp();
             }
-            return base.OnBackButtonPressed();
+            return base.OnBackButtonPressed();*/
         }
 
     }

@@ -3,7 +3,7 @@ namespace PetsHeroe.Model
 {
     public class Venta
     {
-        public int idItem { get; set; }
+        public int idVenta { get; set; }
         public int idProducto { get; set; }
         public int idServicio { get; set; }
         public string nombre { get; set; }

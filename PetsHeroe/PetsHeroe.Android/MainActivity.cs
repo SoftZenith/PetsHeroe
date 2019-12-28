@@ -10,6 +10,8 @@ using Plugin.CurrentActivity;
 using ZXing.Mobile;
 using Android.Content;
 using Android.Content.Res;
+using System.Threading.Tasks;
+using Android.Widget;
 
 namespace PetsHeroe.Droid
 {
@@ -20,6 +22,9 @@ namespace PetsHeroe.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
+            TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 
             base.OnCreate(savedInstanceState);
 
@@ -33,6 +38,53 @@ namespace PetsHeroe.Droid
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
             LoadApplication(new App());
+        }
+
+        private void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
+        {
+            var newExc = new Exception("TaskSchedulerOnUnobservedTaskException", unobservedTaskExceptionEventArgs.Exception);
+            LogUnhandledException(newExc);
+        }
+
+        private void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
+        {
+            var newExc = new Exception("CurrentDomainOnUnhandledException", unhandledExceptionEventArgs.ExceptionObject as Exception);
+            LogUnhandledException(newExc);
+        }
+
+        private void LogUnhandledException(Exception exception)
+        {
+            try
+            {
+                AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
+                alertDiag.SetTitle("Confirm delete");
+                alertDiag.SetMessage("Once deleted the move cannot be undone");
+                alertDiag.SetPositiveButton("Delete", (senderAlert, args) =>
+                {
+                    Toast.MakeText(this, "Deleted", ToastLength.Short).Show();
+                });
+                alertDiag.SetNegativeButton("Cancel", (senderAlert, args) =>
+                {
+                    alertDiag.Dispose();
+                });
+                Dialog diag = alertDiag.Create();
+                diag.Show();
+            }catch
+            {
+                AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
+                alertDiag.SetTitle("Confirm delete");
+                alertDiag.SetMessage("Once deleted the move cannot be undone");
+                alertDiag.SetPositiveButton("Delete", (senderAlert, args) =>
+                {
+                    Toast.MakeText(this, "Deleted", ToastLength.Short).Show();
+                });
+                alertDiag.SetNegativeButton("Cancel", (senderAlert, args) =>
+                {
+                    alertDiag.Dispose();
+                });
+                Dialog diag = alertDiag.Create();
+                diag.Show();
+            }
         }
 
         public void getTipoAsociado() {

@@ -7,9 +7,11 @@ using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Tomar_Nota : ContentPage
     {
 

@@ -6,9 +6,11 @@ using PetsHeroe.Model;
 using System.Linq;
 using PetsHeroe.Services;
 using System.Text.RegularExpressions;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro_vet : ContentPage
     {
         Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -68,9 +70,6 @@ namespace PetsHeroe
                     await DisplayAlert("Error", "Verifica que ambas contraseñas coincidan", "OK");
                     return;
                 }
-
-                
-
                 try
                 {
                     asociado.tipoAsociado = idTipoAsociado;
@@ -105,15 +104,13 @@ namespace PetsHeroe
                         return;
                     }
 
-                    Resultado res = new Resultado();
+                    Retorno res = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
 
-                    res = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
-
-                    if (res.status){
+                    if (res.Resultado){
                         await DisplayAlert("OK", "Registro exitoso, te enviamos un enlace a tu correo para poder activar tu cuenta","OK");
                         await Navigation.PushAsync(new MainPage());
                     }else {
-                        await DisplayAlert("ERROR", res.errorMessage, "OK");
+                        await DisplayAlert("ERROR", res.Mensaje, "OK");
                     }
 
                 }

@@ -5,9 +5,12 @@ using System.Linq;
 using PetsHeroe.Services;
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
+using PetsHeroe.Model;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro_dueno_mascota : ContentPage
     {
         Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -159,7 +162,7 @@ namespace PetsHeroe
 
                 bool estatus = false;
 
-                DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
+                Retorno retorno = DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
                 {
                     idDueno = codigoMascota,
                     nombre = nombreDueno,
@@ -178,11 +181,11 @@ namespace PetsHeroe
                 });
                 estatus = DependencyService.Get<IWebService>().Mascota_Registro;
 
-                if (estatus){
+                if (retorno.Resultado){
                     await DisplayAlert("OK", "Se registro correctamente", "OK");
                     await Navigation.PushAsync(new MainPage());
                 }else {
-                    await DisplayAlert("Error", "Error al registro su mascota, por favor verifique que el código sea valido", "OK");
+                    await DisplayAlert("Error", retorno.Mensaje, "OK");
                 }
 
             }catch (Exception){

@@ -23,7 +23,14 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <ListView Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="8" HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvMascotasExiste">     
+            <ListView
+                      BackgroundColor="White"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="4"
+                      Grid.RowSpan="8"
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      x:Name="lsvMascotasExiste">     
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -55,7 +62,7 @@
             </ListView>
             <Button
                 BorderColor="#FF7100"
-                BorderWidth="1"
+                BorderWidth="2"
                 BackgroundColor="#006561"
                 CornerRadius="14"
                 Clicked="onReportar"

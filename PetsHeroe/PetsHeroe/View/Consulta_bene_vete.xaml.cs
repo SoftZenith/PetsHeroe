@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -31,7 +33,16 @@ namespace PetsHeroe.View
 
         public Consulta_bene_vete()
         {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             InitializeComponent();
+
 
             lsvProductos.RefreshCommand = new Command(() => {
                 lsvProductos.IsRefreshing = true;
@@ -204,6 +215,14 @@ namespace PetsHeroe.View
 
             try
             {
+                var current = Connectivity.NetworkAccess;
+
+                if (current != NetworkAccess.Internet)
+                {
+                    DisplayAlert("Ok","No estas conectado a internet","Ok");
+                    return;
+                }
+
                 DependencyService.Get<IWebService>().getClientes_Busca(codigo, correo, nombre);
                 clientes = DependencyService.Get<IWebService>().Cliente_Busca;
 
@@ -293,6 +312,15 @@ namespace PetsHeroe.View
         }
 
         public async void onFiltrar(object sender, EventArgs args) {
+
+            var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
+
+            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
+            if (cameraStatus != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
+                return;
+            }
             try
             {
                 var result = await scanningDepen.ScanAsync();
@@ -469,12 +497,20 @@ namespace PetsHeroe.View
                 var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
                 if (result)
                 {
-                    bool status = DependencyService.Get<IWebService>().promoProducto_Eliminar(idPromocion);
-                    if (status) {
+                    Retorno status = DependencyService.Get<IWebService>().promoProducto_Eliminar(idPromocion);
+                    if (status.Resultado) {
+                        lsvProductos.IsRefreshing = true;
+                        listaProductosCompleto.Clear();
+                        listaProductos.Clear();
+                        promoProductosVet.Clear();
+                        promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
+                        listaProductosCompleto = dataTableToListProductos();
+                        lsvProductos.ItemsSource = listaProductos;
+                        lsvProductos.IsRefreshing = false;
                         await DisplayAlert("Eliminado","Se elimino correctamente","Ok");
                     }
                     else {
-                        await DisplayAlert("Error", "No se puede eliminar esta promoción ya ha sido utilizada en una venta", "OK");
+                        await DisplayAlert("Error", status.Mensaje, "OK");
                     }
                 }
             });
@@ -497,14 +533,22 @@ namespace PetsHeroe.View
                 var result = await this.DisplayAlert("Eliminar", "¿Eliminar promoción?", "Si", "No");
                 if (result)
                 {
-                    bool status = DependencyService.Get<IWebService>().promoServicio_Eliminar(promocion.idPromocion);
-                    if (status)
+                    Retorno status = DependencyService.Get<IWebService>().promoServicio_Eliminar(promocion.idPromocion);
+                    if (status.Resultado)
                     {
+                        lsvServicios.IsRefreshing = true;
+                        listaServiciosCompleto.Clear();
+                        ListaServicios.Clear();
+                        promoServiciosVet.Clear();
+                        promoServiciosVet = DependencyService.Get<IWebService>().getPromoServicios_Busca(Preferences.Get("idAsociado", -1));
+                        listaServiciosCompleto = dataTableToListServicios();
+                        lsvServicios.ItemsSource = listaServicios;
+                        lsvServicios.IsRefreshing = false;
                         await DisplayAlert("Eliminado", "Se elimino correctamente", "Ok");
                     }
                     else
                     {
-                        await DisplayAlert("Error", "No se puede eliminar esta promoción ya ha sido utilizada en una venta", "OK");
+                        await DisplayAlert("Error", status.Mensaje, "OK");
                     }
                 }
             });

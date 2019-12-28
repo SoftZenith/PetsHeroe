@@ -5,9 +5,11 @@ using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe.View
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Nuevo_Producto_Promo : ContentPage
     {
         IQRScanning scanningDepen;
@@ -226,7 +228,7 @@ namespace PetsHeroe.View
 
             if (txtDineroElectr.Text == "" || txtDineroElectr.Text == null)
             {
-                await DisplayAlert("Error", "Ingresa el precio", "Ok");
+                await DisplayAlert("Error", "Ingresa valor de dinero electrónico", "Ok");
                 return;
             }
             else {

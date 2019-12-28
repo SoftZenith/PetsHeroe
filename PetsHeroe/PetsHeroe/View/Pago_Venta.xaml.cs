@@ -5,32 +5,35 @@ using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe.View
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Pago_Venta : ContentPage
     {
 
         private int idMascota = -1;
         private int idMiembro = -1;
+        private int idAsociado = -1;
         private int idSucursalG = -1;
         private double puntos = 0;
         private double costoCompra = 0;
         private double costoCompraG = 0;
         private double puntosG = 0;
-        private int idTickerG = -1;
+        private double puntosSum = 0;
+        private int idTicketG = -1;
         private ObservableCollection<Venta> listaVenta;
         
-        public Pago_Venta(int idSucursal, string codigoMascota, Double costo, ObservableCollection<Venta> listaCarrito)
+        public Pago_Venta(int idSucursal, string codigoMascota, Double costo, int idTicket)
         {
             InitializeComponent();
 
+            idTicketG = idTicket;
             DataTable mascotasTbl = new DataTable();
             DataTable promocionesDueno = new DataTable();
             idSucursalG = idSucursal;
-            idTickerG = -1;
-            listaVenta = listaCarrito;
-            bool status = DependencyService.Get<IWebService>().getIdMascota_Busca(codigoMascota);
+            bool status = DependencyService.Get<IWebService>().getIdMascota_IdMember(codigoMascota);
             if (status)
             {
                 mascotasTbl = DependencyService.Get<IWebService>().Mascota_Busca;
@@ -39,10 +42,11 @@ namespace PetsHeroe.View
                 {
                     idMascota = Convert.ToInt32(dr["IDPet"].ToString());
                     idMiembro = Convert.ToInt32(dr["IDMember"].ToString());
+                    idAsociado = Convert.ToInt32(dr["IDPartner"].ToString());
                 }
             }
 
-            promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(idMiembro, -1, -1);
+            promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(-1, idAsociado, idMascota);
 
             foreach (DataRow dr in promocionesDueno.Rows)
             {
@@ -102,17 +106,28 @@ namespace PetsHeroe.View
                 return;
             }
 
-            costoCompra = costoCompraG - Convert.ToDouble(txtPuntosAplicar.Text);
-            puntos = puntosG - Convert.ToDouble(txtPuntosAplicar.Text);
+            if (Convert.ToDouble(txtPuntosAplicar.Text) == 0) {
+                puntos = puntosG;
+                puntosSum = 0;
+                costoCompra = costoCompraG;
+                lblPuntosApplied.Text = "0";
+                lblPuntos.Text = "Tienes " + puntos.ToString() + " puntos";
+                lblTotal.Text = costoCompra.ToString();
+            }
+            else { 
+                puntosSum += Convert.ToDouble(txtPuntosAplicar.Text);
+                costoCompra = costoCompraG - puntosSum;
+                puntos = puntosG - puntosSum;
 
-            lblApplied.IsVisible = true;
-            lblPuntosApplied.IsVisible = true;
+                lblApplied.IsVisible = true;
+                lblPuntosApplied.IsVisible = true;
 
-            lblPuntosApplied.Text = txtPuntosAplicar.Text;
-            lblTotal.Text = costoCompra.ToString();
-            lblPuntos.Text = "Tienes " + puntos.ToString() + " puntos";
-            lblSubTotal.TextDecorations = TextDecorations.Strikethrough;
-            lblLabelSubtotal.TextDecorations = TextDecorations.Strikethrough;
+                lblPuntosApplied.Text = puntosSum.ToString();
+                lblTotal.Text = costoCompra.ToString();
+                lblPuntos.Text = "Tienes " + puntos.ToString() + " puntos";
+                lblSubTotal.TextDecorations = TextDecorations.Strikethrough;
+                lblLabelSubtotal.TextDecorations = TextDecorations.Strikethrough;
+            }
         }
 
         async void onCancelPuntos(object sender, EventArgs args) {
@@ -129,19 +144,14 @@ namespace PetsHeroe.View
         }
             
         async void onPagar(object sender, EventArgs args) {
-            idTickerG = -1;
-            foreach (Venta venta in listaVenta) {
-                DependencyService.Get<IWebService>().agregar_venta(idTickerG, idMascota, idSucursalG, venta.idProducto, venta.idServicio, venta.cantidad, venta.precio, out int idTicketOut, out int ventaResult); //
-                idTickerG = idTicketOut;
-            }
-
-            bool status = DependencyService.Get<IWebService>().ticketPaga(idMascota, idSucursalG, idTickerG, Convert.ToDecimal(txtPuntosAplicar.Text));
-            if (status)
+            
+            Retorno status = DependencyService.Get<IWebService>().ticketPaga(idMascota, idSucursalG, idTicketG, (decimal)puntosSum);
+            if (status.Resultado)
             {
                 await DisplayAlert("Ok","Pago procesado correctamente","Ok");
                 await Navigation.PopAsync();
             } else {
-                await DisplayAlert("Ok", "Error al procesar pago", "Ok");
+                await DisplayAlert("Ok", status.Mensaje, "Ok");
             }
         }
 

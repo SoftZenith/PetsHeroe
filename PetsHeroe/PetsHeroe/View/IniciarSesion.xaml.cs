@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class IniciarSesion : ContentPage
     {
         string user = "";
@@ -13,6 +15,14 @@ namespace PetsHeroe
 
         public IniciarSesion()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             InitializeComponent();
 
             var forgetPassword_tap = new TapGestureRecognizer();
@@ -100,7 +110,7 @@ namespace PetsHeroe
 
                 if (current == NetworkAccess.Internet)
                 {
-                    await DisplayAlert("Error", "Usuario y/o contraseña incorrecto", "OK");
+                    await DisplayAlert("Error", "Correo y/o contraseña incorrecto", "OK");
                 }
                 else
                 {

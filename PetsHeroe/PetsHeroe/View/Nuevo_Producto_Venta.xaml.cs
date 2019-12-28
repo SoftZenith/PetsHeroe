@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using PetsHeroe.Services;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe.View
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Nuevo_Producto_Venta : ContentPage
     {
         IQRScanning scanningDepen;
@@ -64,6 +68,14 @@ namespace PetsHeroe.View
 
         async void onEscanear(object sender, EventArgs args)
         {
+            var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
+
+            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
+            if (cameraStatus != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
+                return;
+            }
             try
             {
                 var result = await scanningDepen.ScanAsync();

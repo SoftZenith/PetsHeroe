@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PetsHeroe
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Mascota_recuperada : ContentPage
     {
         private int idMascota;
@@ -14,6 +18,13 @@ namespace PetsHeroe
 
         public Mascota_recuperada(int idMascota)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             InitializeComponent();
             this.idMascota = idMascota;
 
@@ -43,15 +54,15 @@ namespace PetsHeroe
                 return;
             }
 
-            bool estatus = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, TIPO_INCIDENTE, tipoRetorno, condicion, "");
+            Retorno retorno = DependencyService.Get<IWebService>().setMascota_Incidente(idMascota, TIPO_INCIDENTE, tipoRetorno, condicion, "");
 
-            if (estatus)
+            if (retorno.Resultado)
             {
                 DisplayAlert("OK", "Se cambio el estatus de tu mascota", "OK");
                 Navigation.PopAsync();
             }
             else {
-                DisplayAlert("Error", "Hubo un problema al cambiar el estatus de tu mascota", "OK");
+                DisplayAlert("Error", retorno.Mensaje, "OK");
             }
 
         }

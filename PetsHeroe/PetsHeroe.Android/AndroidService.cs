@@ -52,7 +52,6 @@ namespace PetsHeroe.Droid
             IPAddress = "0"
         };
 
-
         public void getCAM_busca(double lat, double lon, int kms)
         {
             wsPets.AuthHeaderValue = auth;
@@ -211,7 +210,7 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public void getMascota_Registro(Dueno mascota)
+        public Retorno getMascota_Registro(Dueno mascota)
         {
             var wsPetsRegistro = new wsPetsApp();
 
@@ -222,44 +221,60 @@ namespace PetsHeroe.Droid
                     mascota.contrasena, mascota.mascostaCodigo, mascota.nombreMascota, (char)mascota.sexoMascota, mascota.idTipoMascota, mascota.idRazaMascota,
                     mascota.idColorMascota, mascota.edadMascota, out int IDMiembro, out int IDCodigo, out int IDMascota, out int IDEstatusCodigo);
                 Mascota_Registro = true;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc)
+            {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al registrar mascota: " + ex);
-                Mascota_Registro = false;
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
 
-        public Resultado setVeterinario_Registro(Asociado asociado)
+        public Retorno setVeterinario_Registro(Asociado asociado)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
                 wsPets.Veterinario_Registro(asociado.nombreComerial, asociado.nombre, asociado.apellidoPaterno, asociado.apellidoMaterno, (char)asociado.sexo,
                     asociado.correo, asociado.contrasena, asociado.tipoAsociado, out int IDAsociado);
-                return new Resultado()
+                return new Retorno()
                 {
-                    status = true,
-                    errorMessage = ""
+                    Resultado = true,
+                    Mensaje = ""
                 };
             }
-            catch (SoapException ec)
+            catch (SoapException soapex)
             {
-                string error = ec.Detail.InnerText;
-                return new Resultado()
+                string error = Retorno.xmlToStringMessage(soapex.Detail.InnerXml);
+                return new Retorno()
                 {
-                    status = false,
-                    errorMessage = error
+                    Resultado = false,
+                    Mensaje = error
                 };
             }
             catch (Exception ex)
             {
-                var error = "Ocurrio un error inesperado";
-                return new Resultado()
+                return new Retorno()
                 {
-                    status = false,
-                    errorMessage = error
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
                 };
             }
         }
@@ -297,8 +312,12 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public void CloseApp()
+        async public Task CloseApp()
         {
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+        }
+
+        public void CloseAppSinc() {
             Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
         }
 
@@ -335,29 +354,63 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool getIdMascota_Busca(string codigoMascota)
+        public int getIdMascota_Busca(string codigoMascota)
         {
             wsPets.AuthHeaderValue = auth;
+            int idMascota = -1;
             try
             {
                 Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", codigoMascota, "");
-                return true;
+                if (Mascota_Busca.Rows.Count != 1)
+                {
+                    return -1;
+                }
+                foreach (DataRow dr in Mascota_Busca.Rows) {
+                    idMascota = Convert.ToInt32(dr["IDPet"].ToString());
+                }
+                return idMascota;
             }
             catch (Exception)
+            {
+                return -1;
+            }
+        }
+
+        public bool getIdMascota_IdMember(string codigoMascota)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", codigoMascota, "");
+                return true;
+            }catch(Exception ex)
             {
                 return false;
             }
         }
 
-        public bool setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas)
+        public Retorno setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
                 wsPets.Mascota_Incidente(idMascota, tipoIncidente, 5, condicion, tipoRetorno, -1, notas);
-                return true;
+                return new Retorno() {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapexc) {
+                string error = Retorno.xmlToStringMessage(soapexc.Detail.InnerXml);
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = error
+                };
+
             }catch (Exception) {
-                return false;
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
@@ -443,16 +496,34 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados)
+        public Retorno ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
                 wsPets.TicketPaga(idMascota, idSucursal, ticket, puntosGastados);
-                return true;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
-            catch (Exception ex) {
-                return false;
+            catch (SoapException exc)
+            {
+                string error = Retorno.xmlToStringMessage(exc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error inesperado"
+                };
             }
         }
 
@@ -546,27 +617,65 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool promoProducto_Eliminar(int idPromocion) {
+        public Retorno promoProducto_Eliminar(int idPromocion)
+        {
             wsPets.AuthHeaderValue = auth;
             try
             {
                 wsPets.PromoProductos_Elimina(idPromocion);
-                return true;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
-            catch (Exception) {
-                return false;
+            catch (SoapException soapex)
+            {
+                string error = Retorno.xmlToStringMessage(soapex.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
-        public bool promoServicio_Eliminar(int idPromocion) {
+        public Retorno promoServicio_Eliminar(int idPromocion)
+        {
             wsPets.AuthHeaderValue = auth;
             try
             {
                 wsPets.PromoServicios_Elimina(idPromocion);
-                return true;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
-            catch (Exception) {
-                return false;
+            catch (SoapException soapex)
+            {
+                string error = Retorno.xmlToStringMessage(soapex.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
@@ -620,5 +729,59 @@ namespace PetsHeroe.Droid
             }
         }
 
+        public Retorno ventaCancela(int idVenta)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.VentaCancela(idVenta);
+                return new Retorno() {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc) {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex) {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
+            }
+        }
+
+        public Retorno ventaCambia(int idVenta, int unidades, decimal costo)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.VentaCambia(idVenta, unidades, costo);
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc) {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex) {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
+            }
+        }
     }
 }

@@ -241,7 +241,7 @@
                                 <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding tipo, StringFormat='Tipo: {0}'}" />
                                 <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding marca, StringFormat='Marca: {0}'}" />
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding producto, StringFormat='Producto: {0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding precios, StringFormat='Precio: {0}'}" />
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding precio, StringFormat='Precio: {0}'}" />
                                 <StackLayout
                                     Orientation="Horizontal">
                                     <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding puntos, StringFormat='Dinero electrónico: {0}'}" />
