@@ -111,6 +111,8 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback TicketCancelaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback RenglonCancelaOperationCompleted;
+        
         private System.Threading.SendOrPostCallback TicketPagaOperationCompleted;
         
         /// <remarks/>
@@ -247,6 +249,9 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         public event TicketCancelaCompletedEventHandler TicketCancelaCompleted;
+        
+        /// <remarks/>
+        public event RenglonCancelaCompletedEventHandler RenglonCancelaCompleted;
         
         /// <remarks/>
         public event TicketPagaCompletedEventHandler TicketPagaCompleted;
@@ -1799,6 +1804,35 @@ namespace PetsHeroe.Droid.mx.com.petshero {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/RenglonCancela", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void RenglonCancela(int IDVenta) {
+            this.Invoke("RenglonCancela", new object[] {
+                        IDVenta});
+        }
+        
+        /// <remarks/>
+        public void RenglonCancelaAsync(int IDVenta) {
+            this.RenglonCancelaAsync(IDVenta, null);
+        }
+        
+        /// <remarks/>
+        public void RenglonCancelaAsync(int IDVenta, object userState) {
+            if ((this.RenglonCancelaOperationCompleted == null)) {
+                this.RenglonCancelaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRenglonCancelaOperationCompleted);
+            }
+            this.InvokeAsync("RenglonCancela", new object[] {
+                        IDVenta}, this.RenglonCancelaOperationCompleted, userState);
+        }
+        
+        private void OnRenglonCancelaOperationCompleted(object arg) {
+            if ((this.RenglonCancelaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RenglonCancelaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/TicketPaga", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void TicketPaga(int IDMascota, int IDSucursal, int Ticket, decimal PuntosGastados) {
             this.Invoke("TicketPaga", new object[] {
@@ -2773,6 +2807,10 @@ namespace PetsHeroe.Droid.mx.com.petshero {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.11.1")]
     public delegate void TicketCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.11.1")]
+    public delegate void RenglonCancelaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.11.1")]

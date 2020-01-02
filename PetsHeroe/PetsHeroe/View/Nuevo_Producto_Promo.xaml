@@ -125,7 +125,7 @@
                     x:Name="pkrProducto">
                 </Picker>
             </Frame>
-
+            <!--
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 TextFontSize="18"
@@ -138,7 +138,19 @@
                 Placeholder="Precio"
                 TextColor="black"
                 x:Name="txtPrecio">
-            </input:AdvancedEntry>
+            </input:AdvancedEntry>-->
+
+            <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                Grid.Row="6"
+                Grid.ColumnSpan="6"
+                Keyboard="Numeric"
+                Margin="8,0"
+                Placeholder="Precio"
+                TextColor="black"
+                x:Name="txtPrecio">
+            </Entry>
 
             <input:AdvancedEntry
                 BorderColor="#FF7100"

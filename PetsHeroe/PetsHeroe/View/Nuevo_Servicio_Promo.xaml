@@ -6,8 +6,8 @@
     x:Class="PetsHeroe.View.Nuevo_Servicio_Promo"
     Title="Nueva promoción servicio">
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -138,6 +138,7 @@
                 FontFamily="Lobster-Regular"
                 Grid.Row="6"
                 Grid.ColumnSpan="6"
+                Keyboard="Numeric"
                 IconImage="code.png"
                 Margin="8,4,8,0"
                 Placeholder="Unidades requeridas"
@@ -171,7 +172,7 @@
                 TextColor="White"
                 x:Name="btnGuardar">
             </Button>
-
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

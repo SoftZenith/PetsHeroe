@@ -160,7 +160,7 @@
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 HorizontalOptions="FillAndExpand"
-                TextFontSize="18"
+                TextFontSize="17"
                 FontFamily="Lobster-Regular"
                 IconImage="user.png"
                 Margin="0"
@@ -183,7 +183,7 @@
             <input:AdvancedEntry
                 BorderColor="#FF7100"
                 HorizontalOptions="FillAndExpand"
-                TextFontSize="18"
+                TextFontSize="17"
                 FontFamily="Lobster-Regular"
                 IconImage="user.png"
                 Margin="0"

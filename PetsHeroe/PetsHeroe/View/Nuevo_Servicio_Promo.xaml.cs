@@ -21,6 +21,13 @@ namespace PetsHeroe.View
         private bool isNewService = false;
         private bool isEditingPromo = false;
 
+        protected override void OnAppearing()
+        {
+            pkrTipoMascota.SelectedIndex = -1;
+            pkrServicio.SelectedIndex = -1;
+
+        }
+
         public Nuevo_Servicio_Promo(bool isEdit, Promocion promocionEdit)
         {
             InitializeComponent();
@@ -49,7 +56,9 @@ namespace PetsHeroe.View
 
             if (isEdit) {
                 pkrTipoMascota.SelectedItem = promocionEdit.tipo;
+                pkrTipoMascota.IsEnabled = false;
                 pkrServicio.SelectedItem = promocionEdit.producto;
+                pkrServicio.IsEnabled = false;
                 txtAPartir.Date = DateTime.Now;
                 txtHasta.Date = Convert.ToDateTime(promocionEdit.vigencia);
                 txtNombrePromo.Text = promocionEdit.nombre;
@@ -74,8 +83,13 @@ namespace PetsHeroe.View
         {
             DataTable servicios = new DataTable();
 
-            servicios = DependencyService.Get<IWebService>().getServicio_Busca(-1, tipoMascotaDic[pkrTipoMascota.SelectedItem.ToString()]);
+            try
+            {
+                servicios = DependencyService.Get<IWebService>().getServicio_Busca(-1, tipoMascotaDic[pkrTipoMascota.SelectedItem.ToString()]);
+            }
+            catch (Exception ex) {
 
+            }
             pkrServicio.Items.Clear();
             tipoServicioDic.Clear();
             foreach (DataRow dr in servicios.Rows) {
@@ -110,6 +124,9 @@ namespace PetsHeroe.View
                                 isNewService = false;
                                 await Navigation.PushAsync(new Nuevo_Servicio_Venta());
                             }
+                            else {
+                                isNewService = false;
+                            }
                         });
                     }
                     isNewService = true;
@@ -126,17 +143,17 @@ namespace PetsHeroe.View
 
         public void onGuardarPromo(object sender, EventArgs args) {
 
-            if (txtAPartir.Date.Day < DateTime.Now.Day) {
+            if (txtAPartir.Date < DateTime.Now.Date) {
                 DisplayAlert("Error","Fecha de inicio menor a fecha actual","Ok");
                 return;
             }
 
-            if (txtHasta.Date.Day < DateTime.Now.Day) {
+            if (txtHasta.Date < DateTime.Now.Date) {
                 DisplayAlert("Error","Fecha final menor a fecha actual","Ok");
                 return;
             }
 
-            if (txtHasta.Date.Day < txtAPartir.Date.Day) {
+            if (txtHasta.Date < txtAPartir.Date) {
                 DisplayAlert("Error","Fecha final menor a fecha inicio","Ok");
                 return;
             }

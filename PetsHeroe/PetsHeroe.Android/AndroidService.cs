@@ -482,17 +482,41 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public void agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult)
+        public Retorno agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult)
         {
             int IDTicket = ticket;
             wsPets.AuthHeaderValue = auth;
-            try {
+            try
+            {
                 ventaResult = wsPets.Venta(ref IDTicket, idMascota, idSucursal, idProducto, idServicio, unidades, Convert.ToDecimal(costo));
                 idTicketOut = IDTicket;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
-            catch (Exception ex) {
+            catch (SoapException soapExc)
+            {
+
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
                 ventaResult = -1;
                 idTicketOut = -1;
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                ventaResult = -1;
+                idTicketOut = -1;
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
@@ -783,5 +807,37 @@ namespace PetsHeroe.Droid
                 };
             }
         }
+
+        public Retorno reglonCancela(int IDVenta)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.RenglonCancela(IDVenta);
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException SoapExc)
+            {
+                string error = Retorno.xmlToStringMessage(SoapExc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Error desconocido"
+                };
+            }
+        }
+
     }
 }

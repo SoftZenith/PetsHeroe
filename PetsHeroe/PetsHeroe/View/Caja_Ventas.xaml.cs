@@ -76,7 +76,6 @@ namespace PetsHeroe.View
                 }
             }
             //txtUPC.ItemsSource = productosEntry;
-
         }
 
         protected override void OnAppearing()
@@ -85,6 +84,7 @@ namespace PetsHeroe.View
             listaCarrito.Clear();
             total = 0;
             puntos = 0;
+            idTicket = -1;
             lblTotal.Text = "$ " + total.ToString() + " MXN";
             lblPuntos.Text = puntos.ToString() + " PTS";
 
@@ -110,9 +110,7 @@ namespace PetsHeroe.View
 
                 }
             }
-
             base.OnAppearing();
-
         }
 
         async void LsvCarrito_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -128,7 +126,7 @@ namespace PetsHeroe.View
             int cantidadSelected = pkrCantidad.SelectedIndex;
             if (cantidadSelected == 0)
             {
-                Retorno resultado = DependencyService.Get<IWebService>().ventaCancela(ventaSelected.idVenta);
+                Retorno resultado = DependencyService.Get<IWebService>().reglonCancela(ventaSelected.idVenta);
                 if (resultado.Resultado)
                 {
                     DisplayAlert("Ok", "Se eliminó del carrito correctamente", "Ok");
@@ -293,8 +291,14 @@ namespace PetsHeroe.View
                 Promocion promocion = productosEntry.Find(x => x.nombre == txtUPC.Text || x.UPC == txtUPC.Text);
                 if (promocion != null)//Promoción de producto encontrada
                 {
-                    DependencyService.Get<IWebService>().agregar_venta(idTicket, idMascota, idSucursal, promocion.idPromocion, -1, 1, 0, out int idTicketOut, out int ventaResult);
-                    idTicket = idTicketOut;
+                    Retorno retorno = DependencyService.Get<IWebService>().agregar_venta(idTicket, idMascota, idSucursal, promocion.idPromocion, -1, 1, 0, out int idTicketOut, out int ventaResult);
+                    if (retorno.Resultado)
+                    {
+                        idTicket = idTicketOut;
+                    }
+                    else {
+                        await DisplayAlert("Error", retorno.Mensaje, "Ok");
+                    }
                 } else { //Promoción de producto no encontrada descripción o UPC no existe
                     //Agregar como "otro"
                     if (txtMonto.Text == "" || txtMonto.Text == null)
@@ -345,46 +349,6 @@ namespace PetsHeroe.View
             //llamar a ticketCarga
             txtUPC.Text = "";
             llenarCarrito();
-            /*
-            DataTable listaTicketCarga = new DataTable();
-            listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(idTicket, idMascota, idSucursal);
-            listaCarrito.Clear();//Limpiar carrito para refrescar con productos/servicios agregados
-            foreach (DataRow dr in listaTicketCarga.Rows) {
-
-                try
-                {
-                    int idServicioTmp = Convert.ToInt32(dr["IDServiceType"].ToString());
-                    Venta ticket = new Venta()
-                    {
-                        idServicio = Convert.ToInt32(dr["IDSale"].ToString()),
-                        nombre = dr["RowDesc"].ToString(),
-                        precio = Convert.ToDouble(dr["PriceU"].ToString()),
-                        cantidad = Convert.ToInt32(dr["Units"].ToString()),
-                        puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
-                        actual = Convert.ToInt32(dr["UnitsToDate"].ToString()),
-                        isProduct = false,
-                        isService = true,
-                        imagen = "shower_big.png"
-                    };
-                    ticket.textoMostrar = "Tienes " + ticket.actual + " de ";
-                    listaCarrito.Add(ticket);
-                }
-                catch (Exception ex) {
-                    Venta ticket = new Venta()
-                    {
-                        idProducto = Convert.ToInt32(dr["IDSale"].ToString()),
-                        nombre = dr["RowDesc"].ToString(),
-                        precio = Convert.ToDouble(dr["PriceU"].ToString()),
-                        cantidad = Convert.ToInt32(dr["Units"].ToString()),
-                        puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
-                        isProduct = true,
-                        isService = false,
-                        imagen = "collar_big.png"
-                    };
-                    ticket.textoMostrar = ticket.puntos + " PTS";
-                    listaCarrito.Add(ticket);
-                }
-            }*/
         }
 
         async void onSiguiente(object sender, EventArgs args) {
@@ -398,19 +362,45 @@ namespace PetsHeroe.View
             }
         }
 
-
         private void llenarCarrito() {
             total = 0;
             puntos = 0;
+            ahorroServicios = 0;
             DataTable listaTicketCarga = new DataTable();
             listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(idTicket, idMascota, idSucursal);
             listaCarrito.Clear();//Limpiar carrito para refrescar con productos/servicios agregados
             foreach (DataRow dr in listaTicketCarga.Rows)
             {
-
                 try
                 {
                     int idServicioTmp = Convert.ToInt32(dr["IDServiceType"].ToString());
+
+                    //Código manual para obtener total de promo servicios
+
+                    productosEntry.Clear();
+                    productosEntryDic.Clear();
+                    productosEntryComplete = DependencyService.Get<IWebService>().getPromoServicios_Busca(idAsociado);
+                    foreach (DataRow dr2 in productosEntryComplete.Rows)
+                    {
+                        try
+                        {
+                            productosEntryDic.Add(dr2["IDPartnerService"].ToString(), dr2["Name"].ToString());
+                            Promocion promoTemp = new Promocion()
+                            {
+                                nombre = dr2["Name"].ToString(),
+                                idPromocion = Convert.ToInt32(dr2["IDServiceType"].ToString()),
+                                isProduct = false,
+                                gratis = Convert.ToInt32(dr2["Units"].ToString())
+                            };
+                            productosEntry.Add(promoTemp);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
+
+                    //
                     total += Convert.ToDouble(dr["TotalRow"].ToString());
                     Venta ticket = new Venta()
                     {
@@ -420,31 +410,50 @@ namespace PetsHeroe.View
                         cantidad = Convert.ToInt32(dr["Units"].ToString()),
                         puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
                         actual = Convert.ToInt32(dr["UnitsToDate"].ToString()),
-                        total = Convert.ToInt32(dr["PromoUnits"].ToString()),
+                        total = productosEntry.Find(x => x.idPromocion == idServicioTmp).gratis,
                         isProduct = false,
                         isService = true,
+                        idServicio = Convert.ToInt32(dr["IDServiceType"].ToString()),
                         imagen = "shower_big.png"
                     };
-                    ticket.textoMostrar = "Tienes " + ticket.actual + " de ";
+                    if (Convert.ToInt32(dr["PromoUnits"].ToString()) == 1) {
+                        ahorroServicios += ticket.precio;
+                        lblAhorroTotal.Text = ahorroServicios + "MXN";
+                    }
+
+                    if(ahorroServicios > 0)
+                    {
+                        lblAhorro.IsVisible = true;
+                        lblAhorroTotal.IsVisible = true;
+                    }
+
+                    ticket.textoMostrar = "Tienes " + ticket.actual + " de " + ticket.total + " ";
                     listaCarrito.Add(ticket);
                 }
                 catch (Exception ex)
                 {
-                    total += Convert.ToDouble(dr["TotalRow"].ToString());
-                    puntos += Convert.ToDouble(dr["PointsGain"].ToString());
-                    Venta ticket = new Venta()
+                    try
                     {
-                        idVenta = Convert.ToInt32(dr["IDSale"].ToString()),
-                        nombre = dr["RowDesc"].ToString(),
-                        precio = Convert.ToDouble(dr["PriceU"].ToString()),
-                        cantidad = Convert.ToInt32(dr["Units"].ToString()),
-                        puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
-                        isProduct = true,
-                        isService = false,
-                        imagen = "collar_big.png"
-                    };
-                    ticket.textoMostrar = ticket.puntos + " PTS";
-                    listaCarrito.Add(ticket);
+                        total += Convert.ToDouble(dr["TotalRow"].ToString());
+                        puntos += Convert.ToDouble(dr["PointsGain"].ToString());
+                        Venta ticket = new Venta()
+                        {
+                            idVenta = Convert.ToInt32(dr["IDSale"].ToString()),
+                            nombre = dr["RowDesc"].ToString(),
+                            precio = Convert.ToDouble(dr["PriceU"].ToString()),
+                            cantidad = Convert.ToInt32(dr["Units"].ToString()),
+                            puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
+                            isProduct = true,
+                            idProducto = Convert.ToInt32(dr["IDProduct"].ToString()),
+                            isService = false,
+                            imagen = "collar_big.png"
+                        };
+                        ticket.textoMostrar = ticket.puntos + " PTS";
+                        listaCarrito.Add(ticket);
+                    }
+                    catch (Exception exc) {
+
+                    }
                 }
             }
             lblPuntos.Text = puntos.ToString() + "  PTS";
@@ -476,7 +485,6 @@ namespace PetsHeroe.View
                 sender.ItemsSource = cantidades;
             }
         }
-
 
         public List<String> filtrar(string texto) {
 

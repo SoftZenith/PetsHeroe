@@ -820,6 +820,16 @@
       <s:element name="TicketCancelaResponse">
         <s:complexType />
       </s:element>
+      <s:element name="RenglonCancela">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDVenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenglonCancelaResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="TicketPaga">
         <s:complexType>
           <s:sequence>
@@ -1206,6 +1216,15 @@
   <wsdl:message name="TicketCancelaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="RenglonCancelaSoapIn">
+    <wsdl:part name="parameters" element="tns:RenglonCancela" />
+  </wsdl:message>
+  <wsdl:message name="RenglonCancelaSoapOut">
+    <wsdl:part name="parameters" element="tns:RenglonCancelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenglonCancelaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="TicketPagaSoapIn">
     <wsdl:part name="parameters" element="tns:TicketPaga" />
   </wsdl:message>
@@ -1425,6 +1444,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina Ticket completo</wsdl:documentation>
       <wsdl:input message="tns:TicketCancelaSoapIn" />
       <wsdl:output message="tns:TicketCancelaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenglonCancela">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Elimina renglon del Ticket</wsdl:documentation>
+      <wsdl:input message="tns:RenglonCancelaSoapIn" />
+      <wsdl:output message="tns:RenglonCancelaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="TicketPaga">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pagar ticket y aplicar puntos gastados</wsdl:documentation>
@@ -1845,6 +1869,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:TicketCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenglonCancela">
+      <soap:operation soapAction="http://www.petshero.com.mx/RenglonCancela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RenglonCancelaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2274,6 +2308,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:TicketCancelaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenglonCancela">
+      <soap12:operation soapAction="http://www.petshero.com.mx/RenglonCancela" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RenglonCancelaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

@@ -53,7 +53,7 @@
                     Clicked="onRegDueno"
                     ContentLayout="Top,0"
                     CornerRadius="8"
-                    FontSize="Large"
+                    FontSize="17"
                     Grid.Column="0"
                     Grid.Row="0"
                     ImageSource="paw.png"
@@ -63,25 +63,12 @@
 
                 </controls:CustomButton>
 
-                <!--<Button
-                    Margin="0,0,4,4"
-                    BackgroundColor="#FF7100"
-                    Clicked="onRegDueno"
-                    ContentLayout="Top,0"
-                    FontSize="Large"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    ImageSource="paw.png"
-                    Text="Registrar mi mascota"
-                    TextColor="White">
-                </Button>-->
-
                 <controls:CustomButton
                     BackgroundColor="#FF7100"
                     Clicked="onMascEnc"
                     ContentLayout="Top,0"
                     CornerRadius="8"
-                    FontSize="Large"
+                    FontSize="17"
                     Grid.Column="1"
                     Grid.Row="0"
                     ImageSource="target.png"
@@ -91,26 +78,12 @@
 
                 </controls:CustomButton>
 
-                <!--
-                <Button
-                    BackgroundColor="#FF7100"
-                    Clicked="onMascEnc"
-                    ContentLayout="Top,0"
-                    FontSize="Large"
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    ImageSource="target.png"
-                    Margin="4,0,0,4"
-                    Text="Encontré una mascota"
-                    TextColor="White">
-                </Button>-->
-
                 <controls:CustomButton
                     BackgroundColor="#FF7100"
                     Clicked="onRegVet"
                     ContentLayout="Top,0"
                     CornerRadius="8"
-                    FontSize="Large"
+                    FontSize="17"
                     Grid.Column="0"
                     Grid.Row="1"
                     ImageSource="vet.png"
@@ -120,26 +93,12 @@
 
                 </controls:CustomButton>
 
-                <!--
-                <Button
-                    BackgroundColor="#FF7100"
-                    Clicked="onRegVet"
-                    ContentLayout="Top,0"
-                    FontSize="Large"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    ImageSource="vet.png"
-                    Margin="0,4,5,0"
-                    Text="Registrar veterinaria"
-                    TextColor="White">
-                </Button>-->
-
                 <controls:CustomButton
                     BackgroundColor="#FF7100"
                     Clicked="onListaCAM"
                     ContentLayout="Top,0"
                     CornerRadius="8"
-                    FontSize="Large"
+                    FontSize="17"
                     Grid.Column="1"
                     Grid.Row="1"
                     ImageSource="location.png"
@@ -148,19 +107,7 @@
                     TextColor="White">
 
                 </controls:CustomButton>
-                <!--
-                <Button
-                    BackgroundColor="#FF7100"
-                    Clicked="onListaCAM"
-                    ContentLayout="Top,0"
-                    FontSize="Large"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    ImageSource="location.png"
-                    Margin="4,4,0,0"
-                    Text="Veterinarias CAMS"
-                    TextColor="White">
-                </Button>-->
+
             </Grid>
 
             <Button

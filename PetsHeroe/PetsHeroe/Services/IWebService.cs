@@ -29,6 +29,7 @@ namespace PetsHeroe.Services
         MensajeDueno Entrega_SoloMensaje { get; set; }
         string nombre { get; set; }
 
+        Retorno reglonCancela(int IDVenta);
         DataTable ticketCarga(int IDTicket, int IDMascota, int IDSucursal);
         Resultado promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
         Resultado promoServicio_Agregar(int idAsociado, int idTipoServicio, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
@@ -40,7 +41,7 @@ namespace PetsHeroe.Services
         bool getIdMascota_IdMember(string codigoMascota);
         int producto_Agrega(int idTipoProducto, int idMarca, string nombre, string UPC);
         Retorno ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);
-        void agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult);
+        Retorno agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult);
         void getCAM_busca(double lat, double lon, int kms);
         void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida(string codigo);

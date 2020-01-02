@@ -48,6 +48,10 @@ namespace PetsHeroe.View
                 pkrTipo.SelectedIndexChanged += tipoProductoSeleccionado;
             }
 
+            pkrTipo.SelectedIndex = -1;
+            pkrMarcar.SelectedIndex = -1;
+            pkrProducto.SelectedIndex = -1;
+
         }
 
         public Nuevo_Producto_Promo(bool isEdit, Promocion promocionEdit)
@@ -85,8 +89,11 @@ namespace PetsHeroe.View
                 try
                 {
                     pkrTipo.SelectedItem = promocionEdit.tipo;
+                    pkrTipo.IsEnabled = false;
                     pkrMarcar.SelectedItem = promocionEdit.marca;
-                    pkrProducto.SelectedItem = promocionEdit.nombre;
+                    pkrMarcar.IsEnabled = false;
+                    pkrProducto.SelectedItem = promocionEdit.producto;
+                    pkrProducto.IsEnabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -172,6 +179,10 @@ namespace PetsHeroe.View
                                 isNewPRoduct = false;
                                 await Navigation.PushAsync(new Nuevo_Producto_Venta());
                             }
+                            else {
+                                isNewPRoduct = false;
+                                pkrProducto.SelectedIndex = -1;
+                            }
                         });
                     }
                     isNewPRoduct = true;
@@ -188,19 +199,21 @@ namespace PetsHeroe.View
 
         public async void onAgregar(object sender, EventArgs args) {
 
+
+
             if (txtNombrePromo.Text == "" || txtNombrePromo.Text == null) {
                 await DisplayAlert("Error", "Ingresa un nombre para la promoción", "Ok");
                 return;
             }
-            if (dpkrAPartir.Date.Day < DateTime.Now.Day) {
+            if (dpkrAPartir.Date < DateTime.Now.Date) {
                 await DisplayAlert("Error","Fecha \"A partir del\" es menor a fecha actual","Ok");
                 return;
             }
-            if (dpkrHasta.Date.Day < DateTime.Now.Day) {
+            if (dpkrHasta.Date < DateTime.Now.Date) {
                 await DisplayAlert("Error","Fecha \"Hasta el\" es menor a la fecha actual","Ok");
                 return;
             }
-            if(dpkrHasta.Date.Day < dpkrAPartir.Date.Day)
+            if(dpkrHasta.Date < dpkrAPartir.Date)
             {
                 await DisplayAlert("Error", "Fecha \"Hasta el\" superior a la fecha \"A partir del\"", "Ok");
                 return;

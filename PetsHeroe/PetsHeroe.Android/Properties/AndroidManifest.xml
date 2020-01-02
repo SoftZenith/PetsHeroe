@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="15" android:versionName="1.0" package="mx.com.dotech.petsheroe">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="20" android:versionName="1.0" package="mx.com.dotech.petsheroe">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
 	<application android:label="Pet's Hero" android:icon="@drawable/icono_petshero">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCB-Fxh5ONasic4gRkrJuujJC5B3u2uvPA" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />

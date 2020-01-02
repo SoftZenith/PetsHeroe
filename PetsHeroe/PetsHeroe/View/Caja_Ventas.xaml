@@ -6,7 +6,7 @@
              x:Class="PetsHeroe.View.Caja_Ventas">
     <ContentPage.Content>
         <ScrollView>
-        <Grid>
+            <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>

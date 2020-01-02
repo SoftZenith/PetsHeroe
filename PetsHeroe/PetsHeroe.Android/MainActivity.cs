@@ -4,8 +4,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using PetsHeroe.Droid.mx.com.petshero;
-using System.Data;
 using Plugin.CurrentActivity;
 using ZXing.Mobile;
 using Android.Content;
@@ -18,25 +16,34 @@ namespace PetsHeroe.Droid
     [Activity(Label = "PetsHeroe", Icon = "@drawable/icono_app", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private static bool _hasEverInited;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
-            TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 
             base.OnCreate(savedInstanceState);
 
-            Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            //Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            global::ZXing.Net.Mobile.Forms.Android.Platform.Init();
-            MobileBarcodeScanner.Initialize(Application);
-            Xamarin.FormsMaps.Init(this, savedInstanceState);
-            CrossCurrentActivity.Current.Init(this, savedInstanceState);
-            LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
+            if (!_hasEverInited)
+            {
+                TabLayoutResource = Resource.Layout.Tabbar;
+                ToolbarResource = Resource.Layout.Toolbar;
+
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
+                TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+
+                Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
+                Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+                //Xamarin.Forms.Forms.Init(this, savedInstanceState);
+                global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+                global::ZXing.Net.Mobile.Forms.Android.Platform.Init();
+                MobileBarcodeScanner.Initialize(Application);
+                Xamarin.FormsMaps.Init(this, savedInstanceState);
+                CrossCurrentActivity.Current.Init(this, savedInstanceState);
+                LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
+
+                _hasEverInited = true;
+
+            }
             LoadApplication(new App());
         }
 
@@ -84,32 +91,6 @@ namespace PetsHeroe.Droid
                 });
                 Dialog diag = alertDiag.Create();
                 diag.Show();
-            }
-        }
-
-        public void getTipoAsociado() {
-            wsPetsApp wsPets = new wsPetsApp();
-            AuthHeader auth = new AuthHeader()
-            {
-                Usuario = "appcelmypets2019",
-                Password = "RRW7G0ZiF4D1bUasqazmTg",
-                IDUsuario = 0,
-                IPAddress = "0"
-            };
-            wsPets.AuthHeaderValue = auth;
-            wsPets.TipoAsociado_BuscaAsync();
-            wsPets.TipoAsociado_BuscaCompleted += tipoAsociadoBuscaComplete;
-        }
-
-        public void tipoAsociadoBuscaComplete(object sender, TipoAsociado_BuscaCompletedEventArgs e) {
-            //Console.WriteLine("Columnas: "+ e.Result.Columns.Count);
-            //Console.WriteLine("Filas: "+ e.Result.Rows.Count);
-            DataTable datos = new DataTable();
-            datos = e.Result.Copy();
-            foreach (DataRow dr in datos.Rows) {
-                foreach (DataColumn dc in datos.Columns) {
-                    Console.WriteLine(dc.ColumnName +": "+ dr[dc.Ordinal]);
-                }
             }
         }
 

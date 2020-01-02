@@ -6,6 +6,7 @@
     x:Class="PetsHeroe.View.Nuevo_Servicio_Venta"
     Title="Agregar servicio">
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -83,5 +84,6 @@
             </Button>
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

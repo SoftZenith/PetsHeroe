@@ -6,6 +6,7 @@
     x:Class="PetsHeroe.View.Nuevo_Producto_Venta"
     Title="Agregar producto">
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -96,7 +97,6 @@
                 </Picker>
             </Frame>
 
-
             <Button
                 BackgroundColor="#006561"
                 BorderColor="#FF7100"
@@ -113,5 +113,6 @@
             </Button>
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
