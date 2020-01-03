@@ -92,7 +92,7 @@
             Grid.Column="0"
             Grid.ColumnSpan="4"
             StyleClass="Link"
-            Margin="0,16,0,0"
+            Margin="16,16,0,0"
             HorizontalOptions="CenterAndExpand"
             Text="Si olvidaste tu contraseña, presiona aquí para recuperarla"
             TextDecorations="Underline"

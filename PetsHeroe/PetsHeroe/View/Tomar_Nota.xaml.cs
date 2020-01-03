@@ -131,18 +131,7 @@ namespace PetsHeroe
                     return;
                 }
 
-                if (!ValidateEmail(txtCorreo.Text)) {
-                    await DisplayAlert("Error", "Correo inválido", "OK");
-                    return;
-                }
-
-                if (!IsPhoneNumber(txtTelefono.Text)) {
-                    await DisplayAlert("Error", "Telefono inválido", "OK");
-                    return;
-                }
-
-
-                estatus = DependencyService.Get<IWebService>().setEntrega_Localizacion(new MensajeDueno()
+                Retorno retorno = DependencyService.Get<IWebService>().setEntrega_Localizacion(new MensajeDueno()
                 {
                     codigo = codigo_pre,
                     nombre = nombre,
@@ -155,7 +144,7 @@ namespace PetsHeroe
                     idCiudad = idCiudad
                 });
 
-                if (estatus)
+                if (retorno.Resultado)
                 {
                     await DisplayAlert("OK","Se enviaron tus notas al dueño","Ok");
                     if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
@@ -163,7 +152,7 @@ namespace PetsHeroe
                     if (Preferences.Get("userType", 0, "tipoUsuario") == 2) { await Navigation.PushAsync(new Menu_veterinario(3)); }
                 }
                 else {
-                    await DisplayAlert("ERROR", "Algo salio mal enviando tu localización", "OK");
+                    await DisplayAlert("ERROR", retorno.Mensaje, "OK");
                 }
 
             }catch (Exception ex){

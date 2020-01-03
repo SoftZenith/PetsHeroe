@@ -299,16 +299,30 @@ namespace PetsHeroe.Droid
             }
         }
 
-        public bool setEntrega_Localizacion(MensajeDueno localizacion)
+        public Retorno setEntrega_Localizacion(MensajeDueno localizacion)
         {
             try
             {
                 wsPets.Entrega_Localizacion(5, localizacion.codigo, localizacion.idCiudad, localizacion.nombre, localizacion.correo, localizacion.telefono, localizacion.localizacion, localizacion.notas, localizacion.latitud, localizacion.longitud);
-                return true;
+                return new Retorno() {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc) {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno() {
+                    Resultado = false,
+                    Mensaje = error
+                };
             }
             catch (Exception ex) {
-                Console.WriteLine("Error: "+ex);
-                return false;
+                Console.WriteLine("Error: " + ex);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error desconocido"
+                };
             }
         }
 
@@ -330,15 +344,33 @@ namespace PetsHeroe.Droid
             return true;
         }
 
-        public bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud)
+        public Retorno setEntrega_CAM(string codigo, string notas, double longitud, double latitud)
         {
             try
             {
                 wsPets.Entrega_CAM(5, codigo, -1, notas, latitud, longitud);
-                return true;
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
             }
-            catch (Exception) {
-                return false;
+            catch (SoapException soapexc)
+            {
+                string error = Retorno.xmlToStringMessage(soapexc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error inesperado"
+                };
             }
         }
 

@@ -23,6 +23,8 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <input:AdvancedEntry
@@ -30,18 +32,37 @@
             TextFontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="0"
+            Grid.ColumnSpan="2"
             IconImage="code.png"
-            Margin="8,4,8,0"
+            Margin="8,4,2,0"
             Placeholder="Código mascota"
             TextColor="black"
             x:Name="txtCodigoMascota">
         </input:AdvancedEntry>
+
+        <Button
+            BackgroundColor="#006561"
+            BorderColor="#FF7100"
+            BorderWidth="2"
+            Clicked="OnEscanear"
+            CornerRadius="12"
+            FontSize="18"
+            FontFamily="Lobster-Regular"
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            Margin="2,4,8,4"
+            Text="Escanear"
+            TextColor="White">
+
+        </Button>
 
         <Frame
             BorderColor="#FF7100"
             CornerRadius="20"
             Grid.Row="1"
             Grid.Column="0"
+            Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Padding="4,4,0,4">
             <Picker FontSize="18"
@@ -53,6 +74,7 @@
             CornerRadius="20"
             Grid.Row="2"
             Grid.Column="0"
+            Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Padding="4,4,0,4">
             <Picker FontSize="18"
@@ -64,6 +86,7 @@
             CornerRadius="20"
             Grid.Row="3"
             Grid.Column="0"
+            Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Padding="4">
             <Picker FontSize="18"
@@ -75,6 +98,7 @@
             TextFontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="4"
+            Grid.ColumnSpan="3"
             IconImage="pet.png"
             Keyboard="Text"
             Margin="8,4,8,0"
@@ -92,7 +116,10 @@
             <Entry Placeholder="Nombre (Mascota)" x:Name="txtnombreMascota"></Entry>
         </Frame>-->
 
-        <StackLayout Grid.Row="5" Grid.Column="0" Margin="8,0,8,0" Orientation="Horizontal">
+        <StackLayout
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="3" Margin="8,0,8,0" Orientation="Horizontal">
 
             <Frame
                 BorderColor="#FF7100"
@@ -100,7 +127,7 @@
                 Padding="4"
                 HorizontalOptions="FillAndExpand">
                 <Picker FontSize="18"
-            FontFamily="Lobster-Regular" HorizontalOptions="FillAndExpand" Title="Sexo" x:Name="pkrSexoMascota">
+                FontFamily="Lobster-Regular" HorizontalOptions="FillAndExpand" Title="Sexo" x:Name="pkrSexoMascota">
                     <Picker.Items>
                         <x:String>Macho</x:String>
                         <x:String>Hembra</x:String>
@@ -136,6 +163,7 @@
             TextFontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="6"
+            Grid.ColumnSpan="3"
             IconImage="user.png"
             Margin="8,0"
             Placeholder="Nombre del dueño"
@@ -154,6 +182,7 @@
         -->
         <StackLayout
             Grid.Row="7"
+            Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Orientation="Horizontal">
 
@@ -211,6 +240,7 @@
             CornerRadius="20"
             Grid.Row="8"
             Grid.Column="0"
+            Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Padding="4">
             <Picker FontSize="18"
@@ -227,6 +257,7 @@
             TextFontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="9"
+            Grid.ColumnSpan="3"
             IconImage="email.png"
             Keyboard="Email"
             Margin="8,0"
@@ -249,6 +280,7 @@
             TextFontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="10"
+            Grid.ColumnSpan="3"
             IconImage="password.png"
             IsPassword="True"
             Margin="8,0,8,0"
@@ -269,12 +301,14 @@
         -->
         <Button
             BorderColor="#FF7100"
+            BorderWidth="2"
             BackgroundColor="#006561"
             CornerRadius="16"
             Clicked="onReg_dueno"
             FontSize="18"
             FontFamily="Lobster-Regular"
             Grid.Row="11"
+            Grid.ColumnSpan="3"
             Margin="24,0,24,4"
             Text="Registrar"
             TextColor="White"></Button>

@@ -64,7 +64,7 @@ namespace PetsHeroe.Services
         bool getCliente_Busca(int idMiembro, int idAsociado);
         bool getClientes_Busca(string codigo, string correo, string nombre);
         Retorno setVeterinario_Registro(Asociado asociado);
-        bool setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
+        Retorno setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
         Retorno setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
         DataTable getPromoProductos_Busca(int idAsociado);
         DataTable getPromoServicios_Busca(int idAsociado);
@@ -72,7 +72,7 @@ namespace PetsHeroe.Services
         Task CloseApp();
         void CloseAppSinc();
         Retorno setEntrega_SoloMensaje(MensajeDueno mensaje);
-        bool setEntrega_Localizacion(MensajeDueno localizacion);
+        Retorno setEntrega_Localizacion(MensajeDueno localizacion);
         Task<bool> getPermisoLocation();
         int getSucursal(int idAsociado);
         Retorno setServicioAgrega(int idTipoMascota, string codigo, string nombre);

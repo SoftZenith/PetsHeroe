@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using PetsHeroe.Model;
 using Xamarin.Forms.Xaml;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace PetsHeroe
 {
@@ -19,6 +21,7 @@ namespace PetsHeroe
         int idColorMascota = -1;
         char sexoDuenoC;
         char sexoMascotaC = (char)78;
+        IQRScanning scanningDepen;
         //Diccionarios para guardar nombre - id
         Dictionary<string, int> tipoMascotaDic = new Dictionary<string, int>(); 
         Dictionary<string, int> razaMascotaDic = new Dictionary<string, int>();
@@ -34,7 +37,7 @@ namespace PetsHeroe
 
             DependencyService.Get<IWebService>().getMascotaTipo_Busca();
             tipoMascota = DependencyService.Get<IWebService>().MascotaTipo_Busca;
-
+            scanningDepen = DependencyService.Get<IQRScanning>();
             pkrTipoMascota.Items.Clear();
             tipoMascotaDic.Clear();
             foreach (DataRow dr in tipoMascota.Rows) {
@@ -119,6 +122,30 @@ namespace PetsHeroe
             catch (Exception)
             {
                 
+            }
+        }
+
+        async void OnEscanear(object sender, EventArgs args) {
+            var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
+
+            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
+            if (cameraStatus != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
+                return;
+            }
+
+            try
+            {
+                var result = await scanningDepen.ScanAsync();
+                if (result != null)
+                {
+                    txtCodigoMascota.Text = result;
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCodigoMascota.Text = "";
             }
         }
 

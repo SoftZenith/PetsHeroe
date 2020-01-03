@@ -115,7 +115,7 @@
                 Margin="8,0">
                 <suggest:AutoSuggestBox
                     BackgroundColor="White"
-                    PlaceholderText="UPC o descripción"
+                    PlaceholderText="Descripción"
                     TextChanged="AutoSuggestBox_TextChanged"
                     QuerySubmitted="AutoSuggestBox_QuerySubmitted"
                     SuggestionChosen="AutoSuggestBox_SuggestionChosen"

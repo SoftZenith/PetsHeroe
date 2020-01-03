@@ -23,8 +23,11 @@ namespace PetsHeroe.View
 
         protected override void OnAppearing()
         {
-            pkrTipoMascota.SelectedIndex = -1;
-            pkrServicio.SelectedIndex = -1;
+            if (!isEditingPromo)
+            {
+                pkrTipoMascota.SelectedIndex = -1;
+                pkrServicio.SelectedIndex = -1;
+            }
 
         }
 

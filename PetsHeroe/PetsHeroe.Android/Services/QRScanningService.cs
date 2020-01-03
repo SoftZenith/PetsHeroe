@@ -23,8 +23,8 @@ namespace PetsHeroe.Droid.Services
 
                 var scanner = new MobileBarcodeScanner()
                 {
-                    TopText = "Escanea el código QR",
-                    BottomText = "Por favor espere",
+                    TopText = "Escanea el código",
+                    BottomText = "Por favor enfoque al código",
                 };
                 ZXing.Result scanResult;
                 try

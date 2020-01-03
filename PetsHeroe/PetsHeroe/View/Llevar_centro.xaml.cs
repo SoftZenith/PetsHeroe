@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using PetsHeroe.Model;
 using PetsHeroe.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -155,9 +156,9 @@ namespace PetsHeroe
                 return;
             }
 
-            bool status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, currentlocation.Longitude, currentlocation.Latitude);
+            Retorno status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, currentlocation.Longitude, currentlocation.Latitude);
 
-            if (status) {
+            if (status.Resultado) {
 
                 await DisplayAlert("OK","Se envio un mensaje al dueño","OK");
                 if (!Preferences.Get("logged", false, "usuarioLogeado")) { await Navigation.PushAsync(new MainPage()); }
@@ -166,7 +167,7 @@ namespace PetsHeroe
             }
             else
             {
-                await DisplayAlert("Error","Hubo un error al enviar tu mensaje","OK");
+                await DisplayAlert("Error",status.Mensaje,"OK");
             }
 
         }

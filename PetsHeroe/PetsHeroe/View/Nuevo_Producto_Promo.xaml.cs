@@ -46,11 +46,11 @@ namespace PetsHeroe.View
                 }
 
                 pkrTipo.SelectedIndexChanged += tipoProductoSeleccionado;
-            }
 
-            pkrTipo.SelectedIndex = -1;
-            pkrMarcar.SelectedIndex = -1;
-            pkrProducto.SelectedIndex = -1;
+                pkrTipo.SelectedIndex = -1;
+                pkrMarcar.SelectedIndex = -1;
+                pkrProducto.SelectedIndex = -1;
+            }
 
         }
 
