@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,6 +29,14 @@ namespace PetsHeroe.View
         public Pago_Venta(int idSucursal, string codigoMascota, Double costo, int idTicket)
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             idTicketG = idTicket;
             DataTable mascotasTbl = new DataTable();
@@ -83,6 +92,15 @@ namespace PetsHeroe.View
 
         async void onAplicar(object sender, EventArgs args)
         {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             try {
                 double montoAAplicar = Convert.ToDouble(txtPuntosAplicar.Text);
                 if (montoAAplicar < 0) {
@@ -144,7 +162,15 @@ namespace PetsHeroe.View
         }
             
         async void onPagar(object sender, EventArgs args) {
-            
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Retorno status = DependencyService.Get<IWebService>().ticketPaga(idMascota, idSucursalG, idTicketG, (decimal)puntosSum);
             if (status.Resultado)
             {

@@ -40,6 +40,14 @@
               "target": "Package",
               "version": "[1.0.6, )"
             },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
             "Plugin.Permissions": {
               "target": "Package",
               "version": "[3.0.0.12, )"
@@ -146,6 +154,14 @@
             "LeoJHarris.XForms.Plugin.EnhancedEntry": {
               "target": "Package",
               "version": "[1.0.6, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.4, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

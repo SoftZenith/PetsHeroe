@@ -15,6 +15,8 @@ namespace PetsHeroe
 
         public IniciarSesion()
         {
+            
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -23,7 +25,8 @@ namespace PetsHeroe
                 });
             }
 
-            InitializeComponent();
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
 
             var forgetPassword_tap = new TapGestureRecognizer();
 
@@ -65,7 +68,16 @@ namespace PetsHeroe
 
         async void onEntrar(object sender, EventArgs args)
         {
-            try{
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+            try
+            {
                 user = txtUsuario.Text.ToString();
                 pass = txtPassword.Text.ToString();
             }catch (Exception) {
@@ -119,7 +131,10 @@ namespace PetsHeroe
             }
         }
 
-
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
+        }
 
     }
 }

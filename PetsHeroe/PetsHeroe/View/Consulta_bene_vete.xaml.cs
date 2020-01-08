@@ -34,6 +34,7 @@ namespace PetsHeroe.View
         public Consulta_bene_vete()
         {
 
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -41,30 +42,39 @@ namespace PetsHeroe.View
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
 
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
 
-            lsvProductos.RefreshCommand = new Command(() => {
-                lsvProductos.IsRefreshing = true;
-                listaProductosCompleto.Clear();
-                listaProductos.Clear();
-                promoProductosVet.Clear();
-                promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
-                listaProductosCompleto = dataTableToListProductos();
-                lsvProductos.ItemsSource = listaProductos;
-                lsvProductos.IsRefreshing = false;
-            });
+            try
+            {
+                lsvProductos.RefreshCommand = new Command(() =>
+                {
+                    lsvProductos.IsRefreshing = true;
+                    listaProductosCompleto.Clear();
+                    listaProductos.Clear();
+                    promoProductosVet.Clear();
+                    promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
+                    listaProductosCompleto = dataTableToListProductos();
+                    lsvProductos.ItemsSource = listaProductos;
+                    lsvProductos.IsRefreshing = false;
+                });
 
-            lsvServicios.RefreshCommand = new Command(() => {
-                lsvServicios.IsRefreshing = true;
-                listaServiciosCompleto.Clear();
-                ListaServicios.Clear();
-                promoServiciosVet.Clear();
-                promoServiciosVet = DependencyService.Get<IWebService>().getPromoServicios_Busca(Preferences.Get("idAsociado", -1));
-                listaServiciosCompleto = dataTableToListServicios();
-                lsvServicios.ItemsSource = listaServicios;
-                lsvServicios.IsRefreshing = false;
-            });
+                lsvServicios.RefreshCommand = new Command(() =>
+                {
+                    lsvServicios.IsRefreshing = true;
+                    listaServiciosCompleto.Clear();
+                    ListaServicios.Clear();
+                    promoServiciosVet.Clear();
+                    promoServiciosVet = DependencyService.Get<IWebService>().getPromoServicios_Busca(Preferences.Get("idAsociado", -1));
+                    listaServiciosCompleto = dataTableToListServicios();
+                    lsvServicios.ItemsSource = listaServicios;
+                    lsvServicios.IsRefreshing = false;
+                });
+            }catch(Exception ex)
+            {
+
+            }
 
             tipoBusqueda = 2;
             pkrBuscarPor.SelectedIndex = tipoBusqueda;
@@ -164,6 +174,13 @@ namespace PetsHeroe.View
 
         protected override void OnAppearing()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             lsvProductos.BeginRefresh();
             lsvServicios.BeginRefresh();
             base.OnAppearing();
@@ -171,17 +188,38 @@ namespace PetsHeroe.View
 
         private void TxtBuscarServicios_TextChanged(object sender, TextChangedEventArgs e)
         {
-            listaServicios = dataTableToListServicios(txtBuscarServicios.Text);
-            lsvServicios.ItemsSource = listaServicios;
+            try
+            {
+                listaServicios = dataTableToListServicios(txtBuscarServicios.Text);
+                lsvServicios.ItemsSource = listaServicios;
+            }
+            catch (Exception ex) {
+
+            }
         }
 
         private void TxtBuscarLsv_TextChanged(object sender, TextChangedEventArgs e)
         {
-            listaProductos = dataTableToListProductos(txtBuscarLsv.Text);
-            lsvProductos.ItemsSource = listaProductos;
+            try
+            {
+                listaProductos = dataTableToListProductos(txtBuscarLsv.Text);
+                lsvProductos.ItemsSource = listaProductos;
+            }
+            catch (Exception ex) {
+
+            }
         }
 
         public void onBuscar(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             resultados.Clear();
             MiembroDic.Clear();
             txtNombre.IsVisible = false;
@@ -338,6 +376,14 @@ namespace PetsHeroe.View
         private ObservableCollection<Promocion> dataTableToListProductos()
         {
 
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
             foreach (DataRow dr in promoProductosVet.Rows)
@@ -365,6 +411,13 @@ namespace PetsHeroe.View
 
         private ObservableCollection<Promocion> dataTableToListProductos(string texto)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
@@ -420,6 +473,14 @@ namespace PetsHeroe.View
         private ObservableCollection<Promocion> dataTableToListServicios()
         {
 
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
             foreach (DataRow dr in promoServiciosVet.Rows)
@@ -446,6 +507,14 @@ namespace PetsHeroe.View
 
         private ObservableCollection<Promocion> dataTableToListServicios(string texto)
         {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
 
@@ -474,15 +543,37 @@ namespace PetsHeroe.View
         }
 
         public void onAgregarPromo(object sender, EventArgs args) {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             Navigation.PushAsync(new Nuevo_Servicio_Promo(false, null));
         }
 
         public void onAgregarPromoPrd(object sender, EventArgs args) {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             Navigation.PushAsync(new Nuevo_Producto_Promo(false, null));
         }
 
         public void ProductoSelectedEdit(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Button button = (Button)sender;
             Promocion promocion = button.CommandParameter as Promocion;
             Navigation.PushAsync(new Nuevo_Producto_Promo(true, promocion));
@@ -490,6 +581,14 @@ namespace PetsHeroe.View
 
         public void ProductoSelectedDelete(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Button button = (Button)sender;
             int idPromocion = Convert.ToInt32(button.CommandParameter);
 
@@ -503,9 +602,15 @@ namespace PetsHeroe.View
                         listaProductosCompleto.Clear();
                         listaProductos.Clear();
                         promoProductosVet.Clear();
-                        promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
-                        listaProductosCompleto = dataTableToListProductos();
-                        lsvProductos.ItemsSource = listaProductos;
+                        try
+                        {
+                            promoProductosVet = DependencyService.Get<IWebService>().getPromoProductos_Busca(Preferences.Get("idAsociado", -1));
+                            listaProductosCompleto = dataTableToListProductos();
+                            lsvProductos.ItemsSource = listaProductos;
+                        }
+                        catch (Exception ex) {
+
+                        }
                         lsvProductos.IsRefreshing = false;
                         await DisplayAlert("Eliminado","Se elimino correctamente","Ok");
                     }
@@ -518,6 +623,14 @@ namespace PetsHeroe.View
 
         public void ServicioSelectedEdit(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Button button = (Button)sender;
             Promocion promocion = button.CommandParameter as Promocion;
             Navigation.PushAsync(new Nuevo_Servicio_Promo(true, promocion));
@@ -525,6 +638,13 @@ namespace PetsHeroe.View
 
         public void ServicioSelectedDelete(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             Button button = (Button)sender;
             //int idPromocion = Convert.ToInt32(button.CommandParameter);
             Promocion promocion = button.CommandParameter as Promocion;
@@ -554,6 +674,10 @@ namespace PetsHeroe.View
             });
         }
 
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
+        }
 
     }
 }

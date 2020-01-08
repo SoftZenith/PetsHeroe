@@ -588,6 +588,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="IDRazaMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDColorMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="EdadMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -599,6 +600,21 @@
             <s:element minOccurs="1" maxOccurs="1" name="IDCodigo" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDEstatusCodigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_AsignaCAM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSucursal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_AsignaCAMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Mascota_AsignaCAMResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1111,6 +1127,15 @@
   <wsdl:message name="Mascota_RegistroAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Mascota_AsignaCAMSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_AsignaCAM" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_AsignaCAMSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_AsignaCAMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_AsignaCAMAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="Mascota_IncidenteSoapIn">
     <wsdl:part name="parameters" element="tns:Mascota_Incidente" />
   </wsdl:message>
@@ -1379,6 +1404,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de nueva Mascota y (opcional) Dueño</wsdl:documentation>
       <wsdl:input message="tns:Mascota_RegistroSoapIn" />
       <wsdl:output message="tns:Mascota_RegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_AsignaCAM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Asigna nuevo CAM a Mascota</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_AsignaCAMSoapIn" />
+      <wsdl:output message="tns:Mascota_AsignaCAMSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Mascota_Incidente">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambia el Estatus de la Mascota (perdida o encontrada)</wsdl:documentation>
@@ -1743,6 +1773,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_AsignaCAM">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_AsignaCAM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_AsignaCAMAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2182,6 +2222,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Mascota_RegistroAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_AsignaCAM">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_AsignaCAM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_AsignaCAMAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

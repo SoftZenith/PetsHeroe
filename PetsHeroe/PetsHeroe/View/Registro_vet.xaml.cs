@@ -7,6 +7,7 @@ using System.Linq;
 using PetsHeroe.Services;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace PetsHeroe
 {
@@ -22,6 +23,14 @@ namespace PetsHeroe
         public Registro_vet()
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             DataTable tipoAsociado = new DataTable();
 
@@ -53,6 +62,15 @@ namespace PetsHeroe
         }
 
         async void onRegVet(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             if (chkTermino.IsChecked)
             {
                 Asociado asociado = new Asociado();

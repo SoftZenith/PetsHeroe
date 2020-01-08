@@ -39,6 +39,15 @@ namespace PetsHeroe
 
             pkrRazaMascota.IsEnabled = false;
             pkrColorMascota.IsEnabled = false;
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             DataTable tipoMascota = new DataTable();
 
             DependencyService.Get<IWebService>().getMascotaTipo_Busca();
@@ -163,9 +172,16 @@ namespace PetsHeroe
 
         public void onRegistraMascota(object sender, EventArgs args) {
 
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             try
             {
-
                 bool estatus = false;
 
                 if (idTipoMascota < 0)

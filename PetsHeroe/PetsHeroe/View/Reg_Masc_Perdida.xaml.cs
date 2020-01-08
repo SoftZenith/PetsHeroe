@@ -12,6 +12,14 @@ namespace PetsHeroe
     {
         protected override void OnAppearing()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Mascota listaMasc = new Mascota();
             lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
             lsvMascotas.IsRefreshing = true;
@@ -89,6 +97,15 @@ namespace PetsHeroe
 
         public Reg_Masc_Perdida(){
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Mascota listaMasc = new Mascota();
             lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
 
@@ -98,8 +115,5 @@ namespace PetsHeroe
                 lsvMascotas.IsRefreshing = false;
             });
         }
-
-
-
     }
 }

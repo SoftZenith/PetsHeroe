@@ -16,6 +16,7 @@ namespace PetsHeroe.View
 
         public Consulta_bene_dueno()
         {
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -24,7 +25,8 @@ namespace PetsHeroe.View
                 });
             }
 
-            InitializeComponent();
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
 
             Mascota mascotasExisten = new Mascota();
 
@@ -96,6 +98,11 @@ namespace PetsHeroe.View
 
             return promociones;
 
+        }
+
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
         }
 
     }

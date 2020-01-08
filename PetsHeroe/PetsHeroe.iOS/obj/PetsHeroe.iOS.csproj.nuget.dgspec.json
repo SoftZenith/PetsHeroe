@@ -36,6 +36,14 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -117,6 +125,14 @@
             "LeoJHarris.XForms.Plugin.EnhancedEntry": {
               "target": "Package",
               "version": "[1.0.6, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.4, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

@@ -18,6 +18,8 @@ namespace PetsHeroe
 
         public Mascota_recuperada(int idMascota)
         {
+            
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -25,7 +27,6 @@ namespace PetsHeroe
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
             this.idMascota = idMascota;
 
             pkrCondicion.SelectedIndexChanged += PkrCondicion_SelectedIndexChanged;
@@ -44,6 +45,14 @@ namespace PetsHeroe
         }
 
         public void onRegistraMascota(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             if (tipoRetorno == -1) {
                 DisplayAlert("Error", "Dinos como fue que regreso", "OK");

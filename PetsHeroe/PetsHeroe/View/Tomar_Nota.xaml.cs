@@ -36,6 +36,15 @@ namespace PetsHeroe
         public Tomar_Nota(string codigo)
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             codigo_pre = codigo;
 
             DataTable estados = new DataTable();
@@ -109,7 +118,13 @@ namespace PetsHeroe
         async void onAviso(object sender, EventArgs args) {
 
             bool estatus = false;
-
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             try
             {
                 localizacion = txtLocalizacion.Text;

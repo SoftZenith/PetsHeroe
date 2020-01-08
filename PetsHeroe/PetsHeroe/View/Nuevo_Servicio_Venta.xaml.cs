@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +19,14 @@ namespace PetsHeroe.View
         public Nuevo_Servicio_Venta()
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             DataTable tipoMascota = new DataTable();
 
@@ -48,6 +57,15 @@ namespace PetsHeroe.View
         }
 
         async void onAgregar(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             if (txtServicio.Text == null || txtServicio.Text == "")
             {
                 await DisplayAlert("Error", "Agrega un nombre para el nuevo servicio", "Ok");

@@ -85,6 +85,8 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         
         private System.Threading.SendOrPostCallback Mascota_RegistroOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Mascota_AsignaCAMOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Mascota_IncidenteOperationCompleted;
         
         private System.Threading.SendOrPostCallback Codigo_ValidaOperationCompleted;
@@ -210,6 +212,9 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         
         /// <remarks/>
         public event Mascota_RegistroCompletedEventHandler Mascota_RegistroCompleted;
+        
+        /// <remarks/>
+        public event Mascota_AsignaCAMCompletedEventHandler Mascota_AsignaCAMCompleted;
         
         /// <remarks/>
         public event Mascota_IncidenteCompletedEventHandler Mascota_IncidenteCompleted;
@@ -1274,6 +1279,7 @@ namespace PetsHeroe.iOS.mx.com.petshero {
                     int IDRazaMascota, 
                     int IDColorMascota, 
                     int EdadMascota, 
+                    int IDSucursal, 
                     out int IDMiembro, 
                     out int IDCodigo, 
                     out int IDMascota, 
@@ -1292,7 +1298,8 @@ namespace PetsHeroe.iOS.mx.com.petshero {
                         IDTipoMascota,
                         IDRazaMascota,
                         IDColorMascota,
-                        EdadMascota});
+                        EdadMascota,
+                        IDSucursal});
             IDMiembro = ((int)(results[1]));
             IDCodigo = ((int)(results[2]));
             IDMascota = ((int)(results[3]));
@@ -1301,12 +1308,28 @@ namespace PetsHeroe.iOS.mx.com.petshero {
         }
         
         /// <remarks/>
-        public void Mascota_RegistroAsync(string DuenoCodigo, string DuenoNombre, string DuenoPaterno, string DuenoMaterno, char DuenoSexo, string CorreoElectronico, string Contrasena, string MascotaCodigo, string MascotaNombre, char MascotaSexo, int IDTipoMascota, int IDRazaMascota, int IDColorMascota, int EdadMascota) {
-            this.Mascota_RegistroAsync(DuenoCodigo, DuenoNombre, DuenoPaterno, DuenoMaterno, DuenoSexo, CorreoElectronico, Contrasena, MascotaCodigo, MascotaNombre, MascotaSexo, IDTipoMascota, IDRazaMascota, IDColorMascota, EdadMascota, null);
+        public void Mascota_RegistroAsync(string DuenoCodigo, string DuenoNombre, string DuenoPaterno, string DuenoMaterno, char DuenoSexo, string CorreoElectronico, string Contrasena, string MascotaCodigo, string MascotaNombre, char MascotaSexo, int IDTipoMascota, int IDRazaMascota, int IDColorMascota, int EdadMascota, int IDSucursal) {
+            this.Mascota_RegistroAsync(DuenoCodigo, DuenoNombre, DuenoPaterno, DuenoMaterno, DuenoSexo, CorreoElectronico, Contrasena, MascotaCodigo, MascotaNombre, MascotaSexo, IDTipoMascota, IDRazaMascota, IDColorMascota, EdadMascota, IDSucursal, null);
         }
         
         /// <remarks/>
-        public void Mascota_RegistroAsync(string DuenoCodigo, string DuenoNombre, string DuenoPaterno, string DuenoMaterno, char DuenoSexo, string CorreoElectronico, string Contrasena, string MascotaCodigo, string MascotaNombre, char MascotaSexo, int IDTipoMascota, int IDRazaMascota, int IDColorMascota, int EdadMascota, object userState) {
+        public void Mascota_RegistroAsync(
+                    string DuenoCodigo, 
+                    string DuenoNombre, 
+                    string DuenoPaterno, 
+                    string DuenoMaterno, 
+                    char DuenoSexo, 
+                    string CorreoElectronico, 
+                    string Contrasena, 
+                    string MascotaCodigo, 
+                    string MascotaNombre, 
+                    char MascotaSexo, 
+                    int IDTipoMascota, 
+                    int IDRazaMascota, 
+                    int IDColorMascota, 
+                    int EdadMascota, 
+                    int IDSucursal, 
+                    object userState) {
             if ((this.Mascota_RegistroOperationCompleted == null)) {
                 this.Mascota_RegistroOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMascota_RegistroOperationCompleted);
             }
@@ -1324,13 +1347,46 @@ namespace PetsHeroe.iOS.mx.com.petshero {
                         IDTipoMascota,
                         IDRazaMascota,
                         IDColorMascota,
-                        EdadMascota}, this.Mascota_RegistroOperationCompleted, userState);
+                        EdadMascota,
+                        IDSucursal}, this.Mascota_RegistroOperationCompleted, userState);
         }
         
         private void OnMascota_RegistroOperationCompleted(object arg) {
             if ((this.Mascota_RegistroCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Mascota_RegistroCompleted(this, new Mascota_RegistroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AuthHeaderValue")]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.petshero.com.mx/Mascota_AsignaCAM", RequestNamespace="http://www.petshero.com.mx", ResponseNamespace="http://www.petshero.com.mx", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool Mascota_AsignaCAM(int IDMascota, int IDSucursal) {
+            object[] results = this.Invoke("Mascota_AsignaCAM", new object[] {
+                        IDMascota,
+                        IDSucursal});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Mascota_AsignaCAMAsync(int IDMascota, int IDSucursal) {
+            this.Mascota_AsignaCAMAsync(IDMascota, IDSucursal, null);
+        }
+        
+        /// <remarks/>
+        public void Mascota_AsignaCAMAsync(int IDMascota, int IDSucursal, object userState) {
+            if ((this.Mascota_AsignaCAMOperationCompleted == null)) {
+                this.Mascota_AsignaCAMOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMascota_AsignaCAMOperationCompleted);
+            }
+            this.InvokeAsync("Mascota_AsignaCAM", new object[] {
+                        IDMascota,
+                        IDSucursal}, this.Mascota_AsignaCAMOperationCompleted, userState);
+        }
+        
+        private void OnMascota_AsignaCAMOperationCompleted(object arg) {
+            if ((this.Mascota_AsignaCAMCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Mascota_AsignaCAMCompleted(this, new Mascota_AsignaCAMCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2610,6 +2666,32 @@ namespace PetsHeroe.iOS.mx.com.petshero {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[4]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.11.1")]
+    public delegate void Mascota_AsignaCAMCompletedEventHandler(object sender, Mascota_AsignaCAMCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XamarinStudio", "8.3.11.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Mascota_AsignaCAMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Mascota_AsignaCAMCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
             }
         }
     }

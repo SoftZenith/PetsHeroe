@@ -25,6 +25,7 @@ namespace PetsHeroe
 
         public Consulta_CAMS()
         {
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -33,7 +34,9 @@ namespace PetsHeroe
                 });
             }
 
-            InitializeComponent();
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
+
             _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
             _ = getCurrentLocation();
             _ = getPermisoLocation();
@@ -197,6 +200,11 @@ namespace PetsHeroe
 
         public async Task getPermisoLocation() {
             locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
+        }
+
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
         }
 
     }

@@ -17,5 +17,6 @@ namespace PetsHeroe.Model
         public int idRazaMascota { get; set; }
         public int idColorMascota { get; set; }
         public int edadMascota { get; set; }
+        public int idSucursal { get; set; }
     }
 }

@@ -156,13 +156,33 @@
                 <Entry HorizontalOptions="FillAndExpand" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
             </Frame>-->
         </StackLayout>
+
+        <Frame
+            BorderColor="#FF7100"
+            CornerRadius="20"
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            HorizontalOptions="FillAndExpand"
+            Margin="8,0,8,0"
+            Padding="4">
+            <Picker FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    HorizontalOptions="FillAndExpand"
+                    Title="Veterinario"
+                    x:Name="pkrVeterinario">
+                <Picker.Items>
+                </Picker.Items>
+            </Picker>
+        </Frame>
+
         <!--Datos del dueño-->
 
         <input:AdvancedEntry
             BorderColor="#FF7100"
             TextFontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="6"
+            Grid.Row="7"
             Grid.ColumnSpan="3"
             IconImage="user.png"
             Margin="8,0"
@@ -181,7 +201,7 @@
         </Frame>
         -->
         <StackLayout
-            Grid.Row="7"
+            Grid.Row="8"
             Grid.ColumnSpan="3"
             Margin="8,0,8,0"
             Orientation="Horizontal">
@@ -238,7 +258,7 @@
         <Frame
             BorderColor="#FF7100"
             CornerRadius="20"
-            Grid.Row="8"
+            Grid.Row="9"
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Margin="8,0,8,0"
@@ -256,7 +276,7 @@
             BorderColor="#FF7100"
             TextFontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="9"
+            Grid.Row="10"
             Grid.ColumnSpan="3"
             IconImage="email.png"
             Keyboard="Email"
@@ -279,7 +299,7 @@
             BorderColor="#FF7100"
             TextFontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="10"
+            Grid.Row="11"
             Grid.ColumnSpan="3"
             IconImage="password.png"
             IsPassword="True"
@@ -307,7 +327,7 @@
             Clicked="onReg_dueno"
             FontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="11"
+            Grid.Row="12"
             Grid.ColumnSpan="3"
             Margin="24,0,24,4"
             Text="Registrar"

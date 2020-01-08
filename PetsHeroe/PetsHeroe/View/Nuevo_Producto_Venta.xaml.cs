@@ -4,6 +4,7 @@ using System.Data;
 using PetsHeroe.Services;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,6 +23,15 @@ namespace PetsHeroe.View
         public Nuevo_Producto_Venta()
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             scanningDepen = DependencyService.Get<IQRScanning>();
 
             DataTable tipoProducto = new DataTable();
@@ -92,6 +102,14 @@ namespace PetsHeroe.View
 
         async void onAgregar(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             if (txtNombre.Text == null || txtNombre.Text == "") {
                 await DisplayAlert("Error", "Ingresa un nombre para el producto", "Ok");
                 return;

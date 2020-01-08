@@ -12,6 +12,7 @@ namespace PetsHeroe
     {
         public Masc_existentes()
         {
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -19,8 +20,6 @@ namespace PetsHeroe
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
-
             lsvMascotasExiste.RefreshCommand = new Command(() => {
                 lsvMascotasExiste.IsRefreshing = true;
                 Mascota mascotasExistenCom = new Mascota();

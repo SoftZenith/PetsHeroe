@@ -26,6 +26,15 @@ namespace PetsHeroe.View
 
         protected override void OnAppearing()
         {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             idAsociado = Preferences.Get("idAsociado", -1);
 
             scanningDepen = DependencyService.Get<IQRScanning>();
@@ -57,6 +66,15 @@ namespace PetsHeroe.View
         public Nuevo_Producto_Promo(bool isEdit, Promocion promocionEdit)
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             idAsociado = Preferences.Get("idAsociado", -1);
             DataTable tipoProducto = new DataTable();
 
@@ -199,7 +217,13 @@ namespace PetsHeroe.View
 
         public async void onAgregar(object sender, EventArgs args) {
 
-
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             if (txtNombrePromo.Text == "" || txtNombrePromo.Text == null) {
                 await DisplayAlert("Error", "Ingresa un nombre para la promoción", "Ok");

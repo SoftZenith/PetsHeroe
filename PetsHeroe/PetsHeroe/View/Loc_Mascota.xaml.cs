@@ -17,6 +17,7 @@ namespace PetsHeroe
 
         public Loc_Mascota()
         {
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -24,7 +25,10 @@ namespace PetsHeroe
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
+
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
+
             wsDependency = DependencyService.Get<IWebService>();
             scanningDepen = DependencyService.Get<IQRScanning>();
             txtCodigo.Text = "";
@@ -118,5 +122,11 @@ namespace PetsHeroe
                     break;
             }
         }
+
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
+        }
+
     }
 }

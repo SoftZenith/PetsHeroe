@@ -23,6 +23,15 @@ namespace PetsHeroe.View
 
         protected override void OnAppearing()
         {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             if (!isEditingPromo)
             {
                 pkrTipoMascota.SelectedIndex = -1;
@@ -34,6 +43,14 @@ namespace PetsHeroe.View
         public Nuevo_Servicio_Promo(bool isEdit, Promocion promocionEdit)
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             isEditingPromo = isEdit;
             if (isEdit)
@@ -145,6 +162,14 @@ namespace PetsHeroe.View
         }
 
         public void onGuardarPromo(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             if (txtAPartir.Date < DateTime.Now.Date) {
                 DisplayAlert("Error","Fecha de inicio menor a fecha actual","Ok");

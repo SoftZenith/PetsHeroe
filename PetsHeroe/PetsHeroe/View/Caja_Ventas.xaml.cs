@@ -46,6 +46,18 @@ namespace PetsHeroe.View
         public Caja_Ventas()
         {
             InitializeComponent();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
+
             idAsociado = Preferences.Get("idAsociado", -1);
             idSucursal = DependencyService.Get<IWebService>().getSucursal(idAsociado);
             btnScanUPC.IsEnabled = true;
@@ -81,6 +93,15 @@ namespace PetsHeroe.View
         protected override void OnAppearing()
         {
             //lsvMascotas.BeginRefresh();
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             listaCarrito.Clear();
             total = 0;
             puntos = 0;
@@ -123,6 +144,13 @@ namespace PetsHeroe.View
 
         private void pkrCantidadSelected(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             int cantidadSelected = pkrCantidad.SelectedIndex;
             if (cantidadSelected == 0)
             {
@@ -269,6 +297,13 @@ namespace PetsHeroe.View
 
         async void onAgregar(object sender, EventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             if (txtCodigoMascota.Text == "" || txtCodigoMascota.Text == null)
             {
@@ -352,6 +387,14 @@ namespace PetsHeroe.View
         }
 
         async void onSiguiente(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
 
             //DependencyService.Get<IWebService>().agregar_venta(-1, 113, 16, 7, -1, 2, 29.93, out int idTicketOut, out int ventaResult);
 
@@ -462,6 +505,13 @@ namespace PetsHeroe.View
 
         private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             // Only get results when it was a user typing, 
             // otherwise assume the value got filled in by TextMemberPath 
             // or the handler for SuggestionChosen.
@@ -534,6 +584,12 @@ namespace PetsHeroe.View
                 // User hit Enter from the search box. Use args.QueryText to determine what to do.
             }
         }
+
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
+        }
+
 
     }
 }

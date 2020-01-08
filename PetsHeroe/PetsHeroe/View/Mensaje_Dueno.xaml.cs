@@ -18,6 +18,7 @@ namespace PetsHeroe
 
         public Mensaje_Dueno(string codigo)
         {
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -25,11 +26,19 @@ namespace PetsHeroe
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
             codigo_pre = codigo;
         }
 
         async void onMensaje(object sender, EventArgs args) {
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
+
             Retorno status = new Retorno();
             string codigo = "", nombre = "", correo = "", telefono = "", mensaje = "";
             try

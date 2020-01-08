@@ -30,6 +30,7 @@ namespace PetsHeroe
         public Llevar_centro(string codigo)
         {
             this.codigo = codigo;
+            InitializeComponent();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
@@ -37,7 +38,10 @@ namespace PetsHeroe
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
-            InitializeComponent();
+
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += MyHandler;
+
             _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
             _ = getCurrentLocation();
             _ = getPermisoLocation();
@@ -148,6 +152,13 @@ namespace PetsHeroe
         }
 
         async void onDejarMascota(object sender, EventArgs args) {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () => {
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DependencyService.Get<IWebService>().CloseApp();
+                });
+            }
             if (txtNotas.Text == "") {
                 await DisplayAlert("Error","Agregar alguna nota","OK");
                 return;
@@ -192,5 +203,11 @@ namespace PetsHeroe
         {
             locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
         }
+
+        public void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            DisplayAlert("Error", "No tienes conexión a internet", "Ok");
+        }
+
     }
 }
