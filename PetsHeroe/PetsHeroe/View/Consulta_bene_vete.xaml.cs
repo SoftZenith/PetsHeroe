@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -35,12 +36,10 @@ namespace PetsHeroe.View
         {
 
             InitializeComponent();
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             AppDomain currentDomain = AppDomain.CurrentDomain;
@@ -174,12 +173,10 @@ namespace PetsHeroe.View
 
         protected override void OnAppearing()
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             lsvProductos.BeginRefresh();
             lsvServicios.BeginRefresh();
@@ -212,12 +209,10 @@ namespace PetsHeroe.View
 
         public void onBuscar(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             resultados.Clear();
@@ -376,12 +371,10 @@ namespace PetsHeroe.View
         private ObservableCollection<Promocion> dataTableToListProductos()
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return null;
             }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
@@ -411,12 +404,10 @@ namespace PetsHeroe.View
 
         private ObservableCollection<Promocion> dataTableToListProductos(string texto)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return null;
             }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
@@ -473,12 +464,10 @@ namespace PetsHeroe.View
         private ObservableCollection<Promocion> dataTableToListServicios()
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return null;
             }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
@@ -508,12 +497,10 @@ namespace PetsHeroe.View
         private ObservableCollection<Promocion> dataTableToListServicios(string texto)
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return null;
             }
 
             ObservableCollection<Promocion> promociones = new ObservableCollection<Promocion>();
@@ -543,35 +530,29 @@ namespace PetsHeroe.View
         }
 
         public void onAgregarPromo(object sender, EventArgs args) {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             Navigation.PushAsync(new Nuevo_Servicio_Promo(false, null));
         }
 
         public void onAgregarPromoPrd(object sender, EventArgs args) {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             Navigation.PushAsync(new Nuevo_Producto_Promo(false, null));
         }
 
         public void ProductoSelectedEdit(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Button button = (Button)sender;
@@ -581,12 +562,10 @@ namespace PetsHeroe.View
 
         public void ProductoSelectedDelete(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Button button = (Button)sender;
@@ -623,12 +602,10 @@ namespace PetsHeroe.View
 
         public void ServicioSelectedEdit(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Button button = (Button)sender;
@@ -638,12 +615,10 @@ namespace PetsHeroe.View
 
         public void ServicioSelectedDelete(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             Button button = (Button)sender;
             //int idPromocion = Convert.ToInt32(button.CommandParameter);

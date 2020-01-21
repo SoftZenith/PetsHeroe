@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,12 +28,10 @@ namespace PetsHeroe.View
         protected override void OnAppearing()
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             idAsociado = Preferences.Get("idAsociado", -1);
@@ -67,12 +66,10 @@ namespace PetsHeroe.View
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             idAsociado = Preferences.Get("idAsociado", -1);
@@ -217,12 +214,10 @@ namespace PetsHeroe.View
 
         public async void onAgregar(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             if (txtNombrePromo.Text == "" || txtNombrePromo.Text == null) {

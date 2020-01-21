@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -40,12 +41,10 @@ namespace PetsHeroe
             pkrRazaMascota.IsEnabled = false;
             pkrColorMascota.IsEnabled = false;
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             DataTable tipoMascota = new DataTable();
@@ -172,12 +171,10 @@ namespace PetsHeroe
 
         public void onRegistraMascota(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             try

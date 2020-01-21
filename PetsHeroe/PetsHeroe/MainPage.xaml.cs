@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using PetsHeroe.Services;
 using PetsHeroe.View;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -17,15 +18,13 @@ namespace PetsHeroe
         public MainPage()
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
-            {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
-            }
+            
             InitializeComponent();
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
+            }
             getCurrentLocation();
            
             bool logged = Preferences.Get("logged", false, "usuarioLogeado"); 
@@ -33,13 +32,10 @@ namespace PetsHeroe
             
             if (logged && userType == 1)
             {
-                if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+                if (!CrossConnectivity.Current.IsConnected)
                 {
-                    Device.BeginInvokeOnMainThread(async () => {
-                        await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                        await DependencyService.Get<IWebService>().CloseApp();
-                    });
-                    //return;
+                    DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    return;
                 }
                 Device.BeginInvokeOnMainThread(async () =>
                 { // Code for navigation });
@@ -47,13 +43,9 @@ namespace PetsHeroe
                 });
             }
             else if (logged && userType == 2) {
-                if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+                if (!CrossConnectivity.Current.IsConnected)
                 {
-                    Device.BeginInvokeOnMainThread(async () => {
-                        await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                        await DependencyService.Get<IWebService>().CloseApp();
-                    });
-                    //return;
+                    DisplayAlert("Error", "No estas conectado a internet", "Ok");
                 }
                 Device.BeginInvokeOnMainThread(async () =>
                 {
@@ -66,13 +58,10 @@ namespace PetsHeroe
         async void getCurrentLocation()
         {
             try{
-                if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+                if (!CrossConnectivity.Current.IsConnected)
                 {
-                    Device.BeginInvokeOnMainThread(async () => {
-                        await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                        await DependencyService.Get<IWebService>().CloseApp();
-                    });
-                    //return;
+                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    return;
                 }
                 currentlocation = await Geolocation.GetLastKnownLocationAsync();
             }catch (Exception ex) {
@@ -99,13 +88,10 @@ namespace PetsHeroe
 
         async void onIniciar(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             await Navigation.PushAsync(new IniciarSesion());
         }
@@ -113,50 +99,38 @@ namespace PetsHeroe
         async void onRegDueno(object sender, EventArgs args)
         {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             await Navigation.PushAsync(new Registro_dueno_mascota());
         }
 
         async void onRegVet(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             await Navigation.PushAsync(new Registro_vet());
         }
 
         async void onMascEnc(object sender, EventArgs args) {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             await Navigation.PushAsync(new Loc_Mascota());
         }
 
         async void onListaCAM(object sender, EventArgs args) {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
-                //return;
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             await Navigation.PushAsync(new Consulta_CAMS());
         }

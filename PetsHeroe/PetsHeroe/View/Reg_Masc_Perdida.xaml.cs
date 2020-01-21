@@ -1,6 +1,7 @@
 ﻿using System;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,12 +13,10 @@ namespace PetsHeroe
     {
         protected override void OnAppearing()
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Mascota listaMasc = new Mascota();
@@ -98,12 +97,10 @@ namespace PetsHeroe
         public Reg_Masc_Perdida(){
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Mascota listaMasc = new Mascota();

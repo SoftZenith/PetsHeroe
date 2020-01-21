@@ -120,21 +120,23 @@
                 </Picker>
             </Frame>
 
-            <input:AdvancedEntry
+            <Frame
                 BorderColor="#FF7100"
-                TextFontSize="18"
-                FontFamily="Lobster-Regular"
+                CornerRadius="14"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"
-                IconImage="email.png"
-                Keyboard="Email"
                 Margin="16,0,16,0"
-                TextColor="black"
-                Placeholder="Correo electronico"
-                x:Name="txtCorreo">
-
-            </input:AdvancedEntry>
+                Padding="3">
+                <Entry
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    Keyboard="Email"
+                    TextColor="black"
+                    Placeholder="Correo electronico"
+                    x:Name="txtCorreo">
+                </Entry>
+            </Frame>
             <!--
             <Frame
                 BorderColor="#FF7100"
@@ -152,37 +154,42 @@
             </Frame>
             -->
 
-            <input:AdvancedEntry
+            <Frame
                 BorderColor="#FF7100"
-                TextFontSize="18"
-                FontFamily="Lobster-Regular"
+                CornerRadius="14"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="7"
-                IconImage="password.png"
-                IsPassword="True"
                 Margin="16,0,16,0"
-                TextColor="black"
-                Placeholder="Contraseña"
-                x:Name="txtContrasena">
+                Padding="3">
+                <Entry
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    IsPassword="True"
+                    TextColor="black"
+                    Placeholder="Contraseña"
+                    x:Name="txtContrasena">
+                </Entry>
+            </Frame>
 
-            </input:AdvancedEntry>
-
-            <input:AdvancedEntry
+            <Frame
                 BorderColor="#FF7100"
-                TextFontSize="18"
-                FontFamily="Lobster-Regular"
+                CornerRadius="14"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="8"
-                IconImage="password.png"
-                IsPassword="True"
                 Margin="16,0,16,0"
-                TextColor="black"
-                Placeholder="Confirme contraseña"
-                x:Name="txtConConstrasena">
+                Padding="3">
+                <Entry
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    IsPassword="True"
+                    TextColor="black"
+                    Placeholder="Confirme contraseña"
+                    x:Name="txtConConstrasena">
+                </Entry>
+            </Frame>
 
-            </input:AdvancedEntry>
             <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="3"

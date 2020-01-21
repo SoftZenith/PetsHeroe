@@ -1,6 +1,7 @@
 ﻿using System;
 using PetsHeroe.Services;
 using PetsHeroe.View;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
@@ -15,12 +16,10 @@ namespace PetsHeroe
 
         public Menu_veterinario(int tab)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             try
             {
@@ -39,31 +38,27 @@ namespace PetsHeroe
 
         private void onAppearingClients(object sender, EventArgs e)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             tbVete.Title = "Mis Clientes";
         }
 
         private void onAppearingBenefics(object sender, EventArgs e)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             tbVete.Title = "Consulta de beneficios";
         }
 
         private void onAppearingSales(object sender, EventArgs e)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
                 DisplayAlert("Error", "No estas conectado a internet", "Ok");
                 return;
@@ -73,12 +68,10 @@ namespace PetsHeroe
 
         private void onAppearLocation(object sender, EventArgs e)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             tbVete.Title = "¿Encontraste una mascota?";
         }

@@ -59,7 +59,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: bhn.rock@icloud.com (H98MYN8WTK)</CodesignKey>
+    <CodesignKey>Apple Development: bhn.rock@icloud.com (H98MYN8WTK)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>iOS Team Provisioning Profile: mx.com.dotech.PetsHeroe</CodesignProvision>
   </PropertyGroup>

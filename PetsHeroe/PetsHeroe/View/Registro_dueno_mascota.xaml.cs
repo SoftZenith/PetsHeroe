@@ -11,6 +11,7 @@ using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Plugin.Connectivity;
 
 namespace PetsHeroe
 {
@@ -39,12 +40,10 @@ namespace PetsHeroe
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
@@ -202,12 +201,10 @@ namespace PetsHeroe
             string codigoMascota = "", nombreMascota = "", nombreDueno = "", apellidoP = "", apellidoM = "", correo = "", contrasena = "";
             int tipoMascota = -1, razaMascota = -1, colorMascota = -1, sexoMascota = 0, sexoDueno = -1, edadMascotaE = -1;
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             try

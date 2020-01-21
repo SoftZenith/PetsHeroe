@@ -1,5 +1,6 @@
 ﻿using System;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -18,12 +19,10 @@ namespace PetsHeroe
         public Loc_Mascota()
         {
             InitializeComponent();
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             AppDomain currentDomain = AppDomain.CurrentDomain;

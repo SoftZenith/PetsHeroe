@@ -24,6 +24,7 @@
     <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.4" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.4" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />

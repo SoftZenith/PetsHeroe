@@ -6,6 +6,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
+using Plugin.Connectivity;
 
 namespace PetsHeroe
 {
@@ -19,24 +20,20 @@ namespace PetsHeroe
         public Mensaje_Dueno(string codigo)
         {
             InitializeComponent();
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             codigo_pre = codigo;
         }
 
         async void onMensaje(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Retorno status = new Retorno();

@@ -8,6 +8,7 @@ using PetsHeroe.Services;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Plugin.Connectivity;
 
 namespace PetsHeroe
 {
@@ -24,12 +25,10 @@ namespace PetsHeroe
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             DataTable tipoAsociado = new DataTable();
@@ -59,16 +58,16 @@ namespace PetsHeroe
                     sexo = (char)70;
                 }
             };
+
+
         }
 
         async void onRegVet(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             if (chkTermino.IsChecked)

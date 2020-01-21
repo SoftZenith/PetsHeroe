@@ -4,6 +4,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 
 namespace PetsHeroe.View
 {
@@ -15,12 +16,10 @@ namespace PetsHeroe.View
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             Cliente cliente = new Cliente();

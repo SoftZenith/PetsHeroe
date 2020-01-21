@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -24,12 +25,10 @@ namespace PetsHeroe.View
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             scanningDepen = DependencyService.Get<IQRScanning>();
@@ -102,12 +101,10 @@ namespace PetsHeroe.View
 
         async void onAgregar(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             if (txtNombre.Text == null || txtNombre.Text == "") {

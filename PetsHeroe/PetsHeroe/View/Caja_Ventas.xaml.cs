@@ -5,6 +5,7 @@ using System.Data;
 using dotMorten.Xamarin.Forms;
 using PetsHeroe.Model;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -47,12 +48,10 @@ namespace PetsHeroe.View
         {
             InitializeComponent();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             AppDomain currentDomain = AppDomain.CurrentDomain;
@@ -94,12 +93,10 @@ namespace PetsHeroe.View
         {
             //lsvMascotas.BeginRefresh();
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             listaCarrito.Clear();
@@ -144,12 +141,10 @@ namespace PetsHeroe.View
 
         private void pkrCantidadSelected(object sender, EventArgs e)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             int cantidadSelected = pkrCantidad.SelectedIndex;
             if (cantidadSelected == 0)
@@ -297,12 +292,10 @@ namespace PetsHeroe.View
 
         async void onAgregar(object sender, EventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             if (txtCodigoMascota.Text == "" || txtCodigoMascota.Text == null)
@@ -388,12 +381,10 @@ namespace PetsHeroe.View
 
         async void onSiguiente(object sender, EventArgs args) {
 
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
 
             //DependencyService.Get<IWebService>().agregar_venta(-1, 113, 16, 7, -1, 2, 29.93, out int idTicketOut, out int ventaResult);
@@ -505,12 +496,10 @@ namespace PetsHeroe.View
 
         private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             // Only get results when it was a user typing, 
             // otherwise assume the value got filled in by TextMemberPath 

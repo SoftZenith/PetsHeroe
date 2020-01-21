@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PetsHeroe.Services;
+using Plugin.Connectivity;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,12 +14,10 @@ namespace PetsHeroe
         public Masc_existentes()
         {
             InitializeComponent();
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
-                    await DependencyService.Get<IWebService>().CloseApp();
-                });
+                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                return;
             }
             lsvMascotasExiste.RefreshCommand = new Command(() => {
                 lsvMascotasExiste.IsRefreshing = true;
