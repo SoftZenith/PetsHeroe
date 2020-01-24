@@ -22,7 +22,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>PetsHeroe</string>
 	<key>CFBundleIdentifier</key>
-	<string>mx.com.dotech.PetsHeroe</string>
+	<string>mx.com.dotech.Pets</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>

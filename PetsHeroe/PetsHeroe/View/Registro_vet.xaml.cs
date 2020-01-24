@@ -93,7 +93,7 @@ namespace PetsHeroe
                     asociado.nombreComerial = txtNombreComercial.Text;
                     asociado.nombre = txtNombre.Text;
                     asociado.apellidoPaterno = txtApellidoP.Text;
-                    asociado.apellidoMaterno = txtApellidoM.Text;
+                    asociado.apellidoMaterno = txtApellidoM.Text == null ? "" : txtApellidoM.Text;
                     asociado.correo = txtCorreo.Text;
                     asociado.contrasena = txtContrasena.Text;
                     asociado.sexo = sexo;
@@ -123,15 +123,15 @@ namespace PetsHeroe
 
                     Retorno res = DependencyService.Get<IWebService>().setVeterinario_Registro(asociado);
 
-                    if (res.Resultado){
+                    if (res.Resultado) {
                         await DisplayAlert("OK", "Registro exitoso, te enviamos un enlace a tu correo para poder activar tu cuenta","OK");
                         await Navigation.PushAsync(new MainPage());
-                    }else {
+                    } else {
                         await DisplayAlert("ERROR", res.Mensaje, "OK");
                     }
 
                 }
-                catch{
+                catch {
                     await DisplayAlert("Error", "Faltan campos por llenar", "OK");
                 }
             }
