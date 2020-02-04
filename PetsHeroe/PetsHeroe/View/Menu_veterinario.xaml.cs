@@ -18,7 +18,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             try
@@ -31,7 +31,7 @@ namespace PetsHeroe
 
                 tbVete.CurrentPage = tbVete.Children[tab];
             }catch (Exception ex) {
-                DisplayAlert("Error","No estas conectado a internet utilizar una conexión WIFI o datos celulares","OK");
+                DisplayAlert("Error","No estás conectado a internet utilizar una conexión WIFI o datos celulares","OK");
                 DependencyService.Get<IWebService>().CloseApp();
             }
         }
@@ -40,7 +40,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbVete.Title = "Mis Clientes";
@@ -50,7 +50,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbVete.Title = "Consulta de beneficios";
@@ -60,7 +60,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbVete.Title = "Caja de ventas";
@@ -70,7 +70,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbVete.Title = "¿Encontraste una mascota?";

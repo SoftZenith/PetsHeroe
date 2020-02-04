@@ -34,7 +34,7 @@ namespace PetsHeroe
         //DataTable para datos del dueño
         private DataTable dtDueno = new DataTable();
         public Dueno dueno;
-        public Registro_mascota()
+        public Registro_mascota(Mascota mascota, bool isEdit)
         {
             InitializeComponent();
 
@@ -43,7 +43,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -173,7 +173,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -224,6 +224,11 @@ namespace PetsHeroe
                 catch (Exception ex)
                 {
                     DisplayAlert("Error", "Edad invalida", "Error");
+                    return;
+                }
+
+                if (!chkTermino.IsChecked) {
+                    DisplayAlert("Error", "Para registrar tu mascota es necesario aceptar los términos y condiciones", "Error");
                     return;
                 }
 

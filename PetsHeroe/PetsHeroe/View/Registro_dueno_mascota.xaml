@@ -92,20 +92,22 @@
             <Picker FontSize="18"
             FontFamily="Lobster-Regular" Title="Color" x:Name="pkrColorMascota"></Picker>
         </Frame>
-
-        <input:AdvancedEntry
+        <Frame
             BorderColor="#FF7100"
-            TextFontSize="18"
-            FontFamily="Lobster-Regular"
+            CornerRadius="14"
             Grid.Row="4"
             Grid.ColumnSpan="3"
-            IconImage="pet.png"
-            Keyboard="Text"
             Margin="8,4,8,0"
-            Placeholder="Nombre mascota"
-            TextColor="black"
-            x:Name="txtnombreMascota">
-        </input:AdvancedEntry>
+            Padding="2">
+            <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                Keyboard="Text"
+                Placeholder="Nombre mascota"
+                TextColor="black"
+                x:Name="txtnombreMascota">
+            </Entry>
+        </Frame>
         <!--
         <Frame
             BorderColor="#FF7100"
@@ -177,19 +179,21 @@
         </Frame>
 
         <!--Datos del dueño-->
-
-        <input:AdvancedEntry
+        <Frame
             BorderColor="#FF7100"
-            TextFontSize="18"
-            FontFamily="Lobster-Regular"
+            CornerRadius="18"
             Grid.Row="7"
             Grid.ColumnSpan="3"
-            IconImage="user.png"
             Margin="8,0"
-            Placeholder="Nombre del dueño"
-            TextColor="black"
-            x:Name="txtnombreDueno">
-        </input:AdvancedEntry>
+            Padding="2">
+            <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                Placeholder="Nombre del dueño"
+                TextColor="black"
+                x:Name="txtnombreDueno">
+            </Entry>
+        </Frame>
         <!--
         <Frame
             BorderColor="#FF7100"
@@ -206,19 +210,20 @@
             Margin="8,0,8,0"
             Orientation="Horizontal">
 
-            <input:AdvancedEntry
+            <Frame
                 BorderColor="#FF7100"
+                CornerRadius="18"
                 HorizontalOptions="FillAndExpand"
-                TextFontSize="17"
-                FontFamily="Lobster-Regular"
-                IconImage="user.png"
                 Margin="0"
-                Padding="0"
-                Placeholder="Ap. Paterno"
-                TextColor="black"
-                x:Name="txtApellidoPaterno">
-
-            </input:AdvancedEntry>
+                Padding="2">
+                <Entry
+                    FontSize="17"
+                    FontFamily="Lobster-Regular"
+                    Placeholder="Ap. Paterno"
+                    TextColor="black"
+                    x:Name="txtApellidoPaterno">
+                </Entry>
+            </Frame>
             <!--
             <Frame
                 BorderColor="#FF7100"
@@ -229,18 +234,20 @@
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Apellido paterno"></Entry>
             </Frame>-->
-            <input:AdvancedEntry
+            <Frame
                 BorderColor="#FF7100"
+                CornerRadius="18"
                 HorizontalOptions="FillAndExpand"
-                TextFontSize="17"
-                FontFamily="Lobster-Regular"
-                IconImage="user.png"
                 Margin="0"
-                Placeholder="Materno(opcional)"
-                TextColor="black"
-                x:Name="txtApellidoMaterno">
-
-            </input:AdvancedEntry>
+                Padding="2">
+                <Entry
+                    FontSize="17"
+                    FontFamily="Lobster-Regular"
+                    Placeholder="Materno(opcional)"
+                    TextColor="black"
+                    x:Name="txtApellidoMaterno">
+                </Entry>
+            </Frame>
             <!--
             <Frame
                 BorderColor="#FF7100"
@@ -271,20 +278,22 @@
                 </Picker.Items>
             </Picker>
         </Frame>
-
-        <input:AdvancedEntry
+        <Frame
             BorderColor="#FF7100"
-            TextFontSize="18"
-            FontFamily="Lobster-Regular"
+            CornerRadius="18"
             Grid.Row="10"
             Grid.ColumnSpan="3"
-            IconImage="email.png"
-            Keyboard="Email"
             Margin="8,0"
-            Placeholder="Correo"
-            TextColor="black"
-            x:Name="txtCorreo">
-        </input:AdvancedEntry>
+            Padding="2">
+            <Entry
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                Keyboard="Email"
+                Placeholder="Correo"
+                TextColor="black"
+                x:Name="txtCorreo">
+            </Entry>
+        </Frame>
         <!--
         <Frame
             BorderColor="#FF7100"
@@ -319,6 +328,25 @@
             <Entry Placeholder="Contraseña" IsPassword="True" ></Entry>
         </Frame>
         -->
+
+         <StackLayout
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="12"
+            Margin="24,0,16,0"
+            Orientation="Horizontal">
+            <CheckBox
+                x:Name="chkTermino"
+                Color="#FF7100">
+            </CheckBox>
+            <Label
+                FontSize="18"
+                FontFamily="Lobster-Regular"
+                Margin="0,8,0,0"
+                Text="He leído y estoy de acuerdo con los términos y condiciones">
+            </Label>
+         </StackLayout>
+
         <Button
             BorderColor="#FF7100"
             BorderWidth="2"
@@ -327,7 +355,7 @@
             Clicked="onReg_dueno"
             FontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="12"
+            Grid.Row="13"
             Grid.ColumnSpan="3"
             Margin="24,0,24,4"
             Text="Registrar"

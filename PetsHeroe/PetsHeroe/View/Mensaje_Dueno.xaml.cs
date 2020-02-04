@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
 using Plugin.Connectivity;
+using System.Threading.Tasks;
 
 namespace PetsHeroe
 {
@@ -16,15 +17,24 @@ namespace PetsHeroe
         string codigo_pre;
         Regex EmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         Regex PhoneRegex = new Regex(@"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$");
+        double latitud = -1, longitud = -1;
+        Location currentlocation;
+        bool locationGrant = false;
 
         public Mensaje_Dueno(string codigo)
         {
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
+
+            _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
+            _ = getCurrentLocation();
+            _ = getPermisoLocation();
+
+
             codigo_pre = codigo;
         }
 
@@ -32,7 +42,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -78,8 +88,8 @@ namespace PetsHeroe
                 nombre = nombre,
                 telefono = telefono,
                 mensaje = mensaje,
-                latitud = 0.0000,
-                longitud = 0.0000
+                latitud = currentlocation.Latitude,
+                longitud = currentlocation.Longitude
             });
 
             if (status.Resultado){
@@ -112,5 +122,32 @@ namespace PetsHeroe
             }
             return PhoneRegex.IsMatch(number);
         }
+
+        private async Task getCurrentLocation()
+        {
+            try
+            {
+                var geoLocation = await Plugin.Geolocator.CrossGeolocator.Current.GetLastKnownLocationAsync();
+                if (geoLocation != null)
+                {
+                    currentlocation = new Location(geoLocation.Latitude, geoLocation.Longitude);
+                }
+                else
+                {
+                    currentlocation = new Location(25.691288, -100.316775);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener location: " + ex);
+                currentlocation = new Location(25.691288, -100.316775);
+            }
+        }
+
+        private async Task getPermisoLocation()
+        {
+            locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
+        }
+
     }
 }

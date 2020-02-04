@@ -1,13 +1,13 @@
 {
   "images": [
     {
-      "filename": "Recurso 2-2.png",
+      "filename": "Recurso 2-4.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "Recurso 2-1.png",
+      "filename": "Recurso 2-2.png",
       "size": "20x20",
       "scale": "3x",
       "idiom": "iphone"
@@ -25,37 +25,37 @@
       "idiom": "iphone"
     },
     {
+      "filename": "Recurso 2-8.png",
+      "size": "40x40",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Recurso 2-1.png",
+      "size": "40x40",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Recurso 2-5.png",
+      "size": "60x60",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Recurso 2-7.png",
+      "size": "60x60",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
       "filename": "Recurso 2.png",
-      "size": "40x40",
-      "scale": "2x",
-      "idiom": "iphone"
-    },
-    {
-      "filename": "icono_app_120-1.png",
-      "size": "40x40",
-      "scale": "3x",
-      "idiom": "iphone"
-    },
-    {
-      "filename": "icono_app_120.png",
-      "size": "60x60",
-      "scale": "2x",
-      "idiom": "iphone"
-    },
-    {
-      "filename": "icono_app_180.png",
-      "size": "60x60",
-      "scale": "3x",
-      "idiom": "iphone"
-    },
-    {
-      "filename": "Icon20.png",
       "size": "20x20",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "Icon40.png",
+      "filename": "Recurso 2-9.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "ipad"
@@ -103,19 +103,19 @@
       "idiom": "ipad"
     },
     {
-      "filename": "icono_app_1024.png",
+      "filename": "Recurso 3.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "ios-marketing"
     },
     {
-      "filename": "icono_app_120-2.png",
+      "filename": "Recurso 2-3.png",
       "size": "60x60",
       "scale": "2x",
       "idiom": "car"
     },
     {
-      "filename": "icono_app_180-1.png",
+      "filename": "Recurso 2-6.png",
       "size": "60x60",
       "scale": "3x",
       "idiom": "car"

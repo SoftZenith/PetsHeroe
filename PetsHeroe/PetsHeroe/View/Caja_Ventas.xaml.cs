@@ -50,7 +50,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -95,7 +95,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -143,7 +143,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             int cantidadSelected = pkrCantidad.SelectedIndex;
@@ -294,7 +294,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -310,6 +310,7 @@ namespace PetsHeroe.View
                 await DisplayAlert("Error", "Código de mascota invalido", "Ok");
                 return;
             }
+
             codigoMascota = txtCodigoMascota.Text;
             idMascota = DependencyService.Get<IWebService>().getIdMascota_Busca(txtCodigoMascota.Text);
 
@@ -383,7 +384,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -498,7 +499,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             // Only get results when it was a user typing, 

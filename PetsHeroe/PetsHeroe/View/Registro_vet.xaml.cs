@@ -7,7 +7,6 @@ using System.Linq;
 using PetsHeroe.Services;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 using Plugin.Connectivity;
 
 namespace PetsHeroe
@@ -27,7 +26,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -66,7 +65,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -90,11 +89,17 @@ namespace PetsHeroe
                 try
                 {
                     asociado.tipoAsociado = idTipoAsociado;
+
+                    if (idTipoAsociado < 0) {
+                        await DisplayAlert("Error", "Selecciona el tipo de asociado", "OK");
+                        return;
+                    }
+
                     asociado.nombreComerial = txtNombreComercial.Text;
                     asociado.nombre = txtNombre.Text;
                     asociado.apellidoPaterno = txtApellidoP.Text;
                     asociado.apellidoMaterno = txtApellidoM.Text == null ? "" : txtApellidoM.Text;
-                    asociado.correo = txtCorreo.Text;
+                    asociado.correo = txtCorreo.Text.ToLower();
                     asociado.contrasena = txtContrasena.Text;
                     asociado.sexo = sexo;
 
@@ -145,7 +150,7 @@ namespace PetsHeroe
             if (string.IsNullOrWhiteSpace(email))
                 return false;
 
-            return EmailRegex.IsMatch(email);
+            return EmailRegex.IsMatch(email.ToLower());
         }
 
     }

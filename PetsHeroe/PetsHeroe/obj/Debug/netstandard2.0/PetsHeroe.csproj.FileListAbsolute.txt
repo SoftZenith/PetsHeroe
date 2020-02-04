@@ -47,3 +47,4 @@ C:/Users/BHN_R/Source/Repos/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.dll
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.pdb
 /Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/PetsHeroe.csprojAssemblyReference.cache
+/Users/bryangutierrez/Documents/Dotech/PetsHeroe/PetsHeroe/PetsHeroe/obj/Debug/netstandard2.0/View/Tomar_Foto.xaml.g.cs

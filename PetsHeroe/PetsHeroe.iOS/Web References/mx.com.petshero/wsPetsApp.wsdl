@@ -634,6 +634,34 @@
       <s:element name="Mascota_IncidenteResponse">
         <s:complexType />
       </s:element>
+      <s:element name="Mascota_IncidenteBusca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoIncidente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCondicion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoRetorno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SoloActivos" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_IncidenteBuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mascota_IncidenteBuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Codigo_Valida">
         <s:complexType>
           <s:sequence>
@@ -1145,6 +1173,15 @@
   <wsdl:message name="Mascota_IncidenteAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_IncidenteBusca" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_IncidenteBuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="Codigo_ValidaSoapIn">
     <wsdl:part name="parameters" element="tns:Codigo_Valida" />
   </wsdl:message>
@@ -1414,6 +1451,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambia el Estatus de la Mascota (perdida o encontrada)</wsdl:documentation>
       <wsdl:input message="tns:Mascota_IncidenteSoapIn" />
       <wsdl:output message="tns:Mascota_IncidenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca los incidentes activos de la mascota</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_IncidenteBuscaSoapIn" />
+      <wsdl:output message="tns:Mascota_IncidenteBuscaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
@@ -1793,6 +1835,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_IncidenteBusca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_IncidenteBuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2242,6 +2294,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_IncidenteBusca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_IncidenteBuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

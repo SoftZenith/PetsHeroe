@@ -1,6 +1,9 @@
 ﻿using System;
 using PetsHeroe.Services;
+using PetsHeroe.View;
 using Plugin.Connectivity;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -15,13 +18,15 @@ namespace PetsHeroe
         private int opcion = 0;
         IWebService wsDependency;
         IQRScanning scanningDepen;
+        private MediaFile _mediaFile;
+        private string URL { get; set; }
 
         public Loc_Mascota()
         {
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -113,12 +118,37 @@ namespace PetsHeroe
                         _ = Navigation.PushAsync(new Tomar_Nota(codigo));
                     }
                     catch (Exception) {
-                        await DisplayAlert("Error", "Opción no disponible actualmente", "OK");
+                        
                     }
                     break;
                 default:
                     await DisplayAlert("Seleccionado", "Ninguno seleccionado", "OK");
                     break;
+            }
+        }
+
+        async void onTakePhoto(object sender, EventArgs args) {
+            await CrossMedia.Current.Initialize();
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            {
+                await DisplayAlert("Error", "La aplicación no tiene permisos para acceder a la cámara", "OK");
+                return;
+            }
+            else
+            {
+                _mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+                {
+                    Directory = "Sample",
+                    Name = "myImage.jpg"
+                });
+
+                if (_mediaFile == null) return;
+                //imageView.Source = ImageSource.FromStream(() => _mediaFile.GetStream());
+                var mediaOption = new PickMediaOptions()
+                {
+                    PhotoSize = PhotoSize.Medium
+                };
+                //UploadedUrl.Text = "Image URL:";
             }
         }
 

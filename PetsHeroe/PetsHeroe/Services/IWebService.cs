@@ -78,5 +78,6 @@ namespace PetsHeroe.Services
         Retorno setServicioAgrega(int idTipoMascota, string codigo, string nombre);
         Retorno ventaCancela(int idVenta);
         Retorno ventaCambia(int idVenta, int unidades, decimal costo);
+        DataTable Mascota_IncidenteBusca(int idMascota, int idMiembreo, int idTipoIncidente, int idCanal, int idAsociado, int idCondicional, int idTipoRetorno, Byte soloActivos);
     }
 }

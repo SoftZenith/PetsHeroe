@@ -26,7 +26,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="8"
                 Grid.ColumnSpan="2"
-                Grid.Row="1"
+                Grid.Row="0"
                 Margin="8,0,4,0"
                 Padding="0,4,0,0">
                 <Entry
@@ -44,7 +44,7 @@
                 CornerRadius="16"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
-                Grid.Row="1"
+                Grid.Row="0"
                 Margin="0,0,8,0"
                 FontSize="18"
                 FontFamily="Lobster-Regular"
@@ -57,7 +57,7 @@
                 BorderColor="#FF7100"
                 CornerRadius="8"
                 Grid.ColumnSpan="3"
-                Grid.Row="2"
+                Grid.Row="1"
                 Margin="8,0,8,0"
                 Padding="0,4,0,0">
                 <Entry
@@ -70,20 +70,22 @@
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Margin="8,0,8,0"
                 Padding="0">
                 <Picker FontSize="18"
-                        FontFamily="Lobster-Regular" Title="Tipo de mascota" x:Name="pkrTipoMascota"></Picker>
+                        FontFamily="Lobster-Regular"
+                        Title="Tipo de mascota"
+                        x:Name="pkrTipoMascota"></Picker>
             </Frame>
             <Frame
                 BorderColor="#FF7100"
                 CornerRadius="8"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="4"
+                Grid.Row="3"
                 Margin="8,0,8,0"
                 Padding="0">
                 <Picker FontSize="18"
@@ -94,7 +96,7 @@
                 CornerRadius="8"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="5"
+                Grid.Row="4"
                 Margin="8,0,8,0"
                 Padding="0">
                 <Picker FontSize="18"
@@ -103,7 +105,7 @@
             <StackLayout
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="6"
+                Grid.Row="5"
                 Margin="8,0,8,0"
                 Orientation="Horizontal">
                 <Frame
@@ -129,6 +131,24 @@
                            FontFamily="Lobster-Regular" Keyboard="Numeric" Placeholder="Edad" x:Name="txtedadMascota"></Entry>
                 </Frame>
 
+            </StackLayout>
+
+            <StackLayout
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="6"
+                Margin="24,0,16,0"
+                Orientation="Horizontal">
+                <CheckBox
+                    x:Name="chkTermino"
+                    Color="#FF7100">
+                </CheckBox>
+                <Label
+                    FontSize="18"
+                    FontFamily="Lobster-Regular"
+                    Margin="0,8,0,0"
+                    Text="He leído y estoy de acuerdo con los términos y condiciones">
+                </Label>
             </StackLayout>
 
             <Button

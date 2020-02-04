@@ -42,7 +42,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -203,7 +203,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -311,6 +311,11 @@ namespace PetsHeroe
                     return;
                 }
 
+                if (!chkTermino.IsChecked) {
+                    await DisplayAlert("Error", "Para registrar tu mascota es necesario aceptar los términos y condiciones", "Error");
+                    return;
+                }
+
                 bool estatus = false;
 
                 Retorno retorno = DependencyService.Get<IWebService>().getMascota_Registro(new Model.Dueno()
@@ -319,7 +324,7 @@ namespace PetsHeroe
                     idSucursal = idSucursal,
                     nombre = nombreDueno,
                     apellidoP = apellidoP,
-                    apellidoM = apellidoM,
+                    apellidoM = apellidoM == null ? "" : apellidoM,
                     sexo = sexoDueno,
                     correo = correo,
                     contrasena = contrasena,

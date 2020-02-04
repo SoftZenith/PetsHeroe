@@ -571,6 +571,32 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Mascota_Foto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Foto" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_FotoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Mascota_BuscaFoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Miniatura" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_BuscaFotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mascota_BuscaFotoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Mascota_Registro">
         <s:complexType>
           <s:sequence>
@@ -633,6 +659,34 @@
       </s:element>
       <s:element name="Mascota_IncidenteResponse">
         <s:complexType />
+      </s:element>
+      <s:element name="Mascota_IncidenteBusca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDMascota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDMiembro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoIncidente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCanal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAsociado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCondicion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTipoRetorno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SoloActivos" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mascota_IncidenteBuscaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mascota_IncidenteBuscaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="Codigo_Valida">
         <s:complexType>
@@ -1118,6 +1172,24 @@
   <wsdl:message name="Mascota_BuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
+  <wsdl:message name="Mascota_FotoSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_Foto" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_FotoSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_FotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_FotoAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaFotoSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_BuscaFoto" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaFotoSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_BuscaFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_BuscaFotoAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
   <wsdl:message name="Mascota_RegistroSoapIn">
     <wsdl:part name="parameters" element="tns:Mascota_Registro" />
   </wsdl:message>
@@ -1143,6 +1215,15 @@
     <wsdl:part name="parameters" element="tns:Mascota_IncidenteResponse" />
   </wsdl:message>
   <wsdl:message name="Mascota_IncidenteAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaSoapIn">
+    <wsdl:part name="parameters" element="tns:Mascota_IncidenteBusca" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaSoapOut">
+    <wsdl:part name="parameters" element="tns:Mascota_IncidenteBuscaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mascota_IncidenteBuscaAuthHeader">
     <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
   </wsdl:message>
   <wsdl:message name="Codigo_ValidaSoapIn">
@@ -1400,6 +1481,16 @@
       <wsdl:input message="tns:Mascota_BuscaSoapIn" />
       <wsdl:output message="tns:Mascota_BuscaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Foto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda foto de la mascota en formato JPG</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_FotoSoapIn" />
+      <wsdl:output message="tns:Mascota_FotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_BuscaFoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa la foto de la Mascota en formato Jpeg</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_BuscaFotoSoapIn" />
+      <wsdl:output message="tns:Mascota_BuscaFotoSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Registro">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de nueva Mascota y (opcional) Dueño</wsdl:documentation>
       <wsdl:input message="tns:Mascota_RegistroSoapIn" />
@@ -1414,6 +1505,11 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambia el Estatus de la Mascota (perdida o encontrada)</wsdl:documentation>
       <wsdl:input message="tns:Mascota_IncidenteSoapIn" />
       <wsdl:output message="tns:Mascota_IncidenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca los incidentes activos de la mascota</wsdl:documentation>
+      <wsdl:input message="tns:Mascota_IncidenteBuscaSoapIn" />
+      <wsdl:output message="tns:Mascota_IncidenteBuscaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Codigo_Valida">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si un codigo es valido</wsdl:documentation>
@@ -1768,6 +1864,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Foto">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Foto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_FotoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_BuscaFoto">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_BuscaFoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_BuscaFotoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Registro">
       <soap:operation soapAction="http://www.petshero.com.mx/Mascota_Registro" style="document" />
       <wsdl:input>
@@ -1793,6 +1909,16 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <soap:operation soapAction="http://www.petshero.com.mx/Mascota_IncidenteBusca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Mascota_IncidenteBuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2217,6 +2343,26 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Mascota_Foto">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Foto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_FotoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_BuscaFoto">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_BuscaFoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_BuscaFotoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Mascota_Registro">
       <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_Registro" style="document" />
       <wsdl:input>
@@ -2242,6 +2388,16 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:Mascota_IncidenteAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mascota_IncidenteBusca">
+      <soap12:operation soapAction="http://www.petshero.com.mx/Mascota_IncidenteBusca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Mascota_IncidenteBuscaAuthHeader" part="AuthHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

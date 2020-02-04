@@ -38,7 +38,7 @@ namespace PetsHeroe.View
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -175,7 +175,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             lsvProductos.BeginRefresh();
@@ -211,7 +211,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -252,7 +252,7 @@ namespace PetsHeroe.View
 
                 if (current != NetworkAccess.Internet)
                 {
-                    DisplayAlert("Ok","No estas conectado a internet","Ok");
+                    DisplayAlert("Ok","No estás conectado a internet","Ok");
                     return;
                 }
 
@@ -373,7 +373,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return null;
             }
 
@@ -406,7 +406,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return null;
             }
 
@@ -466,7 +466,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return null;
             }
 
@@ -499,7 +499,7 @@ namespace PetsHeroe.View
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return null;
             }
 
@@ -532,7 +532,7 @@ namespace PetsHeroe.View
         public void onAgregarPromo(object sender, EventArgs args) {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             Navigation.PushAsync(new Nuevo_Servicio_Promo(false, null));
@@ -541,7 +541,7 @@ namespace PetsHeroe.View
         public void onAgregarPromoPrd(object sender, EventArgs args) {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             Navigation.PushAsync(new Nuevo_Producto_Promo(false, null));
@@ -551,7 +551,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -564,7 +564,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -604,7 +604,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -617,7 +617,7 @@ namespace PetsHeroe.View
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             Button button = (Button)sender;

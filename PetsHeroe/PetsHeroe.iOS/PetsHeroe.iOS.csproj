@@ -111,19 +111,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_1024.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_180.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_180-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icono_app_120-2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-4.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-5.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-6.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-7.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-8.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Recurso 2-9.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

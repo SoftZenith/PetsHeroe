@@ -22,7 +22,7 @@ namespace PetsHeroe
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             getCurrentLocation();
@@ -34,7 +34,7 @@ namespace PetsHeroe
             {
                 if (!CrossConnectivity.Current.IsConnected)
                 {
-                    DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    DisplayAlert("Error", "No estás conectado a internet", "Ok");
                     return;
                 }
                 Device.BeginInvokeOnMainThread(async () =>
@@ -45,7 +45,7 @@ namespace PetsHeroe
             else if (logged && userType == 2) {
                 if (!CrossConnectivity.Current.IsConnected)
                 {
-                    DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 }
                 Device.BeginInvokeOnMainThread(async () =>
                 {
@@ -60,12 +60,12 @@ namespace PetsHeroe
             try{
                 if (!CrossConnectivity.Current.IsConnected)
                 {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                     return;
                 }
                 currentlocation = await Geolocation.GetLastKnownLocationAsync();
             }catch (Exception ex) {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No se tiene permiso para acceder a la localización de tu dispositivo", "Ok");
                 return;
             }
         }

@@ -34,7 +34,7 @@ namespace PetsHeroe
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }
@@ -155,7 +155,7 @@ namespace PetsHeroe
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
                 Device.BeginInvokeOnMainThread(async () => {
-                    await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                    await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                     await DependencyService.Get<IWebService>().CloseApp();
                 });
             }

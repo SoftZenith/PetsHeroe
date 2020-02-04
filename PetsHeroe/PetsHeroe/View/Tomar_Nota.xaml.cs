@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using Xamarin.Forms.Xaml;
 using Plugin.Connectivity;
+using System.Threading.Tasks;
 
 namespace PetsHeroe
 {
@@ -29,6 +30,9 @@ namespace PetsHeroe
         private string notas = "";
         private double latitud = -1;
         private double longitud = -1;
+        Location currentlocation;
+        bool locationGrant = false;
+
         private List<String> listaCiudades = new List<string>();
         //Dictionarios para guardar nombre - id
         Dictionary<string, int> estadoDic = new Dictionary<string, int>();
@@ -40,11 +44,15 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
             codigo_pre = codigo;
+
+            _ = Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(500), null, false);
+            _ = getCurrentLocation();
+            _ = getPermisoLocation();
 
             DataTable estados = new DataTable();
 
@@ -119,7 +127,7 @@ namespace PetsHeroe
             bool estatus = false;
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             try
@@ -151,8 +159,8 @@ namespace PetsHeroe
                     telefono = telefono,
                     localizacion = localizacion,
                     notas = notas,
-                    latitud = latitud,
-                    longitud = longitud,
+                    latitud = currentlocation.Latitude,
+                    longitud = currentlocation.Longitude,
                     idCiudad = idCiudad
                 });
 
@@ -193,5 +201,32 @@ namespace PetsHeroe
             }
             return PhoneRegex.IsMatch(number);
         }
+
+        private async Task getCurrentLocation()
+        {
+            try
+            {
+                var geoLocation = await Plugin.Geolocator.CrossGeolocator.Current.GetLastKnownLocationAsync();
+                if (geoLocation != null)
+                {
+                    currentlocation = new Location(geoLocation.Latitude, geoLocation.Longitude);
+                }
+                else
+                {
+                    currentlocation = new Location(25.691288, -100.316775);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener location: " + ex);
+                currentlocation = new Location(25.691288, -100.316775);
+            }
+        }
+
+        private async Task getPermisoLocation()
+        {
+            locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
+        }
+
     }
 }

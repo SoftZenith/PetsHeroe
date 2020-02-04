@@ -871,5 +871,18 @@ namespace PetsHeroe.Droid
             }
         }
 
+        public DataTable Mascota_IncidenteBusca(int idMascota, int idMiembro, int idTipoIncidente, int idCanal, int idAsociado, int idCondicion, int idTipoRetorno, byte soloActivos)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                return wsPets.Mascota_IncidenteBusca(idMascota, idMiembro, idTipoIncidente, idCanal, idAsociado, idCondicion, idTipoRetorno, soloActivos);
+            }
+            catch (SoapException soapExc) {
+                return null;
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
     }
 }

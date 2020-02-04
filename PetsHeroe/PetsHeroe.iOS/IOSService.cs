@@ -89,6 +89,7 @@ namespace PetsHeroe.iOS
         {
             wsPets.AuthHeaderValue = auth;
             Estado_Busca = wsPets.Estado_Busca(1);
+            //wsPets.Mascota_IncidenteBusca();//solo activos es 1
         }
 
         public DataTable getMarcaProducto_Busca()
@@ -401,7 +402,7 @@ namespace PetsHeroe.iOS
             try
             {
                 Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1, -1, "", codigoMascota, "");
-                if (Mascota_Busca.Rows.Count != 1)
+                if (Mascota_Busca.Rows.Count < 1)
                 {
                     return -1;
                 }
@@ -890,6 +891,21 @@ namespace PetsHeroe.iOS
                     Resultado = false,
                     Mensaje = "Error desconocido"
                 };
+            }
+        }
+
+        public DataTable Mascota_IncidenteBusca(int idMascota, int idMiembreo, int idTipoIncidente, int idCanal, int idAsociado, int idCondicional, int idTipoRetorno, byte soloActivos)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                return wsPets.Mascota_IncidenteBusca(idMascota, idMiembreo, idTipoIncidente, idCanal, idAsociado, idCondicional, idTipoRetorno, soloActivos);
+            }
+            catch (SoapException SoapExc) {
+                return null;
+            }
+            catch (Exception ex) {
+                return null;
             }
         }
     }

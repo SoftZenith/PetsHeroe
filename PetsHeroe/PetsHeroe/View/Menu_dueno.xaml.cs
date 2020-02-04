@@ -18,7 +18,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             try
@@ -30,7 +30,7 @@ namespace PetsHeroe
                 tbMenuDueno.CurrentPage = tbMenuDueno.Children[tab];
             }
             catch (Exception ex) {
-                DisplayAlert("Error", "No estas conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
+                DisplayAlert("Error", "No estás conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
                 DependencyService.Get<IWebService>().CloseApp();
             }
         }
@@ -39,7 +39,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbMenuDueno.Title = "Beneficios";
@@ -49,7 +49,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbMenuDueno.Title = "¿Encontraste unas mascota?";
@@ -59,7 +59,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbMenuDueno.Title = "Mis Mascotas";
@@ -69,7 +69,7 @@ namespace PetsHeroe
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             tbMenuDueno.Title = "Lista de CAMs";

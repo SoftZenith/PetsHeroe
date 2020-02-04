@@ -16,7 +16,7 @@ namespace PetsHeroe
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             lsvMascotasExiste.RefreshCommand = new Command(() => {
@@ -26,9 +26,17 @@ namespace PetsHeroe
                 lsvMascotasExiste.IsRefreshing = false;
             });
 
+            lsvMascotasExiste.ItemTapped += LsvMascotasExiste_ItemTapped;
+
             Mascota mascotasExisten = new Mascota();
 
             lsvMascotasExiste.ItemsSource = mascotasExisten.getMascotaList(Preferences.Get("idMiembro", -1));
+        }
+
+        private void LsvMascotasExiste_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Mascota mascotaSelected = lsvMascotasExiste.SelectedItem as Mascota;
+            Navigation.PushAsync(new Registro_mascota(mascotaSelected, true));
         }
 
         protected override void OnAppearing()

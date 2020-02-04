@@ -20,7 +20,7 @@ namespace PetsHeroe
             InitializeComponent();
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace PetsHeroe
 
             if (!CrossConnectivity.Current.IsConnected)
             {
-                await DisplayAlert("Error", "No estas conectado a internet", "Ok");
+                await DisplayAlert("Error", "No estás conectado a internet", "Ok");
                 return;
             }
             try
@@ -123,7 +123,7 @@ namespace PetsHeroe
                 }
                 else
                 {
-                    await DisplayAlert("Error", "No estas conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
+                    await DisplayAlert("Error", "No estás conectado a internet utilizar una conexión WIFI o datos celulares", "OK");
                 }
             }
         }

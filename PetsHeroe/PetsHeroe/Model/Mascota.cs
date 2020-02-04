@@ -17,7 +17,7 @@ namespace PetsHeroe
         public string alta { get; set; }
         public string expira { get; set; }
         public bool perdida { get; set; } //EXT
-        public bool robada { get; set; } //
+        public bool robada { get; set; } //ROB
         public string botonIzq { get; set; }
         public string botonDer { get; set; }
         //REG en casa con dueño
@@ -43,11 +43,11 @@ namespace PetsHeroe
                         codigo = dr["Code"].ToString(),
                         estatus = dr["PetStatus"].ToString(),
                         suscripcion = dr["SubscriptionType"].ToString(),
-                        veterinario = "",
+                        veterinario = dr["BusinessName"].ToString(),
                         alta = dr["DateActivated"].ToString(),
                         expira = dr["DateExpiration"].ToString(),
-                        perdida = (dr["PetStatusCode"].ToString() != "REG"),
-                        robada = (dr["PetStatusCode"].ToString() != "REG"),
+                        perdida = (dr["PetStatusCode"].ToString() == "EXT"),
+                        robada = (dr["PetStatusCode"].ToString() == "ROB"),
                         botonIzq = (dr["PetStatusCode"].ToString() == "REG") ? "Reportar como perdida" : "Cancelar reporte",
                         botonDer = (dr["PetStatusCode"].ToString() == "REG") ? "Reportar como robada" : "Reportar como encontrada"
                     };
