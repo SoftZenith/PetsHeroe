@@ -292,10 +292,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.4.0.991265": {
+      "Xamarin.Forms.Maps/4.4.0.991537": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991265"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -348,7 +348,7 @@
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.4.0.991265",
+          "Xamarin.Forms": "4.4.0.991537",
           "Xamarin.Forms.InputKit": "3.1.0",
           "Xamarin.Forms.Maps": "4.4.0.991265",
           "ZXing.Net.Mobile": "2.4.1",
@@ -654,10 +654,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.4.0.991265": {
+      "Xamarin.Forms.Maps/4.4.0.991537": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991265"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -710,7 +710,7 @@
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.4.0.991265",
+          "Xamarin.Forms": "4.4.0.991537",
           "Xamarin.Forms.InputKit": "3.1.0",
           "Xamarin.Forms.Maps": "4.4.0.991265",
           "ZXing.Net.Mobile": "2.4.1",
@@ -1016,10 +1016,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.4.0.991265": {
+      "Xamarin.Forms.Maps/4.4.0.991537": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991265"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -1072,7 +1072,7 @@
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.4.0.991265",
+          "Xamarin.Forms": "4.4.0.991537",
           "Xamarin.Forms.InputKit": "3.1.0",
           "Xamarin.Forms.Maps": "4.4.0.991265",
           "ZXing.Net.Mobile": "2.4.1",
@@ -1378,10 +1378,10 @@
           "lib/xamarin.ios10/Plugin.InputKit.dll": {}
         }
       },
-      "Xamarin.Forms.Maps/4.4.0.991265": {
+      "Xamarin.Forms.Maps/4.4.0.991537": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991265"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
@@ -1434,7 +1434,7 @@
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.4.0.991265",
+          "Xamarin.Forms": "4.4.0.991537",
           "Xamarin.Forms.InputKit": "3.1.0",
           "Xamarin.Forms.Maps": "4.4.0.991265",
           "ZXing.Net.Mobile": "2.4.1",
@@ -2122,10 +2122,10 @@
         "xamarin.forms.inputkit.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.4.0.991265": {
-      "sha512": "yOl1O+P/Im5zjiF76NJVLIzD7STyVtS43cEJ/DYUWc4rWkOClT9WF3oAMshVR5WxoJzcxoCK3fCanUAPmeZptw==",
+    "Xamarin.Forms.Maps/4.4.0.991537": {
+      "sha512": "tyd1krw46bplZD4sOO2hwLYhsIBqY9dpWfgR7NWQe8csAegIyf3KZu2mwBVKH0m/zT5dzoe6r55L1ptmpWAx/Q==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.4.0.991265",
+      "path": "xamarin.forms.maps/4.4.0.991537",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2151,7 +2151,7 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.4.0.991265.nupkg.sha512",
+        "xamarin.forms.maps.4.4.0.991537.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -2212,7 +2212,7 @@
       "PetsHeroe >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.4.0.991265",
-      "Xamarin.Forms.Maps >= 4.4.0.991265",
+      "Xamarin.Forms.Maps >= 4.4.0.991537",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1",
       "dotMorten.Xamarin.Forms.AutoSuggestBox >= 0.7.0"
@@ -2271,7 +2271,7 @@
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.4.0.991265, )"
+            "version": "[4.4.0.991537, )"
           },
           "ZXing.Net.Mobile": {
             "target": "Package",
@@ -2299,5 +2299,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.4.0.991537 to 4.4.0.991265. Reference the package directly from the project to select a different version. \n PetsHeroe.iOS -> Xamarin.Forms.Maps 4.4.0.991537 -> Xamarin.Forms (>= 4.4.0.991537) \n PetsHeroe.iOS -> Xamarin.Forms (>= 4.4.0.991265)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.4.0.991537 to 4.4.0.991265. Reference the package directly from the project to select a different version. \n PetsHeroe.iOS -> PetsHeroe -> Xamarin.Forms (>= 4.4.0.991537) \n PetsHeroe.iOS -> Xamarin.Forms (>= 4.4.0.991265)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

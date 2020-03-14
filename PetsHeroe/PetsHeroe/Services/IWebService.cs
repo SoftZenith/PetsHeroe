@@ -29,6 +29,8 @@ namespace PetsHeroe.Services
         MensajeDueno Entrega_SoloMensaje { get; set; }
         string nombre { get; set; }
 
+        Retorno Mascota_Modifica(int idMascota, string nombre, char sexo, int idTipoMascota, int idRazaMascota, int idColorMascota, int edadMascota);
+        Retorno Mascota_AsignaCam(int idMascota, int idSucursal);
         Retorno reglonCancela(int IDVenta);
         DataTable ticketCarga(int IDTicket, int IDMascota, int IDSucursal);
         Resultado promoProductos_Agrega(int idAsociado, int idProducto, string nombre, decimal precioRegular, decimal precioPromo, DateTime desde, DateTime hasta, int puntos, int unidades, bool activa);
@@ -43,9 +45,10 @@ namespace PetsHeroe.Services
         Retorno ticketPaga(int idMascota, int idSucursal, int ticket, decimal puntosGastados);
         Retorno agregar_venta(int ticket, int idMascota, int idSucursal, int idProducto, int idServicio, int unidades, double costo, out int idTicketOut, out int ventaResult);
         void getCAM_busca(double lat, double lon, int kms);
+        void getCAM_busca(int idPais, int idEstado, int idCiudad);
         void getCiudad_Busca(int IDEstado);
         void getCodigo_Valida(string codigo);
-        void getEstado_Busca();
+        void getEstado_Busca(int idPais);
         void getEnviaContrasena(string correo);
         DataTable getMarcaProducto_Busca();
         void getMascotaColor_Busca(int IDTipo);
@@ -60,11 +63,11 @@ namespace PetsHeroe.Services
         void getTipoAsociado_Busca();
         DataTable getTipoProducto_Busca();
         bool getValidaUsuario(String user, String pass);
-        bool getMascota_Busca(int idMiembro);
+        bool getMascota_Busca(int idMiembro, int idAsociado);
         bool getCliente_Busca(int idMiembro, int idAsociado);
-        bool getClientes_Busca(string codigo, string correo, string nombre);
+        bool getClientes_Busca(int idAsociado, string codigo, string correo, string nombre);
         Retorno setVeterinario_Registro(Asociado asociado);
-        Retorno setEntrega_CAM(string codigo, string notas, double longitud, double latitud);
+        Retorno setEntrega_CAM(string codigo, string notas, int idSucursal, double longitud, double latitud);
         Retorno setMascota_Incidente(int idMascota,int tipoIncidente, int tipoRetorno, int condicion, string notas);
         DataTable getPromoProductos_Busca(int idAsociado);
         DataTable getPromoServicios_Busca(int idAsociado);

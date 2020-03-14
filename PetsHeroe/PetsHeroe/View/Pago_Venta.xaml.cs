@@ -54,8 +54,8 @@ namespace PetsHeroe.View
                 }
             }
 
-            promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(-1, idAsociado, idMascota);
-
+            promocionesDueno = DependencyService.Get<IWebService>().setPuntosPromociones_Busca(idMiembro, idAsociado, idMascota);
+            
             foreach (DataRow dr in promocionesDueno.Rows)
             {
                 if (Convert.ToBoolean(dr["IsPoints"]))

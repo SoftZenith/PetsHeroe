@@ -20,7 +20,7 @@ namespace PetsHeroe
             }
 
             Mascota listaMasc = new Mascota();
-            lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
+            //lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
             lsvMascotas.IsRefreshing = true;
             lsvMascotas.ItemsSource = listaMasc.getMascotaList(Preferences.Get("idMiembro", -1));
             lsvMascotas.IsRefreshing = false;

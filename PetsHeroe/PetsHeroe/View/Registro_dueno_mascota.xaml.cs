@@ -263,12 +263,12 @@ namespace PetsHeroe
                     await DisplayAlert("Error", "Ingresa la edad de tu mascota", "OK");
                     return;
                 }
-
+                /*
                 if (idSucursal == -1)
                 {
                     await DisplayAlert("Error", "Selecciona un veterinario", "OK");
                     return;
-                }
+                }*/
 
                 if (txtnombreDueno.Text == null || txtnombreDueno.Text == "") {
                     await DisplayAlert("Error", "Ingresa el nombre del dueño", "OK");
@@ -398,5 +398,11 @@ namespace PetsHeroe
         {
             locationGrant = await DependencyService.Get<IWebService>().getPermisoLocation();
         }
+
+        public void onTerminos(object sender, EventArgs eventArgs)
+        {
+            Launcher.OpenAsync("http://petshero.com.mx/avisoprivacidad.html");
+        }
+
     }
 }

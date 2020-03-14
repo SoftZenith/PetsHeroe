@@ -11159,58 +11159,61 @@ namespace PetsHeroe.Droid
 			public const int notify_panel_notification_icon_bg = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int other_big = 2131165537;
+			public const int offers = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int password = 2131165538;
+			public const int other_big = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int paw = 2131165539;
+			public const int password = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int pet = 2131165540;
+			public const int paw = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int product = 2131165541;
+			public const int pet = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int search = 2131165542;
+			public const int product = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int service = 2131165543;
-			
-			// aapt resource value: 0x7F070169
-			public const int shower = 2131165545;
-			
-			// aapt resource value: 0x7F07016A
-			public const int shower_big = 2131165546;
+			public const int search = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int show_password = 2131165544;
+			public const int service = 2131165544;
+			
+			// aapt resource value: 0x7F07016A
+			public const int shower = 2131165546;
 			
 			// aapt resource value: 0x7F07016B
-			public const int store = 2131165547;
+			public const int shower_big = 2131165547;
+			
+			// aapt resource value: 0x7F070169
+			public const int show_password = 2131165545;
 			
 			// aapt resource value: 0x7F07016C
-			public const int target = 2131165548;
+			public const int store = 2131165548;
 			
 			// aapt resource value: 0x7F07016D
-			public const int target_pet = 2131165549;
+			public const int target = 2131165549;
 			
 			// aapt resource value: 0x7F07016E
-			public const int tooltip_frame_dark = 2131165550;
+			public const int target_pet = 2131165550;
 			
 			// aapt resource value: 0x7F07016F
-			public const int tooltip_frame_light = 2131165551;
+			public const int tooltip_frame_dark = 2131165551;
 			
 			// aapt resource value: 0x7F070170
-			public const int user = 2131165552;
+			public const int tooltip_frame_light = 2131165552;
 			
 			// aapt resource value: 0x7F070171
-			public const int vet = 2131165553;
+			public const int user = 2131165553;
 			
 			// aapt resource value: 0x7F070172
-			public const int vet_cam = 2131165554;
+			public const int vet = 2131165554;
+			
+			// aapt resource value: 0x7F070173
+			public const int vet_cam = 2131165555;
 			
 			static Drawable()
 			{

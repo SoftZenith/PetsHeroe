@@ -106,7 +106,7 @@ namespace PetsHeroe
                 if (!locationGrant)
                 {
 
-                    DependencyService.Get<IWebService>().getEstado_Busca();
+                    DependencyService.Get<IWebService>().getEstado_Busca(1);
                     estados = DependencyService.Get<IWebService>().Estado_Busca;
 
                     estadoDic.Clear();

@@ -256,7 +256,7 @@ namespace PetsHeroe.View
                     return;
                 }
 
-                DependencyService.Get<IWebService>().getClientes_Busca(codigo, correo, nombre);
+                DependencyService.Get<IWebService>().getClientes_Busca(Preferences.Get("idAsociado", -1), codigo, correo, nombre);
                 clientes = DependencyService.Get<IWebService>().Cliente_Busca;
 
                 txtNombre.Text = " Nombre: " + usuario;

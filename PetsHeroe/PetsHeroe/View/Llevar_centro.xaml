@@ -43,6 +43,16 @@
                 x:Name="mapLlevarCentro">
             </maps:Map>
         </Frame>
+        <Label
+            Grid.Column="0"
+            Grid.ColumnSpan="10"
+            Grid.Row="5"
+            Margin="12,4,8,0"
+            HorizontalOptions="Center"
+            Text="Presiona el nombre arriba del indicador rojo para seleccionar el CAM"
+            TextColor="OrangeRed">
+
+        </Label>
         <Frame
             BorderColor="#FF7100"
             CornerRadius="12"

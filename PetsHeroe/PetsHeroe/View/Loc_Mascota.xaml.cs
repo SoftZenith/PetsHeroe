@@ -41,6 +41,13 @@ namespace PetsHeroe
 
         void onOpcionSeleccionada(object sender, EventArgs args) {
             opcion = rdOpcion.SelectedIndex;
+            if (true)
+            {
+                btnTakePhoto.IsVisible = false;
+            }
+            else {
+                btnTakePhoto.IsVisible = true;
+            }
         }
 
         public async void onScan(object sender, EventArgs args) {

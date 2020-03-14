@@ -20,6 +20,7 @@ namespace PetsHeroe
         DataTable estados = new DataTable();
         DataTable ciudades = new DataTable();
         double latitud = -1, longitud = -1;
+        int idSucursalG = -1;
         Location currentlocation;
         bool locationGrant = false;
         Picker picker, pickerC;
@@ -77,7 +78,7 @@ namespace PetsHeroe
                 if (!locationGrant) //if hasn´t location permissions
                 {
 
-                    DependencyService.Get<IWebService>().getEstado_Busca(); //call to get states list
+                    DependencyService.Get<IWebService>().getEstado_Busca(1); //call to get states list
                     estados = DependencyService.Get<IWebService>().Estado_Busca; //get DataTable with states list
 
                     estadoDic.Clear();
@@ -129,7 +130,8 @@ namespace PetsHeroe
                 {
                     Type = PinType.Place,
                     Label = dr["BusinessName"].ToString(),
-                    Position = new Position(Convert.ToDouble(dr["GeoLat"].ToString()), Convert.ToDouble(dr["GeoLon"].ToString()))
+                    Position = new Position(Convert.ToDouble(dr["GeoLat"].ToString()), Convert.ToDouble(dr["GeoLon"].ToString())),
+                    AutomationId = dr["IDPartnerLocation"].ToString()
                 };
                 
                 pinCAM.Clicked += (object sender, EventArgs e) => {
@@ -137,6 +139,7 @@ namespace PetsHeroe
                     DisplayAlert("CAM", "Cam seleccionado: " + pinClicked.Label.ToString(), "OK");
                     latitud = pinClicked.Position.Latitude;
                     longitud = pinClicked.Position.Longitude;
+                    idSucursalG = Convert.ToInt32(pinClicked.AutomationId);
                 };
                 mapLlevarCentro.Pins.Add(pinCAM);
                 //listaPins.Add(pinCAM);
@@ -162,12 +165,13 @@ namespace PetsHeroe
             if (txtNotas.Text == "") {
                 await DisplayAlert("Error","Agregar alguna nota","OK");
                 return;
-            }else if(latitud == -1 || longitud == -1){
-                await DisplayAlert("Error","Selecciona un CAM","OK");
+            } else if(latitud == -1 || longitud == -1){
+                await DisplayAlert("Error","Selecciona el CAM haciendo clic en la dirección","OK");
                 return;
             }
 
-            Retorno status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, currentlocation.Longitude, currentlocation.Latitude);
+            //Retorno status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, currentlocation.Longitude, currentlocation.Latitude);
+            Retorno status = DependencyService.Get<IWebService>().setEntrega_CAM(codigo, txtNotas.Text, idSucursalG, longitud, latitud);
 
             if (status.Resultado) {
 

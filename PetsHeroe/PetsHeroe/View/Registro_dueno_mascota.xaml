@@ -19,6 +19,7 @@
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -347,6 +348,21 @@
             </Label>
          </StackLayout>
 
+        <Label
+                FontFamily="Lobster-Regular"
+                FontSize="16"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="13"
+                HorizontalOptions="CenterAndExpand"
+                Text="Ver términos y condiciones."
+                TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="onTerminos"/>
+                </Label.GestureRecognizers>
+            </Label>
+
         <Button
             BorderColor="#FF7100"
             BorderWidth="2"
@@ -355,7 +371,7 @@
             Clicked="onReg_dueno"
             FontSize="18"
             FontFamily="Lobster-Regular"
-            Grid.Row="13"
+            Grid.Row="14"
             Grid.ColumnSpan="3"
             Margin="24,0,24,4"
             Text="Registrar"

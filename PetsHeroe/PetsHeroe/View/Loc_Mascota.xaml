@@ -68,9 +68,11 @@
             Grid.Column="0"
             Grid.ColumnSpan="5"
             Grid.Row="2"
+            IsVisible="false"
             Margin="8,4,8,0"
             Text="Tomar foto"
-            TextColor="White">
+            TextColor="White"
+            x:Name="btnTakePhoto">
 
         </Button>
 

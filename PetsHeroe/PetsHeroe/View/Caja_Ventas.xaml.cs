@@ -105,6 +105,9 @@ namespace PetsHeroe.View
             idTicket = -1;
             lblTotal.Text = "$ " + total.ToString() + " MXN";
             lblPuntos.Text = puntos.ToString() + " PTS";
+            pkrTipo.SelectedIndex = -1;
+            lblAhorro.IsVisible = false;
+            lblAhorroTotal.IsVisible = false;
 
             productosEntryComplete = DependencyService.Get<IWebService>().getPromoProductos_Busca(idAsociado);
             productosEntryDic = new Dictionary<string, string>();
@@ -402,6 +405,10 @@ namespace PetsHeroe.View
             puntos = 0;
             ahorroServicios = 0;
             DataTable listaTicketCarga = new DataTable();
+            if (idTicket < 0) {
+                DisplayAlert("Error","Código no activo","Ok");
+                return;
+            }
             listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(idTicket, idMascota, idSucursal);
             listaCarrito.Clear();//Limpiar carrito para refrescar con productos/servicios agregados
             foreach (DataRow dr in listaTicketCarga.Rows)
@@ -441,7 +448,8 @@ namespace PetsHeroe.View
                     {
                         idVenta = Convert.ToInt32(dr["IDSale"].ToString()),
                         nombre = dr["RowDesc"].ToString(),
-                        precio = Convert.ToDouble(dr["PriceU"].ToString()),
+                        precio = Convert.ToDouble(dr["TotalRow"].ToString()),
+                        //precio = Convert.ToDouble(dr["PriceU"].ToString()),
                         cantidad = Convert.ToInt32(dr["Units"].ToString()),
                         puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
                         actual = Convert.ToInt32(dr["UnitsToDate"].ToString()),
@@ -475,7 +483,8 @@ namespace PetsHeroe.View
                         {
                             idVenta = Convert.ToInt32(dr["IDSale"].ToString()),
                             nombre = dr["RowDesc"].ToString(),
-                            precio = Convert.ToDouble(dr["PriceU"].ToString()),
+                            precio = Convert.ToDouble(dr["TotalRow"].ToString()),
+                            //precio = Convert.ToDouble(dr["PriceU"].ToString()),
                             cantidad = Convert.ToInt32(dr["Units"].ToString()),
                             puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
                             isProduct = true,

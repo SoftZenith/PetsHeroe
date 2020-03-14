@@ -55,6 +55,7 @@
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
 <BuildIpa>true</BuildIpa>
 <AssemblyOriginatorKeyFile>..\..\..\..\..\Desktop\CertificateSigningRequest.certSigningRequest</AssemblyOriginatorKeyFile>
+<MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -142,7 +143,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.4.0.991265</Version>
+      <Version>4.4.0.991537</Version>
     </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile">
       <Version>2.4.1</Version>
@@ -220,6 +221,7 @@
     <BundleResource Include="Resources\shower_big.png" />
     <BundleResource Include="Resources\cancel.png" />
     <BundleResource Include="Resources\other_big.png" />
+    <BundleResource Include="Resources\offers.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork%402x" />

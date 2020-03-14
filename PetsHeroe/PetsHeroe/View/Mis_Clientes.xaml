@@ -15,20 +15,35 @@
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
+                                <RowDefinition Height="100"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="8,0,0,0" Grid.Column="0" Grid.Row="0" HeightRequest="70">
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigoMiembro, StringFormat='Código: {0}'}" />
+                                <!--<Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigoMiembro, StringFormat='Código: {0}'}" />-->
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='Correo: {0}'}" />
-                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding telefono, StringFormat='Telefono: {0}'}" />
-                                <BoxView
+                                <Label FontSize="16" FontFamily="Lobster-Regular" Text="Mascotas: " />
+                                <ListView MinimumHeightRequest="130" VerticalOptions="FillAndExpand" HasUnevenRows="False" RowHeight="18" HeightRequest="130" ItemsSource="{Binding mascotasList}" Margin="16,0,0,0" BackgroundColor="White" Grid.Column="0" Grid.Row="1" >
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell Height="100">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label FontSize="14" FontFamily="Lobster-Regular" Text="{Binding nombre}"/>
+                                                    <Label FontSize="14" FontFamily="Lobster-Regular" Text="-"/>
+                                                    <Label FontSize="14" FontFamily="Lobster-Regular" Text="{Binding codigo}"/>
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                                <!--<BoxView
                                     VerticalOptions="FillAndExpand"
                                     HorizontalOptions="FillAndExpand"
                                     HeightRequest="1"  
-                                    Color="#000000"></BoxView>
+                                    Color="#000000"></BoxView>-->
                             </StackLayout>
                         </Grid>
                     </ViewCell>
+
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -19,6 +19,9 @@
                 <RowDefinition Height="65"></RowDefinition>
                 <RowDefinition Height="65"></RowDefinition>
                 <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
                 <RowDefinition Height="85"></RowDefinition>
             </Grid.RowDefinitions>
 
@@ -137,19 +140,98 @@
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.Row="6"
+                Margin="8,0,8,0"
+                Orientation="Horizontal">
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="2">
+                    <Picker FontFamily="Lobster-Regular" FontSize="18" Title="País    " x:Name="pkrPais">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="2">
+                    <Picker FontSize="18" Title="Estado" x:Name="pkrEstado">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+
+            </StackLayout>
+            <StackLayout
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="7"
+                Margin="8,0,8,0"
+                Orientation="Horizontal">
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="2">
+                    <Picker FontSize="18" FontFamily="Lobster-Regular" Title="Ciudad      " x:Name="pkrCiudad">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+                <Frame
+                    BorderColor="#FF7100"
+                    CornerRadius="12"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="2">
+                    <Picker
+                        FontSize="18" FontFamily="Lobster-Regular" Title="Veterinario" x:Name="pkrVeterinario">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+            </StackLayout>
+            <StackLayout
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="8"
                 Margin="24,0,16,0"
                 Orientation="Horizontal">
                 <CheckBox
                     x:Name="chkTermino"
                     Color="#FF7100">
                 </CheckBox>
-                <Label
+                <!--<Label
                     FontSize="18"
                     FontFamily="Lobster-Regular"
                     Margin="0,8,0,0"
                     Text="He leído y estoy de acuerdo con los términos y condiciones">
+                </Label>-->
+                <Label
+                       FontFamily="Lobster-Regular"
+                       FontSize="18"
+                       Margin="0,8,0,0"
+                       Text="He leído y estoy de acuerdo con los términos y condiciones"
+                       TextColor="Black"
+                       HorizontalOptions="Center">
                 </Label>
             </StackLayout>
+
+            <Label
+                FontFamily="Lobster-Regular"
+                FontSize="16"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="9"
+                HorizontalOptions="CenterAndExpand"
+                Text="Ver términos y condiciones."
+                TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="onTerminos"/>
+                </Label.GestureRecognizers>
+            </Label>
 
             <Button
                 BackgroundColor="#006561"
@@ -161,7 +243,7 @@
                 FontFamily="Lobster-Regular"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Grid.Row="7"
+                Grid.Row="10"
                 Margin="24,8,24,4"
                 Text="Registrar"
                 TextColor="White">

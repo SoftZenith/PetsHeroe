@@ -22,7 +22,7 @@ namespace PetsHeroe.iOS
         public DataTable MascotaColor_Busca { get; set; }
         public DataTable MascotaEstatus_Busca { get; set; }
         public DataTable MascotaTipo_Busca { get; set; }
-        public DataTable Pais_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable Pais_Busca { get; set; }
         public DataTable Producto_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable Servicio_Busca { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DataTable TipoAsociado_Busca { get; set; }
@@ -85,10 +85,10 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public void getEstado_Busca()
+        public void getEstado_Busca(int idPais)
         {
             wsPets.AuthHeaderValue = auth;
-            Estado_Busca = wsPets.Estado_Busca(1);
+            Estado_Busca = wsPets.Estado_Busca(idPais);
             //wsPets.Mascota_IncidenteBusca();//solo activos es 1
         }
 
@@ -118,7 +118,19 @@ namespace PetsHeroe.iOS
 
         public void getPais_Busca()
         {
-            throw new NotImplementedException();
+            try
+            {
+                wsPets.AuthHeaderValue = auth;
+                Pais_Busca = wsPets.Pais_Busca();
+            }
+            catch (SoapException soapExc)
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         public DataTable getProducto_Busca(int idAsociado, int idTipoProducto, int idMarca)
@@ -344,11 +356,11 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public Retorno setEntrega_CAM(string codigo, string notas, double longitud, double latitud)
+        public Retorno setEntrega_CAM(string codigo, string notas, int idSucursal, double longitud, double latitud)
         {
             try
             {
-                wsPets.Entrega_CAM(6, codigo, -1, notas, latitud, longitud);
+                wsPets.Entrega_CAM(6, codigo, idSucursal, notas, latitud, longitud);
                 return new Retorno() {
                     Resultado = true,
                     Mensaje = ""
@@ -381,12 +393,12 @@ namespace PetsHeroe.iOS
             return true;
         }
 
-        public bool getMascota_Busca(int idMiembro)
+        public bool getMascota_Busca(int idMiembro, int idAsociado)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, -1, -1,idMiembro, "", "", "");
+                Mascota_Busca = wsPets.Mascota_Busca(-1, -1, -1, -1, idAsociado, -1,idMiembro, "", "", "");
                 return true;
             }
             catch (Exception)
@@ -501,12 +513,12 @@ namespace PetsHeroe.iOS
             }
         }
 
-        public bool getClientes_Busca(string codigo, string correo, string nombre)
+        public bool getClientes_Busca(int idAsociado, string codigo, string correo, string nombre)
         {
             wsPets.AuthHeaderValue = auth;
             try
             {
-                Cliente_Busca = wsPets.Cliente_Busca(-1, -1, -1, codigo, "", nombre, "", "", "", correo, "");
+                Cliente_Busca = wsPets.Cliente_Busca(-1, idAsociado, -1, codigo, "", nombre, "", "", "", correo, "");
                 return true;
             }
             catch (Exception)
@@ -650,7 +662,7 @@ namespace PetsHeroe.iOS
             }
             catch (SoapException ex)
             {
-                string error = ex.Detail.InnerText;
+                string error = Retorno.xmlToStringMessage(ex.Detail.InnerXml);
                 return new Resultado()
                 {
                     status = false,
@@ -906,6 +918,82 @@ namespace PetsHeroe.iOS
             }
             catch (Exception ex) {
                 return null;
+            }
+        }
+
+        public Retorno Mascota_Modifica(int idMascota, string nombre, char sexo, int idTipoMascota, int idRazaMascota, int idColorMascota, int edadMascota)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.Mascota_Modifica(idMascota, nombre, sexo, idTipoMascota, idRazaMascota, idColorMascota, edadMascota);
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc)
+            {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error inesperado"
+                };
+            }
+        }
+
+        public Retorno Mascota_AsignaCam(int idMascota, int idSucursal)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try
+            {
+                wsPets.Mascota_AsignaCAM(idMascota, idSucursal);
+                return new Retorno()
+                {
+                    Resultado = true,
+                    Mensaje = ""
+                };
+            }
+            catch (SoapException soapExc)
+            {
+                string error = Retorno.xmlToStringMessage(soapExc.Detail.InnerXml);
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = error
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Retorno()
+                {
+                    Resultado = false,
+                    Mensaje = "Ocurrió un error inesperado"
+                };
+            }
+        }
+
+        public void getCAM_busca(int idPais, int idEstado, int idCiudad)
+        {
+            wsPets.AuthHeaderValue = auth;
+            try {
+                CAM_Busca = wsPets.CAM_Busca(idPais, idEstado, idCiudad, -1, -1, -1, -1);
+            }
+            catch (SoapException soapExc) {
+                return;
+            }
+            catch (Exception ex) {
+                return;
             }
         }
     }

@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Pages="clr-namespace:PetsHeroe.View"
+             xmlns:Pages1="clr-namespace:PetsHeroe"
              x:Class="PetsHeroe.View.Consulta_bene_dueno"
              Title="Consulta de beneficios">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="EDO CUENTA" IconImageSource="money.png" Padding="8">
+  <ContentPage Title="Edo cuenta" IconImageSource="money.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvDineroElect">   
             <ListView.ItemTemplate>
@@ -39,7 +41,7 @@
         </ListView>
       </ContentPage.Content>
   </ContentPage>
-  <ContentPage Title="SERVICIOS" IconImageSource="service.png" Padding="8">
+  <ContentPage Title="Servicios" IconImageSource="service.png" Padding="8">
       <ContentPage.Content>
           <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="lsvServicios">
             <ListView.ItemTemplate>
@@ -73,6 +75,48 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+      </ContentPage.Content>
+  </ContentPage>
+
+  <ContentPage Title="Promociones" IconImageSource="offers.png" Padding="8">
+      <ContentPage.Content>
+          <ListView
+                BackgroundColor="White"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="8"
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                x:Name="lsvPromosVet">     
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout VerticalOptions="FillAndExpand" Padding="8,8,8,0" Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="16" FontFamily="Lobster-Regular"  Text="{Binding nombre, StringFormat='Nombre: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding partner, StringFormat='Veterinario: {0}'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding precio, StringFormat='Precio: ${0} MXN'}" />
+                                    <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding vigencia, StringFormat='Vigencia: {0}'}" />
+                                    <Label IsVisible="{Binding isProduct}" FontSize="16" FontFamily="Lobster-Regular" Text="{Binding puntos, StringFormat='Te genera {0} puntos'}" />
+                                    <Label IsVisible="{Binding isService}" FontSize="16" FontFamily="Lobster-Regular" Text="{Binding compra, StringFormat='Compra {0} y lleva uno gratis'}"/>
+                                    <BoxView
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        HeightRequest="1"
+                                        Color="#000000">
+                                    </BoxView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
       </ContentPage.Content>
   </ContentPage>
 </TabbedPage>

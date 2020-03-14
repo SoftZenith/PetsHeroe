@@ -166,18 +166,65 @@ namespace PetsHeroe.View
                 return;
             }
 
-            if (txtAPartir.Date < DateTime.Now.Date) {
-                DisplayAlert("Error","Fecha de inicio menor a fecha actual","Ok");
+            if (txtNombrePromo.Text == "" || txtNombrePromo.Text == null) {
+                DisplayAlert("Error", "Ingresa el nombre de la promoción", "Ok");
                 return;
             }
 
-            if (txtHasta.Date < DateTime.Now.Date) {
-                DisplayAlert("Error","Fecha final menor a fecha actual","Ok");
+            if (txtAPartir.Date < DateTime.Now.Date)
+            {
+                DisplayAlert("Error", "Fecha de inicio menor a fecha actual", "Ok");
                 return;
             }
 
-            if (txtHasta.Date < txtAPartir.Date) {
-                DisplayAlert("Error","Fecha final menor a fecha inicio","Ok");
+            if (txtHasta.Date < DateTime.Now.Date)
+            {
+                DisplayAlert("Error", "Fecha final menor a fecha actual", "Ok");
+                return;
+            }
+
+            if (txtHasta.Date < txtAPartir.Date)
+            {
+                DisplayAlert("Error", "Fecha final menor a fecha inicio", "Ok");
+                return;
+            }
+
+            if (pkrTipoMascota.SelectedIndex < 0) {
+                DisplayAlert("Error", "Selecciona el tipo de mascota", "Ok");
+                return;
+            }
+
+            if (pkrServicio.SelectedIndex < 0) {
+                DisplayAlert("Error", "Selecciona el servicio", "Ok");
+                return;
+            }
+
+            if (txtPrecio.Text == "" || txtPrecio.Text == null) {
+                DisplayAlert("Error", "Ingresa el precio", "Ok");
+                return;
+            }
+
+            try
+            {
+                if (Convert.ToDecimal(txtPrecio.Text) <= 0) {
+                    DisplayAlert("Error", "Precio invalido", "Ok");
+                    return;
+                }
+            }
+            catch (Exception) {
+                DisplayAlert("Error", "Precio invalido", "Ok");
+                return;
+            }
+
+            try
+            {
+                if (Convert.ToInt32(txtUnidades.Text) < 2) {
+                    DisplayAlert("Error", "Cantidad de unidades invalida", "Ok");
+                    return;
+                }
+            }
+            catch (Exception) {
+                DisplayAlert("Error", "Cantidad de unidades invalida", "Ok");
                 return;
             }
 

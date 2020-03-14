@@ -21,6 +21,7 @@ namespace PetsHeroe.Model
         public bool esDineroElectr { get; set; }
         public string UPC { get; set; }
         public bool isProduct { get; set; }
+        public bool isService { get; set; }
 
         public Promocion()
         {
