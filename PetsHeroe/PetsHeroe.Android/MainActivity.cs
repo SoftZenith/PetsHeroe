@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -9,7 +8,6 @@ using ZXing.Mobile;
 using Android.Content;
 using Android.Content.Res;
 using System.Threading.Tasks;
-using Android.Widget;
 
 namespace PetsHeroe.Droid
 {

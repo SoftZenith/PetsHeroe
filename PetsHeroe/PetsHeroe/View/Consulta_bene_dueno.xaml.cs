@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace PetsHeroe.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Consulta_bene_dueno : TabbedPage
+    public partial class Consulta_bene_dueno : Xamarin.Forms.TabbedPage
     {
         private DataTable promocionesDueno = new DataTable();
         private DataTable promoProductosVet = new DataTable();
@@ -59,7 +59,7 @@ namespace PetsHeroe.View
                 lsvPromosVet.IsRefreshing = true;
                 lsvPromosVet.ItemsSource = promociones;
                 lsvPromosVet.IsRefreshing = false;
-             });
+            });
         }
 
         private List<Promocion> dataTableToListDinero() {

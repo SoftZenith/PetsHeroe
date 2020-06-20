@@ -38,23 +38,23 @@
           "dependencies": {
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[2.6.4, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[2.6.4, )"
+              "version": "[3.0.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.5.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[4.5.0.356, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.4.0.991537, )"
+              "version": "[4.5.0.356, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -66,7 +66,7 @@
             },
             "dotMorten.Xamarin.Forms.AutoSuggestBox": {
               "target": "Package",
-              "version": "[0.7.0, )"
+              "version": "[1.0.1, )"
             }
           }
         }
@@ -128,11 +128,11 @@
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[2.6.4, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[2.6.4, )"
+              "version": "[3.0.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -162,19 +162,19 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.5.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991537, )"
+              "version": "[4.5.0.356, )"
             },
             "Xamarin.Forms.InputKit": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.2.2, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[4.5.0.356, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -186,7 +186,7 @@
             },
             "dotMorten.Xamarin.Forms.AutoSuggestBox": {
               "target": "Package",
-              "version": "[0.7.0, )"
+              "version": "[1.0.1, )"
             }
           },
           "imports": [
@@ -199,7 +199,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }

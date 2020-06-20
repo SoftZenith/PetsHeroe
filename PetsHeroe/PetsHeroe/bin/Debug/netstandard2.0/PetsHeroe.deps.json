@@ -11,21 +11,21 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "LeoJHarris.XForms.Plugin.EnhancedEntry": "1.0.6",
-          "Microsoft.AppCenter.Analytics": "2.6.4",
-          "Microsoft.AppCenter.Crashes": "2.6.4",
+          "Microsoft.AppCenter.Analytics": "3.0.0",
+          "Microsoft.AppCenter.Crashes": "3.0.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Permissions": "3.0.0.12",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
-          "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.4.0.991537",
-          "Xamarin.Forms.InputKit": "3.1.0",
-          "Xamarin.Forms.Maps": "4.4.0.991265",
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "Xamarin.Forms.InputKit": "3.2.2",
+          "Xamarin.Forms.Maps": "4.5.0.356",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1",
-          "dotMorten.Xamarin.Forms.AutoSuggestBox": "0.7.0"
+          "dotMorten.Xamarin.Forms.AutoSuggestBox": "1.0.1"
         },
         "runtime": {
           "PetsHeroe.dll": {}
@@ -34,7 +34,7 @@
       "Behaviors.Forms/1.4.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "Xamarin.Forms": "4.4.0.991537"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard1.0/Behaviors.dll": {
@@ -43,20 +43,20 @@
           }
         }
       },
-      "dotMorten.Xamarin.Forms.AutoSuggestBox/0.7.0": {
+      "dotMorten.Xamarin.Forms.AutoSuggestBox/1.0.1": {
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991537"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/dotMorten.Xamarin.Forms.AutoSuggestBox.dll": {
-            "assemblyVersion": "0.7.0.0",
-            "fileVersion": "0.7.0.0"
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
       "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991537"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/LeoJHarris.FormsPlugin.Abstractions.dll": {
@@ -65,33 +65,33 @@
           }
         }
       },
-      "Microsoft.AppCenter/2.6.4": {
+      "Microsoft.AppCenter/3.0.0": {
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "2.6.4.0"
+            "fileVersion": "3.0.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Analytics/2.6.4": {
+      "Microsoft.AppCenter.Analytics/3.0.0": {
         "dependencies": {
-          "Microsoft.AppCenter": "2.6.4"
+          "Microsoft.AppCenter": "3.0.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "2.6.4.0"
+            "fileVersion": "3.0.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Crashes/2.6.4": {
+      "Microsoft.AppCenter.Crashes/3.0.0": {
         "dependencies": {
-          "Microsoft.AppCenter": "2.6.4"
+          "Microsoft.AppCenter": "3.0.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "2.6.4.0"
+            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -159,7 +159,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.3.1": {
+      "Xamarin.Essentials/1.5.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -170,41 +170,38 @@
           }
         }
       },
-      "Xamarin.Forms/4.4.0.991537": {
+      "Xamarin.Forms/4.5.0.356": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.4.0.459"
+            "fileVersion": "4.5.0.143"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.4.0.459"
+            "fileVersion": "4.5.0.143"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.4.0.459"
+            "fileVersion": "4.5.0.143"
           }
         }
       },
-      "Xamarin.Forms.InputKit/3.1.0": {
-        "dependencies": {
-          "Xamarin.Forms": "4.4.0.991537"
-        },
+      "Xamarin.Forms.InputKit/3.2.2": {
         "runtime": {
           "lib/netstandard2.0/Plugin.InputKit.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "assemblyVersion": "3.2.2.0",
+            "fileVersion": "3.2.2.0"
           }
         }
       },
-      "Xamarin.Forms.Maps/4.4.0.991265": {
+      "Xamarin.Forms.Maps/4.5.0.356": {
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991537"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.4.0.398"
+            "fileVersion": "4.5.0.143"
           }
         }
       },
@@ -226,7 +223,7 @@
       },
       "ZXing.Net.Mobile.Forms/2.4.1": {
         "dependencies": {
-          "Xamarin.Forms": "4.4.0.991537",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile": "2.4.1"
         },
         "runtime": {
@@ -251,12 +248,12 @@
       "path": "behaviors.forms/1.4.0",
       "hashPath": "behaviors.forms.1.4.0.nupkg.sha512"
     },
-    "dotMorten.Xamarin.Forms.AutoSuggestBox/0.7.0": {
+    "dotMorten.Xamarin.Forms.AutoSuggestBox/1.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I8ucs5GGDSgAjVucuj+Lu4lrXQiK/l26poeZwlwwN39l7WKfvtwswQONLVLbVcysLQcyQ27jVyAvARv7BZugLQ==",
-      "path": "dotmorten.xamarin.forms.autosuggestbox/0.7.0",
-      "hashPath": "dotmorten.xamarin.forms.autosuggestbox.0.7.0.nupkg.sha512"
+      "sha512": "sha512-19Blwes1WHXKKLjo07p64iEkxaIbX2BnTpfXWlqOk9oTywMQ0IiAc8oYKgCnzFd2ntkfwr6KEAeicr9fhc92Qw==",
+      "path": "dotmorten.xamarin.forms.autosuggestbox/1.0.1",
+      "hashPath": "dotmorten.xamarin.forms.autosuggestbox.1.0.1.nupkg.sha512"
     },
     "LeoJHarris.XForms.Plugin.EnhancedEntry/1.0.6": {
       "type": "package",
@@ -265,26 +262,26 @@
       "path": "leojharris.xforms.plugin.enhancedentry/1.0.6",
       "hashPath": "leojharris.xforms.plugin.enhancedentry.1.0.6.nupkg.sha512"
     },
-    "Microsoft.AppCenter/2.6.4": {
+    "Microsoft.AppCenter/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-l8EmaA9jbwZzeq4BMmRpeYEf3/nYcw0TnZIQ/J73LT6VFJNGsqTWAFk4p9HH6tCvt8Zay/7H+wzpeOaMKRHA1A==",
-      "path": "microsoft.appcenter/2.6.4",
-      "hashPath": "microsoft.appcenter.2.6.4.nupkg.sha512"
+      "sha512": "sha512-GhuwxN4zRHtQTtx0EpDcZt3J3O5F9oL2rl7I6at7O9oyOwq5LV95e74RHUHAfmqegfu+8ip4g6AA7VdDIKTufQ==",
+      "path": "microsoft.appcenter/3.0.0",
+      "hashPath": "microsoft.appcenter.3.0.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter.Analytics/2.6.4": {
+    "Microsoft.AppCenter.Analytics/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ekzf3xIKAX7+01E32+VpUvO32HzDaNIgVCzhsdkRvwIz0/gfPw3i5eZuhpL6RBXbEZL5qp6s09aW4PNDR/eFKA==",
-      "path": "microsoft.appcenter.analytics/2.6.4",
-      "hashPath": "microsoft.appcenter.analytics.2.6.4.nupkg.sha512"
+      "sha512": "sha512-c0u8CCTr8RBAQz+PmNinUEHkyJ789ClGwaihjYxd1sqG0XZ1/ar/UXLW0aQ1I8PeEMeKedmrIN9p5TQDRft0yg==",
+      "path": "microsoft.appcenter.analytics/3.0.0",
+      "hashPath": "microsoft.appcenter.analytics.3.0.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter.Crashes/2.6.4": {
+    "Microsoft.AppCenter.Crashes/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JngVtWPTWrvk237QJL3L1OHDWpxZhO44hgMHMyYOYEJmmvpzy8Qg/weyGCVdZ4Dsg0cyULeQyMhAtm4arX3nyw==",
-      "path": "microsoft.appcenter.crashes/2.6.4",
-      "hashPath": "microsoft.appcenter.crashes.2.6.4.nupkg.sha512"
+      "sha512": "sha512-wFikzUFmYPgLC+DieOSAkA/XPgqe1eHCKLsz5ayFs4ZUjr1f0BfNjoOzzYpT68TToSZnzsufo6P6p968GDsEVQ==",
+      "path": "microsoft.appcenter.crashes/3.0.0",
+      "hashPath": "microsoft.appcenter.crashes.3.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -342,33 +339,33 @@
       "path": "xam.plugin.media/4.0.1.5",
       "hashPath": "xam.plugin.media.4.0.1.5.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.3.1": {
+    "Xamarin.Essentials/1.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+51728AdZ/qtABGvcIaNXgEoL2jAtxAXLHS8PvGCP0pb6n7twBqYpfgkmwHYVgu+U99szgtL+Jot8L+OXorPcA==",
-      "path": "xamarin.essentials/1.3.1",
-      "hashPath": "xamarin.essentials.1.3.1.nupkg.sha512"
+      "sha512": "sha512-XEKAp7BXfZkTGbMqySXtuhwxb06ULjkJNQ8p44e8amOPm4m4VTVV92F13ov0a8NFNU+6JFm98510QK9Q/HBD5A==",
+      "path": "xamarin.essentials/1.5.1",
+      "hashPath": "xamarin.essentials.1.5.1.nupkg.sha512"
     },
-    "Xamarin.Forms/4.4.0.991537": {
+    "Xamarin.Forms/4.5.0.356": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZoOvfinSUma4gbXe/0mp6Uk/NTliFLkOwV9qLe/TW2VwSlBEhoiok99gr4esZVU+RwCPEqnsgmtlWFSMNzn2iw==",
-      "path": "xamarin.forms/4.4.0.991537",
-      "hashPath": "xamarin.forms.4.4.0.991537.nupkg.sha512"
+      "sha512": "sha512-aOg3sUA2xuLhyhtLuihrDVFZ5ZCa71pgojyz/HdjEH7eW5HxEws+IIgvKTYUZbFOIGD7eK/f3x1lYj6HI/o+jg==",
+      "path": "xamarin.forms/4.5.0.356",
+      "hashPath": "xamarin.forms.4.5.0.356.nupkg.sha512"
     },
-    "Xamarin.Forms.InputKit/3.1.0": {
+    "Xamarin.Forms.InputKit/3.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KhYY20OIWFUOQmzVypJ3/+42o728gEyOn8QGi7WJXya0uJTcslNKinqD1UXFs6sBJ1i8usRrhTWW0Ztf6/lWkw==",
-      "path": "xamarin.forms.inputkit/3.1.0",
-      "hashPath": "xamarin.forms.inputkit.3.1.0.nupkg.sha512"
+      "sha512": "sha512-ZEZAQ7cnKUUeWWNAdcehImTylldRwtzFPF4zvmj9aQ7Ri56J6zQPN/vLd+aHftqD73CL/38Q4XJWfls2b3q2aA==",
+      "path": "xamarin.forms.inputkit/3.2.2",
+      "hashPath": "xamarin.forms.inputkit.3.2.2.nupkg.sha512"
     },
-    "Xamarin.Forms.Maps/4.4.0.991265": {
+    "Xamarin.Forms.Maps/4.5.0.356": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yOl1O+P/Im5zjiF76NJVLIzD7STyVtS43cEJ/DYUWc4rWkOClT9WF3oAMshVR5WxoJzcxoCK3fCanUAPmeZptw==",
-      "path": "xamarin.forms.maps/4.4.0.991265",
-      "hashPath": "xamarin.forms.maps.4.4.0.991265.nupkg.sha512"
+      "sha512": "sha512-U1yUOMqFmyPVvkGXAQFcZRsOaHiQv5xnBtKLtIW4/I11a1R0tC20utWaw+qtk1tL9CmNWJLlAjJEjqHawI5QPw==",
+      "path": "xamarin.forms.maps/4.5.0.356",
+      "hashPath": "xamarin.forms.maps.4.5.0.356.nupkg.sha512"
     },
     "ZXing.Net.Mobile/2.4.1": {
       "type": "package",

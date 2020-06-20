@@ -639,6 +639,8 @@
             <s:element minOccurs="1" maxOccurs="1" name="IDRazaMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="IDColorMascota" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="EdadMascota" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Chip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notas" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>

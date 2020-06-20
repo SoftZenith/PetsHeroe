@@ -22,10 +22,10 @@
                                 <!--<Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding codigoMiembro, StringFormat='Código: {0}'}" />-->
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="{Binding correo, StringFormat='Correo: {0}'}" />
                                 <Label FontSize="16" FontFamily="Lobster-Regular" Text="Mascotas: " />
-                                <ListView MinimumHeightRequest="130" VerticalOptions="FillAndExpand" HasUnevenRows="False" RowHeight="18" HeightRequest="130" ItemsSource="{Binding mascotasList}" Margin="16,0,0,0" BackgroundColor="White" Grid.Column="0" Grid.Row="1" >
+                                <ListView MinimumHeightRequest="100" VerticalOptions="FillAndExpand" HasUnevenRows="False" RowHeight="18" HeightRequest="120" ItemsSource="{Binding mascotasList}" Margin="16,0,0,0" BackgroundColor="White" Grid.Column="0" Grid.Row="1" >
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
-                                            <ViewCell Height="100">
+                                            <ViewCell>
                                                 <StackLayout Orientation="Horizontal">
                                                     <Label FontSize="14" FontFamily="Lobster-Regular" Text="{Binding nombre}"/>
                                                     <Label FontSize="14" FontFamily="Lobster-Regular" Text="-"/>

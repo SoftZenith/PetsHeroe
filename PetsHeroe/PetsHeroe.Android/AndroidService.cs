@@ -751,7 +751,10 @@ namespace PetsHeroe.Droid
             wsPets.AuthHeaderValue = auth;
             try
             {
-                return wsPets.TicketCarga(IDSucursal, IDMascota, IDTicket);
+                DataTable dataTable = new DataTable();
+                dataTable = wsPets.TicketCarga(IDSucursal, IDMascota, IDTicket);
+                int filas = dataTable.Rows.Count;
+                return dataTable;
             }
             catch (Exception) {
                 return null;
@@ -900,7 +903,7 @@ namespace PetsHeroe.Droid
         {
             wsPets.AuthHeaderValue = auth;
             try {
-                wsPets.Mascota_Modifica(idMascota, nombre, sexo, idTipoMascota, idRazaMascota, idColorMascota, edadMascota);
+                wsPets.Mascota_Modifica(idMascota, nombre, sexo, idTipoMascota, idRazaMascota, idColorMascota, edadMascota,"","");
                 return new Retorno() {
                     Resultado = true,
                     Mensaje = ""

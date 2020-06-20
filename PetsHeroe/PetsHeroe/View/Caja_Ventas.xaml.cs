@@ -239,7 +239,7 @@ namespace PetsHeroe.View
             var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
 
             var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
-            if (cameraStatus != PermissionStatus.Granted)
+            if (cameraStatus != Plugin.Permissions.Abstractions.PermissionStatus.Granted)
             {
                 await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
                 return;
@@ -264,7 +264,7 @@ namespace PetsHeroe.View
             var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
 
             var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
-            if (cameraStatus != PermissionStatus.Granted)
+            if (cameraStatus != Plugin.Permissions.Abstractions.PermissionStatus.Granted)
             {
                 await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
                 return;
@@ -276,7 +276,7 @@ namespace PetsHeroe.View
                 {
                     //txtProducto.Text = result;
                     //txtProductoEntry = result;
-                    //txtUPC.Text = result;
+                    txtUPC.Text = result;
                     try
                     {
                         txtUPC.Text = productosEntryDic[result];
@@ -410,6 +410,7 @@ namespace PetsHeroe.View
                 return;
             }
             listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(idTicket, idMascota, idSucursal);
+            //listaTicketCarga = DependencyService.Get<IWebService>().ticketCarga(76, -1, -1);
             listaCarrito.Clear();//Limpiar carrito para refrescar con productos/servicios agregados
             foreach (DataRow dr in listaTicketCarga.Rows)
             {
@@ -496,7 +497,20 @@ namespace PetsHeroe.View
                         listaCarrito.Add(ticket);
                     }
                     catch (Exception exc) {
-
+                        Venta ticket = new Venta()
+                        {
+                            idVenta = Convert.ToInt32(dr["IDSale"].ToString()),
+                            nombre = dr["RowDesc"].ToString(),
+                            precio = Convert.ToDouble(dr["TotalRow"].ToString()),
+                            //precio = Convert.ToDouble(dr["PriceU"].ToString()),
+                            cantidad = Convert.ToInt32(dr["Units"].ToString()),
+                            puntos = Convert.ToDouble(dr["PointsGain"].ToString()),
+                            isProduct = true,
+                            isService = false,
+                            imagen = "collar_big.png"
+                        };
+                        ticket.textoMostrar = ticket.puntos + " PTS";
+                        listaCarrito.Add(ticket);
                     }
                 }
             }

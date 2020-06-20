@@ -80,7 +80,7 @@ namespace PetsHeroe.View
             var status = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Camera);
 
             var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
-            if (cameraStatus != PermissionStatus.Granted)
+            if (cameraStatus != Plugin.Permissions.Abstractions.PermissionStatus.Granted)
             {
                 await DisplayAlert("Error", "La app no tiene permisos para utilizar la camara", "OK");
                 return;
